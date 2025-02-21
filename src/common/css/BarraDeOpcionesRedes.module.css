@@ -1,0 +1,29 @@
+.barra {
+    position: fixed; /* Fija la barra en la pantalla */
+    left: 0; /* La coloca en el lado izquierdo */
+    top: 50%; /* La coloca en el centro vertical */
+    transform: translateY(-50%); /* Ajusta el centrado vertical */
+    width: 60px; /* Ancho de la barra */
+    height: 22%; /* Altura de la barra */
+    background-color: #ff0000; /* Color de fondo */
+    border-top-right-radius: 20px; /* Borde redondeado arriba a la derecha */
+    border-bottom-right-radius: 20px; /* Borde redondeado abajo a la derecha */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los elementos internos */
+    padding: 20px; /* Espacio interno */
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0); /* Sombra para dar profundidad */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.icono {
+    color: white; /* Color de los íconos */
+    font-size: 24px; /* Tamaño de los íconos */
+    cursor: pointer; /* Cambia el cursor al pasar sobre los íconos */
+}
+
+.icono:hover {
+    color: #1DA1F2; /* Cambia el color al pasar el mouse */
+}
