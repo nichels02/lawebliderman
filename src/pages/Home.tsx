@@ -6,12 +6,14 @@ import CardWithExpand from '../common/Componentes/CardWithExpand.tsx';
 
 
 
+
 function Home(){
     return (
         <>
             <Header1 />
             <Marquee />
             <CardWithExpand />
+
 
 
             <EspacioVacio />

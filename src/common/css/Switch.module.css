@@ -1,0 +1,51 @@
+/* Switch.module.css */
+
+.checkbox {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.switchLabel {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 50px;
+    height: 30px;
+    background: #ff0000;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.switchLabel:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.checkbox:checked + .switchLabel {
+    background: #000000;
+}
+
+.checkbox:checked + .switchLabel:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+.switchLabel:active:after {
+    width: 60px;
+}
+
+/* Centering */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
