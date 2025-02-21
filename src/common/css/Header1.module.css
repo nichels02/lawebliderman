@@ -1,0 +1,48 @@
+.header {
+    width: 100%;
+    overflow: hidden; /* Evita desbordamientos */
+    position: relative; /* Para posicionar correctamente la imagen, textos y logo */
+}
+
+.headerImage {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+    display: block; /* Elimina espacios adicionales debajo de la imagen */
+}
+
+.textContainer {
+    position: absolute; /* Posiciona el contenedor de textos de manera absoluta */
+    top: 30%; /* Posición relativa desde la parte superior */
+    left: 10%; /* Posición relativa desde la izquierda */
+    width: 30%; /* Ancho relativo al contenedor */
+    height: auto; /* Altura automática */
+    z-index: 1; /* Asegura que los textos estén por encima de la imagen */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.text1 {
+    font-size: 70px; /* Tamaño relativo al contenedor */
+    margin: 0; /* Elimina el margen predeterminado */
+    color: #e3e3e3; /* Color del primer texto */
+}
+
+.text2 {
+    font-size: 70px; /* Tamaño relativo al contenedor */
+    margin: 0; /* Elimina el margen predeterminado */
+    color: #ff0000; /* Color del segundo texto */
+}
+
+.text3 {
+    font-size: 20px; /* Tamaño relativo al contenedor */
+    margin: 0; /* Elimina el margen predeterminado */
+    color: #e3e3e3; /* Color del tercer texto */
+}
+
+.logo {
+    position: absolute; /* Posiciona el logo de manera absoluta dentro del header */
+    top: 5%; /* Posición relativa desde la parte superior */
+    left: 5%; /* Posición relativa desde la izquierda */
+    width: 10%; /* Tamaño relativo al contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    z-index: 1; /* Asegura que el logo esté por encima de la imagen */
+}

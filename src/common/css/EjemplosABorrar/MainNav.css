@@ -1,0 +1,32 @@
+
+
+.nav-link{
+  color:white !important;
+}
+
+
+.nav1-item {
+  background-color: #d70b0b;
+  transition: background-color 1s ease;
+}
+
+.nav1-item:hover {
+  background-color: #101073;
+}
+
+.nav2-item{
+  background-color:#d70b0b;
+  position: absolute;
+  right: 1vw;
+}
+
+.nav2-item:hover {
+  background-color: #101073;
+}
+
+
+body .navbar-expand-lg{
+  border: 5px solid #d70b0b; /* Add a border to the Unity component */
+  border-radius: 20px; /* Add border radius for a cooler look */
+  background-color: #d70b0b !important; /* Cambia a cualquier color que desees */
+}
