@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center; /* Centra los botones dentro de la barra */
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.68); /* Color de fondo */
+    background-color: rgb(255, 255, 255); /* Color de fondo */
     border-radius: 25px; /* Bordes redondeados */
     padding: 10px 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
@@ -22,9 +22,35 @@
     margin: 0 5px; /* Espacio entre botones */
     cursor: pointer;
     transition: background-color 0.3s ease; /* Transición suave */
+    position: relative; /* Para posicionar el panel desplegable */
 }
 
-.boton:hover {
-    background-color: #0056b3; /* Cambia el color al pasar el mouse */
-    color: white; /* Cambia el color del texto al pasar el mouse */
+/* Estilos para el panel desplegable */
+.panel {
+    position: absolute;
+    top: 100%; /* Coloca el panel justo debajo del botón */
+    left: 0;
+    background-color: rgb(255, 255, 255); /* Mismo color de fondo que la barra */
+    border-radius: 0 0 25px 25px; /* Bordes redondeados solo en la parte inferior */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
+    display: none; /* Oculta el panel por defecto */
+    flex-direction: column;
+    padding: 10px 0; /* Padding vertical */
+    min-width: 100%; /* Mismo ancho que el botón "Soluciones" */
+    z-index: 1001; /* Asegura que esté por encima de otros elementos */
+}
+
+.boton:hover .panel {
+    display: flex; /* Muestra el panel al hacer hover */
+}
+
+/* Estilos para los botones dentro del panel */
+.panel .boton {
+    background-color: transparent;
+    color: #393939;
+    padding: 8px 20px; /* Mismo padding que los botones principales */
+    margin: 0; /* Sin margen entre botones */
+    border-radius: 0; /* Sin bordes redondeados */
+    text-align: left;
+    width: 100%; /* Ocupa todo el ancho del panel */
 }
