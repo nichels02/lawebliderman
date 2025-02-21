@@ -18,13 +18,24 @@ function CardWithExpand() {
         <div className={styles.container}> {/* Contenedor principal */}
             <section className={styles.section}>
                 {imageUrls.map((url, index) => (
-                    <img
+                    <div
                         key={index}
-                        src={url}
-                        alt={`Imagen ${index + 1}`}
-                        className={`${styles.img} ${expandedIndex === index ? styles.expanded : ""}`}
+                        className={`${styles.imgContainer} ${expandedIndex === index ? styles.expanded : ""}`}
                         onMouseEnter={() => handleMouseEnter(index)}
-                    />
+                    >
+                        <img
+                            src={url}
+                            alt={`Imagen ${index + 1}`}
+                            className={styles.img}
+                        />
+                        <div className={styles.text}>
+                            Texto {index + 1}
+                        </div>
+                        {/* Texto en el lado izquierdo */}
+                        <div className={`${styles.leftText} ${expandedIndex === index ? styles.visible : ""}`}>
+                            Izquierda {index + 1}
+                        </div>
+                    </div>
                 ))}
             </section>
         </div>

@@ -1,6 +1,5 @@
 .container {
     width: 80%; /* Ancho del contenedor principal */
-    height: 10%;
     margin: 0 auto; /* Centrar el contenedor */
     padding: 20px; /* Espaciado interno */
 }
@@ -13,16 +12,50 @@
     overflow: hidden; /* Para evitar que las imágenes se desborden */
 }
 
-.img {
+.imgContainer {
+    position: relative;
     width: 10%; /* Ancho inicial de las imágenes */
     height: 100%;
-    object-fit: cover;
-    border-radius: 40px;
     margin-right: 10px;
     cursor: pointer;
     transition: width 0.3s ease; /* Efecto de expansión */
 }
 
-.img.expanded {
+.imgContainer.expanded {
     width: 75%; /* Ancho expandido cuando está activo */
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Siempre en el borde derecho */
+    transform: translateY(-50%) rotate(-90deg); /* Rotar el texto y centrarlo verticalmente */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.leftText {
+    position: absolute;
+    top: 50%;
+    left: 10px; /* Posición en el borde izquierdo */
+    transform: translateY(-50%); /* Centrar verticalmente */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+.leftText.visible {
+    opacity: 1; /* Visible cuando la imagen está expandida */
 }
