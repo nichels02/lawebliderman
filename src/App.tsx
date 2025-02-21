@@ -4,6 +4,7 @@ import Home from "./pages/Home.tsx";
 import BarraDeOpciones from './common/Componentes/BarraDeOpciones.tsx';
 import BarraDeOpciones2 from './common/Componentes/BarraDeOpciones2.tsx';
 import BarraDeOpcionesRedes from './common/Componentes/BarraDeOpcionesRedes.tsx';
+import Footer from './common/Componentes/Footer.tsx';
 
 function App() {
     return(
@@ -15,6 +16,8 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Home/>}/>
                 </Routes>
+                <Footer />
+
             </BrowserRouter>
         </>
     );

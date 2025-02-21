@@ -1,16 +1,11 @@
+
 .marquee {
     display: flex;
     block-size: var(--marquee-item-height);
     margin-block: var(--marquee-item-height);
     position: relative;
     overflow-x: hidden;
-    mask-image: linear-gradient(
-            to right,
-            hsl(0 0% 0% / 0),
-            hsl(0 0% 0% / 1) 20%,
-            hsl(0 0% 0% / 1) 80%,
-            hsl(0 0% 0% / 0)
-    );
+
 }
 
 .marquee--6 {
