@@ -30,7 +30,7 @@
     animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;
 }
 
-/* el bodeado
+/* el bordeado
 .marquee__item:nth-child(4n) {
     border-top-right-radius: 1rem;
 }

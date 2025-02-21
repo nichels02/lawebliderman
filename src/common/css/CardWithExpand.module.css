@@ -1,0 +1,28 @@
+.container {
+    width: 80%; /* Ancho del contenedor principal */
+    height: 10%;
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 20px; /* Espaciado interno */
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 800px; /* Ajusta la altura según sea necesario */
+    overflow: hidden; /* Para evitar que las imágenes se desborden */
+}
+
+.img {
+    width: 10%; /* Ancho inicial de las imágenes */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: width 0.3s ease; /* Efecto de expansión */
+}
+
+.img.expanded {
+    width: 75%; /* Ancho expandido cuando está activo */
+}
