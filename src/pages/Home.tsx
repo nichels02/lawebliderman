@@ -1,6 +1,6 @@
 import Header1 from '../common/Componentes/Header1.tsx';
 import EspacioVacio from '../common/Componentes/EspacioVacio.tsx';
-import CintaDeImagenes from '../common/Componentes/CintaDeImagenes.tsx';
+import Marquee from '../common/Componentes/Marquee.tsx';
 
 
 
@@ -9,7 +9,9 @@ function Home(){
     return (
         <>
             <Header1 />
-            <CintaDeImagenes />
+            <Marquee />
+
+
             <EspacioVacio />
 
         </>
