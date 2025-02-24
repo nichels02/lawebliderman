@@ -1,0 +1,24 @@
+.contenedorPadre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedorImagen {
+    position: relative;
+    width: 50%; /* Ajusta el tamaño de la imagen */
+    height: 50%; /* Ajusta el tamaño de la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorImagen img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s ease; /* Transición suave para la rotación */
+}
