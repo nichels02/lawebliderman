@@ -3,6 +3,7 @@ import EspacioVacio from '../common/Componentes/EspacioVacio.tsx';
 import Marquee from '../common/Componentes/Marquee.tsx';
 import CardWithExpand from '../common/Componentes/CardWithExpand.tsx';
 import FlechaGiro from '../common/Componentes/FlechaGiro.tsx';
+import PorcentajeNegocio from '../common/Componentes/PorcentajeNegocio.tsx';
 
 
 
@@ -15,6 +16,7 @@ function Home(){
             <Marquee />
             <CardWithExpand />
             <FlechaGiro />
+            <PorcentajeNegocio />
 
 
 

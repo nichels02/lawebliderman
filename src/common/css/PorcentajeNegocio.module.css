@@ -1,0 +1,70 @@
+.contenedorPadre {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    background: #4b6baf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.contenedorImagenGrande {
+    position: relative;
+    background: #4baf53;
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+}
+
+.imagenGrande {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedorGrafico {
+    position: absolute;
+    top: 50%;
+    left: 101%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos generales para todos los textos */
+.texto {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 10%;
+    color: white;
+    font-weight: bold;
+    pointer-events: none;
+    transition: opacity 0.3s ease, font-size 0.3s ease;
+}
+
+/* Posiciones específicas para cada texto */
+/*mineria*/
+.texto-0 {
+    right: 20%; /* Ajusta según necesites */
+    bottom: 10%;
+}
+/*Industria*/
+.texto-1 {
+    right: 25%;
+    bottom: 30%;
+}
+/*Retail*/
+.texto-2 {
+    right: 25%;
+    top: 35%;
+}
+/*Otros*/
+.texto-3 {
+    right: 12%;
+    top: 8%;
+}
