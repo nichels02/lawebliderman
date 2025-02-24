@@ -1,11 +1,11 @@
 import { useRef, useEffect, useState } from 'react';
-import { Chart, ChartConfiguration } from 'chart.js/auto';
+import { Chart, ActiveElement, ChartConfiguration } from 'chart.js/auto';
 import styles from '../css/PorcentajeNegocio.module.css';
 
 function PorcentajeNegocio() {
     const chartRef = useRef<HTMLCanvasElement>(null);
     const [textPositions, setTextPositions] = useState<{ text: string }[]>([]);
-    const [selectedSegment, setSelectedSegment] = useState<number | null>(null); // Inicialmente no hay selección
+    const [hoveredSegment, setHoveredSegment] = useState<number | null>(0);
     const [selectedImage, setSelectedImage] = useState<string>(
         "https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
     );
@@ -25,14 +25,14 @@ function PorcentajeNegocio() {
                             'rgba(195,195,195,0.8)',
                             'rgba(195,195,195,0.8)',
                             'rgba(0, 0, 0, 0)',
-                        ] as string[],
+                        ] as string[], // Asegura que es un array de strings
                         borderColor: [
                             'rgba(204,16,116,0)',
                             'rgba(204,16,116,0)',
                             'rgba(204,16,116,0)',
                             'rgba(204,16,116,0)',
                             'rgba(0, 0, 0, 0)',
-                        ] as string[],
+                        ] as string[], // Asegura que es un array de strings
                         borderWidth: 1,
                         hoverBackgroundColor: [
                             'rgb(181,14,14)',
@@ -40,7 +40,7 @@ function PorcentajeNegocio() {
                             'rgb(181,14,14)',
                             'rgb(181,14,14)',
                             'rgba(0, 0, 0, 0)',
-                        ] as string[],
+                        ] as string[], // Asegura que es un array de strings
                         spacing: 30,
                     }]
                 };
@@ -60,6 +60,33 @@ function PorcentajeNegocio() {
                             tooltip: {
                                 enabled: false,
                             }
+                        },
+                        onHover: (_, chartElement: ActiveElement[]) => {
+                            if (chartElement.length > 0) {
+                                const segmentIndex = chartElement[0].index;
+                                setHoveredSegment(segmentIndex);
+                                // Cambiar la imagen en función del segmento seleccionado
+                                switch (segmentIndex) {
+                                    case 0:
+                                        setSelectedImage("https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg");
+                                        break;
+                                    case 1:
+                                        setSelectedImage("https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg");
+                                        break;
+                                    case 2:
+                                        setSelectedImage("https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg");
+                                        break;
+                                    case 3:
+                                        setSelectedImage("https://wallpapers.com/images/hd/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg");
+                                        break;
+                                    default:
+                                        setSelectedImage("https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg");
+                                }
+                            } else {
+                                // Si no hay hover, mostrar la imagen por defecto (Minería)
+                                setSelectedImage("https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg");
+                                setHoveredSegment(0); // Volver al segmento de Minería por defecto
+                            }
                         }
                     }
                 };
@@ -75,18 +102,12 @@ function PorcentajeNegocio() {
                 ];
                 setTextPositions(texts);
 
-                // Seleccionar "Minería" por defecto si no hay selección
-                if (selectedSegment === null) {
-                    setSelectedSegment(0); // 0 = Minería
-                    setSelectedImage("https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg");
-                }
-
                 return () => {
                     myChart.destroy();
                 };
             }
         }
-    }, [selectedSegment]); // Dependencia para manejar la selección
+    }, []);
 
     return (
         <div className={styles.contenedorPadre}>
@@ -105,8 +126,8 @@ function PorcentajeNegocio() {
                         key={index}
                         className={`${styles.texto} ${styles[`texto-${index}`]}`}
                         style={{
-                            fontWeight: selectedSegment === index ? 'bold' : 'normal',
-                            fontSize: selectedSegment === index ? 'clamp(16px, 2vw, 24px)' : 'clamp(8px, 1vw, 16px)',
+                            fontWeight: hoveredSegment === index ? 'bold' : 'normal',
+                            fontSize: hoveredSegment === index ? 'clamp(16px, 2vw, 24px)' : 'clamp(8px, 1vw, 16px)',
                         }}
                     >
                         {pos.text}
