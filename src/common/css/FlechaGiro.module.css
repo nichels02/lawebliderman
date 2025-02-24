@@ -1,0 +1,66 @@
+.contenedorPadre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #df2121; /* Color de fondo para el contenedor padre */
+    overflow: hidden;
+}
+
+.contenedorImagen {
+    position: relative;
+    width: 50%; /* Ajusta el tamaño de la imagen */
+    height: 50%; /* Ajusta el tamaño de la imagen */
+    display: flex;
+    background-color: #212adf; /* Color de fondo para el contenedor padre */
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorImagen img {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #3adf21; /* Color de fondo para el contenedor padre */
+    transition: transform 0.3s ease; /* Transición suave para la rotación */
+}
+
+/* Estilos para los contenedores alrededor de la imagen */
+.contenedor1, .contenedor2, .contenedor3, .contenedor4, .contenedor5, .contenedor6 {
+    position: absolute;
+    width: 100px; /* Ajusta el tamaño de los contenedores */
+    height: 100px; /* Ajusta el tamaño de los contenedores */
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+    border: 1px solid #000; /* Borde para visualización */
+}
+
+.contenedor1 {
+    top: 6%;
+    right: 26%;
+}
+
+.contenedor2 {
+    top: 40%;
+    right: 19%;
+}
+
+.contenedor3 {
+    top: 70%;
+    right: 26%;
+}
+
+.contenedor4 {
+    top: 6%;
+    left: 26%;
+}
+
+.contenedor5 {
+    top: 40%;
+    left: 19%;
+}
+
+.contenedor6 {
+    top: 70%;
+    left: 26%;
+}
