@@ -4,7 +4,7 @@ import Marquee from '../common/Componentes/Marquee.tsx';
 import CardWithExpand from '../common/Componentes/CardWithExpand.tsx';
 import FlechaGiro from '../common/Componentes/FlechaGiro.tsx';
 import PorcentajeNegocio from '../common/Componentes/PorcentajeNegocio.tsx';
-import DonaRotativa from '../common/Componentes/DonaRotativa.tsx';
+import DonaRotativa2 from '../common/Componentes/DonaRotativa2.tsx';
 
 
 
@@ -18,7 +18,7 @@ function Home(){
             <CardWithExpand />
             <FlechaGiro />
             <PorcentajeNegocio />
-            <DonaRotativa />
+            <DonaRotativa2 />
 
 
 

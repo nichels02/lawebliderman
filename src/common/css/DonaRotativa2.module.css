@@ -1,0 +1,20 @@
+.parentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Ocupa el ancho completo del viewport */
+    height: 100vh; /* Ocupa la altura completa del viewport */
+    padding: 20px; /* Añade un poco de espacio alrededor */
+    background: #f0f0f0; /* Color de fondo para el contenedor padre */
+}
+
+.chartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* Ajusta el tamaño según necesites */
+    height: 300px; /* Ajusta el tamaño según necesites */
+    border-radius: 10px; /* Bordes redondeados */
+    background: #1a1a1a;
+    transition: transform 0.5s ease; /* Animación suave al girar */
+}

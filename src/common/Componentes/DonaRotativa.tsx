@@ -1,34 +1,99 @@
+import { useRef, useEffect, useState } from 'react';
+import { Chart, DoughnutController, ArcElement, Tooltip, Legend } from 'chart.js';
 import styles from '../css/DonaRotativa.module.css';
 
-function DonaRotativa({ color1 = "red", color2 = "blue", color3 = "green", color4 = "yellow" }) {
+// Registra los componentes necesarios de Chart.js
+Chart.register(DoughnutController, ArcElement, Tooltip, Legend);
+
+function DonaRotativa() {
+    const chartRef = useRef<HTMLCanvasElement>(null);
+    const [rotationAngle, setRotationAngle] = useState(0); // Estado para el ángulo de rotación
+    const chartInstance = useRef<Chart | null>(null); // Referencia para almacenar la instancia del gráfico
+
+    // Función para obtener el ángulo más cercano
+    const calculateClosestRotation = (clickedIndex: number) => {
+        const targetAngles = [0, 90, 180, 270]; // Ángulos objetivo para cada sector
+        const targetAngle = targetAngles[clickedIndex]; // Obtiene el ángulo objetivo del sector clicado
+
+        // Diferencia angular
+        let difference = targetAngle - (rotationAngle % 360);
+        if (difference > 180) difference -= 360;
+        if (difference < -180) difference += 360;
+
+        // Calcula el nuevo ángulo de rotación sumando la diferencia
+        const newAngle = rotationAngle + difference;
+
+        return newAngle;
+    };
+
+    useEffect(() => {
+        // Verifica que chartRef.current no sea null
+        if (chartRef.current) {
+            const ctx = chartRef.current.getContext('2d');
+
+            if (ctx) {
+                // Si ya existe una instancia del gráfico, la destruimos antes de crear una nueva
+                if (chartInstance.current) {
+                    chartInstance.current.destroy();
+                }
+
+                // Creamos una nueva instancia del gráfico
+                chartInstance.current = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Sector 1', 'Sector 2', 'Sector 3', 'Sector 4'],
+                        datasets: [{
+                            data: [90, 90, 90, 90],
+                            backgroundColor: [
+                                '#FF6384', // Rojo
+                                '#36A2EB', // Azul
+                                '#FFCE56', // Amarillo
+                                '#4BC0C0'  // Verde
+                            ],
+                            hoverOffset: 4,
+                        }]
+                    },
+                    options: {
+                        rotation: 0,
+                        responsive: true,
+                        animation: {
+                            duration: 0,
+                        },
+                        plugins: {
+                            legend: {
+                                display: false,
+                            },
+                            tooltip: {
+                                enabled: false,
+                            }
+                        },
+                        onClick: (_, elements) => {
+                            if (elements.length > 0) {
+                                const clickedIndex = elements[0].index;
+                                const newRotationAngle = calculateClosestRotation(clickedIndex);
+                                setRotationAngle(newRotationAngle);
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    }, []);
+
     return (
-        <div className={styles.contenedorPrincipal}>
-            {/* Contenedor para la imagen */}
-            <div className={styles.contenedorImagen}>
-                <img src="https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg" alt="Imagen de fondo" className={styles.imagenFondo} />
-            </div>
-
-            {/* Contenedor de la dona */}
-            <div className={styles.contenedorDona}>
-                {/* SVG para la dona */}
-                <svg width="200" height="200" viewBox="0 0 200 200" className={styles.dona}>
-                    {/* Segmento 1 */}
-                    <circle cx="100" cy="100" r="80" fill="transparent" stroke={color1} strokeWidth="60" strokeDasharray="125.66 125.66" strokeDashoffset="0" />
-                    {/* Segmento 2 */}
-                    <circle cx="100" cy="100" r="80" fill="transparent" stroke={color2} strokeWidth="60" strokeDasharray="125.66 125.66" strokeDashoffset="125.66" />
-                    {/* Segmento 3 */}
-                    <circle cx="100" cy="100" r="80" fill="transparent" stroke={color3} strokeWidth="60" strokeDasharray="125.66 125.66" strokeDashoffset="251.32" />
-                    {/* Segmento 4 */}
-                    <circle cx="100" cy="100" r="80" fill="transparent" stroke={color4} strokeWidth="60" strokeDasharray="125.66 125.66" strokeDashoffset="376.98" />
-                </svg>
-
-                {/* Texto en el centro de la dona */}
-                <div className={styles.textoDona}>
-                    <p>Texto en el centro</p>
-                </div>
+        <div className={styles.container}>
+            <div
+                className={styles.rotatingCanvas}
+                style={{
+                    transform: `rotate(${rotationAngle}deg)`,
+                    transition: 'transform 0.5s ease-in-out'
+                }}
+            >
+                <canvas ref={chartRef}></canvas>
             </div>
         </div>
     );
 }
 
 export default DonaRotativa;
+
