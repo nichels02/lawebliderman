@@ -1,0 +1,104 @@
+.contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Cambiamos a columna para que los botones estén debajo */
+    justify-content: center;
+    align-items: center;
+    background: #1DA1F2;
+    position: relative; /* Necesario para el posicionamiento de los botones */
+}
+
+.contenido {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    background: #df2176;
+}
+
+.imagenContainer {
+    flex: 1;
+    padding: 10px;
+    background: #1a1a1a;
+}
+
+.imagen {
+    width: 100%;
+    height: auto;
+}
+
+/* Clases base */
+.textoContainer {
+    flex: 1;
+    padding: 10px;
+}
+
+.titulo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #931f1f; /* Ejemplo: color azul para la variante 1 */
+}
+
+.texto {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Variantes para textoContainer */
+.textoContainer-1 {
+    text-align: right; /* Ejemplo: alinea el texto a la derecha */
+    padding-left: 20px; /* Ejemplo: añade un padding a la izquierda */
+}
+
+.textoContainer-2 {
+    text-align: left; /* Ejemplo: alinea el texto a la izquierda */
+    padding-right: 20px; /* Ejemplo: añade un padding a la derecha */
+}
+
+/* Variantes para titulo */
+.titulo-1 {
+    text-align: right;
+}
+
+.titulo-2 {
+    text-align: left;
+}
+
+/* Variantes para texto */
+.texto-1 {
+    font-style: italic; /* Ejemplo: texto en cursiva para la variante 1 */
+}
+
+.texto-2 {
+    font-weight: bold; /* Ejemplo: texto en negrita para la variante 2 */
+}
+
+/* Estilos para los botones */
+.botonesContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre botones */
+    margin-top: -50px; /* Movemos los botones hacia arriba */
+    padding: 10px;
+    background: rgba(41, 154, 56, 0); /* Mismo fondo que el contenedor principal */
+    width: 100%;
+    height: 50%;
+    position: relative; /* Posicionamiento relativo */
+    z-index: 1; /* Aseguramos que los botones estén sobre la imagen */
+}
+
+.boton {
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+    height: 20%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #333;
+}
