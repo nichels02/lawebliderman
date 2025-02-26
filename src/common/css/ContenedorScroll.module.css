@@ -1,0 +1,32 @@
+/* Contenedor principal (ocupa el ancho de la ventana) */
+.contenedorScroll {
+    width: 100vw; /* Ancho de la ventana */
+    height: 400vh; /* 4 veces el alto de la ventana */
+    position: relative; /* Parte del flujo normal */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+/* Contenedor interno (más grande que la ventana) */
+.contenedorInterno {
+    width: 200vw; /* 2 veces el ancho de la ventana */
+    height: 100%; /* Mismo alto que el contenedor principal */
+    position: relative; /* Posición relativa para el contenido interno */
+    will-change: transform; /* Optimización para animaciones */
+}
+
+/* Contenedor pequeño (posición dinámica en porcentajes dentro del contenedor interno) */
+.contenedorPequeno {
+    position: absolute; /* Posición absoluta dentro del contenedor interno */
+    width: 200px; /* Ancho fijo */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Estilos para la imagen dentro del contenedor pequeño */
+.contenedorPequeno img {
+    width: 100%;
+    border-radius: 8px;
+}

@@ -6,6 +6,7 @@ import FlechaGiro from '../common/Componentes/FlechaGiro.tsx';
 import PorcentajeNegocio from '../common/Componentes/PorcentajeNegocio.tsx';
 import DonaRotativa2 from '../common/Componentes/DonaRotativa2.tsx';
 import TextoTituloEImagen from '../common/Componentes/TextoTituloEImagen.tsx';
+import ContenedorScroll from '../common/Componentes/ContenedorScroll.tsx';
 
 
 
@@ -30,6 +31,7 @@ function Home(){
                 textosBotones={textosBotones}
                 imagenALaIzquierda={false}
             />
+            <ContenedorScroll />
             <Marquee />
             <CardWithExpand />
             <FlechaGiro />
