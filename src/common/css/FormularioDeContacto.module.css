@@ -1,0 +1,299 @@
+/* Importación de fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&display=swap');
+
+/* ------------------------- */
+/* Estructura principal */
+/* ------------------------- */
+.contenedor_padre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ab4453;
+    padding: 20px;
+}
+
+.contenedor_secundario {
+    width: 100%;
+    max-width: 800px;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor_formulario {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+}
+
+/* ------------------------- */
+/* Tipografía */
+/* ------------------------- */
+.titulo {
+    font-size: 2.4rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.subtitulo {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* ------------------------- */
+/* Estructura del formulario */
+/* ------------------------- */
+.formulario {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    gap: 25px;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.fila_fusionada {
+    grid-column: 1 / -1;
+}
+
+/* ------------------------- */
+/* Elementos del formulario */
+/* ------------------------- */
+.campo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.label {
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.input {
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input:focus {
+    border-bottom-color: #ab4453;
+    outline: none;
+}
+
+.textarea {
+    padding: 15px 0;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    resize: none;
+    overflow-y: hidden;
+    line-height: 1.5;
+    min-height: 60px;
+    transition: all 0.3s ease;
+}
+
+/* ------------------------- */
+/* Checkboxes personalizados */
+/* ------------------------- */
+.checkboxGroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.checkboxInput {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkboxCustom {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.checkboxInput:checked + .checkboxCustom {
+    background-color: #ab4453;
+    border-color: #ab4453;
+}
+
+.checkboxInput:checked + .checkboxCustom::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+}
+
+.checkboxLabel {
+    color: #ffffff;
+    font-size: 0.9rem;
+    user-select: none;
+}
+
+.checkboxContainer:hover .checkboxCustom {
+    border-color: #ab4453;
+}
+
+.checkboxInput:focus-visible + .checkboxCustom {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* ------------------------- */
+/* Botón de enviar */
+/* ------------------------- */
+.boton {
+    background-color: #ffffff;
+    color: #ab4453;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.boton:hover {
+    background-color: #ab4453;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ------------------------- */
+/* Sección contacto alternativo */
+/* ------------------------- */
+.texto_boton {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.contacto_alternativo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contacto_titulo {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.contacto_email {
+    color: #ab4453;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.contacto_email:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ------------------------- */
+/* Elementos adicionales */
+/* ------------------------- */
+.obligatorio {
+    color: #ff4d4d;
+    margin-left: 3px;
+    font-weight: 500;
+}
+
+::placeholder {
+    color: #cccccc;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* ------------------------- */
+/* Responsive Design */
+/* ------------------------- */
+@media (max-width: 768px) {
+    .fila {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .contenedor_secundario {
+        padding: 20px;
+    }
+
+    .texto_boton {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .boton {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.8rem;
+    }
+
+    .input, .textarea {
+        font-size: 0.9rem;
+    }
+
+    .checkboxGroup {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .checkboxLabel {
+        font-size: 0.85rem;
+    }
+}

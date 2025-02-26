@@ -7,6 +7,7 @@ import PorcentajeNegocio from '../common/Componentes/PorcentajeNegocio.tsx';
 import DonaRotativa2 from '../common/Componentes/DonaRotativa2.tsx';
 import TextoTituloEImagen from '../common/Componentes/TextoTituloEImagen.tsx';
 import ContenedorScroll from '../common/Componentes/ContenedorScroll.tsx';
+import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
 
 
 
@@ -32,6 +33,7 @@ function Home(){
                 imagenALaIzquierda={false}
             />
             <ContenedorScroll />
+            <FormularioDeContacto />
             <Marquee />
             <CardWithExpand />
             <FlechaGiro />
