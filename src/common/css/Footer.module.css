@@ -4,9 +4,10 @@
     padding: 40px 20px 20px;
     width: 100%;
     box-sizing: border-box;
+    font-weight: 400;
 }
 
-/* ========== VERSIÓN ESCRITORIO ========== */
+/* ===== VERSIÓN ESCRITORIO ===== */
 .topSection {
     display: flex;
     justify-content: space-between;
@@ -16,6 +17,17 @@
 .logoSection {
     width: 20%;
     padding-right: 30px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.logoText {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: 400;
 }
 
 .columnsContainer {
@@ -33,7 +45,8 @@
 .column h4 {
     color: #fff;
     margin-bottom: 20px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
 .menuButton {
@@ -47,6 +60,7 @@
     text-align: left;
     cursor: pointer;
     transition: all 0.3s;
+    font-weight: 400;
 }
 
 .middleSection {
@@ -56,7 +70,83 @@
     margin: 30px 0;
 }
 
-/* ========== VERSIÓN MÓVIL ========== */
+.mainButton {
+    width: 35%;
+    padding: 15px 20px;
+    background-color: #00a8ff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    font-weight: 400;
+}
+
+/* ===== ESTILOS COMUNES ===== */
+.mainButton:hover {
+    background-color: #0090d6;
+    transform: scale(1.05);
+}
+
+.menuButton:hover {
+    color: #00a8ff;
+    transform: translateX(5px);
+}
+
+.divider {
+    border-top: 1px solid #555;
+    margin: 20px 0;
+}
+
+.bottomContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.legal {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.legalLinks {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.legalButton {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 5px 0;
+    font-weight: 400;
+}
+
+.legalButton:hover {
+    color: #00a8ff;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.socialIcon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s;
+}
+
+.socialIcon:hover {
+    transform: scale(1.2);
+}
+
+/* ===== VERSIÓN MÓVIL ===== */
 @media (max-width: 768px) {
     .topSection {
         flex-direction: column;
@@ -71,7 +161,7 @@
     }
 
     .logo {
-        width: 150px;
+        width: 130px;
         margin: 0 auto 15px;
     }
 
@@ -102,6 +192,7 @@
     .mainButton {
         width: 90%;
         max-width: 300px;
+        font-size: 1rem;
     }
 
     .bottomContent {
@@ -116,6 +207,10 @@
 }
 
 @media (max-width: 480px) {
+    .footer {
+        padding: 30px 15px;
+    }
+
     .columnsContainer {
         flex-direction: column;
         align-items: center;
@@ -124,96 +219,20 @@
     .column {
         flex: 1 1 100%;
         max-width: 300px;
+        margin-bottom: 25px;
     }
 
     .mainButton {
         width: 100%;
+        padding: 12px 15px;
     }
 
     .socialLinks {
         gap: 15px;
     }
-}
 
-/* ========== ESTILOS COMUNES ========== */
-.logo {
-    width: 150px;
-    margin-bottom: 15px;
-}
-
-.logoText {
-    font-size: 0.9em;
-    line-height: 1.4;
-}
-
-.menuButton:hover {
-    color: #00a8ff;
-    transform: translateX(5px);
-}
-
-.mainButton {
-    width: 35%;
-    padding: 15px 20px;
-    background-color: #00a8ff;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: all 0.3s;
-}
-
-.mainButton:hover {
-    background-color: #0090d6;
-    transform: scale(1.05);
-}
-
-.divider {
-    border-top: 1px solid #555;
-    margin: 20px 0;
-}
-
-.bottomContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.legal {
-    font-size: 0.8em;
-}
-
-.legalLinks {
-    display: flex;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-.legalButton {
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 0.9em;
-    padding: 5px 0;
-}
-
-.legalButton:hover {
-    color: #00a8ff;
-}
-
-.socialLinks {
-    display: flex;
-    gap: 20px;
-}
-
-.socialIcon {
-    width: 28px;
-    height: 28px;
-    transition: transform 0.3s;
-}
-
-.socialIcon:hover {
-    transform: scale(1.2);
+    .socialIcon {
+        width: 26px;
+        height: 26px;
+    }
 }

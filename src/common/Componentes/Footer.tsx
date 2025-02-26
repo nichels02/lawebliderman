@@ -12,6 +12,7 @@ function Footer() {
                 </div>
 
                 <div className={styles.columnsContainer}>
+                    {/* Columnas se mantienen igual */}
                     <div className={styles.column}>
                         <h4>Inicio</h4>
                         <button className={styles.menuButton}>Soluciones</button>

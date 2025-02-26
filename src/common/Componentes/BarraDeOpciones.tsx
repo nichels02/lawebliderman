@@ -13,7 +13,7 @@ function BarraDeOpciones() {
                 onMouseEnter={() => setShowPanel(true)} // Muestra el panel al pasar el mouse
                 onMouseLeave={() => setShowPanel(false)} // Oculta el panel al quitar el mouse
             >
-                Soluciones
+                Soluciones⌵
                 {showPanel && ( // Renderiza el panel si showPanel es true
                     <div className={styles.panel}>
                         <button className={styles.boton}>Opción 1</button>
