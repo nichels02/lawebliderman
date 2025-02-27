@@ -38,6 +38,14 @@
     text-align: center;
 }
 
+/* Estilos para el ícono del globo */
+.globeIcon {
+    margin-right: 4px; /* Espacio entre el globo y la flecha */
+    display: inline-block;
+    vertical-align: middle; /* Alinea verticalmente con la flecha */
+}
+
+/* Estilos para el símbolo de dropdown (flecha) */
 .dropdownSymbol {
     margin-left: 4px;
     display: inline-block;
