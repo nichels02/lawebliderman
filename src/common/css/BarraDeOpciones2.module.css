@@ -54,20 +54,16 @@
     height: 16px;
 }
 
-/* Contenedor fijo para el panel */
-.panel-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Permite que los clics pasen a través del contenedor */
-    z-index: 1001;
+/* Contenedor del dropdown */
+.dropdownContainer {
+    position: relative;
+    display: inline-block;
 }
 
+/* Panel desplegable */
 .panel {
     position: absolute;
-    top: calc(4% + 40px); /* Ajusta la posición según la barra */
+    top: 100%; /* Coloca el panel justo debajo del botón */
     left: 50%;
     transform: translateX(-50%);
     background-color: rgb(255, 255, 255);
