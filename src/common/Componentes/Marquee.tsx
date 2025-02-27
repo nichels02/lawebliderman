@@ -1,8 +1,6 @@
-import React from 'react'; // Importación necesaria para JSX
 import styles from '../css/Marquee.module.css';
 
 function Marquee() {
-    // Datos de los elementos del marquee
     const marqueeItems = [
         { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqrIaOoNLKb_PGfc_nS4s3IVBC8x7x9nYOqQ&s", width: 100, height: 100, alt: "1" },
         { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqrIaOoNLKb_PGfc_nS4s3IVBC8x7x9nYOqQ&s", width: 100, height: 100, alt: "2" },
@@ -13,18 +11,22 @@ function Marquee() {
     ];
 
     return (
-        <div className={`${styles.marquee} ${styles['marquee--6']}`}>
-            {marqueeItems.map((item, index) => (
-                <img
-                    key={index}
-                    className={styles.marquee__item}
-                    src={item.src}
-                    width={item.width}
-                    height={item.height}
-                    alt={item.alt}
-                    style={{ '--index': index } as React.CSSProperties & { '--index': number }} // Corrección para TypeScript
-                />
-            ))}
+        <div className={styles.marqueeContainer}>
+            <div className={styles.marqueeContent}>
+                {/* Repetimos las imágenes 3 veces */}
+                {[...Array(3)].map((_, repetition) =>
+                    marqueeItems.map((item, index) => (
+                        <img
+                            key={`${repetition}-${index}`}
+                            className={styles.marqueeItem}
+                            src={item.src}
+                            width={item.width}
+                            height={item.height}
+                            alt={item.alt}
+                        />
+                    ))
+                )}
+            </div>
         </div>
     );
 }
