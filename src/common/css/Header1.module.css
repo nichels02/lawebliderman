@@ -2,6 +2,8 @@
     width: 100%;
     overflow: hidden; /* Evita desbordamientos */
     position: relative; /* Para posicionar correctamente la imagen, textos y logo */
+    padding-bottom: 4%; /* Espacio vacío debajo del contenedor padre */
+    background: #acacac;
 }
 
 .headerImage {
@@ -10,31 +12,42 @@
     display: block; /* Elimina espacios adicionales debajo de la imagen */
 }
 
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+
 .textContainer {
     position: absolute; /* Posiciona el contenedor de textos de manera absoluta */
-    top: 30%; /* Posición relativa desde la parte superior */
+    top: 32%; /* Posición relativa desde la parte superior */
     left: 10%; /* Posición relativa desde la izquierda */
-    width: 30%; /* Ancho relativo al contenedor */
+    width: 40%; /* Ancho relativo al contenedor */
     height: auto; /* Altura automática */
     z-index: 1; /* Asegura que los textos estén por encima de la imagen */
     text-align: left; /* Alinea el texto a la izquierda */
 }
 
-.text1 {
-    font-size: 70px; /* Tamaño relativo al contenedor */
+.text1, .text2, .text3 {
     margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el padding predeterminado */
+    line-height: 1; /* Ajusta la altura de línea para reducir el espacio */
+}
+
+.text1 {
+    font-size: 5.2vw; /* Tamaño relativo al contenedor */
     color: #e3e3e3; /* Color del primer texto */
 }
 
 .text2 {
-    font-size: 70px; /* Tamaño relativo al contenedor */
-    margin: 0; /* Elimina el margen predeterminado */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 5.2vw; /* Tamaño relativo al contenedor */
     color: #ff0000; /* Color del segundo texto */
+    margin-bottom: 2vw;
 }
 
 .text3 {
-    font-size: 20px; /* Tamaño relativo al contenedor */
-    margin: 0; /* Elimina el margen predeterminado */
+    text-shadow: none; /* Elimina la sombra del texto */
+    font-size: 1vw; /* Tamaño relativo al contenedor */
     color: #e3e3e3; /* Color del tercer texto */
 }
 
@@ -45,4 +58,96 @@
     width: 10%; /* Tamaño relativo al contenedor */
     height: auto; /* Mantiene la relación de aspecto */
     z-index: 1; /* Asegura que el logo esté por encima de la imagen */
+}
+
+.buttonContainer {
+    position: absolute; /* Posiciona el contenedor de botones de manera absoluta */
+    top: 67%; /* Ajusta la posición vertical según sea necesario */
+    left: 10%; /* Misma posición horizontal que el textContainer */
+    width: 40%; /* Mismo ancho que el textContainer */
+    height: 6%; /* Altura relativa al contenedor */
+    display: flex; /* Usa flexbox para alinear los botones horizontalmente */
+    gap: 2vw; /* Espacio entre los botones */
+    z-index: 1; /* Asegura que los botones estén por encima de la imagen */
+}
+
+/* Estilo para el botón primario */
+.buttonPrimary {
+    width: 30%; /* Ancho relativo al contenedor */
+    padding: 1vw 2vw; /* Espaciado interno relativo al contenedor */
+    font-size: 1.2vw; /* Tamaño de fuente relativo al contenedor */
+    color: #e3e3e3; /* Color del texto */
+    background-color: #ff0000; /* Color de fondo del botón */
+    border: none; /* Elimina el borde */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    outline: none; /* Elimina el borde azul al hacer clic */
+    display: flex; /* Habilita Flexbox */
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    height: 100%; /* Asegura que el botón ocupe toda la altura del contenedor */
+    font-weight: normal; /* Texto en fuente normal */
+}
+
+/* Estilo para el botón secundario */
+.buttonSecondary {
+    padding: 1vw 2vw; /* Espaciado interno relativo al contenedor */
+    font-size: 1.2vw; /* Tamaño de fuente relativo al contenedor */
+    color: #1a1a1a; /* Color del texto */
+    background-color: rgba(227, 227, 227, 0); /* Color de fondo del botón */
+    border: 2px solid #ff0000; /* Borde con color */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para el hover */
+    outline: none; /* Elimina el borde azul al hacer clic */
+    display: flex; /* Habilita Flexbox */
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    height: 100%; /* Asegura que el botón ocupe toda la altura del contenedor */
+    font-weight: normal; /* Texto en fuente normal */
+}
+
+/* Estilos existentes... */
+
+.centeredBottomContainer {
+    position: absolute; /* Posiciona el contenedor de manera absoluta */
+    left: 50%; /* Lo coloca en el centro horizontal */
+    bottom: 0; /* Lo mueve un 4% hacia abajo desde la parte inferior de .headerImage */
+    border-radius: 25px; /* Bordes redondeados */
+    transform: translateX(-50%); /* Centra el contenedor horizontalmente */
+    width: 50%; /* Reducimos el ancho a 50% (ajusta este valor según tus necesidades) */
+    height: auto; /* Altura automática */
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+    text-align: center; /* Alinea el contenido al centro */
+    background-color: rgb(255, 0, 0); /* Fondo semitransparente (opcional) */
+    padding: 0; /* Espaciado interno (opcional) */
+    color: #e3e3e3; /* Color del texto (opcional) */
+    display: grid; /* Usa CSS Grid */
+    grid-template-columns: repeat(3, 0.7fr); /* 3 columnas de igual ancho */
+    grid-template-rows: 0.6fr 0.1fr; /* La primera fila tiene el doble de altura que la segunda */
+    gap: 1vw; /* Espacio entre los elementos del grid */
+}
+
+/* Estilo para los elementos de la fila superior */
+.gridItemTop {
+    background-color: rgba(55, 255, 0, 0); /* Fondo rojo semitransparente */
+    font-weight: bold;
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 4vw; /* Reducimos el tamaño de fuente para que se ajuste mejor */
+    display: flex; /* Usa Flexbox para centrar el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+/* Estilo para los elementos de la fila inferior */
+.gridItemBottom {
+    background-color: rgba(28, 28, 158, 0); /* Fondo azul semitransparente */
+    font-weight: normal;
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 1vw; /* Tamaño de fuente relativo al contenedor */
+    display: flex; /* Usa Flexbox para centrar el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    padding-bottom: 8%; /* Espacio vacío debajo del contenedor padre */
 }
