@@ -1,29 +1,86 @@
 .barra {
-    position: fixed; /* Fija la barra en la pantalla */
-    top: 20px; /* Distancia desde la parte superior */
-    right: 20px; /* Alinea la barra a la derecha */
+    position: fixed;
+    top: 4%;
+    right: 4%;
     display: flex;
-    justify-content: flex-end; /* Alinea los botones a la derecha */
+    justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.68); /* Color de fondo */
-    border-radius: 25px; /* Bordes redondeados */
-    padding: 10px 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 8px 16px;
+    width: 19%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+@supports (backdrop-filter: blur(10px)) {
+    .panel, .barra {
+        background: rgba(255, 255, 255, 0.62);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
 }
 
 .boton {
-    background-color: rgba(0, 123, 255, 0); /* Color de fondo del botón */
-    color: #393939; /* Color del texto */
+    background-color: rgba(0, 123, 255, 0);
+    color: #393939;
     border: none;
-    border-radius: 20px; /* Bordes redondeados */
-    padding: 10px 20px;
-    margin: 0 5px; /* Espacio entre botones */
+    border-radius: 20px;
+    padding: 6px 10px;
+    margin: 0 2px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Transición suave */
+    transition: background-color 0.3s ease;
+    position: relative;
+    font-weight: normal;
+    white-space: nowrap;
+    font-size: 14px;
+    flex-grow: 0;
+    text-align: center;
 }
 
-.boton:hover {
-    background-color: #0056b3; /* Cambia el color al pasar el mouse */
-    color: white; /* Cambia el color del texto al pasar el mouse */
+.dropdownSymbol {
+    margin-left: 4px;
+    display: inline-block;
+    transform: translateY(5px);
+    width: 16px;
+    height: 16px;
+}
+
+/* Contenedor fijo para el panel */
+.panel-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite que los clics pasen a través del contenedor */
+    z-index: 1001;
+}
+
+.panel {
+    position: absolute;
+    top: calc(4% + 40px); /* Ajusta la posición según la barra */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    min-width: 120%;
+    z-index: 1002;
+    pointer-events: auto; /* Permite que el panel sea interactivo */
+}
+
+.panel .boton {
+    background-color: transparent;
+    color: #393939;
+    padding: 8px 20px;
+    margin: 0;
+    border-radius: 0;
+    text-align: left;
+    width: 100%;
+    font-weight: normal;
+    font-size: 14px;
 }

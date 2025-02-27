@@ -1,56 +1,89 @@
 .barra {
-    position: fixed; /* Fija la barra en la pantalla */
-    top: 20px; /* Distancia desde la parte superior */
-    left: 50%; /* Centra la barra horizontalmente */
-    transform: translateX(-50%); /* Ajusta el centrado */
+    position: fixed;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center; /* Centra los botones dentro de la barra */
+    justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255); /* Color de fondo */
-    border-radius: 25px; /* Bordes redondeados */
-    padding: 10px 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 8px 16px; /* Padding reducido */
+    width: 26%; /* Ancho fijo al 26% de la pantalla */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
-
+@supports (backdrop-filter: blur(10px)) {
+    .panel, .barra {
+        background: rgba(255, 255, 255, 0.62);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
 .boton {
-    background-color: rgba(0, 123, 255, 0); /* Color de fondo del botón */
-    color: #393939; /* Color del texto */
+    background-color: rgba(0, 123, 255, 0);
+    color: #393939;
     border: none;
-    border-radius: 20px; /* Bordes redondeados */
-    padding: 10px 20px;
-    margin: 0 5px; /* Espacio entre botones */
+    border-radius: 20px;
+    padding: 8px 12px; /* Padding reducido */
+    margin: 0 3px; /* Margen reducido */
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Transición suave */
-    position: relative; /* Para posicionar el panel desplegable */
+    transition: background-color 0.3s ease;
+    position: relative;
+    font-weight: normal;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    font-size: 14px; /* Tamaño de fuente reducido */
 }
 
-/* Estilos para el panel desplegable */
+/* Estilo para el SVG (símbolo ⌵ personalizado) */
+.dropdownSymbol {
+    margin-left: 6px; /* Margen reducido */
+    display: inline-block;
+    transform: translateY(5px); /* Ajuste de posición vertical */
+}
+
+/* Ajustar tamaño del SVG */
+.dropdownSymbol {
+    width: 16px; /* Ancho reducido */
+    height: 16px; /* Alto reducido */
+}
+
+/* Estilo para "únete" */
+.highlight {
+    font-weight: normal;
+    background: #fa0000;
+    border-radius: 25px;
+    color: #ffffff; /* Color blanco */
+    font-size: 12px; /* Tamaño de fuente */
+    margin-left: 6px; /* Espaciado natural */
+    padding: 0px 7px; /* Añadir padding para hacer el fondo más ancho */
+    letter-spacing: 0.5px; /* Ligero aumento de ancho */
+}
+
+/* Panel desplegable */
 .panel {
     position: absolute;
-    top: 100%; /* Coloca el panel justo debajo del botón */
+    top: 100%;
     left: 0;
-    background-color: rgb(255, 255, 255); /* Mismo color de fondo que la barra */
-    border-radius: 0 0 25px 25px; /* Bordes redondeados solo en la parte inferior */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
-    display: none; /* Oculta el panel por defecto */
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Mostrado cuando showPanel = true */
     flex-direction: column;
-    padding: 10px 0; /* Padding vertical */
-    min-width: 100%; /* Mismo ancho que el botón "Soluciones" */
-    z-index: 1001; /* Asegura que esté por encima de otros elementos */
+    padding: 10px 0;
+    min-width: 100%; /* Ocupa el 100% del ancho del botón "Soluciones" */
+    z-index: 1001;
 }
 
-.boton:hover .panel {
-    display: flex; /* Muestra el panel al hacer hover */
-}
-
-/* Estilos para los botones dentro del panel */
+/* Botones dentro del panel */
 .panel .boton {
     background-color: transparent;
     color: #393939;
-    padding: 8px 20px; /* Mismo padding que los botones principales */
-    margin: 0; /* Sin margen entre botones */
-    border-radius: 0; /* Sin bordes redondeados */
+    padding: 8px 20px;
+    margin: 0;
+    border-radius: 0;
     text-align: left;
-    width: 100%; /* Ocupa todo el ancho del panel */
+    width: 100%;
+    font-weight: normal;
+    font-size: 14px; /* Tamaño de fuente reducido */
 }
