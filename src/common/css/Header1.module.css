@@ -2,7 +2,6 @@
     width: 100%;
     overflow: hidden; /* Evita desbordamientos */
     position: relative; /* Para posicionar correctamente la imagen, textos y logo */
-    background: #acacac;
     padding-bottom: 4%; /* Espacio vacío debajo del contenedor padre */
 }
 

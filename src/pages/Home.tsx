@@ -8,7 +8,7 @@ import DonaRotativa2 from '../common/Componentes/DonaRotativa2.tsx';
 import TextoTituloEImagen from '../common/Componentes/TextoTituloEImagen.tsx';
 import ContenedorScroll from '../common/Componentes/ContenedorScroll.tsx';
 import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
-
+import TituloYSubtituloGenerico from '../common/Componentes/TituloYSubtituloGenerico.tsx';
 
 
 
@@ -25,6 +25,11 @@ function Home(){
     return (
         <>
             <Header1 />
+            <TituloYSubtituloGenerico
+                titulo="Soluciones"
+                subtitulo="para tu tranquilidad"
+            />
+            <CardWithExpand />
             <TextoTituloEImagen
                 titulo="Título de ejemplo"
                 texto="Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."
@@ -35,7 +40,7 @@ function Home(){
             <ContenedorScroll />
             <FormularioDeContacto />
             <Marquee />
-            <CardWithExpand />
+
             <FlechaGiro />
             <PorcentajeNegocio />
             <DonaRotativa2 />

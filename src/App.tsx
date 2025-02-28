@@ -12,7 +12,11 @@ import Tecnologia from "./pages/Tecnologia.tsx";
 
 import BarraDeOpciones from './common/Componentes/BarraDeOpciones.tsx';
 import BarraDeOpciones2 from './common/Componentes/BarraDeOpciones2.tsx';
-import BarraDeOpcionesRedes from './common/Componentes/BarraDeOpcionesRedes.tsx';
+
+/*{
+    import BarraDeOpcionesRedes from './common/Componentes/BarraDeOpcionesRedes.tsx';
+    <BarraDeOpcionesRedes/>
+}*/
 import Footer from './common/Componentes/Footer.tsx';
 
 
@@ -24,7 +28,7 @@ function App() {
             <BrowserRouter>
                 <BarraDeOpciones />
                 <BarraDeOpciones2 />
-                <BarraDeOpcionesRedes />
+
                 <Routes>
                     <Route path='/' element={<Home/>}/>
                     <Route path='/Conocenos' element={<Conocenos/>}/>
