@@ -9,7 +9,33 @@ function PorcentajeNegocio() {
     const [selectedImage, setSelectedImage] = useState<string>(
         "https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
     );
+    const [spacing, setSpacing] = useState<number>(30); // Estado para el espaciado
 
+    // Función para calcular el espaciado en función del ancho de la pantalla
+    const calculateSpacing = () => {
+        const screenWidth = window.innerWidth;
+        if (screenWidth < 768) { // Pantallas pequeñas
+            return 10;
+        } else if (screenWidth >= 768 && screenWidth < 1024) { // Tablets
+            return 20;
+        } else { // Pantallas grandes
+            return 30;
+        }
+    };
+
+    // Efecto para actualizar el espaciado cuando cambia el tamaño de la pantalla
+    useEffect(() => {
+        const handleResize = () => {
+            setSpacing(calculateSpacing());
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    // Efecto para crear o actualizar el gráfico
     useEffect(() => {
         if (chartRef.current) {
             const ctx = chartRef.current.getContext('2d');
@@ -25,14 +51,14 @@ function PorcentajeNegocio() {
                             'rgba(195,195,195,0.8)',
                             'rgba(195,195,195,0.8)',
                             'rgba(0, 0, 0, 0)',
-                        ] as string[], // Asegura que es un array de strings
+                        ],
                         borderColor: [
                             'rgba(204,16,116,0)',
                             'rgba(204,16,116,0)',
                             'rgba(204,16,116,0)',
                             'rgba(204,16,116,0)',
                             'rgba(0, 0, 0, 0)',
-                        ] as string[], // Asegura que es un array de strings
+                        ],
                         borderWidth: 1,
                         hoverBackgroundColor: [
                             'rgb(181,14,14)',
@@ -40,8 +66,8 @@ function PorcentajeNegocio() {
                             'rgb(181,14,14)',
                             'rgb(181,14,14)',
                             'rgba(0, 0, 0, 0)',
-                        ] as string[], // Asegura que es un array de strings
-                        spacing: 30,
+                        ],
+                        spacing: spacing, // Usar el estado de espaciado
                     }]
                 };
 
@@ -65,7 +91,6 @@ function PorcentajeNegocio() {
                             if (chartElement.length > 0) {
                                 const segmentIndex = chartElement[0].index;
                                 setHoveredSegment(segmentIndex);
-                                // Cambiar la imagen en función del segmento seleccionado
                                 switch (segmentIndex) {
                                     case 0:
                                         setSelectedImage("https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg");
@@ -83,9 +108,8 @@ function PorcentajeNegocio() {
                                         setSelectedImage("https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg");
                                 }
                             } else {
-                                // Si no hay hover, mostrar la imagen por defecto (Minería)
                                 setSelectedImage("https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg");
-                                setHoveredSegment(0); // Volver al segmento de Minería por defecto
+                                setHoveredSegment(0);
                             }
                         }
                     }
@@ -93,7 +117,6 @@ function PorcentajeNegocio() {
 
                 const myChart = new Chart(ctx, config);
 
-                // Definir los textos para cada segmento
                 const texts = [
                     { text: "Mineria 17%" },
                     { text: "Industria 16%" },
@@ -107,7 +130,7 @@ function PorcentajeNegocio() {
                 };
             }
         }
-    }, []);
+    }, [spacing]); // Recrear el gráfico cuando cambie el espaciado
 
     return (
         <div className={styles.contenedorPadre}>
@@ -117,10 +140,15 @@ function PorcentajeNegocio() {
                     alt="Imagen grande"
                     className={styles.imagenGrande}
                 />
+                {/* Texto fijo que no cambia con la imagen */}
+                <div className={styles.textoFijo}>
+                    ○ Líder en seguridad: El mercado nos reconoce como la mas grande y la mejor empresa de seguridad del Perú.
+                </div>
+                {/* Contenedor del gráfico */}
                 <div className={styles.contenedorGrafico}>
                     <canvas ref={chartRef}></canvas>
                 </div>
-                {/* Textos posicionados con CSS */}
+                {/* Textos dinámicos (porcentajes) */}
                 {textPositions.map((pos, index) => (
                     <div
                         key={index}

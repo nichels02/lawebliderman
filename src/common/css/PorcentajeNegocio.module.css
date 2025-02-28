@@ -1,5 +1,5 @@
 .contenedorPadre {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     margin: 0 auto;
     padding: 20px;
@@ -13,7 +13,7 @@
 .contenedorImagenGrande {
     position: relative;
     background: #4baf53;
-    width: 70%;
+    width: 87%;
     height: auto;
     overflow: hidden;
 }
@@ -21,22 +21,37 @@
 .imagenGrande {
     width: 100%;
     height: 100%;
+    border-radius: 40px;
     object-fit: cover;
 }
 
 .contenedorGrafico {
     position: absolute;
     top: 50%;
-    left: 101%;
+    left: 102%;
     transform: translate(-50%, -50%);
     width: 80%;
     height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5; /* Gráfico por encima de la imagen pero debajo del texto fijo */
 }
 
-/* Estilos generales para todos los textos */
+/* Texto fijo */
+.textoFijo {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    /*transform: translate(-50%, -50%);*/
+    font-size: 1.1vw;
+    color: white;
+    font-weight: normal;
+    pointer-events: none;
+    z-index: 10; /* Texto fijo por encima del gráfico */
+}
+
+/* Estilos generales para los textos dinámicos */
 .texto {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -45,25 +60,25 @@
     font-weight: bold;
     pointer-events: none;
     transition: opacity 0.3s ease, font-size 0.3s ease;
+    z-index: 15; /* Textos dinámicos por encima de todo */
 }
 
 /* Posiciones específicas para cada texto */
-/*mineria*/
 .texto-0 {
-    right: 20%; /* Ajusta según necesites */
+    right: 20%;
     bottom: 10%;
 }
-/*Industria*/
+
 .texto-1 {
     right: 25%;
     bottom: 30%;
 }
-/*Retail*/
+
 .texto-2 {
     right: 25%;
     top: 35%;
 }
-/*Otros*/
+
 .texto-3 {
     right: 12%;
     top: 8%;
