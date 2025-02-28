@@ -19,7 +19,7 @@
     border-radius: 8px; /* Bordes redondeados */
 }
 
-/* Sección de la imagen */
+/* Sección de la imagen (izquierda) */
 .imageSection {
     position: absolute;
     left: 0; /* Pegado al borde izquierdo */
@@ -68,19 +68,21 @@
     grid-column: span 2; /* Ocupa dos columnas */
 }
 
-/* Estilo para los cuadros 3 y 4 (imagen y texto) */
+/* Estilo para los cuadros 3 y 4 (imagen como logo y texto) */
 .gridItemWithContent {
     display: flex;
     flex-direction: column; /* Coloca la imagen arriba y el texto abajo */
-    justify-content: space-between; /* Separa la imagen y el texto */
-    align-items: center;
-    padding: 10px; /* Espacio interno */
+    justify-content: flex-start; /* Alinea el contenido en la parte superior */
 }
 
 .gridItemWithContent img {
-    width: 80%; /* Ancho de la imagen */
-    height: auto; /* Altura automática */
+    position: absolute; /* Posición absoluta para superponer la imagen */
+    width: 50px; /* Tamaño pequeño para la imagen (como logo) */
+    height: 50px; /* Tamaño pequeño para la imagen (como logo) */
+    left: 0;
+    top: 0;
     border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
 }
 
 .gridItemWithContent p {

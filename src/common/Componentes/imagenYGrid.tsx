@@ -1,15 +1,14 @@
 
 import styles from '../css/imagenYGrid.module.css'; // Importa el archivo CSS único
 
-
 function imagenYGrid() {
     return (
         <div className={styles.parentContainer}>
             {/* Contenedor que agrupa la imagen y el grid */}
             <div className={styles.contentContainer}>
-                {/* Sección de la imagen */}
+                {/* Sección de la imagen (logo) */}
                 <div className={styles.imageSection}>
-                    <img src="https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg" alt="Descripción de la imagen" className={styles.image} />
+                    <img src="https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg" alt="Logo" className={styles.image} />
                 </div>
 
                 {/* Sección del grid */}
