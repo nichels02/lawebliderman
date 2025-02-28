@@ -30,6 +30,11 @@ function Home(){
                 subtitulo="para tu tranquilidad"
             />
             <CardWithExpand />
+            <TituloYSubtituloGenerico
+                titulo="Certificaciones"
+                subtitulo="Obtenidas"
+            />
+            <Marquee />
             <TextoTituloEImagen
                 titulo="Título de ejemplo"
                 texto="Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."
@@ -39,7 +44,7 @@ function Home(){
             />
             <ContenedorScroll />
             <FormularioDeContacto />
-            <Marquee />
+
 
             <FlechaGiro />
             <PorcentajeNegocio />

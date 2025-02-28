@@ -26,3 +26,29 @@
         transform: translateX(-60%); /* Desplazamos el 100% del ancho del contenido */
     }
 }
+
+
+.marqueeWrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.leftFade, .rightFade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 7.8%; /* Ancho del rectángulo */
+    z-index: 2;
+    pointer-events: none; /* Para que no interfiera con interacciones */
+}
+
+.leftFade {
+    left: 0;
+    background: #939393;
+}
+
+.rightFade {
+    right: 0;
+    background: #939393;
+}

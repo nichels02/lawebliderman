@@ -11,22 +11,31 @@ function Marquee() {
     ];
 
     return (
-        <div className={styles.marqueeContainer}>
-            <div className={styles.marqueeContent}>
-                {/* Repetimos las imágenes 3 veces */}
-                {[...Array(3)].map((_, repetition) =>
-                    marqueeItems.map((item, index) => (
-                        <img
-                            key={`${repetition}-${index}`}
-                            className={styles.marqueeItem}
-                            src={item.src}
-                            width={item.width}
-                            height={item.height}
-                            alt={item.alt}
-                        />
-                    ))
-                )}
+        <div className={styles.marqueeWrapper}>
+            {/* Rectángulo izquierdo con gradiente */}
+            <div className={styles.leftFade}></div>
+
+            {/* Contenedor del marquee */}
+            <div className={styles.marqueeContainer}>
+                <div className={styles.marqueeContent}>
+                    {/* Repetimos las imágenes 3 veces */}
+                    {[...Array(3)].map((_, repetition) =>
+                        marqueeItems.map((item, index) => (
+                            <img
+                                key={`${repetition}-${index}`}
+                                className={styles.marqueeItem}
+                                src={item.src}
+                                width={item.width}
+                                height={item.height}
+                                alt={item.alt}
+                            />
+                        ))
+                    )}
+                </div>
             </div>
+
+            {/* Rectángulo derecho con gradiente */}
+            <div className={styles.rightFade}></div>
         </div>
     );
 }
