@@ -27,25 +27,25 @@ function Header1() {
                     <button className={styles.buttonSecondary}>Únete</button>
                 </div>
 
-                {/* Contenedor centrado en la parte inferior */}
-                <div className={styles.centeredBottomContainer}>
-                    {/* Fila superior */}
-                    <div className={styles.gridItemTop}>+24,000</div>
-                    <div className={styles.gridItemTop}>35</div>
-                    <div className={styles.gridItemTop}>2,100</div>
-
-                    {/* Fila inferior */}
-                    <div className={styles.gridItemBottom}>Trabajadores a nivel global</div>
-                    <div className={styles.gridItemBottom}>Años de liderazgo en el mercado</div>
-                    <div className={styles.gridItemBottom}>Clientes satisfechos</div>
-                </div>
-
                 {/* Logo */}
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdgeUI4uPpTnu5OJ_OEMNc9bPfyUE9IYU8mg&s"
                     alt="Logo"
                     className={styles.logo}
                 />
+            </div>
+
+            {/* Contenedor centrado en la parte inferior (ahora relacionado con el header) */}
+            <div className={styles.centeredBottomContainer}>
+                {/* Fila superior */}
+                <div className={styles.gridItemTop}>+24,000</div>
+                <div className={styles.gridItemTop}>35</div>
+                <div className={styles.gridItemTop}>2,100</div>
+
+                {/* Fila inferior */}
+                <div className={styles.gridItemBottom}>Trabajadores a nivel global</div>
+                <div className={styles.gridItemBottom}>Años de liderazgo en el mercado</div>
+                <div className={styles.gridItemBottom}>Clientes satisfechos</div>
             </div>
         </header>
     );

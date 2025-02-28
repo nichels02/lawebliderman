@@ -2,8 +2,14 @@
     width: 100%;
     overflow: hidden; /* Evita desbordamientos */
     position: relative; /* Para posicionar correctamente la imagen, textos y logo */
-    padding-bottom: 4%; /* Espacio vacío debajo del contenedor padre */
     background: #acacac;
+    padding-bottom: 4%; /* Espacio vacío debajo del contenedor padre */
+}
+
+.headerImageContainer {
+    position: relative; /* Asegura que los elementos absolutos dentro de este contenedor se posicionen en relación con él */
+    width: 100%;
+    height: auto;
 }
 
 .headerImage {
@@ -19,7 +25,7 @@ h1, p {
 
 .textContainer {
     position: absolute; /* Posiciona el contenedor de textos de manera absoluta */
-    top: 32%; /* Posición relativa desde la parte superior */
+    top: 35%; /* Posición relativa desde la parte superior */
     left: 10%; /* Posición relativa desde la izquierda */
     width: 40%; /* Ancho relativo al contenedor */
     height: auto; /* Altura automática */
@@ -62,7 +68,7 @@ h1, p {
 
 .buttonContainer {
     position: absolute; /* Posiciona el contenedor de botones de manera absoluta */
-    top: 67%; /* Ajusta la posición vertical según sea necesario */
+    top: 73%; /* Ajusta la posición vertical según sea necesario */
     left: 10%; /* Misma posición horizontal que el textContainer */
     width: 40%; /* Mismo ancho que el textContainer */
     height: 6%; /* Altura relativa al contenedor */
@@ -108,12 +114,10 @@ h1, p {
     font-weight: normal; /* Texto en fuente normal */
 }
 
-/* Estilos existentes... */
-
 .centeredBottomContainer {
     position: absolute; /* Posiciona el contenedor de manera absoluta */
     left: 50%; /* Lo coloca en el centro horizontal */
-    bottom: 0; /* Lo mueve un 4% hacia abajo desde la parte inferior de .headerImage */
+    bottom: 0; /* Lo mueve un 4% hacia abajo desde la parte inferior de .header */
     border-radius: 25px; /* Bordes redondeados */
     transform: translateX(-50%); /* Centra el contenedor horizontalmente */
     width: 50%; /* Reducimos el ancho a 50% (ajusta este valor según tus necesidades) */
