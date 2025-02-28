@@ -4,6 +4,7 @@ import CardWithExpand from '../common/Componentes/CardWithExpand.tsx';
 import PorcentajeNegocio from '../common/Componentes/PorcentajeNegocio.tsx';
 import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
 import TituloYSubtituloGenerico from '../common/Componentes/TituloYSubtituloGenerico.tsx';
+import ImagenYGrid from '../common/Componentes/imagenYGrid.tsx';
 
 
 
@@ -25,6 +26,7 @@ function Home(){
             />
             <Marquee />
             <PorcentajeNegocio />
+            <ImagenYGrid />
             <FormularioDeContacto />
 
         </>
