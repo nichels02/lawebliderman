@@ -1,3 +1,9 @@
+.marqueeWrapper {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+}
+
 .marqueeContainer {
     width: 100%;
     overflow: hidden;
@@ -11,11 +17,36 @@
     animation: marqueeAnimation 10s linear infinite;
 }
 
-.marqueeItem {
+.marqueeItemContainer {
     display: inline-block;
     margin-right: 2%; /* Espacio constante entre las imágenes */
     width: 10%; /* Ancho de las imágenes */
+    text-align: center; /* Centrar el contenido */
+    vertical-align: top; /* Alinear los elementos en la parte superior */
+}
+
+.marqueeItem {
+    width: 100%; /* Ajustar al ancho del contenedor */
     height: auto; /* Alto automático para mantener la proporción */
+}
+
+.subtitleContainer {
+    margin-top: 8px; /* Espacio entre la imagen y los subtítulos */
+    white-space: normal; /* Permitir saltos de línea */
+}
+
+.subtitle1 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.subtitle2 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #777;
+    margin: 0;
 }
 
 @keyframes marqueeAnimation {
@@ -23,15 +54,8 @@
         transform: translateX(0%);
     }
     100% {
-        transform: translateX(-60%); /* Desplazamos el 100% del ancho del contenido */
+        transform: translateX(-84%); /* Desplazamos el 50% del ancho del contenido     (72 con 6)(12 x cada imagen) */
     }
-}
-
-
-.marqueeWrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
 }
 
 .leftFade, .rightFade {
@@ -41,14 +65,13 @@
     width: 7.8%; /* Ancho del rectángulo */
     z-index: 2;
     pointer-events: none; /* Para que no interfiera con interacciones */
+    background: #939393;
 }
 
 .leftFade {
     left: 0;
-    background: #939393;
 }
 
 .rightFade {
     right: 0;
-    background: #939393;
 }

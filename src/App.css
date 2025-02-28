@@ -1,6 +1,6 @@
 html, body {
     background-color: #939393; /* Cambia esto por el color que quieras */
-    overflow-x: hidden; /* Oculta el desplazamiento horizontal */
+    overflow-x: hidden;  /*Oculta el desplazamiento horizontal */
     max-width: 100vw; /* Limita el ancho al 100% del viewport */
     margin: 0; /* Elimina márgenes predeterminados */
     padding: 0; /* Elimina rellenos predeterminados */

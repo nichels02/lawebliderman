@@ -35,6 +35,7 @@ function Home(){
                 subtitulo="Obtenidas"
             />
             <Marquee />
+            <PorcentajeNegocio />
             <TextoTituloEImagen
                 titulo="Título de ejemplo"
                 texto="Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."
@@ -47,7 +48,7 @@ function Home(){
 
 
             <FlechaGiro />
-            <PorcentajeNegocio />
+
             <DonaRotativa2 />
 
 
