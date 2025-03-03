@@ -38,17 +38,26 @@
     z-index: 5; /* Gráfico por encima de la imagen pero debajo del texto fijo */
 }
 
-/* Texto fijo */
-.textoFijo {
+/* Contenedor para los textos fijos */
+.contenedorTextoFijo {
     position: absolute;
     bottom: 10%;
     left: 5%;
-    /*transform: translate(-50%, -50%);*/
+    width: 70%; /* Ajusta el ancho según sea necesario */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre los textos */
+    background: rgba(58, 223, 33, 0);
+    z-index: 200;/* 10 el valor real*/
+}
+
+/* Estilo para cada texto fijo */
+.textoFijo {
     font-size: 1.1vw;
     color: white;
     font-weight: normal;
     pointer-events: none;
-    z-index: 10; /* Texto fijo por encima del gráfico */
+    margin: 0; /* Elimina el margen predeterminado */
 }
 
 /* Estilos generales para los textos dinámicos */
@@ -82,4 +91,17 @@
 .texto-3 {
     right: 12%;
     top: 8%;
+}
+
+.textoOtros {
+    position: absolute;
+    left: 5%; /* Ajusta según sea necesario */
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 1.2vw;
+    width: 10%;
+    color: white;
+    font-weight: normal;
+    pointer-events: none;
+    z-index: 200; /* Asegúrate de que esté por encima de otros elementos */
 }

@@ -10,6 +10,7 @@ function PorcentajeNegocio() {
         "https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
     );
     const [spacing, setSpacing] = useState<number>(30); // Estado para el espaciado
+    const [showOtrosText, setShowOtrosText] = useState<boolean>(false); // Estado para mostrar el texto de "Otros"
 
     // Función para calcular el espaciado en función del ancho de la pantalla
     const calculateSpacing = () => {
@@ -91,6 +92,7 @@ function PorcentajeNegocio() {
                             if (chartElement.length > 0) {
                                 const segmentIndex = chartElement[0].index;
                                 setHoveredSegment(segmentIndex);
+                                setShowOtrosText(segmentIndex === 3); // Mostrar texto solo cuando el segmento "Otros" esté en hover
                                 switch (segmentIndex) {
                                     case 0:
                                         setSelectedImage("https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg");
@@ -110,6 +112,7 @@ function PorcentajeNegocio() {
                             } else {
                                 setSelectedImage("https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg");
                                 setHoveredSegment(0);
+                                setShowOtrosText(false); // Ocultar texto cuando no hay hover
                             }
                         }
                     }
@@ -140,9 +143,17 @@ function PorcentajeNegocio() {
                     alt="Imagen grande"
                     className={styles.imagenGrande}
                 />
-                {/* Texto fijo que no cambia con la imagen */}
-                <div className={styles.textoFijo}>
-                    ○ Líder en seguridad: El mercado nos reconoce como la mas grande y la mejor empresa de seguridad del Perú.
+                {/* Contenedor para los textos fijos */}
+                <div className={styles.contenedorTextoFijo}>
+                    <div className={styles.textoFijo}>
+                        ○ Líder en seguridad: El mercado nos reconoce como la más grande y la mejor empresa de seguridad del Perú.
+                    </div>
+                    <div className={styles.textoFijo}>
+                        ○ Innovación constante: Siempre a la vanguardia en tecnología y soluciones de seguridad.
+                    </div>
+                    <div className={styles.textoFijo}>
+                        ○ Compromiso con el cliente: Garantizamos la máxima satisfacción y confianza.
+                    </div>
                 </div>
                 {/* Contenedor del gráfico */}
                 <div className={styles.contenedorGrafico}>
@@ -161,6 +172,24 @@ function PorcentajeNegocio() {
                         {pos.text}
                     </div>
                 ))}
+                {/* Texto condicional para "Otros" */}
+                {showOtrosText && (
+                    <div className={styles.textoOtros}>
+                        Inmobiliaria
+                        Salud
+                        Otros
+                        Transporte
+                        Educación
+                        Servicios
+                        Agroindustria
+                        Construcción
+                        Financiero
+                        Fabricacíon
+                        Logística
+                        Metalurgia
+                        Seguros
+                    </div>
+                )}
             </div>
         </div>
     );
