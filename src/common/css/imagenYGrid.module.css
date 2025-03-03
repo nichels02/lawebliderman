@@ -10,7 +10,7 @@
     background: #535bf2;
 }
 
-/* Contenedor que agrupa la imagen y el grid */
+/* Contenedor que agrupa la imagen y los contenedores verticales */
 .contentContainer {
     position: relative; /* Necesario para que los elementos absolutos se posicionen relativos a este contenedor */
     width: 85%; /* Ancho del contenedor */
@@ -35,26 +35,27 @@
     object-fit: cover; /* Ajusta la imagen para que cubra el espacio */
 }
 
-/* Sección del grid */
-.gridSection {
+/* Contenedor vertical para los elementos */
+.verticalContainer {
     position: absolute;
     right: 0; /* Pegado al borde derecho */
     top: 0; /* Alineado en la parte superior */
-    width: 48%; /* Ancho del grid */
+    width: 48%; /* Ancho del contenedor */
     height: 100%; /* Altura del contenedor */
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    gap: 10px; /* Espacio entre los elementos */
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    grid-template-rows: repeat(3, 1fr); /* 3 filas */
-    gap: 4%; /* Espacio entre los elementos del grid */
-    height: 100%; /* Altura del grid */
+/* Contenedor horizontal para los elementos 3, 4, 5 y 6 */
+.horizontalContainer {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    gap: 10px; /* Espacio entre los elementos */
 }
 
-/* Estilo base para los items del grid */
-.gridItem {
+/* Estilo común para todos los contenedores */
+.commonStyle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,24 +64,24 @@
     border-radius: 8px; /* Bordes redondeados */
 }
 
-/* Estilo para fusionar los dos primeros cuadritos */
-.merged {
-    grid-column: span 2; /* Ocupa dos columnas */
+/* Contenedor fusionado (1 y 2) */
+.mergedContainer {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 20%; /* Altura del contenedor */
 }
 
 /* Estilo para los cuadros 3 y 4 (imagen como logo y texto) */
 .gridItemWithContent {
+    flex: 1; /* Ocupa el espacio disponible */
     display: flex;
     flex-direction: column; /* Coloca la imagen arriba y el texto abajo */
     justify-content: flex-start; /* Alinea el contenido en la parte superior */
+    padding: 10px; /* Espacio interno */
 }
 
 .gridItemWithContent img {
-    position: absolute; /* Posición absoluta para superponer la imagen */
     width: 50px; /* Tamaño pequeño para la imagen (como logo) */
     height: 50px; /* Tamaño pequeño para la imagen (como logo) */
-    left: 0;
-    top: 0;
     border-radius: 8px; /* Bordes redondeados */
     margin-bottom: 10px; /* Espacio entre la imagen y el texto */
 }
@@ -93,12 +94,14 @@
 
 /* Estilo específico para el cuadro 5 */
 .gridItem5 {
+    flex: 1; /* Ocupa el espacio disponible */
     background-color: #ffcc00; /* Fondo amarillo */
     border: 2px solid #ff9900; /* Borde naranja */
 }
 
 /* Estilo específico para el cuadro 6 */
 .gridItem6 {
+    flex: 1; /* Ocupa el espacio disponible */
     background-color: #00ccff; /* Fondo azul claro */
     border: 2px solid #0099cc; /* Borde azul */
 }
