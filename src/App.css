@@ -1,9 +1,30 @@
 html, body {
-    background-color: #939393; /* Cambia esto por el color que quieras */
+    background-color: var(--color-fondo);
     overflow-x: hidden;  /*Oculta el desplazamiento horizontal */
     max-width: 100vw; /* Limita el ancho al 100% del viewport */
     margin: 0; /* Elimina márgenes predeterminados */
     padding: 0; /* Elimina rellenos predeterminados */
+}
+
+#root {
+    --color-fondo: #ffffff;
+
+
+    --color-texto-negro: #000000;
+    --color-texto-negro-cambio: #000000;
+
+
+    --color-texto-blanco: white;
+    --color-texto-blanco-cambio: #ddd;
+
+    --color-rojo-general: red;
+    --color-rojo-general-cambio: red;
+}
+#root.dark-mode {
+    --color-fondo: black;
+    --color-texto-negro-cambio: #ffffff;
+    --color-texto-blanco-cambio: #000000;
+    --color-rojo-general-cambio: #ac0000;
 }
 
 /* Asegúrate de que ningún elemento se desborde */
@@ -15,12 +36,7 @@ html, body {
 /* {
 
 
-  #root {
-    max-width: 12800px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-  }
+
 
   .logo {
     height: 6em;

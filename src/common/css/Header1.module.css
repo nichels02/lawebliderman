@@ -40,20 +40,20 @@ h1, p {
 
 .text1 {
     font-size: 5.2vw; /* Tamaño relativo al contenedor */
-    color: #e3e3e3; /* Color del primer texto */
+    color: var(--color-texto-blanco); /* Color del primer texto */
 }
 
 .text2 {
     font-weight: bold; /* Texto en negrita */
     font-size: 5.2vw; /* Tamaño relativo al contenedor */
-    color: #ff0000; /* Color del segundo texto */
+    color: var(--color-rojo-general-cambio); /* Color del segundo texto */
     margin-bottom: 2vw;
 }
 
 .text3 {
     text-shadow: none; /* Elimina la sombra del texto */
     font-size: 1vw; /* Tamaño relativo al contenedor */
-    color: #e3e3e3; /* Color del tercer texto */
+    color: var(--color-texto-blanco); /* Color del tercer texto */
 }
 
 .logo {
@@ -81,8 +81,8 @@ h1, p {
     width: 30%; /* Ancho relativo al contenedor */
     padding: 1vw 2vw; /* Espaciado interno relativo al contenedor */
     font-size: 1.2vw; /* Tamaño de fuente relativo al contenedor */
-    color: #e3e3e3; /* Color del texto */
-    background-color: #ff0000; /* Color de fondo del botón */
+    color: var(--color-texto-blanco); /* Color del texto */
+    background-color: var(--color-rojo-general-cambio);
     border: none; /* Elimina el borde */
     border-radius: 10px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
@@ -99,9 +99,9 @@ h1, p {
 .buttonSecondary {
     padding: 1vw 2vw; /* Espaciado interno relativo al contenedor */
     font-size: 1.2vw; /* Tamaño de fuente relativo al contenedor */
-    color: #1a1a1a; /* Color del texto */
+    color: var(--color-texto-negro); /* Color del texto */
     background-color: rgba(227, 227, 227, 0); /* Color de fondo del botón */
-    border: 2px solid #ff0000; /* Borde con color */
+    border: 2px solid var(--color-rojo-general-cambio); /* Borde con color */
     border-radius: 10px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para el hover */
@@ -123,9 +123,9 @@ h1, p {
     height: auto; /* Altura automática */
     z-index: 1; /* Asegura que esté por encima de otros elementos */
     text-align: center; /* Alinea el contenido al centro */
-    background-color: rgb(255, 0, 0); /* Fondo semitransparente (opcional) */
+    background-color: var(--color-rojo-general-cambio); /* Fondo semitransparente (opcional) */
     padding: 0; /* Espaciado interno (opcional) */
-    color: #e3e3e3; /* Color del texto (opcional) */
+    color: var(--color-texto-blanco); /* Color del texto (opcional) */
     display: grid; /* Usa CSS Grid */
     grid-template-columns: repeat(3, 0.7fr); /* 3 columnas de igual ancho */
     grid-template-rows: 0.6fr 0.1fr; /* La primera fila tiene el doble de altura que la segunda */

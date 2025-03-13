@@ -1,7 +1,36 @@
 
 import styles from '../css/Header1.module.css';
+import { useLanguage } from './Sistemas/LanguageContext'; // Importa el hook useLanguage
+
+const Textos = {
+    en: {
+        titulo: 'We are worth as much',
+        subtitulo: 'as what we take care of',
+        descripcion1: 'Discover our expertise in people management, to',
+        descripcion2: 'make your life safer and more reliable.',
+        botonPrimario: 'Solutions➔',
+        botonSecundario: 'Join',
+        trabajadores: 'Workers globally',
+        años: 'Years of market leadership',
+        clientes: 'Satisfied customers',
+    },
+    es: {
+        titulo: 'Valemos tanto',
+        subtitulo: 'como lo que cuidamos',
+        descripcion1: 'Descubre nuestra expertise en la gestión de las personas, para',
+        descripcion2: 'hacer tu vida más segura y confiable.',
+        botonPrimario: 'Soluciones➔',
+        botonSecundario: 'Únete',
+        trabajadores: 'Trabajadores a nivel global',
+        años: 'Años de liderazgo en el mercado',
+        clientes: 'Clientes satisfechos',
+    },
+};
 
 function Header1() {
+    const { language } = useLanguage(); // Obtiene el idioma actual del contexto
+    const textos = Textos[language]; // Selecciona los textos según el idioma
+
     return (
         <header className={styles.header}>
             {/* Contenedor de la imagen */}
@@ -15,16 +44,16 @@ function Header1() {
 
                 {/* Contenedor de texto */}
                 <div className={styles.textContainer}>
-                    <h1 className={styles.text1}>Valemos tanto</h1>
-                    <p className={styles.text2}>como lo que cuidamos</p>
-                    <p className={styles.text3}>Descubre nuestra expertise en la gestión de las personas, para </p>
-                    <p className={styles.text3}>hacer tu vida mas segura y confiable.</p>
+                    <h1 className={styles.text1}>{textos.titulo}</h1>
+                    <p className={styles.text2}>{textos.subtitulo}</p>
+                    <p className={styles.text3}>{textos.descripcion1}</p>
+                    <p className={styles.text3}>{textos.descripcion2}</p>
                 </div>
 
                 {/* Contenedor de botones */}
                 <div className={styles.buttonContainer}>
-                    <button className={styles.buttonPrimary}>Soluciones➔ </button>
-                    <button className={styles.buttonSecondary}>Únete</button>
+                    <button className={styles.buttonPrimary}>{textos.botonPrimario}</button>
+                    <button className={styles.buttonSecondary}>{textos.botonSecundario}</button>
                 </div>
 
                 {/* Logo */}
@@ -43,9 +72,9 @@ function Header1() {
                 <div className={styles.gridItemTop}>2,100</div>
 
                 {/* Fila inferior */}
-                <div className={styles.gridItemBottom}>Trabajadores a nivel global</div>
-                <div className={styles.gridItemBottom}>Años de liderazgo en el mercado</div>
-                <div className={styles.gridItemBottom}>Clientes satisfechos</div>
+                <div className={styles.gridItemBottom}>{textos.trabajadores}</div>
+                <div className={styles.gridItemBottom}>{textos.años}</div>
+                <div className={styles.gridItemBottom}>{textos.clientes}</div>
             </div>
         </header>
     );
