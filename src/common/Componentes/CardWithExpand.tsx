@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from '../css/CardWithExpand.module.css';
 
 function CardWithExpand() {
-    const [expandedIndex, setExpandedIndex] = useState(0); // Estado para guardar el índice de la imagen expandida (inicia con 0)
+    const [expandedIndex, setExpandedIndex] = useState(0); // Estado para guardar el índice de la imagen expandida
 
     const imageUrls = [
         "https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg",
@@ -11,11 +11,11 @@ function CardWithExpand() {
     ];
 
     const handleMouseEnter = (index: number) => {
-        setExpandedIndex(index); // Expandir la imagen sobre la que se hace hover
+        setExpandedIndex(index); // Expande la imagen sobre la que se hace hover
     };
 
     return (
-        <div className={styles.container}> {/* Contenedor principal */}
+        <div className={styles.container}>
             <section className={styles.section}>
                 {imageUrls.map((url, index) => (
                     <div
@@ -28,10 +28,11 @@ function CardWithExpand() {
                             alt={`Imagen ${index + 1}`}
                             className={styles.img}
                         />
+                        {/* Texto que cambia de posición según el estado */}
                         <div className={styles.text}>
                             Texto {index + 1}
                         </div>
-                        {/* Texto en el lado izquierdo */}
+                        {/* Texto alineado a la izquierda cuando está expandido */}
                         <div className={`${styles.leftText} ${expandedIndex === index ? styles.visible : ""}`}>
                             Izquierda {index + 1}
                         </div>
