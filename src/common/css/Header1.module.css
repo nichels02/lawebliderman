@@ -86,7 +86,6 @@ h1, p {
     border: none; /* Elimina el borde */
     border-radius: 10px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición suave para el hover */
     outline: none; /* Elimina el borde azul al hacer clic */
     display: flex; /* Habilita Flexbox */
     align-items: center; /* Centra el texto verticalmente */

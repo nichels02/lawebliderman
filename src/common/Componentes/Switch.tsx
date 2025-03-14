@@ -1,12 +1,19 @@
+import { useEffect, useState } from 'react';
 import styles from '../css/Switch.module.css';
-import { useLanguage } from './Sistemas/LanguageContext'; // Importa el hook useLanguage
+import { toggleDarkMode, isDarkModeEnabled } from './Sistemas/toggleDarkMode.ts';
 
 function Switch() {
-    const { toggleLanguage } = useLanguage(); // Obtiene la función toggleLanguage del contexto
+    // Estado para el switch (activado o desactivado)
+    const [isChecked, setIsChecked] = useState(false);
 
-    // Manejador de eventos para el cambio del switch
+    // Al montar el componente, sincronizar el estado con localStorage
+    useEffect(() => {
+        setIsChecked(isDarkModeEnabled()); // Verifica si el dark mode está activado
+    }, []);
+
     const handleToggle = () => {
-        toggleLanguage(); // Cambia el idioma
+        toggleDarkMode(); // Alterna el dark mode
+        setIsChecked(prev => !prev); // Cambia el estado del switch
     };
 
     return (
@@ -15,12 +22,10 @@ function Switch() {
                 type="checkbox"
                 id="switch"
                 className={styles.checkbox}
+                checked={isChecked} // Asegurar que refleje el estado correcto
                 onChange={handleToggle} // Llama a handleToggle cuando el switch cambia
             />
-            <label
-                htmlFor="switch"
-                className={styles.switchLabel}
-            >
+            <label htmlFor="switch" className={styles.switchLabel}>
                 Toggle
             </label>
         </div>
