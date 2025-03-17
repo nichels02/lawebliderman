@@ -27,7 +27,14 @@ const FormularioDeContacto = () => {
         <div className={styles.contenedor_padre}>
             <div className={styles.contenedor_secundario}>
                 <div className={styles.contenedor_formulario}>
-                    <h1 className={styles.titulo}>Contactanos</h1>
+                    <div className={styles.titulo_contenedor}>
+                        <h1 className={styles.titulo}>Contactanos</h1>
+                        <select className={styles.dropdown}>
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <option value="opcion3">Opción 3</option>
+                        </select>
+                    </div>
                     <h3 className={styles.subtitulo}></h3>
 
                     <form action="submeter-formulario.php" method="post" className={styles.formulario}>

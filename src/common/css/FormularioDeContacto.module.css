@@ -1,146 +1,139 @@
-/* Importación de fuentes de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&display=swap');
-
-/* ------------------------- */
 /* Estructura principal */
-/* ------------------------- */
 .contenedor_padre {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #ab4453;
-    padding: 20px;
+    padding: 10px; /* Padding reducido */
 }
 
 .contenedor_secundario {
     width: 100%;
-    max-width: 800px;
+    max-width: 450px; /* Ancho máximo intermedio */
     background-color: #000000;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 8px; /* Borde más suave */
+    padding: 20px; /* Padding reducido */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra más sutil */
 }
 
-.contenedor_formulario {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 400;
+/* Contenedor del título y dropdown */
+.titulo_contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Margen inferior reducido */
 }
 
-/* ------------------------- */
 /* Tipografía */
-/* ------------------------- */
 .titulo {
-    font-size: 2.4rem;
+    font-size: 1.5rem; /* Tamaño de fuente reducido */
     color: #ffffff;
-    margin-bottom: 15px;
-    font-weight: 400;
     line-height: 1.2;
 }
 
 .subtitulo {
-    font-size: 1rem;
+    font-size: 0.8rem; /* Tamaño de fuente reducido */
     color: #cccccc;
-    margin-bottom: 30px;
+    margin-bottom: 15px; /* Margen inferior reducido */
     line-height: 1.5;
-    font-weight: 400;
 }
 
-/* ------------------------- */
+/* Estilos del dropdown */
+.dropdown {
+    padding: 6px 10px; /* Padding reducido */
+    border: 1px solid #ffffff;
+    border-radius: 4px; /* Borde más suave */
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 0.8rem; /* Tamaño de fuente reducido */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover {
+    border-color: #ab4453;
+    background-color: rgba(171, 68, 83, 0.1);
+}
+
+.dropdown:focus {
+    outline: none;
+    border-color: #ab4453;
+    box-shadow: 0 0 5px rgba(171, 68, 83, 0.5);
+}
+
 /* Estructura del formulario */
-/* ------------------------- */
 .formulario {
     display: grid;
-    grid-template-rows: repeat(5, auto);
-    gap: 25px;
+    gap: 12px; /* Espacio entre elementos reducido */
 }
 
 .fila {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 12px; /* Espacio entre elementos reducido */
 }
 
 .fila_fusionada {
     grid-column: 1 / -1;
 }
 
-/* ------------------------- */
 /* Elementos del formulario */
-/* ------------------------- */
 .campo {
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 .label {
     color: #ffffff;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-    font-weight: 400;
+    margin-bottom: 5px; /* Margen inferior reducido */
+    font-size: 0.75rem; /* Tamaño de fuente reducido */
 }
 
-.input {
-    padding: 12px 0;
+.input, .textarea {
+    padding: 6px 0; /* Padding reducido */
     border: none;
     border-bottom: 1px solid #ffffff;
     background-color: transparent;
     color: #ffffff;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    font-size: 0.8rem; /* Tamaño de fuente reducido */
+    transition: border-color 0.3s ease;
 }
 
-.input:focus {
+.input:focus, .textarea:focus {
     border-bottom-color: #ab4453;
     outline: none;
 }
 
 .textarea {
-    padding: 15px 0;
-    border: none;
-    border-bottom: 1px solid #ffffff;
-    background-color: transparent;
-    color: #ffffff;
-    font-size: 1rem;
     resize: none;
     overflow-y: hidden;
     line-height: 1.5;
-    min-height: 60px;
-    transition: all 0.3s ease;
+    min-height: 40px; /* Altura mínima reducida */
 }
 
-/* ------------------------- */
 /* Checkboxes personalizados */
-/* ------------------------- */
 .checkboxGroup {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    margin-top: 10px;
+    gap: 12px; /* Espacio entre elementos reducido */
+    margin-top: 8px; /* Margen superior reducido */
 }
 
 .checkboxContainer {
     display: flex;
     align-items: center;
+    gap: 6px; /* Espacio entre elementos reducido */
     cursor: pointer;
-    gap: 10px;
 }
 
 .checkboxInput {
-    position: absolute;
     opacity: 0;
-    height: 0;
-    width: 0;
+    position: absolute;
 }
 
 .checkboxCustom {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 14px; /* Tamaño reducido */
+    height: 14px; /* Tamaño reducido */
     border: 2px solid #ffffff;
     border-radius: 50%;
     transition: all 0.3s ease;
@@ -157,41 +150,31 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 12px;
-    height: 12px;
+    width: 6px; /* Tamaño reducido */
+    height: 6px; /* Tamaño reducido */
     background: white;
     border-radius: 50%;
 }
 
 .checkboxLabel {
     color: #ffffff;
-    font-size: 0.9rem;
-    user-select: none;
+    font-size: 0.75rem; /* Tamaño de fuente reducido */
 }
 
 .checkboxContainer:hover .checkboxCustom {
     border-color: #ab4453;
 }
 
-.checkboxInput:focus-visible + .checkboxCustom {
-    outline: 2px solid #ffffff;
-    outline-offset: 2px;
-}
-
-/* ------------------------- */
 /* Botón de enviar */
-/* ------------------------- */
 .boton {
     background-color: #ffffff;
     color: #ab4453;
     border: none;
-    padding: 12px 30px;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 400;
+    padding: 8px 16px; /* Padding reducido */
+    border-radius: 4px; /* Borde más suave */
+    font-size: 0.8rem; /* Tamaño de fuente reducido */
     cursor: pointer;
     transition: all 0.3s ease;
-    white-space: nowrap;
 }
 
 .boton:hover {
@@ -200,35 +183,31 @@
     transform: translateY(-2px);
 }
 
-/* ------------------------- */
 /* Sección contacto alternativo */
-/* ------------------------- */
 .texto_boton {
-    grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-    gap: 15px;
+    margin-top: 12px; /* Margen superior reducido */
+    gap: 8px; /* Espacio entre elementos reducido */
 }
 
 .contacto_alternativo {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px; /* Espacio entre elementos reducido */
 }
 
 .contacto_titulo {
     color: #ffffff;
-    font-size: 0.9rem;
-    margin: 0;
+    font-size: 0.75rem; /* Tamaño de fuente reducido */
 }
 
 .contacto_email {
     color: #ab4453;
     text-decoration: none;
-    font-weight: 400;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
+    font-size: 0.75rem; /* Tamaño de fuente reducido */
 }
 
 .contacto_email:hover {
@@ -236,35 +215,31 @@
     text-decoration: underline;
 }
 
-/* ------------------------- */
 /* Elementos adicionales */
-/* ------------------------- */
 .obligatorio {
     color: #ff4d4d;
     margin-left: 3px;
-    font-weight: 500;
 }
 
 ::placeholder {
     color: #cccccc;
     opacity: 0.8;
     font-style: italic;
+    font-size: 0.75rem; /* Tamaño de fuente reducido */
 }
 
-/* ------------------------- */
 /* Responsive Design */
-/* ------------------------- */
 @media (max-width: 768px) {
     .fila {
         grid-template-columns: 1fr;
     }
 
     .titulo {
-        font-size: 2rem;
+        font-size: 1.4rem; /* Tamaño de fuente reducido */
     }
 
     .contenedor_secundario {
-        padding: 20px;
+        padding: 15px; /* Padding reducido */
     }
 
     .texto_boton {
@@ -274,26 +249,35 @@
 
     .boton {
         width: 100%;
-        margin-top: 15px;
+        margin-top: 10px; /* Margen superior reducido */
+    }
+
+    .titulo_contenedor {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px; /* Espacio entre elementos reducido */
+    }
+
+    .dropdown {
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     .titulo {
-        font-size: 1.8rem;
+        font-size: 1.2rem; /* Tamaño de fuente reducido */
     }
 
     .input, .textarea {
-        font-size: 0.9rem;
+        font-size: 0.75rem; /* Tamaño de fuente reducido */
     }
 
     .checkboxGroup {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+        gap: 8px; /* Espacio entre elementos reducido */
     }
 
     .checkboxLabel {
-        font-size: 0.85rem;
+        font-size: 0.7rem; /* Tamaño de fuente reducido */
     }
 }
