@@ -1,42 +1,51 @@
-/* Estructura principal */
-.contenedor_padre {
+/* Contenedor principal (ocupa toda la pantalla) */
+.contenedor_principal {
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    height: 180vh; /* Ocupa toda la altura de la pantalla */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #ab4453;
-    padding: 10px; /* Padding reducido */
+    background-color: #8f2626; /* Fondo temporal para visualización */
 }
 
-.contenedor_secundario {
-    width: 100%;
-    max-width: 450px; /* Ancho máximo intermedio */
+/* Contenedor secundario (80% del ancho y alto del padre) */
+.contenedor_secundario_80 {
+    width: 80%; /* 80% del ancho del contenedor padre */
+    height: 80%; /* 80% del alto del contenedor padre */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: flex-start; /* Alinea el contenido hacia arriba */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    background-color: #ffffff; /* Fondo temporal para visualización */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    position: relative; /* Necesario para posicionar el formulario */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Contenedor del formulario (el que ya tenías) */
+.contenedor_formulario_principal {
+    width: 450px; /* Ancho fijo */
+    max-width: 100%; /* Evita que se desborde */
     background-color: #000000;
-    border-radius: 8px; /* Borde más suave */
-    padding: 20px; /* Padding reducido */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra más sutil */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+
+/* Contenedor del formulario */
+.contenedor_formulario {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
 }
 
 /* Contenedor del título y dropdown */
-.titulo_contenedor {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.contenedor_titulo_dropdown {
+    display: flex; /* Usa Flexbox para alinear elementos */
+    justify-content: space-between; /* Separa el título y el dropdown */
+    align-items: center; /* Centra verticalmente los elementos */
     margin-bottom: 10px; /* Margen inferior reducido */
-}
-
-/* Tipografía */
-.titulo {
-    font-size: 1.5rem; /* Tamaño de fuente reducido */
-    color: #ffffff;
-    line-height: 1.2;
-}
-
-.subtitulo {
-    font-size: 0.8rem; /* Tamaño de fuente reducido */
-    color: #cccccc;
-    margin-bottom: 15px; /* Margen inferior reducido */
-    line-height: 1.5;
 }
 
 /* Estilos del dropdown */
@@ -49,6 +58,7 @@
     font-size: 0.8rem; /* Tamaño de fuente reducido */
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-left: 20px; /* Espacio entre el título y el dropdown */
 }
 
 .dropdown:hover {
@@ -62,19 +72,33 @@
     box-shadow: 0 0 5px rgba(171, 68, 83, 0.5);
 }
 
+/* Tipografía */
+.titulo {
+    font-size: 1.5rem; /* Tamaño de fuente reducido */
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.subtitulo {
+    font-size: 0.8rem; /* Tamaño de fuente reducido */
+    color: #cccccc;
+    margin-bottom: 20px; /* Margen inferior reducido */
+    line-height: 1.5;
+}
+
 /* Estructura del formulario */
 .formulario {
     display: grid;
-    gap: 12px; /* Espacio entre elementos reducido */
+    gap: 15px; /* Espacio entre elementos reducido */
 }
 
 .fila {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px; /* Espacio entre elementos reducido */
+    gap: 15px; /* Espacio entre elementos reducido */
 }
 
-.fila_fusionada {
+.fila_completa {
     grid-column: 1 / -1;
 }
 
@@ -84,14 +108,14 @@
     flex-direction: column;
 }
 
-.label {
+.etiqueta {
     color: #ffffff;
-    margin-bottom: 5px; /* Margen inferior reducido */
+    margin-bottom: 0; /* Margen inferior reducido */
     font-size: 0.75rem; /* Tamaño de fuente reducido */
 }
 
 .input, .textarea {
-    padding: 6px 0; /* Padding reducido */
+    padding: 8px; /* Padding reducido */
     border: none;
     border-bottom: 1px solid #ffffff;
     background-color: transparent;
@@ -109,29 +133,29 @@
     resize: none;
     overflow-y: hidden;
     line-height: 1.5;
-    min-height: 40px; /* Altura mínima reducida */
+    min-height: 80px; /* Altura mínima reducida */
 }
 
 /* Checkboxes personalizados */
-.checkboxGroup {
+.grupo_checkboxes {
     display: flex;
     gap: 12px; /* Espacio entre elementos reducido */
     margin-top: 8px; /* Margen superior reducido */
 }
 
-.checkboxContainer {
+.contenedor_checkbox {
     display: flex;
     align-items: center;
     gap: 6px; /* Espacio entre elementos reducido */
     cursor: pointer;
 }
 
-.checkboxInput {
+.input_checkbox {
     opacity: 0;
     position: absolute;
 }
 
-.checkboxCustom {
+.checkbox_personalizado {
     width: 14px; /* Tamaño reducido */
     height: 14px; /* Tamaño reducido */
     border: 2px solid #ffffff;
@@ -139,12 +163,12 @@
     transition: all 0.3s ease;
 }
 
-.checkboxInput:checked + .checkboxCustom {
+.input_checkbox:checked + .checkbox_personalizado {
     background-color: #ab4453;
     border-color: #ab4453;
 }
 
-.checkboxInput:checked + .checkboxCustom::after {
+.input_checkbox:checked + .checkbox_personalizado::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -156,17 +180,17 @@
     border-radius: 50%;
 }
 
-.checkboxLabel {
+.etiqueta_checkbox {
     color: #ffffff;
     font-size: 0.75rem; /* Tamaño de fuente reducido */
 }
 
-.checkboxContainer:hover .checkboxCustom {
+.contenedor_checkbox:hover .checkbox_personalizado {
     border-color: #ab4453;
 }
 
 /* Botón de enviar */
-.boton {
+.boton_enviar {
     background-color: #ffffff;
     color: #ab4453;
     border: none;
@@ -177,14 +201,14 @@
     transition: all 0.3s ease;
 }
 
-.boton:hover {
+.boton_enviar:hover {
     background-color: #ab4453;
     color: #ffffff;
     transform: translateY(-2px);
 }
 
 /* Sección contacto alternativo */
-.texto_boton {
+.seccion_contacto_alternativo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -192,31 +216,31 @@
     gap: 8px; /* Espacio entre elementos reducido */
 }
 
-.contacto_alternativo {
+.info_contacto_alternativo {
     display: flex;
     flex-direction: column;
     gap: 4px; /* Espacio entre elementos reducido */
 }
 
-.contacto_titulo {
+.titulo_contacto_alternativo {
     color: #ffffff;
     font-size: 0.75rem; /* Tamaño de fuente reducido */
 }
 
-.contacto_email {
+.enlace_contacto {
     color: #ab4453;
     text-decoration: none;
     transition: color 0.3s ease;
     font-size: 0.75rem; /* Tamaño de fuente reducido */
 }
 
-.contacto_email:hover {
+.enlace_contacto:hover {
     color: #ffffff;
     text-decoration: underline;
 }
 
 /* Elementos adicionales */
-.obligatorio {
+.texto_obligatorio {
     color: #ff4d4d;
     margin-left: 3px;
 }
@@ -226,6 +250,38 @@
     opacity: 0.8;
     font-style: italic;
     font-size: 0.75rem; /* Tamaño de fuente reducido */
+}
+
+/* Contenedor de los botones (dentro del contenedor secundario, fuera del formulario) */
+.contenedor_botones_externo {
+    width: 450px; /* Mismo ancho que el formulario */
+    max-width: 100%; /* Evita que sobresalga en pantallas pequeñas */
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los botones */
+    gap: 10px; /* Espacio entre los botones */
+    margin-bottom: 20px; /* Distancia entre los botones y el formulario (ajusta este valor) */
+}
+
+/* Estilos para cada botón */
+.boton {
+    flex: 1; /* Hace que cada botón ocupe el mismo espacio */
+    padding: 10px; /* Padding interno */
+    background-color: #ab4453; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 0.8rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.boton:hover {
+    background-color: #8f2626; /* Cambia el color al hacer hover */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.boton:active {
+    transform: translateY(0); /* Vuelve a la posición original al hacer clic */
 }
 
 /* Responsive Design */
@@ -238,21 +294,21 @@
         font-size: 1.4rem; /* Tamaño de fuente reducido */
     }
 
-    .contenedor_secundario {
+    .contenedor_formulario_principal {
         padding: 15px; /* Padding reducido */
     }
 
-    .texto_boton {
+    .seccion_contacto_alternativo {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .boton {
+    .boton_enviar {
         width: 100%;
         margin-top: 10px; /* Margen superior reducido */
     }
 
-    .titulo_contenedor {
+    .contenedor_titulo_dropdown {
         flex-direction: column;
         align-items: flex-start;
         gap: 6px; /* Espacio entre elementos reducido */
@@ -260,6 +316,12 @@
 
     .dropdown {
         width: 100%;
+        margin-left: 0; /* Elimina el margen izquierdo */
+        margin-top: 10px; /* Añade un margen superior */
+    }
+
+    .contenedor_botones_externo {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
     }
 }
 
@@ -272,12 +334,12 @@
         font-size: 0.75rem; /* Tamaño de fuente reducido */
     }
 
-    .checkboxGroup {
+    .grupo_checkboxes {
         flex-direction: column;
         gap: 8px; /* Espacio entre elementos reducido */
     }
 
-    .checkboxLabel {
+    .etiqueta_checkbox {
         font-size: 0.7rem; /* Tamaño de fuente reducido */
     }
 }
