@@ -13,14 +13,15 @@ html, body {
     --color-texto-negro: #000000;
     --color-texto-negro-cambio: #393939;
 
+    --color-general-gris: #686868;
 
     --colorUI: rgba(241, 241, 241, 0.73);
 
 
-    --color-texto-blanco: white;
+    --color-texto-blanco: #ddd;
     --color-texto-blanco-cambio: #ddd;
 
-    --color-rojo-general: red;
+    --color-rojo-general: #e61717;
     --color-rojo-general-cambio: #e61717;
 }
 

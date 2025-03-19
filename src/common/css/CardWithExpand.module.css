@@ -1,5 +1,5 @@
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -27,7 +27,7 @@
 }
 
 .imgContainer.expanded {
-    flex-grow: 4; /* Expande el elemento activo */
+    flex-grow: 6; /* Expande el elemento activo */
 }
 
 .img {

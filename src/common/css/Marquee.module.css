@@ -65,7 +65,7 @@
     width: 7.8%; /* Ancho del rectángulo */
     z-index: 2;
     pointer-events: none; /* Para que no interfiera con interacciones */
-    background: #939393;
+    background: var(--color-fondo);
 }
 
 .leftFade {
