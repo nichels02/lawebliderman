@@ -26,7 +26,7 @@ h1, p {
     position: absolute; /* Posiciona el contenedor de textos de manera absoluta */
     top: 35%; /* Posición relativa desde la parte superior */
     left: 10%; /* Posición relativa desde la izquierda */
-    width: 40%; /* Ancho relativo al contenedor */
+    width: 45%; /* Ancho relativo al contenedor */
     height: auto; /* Altura automática */
     z-index: 1; /* Asegura que los textos estén por encima de la imagen */
     text-align: left; /* Alinea el texto a la izquierda */
@@ -39,7 +39,7 @@ h1, p {
 }
 
 .text1 {
-    font-size: 5.2vw; /* Tamaño relativo al contenedor */
+    font-size: 5vw; /* Tamaño relativo al contenedor */
     color: var(--color-texto-blanco); /* Color del primer texto */
 }
 

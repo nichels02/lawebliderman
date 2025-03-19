@@ -1,19 +1,19 @@
 import { useEffect, useState } from 'react';
 import styles from '../css/Switch.module.css';
 import { toggleDarkMode, isDarkModeEnabled } from './Sistemas/toggleDarkMode.ts';
+import { updateSVGColor } from './BarraDeOpciones2.tsx';
 
 function Switch() {
-    // Estado para el switch (activado o desactivado)
     const [isChecked, setIsChecked] = useState(false);
 
-    // Al montar el componente, sincronizar el estado con localStorage
     useEffect(() => {
-        setIsChecked(isDarkModeEnabled()); // Verifica si el dark mode está activado
+        setIsChecked(isDarkModeEnabled());
     }, []);
 
     const handleToggle = () => {
-        toggleDarkMode(); // Alterna el dark mode
-        setIsChecked(prev => !prev); // Cambia el estado del switch
+        toggleDarkMode();
+        updateSVGColor(); // Llama a la función para actualizar los colores del SVG
+        setIsChecked(prev => !prev);
     };
 
     return (
@@ -22,8 +22,8 @@ function Switch() {
                 type="checkbox"
                 id="switch"
                 className={styles.checkbox}
-                checked={isChecked} // Asegurar que refleje el estado correcto
-                onChange={handleToggle} // Llama a handleToggle cuando el switch cambia
+                checked={isChecked}
+                onChange={handleToggle} // Ahora sí cambia el color del SVG
             />
             <label htmlFor="switch" className={styles.switchLabel}>
                 Toggle

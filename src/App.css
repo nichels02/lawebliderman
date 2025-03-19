@@ -11,7 +11,10 @@ html, body {
 
 
     --color-texto-negro: #000000;
-    --color-texto-negro-cambio: #000000;
+    --color-texto-negro-cambio: #393939;
+
+
+    --colorUI: rgba(241, 241, 241, 0.73);
 
 
     --color-texto-blanco: white;
@@ -24,7 +27,8 @@ html, body {
 
 
 .dark-mode {
-    --color-fondo: #b12929;
+    --colorUI: rgba(60, 60, 60, 0.73);
+    --color-fondo: #202020;
     --color-texto-negro-cambio: #ffffff;
     --color-texto-blanco-cambio: #000000;
     --color-rojo-general-cambio: #ac0000;

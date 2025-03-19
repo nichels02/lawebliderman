@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.62); /* Fondo translúcido */
+    background: var(--colorUI);
     backdrop-filter: blur(10px); /* Efecto de vidrio */
     -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
     border-radius: 25px;
@@ -33,7 +33,7 @@
 
 .boton {
     background-color: transparent;
-    color: #393939;
+    color: var(--color-texto-negro-cambio);
     border: none;
     border-radius: 20px;
     padding: 4px 6px; /* Padding más compacto */
@@ -52,15 +52,20 @@
 .globeIcon {
     margin-right: 4px; /* Espacio entre el globo y la flecha */
     display: inline-block;
+    fill: var(--color-texto-negro-cambio) !important;
     vertical-align: middle; /* Alinea verticalmente con la flecha */
     width: 16px; /* Ancho reducido */
     height: 16px; /* Alto reducido */
 }
-
+.iconoSVG{
+    color: var(--color-texto-negro-cambio) !important;
+    fill: var(--color-texto-negro-cambio) !important;
+}
 /* Estilos para el símbolo de dropdown (flecha) */
 .dropdownSymbol {
     margin-left: 4px;
     display: inline-block;
+    color: var(--color-texto-negro-cambio) !important;
     transform: translateY(2px); /* Ajuste de posición vertical */
     width: 12px; /* Ancho reducido */
     height: 12px; /* Alto reducido */
@@ -78,7 +83,7 @@
     top: 100%; /* Coloca el panel justo debajo del botón */
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.62); /* Fondo translúcido */
+    background: var(--colorUI);
     backdrop-filter: blur(10px); /* Efecto de vidrio */
     -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
     border-radius: 0 0 25px 25px;
@@ -93,7 +98,7 @@
 
 .panel .boton {
     background-color: transparent;
-    color: #393939;
+    color: var(--color-texto-negro-cambio);
     padding: 4px 12px; /* Padding más compacto */
     margin: 0;
     border-radius: 0;

@@ -3,32 +3,31 @@ import { languageManager } from './SingletonIdiomas';
 
 type LanguageContextType = {
     language: 'es' | 'en';
-    toggleLanguage: () => void;
+    setLanguage: (lang: 'es' | 'en') => void;
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [language, setLanguage] = useState(languageManager.getCurrentLanguage());
+    const [language, setLanguageState] = useState(languageManager.getCurrentLanguage());
 
     useEffect(() => {
         const updateLanguage = (newLanguage: 'es' | 'en') => {
-            setLanguage(newLanguage);
+            setLanguageState(newLanguage);
         };
 
-        languageManager.subscribe(updateLanguage); // Suscripción al singleton
-
+        languageManager.subscribe(updateLanguage);
         return () => {
-            languageManager.unsubscribe(updateLanguage); // Desuscripción al desmontar
+            languageManager.unsubscribe(updateLanguage);
         };
     }, []);
 
-    const toggleLanguage = () => {
-        languageManager.toggleLanguage(); // Cambia el idioma en el singleton
+    const setLanguage = (lang: 'es' | 'en') => {
+        languageManager.setLanguage(lang); // Cambia el idioma en el singleton
     };
 
     return (
-        <LanguageContext.Provider value={{ language, toggleLanguage }}>
+        <LanguageContext.Provider value={{ language, setLanguage }}>
             {children}
         </LanguageContext.Provider>
     );

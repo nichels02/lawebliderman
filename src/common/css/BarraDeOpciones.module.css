@@ -1,106 +1,122 @@
 .barra {
     position: fixed;
-    top: 2%; /* Posición más arriba */
+    top: 2%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.5); /* Fondo translúcido */
-    backdrop-filter: blur(10px); /* Efecto de vidrio */
-    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
-    border-radius: 20px; /* Border-radius más pequeño */
-    padding: 4px 8px; /* Padding más compacto */
-    min-width: 30vw; /* Ancho mínimo para pantallas grandes */
-    max-width: 40vw; /* Ancho máximo para pantallas grandes */
+    background: var(--colorUI);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 4px 8px;
+    min-width: 30vw;
+    max-width: 40vw;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
-/* Ajustes para pantallas medianas (tablets) */
+/* Ajustes para tablets */
 @media (max-width: 1024px) {
     .barra {
-        min-width: 50vw; /* Más ancho en tablets */
+        min-width: 50vw;
         max-width: 70vw;
-        padding: 4px 6px; /* Padding más compacto */
+        padding: 4px 6px;
     }
 
     .boton {
-        font-size: clamp(0.6rem, 1.1vw, 0.75rem); /* Texto más pequeño */
+        font-size: clamp(0.6rem, 1.1vw, 0.75rem);
     }
 }
 
-/* Ajustes para pantallas pequeñas (móviles) */
+/* Ajustes para móviles */
 @media (max-width: 768px) {
     .barra {
-        min-width: 80vw; /* Más ancho en móviles */
+        min-width: 80vw;
         max-width: 90vw;
-        padding: 4px 4px; /* Padding más compacto */
+        padding: 4px 4px;
     }
 
     .boton {
-        font-size: clamp(0.55rem, 1vw, 0.7rem); /* Texto más pequeño */
+        font-size: clamp(0.55rem, 1vw, 0.7rem);
     }
 }
 
 .boton {
     background-color: transparent;
-    color: #393939;
+    color: var(--color-texto-negro-cambio);
     border: none;
-    border-radius: 15px; /* Border-radius más pequeño */
-    padding: 4px 6px; /* Padding más compacto */
-    margin: 0 2px; /* Margen reducido */
+    border-radius: 15px;
+    padding: 4px 6px;
+    margin: 0 2px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: relative;
     font-weight: normal;
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    font-size: clamp(0.65rem, 1.1vw, 0.8rem); /* Texto más pequeño */
+    white-space: nowrap;
+    font-size: clamp(0.65rem, 1.1vw, 0.8rem);
+    text-decoration: none; /* Para quitar subrayado en <Link> */
+    display: inline-flex;
+    align-items: center;
+
 }
 
-.dropdownSymbol {
-    margin-left: 4px; /* Margen reducido */
+/* Contenedor del menú desplegable */
+.dropdown {
+    position: relative;
     display: inline-block;
-    transform: translateY(1px); /* Ajuste de posición vertical */
-    width: 10px; /* Ancho reducido */
-    height: 10px; /* Alto reducido */
 }
 
-.highlight {
-    font-weight: normal;
-    background: #fa0000;
-    border-radius: 15px; /* Border-radius más pequeño */
-    color: #ffffff;
-    font-size: clamp(0.55rem, 0.9vw, 0.7rem); /* Texto más pequeño */
-    margin-left: 3px; /* Espaciado reducido */
-    padding: 0px 4px; /* Padding más compacto */
-    letter-spacing: 0.2px; /* Ligero aumento de ancho */
+/* Icono del dropdown */
+.dropdownSymbol {
+    margin-left: 4px;
+    display: inline-block;
+    transform: translateY(1px);
+    width: 12px;
+    height: 12px;
 }
 
+/* Menú desplegable */
 .panel {
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgba(255, 255, 255, 0.5); /* Fondo translúcido */
-    backdrop-filter: blur(10px); /* Efecto de vidrio */
-    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
-    border-radius: 0 0 15px 15px; /* Border-radius más pequeño */
+    background: var(--colorUI);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0 0 15px 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    padding: 6px 0; /* Padding más compacto */
-    min-width: 100%;
+    padding: 6px 0;
+    width: 100%; /* Ahora el panel tiene el mismo ancho que el botón */
+    min-width: max-content; /* Se adapta si el contenido es mayor */
     z-index: 1001;
 }
 
+/* Botones dentro del menú desplegable */
 .panel .boton {
-    background-color: transparent;
-    color: #393939;
-    padding: 4px 10px; /* Padding más compacto */
-    margin: 0;
-    border-radius: 0;
+    padding: 6px 12px;
     text-align: left;
     width: 100%;
+    border-radius: 0;
     font-weight: normal;
-    font-size: clamp(0.65rem, 1.1vw, 0.8rem); /* Texto más pequeño */
+}
+
+/* Cuando pasas el mouse sobre un botón del menú */
+.panel .boton:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo especial para "Lidermania" */
+.highlight {
+    font-weight: normal;
+    background: #fa0000;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: clamp(0.55rem, 0.9vw, 0.7rem);
+    margin-left: 3px;
+    padding: 0px 4px;
+    letter-spacing: 0.2px;
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../css/BarraDeOpciones.module.css';
 
 function BarraDeOpciones() {
@@ -6,38 +7,35 @@ function BarraDeOpciones() {
 
     return (
         <div className={styles.barra}>
-            <button className={styles.boton}>Inicio</button>
-            <button className={styles.boton}>Conocenos</button>
-            <button
-                className={styles.boton}
+            <Link to="/" className={styles.boton}>Inicio</Link>
+            <Link to="/Conocenos" className={styles.boton}>Conócenos</Link>
+
+            {/* Contenedor para manejar el hover y clic del menú */}
+            <div
+                className={styles.dropdown}
                 onMouseEnter={() => setShowPanel(true)}
                 onMouseLeave={() => setShowPanel(false)}
+                onClick={() => setShowPanel(!showPanel)} // Mantiene abierto al hacer clic
             >
-                Soluciones
-                <svg
-                    className={styles.dropdownSymbol}
-                    viewBox="0 0 24 24" // Ajustamos el viewBox para más espacio
-                    width="20" // Aumentamos el ancho
-                    height="20" // Aumentamos el alto
-                >
-                    <path
-                        d="M5 9l7 7 7-7" // Líneas más largas
-                        stroke="#393939" // Color del símbolo
-                        strokeWidth="3" // Grosor de las líneas
-                        fill="none"
-                    />
-                </svg>
+                <button className={styles.boton}>
+                    Soluciones
+                    <svg className={styles.dropdownSymbol} viewBox="0 0 24 24" width="20" height="20">
+                        <path d="M5 9l7 7 7-7" stroke="#393939" strokeWidth="3" fill="none" />
+                    </svg>
+                </button>
+
                 {showPanel && (
                     <div className={styles.panel}>
-                        <button className={styles.boton}>Opción 1</button>
-                        <button className={styles.boton}>Opción 2</button>
-                        <button className={styles.boton}>Opción 3</button>
+                        <Link to="/Seguridad" className={styles.boton}>Seguridad</Link>
+                        <Link to="/Servicio" className={styles.boton}>Servicio</Link>
+                        <Link to="/Tecnologia" className={styles.boton}>Tecnología</Link>
                     </div>
                 )}
-            </button>
-            <button className={styles.boton}>
+            </div>
+
+            <Link to="/Lidermania" className={styles.boton}>
                 Lidermania <span className={styles.highlight}>únete</span>
-            </button>
+            </Link>
         </div>
     );
 }
