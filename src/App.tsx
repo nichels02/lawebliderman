@@ -1,3 +1,4 @@
+import { ContentProvider } from "./common/Componentes/Sistemas/useContent.tsx"; // Importa el Provider
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home.tsx';
@@ -13,21 +14,23 @@ import { LanguageProvider } from './common/Componentes/Sistemas/LanguageContext'
 
 function App() {
     return (
-        <LanguageProvider> {/* Envuelve la aplicación con LanguageProvider */}
-            <BrowserRouter>
-                <BarraDeOpciones />
-                <BarraDeOpciones2 />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/Conocenos" element={<Conocenos />} />
-                    <Route path="/Lidermania" element={<Lidermania />} />
-                    <Route path="/Seguridad" element={<Seguridad />} />
-                    <Route path="/Servicio" element={<Servicio />} />
-                    <Route path="/Tecnologia" element={<Tecnologia />} />
-                </Routes>
-                <Footer />
-            </BrowserRouter>
-        </LanguageProvider>
+        <ContentProvider> {/* ✅ Envuelve la app con el Provider */}
+            <LanguageProvider> {/* Envuelve la aplicación con LanguageProvider */}
+                <BrowserRouter>
+                    <BarraDeOpciones />
+                    <BarraDeOpciones2 />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/Conocenos" element={<Conocenos />} />
+                        <Route path="/Lidermania" element={<Lidermania />} />
+                        <Route path="/Seguridad" element={<Seguridad />} />
+                        <Route path="/Servicio" element={<Servicio />} />
+                        <Route path="/Tecnologia" element={<Tecnologia />} />
+                    </Routes>
+                    <Footer />
+                </BrowserRouter>
+            </LanguageProvider>
+        </ContentProvider>
     );
 }
 

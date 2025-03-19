@@ -1,0 +1,38 @@
+{
+  "home": {
+    "Header": {
+      "en": {
+        "titulo": "We are worth as much",
+        "subtitulo": "as what we take care of",
+        "descripcion1": "Discover our expertise in people management, to",
+        "descripcion2": "make your life safer and more reliable.",
+        "botonPrimario": "Solutions➔",
+        "botonSecundario": "Join",
+        "trabajadores": "Workers globally",
+        "years": "Years of market leadership",
+        "clientes": "Satisfied customers",
+        "Numero_trabajadores": "+24,000",
+        "Numero_years": "35",
+        "Numero_clientes": "2,100"
+      },
+      "es": {
+        "titulo": "Valemos tanto",
+        "subtitulo": "como lo que cuidamos",
+        "descripcion1": "Descubre nuestra expertise en la gestión de las personas, para",
+        "descripcion2": "hacer tu vida más segura y confiable.",
+        "botonPrimario": "Soluciones➔",
+        "botonSecundario": "Únete",
+        "trabajadores": "Trabajadores a nivel global",
+        "years": "Años de liderazgo en el mercado",
+        "clientes": "Clientes satisfechos",
+        "Numero_trabajadores": "+24,000",
+        "Numero_years": "35",
+        "Numero_clientes": "2,100"
+      },
+      "contenido": {
+        "logo": "src/assets/images.png",
+        "imagen_De_Fondo": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
+      }
+    }
+  }
+}
