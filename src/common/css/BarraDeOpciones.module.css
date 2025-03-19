@@ -1,89 +1,106 @@
 .barra {
     position: fixed;
-    top: 4%;
+    top: 2%; /* Posición más arriba */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 25px;
-    padding: 8px 16px; /* Padding reducido */
-    width: 26%; /* Ancho fijo al 26% de la pantalla */
+    background: rgba(255, 255, 255, 0.5); /* Fondo translúcido */
+    backdrop-filter: blur(10px); /* Efecto de vidrio */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+    border-radius: 20px; /* Border-radius más pequeño */
+    padding: 4px 8px; /* Padding más compacto */
+    min-width: 30vw; /* Ancho mínimo para pantallas grandes */
+    max-width: 40vw; /* Ancho máximo para pantallas grandes */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
-@supports (backdrop-filter: blur(10px)) {
-    .panel, .barra {
-        background: rgba(255, 255, 255, 0.62);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+
+/* Ajustes para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .barra {
+        min-width: 50vw; /* Más ancho en tablets */
+        max-width: 70vw;
+        padding: 4px 6px; /* Padding más compacto */
+    }
+
+    .boton {
+        font-size: clamp(0.6rem, 1.1vw, 0.75rem); /* Texto más pequeño */
     }
 }
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .barra {
+        min-width: 80vw; /* Más ancho en móviles */
+        max-width: 90vw;
+        padding: 4px 4px; /* Padding más compacto */
+    }
+
+    .boton {
+        font-size: clamp(0.55rem, 1vw, 0.7rem); /* Texto más pequeño */
+    }
+}
+
 .boton {
-    background-color: rgba(0, 123, 255, 0);
+    background-color: transparent;
     color: #393939;
     border: none;
-    border-radius: 20px;
-    padding: 8px 12px; /* Padding reducido */
-    margin: 0 3px; /* Margen reducido */
+    border-radius: 15px; /* Border-radius más pequeño */
+    padding: 4px 6px; /* Padding más compacto */
+    margin: 0 2px; /* Margen reducido */
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: relative;
     font-weight: normal;
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    font-size: 14px; /* Tamaño de fuente reducido */
+    font-size: clamp(0.65rem, 1.1vw, 0.8rem); /* Texto más pequeño */
 }
 
-/* Estilo para el SVG (símbolo ⌵ personalizado) */
 .dropdownSymbol {
-    margin-left: 6px; /* Margen reducido */
+    margin-left: 4px; /* Margen reducido */
     display: inline-block;
-    transform: translateY(5px); /* Ajuste de posición vertical */
+    transform: translateY(1px); /* Ajuste de posición vertical */
+    width: 10px; /* Ancho reducido */
+    height: 10px; /* Alto reducido */
 }
 
-/* Ajustar tamaño del SVG */
-.dropdownSymbol {
-    width: 16px; /* Ancho reducido */
-    height: 16px; /* Alto reducido */
-}
-
-/* Estilo para "únete" */
 .highlight {
     font-weight: normal;
     background: #fa0000;
-    border-radius: 25px;
-    color: #ffffff; /* Color blanco */
-    font-size: 12px; /* Tamaño de fuente */
-    margin-left: 6px; /* Espaciado natural */
-    padding: 0px 7px; /* Añadir padding para hacer el fondo más ancho */
-    letter-spacing: 0.5px; /* Ligero aumento de ancho */
+    border-radius: 15px; /* Border-radius más pequeño */
+    color: #ffffff;
+    font-size: clamp(0.55rem, 0.9vw, 0.7rem); /* Texto más pequeño */
+    margin-left: 3px; /* Espaciado reducido */
+    padding: 0px 4px; /* Padding más compacto */
+    letter-spacing: 0.2px; /* Ligero aumento de ancho */
 }
 
-/* Panel desplegable */
 .panel {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0 0 25px 25px;
+    background: rgba(255, 255, 255, 0.5); /* Fondo translúcido */
+    backdrop-filter: blur(10px); /* Efecto de vidrio */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+    border-radius: 0 0 15px 15px; /* Border-radius más pequeño */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex; /* Mostrado cuando showPanel = true */
+    display: flex;
     flex-direction: column;
-    padding: 10px 0;
-    min-width: 100%; /* Ocupa el 100% del ancho del botón "Soluciones" */
+    padding: 6px 0; /* Padding más compacto */
+    min-width: 100%;
     z-index: 1001;
 }
 
-/* Botones dentro del panel */
 .panel .boton {
     background-color: transparent;
     color: #393939;
-    padding: 8px 20px;
+    padding: 4px 10px; /* Padding más compacto */
     margin: 0;
     border-radius: 0;
     text-align: left;
     width: 100%;
     font-weight: normal;
-    font-size: 14px; /* Tamaño de fuente reducido */
+    font-size: clamp(0.65rem, 1.1vw, 0.8rem); /* Texto más pequeño */
 }
