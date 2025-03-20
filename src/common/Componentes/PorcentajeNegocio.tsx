@@ -112,15 +112,18 @@ function PorcentajeNegocio() {
     return (
         <div className={styles.contenedorPadre}>
             <div className={styles.contenedorImagenGrande}>
-                {/* Capa de imagen */}
                 <img
                     src={selectedImage}
                     alt="Imagen dinámica"
                     className={styles.imagenGrande}
                 />
 
-                {/* Nuevo contenedor agregado */}
-                <div className={styles.contenedorFondo}></div>
+                {/* Contenedor de fondo condicional */}
+                {showOtrosText ? (
+                    <div className={styles.contenedorFondo2}></div>
+                ) : (
+                    <div className={styles.contenedorFondo}></div>
+                )}
 
                 <div className={styles.contenedorTextoFijo}>
                     {[
