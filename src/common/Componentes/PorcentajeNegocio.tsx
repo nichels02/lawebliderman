@@ -11,6 +11,7 @@ function PorcentajeNegocio() {
     );
     const [spacing, setSpacing] = useState<number>(30);
     const [showOtrosText, setShowOtrosText] = useState<boolean>(false);
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
     const calculateSpacing = () => {
         const screenWidth = window.innerWidth;
@@ -19,8 +20,17 @@ function PorcentajeNegocio() {
         return 30;
     };
 
+    const checkMobile = () => {
+        setIsMobile(window.innerWidth < 1024);
+    };
+
     useEffect(() => {
-        const handleResize = () => setSpacing(calculateSpacing());
+        const handleResize = () => {
+            setSpacing(calculateSpacing());
+            checkMobile();
+        };
+
+        checkMobile(); // Verificar al montar
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
@@ -87,16 +97,32 @@ function PorcentajeNegocio() {
                                     "https://wallpapers.com/images/hd/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg"
                                 ];
                                 setSelectedImage(images[segmentIndex] || images[0]);
+
+                                // En móvil, mantener última selección
+                                if (isMobile) {
+                                    localStorage.setItem('lastSegment', segmentIndex.toString());
+                                }
                             } else {
-                                setSelectedImage("https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg");
-                                setHoveredSegment(0);
-                                setShowOtrosText(false);
+                                if (!isMobile) { // Solo resetear en desktop
+                                    setSelectedImage("https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg");
+                                    setHoveredSegment(0);
+                                    setShowOtrosText(false);
+                                }
                             }
                         }
                     }
                 };
 
                 const myChart = new Chart(ctx, config);
+
+                // Recuperar última selección en móvil
+                if (isMobile) {
+                    const lastSegment = localStorage.getItem('lastSegment');
+                    if (lastSegment) {
+                        setHoveredSegment(parseInt(lastSegment));
+                    }
+                }
+
                 setTextPositions([
                     { text: "Mineria 17%" },
                     { text: "Industria 16%" },
@@ -107,7 +133,7 @@ function PorcentajeNegocio() {
                 return () => myChart.destroy();
             }
         }
-    }, [spacing]);
+    }, [spacing, isMobile]);
 
     return (
         <div className={styles.contenedorPadre}>
@@ -118,7 +144,6 @@ function PorcentajeNegocio() {
                     className={styles.imagenGrande}
                 />
 
-                {/* Contenedor de fondo condicional */}
                 {showOtrosText ? (
                     <div className={styles.contenedorFondo2}></div>
                 ) : (
