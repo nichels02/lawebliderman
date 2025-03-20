@@ -1,5 +1,4 @@
-
-import styles from '../css/imagenYGrid2.module.css'; // Importa el archivo CSS único
+import styles from '../css/imagenYGrid2.module.css';
 
 function ImagenYGrid2() {
     return (
