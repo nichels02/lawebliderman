@@ -30,7 +30,7 @@ function Home(){
             />
             <div style={{ marginBottom: '30px' }}></div>
             <Marquee />
-            <TextoGeneral />
+            <TextoGeneral texto="El servicio que brindamos es a través de nuestros colaboradores, *ellos son el centro* de toda nuestra gestión." />
             <PorcentajeNegocio />
             <ImagenYGrid2 />
             <FormularioDeContacto />
