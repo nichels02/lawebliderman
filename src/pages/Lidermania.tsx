@@ -1,4 +1,4 @@
-import Header1 from '../common/Componentes/Header1.tsx';
+import HeaderGenerico from '../common/Componentes/HeaderGenerico.tsx';
 import EspacioVacio from '../common/Componentes/EspacioVacio.tsx';
 import Marquee from '../common/Componentes/Marquee.tsx';
 import CardWithExpand from '../common/Componentes/CardWithExpand.tsx';
@@ -24,7 +24,17 @@ function Lidermania(){
     const textosBotones = ["Imagen 1", "Imagen 2", "Imagen 3"];
     return (
         <>
-            <Header1 />
+            <HeaderGenerico
+                backgroundImage="src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
+                sideImage="src/assets/images.png"
+                logo="src/assets/images.png"
+                title="Lidermanía"
+                description="Implementamos un conjunto de practicas y programas diseñados para atender las necesidades de nuestros Lidermans en los aspectos mas importantes para ellos y sus familias. promoviendo un ambiente de apoyo, crecimiento y equilibrio personal."
+                button1Text="Nuestra cultura ➔ "
+                button2Text="Únete"
+                onButton1Click={() => console.log("Ver más info")}
+                onButton2Click={() => console.log("Contratar servicio")}
+            />
             <TextoTituloEImagen
                 titulo="Título de ejemplo"
                 texto="Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."
