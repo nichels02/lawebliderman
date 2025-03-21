@@ -11,12 +11,15 @@ import BarraDeOpciones from './common/Componentes/BarraDeOpciones.tsx';
 import BarraDeOpciones2 from './common/Componentes/BarraDeOpciones2.tsx';
 import Footer from './common/Componentes/Footer.tsx';
 import { LanguageProvider } from './common/Componentes/Sistemas/LanguageContext'; // Importa el LanguageProvider
+import ScrollToTop from "./common/Componentes/Sistemas/ScrollToTop.tsx";
+
 
 function App() {
     return (
         <ContentProvider> {/* ✅ Envuelve la app con el Provider */}
             <LanguageProvider> {/* Envuelve la aplicación con LanguageProvider */}
                 <BrowserRouter>
+                    <ScrollToTop />
                     <BarraDeOpciones />
                     <BarraDeOpciones2 />
                     <Routes>
