@@ -72,7 +72,68 @@ interface ContentData {
                 ingles: string;
             };
         };
-    };
+        CardWithExpand: {
+            Seguridad: {
+                es: {
+                    title: string;
+                    subtitle: string;
+                    items: string[];
+                    buttonText: string;
+                },
+                en: {
+                    title: string;
+                    subtitle: string;
+                    items: string[];
+                    buttonText: string;
+                },
+                imageUrl: string;
+                link: string;
+            },
+            Servicios: {
+                es: {
+                    title: string;
+                    subtitle: string;
+                    items: string[];
+                    secondSubtitle: string;
+                    secondItems: string[]
+                    buttonText: string;
+                },
+                en: {
+                    title: string;
+                    subtitle: string;
+                    items: string[];
+                    secondSubtitle: string;
+                    secondItems: string[];
+                    buttonText: string;
+                },
+                imageUrl: string;
+                link: string;
+            },
+            Tecnologia: {
+                es: {
+                    title: string;
+                    subtitle: string;
+                    items: string[];
+                    secondSubtitle: string;
+                    thirdSubtitle: string;
+                    fourthSubtitle: string;
+                    buttonText: string;
+                },
+                en: {
+                    title: string;
+                    subtitle: string;
+                    items: string[];
+                    secondSubtitle: string;
+                    thirdSubtitle: string;
+                    fourthSubtitle: string;
+                    buttonText: string;
+                },
+                imageUrl: string;
+                link: string;
+            }
+        };
+
+    }
 }
 
 // 🔥 Contexto para almacenar los datos
@@ -82,7 +143,7 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
     const [data, setData] = useState<ContentData | null>(null);
 
     useEffect(() => {
-        fetch("/Data.json") // ✅ JSON en la carpeta `public/`
+        fetch("/Data.json") // ✅ JSON en la carpeta public/
             .then((res) => res.json())
             .then((content: ContentData) => setData(content))
             .catch(() => console.error("Error al cargar datos"));

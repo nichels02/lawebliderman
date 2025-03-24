@@ -67,6 +67,120 @@
         "espanol": "Spanish",
         "ingles": "English"
       }
+    },
+    "CardWithExpand": {
+      "Seguridad": {
+        "es": {
+          "title": "Seguridad",
+          "subtitle": "Gestión de riesgos",
+          "items": [
+            "Seguridad física",
+            "Resguardo de personal",
+            "Supervisión de sala de control",
+            "Guardianía",
+            "Patrullas móviles",
+            "Estudios de Seguridad",
+            "Acompañamiento de mercadería en tránsito",
+            "Protección perimetral",
+            "Gestión de seguridad de eventos"
+          ],
+          "buttonText": "Explorar ➔"
+        },
+        "en": {
+          "title": "Security",
+          "subtitle": "Risk Management",
+          "items": [
+            "Physical security",
+            "Personnel protection",
+            "Control room supervision",
+            "Guarding",
+            "Mobile patrols",
+            "Security studies",
+            "Merchandise escort",
+            "Perimeter protection",
+            "Event security management"
+          ],
+          "buttonText": "Explore ➔"
+        },
+        "imageUrl": "https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg",
+        "link": "/Seguridad"
+      },
+      "Servicios": {
+        "es": {
+          "title": "Servicios",
+          "subtitle": "Servicios de Parking",
+          "items": [
+            "Administración de estacionamientos",
+            "Valet parking",
+            "Gestión de eventos"
+          ],
+          "secondSubtitle": "Facilities",
+          "secondItems": [
+            "Courier",
+            "Mantenimiento general",
+            "Limpieza",
+            "Jardinería",
+            "Transporte"
+          ],
+          "buttonText": "Explorar ➔"
+        },
+        "en": {
+          "title": "Services",
+          "subtitle": "Parking Services",
+          "items": [
+            "Parking lot management",
+            "Valet parking",
+            "Event management"
+          ],
+          "secondSubtitle": "Facilities",
+          "secondItems": [
+            "Courier",
+            "General maintenance",
+            "Cleaning",
+            "Gardening",
+            "Transport"
+          ],
+          "buttonText": "Explore ➔"
+        },
+        "imageUrl": "https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
+        "link": "/Servicio"
+      },
+      "Tecnologia": {
+        "es": {
+          "title": "Tecnología",
+          "subtitle": "Tecnología",
+          "items": [
+            "Sistemas de seguridad electrónica",
+            "Seguridad con drones",
+            "Biometría",
+            "Protección contra incendios",
+            "Control de acceso y CCTV-IA",
+            "BMS"
+          ],
+          "secondSubtitle": "Ciberseguridad",
+          "thirdSubtitle": "Alarmas",
+          "fourthSubtitle": "GPS",
+          "buttonText": "Explorar ➔"
+        },
+        "en": {
+          "title": "Technology",
+          "subtitle": "Technology",
+          "items": [
+            "Electronic security systems",
+            "Drone security",
+            "Biometrics",
+            "Fire protection",
+            "Access control & CCTV-AI",
+            "BMS"
+          ],
+          "secondSubtitle": "Cybersecurity",
+          "thirdSubtitle": "Alarms",
+          "fourthSubtitle": "GPS",
+          "buttonText": "Explore ➔"
+        },
+        "imageUrl": "https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "link": "/Tecnologia"
+      }
     }
   }
 }

@@ -1,129 +1,111 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Importar useNavigate
-import styles from '../css/CardWithExpand.module.css';
+import { useNavigate } from "react-router-dom";
+import { useLanguage } from "./Sistemas/LanguageContext";
+import { useContent } from "./Sistemas/useContent.tsx";
+import styles from "../css/CardWithExpand.module.css";
 
 function CardWithExpand() {
-    const [expandedIndex, setExpandedIndex] = useState(0);
-    const navigate = useNavigate(); // Hook para redirigir a otras rutas
+    const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+    const navigate = useNavigate();
+    const { language } = useLanguage();
+    const content = useContent();
 
-    const sections = [
-        {
-            title: "Seguridad",
-            subtitle: "Gestión de riesgos",
-            items: [
-                "Seguridad física",
-                "Resguardo de personal",
-                "Supervisión de sala de control",
-                "Guardianía",
-                "Patrullas móviles",
-                "Estudios de Seguridad",
-                "Acompañamiento de mercadería en tránsito",
-                "Protección perimetral",
-                "Gestión de seguridad de eventos"
-            ],
-            imageUrl: "https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg",
-            link: "/Seguridad" // Ruta a la que llevará el botón
-        },
-        {
-            title: "Servicios",
-            subtitle: "Servicios de Parking",
-            items: [
-                "Administración de estacionamientos",
-                "Valet parking",
-                "Gestión de eventos"
-            ],
-            secondSubtitle: "Facilities",
-            secondItems: [
-                "Courier",
-                "Mantenimiento general",
-                "Limpieza",
-                "Jardinería",
-                "Transporte"
-            ],
-            imageUrl: "https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
-            link: "/Servicio" // Ruta a la que llevará el botón
-        },
-        {
-            title: "Tecnología",
-            subtitle: "Tecnología",
-            items: [
-                "Sistemas de seguridad electrónica",
-                "Seguridad con drones",
-                "Biometría",
-                "Protección contra incendios",
-                "Control de acceso y CCTV-IA",
-                "BMS"
-            ],
-            secondSubtitle: "Ciberseguridad",
-            thirdSubtitle: "Alarmas",
-            fourthSubtitle: "GPS",
-            imageUrl: "https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
-            link: "/Tecnologia" // Ruta a la que llevará el botón
-        }
-    ];
+    if (!content || !content.home || !content.home.CardWithExpand) {
+        return <p>Cargando...</p>;
+    }
 
-    const handleMouseEnter = (index: number) => {
-        setExpandedIndex(index);
-    };
+    // 🔹 Obtener datos individuales por sección
+    const seguridad = content.home.CardWithExpand.Seguridad?.[language];
+    const servicios = content.home.CardWithExpand.Servicios?.[language];
+    const tecnologia = content.home.CardWithExpand.Tecnologia?.[language];
 
     return (
         <div className={styles.container}>
             <section className={styles.section}>
-                {sections.map((section, index) => (
+                {/* 🔹 Tarjeta de Seguridad */}
+                {seguridad && (
                     <div
-                        key={index}
-                        className={`${styles.imgContainer} ${expandedIndex === index ? styles.expanded : ""}`}
-                        onMouseEnter={() => handleMouseEnter(index)}
+                        className={`${styles.imgContainer} ${expandedIndex === 0 ? styles.expanded : ""}`}
+                        onMouseEnter={() => setExpandedIndex(0)}
                     >
-                        <img
-                            src={section.imageUrl}
-                            alt={section.title}
-                            className={styles.img}
-                        />
+                        <img src={content.home.CardWithExpand.Seguridad.imageUrl} alt={seguridad.title} className={styles.img} />
 
-                        {/* Texto derecho (título principal) */}
-                        <div className={styles.text}>
-                            {section.title}
-                        </div>
+                        <div className={styles.text}>{seguridad.title}</div>
 
-                        {/* Contenedor de texto izquierdo */}
-                        <div className={`${styles.leftText} ${expandedIndex === index ? styles.visible : ""}`}>
-                            <h2 className={styles.subtitle}>{section.subtitle}</h2>
+                        <div className={`${styles.leftText} ${expandedIndex === 0 ? styles.visible : ""}`}>
+                            <h2 className={styles.subtitle}>{seguridad.subtitle}</h2>
                             <ul className={styles.list}>
-                                {section.items.map((item, i) => (
-                                    <li key={i}>{item}</li>
-                                ))}
+                                {seguridad.items.map((item: string, i: number) => <li key={i}>{item}</li>)}
                             </ul>
 
-                            {/* Si hay un segundo subtítulo */}
-                            {section.secondSubtitle && (
+                            <button className={styles.exploreButton} onClick={() => navigate("/Seguridad")}>
+                                {seguridad.buttonText} {/* 🔹 Texto dinámico desde JSON */}
+                            </button>
+                        </div>
+                    </div>
+                )}
+
+                {/* 🔹 Tarjeta de Servicios */}
+                {servicios && (
+                    <div
+                        className={`${styles.imgContainer} ${expandedIndex === 1 ? styles.expanded : ""}`}
+                        onMouseEnter={() => setExpandedIndex(1)}
+                    >
+                        <img src={content.home.CardWithExpand.Servicios.imageUrl} alt={servicios.title} className={styles.img} />
+
+                        <div className={styles.text}>{servicios.title}</div>
+
+                        <div className={`${styles.leftText} ${expandedIndex === 1 ? styles.visible : ""}`}>
+                            <h2 className={styles.subtitle}>{servicios.subtitle}</h2>
+                            <ul className={styles.list}>
+                                {servicios.items.map((item: string, i: number) => <li key={i}>{item}</li>)}
+                            </ul>
+
+                            {servicios.secondSubtitle && servicios.secondItems && (
                                 <>
-                                    <h2 className={styles.subtitle}>{section.secondSubtitle}</h2>
+                                    <h2 className={styles.subtitle}>{servicios.secondSubtitle}</h2>
                                     <ul className={styles.list}>
-                                        {section.secondItems?.map((item, i) => (
-                                            <li key={i}>{item}</li>
-                                        ))}
+                                        {servicios.secondItems.map((item: string, i: number) => <li key={i}>{item}</li>)}
                                     </ul>
                                 </>
                             )}
 
-                            {/* Si hay más subtítulos individuales */}
-                            {section.thirdSubtitle && <h2 className={styles.subtitle}>{section.thirdSubtitle}</h2>}
-                            {section.fourthSubtitle && <h2 className={styles.subtitle}>{section.fourthSubtitle}</h2>}
-
-                            {/* Botón de explorar que redirige a la página correspondiente */}
-                            <button
-                                className={styles.exploreButton}
-                                onClick={() => navigate(section.link)}
-                            >
-                                Explorar ➔
+                            <button className={styles.exploreButton} onClick={() => navigate("/Servicio")}>
+                                {servicios.buttonText} {/* 🔹 Texto dinámico desde JSON */}
                             </button>
                         </div>
                     </div>
-                ))}
+                )}
+
+                {/* 🔹 Tarjeta de Tecnología */}
+                {tecnologia && (
+                    <div
+                        className={`${styles.imgContainer} ${expandedIndex === 2 ? styles.expanded : ""}`}
+                        onMouseEnter={() => setExpandedIndex(2)}
+                    >
+                        <img src={content.home.CardWithExpand.Tecnologia.imageUrl} alt={tecnologia.title} className={styles.img} />
+
+                        <div className={styles.text}>{tecnologia.title}</div>
+
+                        <div className={`${styles.leftText} ${expandedIndex === 2 ? styles.visible : ""}`}>
+                            <h2 className={styles.subtitle}>{tecnologia.subtitle}</h2>
+                            <ul className={styles.list}>
+                                {tecnologia.items.map((item: string, i: number) => <li key={i}>{item}</li>)}
+                            </ul>
+
+                            {tecnologia.thirdSubtitle && <h2 className={styles.subtitle}>{tecnologia.thirdSubtitle}</h2>}
+                            {tecnologia.fourthSubtitle && <h2 className={styles.subtitle}>{tecnologia.fourthSubtitle}</h2>}
+
+                            <button className={styles.exploreButton} onClick={() => navigate("/Tecnologia")}>
+                                {tecnologia.buttonText} {/* 🔹 Texto dinámico desde JSON */}
+                            </button>
+                        </div>
+                    </div>
+                )}
             </section>
         </div>
     );
 }
 
 export default CardWithExpand;
+
