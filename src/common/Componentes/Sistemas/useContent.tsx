@@ -158,6 +158,27 @@ interface ContentData {
                         ]
             }
         }
+        porcentajeNegocio: {
+            common: {
+                images: string[];
+            };
+            es: {
+                items: {
+                    label: string;
+                    percentage: string;
+                }[];
+                fixedTexts: string[];
+                otrosCategories: string[];
+            };
+            en: {
+                items: {
+                    label: string;
+                    percentage: string;
+                }[];
+                fixedTexts: string[];
+                otrosCategories: string[];
+            };
+        };
 
     }
 }
