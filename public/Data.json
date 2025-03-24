@@ -33,6 +33,40 @@
         "logo": "src/assets/images.png",
         "imagen_De_Fondo": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
       }
+    },
+    "BarraDeOpciones": {
+      "es": {
+        "inicio": "Inicio",
+        "conocenos": "Conócenos",
+        "soluciones": "Soluciones",
+        "seguridad": "Seguridad",
+        "servicio": "Servicio",
+        "tecnologia": "Tecnología",
+        "lidermania": "Lidermania",
+        "unete": "únete"
+      },
+      "en": {
+        "inicio": "Home",
+        "conocenos": "About Us",
+        "soluciones": "Solutions",
+        "seguridad": "Security",
+        "servicio": "Service",
+        "tecnologia": "Technology",
+        "lidermania": "Lidermania",
+        "unete": "Join"
+      }
+    },
+    "BarraDeOpciones2": {
+      "es": {
+        "contactanos": "Contáctanos",
+        "espanol": "Español",
+        "ingles": "Ingles"
+      },
+      "en": {
+        "contactanos": "Contact Us",
+        "espanol": "Spanish",
+        "ingles": "English"
+      }
     }
   }
 }

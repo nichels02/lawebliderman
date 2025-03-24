@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from '../css/BarraDeOpciones2.module.css';
 import Switch from './Switch.tsx';
 import { useLanguage } from './Sistemas/LanguageContext';
+import { useContent } from './Sistemas/useContent';
 import { isDarkModeEnabled } from './Sistemas/toggleDarkMode.ts';
 
 // Estado global para el color
@@ -15,9 +16,10 @@ export function updateSVGColor() {
 
 function BarraDeOpciones2() {
     const [showPanel, setShowPanel] = useState(false);
-    const { setLanguage } = useLanguage();
+    const { language, setLanguage } = useLanguage();
+    const content = useContent();
 
-    // Estado para el color del SVG
+    // Estado para el color del SVG (debe declararse antes de cualquier `return`)
     const [svgColor, setSvgColor] = useState(isDarkModeEnabled() ? "#FFFFFF" : "#393939");
 
     // Guardar función para actualizar color desde fuera
@@ -25,9 +27,16 @@ function BarraDeOpciones2() {
         setSVGColorGlobal = setSvgColor;
     }, []);
 
+    // 🔹 Evita el error de hooks ejecutando `return` después de definirlos
+    if (!content || !content.home || !content.home.BarraDeOpciones2) {
+        return <p>Cargando...</p>;
+    }
+
+    const textos = content.home.BarraDeOpciones2[language];
+
     return (
         <div className={styles.barra}>
-            <button className={styles.boton}>Contactanos</button>
+            <button className={styles.boton}>{textos.contactanos}</button>
             <div
                 className={styles.dropdownContainer}
                 onMouseEnter={() => setShowPanel(true)}
@@ -58,10 +67,10 @@ function BarraDeOpciones2() {
                 {showPanel && (
                     <div className={styles.panel}>
                         <button className={styles.boton} onClick={() => setLanguage('es')}>
-                            Español 🇪🇸
+                            {textos.espanol} 🇪🇸
                         </button>
                         <button className={styles.boton} onClick={() => setLanguage('en')}>
-                            English 🇺🇸
+                            {textos.ingles} 🇺🇸
                         </button>
                     </div>
                 )}

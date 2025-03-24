@@ -37,6 +37,41 @@ interface ContentData {
                 imagen_De_Fondo: string;
             };
         };
+
+        BarraDeOpciones: {
+            es: {
+                inicio: string;
+                conocenos: string;
+                soluciones: string;
+                seguridad: string;
+                servicio: string;
+                tecnologia: string;
+                lidermania: string;
+                unete: string;
+            },
+            en: {
+                inicio: string;
+                conocenos: string;
+                soluciones: string;
+                seguridad: string;
+                servicio: string;
+                tecnologia: string;
+                lidermania: string;
+                unete: string;
+            };
+        };
+        BarraDeOpciones2: {
+            es: {
+                contactanos: string;
+                espanol: string;
+                ingles: string;
+            };
+            en: {
+                contactanos: string;
+                espanol: string;
+                ingles: string;
+            };
+        };
     };
 }
 

@@ -14,7 +14,7 @@ export function toggleDarkMode(): void {
     // Guardar la preferencia en localStorage
     localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
 
-    console.log("Dark mode cambiado:", isDarkMode, "Guardado en localStorage:", localStorage.getItem('darkMode'));
+
 }
 
 // Aplicar el modo oscuro al cargar la página
@@ -22,7 +22,7 @@ export function applySavedDarkMode(): void {
     const htmlElement = document.documentElement;
     const isDarkMode: boolean = isDarkModeEnabled();
 
-    console.log("Modo oscuro guardado en localStorage:", localStorage.getItem('darkMode'));
+
 
     // Aplicar la clase correctamente al cargar la página
     htmlElement.classList.toggle('dark-mode', isDarkMode);
@@ -30,6 +30,6 @@ export function applySavedDarkMode(): void {
 
 // Asegurar que el código se ejecute después de que el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOMContentLoaded ejecutado");
+
     applySavedDarkMode();
 });

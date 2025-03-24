@@ -1,6 +1,6 @@
 .barra {
     position: fixed;
-    top: 2%;
+    top: 4%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -112,7 +112,7 @@
 /* Estilo especial para "Lidermania" */
 .highlight {
     font-weight: normal;
-    background: #fa0000;
+    background: var(--color-rojo-general-cambio);
     border-radius: 15px;
     color: #ffffff;
     font-size: clamp(0.55rem, 0.9vw, 0.7rem);
