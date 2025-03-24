@@ -132,6 +132,32 @@ interface ContentData {
                 link: string;
             }
         };
+        Marquee: {
+            common: {
+                items:
+                    {
+                        src: string;
+                        alt: string;
+                    }[
+                        ]
+            },
+            es: {
+                items:
+                    {
+                        subtitle1: string;
+                        subtitle2: string;
+                    }[
+                        ]
+            },
+            en: {
+                items:
+                    {
+                        subtitle1: string;
+                        subtitle2: string;
+                    }[
+                        ]
+            }
+        }
 
     }
 }
