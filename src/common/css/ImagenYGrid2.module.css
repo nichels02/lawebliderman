@@ -1,5 +1,3 @@
-/* imagenYGrid2.module.css */
-
 /* Contenedor principal */
 .contenedorPadre {
     width: 100vw;
@@ -11,11 +9,10 @@
 
 /* Contenedor hijo */
 .contenedorHijo {
-    width: 85%;
-    max-width: 1600px;
+    width: 87%;
+    max-width: 1800px;
     min-height: 500px;
     margin: 0 auto;
-    background: #535bf2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2%;
@@ -60,7 +57,7 @@
 
 .textoInferior {
     font-size: clamp(2rem, 3vw, 2.8rem);
-    color: #ff0000;
+    color: var(--color-rojo-general);
     margin: 0;
     font-weight: bold;
 }
@@ -75,30 +72,30 @@
 
 .contenedorMedioIzquierdo,
 .contenedorMedioDerecho {
-    background: #0aa7ca;
     padding: 1.2rem;
     border-radius: 12px;
     box-sizing: border-box;
+    text-align: left;
 }
 
+/* Alinear imagen arriba y texto debajo, ambos a la izquierda */
 .contenedorLogoTexto {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 0.5rem;
 }
 
 .logo {
     width: clamp(50px, 6vw, 80px);
     height: auto;
-    grid-row: span 2;
 }
 
 .textoLogo {
     font-size: clamp(0.9rem, 1.1vw, 1.1rem);
     color: #333;
     margin: 0;
-    align-self: center;
 }
 
 /* Contenedor inferior */
@@ -108,53 +105,71 @@
     gap: 1.5rem;
 }
 
-.botonContenedor {
+/* Estilos generales para los botones */
+.botonContenedorIzquierdo,
+.botonContenedorDerecho {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    height: 70px;
     padding: 0.8rem;
-    border: 2px solid #ccc;
     border-radius: 10px;
-    background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
     box-sizing: border-box;
+    text-align: left;
 }
 
-.botonContenedor:hover {
-    background-color: #f0f0f0;
+/* Estilos específicos para cada botón */
+.botonContenedorIzquierdo {
+    background: #ccc;
 }
 
+.botonContenedorDerecho {
+    background: var(--color-rojo-general);
+}
+
+/* Ajuste de estructura */
+.textosBoton {
+    flex: 1;
+    margin-left: 0.8rem;
+    min-width: 0;
+    text-align: left;
+}
+
+/* Imagen dentro del botón */
 .imagenBoton {
-    width: clamp(30px, 4vw, 50px);
+    width: clamp(30px, 0.5vw, 50px);
     height: auto;
     flex-shrink: 0;
 }
 
-.textosBoton {
-    flex: 1;
-    margin: 0 0.8rem;
-    min-width: 0;
-}
-
-.tituloBoton {
-    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+/* Estilos individuales para los botones */
+.tituloBotonIzquierdo {
+    font-size: 16px;
     font-weight: bold;
-    color: #333;
-    margin: 0 0 0.2rem 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    color: var(--color-rojo-general); /* Color específico para el botón izquierdo */
+    margin: 0;
 }
 
-.subtituloBoton {
-    font-size: clamp(0.7rem, 0.9vw, 0.9rem);
-    color: #666;
+.subtituloBotonIzquierdo {
+    font-size: 10px;
+    color: #555;
     margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+}
+
+.tituloBotonDerecho {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-texto-blanco); /* Color específico para el botón derecho */
+    margin: 0;
+}
+
+.subtituloBotonDerecho {
+    font-size: 10px;
+    color: var(--color-texto-blanco);
+    margin: 0;
 }
 
 /* Responsive Design */
@@ -192,16 +207,19 @@
         grid-template-columns: 1fr;
     }
 
-    .botonContenedor {
+    .botonContenedorIzquierdo,
+    .botonContenedorDerecho {
         padding: 0.6rem;
     }
 
     .textosBoton {
-        margin: 0 0.5rem;
+        margin-left: 0.5rem;
     }
 
-    .tituloBoton,
-    .subtituloBoton {
+    .tituloBotonIzquierdo,
+    .subtituloBotonIzquierdo,
+    .tituloBotonDerecho,
+    .subtituloBotonDerecho {
         white-space: normal;
     }
 }
@@ -225,8 +243,8 @@
     }
 
     .contenedorLogoTexto {
-        grid-template-columns: 40px 1fr;
-        gap: 0.8rem;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .logo {
@@ -237,10 +255,11 @@
         font-size: 0.8rem;
     }
 
-    .botonContenedor {
+    .botonContenedorIzquierdo,
+    .botonContenedorDerecho {
         flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
+        justify-content: flex-start;
+        text-align: left;
     }
 
     .imagenBoton {

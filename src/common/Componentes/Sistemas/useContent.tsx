@@ -197,6 +197,45 @@ interface ContentData {
                 otrosCategories: string[];
             };
         };
+        ImagenYGrid2: {
+            es: {
+                tituloSuperior: string;
+                tituloInferior: string;
+                reconocimiento1: string;
+                reconocimiento2: string;
+                boton1: {
+                    titulo: string;
+                    subtitulo: string;
+                },
+                boton2: {
+                    titulo: string;
+                    subtitulo: string;
+                }
+            },
+            en: {
+                tituloSuperior: string;
+                tituloInferior: string;
+                reconocimiento1: string;
+                reconocimiento2: string;
+                boton1: {
+                    titulo: string;
+                    subtitulo: string;
+                },
+                boton2: {
+                    titulo: string;
+                    subtitulo: string;
+                }
+            },
+            contenido: {
+                imagenPrincipal: string;
+                logo1: string;
+                logo2: string;
+                boton1ImagenIzquierda: string;
+                boton1ImagenDerecha: string;
+                boton2ImagenIzquierda: string;
+                boton2ImagenDerecha: string;
+            }
+        }
 
     }
 }

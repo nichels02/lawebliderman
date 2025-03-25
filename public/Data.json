@@ -203,38 +203,110 @@
     "Marquee": {
       "common": {
         "items": [
-          { "src": "src/assets/images.jpeg", "alt": "1" },
-          { "src": "src/assets/images.jpeg", "alt": "2" },
-          { "src": "src/assets/images.jpeg", "alt": "3" },
-          { "src": "src/assets/images.jpeg", "alt": "4" },
-          { "src": "src/assets/images.jpeg", "alt": "5" },
-          { "src": "src/assets/images.jpeg", "alt": "6" },
-          { "src": "src/assets/images.jpeg", "alt": "7" },
-          { "src": "src/assets/images.png", "alt": "7" }
+          {
+            "src": "src/assets/images.jpeg",
+            "alt": "1"
+          },
+          {
+            "src": "src/assets/images.jpeg",
+            "alt": "2"
+          },
+          {
+            "src": "src/assets/images.jpeg",
+            "alt": "3"
+          },
+          {
+            "src": "src/assets/images.jpeg",
+            "alt": "4"
+          },
+          {
+            "src": "src/assets/images.jpeg",
+            "alt": "5"
+          },
+          {
+            "src": "src/assets/images.jpeg",
+            "alt": "6"
+          },
+          {
+            "src": "src/assets/images.jpeg",
+            "alt": "7"
+          },
+          {
+            "src": "src/assets/images.png",
+            "alt": "7"
+          }
         ]
       },
       "es": {
         "items": [
-          { "subtitle1": "Subtítulo 1-1", "subtitle2": "Subtítulo 1-2" },
-          { "subtitle1": "Subtítulo 2-1", "subtitle2": "Subtítulo 2-2" },
-          { "subtitle1": "Subtítulo 3-1", "subtitle2": "Subtítulo 3-2" },
-          { "subtitle1": "Subtítulo 4-1", "subtitle2": "Subtítulo 4-2" },
-          { "subtitle1": "Subtítulo 5-1", "subtitle2": "Subtítulo 5-2" },
-          { "subtitle1": "Subtítulo 6-1", "subtitle2": "Subtítulo 6-2" },
-          { "subtitle1": "Subtítulo 7-1", "subtitle2": "Subtítulo 7-2" },
-          { "subtitle1": "Subtítulo 7-1", "subtitle2": "Subtítulo 7-2" }
+          {
+            "subtitle1": "Subtítulo 1-1",
+            "subtitle2": "Subtítulo 1-2"
+          },
+          {
+            "subtitle1": "Subtítulo 2-1",
+            "subtitle2": "Subtítulo 2-2"
+          },
+          {
+            "subtitle1": "Subtítulo 3-1",
+            "subtitle2": "Subtítulo 3-2"
+          },
+          {
+            "subtitle1": "Subtítulo 4-1",
+            "subtitle2": "Subtítulo 4-2"
+          },
+          {
+            "subtitle1": "Subtítulo 5-1",
+            "subtitle2": "Subtítulo 5-2"
+          },
+          {
+            "subtitle1": "Subtítulo 6-1",
+            "subtitle2": "Subtítulo 6-2"
+          },
+          {
+            "subtitle1": "Subtítulo 7-1",
+            "subtitle2": "Subtítulo 7-2"
+          },
+          {
+            "subtitle1": "Subtítulo 7-1",
+            "subtitle2": "Subtítulo 7-2"
+          }
         ]
       },
       "en": {
         "items": [
-          { "subtitle1": "Subtitle 1-1", "subtitle2": "Subtitle 1-2" },
-          { "subtitle1": "Subtitle 2-1", "subtitle2": "Subtitle 2-2" },
-          { "subtitle1": "Subtitle 3-1", "subtitle2": "Subtitle 3-2" },
-          { "subtitle1": "Subtitle 4-1", "subtitle2": "Subtitle 4-2" },
-          { "subtitle1": "Subtitle 5-1", "subtitle2": "Subtitle 5-2" },
-          { "subtitle1": "Subtitle 6-1", "subtitle2": "Subtitle 6-2" },
-          { "subtitle1": "Subtitle 7-1", "subtitle2": "Subtitle 7-2" },
-          { "subtitle1": "Subtitle 7-1", "subtitle2": "Subtitle 7-2" }
+          {
+            "subtitle1": "Subtitle 1-1",
+            "subtitle2": "Subtitle 1-2"
+          },
+          {
+            "subtitle1": "Subtitle 2-1",
+            "subtitle2": "Subtitle 2-2"
+          },
+          {
+            "subtitle1": "Subtitle 3-1",
+            "subtitle2": "Subtitle 3-2"
+          },
+          {
+            "subtitle1": "Subtitle 4-1",
+            "subtitle2": "Subtitle 4-2"
+          },
+          {
+            "subtitle1": "Subtitle 5-1",
+            "subtitle2": "Subtitle 5-2"
+          },
+          {
+            "subtitle1": "Subtitle 6-1",
+            "subtitle2": "Subtitle 6-2"
+          },
+          {
+            "subtitle1": "Subtitle 7-1",
+            "subtitle2": "Subtitle 7-2"
+          },
+          {
+            "subtitle1": "Subtitle 7-1",
+            "subtitle2": "Subtitle 7-2"
+          }
         ]
       }
     },
@@ -249,10 +321,22 @@
       },
       "es": {
         "items": [
-          { "label": "Minería 17%", "percentage": "16%" },
-          { "label": "Industria 16%", "percentage": "13%" },
-          { "label": "Retail 13%", "percentage": "11%" },
-          { "label": "Otros 54%", "percentage": "20%" }
+          {
+            "label": "Minería 17%",
+            "percentage": "16%"
+          },
+          {
+            "label": "Industria 16%",
+            "percentage": "13%"
+          },
+          {
+            "label": "Retail 13%",
+            "percentage": "11%"
+          },
+          {
+            "label": "Otros 54%",
+            "percentage": "20%"
+          }
         ],
         "fixedTexts": [
           "○ Líder en seguridad: El mercado nos reconoce como la más grande y la mejor empresa de seguridad del Perú.",
@@ -260,17 +344,38 @@
           "○ Compromiso con el cliente: Garantizamos la máxima satisfacción y confianza."
         ],
         "otrosCategories": [
-          "Inmobiliaria", "Salud", "Transporte", "Educación", "Servicios",
-          "Agroindustria", "Construcción", "Financiero", "Fabricación",
-          "Logística", "Metalurgia", "Seguros"
+          "Inmobiliaria",
+          "Salud",
+          "Transporte",
+          "Educación",
+          "Servicios",
+          "Agroindustria",
+          "Construcción",
+          "Financiero",
+          "Fabricación",
+          "Logística",
+          "Metalurgia",
+          "Seguros"
         ]
       },
       "en": {
         "items": [
-          { "label": "Mining", "percentage": "17%" },
-          { "label": "Industry", "percentage": "16%" },
-          { "label": "Retail", "percentage": "13%" },
-          { "label": "Others", "percentage": "54%" }
+          {
+            "label": "Mining",
+            "percentage": "17%"
+          },
+          {
+            "label": "Industry",
+            "percentage": "16%"
+          },
+          {
+            "label": "Retail",
+            "percentage": "13%"
+          },
+          {
+            "label": "Others",
+            "percentage": "54%"
+          }
         ],
         "fixedTexts": [
           "○ Security Leader: The market recognizes us as the largest and best security company in Peru.",
@@ -278,28 +383,78 @@
           "○ Commitment to Customers: We guarantee maximum satisfaction and trust."
         ],
         "otrosCategories": [
-          "Real Estate", "Health", "Transport", "Education", "Services",
-          "Agribusiness", "Construction", "Finance", "Manufacturing",
-          "Logistics", "Metallurgy", "Insurance"
+          "Real Estate",
+          "Health",
+          "Transport",
+          "Education",
+          "Services",
+          "Agribusiness",
+          "Construction",
+          "Finance",
+          "Manufacturing",
+          "Logistics",
+          "Metallurgy",
+          "Insurance"
         ]
       }
+    },
+    "ImagenYGrid2": {
+      "es": {
+        "tituloSuperior": "Conoce la",
+        "tituloInferior": "Lidermanía",
+        "reconocimiento1": "Mejor Reputación \"Empresas Líderes\" MERCO.",
+        "reconocimiento2": "Contamos con una central de agentes para brindar soporte.",
+        "boton1": {
+          "titulo": "Descubre",
+          "subtitulo": "Más sobre nuestra cultura"
+        },
+        "boton2": {
+          "titulo": "Bolsa de trabajo",
+          "subtitulo": "¡Únete a la familia!"
+        }
+      },
+      "en": {
+        "tituloSuperior": "Get to know",
+        "tituloInferior": "Lidermanía",
+        "reconocimiento1": "Best Reputation 'Leading Companies' MERCO.",
+        "reconocimiento2": "We have a central agent system to provide support.",
+        "boton1": {
+          "titulo": "Discover",
+          "subtitulo": "More about our culture"
+        },
+        "boton2": {
+          "titulo": "Job Offers",
+          "subtitulo": "Join the family!"
+        }
+      },
+      "contenido": {
+        "imagenPrincipal": "https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "logo1": "https://d1ih8jugeo2m5m.cloudfront.net/2022/12/que-es-un-logo-lays.png",
+        "logo2": "https://d1ih8jugeo2m5m.cloudfront.net/2022/12/que-es-un-logo-lays.png",
+        "boton1ImagenIzquierda": "src/assets/svgviewer-output.svg",
+        "boton1ImagenDerecha": "src/assets/svgviewer-output.svg",
+        "boton2ImagenIzquierda": "src/assets/svgviewer-output.svg",
+        "boton2ImagenDerecha": "src/assets/svgviewer-output.svg"
+      }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
