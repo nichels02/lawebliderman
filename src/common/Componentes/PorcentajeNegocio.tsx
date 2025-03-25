@@ -9,7 +9,6 @@ function PorcentajeNegocio() {
     const { language } = useLanguage();
     const data = useContent();
 
-    // Definir `porcentajeNegocio` con seguridad
     const porcentajeNegocio = data?.home.porcentajeNegocio;
     const langData = porcentajeNegocio?.[language];
     const defaultImage = porcentajeNegocio?.common?.images?.[0] || '';
@@ -57,9 +56,10 @@ function PorcentajeNegocio() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                circumference: 360,
+                circumference: 180,
                 rotation: -180,
                 layout: { padding: 0 },
+                cutout: 70, // Aquí usamos `cutout` en lugar de `cutoutPercentage`
                 plugins: {
                     legend: { display: false },
                     tooltip: { enabled: false }
@@ -132,7 +132,7 @@ function PorcentajeNegocio() {
                                 : 'clamp(12px, 1.8vw, 20px)',
                         }}
                     >
-                        {item.label} {item.percentage}
+                        {item.label}
                     </div>
                 ))}
 

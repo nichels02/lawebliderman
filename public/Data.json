@@ -68,6 +68,24 @@
         "ingles": "English"
       }
     },
+    "BarraDeRedes": {
+      "Item1": {
+        "Link": "https://www.youtube.com",
+        "imagen": "src/assets/svgviewer-output.svg"
+      },
+      "Item2": {
+        "Link": "https://www.youtube.com",
+        "imagen": "src/assets/svgviewer-output.svg"
+      },
+      "Item3": {
+        "Link": "https://www.youtube.com",
+        "imagen": "src/assets/svgviewer-output.svg"
+      },
+      "Item4": {
+        "Link": "https://www.youtube.com",
+        "imagen": "src/assets/svgviewer-output.svg"
+      }
+    },
     "CardWithExpand": {
       "Seguridad": {
         "es": {
@@ -102,7 +120,7 @@
           ],
           "buttonText": "Explore ➔"
         },
-        "imageUrl": "https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg",
+        "imageUrl": "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg",
         "link": "/Seguridad"
       },
       "Servicios": {
@@ -142,7 +160,7 @@
           ],
           "buttonText": "Explore ➔"
         },
-        "imageUrl": "https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
+        "imageUrl": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
         "link": "/Servicio"
       },
       "Tecnologia": {
@@ -178,21 +196,21 @@
           "fourthSubtitle": "GPS",
           "buttonText": "Explore ➔"
         },
-        "imageUrl": "https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "imageUrl": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
         "link": "/Tecnologia"
       }
     },
     "Marquee": {
       "common": {
         "items": [
-          { "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqrIaOoNLKb_PGfc_nS4s3IVBC8x7x9nYOqQ&s", "alt": "1" },
-          { "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqrIaOoNLKb_PGfc_nS4s3IVBC8x7x9nYOqQ&s", "alt": "2" },
-          { "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqrIaOoNLKb_PGfc_nS4s3IVBC8x7x9nYOqQ&s", "alt": "3" },
-          { "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqrIaOoNLKb_PGfc_nS4s3IVBC8x7x9nYOqQ&s", "alt": "4" },
-          { "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqrIaOoNLKb_PGfc_nS4s3IVBC8x7x9nYOqQ&s", "alt": "5" },
-          { "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqrIaOoNLKb_PGfc_nS4s3IVBC8x7x9nYOqQ&s", "alt": "6" },
-          { "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqrIaOoNLKb_PGfc_nS4s3IVBC8x7x9nYOqQ&s", "alt": "7" },
-          { "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqrIaOoNLKb_PGfc_nS4s3IVBC8x7x9nYOqQ&s", "alt": "7" }
+          { "src": "src/assets/images.jpeg", "alt": "1" },
+          { "src": "src/assets/images.jpeg", "alt": "2" },
+          { "src": "src/assets/images.jpeg", "alt": "3" },
+          { "src": "src/assets/images.jpeg", "alt": "4" },
+          { "src": "src/assets/images.jpeg", "alt": "5" },
+          { "src": "src/assets/images.jpeg", "alt": "6" },
+          { "src": "src/assets/images.jpeg", "alt": "7" },
+          { "src": "src/assets/images.png", "alt": "7" }
         ]
       },
       "es": {
@@ -223,18 +241,18 @@
     "porcentajeNegocio": {
       "common": {
         "images": [
-          "https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
-          "https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg",
-          "https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
-          "https://wallpapers.com/images/hd/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg"
+          "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+          "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
+          "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg",
+          "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg"
         ]
       },
       "es": {
         "items": [
-          { "label": "Minería", "percentage": "17%" },
-          { "label": "Industria", "percentage": "16%" },
-          { "label": "Retail", "percentage": "13%" },
-          { "label": "Otros", "percentage": "54%" }
+          { "label": "Minería 17%", "percentage": "16%" },
+          { "label": "Industria 16%", "percentage": "13%" },
+          { "label": "Retail 13%", "percentage": "11%" },
+          { "label": "Otros 54%", "percentage": "20%" }
         ],
         "fixedTexts": [
           "○ Líder en seguridad: El mercado nos reconoce como la más grande y la mejor empresa de seguridad del Perú.",
@@ -266,5 +284,22 @@
         ]
       }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
 }

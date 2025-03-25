@@ -72,6 +72,24 @@ interface ContentData {
                 ingles: string;
             };
         };
+        BarraDeRedes: {
+            Item1: {
+                Link: string;
+                imagen: string;
+            },
+            Item2: {
+                Link: string;
+                imagen: string;
+            },
+            Item3: {
+                Link: string;
+                imagen: string;
+            },
+            Item4: {
+                Link: string;
+                imagen: string;
+            }
+        };
         CardWithExpand: {
             Seguridad: {
                 es: {
