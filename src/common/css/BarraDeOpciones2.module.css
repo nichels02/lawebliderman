@@ -43,7 +43,7 @@
     position: relative;
     font-weight: normal;
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    font-size: 0.85rem; /* Tamaño de texto igual al otro componente */
+    font-size: clamp(0.7rem, 1.1vw, 0.8rem);
     flex-grow: 0;
     text-align: center;
 }

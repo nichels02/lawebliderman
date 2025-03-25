@@ -18,11 +18,6 @@ function BarraDeOpciones() {
     const { language } = useLanguage();
     const content = useContent();
 
-    // ✅ Verifica que `content` y `content.home.BarraDeOpciones` existan antes de acceder
-    if (!content || !content.home || !content.home.BarraDeOpciones) return <p>Cargando...</p>;
-
-    const textos = content.home.BarraDeOpciones[language]; // ✅ Seguridad de tipos
-
     const [showPanel, setShowPanel] = useState(false);
     const [svgColor, setSvgColor] = useState(isDarkModeEnabled() ? "#FFFFFF" : "#393939");
 
@@ -43,6 +38,13 @@ function BarraDeOpciones() {
 
         return () => observer.disconnect();
     }, []);
+
+    // ✅ Ahora la validación ocurre después de los hooks
+    if (!content || !content.home || !content.home.BarraDeOpciones) {
+        return <p>Cargando...</p>;
+    }
+
+    const textos = content.home.BarraDeOpciones[language];
 
     return (
         <div className={styles.barra}>
@@ -77,5 +79,6 @@ function BarraDeOpciones() {
         </div>
     );
 }
+
 
 export default BarraDeOpciones;
