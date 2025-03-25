@@ -9,6 +9,7 @@ import Servicio from './pages/Servicio.tsx';
 import Tecnologia from './pages/Tecnologia.tsx';
 import BarraDeOpciones from './common/Componentes/BarraDeOpciones.tsx';
 import BarraDeOpciones2 from './common/Componentes/BarraDeOpciones2.tsx';
+import BarraDeOpcionesRedes from './common/Componentes/BarraDeOpcionesRedes.tsx';
 import Footer from './common/Componentes/Footer.tsx';
 import { LanguageProvider } from './common/Componentes/Sistemas/LanguageContext'; // Importa el LanguageProvider
 import ScrollToTop from "./common/Componentes/Sistemas/ScrollToTop.tsx";
@@ -22,6 +23,7 @@ function App() {
                     <ScrollToTop />
                     <BarraDeOpciones />
                     <BarraDeOpciones2 />
+                    <BarraDeOpcionesRedes />
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/Conocenos" element={<Conocenos />} />

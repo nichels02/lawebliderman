@@ -1,29 +1,65 @@
 .barra {
-    position: fixed; /* Fija la barra en la pantalla */
-    left: 0; /* La coloca en el lado izquierdo */
-    top: 50%; /* La coloca en el centro vertical */
-    transform: translateY(-50%); /* Ajusta el centrado vertical */
-    width: 60px; /* Ancho de la barra */
-    height: 22%; /* Altura de la barra */
-    background-color: #ff0000; /* Color de fondo */
-    border-top-right-radius: 20px; /* Borde redondeado arriba a la derecha */
-    border-bottom-right-radius: 20px; /* Borde redondeado abajo a la derecha */
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(30px, 4vw, 60px); /* Más equilibrado */
+    height: auto;
+    background-color: var(--color-rojo-general-cambio);
+    border-top-right-radius: clamp(8px, 1.5vw, 16px);
+    border-bottom-right-radius: clamp(8px, 1.5vw, 16px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Espacio entre los elementos internos */
-    padding: 20px; /* Espacio interno */
-    box-shadow: 0 4px 10px rgba(255, 0, 0, 0); /* Sombra para dar profundidad */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    gap: clamp(8px, 1.5vh, 16px); /* Espaciado más adaptable */
+    padding: clamp(8px, 2vh, 20px) clamp(4px, 0.8vw, 12px);
+    box-shadow: 0 0.4vh 1vw rgba(255, 0, 0, 0.2);
+    z-index: 1000;
 }
 
+/* 🔹 Iconos */
 .icono {
-    color: white; /* Color de los íconos */
-    font-size: 24px; /* Tamaño de los íconos */
-    cursor: pointer; /* Cambia el cursor al pasar sobre los íconos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(24px, 3vw, 48px); /* Tamaño más controlado */
+    height: clamp(24px, 3vw, 48px);
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icono img {
+    width: clamp(18px, 2.5vw, 38px);
+    height: clamp(18px, 2.5vw, 38px);
+    object-fit: contain;
 }
 
 .icono:hover {
-    color: #1DA1F2; /* Cambia el color al pasar el mouse */
+    transform: scale(1.1);
+}
+@media (max-width: 768px) { /* Ajusta este valor si es necesario */
+    .barra {
+        display: none;
+    }
+}
+
+
+/* 🔹 Ajustes para pantallas grandes (monitores) */
+@media (min-width: 1440px) {
+    .barra {
+        width: 5vw;
+        max-width: 80px;
+        padding: 2.5vh 1.2vw;
+    }
+
+    .icono {
+        width: 4.5vw;
+        height: 4.5vw;
+    }
+
+    .icono img {
+        width: 3vw;
+        height: 3vw;
+    }
 }
