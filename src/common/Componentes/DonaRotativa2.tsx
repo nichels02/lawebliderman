@@ -9,14 +9,12 @@ function DonaRotativa2() {
     const [targetRotation, setTargetRotation] = useState(0);
     const chartContainerRef = useRef<HTMLDivElement | null>(null);
 
-    // Normaliza cualquier ángulo al rango [-180, 180)
     const normalizeAngle = (angle: number): number => {
         let normalized = ((angle % 360) + 360) % 360;
         if (normalized > 180) normalized -= 360;
         return normalized;
     };
 
-    // Mapeo original de segmentos a ángulos (0°, 90°, 180°, 270°)
     const segmentToAngle = {
         0: 270,
         1: 180,
@@ -30,11 +28,10 @@ function DonaRotativa2() {
         const ctx = chartRef.current.getContext('2d');
         if (!ctx) return;
 
-        // Configuración del gráfico
         const data = {
             datasets: [{
                 data: [25, 25, 25, 25],
-                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+                backgroundColor: ['#f4060d', '#36A2EB', '#ff4040', '#006a0b'],
                 borderWidth: 0,
             }]
         };
@@ -44,6 +41,8 @@ function DonaRotativa2() {
             circumference: 360,
             cutout: '50%',
             animation: false,
+            responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 legend: { display: false },
                 tooltip: { enabled: false }
@@ -53,10 +52,8 @@ function DonaRotativa2() {
                     const clickedSegmentIndex = elements[0].index as keyof typeof segmentToAngle;
                     const rawTargetAngle = segmentToAngle[clickedSegmentIndex];
 
-                    // Obtener la diferencia de rotación actual
                     let angleDifference = normalizeAngle(rawTargetAngle - targetRotation);
 
-                    // Asegurar que la rotación tome el camino más corto
                     if (angleDifference === 270) angleDifference = -90;
                     else if (angleDifference === -270) angleDifference = 90;
 
@@ -70,7 +67,6 @@ function DonaRotativa2() {
         return () => chart.destroy();
     }, [targetRotation]);
 
-    // Aplica la rotación normalizada al contenedor
     useEffect(() => {
         if (chartContainerRef.current) {
             chartContainerRef.current.style.transform = `rotate(${targetRotation}deg)`;
@@ -78,9 +74,39 @@ function DonaRotativa2() {
     }, [targetRotation]);
 
     return (
-        <div className={styles.parentContainer}>
-            <div ref={chartContainerRef} className={styles.chartContainer}>
-                <canvas ref={chartRef}></canvas>
+        <div className={styles.wrapper}>
+            <div className={styles.imageContainer}>
+                <img
+                    src="https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg"
+                    alt="Fondo espacial"
+                    className={styles.backgroundImage}
+                />
+            </div>
+
+            <div className={styles.chartWrapper}>
+                <div ref={chartContainerRef} className={styles.chartContainer}>
+                    <canvas ref={chartRef}></canvas>
+
+                    {/* Textos sobre cada segmento (sin doble rotación) */}
+                    <div className={`${styles.segmentLabel} ${styles.label1}`}
+                         style={{ transform: `rotate(${-targetRotation}deg)` }}>
+                        Texto 1
+                    </div>
+                    <div className={`${styles.segmentLabel} ${styles.label2}`}
+                         style={{ transform: `rotate(${-targetRotation}deg)` }}>
+                        Texto 2
+                    </div>
+                    <div className={`${styles.segmentLabel} ${styles.label3}`}
+                         style={{ transform: `rotate(${-targetRotation}deg)` }}>
+                        Texto 3
+                    </div>
+                    <div className={`${styles.segmentLabel} ${styles.label4}`}
+                         style={{ transform: `rotate(${-targetRotation}deg)` }}>
+                        Texto 4
+                    </div>
+                </div>
+
+                <div className={styles.centerText}>Texto Central</div>
             </div>
         </div>
     );

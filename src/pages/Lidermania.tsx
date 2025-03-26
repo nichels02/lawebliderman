@@ -35,6 +35,7 @@ function Lidermania(){
                 onButton1Click={() => console.log("Ver más info")}
                 onButton2Click={() => console.log("Contratar servicio")}
             />
+            <DonaRotativa2 />
             <TextoTituloEImagen
                 titulo="Título de ejemplo"
                 texto="Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."
@@ -48,7 +49,7 @@ function Lidermania(){
             <CardWithExpand />
             <FlechaGiro />
             <PorcentajeNegocio />
-            <DonaRotativa2 />
+
 
 
 
