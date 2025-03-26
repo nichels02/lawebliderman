@@ -21,8 +21,7 @@
 /* Ajustes para tablets */
 @media (max-width: 1024px) {
     .barra {
-        min-width: 50vw;
-        max-width: 70vw;
+        min-width: 35vw;
         padding: 4px 6px;
     }
 

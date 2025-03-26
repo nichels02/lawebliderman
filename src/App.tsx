@@ -21,7 +21,7 @@ function App() {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768); // ✅ Actualiza si cambia el tamaño de pantalla
+            setIsMobile(window.innerWidth <= 810); // ✅ Actualiza si cambia el tamaño de pantalla
         };
 
         window.addEventListener("resize", handleResize);

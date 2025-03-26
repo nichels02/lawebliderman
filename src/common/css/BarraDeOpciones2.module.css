@@ -18,7 +18,7 @@
 /* Ajustes para pantallas medianas (tablets) */
 @media (max-width: 1024px) {
     .barra {
-        width: 28%; /* Más ancho en tablets */
+        width: 26%; /* Más ancho en tablets */
         padding: 4px 6px; /* Padding más compacto */
     }
 }
