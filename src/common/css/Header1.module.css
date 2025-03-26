@@ -52,7 +52,7 @@ h1, p {
 
 .text3 {
     text-shadow: none; /* Elimina la sombra del texto */
-    font-size: 1vw; /* Tamaño relativo al contenedor */
+    font-size: 1.2vw; /* Tamaño relativo al contenedor */
     color: var(--color-texto-blanco); /* Color del tercer texto */
 }
 
@@ -115,7 +115,7 @@ h1, p {
 .centeredBottomContainer {
     position: absolute; /* Posiciona el contenedor de manera absoluta */
     left: 50%; /* Lo coloca en el centro horizontal */
-    bottom: 0; /* Lo mueve un 4% hacia abajo desde la parte inferior de .header */
+    bottom: 0;
     border-radius: 25px; /* Bordes redondeados */
     transform: translateX(-50%); /* Centra el contenedor horizontalmente */
     width: 50%; /* Reducimos el ancho a 50% (ajusta este valor según tus necesidades) */
@@ -147,9 +147,60 @@ h1, p {
     background-color: rgba(28, 28, 158, 0); /* Fondo azul semitransparente */
     font-weight: normal;
     border-radius: 10px; /* Bordes redondeados */
-    font-size: 1vw; /* Tamaño de fuente relativo al contenedor */
+    font-size: clamp(12px, 1vw, 24px); /* Tamaño de fuente relativo al contenedor */
     display: flex; /* Usa Flexbox para centrar el contenido */
     align-items: center; /* Centra verticalmente */
     justify-content: center; /* Centra horizontalmente */
     padding-bottom: 8%; /* Espacio vacío debajo del contenedor padre */
+}
+@media (max-width: 1024px) {
+
+    .text3 {
+        font-size: 1.5vw;
+    }
+
+    .logo {
+        width: 12%; /* Aumenta un poco el tamaño del logo para mayor visibilidad */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .text1 {
+        font-size: 6vw; /* Aumenta ligeramente el tamaño para mejorar legibilidad */
+    }
+
+    .text2 {
+        font-size: 6.5vw;
+    }
+
+    .text3 {
+        font-size: clamp(12px, 2vw, 24px);
+    }
+
+    .logo {
+        width: 15%; /* Hace el logo más visible en pantallas pequeñas */
+    }
+
+    .textContainer {
+        left: 8%; /* Asegura que el texto se mantenga centrado */
+        top: 25%;
+    }
+    .buttonContainer{
+        top: 80%; /* Ajusta la posición vertical según sea necesario */
+        left: 8%;
+        width: 50%;
+    }
+    .buttonPrimary,.buttonSecondary{
+        font-size: clamp(12px, 1vw, 24px);
+
+    }
+    .centeredBottomContainer{
+        /*bottom: -25px !important;*/
+        width: 70%;
+
+    }
+    .header {
+        padding-bottom: 9%; /* Espacio vacío debajo del contenedor padre */
+    }
 }
