@@ -136,7 +136,7 @@ h1, p {
     background-color: rgba(55, 255, 0, 0); /* Fondo rojo semitransparente */
     font-weight: bold;
     border-radius: 10px; /* Bordes redondeados */
-    font-size: 4vw; /* Reducimos el tamaño de fuente para que se ajuste mejor */
+    font-size: clamp(20px, 4vw, 60px); /* Reducimos el tamaño de fuente para que se ajuste mejor */
     display: flex; /* Usa Flexbox para centrar el contenido */
     align-items: center; /* Centra verticalmente */
     justify-content: center; /* Centra horizontalmente */
@@ -200,6 +200,7 @@ h1, p {
         width: 70%;
 
     }
+
     .header {
         padding-bottom: 9%; /* Espacio vacío debajo del contenedor padre */
     }
