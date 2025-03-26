@@ -9,17 +9,35 @@ function DonaRotativa2() {
     const [targetRotation, setTargetRotation] = useState(0);
     const chartContainerRef = useRef<HTMLDivElement | null>(null);
 
-    const normalizeAngle = (angle: number): number => {
-        let normalized = ((angle % 360) + 360) % 360;
-        if (normalized > 180) normalized -= 360;
-        return normalized;
-    };
+    // Datos de los segmentos con título, texto e imagen
+    const segmentsData = [
+        { title: 'Título 1', text: 'Texto 1', image: 'https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg' },
+        { title: 'Título 2', text: 'Texto 2', image: 'https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg' },
+        { title: 'Título 3', text: 'Texto 3', image: 'https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg' },
+        { title: 'Título 4', text: 'Texto 4', image: 'https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg' },
+    ];
 
-    const segmentToAngle = {
+    // Mapeo de segmentos a ángulos
+    const segmentToAngle: Record<number, number> = {
         0: 270,
         1: 180,
         2: 90,
         3: 0
+    };
+
+    // Ángulos iniciales de los títulos
+    const labelAngles = [0, 270, 180, 90];
+
+    // Normaliza los ángulos para evitar valores negativos o mayores a 360°
+    const normalizeAngle = (angle: number): number => {
+        const normalized = ((angle % 360) + 360) % 360;
+        return normalized > 180 ? normalized - 360 : normalized;
+    };
+
+    // Obtiene el índice del segmento activo basado en la rotación
+    const getActiveSegmentIndex = () => {
+        const index = Math.round(((targetRotation % 360) + 360) % 360 / 90) % 4;
+        return index;
     };
 
     useEffect(() => {
@@ -32,7 +50,9 @@ function DonaRotativa2() {
             datasets: [{
                 data: [25, 25, 25, 25],
                 backgroundColor: ['#f4060d', '#36A2EB', '#ff4040', '#006a0b'],
-                borderWidth: 0,
+                borderWidth: 1,
+                borderColor: ['#f4060d', '#36A2EB', '#ff4040', '#006a0b'],
+                spacing: 0
             }]
         };
 
@@ -49,11 +69,10 @@ function DonaRotativa2() {
             },
             onClick: (_event: ChartEvent, elements: ActiveElement[]) => {
                 if (elements.length > 0) {
-                    const clickedSegmentIndex = elements[0].index as keyof typeof segmentToAngle;
+                    const clickedSegmentIndex = elements[0].index;
                     const rawTargetAngle = segmentToAngle[clickedSegmentIndex];
 
                     let angleDifference = normalizeAngle(rawTargetAngle - targetRotation);
-
                     if (angleDifference === 270) angleDifference = -90;
                     else if (angleDifference === -270) angleDifference = 90;
 
@@ -77,8 +96,8 @@ function DonaRotativa2() {
         <div className={styles.wrapper}>
             <div className={styles.imageContainer}>
                 <img
-                    src="https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg"
-                    alt="Fondo espacial"
+                    src={segmentsData[getActiveSegmentIndex()].image}
+                    alt="Fondo dinámico"
                     className={styles.backgroundImage}
                 />
             </div>
@@ -87,26 +106,22 @@ function DonaRotativa2() {
                 <div ref={chartContainerRef} className={styles.chartContainer}>
                     <canvas ref={chartRef}></canvas>
 
-                    {/* Textos sobre cada segmento (sin doble rotación) */}
-                    <div className={`${styles.segmentLabel} ${styles.label1}`}
-                         style={{ transform: `rotate(${-targetRotation}deg)` }}>
-                        Texto 1
-                    </div>
-                    <div className={`${styles.segmentLabel} ${styles.label2}`}
-                         style={{ transform: `rotate(${-targetRotation}deg)` }}>
-                        Texto 2
-                    </div>
-                    <div className={`${styles.segmentLabel} ${styles.label3}`}
-                         style={{ transform: `rotate(${-targetRotation}deg)` }}>
-                        Texto 3
-                    </div>
-                    <div className={`${styles.segmentLabel} ${styles.label4}`}
-                         style={{ transform: `rotate(${-targetRotation}deg)` }}>
-                        Texto 4
-                    </div>
+                    {/* Títulos sobre cada segmento */}
+                    {labelAngles.map((angle, index) => (
+                        <div
+                            key={index}
+                            className={`${styles.segmentLabel} ${styles[`label${index + 1}`]}`}
+                            style={{ transform: `rotate(${angle}deg)` }}
+                        >
+                            {segmentsData[index].title}
+                        </div>
+                    ))}
                 </div>
 
-                <div className={styles.centerText}>Texto Central</div>
+                {/* Texto central dinámico */}
+                <div className={styles.centerText}>
+                    {segmentsData[getActiveSegmentIndex()].text}
+                </div>
             </div>
         </div>
     );
