@@ -71,19 +71,19 @@
     "BarraDeRedes": {
       "Item1": {
         "Link": "https://www.youtube.com",
-        "imagen": "src/assets/svgviewer-output.svg"
+        "imagen": "src/assets/facebook.svg"
       },
       "Item2": {
         "Link": "https://www.youtube.com",
-        "imagen": "src/assets/svgviewer-output.svg"
+        "imagen": "src/assets/Tiktok.svg"
       },
       "Item3": {
         "Link": "https://www.youtube.com",
-        "imagen": "src/assets/svgviewer-output.svg"
+        "imagen": "src/assets/linkedin.svg"
       },
       "Item4": {
         "Link": "https://www.youtube.com",
-        "imagen": "src/assets/svgviewer-output.svg"
+        "imagen": "src/assets/youtube.svg"
       }
     },
     "CardWithExpand": {

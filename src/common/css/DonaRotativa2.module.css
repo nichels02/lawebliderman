@@ -68,16 +68,16 @@
 }
 
 /* Posicionamiento individual de cada texto */
-.label1 { top: 10%; left: 50%; transform-origin: center; }
-.label2 { top: 50%; left: 10%; transform-origin: center; }
-.label3 { bottom: 10%; left: 50%; transform-origin: center; }
-.label4 { top: 50%; right: 10%; transform-origin: center; }
+.label1 { top: 10%; left: 45%; transform-origin: center; }
+.label2 { top: 48%; left: 10%; transform-origin: center; }
+.label3 { bottom: 10%; left: 45%; transform-origin: center; }
+.label4 { top: 48%; right: 10%; transform-origin: center; }
 
 /* Texto central que NO se mueve con el gráfico */
 .centerText {
     position: absolute;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: normal;
     color: white;
     text-align: center;
     top: 50%;
