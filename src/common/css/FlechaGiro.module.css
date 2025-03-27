@@ -1,3 +1,4 @@
+/* Contenedor principal */
 .contenedorPadre {
     display: flex;
     justify-content: center;
@@ -5,62 +6,106 @@
     width: 100%;
     height: 100vh;
     position: relative;
-    background-color: #df2121; /* Color de fondo para el contenedor padre */
+    background-color: #df2121; /* Color de fondo */
     overflow: hidden;
 }
 
+/* Contenedor de la imagen */
 .contenedorImagen {
     position: relative;
-    width: 50%; /* Ajusta el tamaño de la imagen */
-    height: 50%; /* Ajusta el tamaño de la imagen */
+    width: 50%;
+    height: 50%;
     display: flex;
-    background-color: #212adf; /* Color de fondo para el contenedor padre */
     justify-content: center;
     align-items: center;
+    background-color: #212adf;
 }
 
 .contenedorImagen img {
     max-width: 100%;
     max-height: 100%;
-    background-color: #3adf21; /* Color de fondo para el contenedor padre */
-    transition: transform 0.3s ease; /* Transición suave para la rotación */
+    transition: transform 0.3s ease;
 }
 
-/* Estilos para los contenedores alrededor de la imagen */
-.contenedor1, .contenedor2, .contenedor3, .contenedor4, .contenedor5, .contenedor6 {
+/* Estilos generales para los contenedores */
+.contenedor {
     position: absolute;
-    width: 100px; /* Ajusta el tamaño de los contenedores */
-    height: 100px; /* Ajusta el tamaño de los contenedores */
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
-    border: 1px solid #000; /* Borde para visualización */
+    width: 200px; /* Aumentado el tamaño */
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Contenedor del número (ahora cuadrado y más grande) */
+.numero {
+    position: absolute;
+    top: 5px;
+    width: 60px; /* Más grande */
+    height: 60px; /* Más grande */
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 0px; /* Ahora cuadrado */
+}
+
+/* Texto debajo del número */
+.texto {
+    position: absolute;
+    top: 65px; /* Ajustado para que el texto quede más centrado */
+    width: 100%; /* Asegura que el texto se ajuste al contenedor */
+    text-align: center; /* Alineación central */
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+}
+
+/* Texto en el centro de la flecha (estático, no rotatorio) */
+.textoCentro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    z-index: 10; /* Para que esté encima de la flecha */
+}
+
+/* Posicionamiento de los contenedores alrededor de la imagen */
 .contenedor1 {
-    top: 6%;
-    right: 26%;
+    top: 5%;
+    right: 20%;
 }
 
 .contenedor2 {
     top: 40%;
-    right: 19%;
+    right: 10%;
 }
 
 .contenedor3 {
     top: 70%;
-    right: 26%;
+    right: 20%;
 }
 
 .contenedor4 {
-    top: 6%;
-    left: 26%;
+    top: 5%;
+    left: 20%;
 }
 
 .contenedor5 {
     top: 40%;
-    left: 19%;
+    left: 10%;
 }
 
 .contenedor6 {
     top: 70%;
-    left: 26%;
+    left: 20%;
 }

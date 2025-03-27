@@ -1,85 +1,69 @@
 import React, { useState } from 'react';
 import styles from '../css/FlechaGiro.module.css';
-import imagen from '../../assets/icone-de-fleche-vers-le-haut-noir.png'; // Importa la imagen
+import imagen from '../../assets/icone-de-fleche-vers-le-haut-noir.png';
+
+// Lista de títulos y textos personalizados
+const contenedores = [
+    { numero: 1, texto: "Conocimiento y necesidades del giro de negocio." },
+    { numero: 2, texto: "Visión integral de la seguridad." },
+    { numero: 3, texto: "Inducción agente-puesto." },
+    { numero: 4, texto: "Integracion de la tecnología." },
+    { numero: 5, texto: "Comunicación constante con el cliente." },
+    { numero: 6, texto: "Presentación de KPIs." }
+];
 
 function MapaParaModificar() {
-    const [isHovered, setIsHovered] = useState(false); // Estado para controlar si el mouse está sobre el contenedor
-    const [rotationAngle, setRotationAngle] = useState(0); // Estado para almacenar el ángulo de rotación
+    const [rotationAngle, setRotationAngle] = useState(0);
 
-    const normalizeAngle = (angle: number): number => {
-        // Normaliza el ángulo para que esté en el rango de 0 a 360 grados
-        return ((angle % 360) + 360) % 360;
-    };
+    const normalizeAngle = (angle: number): number => ((angle % 360) + 360) % 360;
 
     const shortestRotation = (currentAngle: number, targetAngle: number): number => {
-        // Calcula la diferencia entre los ángulos
         const diff = normalizeAngle(targetAngle - currentAngle);
-        // Si la diferencia es mayor que 180, gira en la dirección opuesta
         return diff > 180 ? diff - 360 : diff;
     };
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>): void => {
         const rect = e.currentTarget.getBoundingClientRect();
-        const xPercent = ((e.clientX - rect.left) / rect.width) * 100; // Posición X en porcentaje
-        const yPercent = ((e.clientY - rect.top) / rect.height) * 100; // Posición Y en porcentaje
+        const xPercent = ((e.clientX - rect.left) / rect.width) * 100;
+        const yPercent = ((e.clientY - rect.top) / rect.height) * 100;
 
         let targetAngle = 0;
 
-        // Definir las áreas de los contenedores en porcentajes
-        if (xPercent >= 50 && xPercent <= 100 && yPercent >= 0 && yPercent <= 33) {
-            targetAngle = 45; // Rotar 45 grados
-        } else if (xPercent > 50 && xPercent <= 100 && yPercent > 33 && yPercent <= 66) {
-            targetAngle = 90; // Rotar 90 grados
-        } else if (xPercent > 50 && xPercent <= 100 && yPercent >= 66 && yPercent <= 100) {
-            targetAngle = 135; // Rotar 135 grados
-        } else if (xPercent >= 0 && xPercent <= 50 && yPercent > 0 && yPercent <= 33) {
-            targetAngle = -45; // Rotar -45 grados
-        } else if (xPercent >= 0 && xPercent <= 50 && yPercent > 33 && yPercent <= 66) {
-            targetAngle = -90; // Rotar -90 grados
-        } else if (xPercent >= 0 && xPercent <= 50 && yPercent > 66 && yPercent <= 100) {
-            targetAngle = -135; // Rotar -135 grados
+        if (xPercent >= 50 && yPercent <= 33) {
+            targetAngle = 45;
+        } else if (xPercent > 50 && yPercent > 33 && yPercent <= 66) {
+            targetAngle = 90;
+        } else if (xPercent > 50 && yPercent > 66) {
+            targetAngle = 135;
+        } else if (xPercent < 50 && yPercent <= 33) {
+            targetAngle = -45;
+        } else if (xPercent < 50 && yPercent > 33 && yPercent <= 66) {
+            targetAngle = -90;
+        } else if (xPercent < 50 && yPercent > 66) {
+            targetAngle = -135;
         }
 
-        // Calcula la rotación más corta
         const newRotationAngle = rotationAngle + shortestRotation(rotationAngle, targetAngle);
         setRotationAngle(newRotationAngle);
     };
 
-    const handleMouseEnter = (): void => {
-        setIsHovered(true); // Activar el estado cuando el mouse entra en el contenedor
-    };
-
-    const handleMouseLeave = (): void => {
-        setIsHovered(false); // Desactivar el estado cuando el mouse sale del contenedor
-        // Eliminamos la línea que restablece la rotación a 0
-    };
-
     return (
-        <div
-            className={styles.contenedorPadre}
-            onMouseMove={handleMouseMove}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
+        <div className={styles.contenedorPadre} onMouseMove={handleMouseMove}>
             <div className={styles.contenedorImagen}>
-                {/* Usa la imagen importada y aplícale la rotación */}
                 <img
                     src={imagen}
-                    alt="Descripción de la imagen"
-                    style={{
-                        transform: isHovered ? `rotate(${rotationAngle}deg)` : `rotate(${rotationAngle}deg)`, // Mantén la rotación actual
-                        transition: 'transform 0.3s ease', // Transición suave
-                    }}
+                    alt="Flecha"
+                    style={{ transform: `rotate(${rotationAngle}deg)`, transition: 'transform 0.3s ease' }}
                 />
+                <div className={styles.textoCentro}>Texto Estático</div> {/* Aquí va el texto estático en el centro */}
             </div>
 
-            {/* Contenedores alrededor de la imagen */}
-            <div className={styles.contenedor1}></div>
-            <div className={styles.contenedor2}></div>
-            <div className={styles.contenedor3}></div>
-            <div className={styles.contenedor4}></div>
-            <div className={styles.contenedor5}></div>
-            <div className={styles.contenedor6}></div>
+            {contenedores.map((item, i) => (
+                <div key={i} className={`${styles[`contenedor${i + 1}`]} ${styles.contenedor}`}>
+                    <div className={styles.numero}>{item.numero}</div>
+                    <div className={styles.texto}>{item.texto}</div>
+                </div>
+            ))}
         </div>
     );
 }
