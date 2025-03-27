@@ -436,7 +436,22 @@
         "boton2ImagenIzquierda": "src/assets/youtube.svg",
         "boton2ImagenDerecha": "src/assets/youtube.svg"
       }
-    },
+    }
+
+  },
+  "Conocenos": {
+
+  },
+  "Seguridad": {
+
+  },
+  "Servicio": {
+
+  },
+  "Tecnologia": {
+
+  },
+  "Lidermania": {
     "DonaRotativa": {
       "es": {
         "Grupo1": {
@@ -477,7 +492,7 @@
       "contenido": {
         "Imagen1": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
         "Imagen2": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
-        "Imagen3": "1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg",
+        "Imagen3": "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg",
         "Imagen4": "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg"
       }
     }

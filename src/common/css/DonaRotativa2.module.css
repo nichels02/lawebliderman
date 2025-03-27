@@ -69,16 +69,18 @@
 
 /* Posicionamiento individual de cada texto */
 .label1 { top: 10%; left: 45%; transform-origin: center; }
-.label2 { top: 48%; left: 10%; transform-origin: center; }
+.label2 { top: 48%; left: 3%; transform-origin: center; }
 .label3 { bottom: 10%; left: 45%; transform-origin: center; }
-.label4 { top: 48%; right: 10%; transform-origin: center; }
+.label4 { top: 48%; right: 3%; transform-origin: center; }
 
 /* Texto central que NO se mueve con el gráfico */
 .centerText {
+    width: 35%;
+    height: auto;
     position: absolute;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: normal;
-    color: white;
+    color: var(--color-texto-negro-cambio);
     text-align: center;
     top: 50%;
     left: 50%;

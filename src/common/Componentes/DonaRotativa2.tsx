@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { Chart, ArcElement, ChartEvent, ActiveElement } from 'chart.js';
 import styles from '../css/DonaRotativa2.module.css';
+import { useContent } from './Sistemas/useContent.tsx';
+import { useLanguage } from './Sistemas/LanguageContext.tsx';
 
 Chart.register(ArcElement);
 
@@ -9,21 +11,33 @@ function DonaRotativa2() {
     const [targetRotation, setTargetRotation] = useState(0);
     const chartContainerRef = useRef<HTMLDivElement | null>(null);
 
-    // Datos de los segmentos con título, texto e imagen
-    const segmentsData = [
-        { title: 'Título 1', text: 'Texto 1', image: 'https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg' },
-        { title: 'Título 2', text: 'Texto 2', image: 'https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg' },
-        { title: 'Título 3', text: 'Texto 3', image: 'https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg' },
-        { title: 'Título 4', text: 'Texto 4', image: 'https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg' },
+    const content = useContent();
+    const { language } = useLanguage();
+
+    // 🚀 Obtener datos del contexto, con valores por defecto si aún no han cargado
+    const segmentsData = content?.Lidermania.DonaRotativa[language] || {
+        Grupo1: { Titulo: 'Cargando...', Texto: 'Cargando...' },
+        Grupo2: { Titulo: 'Cargando...', Texto: 'Cargando...' },
+        Grupo3: { Titulo: 'Cargando...', Texto: 'Cargando...' },
+        Grupo4: { Titulo: 'Cargando...', Texto: 'Cargando...' },
+    };
+
+    const segmentImages = content?.Lidermania.DonaRotativa.contenido || {
+        Imagen1: '',
+        Imagen2: '',
+        Imagen3: '',
+        Imagen4: '',
+    };
+
+    const segments = [
+        { title: segmentsData.Grupo1.Titulo, text: segmentsData.Grupo1.Texto, image: segmentImages.Imagen1 },
+        { title: segmentsData.Grupo2.Titulo, text: segmentsData.Grupo2.Texto, image: segmentImages.Imagen2 },
+        { title: segmentsData.Grupo3.Titulo, text: segmentsData.Grupo3.Texto, image: segmentImages.Imagen3 },
+        { title: segmentsData.Grupo4.Titulo, text: segmentsData.Grupo4.Texto, image: segmentImages.Imagen4 },
     ];
 
     // Mapeo de segmentos a ángulos
-    const segmentToAngle: Record<number, number> = {
-        0: 270,
-        1: 180,
-        2: 90,
-        3: 0
-    };
+    const segmentToAngle: Record<number, number> = { 0: 270, 1: 180, 2: 90, 3: 0 };
 
     // Ángulos iniciales de los títulos
     const labelAngles = [0, 270, 180, 90];
@@ -36,8 +50,7 @@ function DonaRotativa2() {
 
     // Obtiene el índice del segmento activo basado en la rotación
     const getActiveSegmentIndex = () => {
-        const index = Math.round(((targetRotation % 360) + 360) % 360 / 90) % 4;
-        return index;
+        return Math.round(((targetRotation % 360) + 360) % 360 / 90) % 4;
     };
 
     useEffect(() => {
@@ -96,7 +109,7 @@ function DonaRotativa2() {
         <div className={styles.wrapper}>
             <div className={styles.imageContainer}>
                 <img
-                    src={segmentsData[getActiveSegmentIndex()].image}
+                    src={segments[getActiveSegmentIndex()].image || 'fallback.jpg'}
                     alt="Fondo dinámico"
                     className={styles.backgroundImage}
                 />
@@ -113,14 +126,14 @@ function DonaRotativa2() {
                             className={`${styles.segmentLabel} ${styles[`label${index + 1}`]}`}
                             style={{ transform: `rotate(${angle}deg)` }}
                         >
-                            {segmentsData[index].title}
+                            {segments[index].title}
                         </div>
                     ))}
                 </div>
 
                 {/* Texto central dinámico */}
                 <div className={styles.centerText}>
-                    {segmentsData[getActiveSegmentIndex()].text}
+                    {segments[getActiveSegmentIndex()].text}
                 </div>
             </div>
         </div>

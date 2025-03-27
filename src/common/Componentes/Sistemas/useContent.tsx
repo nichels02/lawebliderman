@@ -236,6 +236,10 @@ interface ContentData {
                 boton2ImagenDerecha: string;
             }
         }
+
+
+    }
+    Lidermania:{
         DonaRotativa: {
             es: {
                 Grupo1: {
@@ -280,7 +284,6 @@ interface ContentData {
                 Imagen4: string;
             }
         }
-
     }
 }
 
