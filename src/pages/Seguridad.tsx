@@ -8,6 +8,7 @@ import DonaRotativa2 from '../common/Componentes/DonaRotativa2.tsx';
 import TextoTituloEImagen from '../common/Componentes/TextoTituloEImagen.tsx';
 import ContenedorScroll from '../common/Componentes/ContenedorScroll.tsx';
 import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
+import GridGenerico from "../common/Componentes/GridGenerico.tsx";
 
 
 
@@ -25,6 +26,15 @@ function Seguridad(){
     return (
         <>
             <Header1 />
+            <GridGenerico
+                largeImage="src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
+                items={[
+                    { image: "src/assets/Tiktok.svg", title: "Título 1", text: "Texto descriptivo." },
+                    { image: "src/assets/Tiktok.svg", title: "Título 2", text: "Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. " },
+                    { image: "src/assets/Tiktok.svg", title: "Título 3", text: "Texto descriptivo." },
+                    { image: "src/assets/Tiktok.svg", title: "Título 4", text: "Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. " },
+                ]}
+            />
             <TextoTituloEImagen
                 titulo="Título de ejemplo"
                 texto="Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."

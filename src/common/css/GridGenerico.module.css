@@ -1,0 +1,121 @@
+/* Contenedor principal */
+.container {
+    width: 87%;
+    margin: auto;
+    height: auto;
+}
+
+/* Grid principal */
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+    align-items: stretch; /* 🔹 Asegura que todas las celdas tengan la misma altura */
+}
+
+/* Celda fusionada con imagen grande */
+.largeItem {
+    grid-column: 1;
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 100%; /* 🔹 Mantiene la altura uniforme */
+}
+
+.largeItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Celdas normales */
+.gridItem {
+    display: flex;
+    align-items: center;
+    background: var(--colorUI);
+    padding: 10px;
+    border-radius: 8px;
+    gap: 15px;
+    height: 100%; /* 🔹 Mantiene la altura uniforme */
+}
+
+/* Imágenes dentro de las celdas */
+.gridItem img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Contenedor para título y texto */
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%; /* 🔹 Mantiene la altura uniforme */
+}
+
+/* Títulos */
+.gridItem h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-rojo-general);
+    text-align: left;
+    max-width: 150px;
+    word-wrap: break-word;
+}
+
+/* Párrafos */
+.gridItem p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-texto-negro-cambio);
+    line-height: 1.4;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .largeItem {
+        grid-column: auto;
+        grid-row: auto;
+        height: 250px;
+    }
+
+    .gridItem {
+        flex-direction: column;
+        text-align: center;
+        padding: 8px;
+    }
+
+    .gridItem img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .textContainer {
+        align-items: center;
+    }
+
+    .gridItem h4 {
+        text-align: center;
+    }
+
+    .gridItem p {
+        text-align: center;
+    }
+}
