@@ -1,14 +1,11 @@
 import Header1 from '../common/Componentes/Header1.tsx';
 import EspacioVacio from '../common/Componentes/EspacioVacio.tsx';
-import Marquee from '../common/Componentes/Marquee.tsx';
-import CardWithExpand from '../common/Componentes/CardWithExpand.tsx';
 import FlechaGiro from '../common/Componentes/FlechaGiro.tsx';
 import PorcentajeNegocio from '../common/Componentes/PorcentajeNegocio.tsx';
 import DonaRotativa2 from '../common/Componentes/DonaRotativa2.tsx';
 import TextoTituloEImagen from '../common/Componentes/TextoTituloEImagen.tsx';
-import ContenedorScroll from '../common/Componentes/ContenedorScroll.tsx';
-import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
 import GridGenerico from "../common/Componentes/GridGenerico.tsx";
+import GridBarajeable from "../common/Componentes/gridBarajeable.tsx";
 
 
 
@@ -26,6 +23,7 @@ function Seguridad(){
     return (
         <>
             <Header1 />
+
             <GridGenerico
                 largeImage="src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
                 items={[
@@ -35,6 +33,8 @@ function Seguridad(){
                     { image: "src/assets/Tiktok.svg", title: "Título 4", text: "Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. " },
                 ]}
             />
+            <FlechaGiro />
+            <GridBarajeable />
             <TextoTituloEImagen
                 titulo="Título de ejemplo"
                 texto="Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."
@@ -42,11 +42,6 @@ function Seguridad(){
                 textosBotones={textosBotones}
                 imagenALaIzquierda={false}
             />
-            <ContenedorScroll />
-            <FormularioDeContacto />
-            <Marquee />
-            <CardWithExpand />
-            <FlechaGiro />
             <PorcentajeNegocio />
             <DonaRotativa2 />
 

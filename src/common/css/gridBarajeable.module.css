@@ -1,0 +1,62 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 400px;
+}
+
+.mainItem {
+    grid-column: span 4;
+    grid-row: span 2;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;  /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+}
+
+.smallItem {
+    grid-column: span 2;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;  /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    filter: grayscale(100%) brightness(150%);
+    transition: filter 0.4s ease-in-out;
+}
+
+/* 🔹 Quita la escala de grises al hacer hover */
+.smallItem:hover {
+    filter: grayscale(0%);
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.80);
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: clamp(30%, auto, 60%);
+    text-align: center;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🔹 Cambia la opacidad al hacer hover */
+.smallItem:hover .overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+h2, h3, p {
+    margin: 0;
+    font-size: 1.2rem;
+}
