@@ -11,7 +11,7 @@
 .contenedorHijo {
     width: 87%;
     max-width: 1800px;
-    min-height: 500px;
+    min-height: 300px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -20,17 +20,19 @@
     overflow: hidden;
     padding: 1.5%;
     box-sizing: border-box;
+    align-items: stretch; /* Hace que ambos contenedores tengan la misma altura */
 }
 
 /* Contenedor izquierdo */
 .contenedorIzquierdo {
     position: relative;
-    min-height: 400px;
+    height: 350px; /* Ocupar toda la altura del grid */
 }
 
 .imagen {
     width: 100%;
     height: 100%;
+    object-position: top center;
     object-fit: cover;
     border-radius: 30px;
 }
@@ -39,9 +41,10 @@
 .contenedorDerecho {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    gap: 1.5rem;
+    gap: 0;
     padding: 1.5rem;
     box-sizing: border-box;
+    height: 100%; /* Ocupar toda la altura del grid */
 }
 
 /* Contenedor superior */
@@ -50,13 +53,13 @@
 }
 
 .textoSuperior {
-    font-size: clamp(1.5rem, 2vw, 2.2rem);
+    font-size: clamp(12px, 1.8vw, 35px);
     color: #818181;
     margin: 0;
 }
 
 .textoInferior {
-    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-size: clamp(24px, 2vw, 45px);
     color: var(--color-rojo-general);
     margin: 0;
     font-weight: bold;
@@ -67,12 +70,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    padding: 1.5rem;
     align-content: start;
 }
 
 .contenedorMedioIzquierdo,
 .contenedorMedioDerecho {
-    padding: 1.2rem;
+    padding: 0;
     border-radius: 12px;
     box-sizing: border-box;
     text-align: left;
@@ -93,7 +97,7 @@
 }
 
 .textoLogo {
-    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    font-size: clamp(10px, 1vw, 20px);
     color: #333;
     margin: 0;
 }
@@ -103,6 +107,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    padding-top: 0rem; /* Asegura que no haya espacio extra debajo */
 }
 
 /* Estilos generales para los botones */
@@ -149,7 +154,7 @@
 .tituloBotonIzquierdo {
     font-size: 16px;
     font-weight: bold;
-    color: var(--color-rojo-general); /* Color específico para el botón izquierdo */
+    color: var(--color-rojo-general);
     margin: 0;
 }
 
@@ -162,7 +167,7 @@
 .tituloBotonDerecho {
     font-size: 16px;
     font-weight: bold;
-    color: var(--color-texto-blanco); /* Color específico para el botón derecho */
+    color: var(--color-texto-blanco);
     margin: 0;
 }
 

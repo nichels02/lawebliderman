@@ -236,6 +236,50 @@ interface ContentData {
                 boton2ImagenDerecha: string;
             }
         }
+        DonaRotativa: {
+            es: {
+                Grupo1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Grupo2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Grupo3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Grupo4: {
+                    Titulo: string;
+                    Texto: string;
+                }
+            },
+            en: {
+                Grupo1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Grupo2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Grupo3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Grupo4: {
+                    Titulo: string;
+                    Texto: string;
+                }
+            },
+            "contenido":{
+                Imagen1: string;
+                Imagen2: string;
+                Imagen3: string;
+                Imagen4: string;
+            }
+        }
 
     }
 }

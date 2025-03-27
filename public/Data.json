@@ -31,7 +31,7 @@
       },
       "contenido": {
         "logo": "src/assets/images.png",
-        "imagen_De_Fondo": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
+        "imagen_De_Fondo": "src/assets/PORTADA.jpg"
       }
     },
     "BarraDeOpciones": {
@@ -120,7 +120,7 @@
           ],
           "buttonText": "Explore ➔"
         },
-        "imageUrl": "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg",
+        "imageUrl": "src/assets/SEGURIDAD.jpg",
         "link": "/Seguridad"
       },
       "Servicios": {
@@ -160,7 +160,7 @@
           ],
           "buttonText": "Explore ➔"
         },
-        "imageUrl": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
+        "imageUrl": "src/assets/SERVICIOS.jpg",
         "link": "/Servicio"
       },
       "Tecnologia": {
@@ -196,7 +196,7 @@
           "fourthSubtitle": "GPS",
           "buttonText": "Explore ➔"
         },
-        "imageUrl": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "imageUrl": "src/assets/TECNOLOGIA.jpg",
         "link": "/Tecnologia"
       }
     },
@@ -204,35 +204,35 @@
       "common": {
         "items": [
           {
-            "src": "src/assets/images.jpeg",
+            "src": "src/assets/imagen-AUTORIDAD-PORTUARIA-NACIONAL.jpg",
             "alt": "1"
           },
           {
-            "src": "src/assets/images.jpeg",
+            "src": "src/assets/iso9001_.gif",
             "alt": "2"
           },
           {
-            "src": "src/assets/images.jpeg",
+            "src": "src/assets/iso14001.png",
             "alt": "3"
           },
           {
-            "src": "src/assets/images.jpeg",
+            "src": "src/assets/ISO 18788.jpg",
             "alt": "4"
           },
           {
-            "src": "src/assets/images.jpeg",
+            "src": "src/assets/ISO 37001.jpg",
             "alt": "5"
           },
           {
-            "src": "src/assets/images.jpeg",
+            "src": "src/assets/logo-basc-peru.png",
             "alt": "6"
           },
           {
-            "src": "src/assets/images.jpeg",
+            "src": "src/assets/logo_DGAC.png",
             "alt": "7"
           },
           {
-            "src": "src/assets/images.png",
+            "src": "src/assets/SGS-ISO-45001.jpg",
             "alt": "7"
           }
         ]
@@ -313,10 +313,10 @@
     "porcentajeNegocio": {
       "common": {
         "images": [
-          "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
-          "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
-          "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg",
-          "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg"
+          "src/assets/MINERIA.jpg",
+          "src/assets/INDUSTRIA.jpg",
+          "src/assets/RETAIL.jpg",
+          "src/assets/OTROS.jpg"
         ]
       },
       "es": {
@@ -428,13 +428,57 @@
         }
       },
       "contenido": {
-        "imagenPrincipal": "https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "imagenPrincipal": "src/assets/2022-11-10-foto-web-Lidermania.jpg",
         "logo1": "https://d1ih8jugeo2m5m.cloudfront.net/2022/12/que-es-un-logo-lays.png",
         "logo2": "https://d1ih8jugeo2m5m.cloudfront.net/2022/12/que-es-un-logo-lays.png",
-        "boton1ImagenIzquierda": "src/assets/svgviewer-output.svg",
-        "boton1ImagenDerecha": "src/assets/svgviewer-output.svg",
-        "boton2ImagenIzquierda": "src/assets/svgviewer-output.svg",
-        "boton2ImagenDerecha": "src/assets/svgviewer-output.svg"
+        "boton1ImagenIzquierda": "src/assets/youtube.svg",
+        "boton1ImagenDerecha": "src/assets/youtube.svg",
+        "boton2ImagenIzquierda": "src/assets/youtube.svg",
+        "boton2ImagenDerecha": "src/assets/youtube.svg"
+      }
+    },
+    "DonaRotativa": {
+      "es": {
+        "Grupo1": {
+          "Titulo": "Innovación",
+          "Texto": "Exploramos nuevas ideas y tecnologías para el futuro."
+        },
+        "Grupo2": {
+          "Titulo": "Colaboración",
+          "Texto": "Trabajamos en equipo para alcanzar objetivos comunes."
+        },
+        "Grupo3": {
+          "Titulo": "Calidad",
+          "Texto": "Nos enfocamos en la excelencia en cada detalle."
+        },
+        "Grupo4": {
+          "Titulo": "Sostenibilidad",
+          "Texto": "Desarrollamos soluciones responsables con el medio ambiente."
+        }
+      },
+      "en": {
+        "Grupo1": {
+          "Titulo": "Innovation",
+          "Texto": "We explore new ideas and technologies for the future."
+        },
+        "Grupo2": {
+          "Titulo": "Collaboration",
+          "Texto": "We work as a team to achieve common goals."
+        },
+        "Grupo3": {
+          "Titulo": "Quality",
+          "Texto": "We focus on excellence in every detail."
+        },
+        "Grupo4": {
+          "Titulo": "Sustainability",
+          "Texto": "We develop environmentally responsible solutions."
+        }
+      },
+      "contenido": {
+        "Imagen1": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "Imagen2": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
+        "Imagen3": "1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg",
+        "Imagen4": "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg"
       }
     }
   }
