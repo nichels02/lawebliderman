@@ -26,7 +26,7 @@ function Header1() {
                     <button className={styles.buttonPrimary}>{textos.botonPrimario}</button>
                     <button className={styles.buttonSecondary}>{textos.botonSecundario}</button>
                 </div>
-                <img src={imagenes.logo} alt="Logo" className={styles.logo} />
+                <img src={imagenes.logo} alt="Logo" className="logoHeader" />
             </div>
             <div className={styles.centeredBottomContainer}>
                 <div className={styles.gridItemTop}>{textos.Numero_trabajadores}</div>

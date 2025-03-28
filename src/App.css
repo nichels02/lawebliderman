@@ -37,6 +37,28 @@ html, body {
     --color-rojo-general-cambio: #ac0000;
 }
 
+.logoHeader {
+    position: absolute; /* Posiciona el logo de manera absoluta dentro del header */
+    top: 5%; /* Posición relativa desde la parte superior */
+    left: 5%; /* Posición relativa desde la izquierda */
+    width: 10%; /* Tamaño relativo al contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    z-index: 1; /* Asegura que el logo esté por encima de la imagen */
+}
+@media (max-width: 1024px) {
+
+    .logoHeader {
+        width: 12%; /* Aumenta un poco el tamaño del logo para mayor visibilidad */
+    }
+
+}
+@media (max-width: 768px) {
+    .logoHeader {
+        width: 15%; /* Hace el logo más visible en pantallas pequeñas */
+    }
+}
+
+
 /* Asegúrate de que ningún elemento se desborde */
 * {
     box-sizing: border-box; /* Incluye padding y border en el ancho */
