@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    width: 85%;
+    height: auto;
+    margin: auto;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Contenedor del texto */
+.textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Estilos del título */
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo diferente para una parte del título */
+.highlight {
+    color: #e63946; /* Color rojo fuerte */
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Estilos del texto */
+.text {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Contenedor de la imagen */
+.imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos de la imagen */
+.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
