@@ -99,9 +99,10 @@ h1, p {
     padding: 1vw 2vw; /* Espaciado interno relativo al contenedor */
     font-size: 1.2vw; /* Tamaño de fuente relativo al contenedor */
     color: var(--color-texto-negro); /* Color del texto */
-    background-color: rgba(227, 227, 227, 0); /* Color de fondo del botón */
-    border: 2px solid var(--color-rojo-general-cambio); /* Borde con color */
+    background-color: var(--color-texto-blanco);
+    border: 3px solid var(--color-rojo-general-cambio); /* Borde con color */
     border-radius: 10px; /* Bordes redondeados */
+
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para el hover */
     outline: none; /* Elimina el borde azul al hacer clic */
@@ -118,7 +119,7 @@ h1, p {
     bottom: 0;
     border-radius: 25px; /* Bordes redondeados */
     transform: translateX(-50%); /* Centra el contenedor horizontalmente */
-    width: 50%; /* Reducimos el ancho a 50% (ajusta este valor según tus necesidades) */
+    width: 60%; /* Reducimos el ancho a 50% (ajusta este valor según tus necesidades) */
     height: auto; /* Altura automática */
     z-index: 1; /* Asegura que esté por encima de otros elementos */
     text-align: center; /* Alinea el contenido al centro */

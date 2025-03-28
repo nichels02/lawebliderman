@@ -14,7 +14,6 @@ function CardWithExpand() {
         return <p>Cargando...</p>;
     }
 
-    // 🔹 Obtener datos individuales por sección
     const seguridad = content.home.CardWithExpand.Seguridad?.[language];
     const servicios = content.home.CardWithExpand.Servicios?.[language];
     const tecnologia = content.home.CardWithExpand.Tecnologia?.[language];
@@ -22,39 +21,40 @@ function CardWithExpand() {
     return (
         <div className={styles.container}>
             <section className={styles.section}>
-                {/* 🔹 Tarjeta de Seguridad */}
                 {seguridad && (
                     <div
                         className={`${styles.imgContainer} ${expandedIndex === 0 ? styles.expanded : ""}`}
                         onMouseEnter={() => setExpandedIndex(0)}
                     >
-                        <img src={content.home.CardWithExpand.Seguridad.imageUrl} alt={seguridad.title} className={styles.img} />
-
+                        <img
+                            src={content.home.CardWithExpand.Seguridad.imageUrl}
+                            alt={seguridad.title}
+                            className={`${styles.img} ${styles.seguridad}`}
+                        />
                         <div className={styles.text}>{seguridad.title}</div>
-
                         <div className={`${styles.leftText} ${expandedIndex === 0 ? styles.visible : ""}`}>
                             <h2 className={styles.subtitle}>{seguridad.subtitle}</h2>
                             <ul className={styles.list}>
                                 {seguridad.items.map((item: string, i: number) => <li key={i}>{item}</li>)}
                             </ul>
-
                             <button className={styles.exploreButton} onClick={() => navigate("/Seguridad")}>
-                                {seguridad.buttonText} {/* 🔹 Texto dinámico desde JSON */}
+                                {seguridad.buttonText}
                             </button>
                         </div>
                     </div>
                 )}
 
-                {/* 🔹 Tarjeta de Servicios */}
                 {servicios && (
                     <div
                         className={`${styles.imgContainer} ${expandedIndex === 1 ? styles.expanded : ""}`}
                         onMouseEnter={() => setExpandedIndex(1)}
                     >
-                        <img src={content.home.CardWithExpand.Servicios.imageUrl} alt={servicios.title} className={styles.img} />
-
+                        <img
+                            src={content.home.CardWithExpand.Servicios.imageUrl}
+                            alt={servicios.title}
+                            className={`${styles.img} ${styles.servicios}`}
+                        />
                         <div className={styles.text}>{servicios.title}</div>
-
                         <div className={`${styles.leftText} ${expandedIndex === 1 ? styles.visible : ""}`}>
                             <h2 className={styles.subtitle}>{servicios.subtitle}</h2>
                             <ul className={styles.list}>
@@ -71,22 +71,23 @@ function CardWithExpand() {
                             )}
 
                             <button className={styles.exploreButton} onClick={() => navigate("/Servicio")}>
-                                {servicios.buttonText} {/* 🔹 Texto dinámico desde JSON */}
+                                {servicios.buttonText}
                             </button>
                         </div>
                     </div>
                 )}
 
-                {/* 🔹 Tarjeta de Tecnología */}
                 {tecnologia && (
                     <div
                         className={`${styles.imgContainer} ${expandedIndex === 2 ? styles.expanded : ""}`}
                         onMouseEnter={() => setExpandedIndex(2)}
                     >
-                        <img src={content.home.CardWithExpand.Tecnologia.imageUrl} alt={tecnologia.title} className={styles.img} />
-
+                        <img
+                            src={content.home.CardWithExpand.Tecnologia.imageUrl}
+                            alt={tecnologia.title}
+                            className={`${styles.img} ${styles.tecnologia}`}
+                        />
                         <div className={styles.text}>{tecnologia.title}</div>
-
                         <div className={`${styles.leftText} ${expandedIndex === 2 ? styles.visible : ""}`}>
                             <h2 className={styles.subtitle}>{tecnologia.subtitle}</h2>
                             <ul className={styles.list}>
@@ -97,7 +98,7 @@ function CardWithExpand() {
                             {tecnologia.fourthSubtitle && <h2 className={styles.subtitle}>{tecnologia.fourthSubtitle}</h2>}
 
                             <button className={styles.exploreButton} onClick={() => navigate("/Tecnologia")}>
-                                {tecnologia.buttonText} {/* 🔹 Texto dinámico desde JSON */}
+                                {tecnologia.buttonText}
                             </button>
                         </div>
                     </div>
@@ -108,4 +109,3 @@ function CardWithExpand() {
 }
 
 export default CardWithExpand;
-
