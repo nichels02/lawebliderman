@@ -1,0 +1,75 @@
+/* Contenedor del grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr); /* 14 partes de ancho total */
+    grid-template-rows: repeat(2, 1fr); /* 2 filas con la misma altura */
+    gap: 1rem;
+    max-width: 1900px;
+    margin: auto;
+}
+
+/* Recuadros individuales */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #8f3737;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Asegura que todos los recuadros llenen su fila */
+}
+
+/* Imagen */
+.image {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+/* Texto */
+.text {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Primera fila (3 elementos, cada uno ocupa 4 partes) */
+.card:nth-child(1) {
+    grid-column: 2 / span 4;
+    grid-row: 1;
+}
+
+.card:nth-child(2) {
+    grid-column: 6 / span 4;
+    grid-row: 1;
+}
+
+.card:nth-child(3) {
+    grid-column: 10 / span 4;
+    grid-row: 1;
+}
+
+/* Segunda fila (4 elementos, cada uno ocupa 3 partes) */
+.card:nth-child(4) {
+    grid-column: 2 / span 3;
+    grid-row: 2;
+}
+
+.card:nth-child(5) {
+    grid-column: 5 / span 3;
+    grid-row: 2;
+}
+
+.card:nth-child(6) {
+    grid-column: 8 / span 3;
+    grid-row: 2;
+}
+
+.card:nth-child(7) {
+    grid-column: 11 / span 3;
+    grid-row: 2;
+}
