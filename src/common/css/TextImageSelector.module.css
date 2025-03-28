@@ -1,0 +1,88 @@
+/* Contenedor principal */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    height: auto;
+}
+
+/* Contenedor del texto e imagen */
+.contentBox {
+    width: 60vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #982121; /* Borde alrededor del contenedor */
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Contenedor del texto (título + descripción) */
+.textContainer {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Estilo del título */
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo de la descripción */
+.description {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Imagen */
+.image {
+    width: 100%;
+}
+
+/* Contenedor de botones */
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye los botones equitativamente */
+    align-items: center;
+    height: 70vh;
+    width: 20vw;
+    gap: 0.5rem;
+}
+
+/* Estilos base de los botones */
+.button {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+    width: 100%;
+    border: 2px solid #888; /* Borde en los botones */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Efecto hover en botones */
+.button:hover {
+    background-color: #ddd;
+}
+
+/* Estilo del botón activo */
+.active {
+    border-color: #ff4d4d; /* Resalta el botón activo */
+    color: #ff4d4d;
+    font-weight: bold;
+    background-color: #ffe6e6;
+}
