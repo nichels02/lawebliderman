@@ -3,8 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 100vh; /* Base en 100vh */
     position: relative;
     background-color: #df2121; /* Color de fondo */
     overflow: hidden;
@@ -13,8 +13,8 @@
 /* Contenedor de la imagen */
 .contenedorImagen {
     position: relative;
-    width: 50%;
-    height: 50%;
+    width: 40%;
+    height: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,16 +22,28 @@
 }
 
 .contenedorImagen img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 80%;
+    max-height: 80%;
     transition: transform 0.3s ease;
+}
+
+/* Texto en el centro de la flecha */
+.textoCentro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    z-index: 10;
 }
 
 /* Estilos generales para los contenedores */
 .contenedor {
     position: absolute;
-    width: 200px; /* Aumentado el tamaño */
-    height: 300px;
+    width: 180px;
+    height: 260px;
     background-color: rgba(255, 255, 255, 0.7);
     border: 2px solid #000;
     display: flex;
@@ -40,72 +52,163 @@
     align-items: center;
 }
 
-/* Contenedor del número (ahora cuadrado y más grande) */
+/* Contenedor del número */
 .numero {
     position: absolute;
     top: 5px;
-    width: 60px; /* Más grande */
-    height: 60px; /* Más grande */
+    width: 50px;
+    height: 50px;
     background-color: black;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
-    border-radius: 0px; /* Ahora cuadrado */
 }
 
 /* Texto debajo del número */
 .texto {
     position: absolute;
-    top: 65px; /* Ajustado para que el texto quede más centrado */
-    width: 100%; /* Asegura que el texto se ajuste al contenedor */
-    text-align: center; /* Alineación central */
-    font-size: 16px;
+    top: 65px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
     font-weight: normal;
     color: black;
 }
 
-/* Texto en el centro de la flecha (estático, no rotatorio) */
-.textoCentro {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    z-index: 10; /* Para que esté encima de la flecha */
-}
-
 /* Posicionamiento de los contenedores alrededor de la imagen */
-.contenedor1 {
-    top: 5%;
-    right: 20%;
+.contenedor1 { top: 10%; right: 18%; }
+.contenedor2 { top: 38%; right: 10%; }
+.contenedor3 { top: 66%; right: 18%; }
+.contenedor4 { top: 10%; left: 18%; }
+.contenedor5 { top: 38%; left: 10%; }
+.contenedor6 { top: 66%; left: 18%; }
+
+/* ----------- RESPONSIVE ----------- */
+
+/* Para tablets */
+@media (max-width: 1024px) {
+    .contenedorPadre {
+        height: 90vh; /* Se reduce un poco en tablets */
+    }
+
+    .contenedorImagen {
+        width: 50%;
+        height: auto;
+    }
+
+    .contenedorImagen img {
+        width: 60%;
+    }
+
+    .textoCentro {
+        font-size: 18px;
+    }
+
+    .contenedor {
+        width: 150px;
+        height: 220px;
+    }
+
+    .numero {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .texto {
+        font-size: 12px;
+    }
+
+    .contenedor1 { top: 12%; right: 16%; }
+    .contenedor2 { top: 40%; right: 8%; }
+    .contenedor3 { top: 68%; right: 16%; }
+    .contenedor4 { top: 12%; left: 16%; }
+    .contenedor5 { top: 40%; left: 8%; }
+    .contenedor6 { top: 68%; left: 16%; }
 }
 
-.contenedor2 {
-    top: 40%;
-    right: 10%;
+/* Para móviles */
+@media (max-width: 768px) {
+    .contenedorPadre {
+        height: 85vh; /* Se sigue reduciendo en móviles */
+    }
+
+    .contenedorImagen {
+        width: 55%;
+        height: auto;
+    }
+
+    .contenedorImagen img {
+        width: 50%;
+    }
+
+    .textoCentro {
+        font-size: 16px;
+    }
+
+    .contenedor {
+        width: 130px;
+        height: 190px;
+    }
+
+    .numero {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .texto {
+        font-size: 10px;
+    }
+
+    .contenedor1 { top: 8%; right: 12%; }
+    .contenedor2 { top: 36%; right: 6%; }
+    .contenedor3 { top: 64%; right: 12%; }
+    .contenedor4 { top: 8%; left: 12%; }
+    .contenedor5 { top: 36%; left: 6%; }
+    .contenedor6 { top: 64%; left: 12%; }
 }
 
-.contenedor3 {
-    top: 70%;
-    right: 20%;
-}
+/* Para móviles pequeños */
+@media (max-width: 480px) {
+    .contenedorPadre {
+        height: 80vh; /* Mantiene proporción adecuada */
+    }
 
-.contenedor4 {
-    top: 5%;
-    left: 20%;
-}
+    .contenedorImagen {
+        width: 65%;
+    }
 
-.contenedor5 {
-    top: 40%;
-    left: 10%;
-}
+    .contenedorImagen img {
+        width: 45%;
+    }
 
-.contenedor6 {
-    top: 70%;
-    left: 20%;
+    .textoCentro {
+        font-size: 14px;
+    }
+
+    .contenedor {
+        width: 110px;
+        height: 170px;
+    }
+
+    .numero {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .texto {
+        font-size: 9px;
+    }
+
+    .contenedor1 { top: 10%; right: 10%; }
+    .contenedor2 { top: 38%; right: 5%; }
+    .contenedor3 { top: 66%; right: 10%; }
+    .contenedor4 { top: 10%; left: 10%; }
+    .contenedor5 { top: 38%; left: 5%; }
+    .contenedor6 { top: 66%; left: 10%; }
 }

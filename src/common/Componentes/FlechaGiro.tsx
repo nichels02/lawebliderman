@@ -12,7 +12,7 @@ const contenedores = [
     { numero: 6, texto: "Presentación de KPIs." }
 ];
 
-function MapaParaModificar() {
+function FlechaGiro() {
     const [rotationAngle, setRotationAngle] = useState(0);
 
     const normalizeAngle = (angle: number): number => ((angle % 360) + 360) % 360;
@@ -68,4 +68,4 @@ function MapaParaModificar() {
     );
 }
 
-export default MapaParaModificar;
+export default FlechaGiro;

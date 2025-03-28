@@ -34,6 +34,7 @@ function Seguridad(){
                 ]}
             />
             <FlechaGiro />
+            <EspacioVacio />
             <GridBarajeable />
             <TextoTituloEImagen
                 titulo="Título de ejemplo"
