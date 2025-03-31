@@ -443,7 +443,53 @@
 
   },
   "Seguridad": {
+    "GridGenerico": {
+      "en": {
+        "Sector1": {
+          "Titulo": "",
+          "Texto": ""
+        },
+        "Sector2": {
+          "Titulo": "",
+          "Texto": ""
+        },
+        "Sector3": {
+          "Titulo": "",
+          "Texto": ""
+        },
+        "Sector4": {
+          "Titulo": "",
+          "Texto": ""
+        }
 
+      },
+      "es": {
+        "Sector1": {
+          "Titulo": "Título 1",
+          "Texto": "Texto descriptivo."
+        },
+        "Sector2": {
+          "Titulo": "Título 2",
+          "Texto": "Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."
+        },
+        "Sector3": {
+          "Titulo": "Título 3",
+          "Texto": "Texto descriptivo."
+        },
+        "Sector4": {
+          "Titulo": "Título 4",
+          "Texto": "Texto descriptivo."
+        }
+      },
+      "Contenido": {
+        "ImagenGrande": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "imagenSector1": "src/assets/Tiktok.svg",
+        "imagenSector2": "src/assets/Tiktok.svg",
+        "imagenSector3": "src/assets/Tiktok.svg",
+        "imagenSector4": "src/assets/Tiktok.svg"
+
+      }
+    }
   },
   "Servicio": {
 

@@ -239,6 +239,67 @@ interface ContentData {
 
 
     }
+    /*
+    Conocenos: {
+
+    },
+    */
+    Seguridad: {
+        GridGenerico: {
+            en: {
+                Sector1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Sector2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Sector3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Sector4: {
+                    Titulo: string;
+                    Texto: string;
+                }
+
+            },
+            es: {
+                Sector1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Sector2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Sector3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Sector4: {
+                    Titulo: string;
+                    Texto: string;
+                }
+            },
+            Contenido: {
+                ImagenGrande: string;
+                imagenSector1: string;
+                imagenSector2: string;
+                imagenSector3: string;
+                imagenSector4: string;
+
+            }
+        }
+    },
+    /*
+    Servicio: {
+
+    },
+    Tecnologia: {
+
+    },*/
     Lidermania:{
         DonaRotativa: {
             es: {
@@ -285,6 +346,10 @@ interface ContentData {
             }
         }
     }
+
+
+
+
 }
 
 // 🔥 Contexto para almacenar los datos
