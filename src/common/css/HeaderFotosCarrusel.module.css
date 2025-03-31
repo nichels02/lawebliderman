@@ -1,0 +1,162 @@
+/* 📌 Estilo general del Header */
+.header {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* 📌 Capa oscura para mejorar la visibilidad del contenido */
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurecer fondo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+/* 📌 Contenedor principal del contenido */
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px; /* 🔽 Baja el contenido un poco */
+}
+
+/* 📌 Contenedor de texto */
+.textContainer {
+    color: white;
+    text-align: left;
+    max-width: 40%;
+}
+
+.textContainer h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.textContainer p {
+    font-size: 1.2rem;
+}
+
+/* 📌 Contenedor de imagen dinámica */
+.imageContainer {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.imageContainer img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 📌 Contenedor del Carrusel */
+.carouselContainer {
+    width: 100%;
+    max-width: 600px; /* Aumentar tamaño */
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/* 📌 Estilos para los botones del carrusel */
+.carouselButton {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%; /* Asegura que todos sean del mismo tamaño */
+    text-align: center;
+}
+
+.carouselButton:hover,
+.carouselButton.active {
+    background: white;
+    color: black;
+    border-color: white;
+}
+
+/* 📌 Restaurar Flechas del Carrusel */
+.carouselContainer :global(.slick-prev),
+.carouselContainer :global(.slick-next) {
+    all: unset;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 24px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carouselContainer :global(.slick-prev:hover),
+.carouselContainer :global(.slick-next:hover) {
+    background: white;
+    color: black;
+}
+
+/* 📌 Ajustar posición de las flechas */
+.carouselContainer :global(.slick-prev) {
+    left: -50px;
+}
+
+.carouselContainer :global(.slick-next) {
+    right: -50px;
+}
+
+/* 📌 Responsividad */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .textContainer,
+    .imageContainer {
+        max-width: 80%;
+    }
+
+    .textContainer {
+        order: 1;
+    }
+
+    .imageContainer {
+        order: 2;
+        margin-top: 20px;
+    }
+
+    .carouselContainer {
+        max-width: 80%;
+    }
+
+    .carouselContainer :global(.slick-prev) {
+        left: -20px;
+    }
+
+    .carouselContainer :global(.slick-next) {
+        right: -20px;
+    }
+}

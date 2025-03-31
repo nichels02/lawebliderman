@@ -10,6 +10,7 @@ import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx
 import HeaderCambioDeImagen from "../common/Componentes/HeaderCambioDeImagen.tsx";
 import TextImageSelector from "../common/Componentes/TextImageSelector.tsx";
 import CardGrid from "../common/Componentes/CardGrid.tsx";
+import TituloTextoEImagen2 from "../common/Componentes/TituloTextoEImagen2.tsx";
 
 
 
@@ -29,6 +30,7 @@ function Tecnologia(){
             <HeaderCambioDeImagen />
             <TextImageSelector />
             <CardGrid />
+            <TituloTextoEImagen2 />
             <TextoTituloEImagen
                 titulo="Título de ejemplo"
                 texto="Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."
