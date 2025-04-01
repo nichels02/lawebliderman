@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useContent } from './Sistemas/useContent'; // Asegúrate de importar correctamente
+import { useLanguage } from './Sistemas/LanguageContext'; // Asegúrate de importar correctamente
 import styles from "../css/gridBarajeable.module.css";
 
 interface Item {
@@ -9,17 +11,46 @@ interface Item {
     description: string;
 }
 
-const initialItems: Item[] = [
-    { id: 1, text: "Elemento 1", image: "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg", showTitle: true, description: "Descripción del elemento 1" },
-    { id: 2, text: "Elemento 2", image: "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg", showTitle: true, description: "Descripción del elemento 2" },
-    { id: 3, text: "Elemento 3", image: "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg", showTitle: false, description: "Descripción del elemento 3" },
-    { id: 4, text: "Elemento 4", image: "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg", showTitle: true, description: "Descripción del elemento 4" },
-    { id: 5, text: "Elemento 5", image: "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg", showTitle: true, description: "Descripción del elemento 5" }
-];
-
 function GridBarajeable() {
-    const [mainItem, setMainItem] = useState<Item>(initialItems[0]);
-    const [smallItems, setSmallItems] = useState<Item[]>(initialItems.slice(1));
+    const [mainItem, setMainItem] = useState<Item | null>(null);
+    const [smallItems, setSmallItems] = useState<Item[]>([]);
+
+    // Obtener el contenido del contexto
+    const content = useContent();
+
+    // Obtener el idioma actual del contexto
+    const { language } = useLanguage();
+
+    // Cuando se recibe el contenido, actualizar los elementos
+    useEffect(() => {
+        if (content) {
+            const languageData = content.Seguridad.GridBarajeable[language];
+
+            // Mapear los datos del contexto a los elementos del grid
+            const updatedItems = Object.keys(languageData).map((key, index) => {
+                const item = languageData[key as keyof typeof languageData];
+
+                // Acceder a las rutas de las imágenes directamente desde el contenido
+                const imagePath = content.Seguridad.GridBarajeable.contenido[key as keyof typeof content.Seguridad.GridBarajeable.contenido];
+
+                return {
+                    id: index + 1,
+                    text: item.text,
+                    image: imagePath,  // Usamos directamente la ruta de la imagen del JSON
+                    showTitle: item.showTitle,
+                    description: item.description,
+                };
+            });
+
+            setMainItem(updatedItems[0]);
+            setSmallItems(updatedItems.slice(1));
+        }
+    }, [content, language]);
+
+    // Verificar si los datos están disponibles
+    if (!content || !mainItem) {
+        return <div>Loading...</div>; // Mostrar un mensaje de carga mientras se cargan los datos
+    }
 
     const handleClick = (clickedItem: Item) => {
         setSmallItems(prevItems =>
@@ -40,10 +71,11 @@ function GridBarajeable() {
 
             {/* Elementos pequeños */}
             {smallItems.map(item => (
-                <div key={item.id}
-                     className={styles.smallItem}
-                     style={{ backgroundImage: `url(${item.image})` }}
-                     onClick={() => handleClick(item)}>
+                <div
+                    key={item.id}
+                    className={styles.smallItem}
+                    style={{ backgroundImage: `url(${item.image})` }}
+                    onClick={() => handleClick(item)}>
                     <div className={styles.overlay}>
                         {item.showTitle && <h3>{item.text}</h3>} {/* ✅ Solo si showTitle es true */}
                         <p>{item.description}</p> {/* ✅ Siempre visible */}

@@ -439,9 +439,11 @@
     }
 
   },
+
   "Conocenos": {
 
   },
+
   "Seguridad": {
     "GridGenerico": {
       "en": {
@@ -548,14 +550,81 @@
       "Contenido": {
         "ImagenFlecha": "src/assets/icone-de-fleche-vers-le-haut-noir.png"
       }
+    },
+    "GridBarajeable": {
+      "en": {
+        "carta1": {
+          "text": "Element 1",
+          "description": "Description of element 1",
+          "showTitle": true
+        },
+        "carta2": {
+          "text": "Element 2",
+          "description": "Description of element 2",
+          "showTitle": true
+        },
+        "carta3": {
+          "text": "Element 3",
+          "description": "Description of element 3",
+          "showTitle": false
+        },
+        "carta4": {
+          "text": "Element 4",
+          "description": "Description of element 4",
+          "showTitle": true
+        },
+        "carta5": {
+          "text": "Element 5",
+          "description": "Description of element 5",
+          "showTitle": true
+        }
+      },
+      "es": {
+        "carta1": {
+          "text": "Elemento 1",
+          "description": "Descripción del elemento 1",
+          "showTitle": true
+        },
+        "carta2": {
+          "text": "Elemento 2",
+          "description": "Descripción del elemento 2",
+          "showTitle": true
+        },
+        "carta3": {
+          "text": "Elemento 3",
+          "description": "Descripción del elemento 3",
+          "showTitle": false
+        },
+        "carta4": {
+          "text": "Elemento 4",
+          "description": "Descripción del elemento 4",
+          "showTitle": true
+        },
+        "carta5": {
+          "text": "Elemento 5",
+          "description": "Descripción del elemento 5",
+          "showTitle": true
+        }
+      },
+      "contenido": {
+        "carta1": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "carta2": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "carta3": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "carta4": "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg",
+        "carta5": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
+      }
     }
-},
+
+  },
+
   "Servicio": {
 
   },
+
   "Tecnologia": {
 
   },
+
   "Lidermania": {
     "DonaRotativa": {
       "es": {

@@ -352,6 +352,69 @@ interface ContentData {
                 ImagenFlecha: string;
             }
         }
+        GridBarajeable: {
+            en: {
+                carta1: {
+                    text:  string;
+                    description:  string;
+                    showTitle: boolean;
+                },
+                carta2: {
+                    text:  string;
+                    description:  string;
+                    showTitle: boolean;
+                },
+                carta3: {
+                    text:  string;
+                    description:  string;
+                    showTitle: boolean;
+                },
+                carta4: {
+                    text:  string;
+                    description: string;
+                    showTitle: boolean;
+                },
+                carta5: {
+                    text:  string;
+                    description:  string;
+                    showTitle: boolean;
+                }
+            },
+            es: {
+                carta1: {
+                    text:  string;
+                    description:  string;
+                    showTitle: boolean;
+                },
+                carta2: {
+                    text:  string;
+                    description:  string;
+                    showTitle: boolean;
+                },
+                carta3: {
+                    text:  string;
+                    description:  string;
+                    showTitle: boolean;
+                },
+                carta4: {
+                    text:  string;
+                    description:  string;
+                    showTitle: boolean;
+                },
+                carta5: {
+                    text:  string;
+                    description:  string;
+                    showTitle: boolean;
+                }
+            },
+            contenido: {
+                carta1: string;
+                carta2: string;
+                carta3: string;
+                carta4: string;
+                carta5: string;
+            }
+        }
     },
     /*
     Servicio: {
