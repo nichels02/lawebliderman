@@ -292,6 +292,66 @@ interface ContentData {
 
             }
         }
+        FlechaGiro: {
+            en: {
+                TituloCentral: string;
+                Contenedor1: {
+                    Titulo:string;
+                    Texto: string;
+                },
+                Contenedor2: {
+                    Titulo:string;
+                    Texto: string;
+                },
+                Contenedor3: {
+                    Titulo:string;
+                    Texto: string;
+                },
+                Contenedor4: {
+                    Titulo:string;
+                    Texto: string;
+                },
+                Contenedor5: {
+                    Titulo:string;
+                    Texto: string;
+                },
+                Contenedor6: {
+                    Titulo:string;
+                    Texto: string;
+                }
+            },
+            es: {
+                TituloCentral: string;
+                Contenedor1: {
+                    Titulo:string;
+                    Texto: string;
+                },
+                Contenedor2: {
+                    Titulo:string;
+                    Texto: string;
+                },
+                Contenedor3: {
+                    Titulo:string;
+                    Texto: string;
+                },
+                Contenedor4: {
+                    Titulo:string;
+                    Texto: string;
+                },
+                Contenedor5: {
+                    Titulo:string;
+                    Texto: string;
+                },
+                Contenedor6: {
+                    Titulo:string;
+                    Texto: string;
+                }
+
+            },
+            Contenido: {
+                ImagenFlecha: string;
+            }
+        }
     },
     /*
     Servicio: {

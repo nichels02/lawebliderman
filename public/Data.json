@@ -489,8 +489,67 @@
         "imagenSector4": "src/assets/Tiktok.svg"
 
       }
+    },
+    "FlechaGiro": {
+      "en": {
+        "TituloCentral": "Business Security Approach",
+        "Contenedor1": {
+          "Titulo": "1",
+          "Texto": "Knowledge and business needs understanding."
+        },
+        "Contenedor2": {
+          "Titulo": "2",
+          "Texto": "Comprehensive security vision."
+        },
+        "Contenedor3": {
+          "Titulo": "3",
+          "Texto": "Agent-position induction."
+        },
+        "Contenedor4": {
+          "Titulo": "4",
+          "Texto": "Integration of technology."
+        },
+        "Contenedor5": {
+          "Titulo": "5",
+          "Texto": "Constant communication with the client."
+        },
+        "Contenedor6": {
+          "Titulo": "6",
+          "Texto": "Presentation of KPIs."
+        }
+      },
+      "es": {
+        "TituloCentral": "Enfoque de Seguridad Empresarial",
+        "Contenedor1": {
+          "Titulo": "2",
+          "Texto": "Conocimiento y necesidades del giro de negocio."
+        },
+        "Contenedor2": {
+          "Titulo": "2",
+          "Texto": "Visión integral de la seguridad."
+        },
+        "Contenedor3": {
+          "Titulo": "3",
+          "Texto": "Inducción agente-puesto."
+        },
+        "Contenedor4": {
+          "Titulo": "4",
+          "Texto": "Integración de la tecnología."
+        },
+        "Contenedor5": {
+          "Titulo": "5",
+          "Texto": "Comunicación constante con el cliente."
+        },
+        "Contenedor6": {
+          "Titulo": "6",
+          "Texto": "Presentación de KPIs."
+        }
+      },
+      "Contenido": {
+        "ImagenFlecha": "src/assets/icone-de-fleche-vers-le-haut-noir.png"
+      }
     }
-  },
+},
   "Servicio": {
 
   },
