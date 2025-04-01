@@ -1,0 +1,122 @@
+/* Overlay para cubrir toda la pantalla */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer; /* Hace que el cursor cambie a 'pointer' al estar sobre el fondo */
+}
+
+/* Panel centrado en la pantalla */
+.modal {
+    background-color: #fff; /* Fondo blanco */
+    width: 70%;
+    height: 90%; /* Altura fija para el modal */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;  /* Organiza el modal de arriba hacia abajo */
+    position: relative;
+    z-index: 1001;
+    cursor: default;
+    overflow: hidden;
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+/* Header del modal */
+.modalHeader {
+    background-color: #007bff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    padding: 15px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 10%; /* Altura fija para el header */
+}
+
+/* Título del header */
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Cuerpo del modal */
+.modalBody {
+    padding: 20px;
+    background-color: #979746; /* Fondo gris claro */
+    color: #333; /* Texto oscuro para legibilidad */
+    flex-grow: 1; /* El cuerpo se expandirá para llenar el espacio disponible */
+    display: flex; /* Flexbox para alinear los elementos dentro */
+    justify-content: space-between; /* Distribuye los elementos de forma proporcional */
+    align-items: center;
+    overflow: hidden;
+}
+
+.modalBodyLeft {
+    width: 40%; /* Toma el 40% del ancho */
+    padding-left: 50px; /* Espacio entre los contenedores */
+    color: #2c3e50; /* Color de texto más oscuro para mejor contraste */
+    line-height: 1.6; /* Mejor legibilidad */
+    position: relative; /* Hace que el contenedor sea el marco de referencia para los elementos dentro */
+
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+/* Estilo adicional para el texto en el contenedor izquierdo */
+.modalBodyLeft p {
+    width: 100%; /* Hace que el párrafo ocupe todo el ancho del contenedor */
+    margin-bottom: 10px; /* Añade un espacio de 10px entre los párrafos */
+    padding-bottom: 15px; /* Espacio entre párrafos */
+    font-size: 1vw; /* Tamaño de fuente estándar */
+    text-align: left; /* Alinea el texto a la izquierda dentro del párrafo */
+}
+
+
+
+/* Contenedor derecho */
+.modalBodyRight {
+    width: 58%; /* Toma el 60% del ancho */
+    padding-left: 10px; /* Espacio entre los contenedores */
+    display: flex;
+    justify-content: center; /* Centra la imagen en el contenedor */
+    align-items: center; /* Centra la imagen verticalmente */
+}
+
+/* Estilo para la imagen */
+.modalImage {
+    max-width: 100%; /* La imagen no debe exceder el contenedor */
+    max-height: 100%; /* La imagen se ajusta al tamaño del contenedor */
+}
+
+/* Footer del modal */
+.modalFooter {
+    background-color: #cc6969; /* Fondo gris más oscuro */
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 20%; /* Altura fija para el footer */
+    position: relative;
+}
+
+/* Estilo para el botón de cerrar */
+.closeButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #007bff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    top: 10px;
+    position: absolute;
+}
+
+.closeButton:hover {
+    background-color: #0056b3; /* Azul más oscuro cuando se pasa el cursor */
+}

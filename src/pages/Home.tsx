@@ -6,6 +6,7 @@ import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx
 import TituloYSubtituloGenerico from '../common/Componentes/TituloYSubtituloGenerico.tsx';
 import ImagenYGrid2 from '../common/Componentes/ImagenYGrid2.tsx';
 import TextoGeneral from '../common/Componentes/TextoGeneral.tsx';
+import VentanaModal3 from "../common/Componentes/VentanaModal3.tsx";
 
 
 
@@ -15,6 +16,9 @@ function Home(){
 
     return (
         <>
+            <VentanaModal3 />
+
+
             <Header1 />
             <div style={{ marginBottom: '20px' }}></div>
             <TituloYSubtituloGenerico

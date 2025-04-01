@@ -1,0 +1,146 @@
+/* Overlay para cubrir toda la pantalla */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* Panel centrado en la pantalla */
+.modal {
+    background-color: #fff;
+    width: 80%;
+    height: 95%; /* Altura fija para el modal */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1001;
+    cursor: default;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* Header del modal */
+.modalHeader {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+}
+
+/* Título del header */
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Cuerpo del modal */
+.modalBody {
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    flex-grow: 1;
+    overflow: hidden;
+
+}
+
+/* Contenedor principal de texto */
+.mainTextContainer {
+    width: 100%;
+    text-align: center;
+}
+
+.mainText {
+    font-size: 0.9vw;
+    width: 80%;
+    line-height: 1.6;
+    color: #333;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    display: block; /* Asegura que se trate como un bloque */
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
+
+/* Filas de contenedores (dos filas con dos elementos cada una) */
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+
+.container img {
+    background: black;
+    width: 10%; /* Imagen ocupa todo el ancho del contenedor */
+    height: auto;
+    border-radius: 8px;
+}
+
+.container {
+    width: 48%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px; /* Padding interno en lugar de márgenes */
+    margin: 10px 0; /* Espacio entre contenedores */
+}
+
+.title {
+    font-size: 1.1rem; /* Tamaño ligeramente reducido */
+    font-weight: 600; /* Peso intermedio */
+    color: #007bff;
+    margin: 5px 0; /* Margen controlado */
+}
+
+.text {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0;
+    line-height: 1.4;
+    text-align: center; /* Texto centrado */
+}
+
+/* Footer del modal */
+.modalFooter {
+    background-color: #cc6969;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    position: relative;
+}
+
+/* Estilo para el botón de cerrar */
+.closeButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    top: 10px;
+    position: absolute;
+}
+
+.closeButton:hover {
+    background-color: #0056b3;
+}
