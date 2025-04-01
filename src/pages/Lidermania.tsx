@@ -1,13 +1,13 @@
 import HeaderGenerico from '../common/Componentes/HeaderGenerico.tsx';
-import EspacioVacio from '../common/Componentes/EspacioVacio.tsx';
-import Marquee from '../common/Componentes/Marquee.tsx';
-import CardWithExpand from '../common/Componentes/CardWithExpand.tsx';
-import FlechaGiro from '../common/Componentes/FlechaGiro.tsx';
-import PorcentajeNegocio from '../common/Componentes/PorcentajeNegocio.tsx';
+// import EspacioVacio from '../common/Componentes/EspacioVacio.tsx';
+// import Marquee from '../common/Componentes/Marquee.tsx';
+// import CardWithExpand from '../common/Componentes/CardWithExpand.tsx';
+// import FlechaGiro from '../common/Componentes/FlechaGiro.tsx';
+// import PorcentajeNegocio from '../common/Componentes/PorcentajeNegocio.tsx';
 import DonaRotativa2 from '../common/Componentes/DonaRotativa2.tsx';
 import TextoTituloEImagen from '../common/Componentes/TextoTituloEImagen.tsx';
-import ContenedorScroll from '../common/Componentes/ContenedorScroll.tsx';
 import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
+import TituloTextoEImagen2 from "../common/Componentes/TituloTextoEImagen2.tsx";
 
 
 
@@ -43,17 +43,9 @@ function Lidermania(){
                 textosBotones={textosBotones}
                 imagenALaIzquierda={false}
             />
-            <ContenedorScroll />
+            <TituloTextoEImagen2 />
             <FormularioDeContacto />
-            <Marquee />
-            <CardWithExpand />
-            <FlechaGiro />
-            <PorcentajeNegocio />
 
-
-
-
-            <EspacioVacio />
 
         </>
     )
