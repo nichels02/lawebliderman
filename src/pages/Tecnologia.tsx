@@ -10,6 +10,7 @@ import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx
 import HeaderCambioDeImagen from "../common/Componentes/HeaderCambioDeImagen.tsx";
 import TextImageSelector from "../common/Componentes/TextImageSelector.tsx";
 import CardGrid from "../common/Componentes/CardGrid.tsx";
+import CuadriculaDeModals from "../common/Componentes/CuadriculaDeModals.tsx";
 //import TituloTextoEImagen2 from "../common/Componentes/TituloTextoEImagen2.tsx";
 
 
@@ -24,6 +25,7 @@ function Tecnologia(){
             <HeaderCambioDeImagen />
             <TextImageSelector />
             <TextImageSelector />
+            <CuadriculaDeModals />
             <CardGrid />
             <FlechaGiro />
 

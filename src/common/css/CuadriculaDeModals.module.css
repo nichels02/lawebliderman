@@ -1,0 +1,96 @@
+/* Contenedor principal */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Cuadrícula 2x2 */
+.grid {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Estilos de los cuadros */
+.box {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 380px;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden; /* Evita que la imagen sobresalga */
+    background-size: cover; /* Imagen cubre todo sin deformarse */
+    background-position: center; /* Expande desde el centro */
+}
+
+/* Título del cuadro centrado */
+.title {
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* Texto alineado a la izquierda */
+.text {
+    width: 70%;
+    font-size: 1.1vw;
+    font-weight: normal;
+    text-align: left;
+    flex-grow: 1;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Asegura que funcione el margin auto */
+}
+
+/* Contenedor en la esquina inferior derecha */
+.bottomRightContainer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 200px;
+    height: 130px;
+}
+
+/* Botón */
+.button {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 6px 12px;
+    width: 50px;
+    height: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #e6b800;
+}
+
+/* Texto pequeño antes del botón */
+.smallText {
+    font-size: 1rem;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+/* Responsivo: en móviles, una sola columna */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
