@@ -1,57 +1,49 @@
 import { useState } from "react";
 import styles from "../css/TextImageSelector.module.css";
 
-const data = [
-    {
-        title: "Naturaleza",
-        description: "Disfruta de la belleza de la naturaleza con este paisaje relajante.",
-        image: "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
-    },
-    {
-        title: "Aesthetic",
-        description: "Colores y formas que crean una estética visual única.",
-        image: "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
-    },
-    {
-        title: "Lago",
-        description: "Un lago sereno rodeado de montañas y naturaleza.",
-        image: "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg"
-    },
-    {
-        title: "Espacio",
-        description: "Explora la inmensidad del universo con esta imagen del espacio.",
-        image: "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg"
-    },
-    {
-        title: "Repetido",
-        description: "Otra imagen con estética vibrante y atractiva.",
-        image: "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
-    },
-];
+interface Item {
+    description: string;
+    image: string;
+}
 
-function TextImageSelector() {
+interface TextImageSelectorProps {
+    items: Item[];
+    textosBotones: string[];
+    imagenALaIzquierda: boolean;
+}
+
+function TextImageSelector({
+                               items,
+                               textosBotones,
+                               imagenALaIzquierda
+                           }: TextImageSelectorProps) {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div className={styles.container}>
-            {/* Contenido (Texto e Imagen) */}
+        <div className={`${styles.container} ${imagenALaIzquierda ? styles.reverse : ""}`}>
+            {/* Contenedor de contenido (texto + imagen) */}
             <div className={styles.contentBox}>
                 <div className={styles.textContainer}>
-                    <h2 className={styles.title}>{data[activeIndex].title}</h2>
-                    <p className={styles.description}>{data[activeIndex].description}</p>
+                    <p className={styles.description}>{items[activeIndex].description}</p>
                 </div>
-                <img className={styles.image} src={data[activeIndex].image} alt="Imagen" />
+                <img
+                    className={styles.image}
+                    src={items[activeIndex].image}
+                    alt="Contenido visual"
+                />
             </div>
 
-            {/* Botones */}
+            {/* Botones (ahora funcionan como títulos) */}
             <div className={styles.buttonContainer}>
-                {data.map((item, index) => (
+                {textosBotones.map((texto, index) => (
                     <button
                         key={index}
-                        className={`${styles.button} ${activeIndex === index ? styles.active : ""}`}
+                        className={`${styles.button} ${
+                            activeIndex === index ? styles.active : ""
+                        }`}
                         onClick={() => setActiveIndex(index)}
                     >
-                        {item.title}
+                        {texto}
                     </button>
                 ))}
             </div>
@@ -60,4 +52,3 @@ function TextImageSelector() {
 }
 
 export default TextImageSelector;
-

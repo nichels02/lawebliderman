@@ -1,88 +1,197 @@
+/* TextImageSelector.module.css */
+
 /* Contenedor principal */
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    padding: 1rem;
+    padding: 2rem;
     height: auto;
+    flex-direction: row;
 }
 
-/* Contenedor del texto e imagen */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Contenedor de contenido flexible */
 .contentBox {
     width: 60vw;
-    height: 70vh;
+    height: auto;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #982121; /* Borde alrededor del contenedor */
+    border: 2px solid #982121;
     border-radius: 20px;
     background-color: #f9f9f9;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
-/* Contenedor del texto (título + descripción) */
+/* Contenedor de texto ajustable */
 .textContainer {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 1rem;
+    min-height: 150px;
+    flex: 0 1 auto;
 }
 
-/* Estilo del título */
-.title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
-/* Estilo de la descripción */
+/* Descripción responsive */
 .description {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.4rem;
+    color: #333;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    word-break: break-word;
 }
 
-/* Imagen */
+/* Imagen flexible */
 .image {
     width: 100%;
+    min-height: 250px;
+    max-height: 50vh;
+    object-fit: cover;
+    object-position: center;
+    border-top: 2px solid #982121;
+    flex-shrink: 0;
 }
 
-/* Contenedor de botones */
+/* Botones como títulos */
 .buttonContainer {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribuye los botones equitativamente */
-    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
     height: 70vh;
     width: 20vw;
-    gap: 0.5rem;
+    padding: 1.5rem;
 }
 
-/* Estilos base de los botones */
 .button {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 1rem;
+    padding: 1.6rem;
+    font-size: 1.3rem;
     background-color: white;
-    color: black;
-    width: 100%;
-    border: 2px solid #888; /* Borde en los botones */
-    border-radius: 20px;
+    color: #444;
+    border: 2px solid #888;
+    border-radius: 15px;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
-    text-align: center;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/* Efecto hover en botones */
 .button:hover {
-    background-color: #ddd;
+    background-color: #f8f8f8;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo del botón activo */
 .active {
-    border-color: #ff4d4d; /* Resalta el botón activo */
+    border-color: #ff4d4d;
     color: #ff4d4d;
-    font-weight: bold;
-    background-color: #ffe6e6;
+    background-color: #fff0f0;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .description {
+        font-size: 1.2rem;
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .button {
+        font-size: 1.1rem;
+        padding: 1.2rem;
+    }
+
+    .contentBox {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .contentBox {
+        width: 90vw;
+        min-height: 300px;
+    }
+
+    .textContainer {
+        padding: 1.5rem;
+        min-height: 120px;
+    }
+
+    .image {
+        min-height: 200px;
+    }
+
+    .buttonContainer {
+        width: 90vw;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .button {
+        flex: 1 1 40%;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .description {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .contentBox {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contentBox {
+        min-height: 200px;
+    }
+
+    .textContainer {
+        padding: 1rem;
+        min-height: 100px;
+    }
+
+    .description {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .image {
+        min-height: 150px;
+    }
+
+    .button {
+        flex: 1 1 100%;
+        font-size: 0.8rem;
+    }
 }
