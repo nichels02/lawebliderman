@@ -1,0 +1,48 @@
+.header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.headerImageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.headerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.left {
+    width: 50%;
+    color: white;
+}
+
+.right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.right img {
+    max-width: 100%;
+    height: auto;
+}

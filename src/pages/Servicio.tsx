@@ -1,4 +1,4 @@
-import Header1 from '../common/Componentes/Header1.tsx';
+//import Header1 from '../common/Componentes/Header1.tsx';
 // import EspacioVacio from '../common/Componentes/EspacioVacio.tsx';
 // import Marquee from '../common/Componentes/Marquee.tsx';
 // import CardWithExpand from '../common/Componentes/CardWithExpand.tsx';
@@ -10,6 +10,7 @@ import TextoTituloEImagen from '../common/Componentes/TextoTituloEImagen.tsx';
 import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
 import GridGenerico from "../common/Componentes/GridGenerico.tsx";
 import GridBarajeable from "../common/Componentes/gridBarajeable.tsx";
+import HeaderServicio from "../common/Componentes/HeaderServicio.tsx";
 
 
 
@@ -36,7 +37,7 @@ function Servicio(){
     const textosBotones = ["Imagen 1", "Imagen 2", "Imagen 3"];
     return (
         <>
-            <Header1 />
+            <HeaderServicio />
             <TextoTituloEImagen
                 titulo="Título de ejemplo"
                 texto="Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."
