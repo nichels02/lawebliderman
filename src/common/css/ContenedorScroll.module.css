@@ -25,3 +25,28 @@
     overflow: visible;
     z-index: -10;
 }
+
+/* 🔴 Estilos para los puntos (imágenes) */
+.punto {
+    position: absolute;
+    width: 30px; /* Tamaño inicial */
+    height: 30px; /* Tamaño inicial */
+    transform: translate(-50%, -50%); /* Centrar la imagen respecto a su punto */
+    pointer-events: none; /* Para que no bloqueen interacciones con el SVG */
+}
+
+/* 🔵 Contenedor del punto, con el título al lado */
+.puntoContainer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🟢 Título al lado de los puntos */
+.titulo {
+    position: absolute;
+    font-size: 3vw; /* Ajusta el tamaño del texto */
+    color: var(--color-texto-negro-cambio); /* Color del texto */
+    transform: translateY(-50%); /* Centrar verticalmente */
+}
