@@ -4,7 +4,6 @@
     flex-direction: column; /* Cambiamos a columna para que los botones estén debajo */
     justify-content: center;
     align-items: center;
-    background: #1DA1F2;
     position: relative; /* Necesario para el posicionamiento de los botones */
 }
 
@@ -14,20 +13,20 @@
     justify-content: flex-start; /* Alineamos al principio en el eje horizontal */
     max-width: 1200px;
     width: 100%;
-    background: #df2176;
 }
 
 .imagenContainer {
     width: 65%; /* La imagen ocupará el 65% del ancho */
     height: 500px; /* Ajusta la altura de la imagen según tu preferencia */
     padding: 10px;
-    background: #1a1a1a;
+
 }
 
 .imagen {
     width: 100%;
     height: 100%; /* La imagen ocupará toda la altura disponible */
     object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+    border-radius: 20px;
 }
 
 /* Clases base */
@@ -72,13 +71,15 @@
 }
 
 /* Variantes para texto */
+/*
 .texto-1 {
-    font-style: italic; /* Ejemplo: texto en cursiva para la variante 1 */
+    font-style: italic;
 }
 
 .texto-2 {
-    font-weight: bold; /* Ejemplo: texto en negrita para la variante 2 */
+    font-weight: bold;
 }
+*/
 
 /* Estilos para los botones */
 .botonesContainer {
@@ -87,7 +88,6 @@
     gap: 80px; /* Espacio entre botones */
     margin-top: -30px; /* Movemos los botones hacia arriba */
     padding: 10px;
-    background: rgba(41, 154, 56, 0.78); /* Mismo fondo que el contenedor principal */
     width: 100%;
     height: 50%;
     position: relative; /* Posicionamiento relativo */
@@ -99,7 +99,7 @@
     background-color: #1a1a1a;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     width: 15%;
     min-height: 100px; /* Altura mínima para los botones */
     cursor: pointer;

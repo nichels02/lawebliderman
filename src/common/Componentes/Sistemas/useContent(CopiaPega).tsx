@@ -2,68 +2,58 @@ import { createContext, useContext, useState, useEffect } from "react";
 
 // 📌 Interfaz completa basada en el JSON
 interface ContentData {
-    Seguridad: {
-        GridBarajeable: {
-            en: {
-                carta1: {
-                    text:  string;
-                    description:  string;
-                    showTitle: boolean;
-                },
-                carta2: {
-                    text:  string;
-                    description:  string;
-                    showTitle: boolean;
-                },
-                carta3: {
-                    text:  string;
-                    description:  string;
-                    showTitle: boolean;
-                },
-                carta4: {
-                    text:  string;
-                    description: string;
-                    showTitle: boolean;
-                },
-                carta5: {
-                    text:  string;
-                    description:  string;
-                    showTitle: boolean;
-                }
+    Servicio: {
+        TextoTituloEImagen: {
+            Contenido: {
+                Imagen1: string;
+                Imagen2: string;
+                Imagen3: string;
             },
             es: {
-                carta1: {
-                    text:  string;
-                    description:  string;
-                    showTitle: boolean;
+                botones: {
+                    Texto1: string;
+                    Texto2: string;
+                    Texto3: string;
                 },
-                carta2: {
-                    text:  string;
-                    description:  string;
-                    showTitle: boolean;
-                },
-                carta3: {
-                    text:  string;
-                    description:  string;
-                    showTitle: boolean;
-                },
-                carta4: {
-                    text:  string;
-                    description:  string;
-                    showTitle: boolean;
-                },
-                carta5: {
-                    text:  string;
-                    description:  string;
-                    showTitle: boolean;
-                }
+                Titulo: string;
+                Texto: string;
             },
-            contenido: {
-                carta1: string;
-                carta2: string;
-                carta3: string;
-                carta4: string;
-                carta5: string;
+            en: {
+                botones: {
+                    Texto1: string;
+                    Texto2: string;
+                    Texto3: string;
+                },
+                Titulo: string;
+                Texto: string;
+            }
+        }
+        TextoTituloEImagen2: {
+            Contenido: {
+                Imagen1: string;
+                Imagen2: string;
+                Imagen3: string;
+                Imagen4: string;
+            },
+            es: {
+                botones: {
+                    Texto1: string;
+                    Texto2: string;
+                    Texto3: string;
+                    Texto4: string;
+                },
+                Titulo: string;
+                Texto: string;
+            },
+            en: {
+                botones: {
+                    Texto1: string;
+                    Texto2: string;
+                    Texto3: string;
+                    Texto4: string;
+                },
+                Titulo: string;
+                Texto: string;
             }
         }
     }
@@ -89,3 +79,4 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
 export function useContent(): ContentData | null {
     return useContext(ContentContext);
 }
+

@@ -703,7 +703,7 @@
     "header": {
       "Contenido": {
         "logo": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
-        "Fondo": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "Fondo": "src/assets/fondo-servicios.png",
         "ImagenDelCostado": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
       },
       "es": {
@@ -713,6 +713,59 @@
       "en": {
         "Titulo": "Service Title",
         "Texto": "Brief description of the offered service."
+      }
+    },
+    "TextoTituloEImagen": {
+      "Contenido": {
+        "Imagen1": "src/assets/parking.png",
+        "Imagen2": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
+        "Imagen3": "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg"
+      },
+      "es": {
+        "botones": {
+          "Texto1": "Valet parking",
+          "Texto2": "Administración de estacionamientos",
+          "Texto3": "Gestión de eventos"
+        },
+        "Titulo": "Parking",
+        "Texto": "Rapidez y seguridad en el manejo de vehículos, brindando una experiencia premium a los usuarios y facilitando la logística de estacionamiento en eventos y establecimientos."
+      },
+      "en": {
+        "botones": {
+          "Texto1": "Valet parking",
+          "Texto2": "Parking management",
+          "Texto3": "Event logistics"
+        },
+        "Titulo": "Parking",
+        "Texto": "Speed and safety in vehicle handling, delivering a premium experience for users and streamlining parking logistics at events and venues."
+      }
+    },
+    "TextoTituloEImagen2": {
+      "Contenido": {
+        "Imagen1": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "Imagen2": "src/assets/facilities.png",
+        "Imagen3": "src/assets/jardineria.png",
+        "Imagen4": "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg"
+      },
+      "es": {
+        "botones": {
+          "Texto1": "Courier",
+          "Texto2": "Limpieza",
+          "Texto3": "Jardinería",
+          "Texto4": "Transporte"
+        },
+        "Titulo": "Facilities",
+        "Texto": "Nuestro equipo garantiza un mantenimiento impecable, enfocado en la higiene, la organización y el bienestar del espacio."
+      },
+      "en": {
+        "botones": {
+          "Texto1": "Courier",
+          "Texto2": "Cleaning",
+          "Texto3": "Gardening",
+          "Texto4": "Transport"
+        },
+        "Titulo": "Facilities",
+        "Texto": "Our team ensures impeccable maintenance, focused on hygiene, organization, and space wellbeing."
       }
     }
   },

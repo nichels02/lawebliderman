@@ -433,6 +433,59 @@ interface ContentData {
                 Texto: string;
             }
         }
+        TextoTituloEImagen: {
+            Contenido: {
+                Imagen1: string;
+                Imagen2: string;
+                Imagen3: string;
+            },
+            es: {
+                botones: {
+                    Texto1: string;
+                    Texto2: string;
+                    Texto3: string;
+                },
+                Titulo: string;
+                Texto: string;
+            },
+            en: {
+                botones: {
+                    Texto1: string;
+                    Texto2: string;
+                    Texto3: string;
+                },
+                Titulo: string;
+                Texto: string;
+            }
+        },
+        TextoTituloEImagen2: {
+            Contenido: {
+                Imagen1: string;
+                Imagen2: string;
+                Imagen3: string;
+                Imagen4: string;
+            },
+            es: {
+                botones: {
+                    Texto1: string;
+                    Texto2: string;
+                    Texto3: string;
+                    Texto4: string;
+                },
+                Titulo: string;
+                Texto: string;
+            },
+            en: {
+                botones: {
+                    Texto1: string;
+                    Texto2: string;
+                    Texto3: string;
+                    Texto4: string;
+                },
+                Titulo: string;
+                Texto: string;
+            }
+        }
     }
     /*
     Tecnologia: {
