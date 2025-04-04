@@ -1,26 +1,38 @@
 import styles from "../css/HeaderServicio.module.css";
-import imagenes from "../../assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg"; // Asegúrate de que la ruta es correcta
-import imagenes2 from "../../assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg"; // Asegúrate de que la ruta es correcta
-import imagenes3 from "../../assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg"; // Asegúrate de que la ruta es correcta
+import { useContent } from "./Sistemas/useContent.tsx"; // Ajusta la ruta según tu estructura
+import { useLanguage } from "./Sistemas/LanguageContext.tsx"; // Ajusta la ruta según tu estructura
 
 function HeaderServicio() {
+    const content = useContent();
+    const { language } = useLanguage();
+
+    // Evitar que renderice si no hay datos todavía
+    if (!content) return null;
+
+    // Accedemos a los datos del JSON
+    const data = content.Servicio.header;
+    const textos = data[language]; // data.es o data.en
+    const fondo = data.Contenido.Fondo;
+    const imagenLateral = data.Contenido.ImagenDelCostado;
+    const logo = data.Contenido.logo;
+
     return (
         <header className={styles.header}>
             <div className={styles.headerImageContainer}>
                 <img
-                    src={imagenes}
-                    alt="Header Image"
+                    src={fondo}
+                    alt="Header Fondo"
                     className={styles.headerImage}
                 />
             </div>
-            <img src={imagenes3} alt="Logo" className="logoHeader" />
+            <img src={logo} alt="Logo" className="logoHeader" />
             <div className={styles.container}>
                 <div className={styles.left}>
-                    <h1>Título del Servicio</h1>
-                    <p>Descripción breve del servicio ofrecido.</p>
+                    <h1>{textos.Titulo}</h1>
+                    <p>{textos.Texto}</p>
                 </div>
                 <div className={styles.right}>
-                    <img src={imagenes2} alt="Imagen descriptiva" />
+                    <img src={imagenLateral} alt="Imagen descriptiva" />
                 </div>
             </div>
         </header>

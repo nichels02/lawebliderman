@@ -361,20 +361,20 @@
       "en": {
         "items": [
           {
-            "label": "Mining",
-            "percentage": "17%"
-          },
-          {
-            "label": "Industry",
+            "label": "Mining 17%",
             "percentage": "16%"
           },
           {
-            "label": "Retail",
+            "label": "Industry 16%",
             "percentage": "13%"
           },
           {
-            "label": "Others",
-            "percentage": "54%"
+            "label": "Retail 13%",
+            "percentage": "11%"
+          },
+          {
+            "label": "Others 54%",
+            "percentage": "20%"
           }
         ],
         "fixedTexts": [
@@ -397,7 +397,7 @@
           "Insurance"
         ]
       }
-    },
+    }, "_comment": "Tengo que modificarlo para quitar el que sea una lista",
     "ImagenYGrid2": {
       "es": {
         "tituloSuperior": "Conoce la",
@@ -441,7 +441,89 @@
   },
 
   "Conocenos": {
-
+    "contenedorScroll": {
+      "common": {
+        "items": {
+          "Contenedor1": {
+            "src": "src/assets/imagen-AUTORIDAD-PORTUARIA-NACIONAL.jpg",
+            "alt": "1"
+          },
+          "Contenedor2": {
+            "src": "src/assets/iso9001_.gif",
+            "alt": "2"
+          }
+        },
+        "imagenDePunto": ""
+      },
+      "es": {
+        "Puntos": {
+          "Contenedor1": {
+            "fecha": "",
+            "EstaALaDerecha": true
+          },
+          "Contenedor2": {
+            "fecha": "",
+            "EstaALaDerecha": true
+          }
+        },
+        "ContenedorSimple": {
+          "Contenedor1": {
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor2": {
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          }
+        },
+        "ContenedorComplejo": {
+          "Contenedor1":{
+            "Titulo": "",
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor2":{
+            "Titulo": "",
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor3":{
+            "Titulo": "",
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          }
+        }
+      },
+      "en":  {
+        "Puntos": {
+          "Contenedor1": {
+            "fecha": "",
+            "EstaALaDerecha": true
+          },
+          "Contenedor2": {
+            "fecha": "",
+            "EstaALaDerecha": true
+          }
+        },
+        "ContenedorSimple": {
+          "Contenedor1": {
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor2": {
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          }
+        },
+        "ContenedorComplejo": {
+          "Contenedor1":{
+            "Titulo": "",
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor2":{
+            "Titulo": "",
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor3":{
+            "Titulo": "",
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          }
+        }
+      }
+    }
   },
 
   "Seguridad": {
@@ -618,7 +700,21 @@
   },
 
   "Servicio": {
-
+    "header": {
+      "Contenido": {
+        "logo": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "Fondo": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "ImagenDelCostado": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
+      },
+      "es": {
+        "Titulo": "Título del Servicio",
+        "Texto": "Descripción breve del servicio ofrecido."
+      },
+      "en": {
+        "Titulo": "Service Title",
+        "Texto": "Brief description of the offered service."
+      }
+    }
   },
 
   "Tecnologia": {

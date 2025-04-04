@@ -416,10 +416,25 @@ interface ContentData {
             }
         }
     },
-    /*
-    Servicio: {
 
-    },
+    Servicio: {
+        header: {
+            Contenido: {
+                logo: string;
+                Fondo: string;
+                ImagenDelCostado: string;
+            },
+            es:{
+                Titulo: string;
+                Texto: string;
+            },
+            en: {
+                Titulo: string;
+                Texto: string;
+            }
+        }
+    }
+    /*
     Tecnologia: {
 
     },*/
