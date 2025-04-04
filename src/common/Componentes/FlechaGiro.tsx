@@ -8,6 +8,7 @@ function FlechaGiro() {
     const content = useContent();
     const { language } = useLanguage();
     const [rotationAngle, setRotationAngle] = useState(0);
+    const [activeContainer, setActiveContainer] = useState<number | null>(null); // Estado para el contenedor activo
 
     // 📌 Obtiene los datos del JSON según el idioma actual
     const data = content?.Seguridad?.FlechaGiro?.[language];
@@ -41,15 +42,35 @@ function FlechaGiro() {
         const yPercent = ((e.clientY - rect.top) / rect.height) * 100;
 
         let targetAngle = 0;
-        if (xPercent >= 50 && yPercent <= 33) targetAngle = 45;
-        else if (xPercent > 50 && yPercent > 33 && yPercent <= 66) targetAngle = 90;
-        else if (xPercent > 50 && yPercent > 66) targetAngle = 135;
-        else if (xPercent < 50 && yPercent <= 33) targetAngle = -45;
-        else if (xPercent < 50 && yPercent > 33 && yPercent <= 66) targetAngle = -90;
-        else if (xPercent < 50 && yPercent > 66) targetAngle = -135;
+        let containerIndex: number | null = null; // Variable para almacenar el índice del contenedor
+
+        if (xPercent >= 50 && yPercent <= 33) {
+            targetAngle = 45;
+            containerIndex = 0; // Contenedor 1
+        } else if (xPercent > 50 && yPercent > 33 && yPercent <= 66) {
+            targetAngle = 90;
+            containerIndex = 1; // Contenedor 2
+        } else if (xPercent > 50 && yPercent > 66) {
+            targetAngle = 135;
+            containerIndex = 2; // Contenedor 3
+        } else if (xPercent < 50 && yPercent <= 33) {
+            targetAngle = -45;
+            containerIndex = 3; // Contenedor 4
+        } else if (xPercent < 50 && yPercent > 33 && yPercent <= 66) {
+            targetAngle = -90;
+            containerIndex = 4; // Contenedor 5
+        } else if (xPercent < 50 && yPercent > 66) {
+            targetAngle = -135;
+            containerIndex = 5; // Contenedor 6
+        }
 
         const newRotationAngle = rotationAngle + shortestRotation(rotationAngle, targetAngle);
         setRotationAngle(newRotationAngle);
+
+        // Establecer el contenedor activo
+        if (containerIndex !== null) {
+            setActiveContainer(containerIndex);
+        }
     };
 
     return (
@@ -64,8 +85,11 @@ function FlechaGiro() {
             </div>
 
             {contenedores.map((item, i) => (
-                <div key={i} className={`${styles[`contenedor${i + 1}`]} ${styles.contenedor}`}>
-                    <div className={styles.numero}>{item.numero}</div> {/* Número como título con estilo */}
+                <div
+                    key={i}
+                    className={`${styles[`contenedor${i + 1}`]} ${styles.contenedor} ${activeContainer === i ? styles.activo : ''}`}
+                >
+                    <div className={`${styles.numero} ${activeContainer === i ? styles.numeroActivo : ''}`}>{item.numero}</div> {/* Número con estilo dinámico */}
                     <div className={styles.texto}>{item.texto}</div> {/* Texto dinámico */}
                 </div>
             ))}

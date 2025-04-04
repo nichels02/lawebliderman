@@ -6,7 +6,6 @@
     width: 100vw;
     height: 100vh; /* Base en 100vh */
     position: relative;
-    background-color: #df2121; /* Color de fondo */
     overflow: hidden;
 }
 
@@ -18,7 +17,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #212adf;
 }
 
 .contenedorImagen img {
@@ -36,7 +34,7 @@
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    color: white;
+    color: var(--color-texto-negro-cambio2);
     z-index: 10;
 }
 
@@ -45,8 +43,8 @@
     position: absolute;
     width: 180px;
     height: 260px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 2px solid #000;
+    /*background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid #000;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,10 +60,16 @@
     background-color: black;
     color: white;
     display: flex;
+    border-radius: 15px;
     justify-content: center;
     align-items: center;
     font-size: 20px;
     font-weight: bold;
+}
+
+/* Contenedor activo */
+.activo .numero {
+    background-color: #ff0000; /* El color que desees para el fondo activo */
 }
 
 /* Texto debajo del número */
@@ -76,7 +80,7 @@
     text-align: center;
     font-size: 14px;
     font-weight: normal;
-    color: black;
+    color: var(--color-texto-negro-cambio);
 }
 
 /* Posicionamiento de los contenedores alrededor de la imagen */
