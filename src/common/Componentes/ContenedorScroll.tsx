@@ -14,6 +14,14 @@ interface ContenedorPersonalizado {
     texto: string;
 }
 
+interface ContenedorConImagen {
+    x: number;
+    y: number;
+    titulo: string;
+    texto: string;
+    imagenUrl: string;
+}
+
 function ContenedorScroll() {
     const [scrollPercentage, setScrollPercentage] = useState(0);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -40,6 +48,51 @@ function ContenedorScroll() {
         { x: 36400, y: 25000, texto: "Texto 5" },
         { x: 32400, y: 30000, texto: "Texto 6" },
         { x: 27000, y: 35000, texto: "Texto 7" },
+    ];
+
+    const contenedoresConImagen: ContenedorConImagen[] = [
+        {
+            x: 42000,
+            y: 7000,
+            titulo: "Nuestro nacimiento",
+            texto: "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas.",
+            imagenUrl: "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
+        },
+        {
+            x: 38000,
+            y: 14000,
+            titulo: "Título 2",
+            texto: "Descripción del segundo punto con imagen.",
+            imagenUrl: "src/assets/ejemplo2.png"
+        },
+        {
+            x: 33000,
+            y: 21000,
+            titulo: "Título 3",
+            texto: "Texto complementario para el tercer punto visual.",
+            imagenUrl: "src/assets/ejemplo3.png"
+        },
+        {
+            x: 29000,
+            y: 28000,
+            titulo: "Título 4",
+            texto: "Breve explicación o historia del cuarto punto.",
+            imagenUrl: "src/assets/ejemplo4.png"
+        },
+        {
+            x: 25000,
+            y: 35000,
+            titulo: "Título 5",
+            texto: "Este contenido describe el quinto evento.",
+            imagenUrl: "src/assets/ejemplo5.png"
+        },
+        {
+            x: 21000,
+            y: 42000,
+            titulo: "Título 6",
+            texto: "Una pequeña historia o anécdota final.",
+            imagenUrl: "src/assets/ejemplo6.png"
+        },
     ];
 
     useEffect(() => {
@@ -129,6 +182,27 @@ function ContenedorScroll() {
                         {box.texto}
                     </div>
                 ))}
+
+                {/* 🟡 CAJAS CON TEXTO + TÍTULO + IMAGEN */}
+                {contenedoresConImagen.map((item, index) => (
+                    <div
+                        key={`caja-imagen-${index}`}
+                        className={styles.cajaConImagen}
+                        style={{
+                            left: `${(item.x / 46057.076) * 100}%`,
+                            top: `${(item.y / 54670.84) * 100}%`,
+                        }}
+                    >
+                        <div className={styles.columnaTexto}>
+                            <h3 className={styles.tituloCaja}>{item.titulo}</h3>
+                            <p className={styles.textoCaja}>{item.texto}</p>
+                        </div>
+                        <div className={styles.columnaImagen}>
+                            <img src={item.imagenUrl} alt={`Imagen ${index + 1}`} className={styles.imagenCaja} />
+                        </div>
+                    </div>
+                ))}
+
             </div>
         </div>
     );

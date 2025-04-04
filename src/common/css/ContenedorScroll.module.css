@@ -78,5 +78,63 @@
     white-space: normal;
     width: 400px;
     height: auto;
+}
 
+/* 🟡 NUEVO: Cajas con título, texto e imagen */
+.cajaConImagen {
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    background-color: rgb(244, 22, 22);
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    width: 600px;
+    height: auto;
+    /*max-width: 90vw;*/
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    font-family: inherit;
+}
+
+/* Columna del texto */
+.columnaTexto {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Título dentro de la caja */
+.tituloCaja {
+    font-size: clamp(16px, 2vw, 24px);
+    margin: 0 0 0.5rem 0;
+    font-weight: bold;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Texto descriptivo */
+.textoCaja {
+    font-size: clamp(12px, 1vw, 18px);
+    font-weight: normal;
+    color: white;
+    margin: 0;
+}
+
+/* Columna de la imagen */
+.columnaImagen {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen */
+.imagenCaja {
+    max-width: 300px;
+    background: black;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
 }
