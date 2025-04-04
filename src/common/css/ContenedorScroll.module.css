@@ -29,24 +29,40 @@
 /* 🔴 Estilos para los puntos (imágenes) */
 .punto {
     position: absolute;
-    width: 30px; /* Tamaño inicial */
-    height: 30px; /* Tamaño inicial */
-    transform: translate(-50%, -50%); /* Centrar la imagen respecto a su punto */
-    pointer-events: none; /* Para que no bloqueen interacciones con el SVG */
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
 }
 
 /* 🔵 Contenedor del punto, con el título al lado */
 .puntoContainer {
     position: absolute;
     display: flex;
+
     align-items: center;
     justify-content: center;
+    transform: translateX(-10%);
+
+
 }
 
-/* 🟢 Título al lado de los puntos */
+/* 🟢 Estilo base del título */
 .titulo {
     position: absolute;
-    font-size: 3vw; /* Ajusta el tamaño del texto */
-    color: var(--color-texto-negro-cambio); /* Color del texto */
-    transform: translateY(-50%); /* Centrar verticalmente */
+    font-size: 3vw;
+    color: var(--color-texto-negro-cambio);
+    top: 50%;
+    white-space: nowrap;
+}
+
+/* Título a la derecha del pin */
+.tituloDerecha {
+    left: calc(50% - 20px); /* separado a la derecha del pin */
+}
+
+/* Título a la izquierda del pin */
+.tituloIzquierda {
+    right: calc(50% + 70px); /* separado a la izquierda del pin */
+    text-align: right;
 }

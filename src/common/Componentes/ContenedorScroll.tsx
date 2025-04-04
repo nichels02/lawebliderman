@@ -4,15 +4,14 @@ import styles from '../css/ContenedorScroll.module.css';
 interface Point {
     x: number;
     y: number;
-    year: string; // Añadimos el año como string
-    isRight: boolean; // Booleano para decidir si el texto va a la derecha o izquierda
+    year: string;
+    isRight: boolean;
 }
 
 function ContenedorScroll() {
     const [scrollPercentage, setScrollPercentage] = useState(0);
     const containerRef = useRef<HTMLDivElement>(null);
 
-    // Posiciones iniciales de los 11 puntos (con el año y si el texto es al derecho o izquierdo)
     const points: Point[] = [
         { x: 47500, y: 7000, year: "2000", isRight: true },
         { x: 43100, y: 12500, year: "2001", isRight: false },
@@ -74,26 +73,26 @@ function ContenedorScroll() {
                     </g>
                 </svg>
 
-                {/* Renderizar los puntos sobre el SVG */}
                 {points.map((point, index) => (
-                    <div key={index} className={styles.puntoContainer} style={{ left: `${(point.x / 46057.076) * 100}%`, top: `${(point.y / 54670.84) * 100}%` }}>
+                    <div
+                        key={index}
+                        className={styles.puntoContainer}
+                        style={{
+                            left: `${(point.x / 46057.076) * 100}%`,
+                            top: `${(point.y / 54670.84) * 100}%`,
+                        }}
+                    >
                         <img
-                            src="src/assets/alfiler.png" // Cambia esto a la ruta correcta de la imagen
+                            src="src/assets/alfiler.png"
                             alt="Punto"
                             className={styles.punto}
                             style={{
-                                width: '100px', // Ajusta el tamaño según necesites
+                                width: '100px',
                                 height: '100px',
                             }}
                         />
-                        {/* Título al lado del punto, dependiendo de isRight */}
                         <div
-                            className={styles.titulo}
-                            style={{
-                                left: point.isRight ? '110%' : '-120%',
-                                top: '50%',
-                                transform: 'translateY(-50%)',
-                            }}
+                            className={`${styles.titulo} ${point.isRight ? styles.tituloDerecha : styles.tituloIzquierda}`}
                         >
                             {point.year}
                         </div>
