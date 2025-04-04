@@ -10,31 +10,38 @@
 
 .contenido {
     display: flex;
-    align-items: center;
+    align-items: center; /* Centramos los elementos en el eje vertical */
+    justify-content: flex-start; /* Alineamos al principio en el eje horizontal */
     max-width: 1200px;
     width: 100%;
     background: #df2176;
 }
 
 .imagenContainer {
-    flex: 1;
+    width: 65%; /* La imagen ocupará el 65% del ancho */
+    height: 500px; /* Ajusta la altura de la imagen según tu preferencia */
     padding: 10px;
     background: #1a1a1a;
 }
 
 .imagen {
     width: 100%;
-    height: auto;
+    height: 100%; /* La imagen ocupará toda la altura disponible */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
 }
 
 /* Clases base */
 .textoContainer {
-    flex: 1;
+    width: 35%; /* El texto ocupará el 35% del ancho */
     padding: 10px;
+    display: flex;
+    flex-direction: column; /* Aseguramos que el título y texto estén en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    height: 100%; /* Asegura que el contenedor ocupe todo el alto disponible */
 }
 
 .titulo {
-    font-size: 2rem;
+    font-size: 6vw;
     margin-bottom: 1rem;
     color: #931f1f; /* Ejemplo: color azul para la variante 1 */
 }
@@ -77,10 +84,10 @@
 .botonesContainer {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Espacio entre botones */
-    margin-top: -50px; /* Movemos los botones hacia arriba */
+    gap: 80px; /* Espacio entre botones */
+    margin-top: -30px; /* Movemos los botones hacia arriba */
     padding: 10px;
-    background: rgba(41, 154, 56, 0); /* Mismo fondo que el contenedor principal */
+    background: rgba(41, 154, 56, 0.78); /* Mismo fondo que el contenedor principal */
     width: 100%;
     height: 50%;
     position: relative; /* Posicionamiento relativo */
@@ -88,13 +95,13 @@
 }
 
 .boton {
-    padding: 10px 20px;
+    padding: 15px 20px; /* Ajustamos el padding para que los botones tengan más altura */
     background-color: #1a1a1a;
     color: white;
     border: none;
     border-radius: 5px;
-    width: 20%;
-    height: 20%;
+    width: 15%;
+    min-height: 100px; /* Altura mínima para los botones */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }

@@ -34,22 +34,31 @@ function Servicio(){
         "https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
     ];
 
-    const textosBotones = ["Imagen 1", "Imagen 2", "Imagen 3"];
+    const textosBotones = ["Valet parking", "Administración de estacionamientos", "Gestión de eventos"];
+
+    const imagenes2 = [
+        "https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg",
+        "https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
+        "https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
+    ];
+
+    const textosBotones2 = ["Courier", "Limpieza", "Jardinería", "Transporte"];
     return (
         <>
             <HeaderServicio />
             <TextoTituloEImagen
-                titulo="Título de ejemplo"
-                texto="Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."
+                titulo="Parking"
+                texto="Rapidez y seguridad en el manejo de vehículos, brindando una experiencia premium a los usuarios y facilitando la logística de estacionamiento en eventos y establecimientos."
                 imagenes={imagenes}
                 textosBotones={textosBotones}
                 imagenALaIzquierda={true}
             />
             <TextoTituloEImagen
-                titulo="Título de ejemplo"
-                texto="Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."
-                imagenes={imagenes}
-                textosBotones={textosBotones}
+                titulo="Facilities"
+                texto="Nuestro equipo garantiza un mantenimiento impecable, enfocado en la higiene, la organización y el bienestar del espacio."
+                imagenes={imagenes2}
+                textosBotones={textosBotones2}
                 imagenALaIzquierda={false}
             />
             <GridGenerico
