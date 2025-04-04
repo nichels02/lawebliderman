@@ -8,6 +8,12 @@ interface Point {
     isRight: boolean;
 }
 
+interface ContenedorPersonalizado {
+    x: number;
+    y: number;
+    texto: string;
+}
+
 function ContenedorScroll() {
     const [scrollPercentage, setScrollPercentage] = useState(0);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -24,6 +30,16 @@ function ContenedorScroll() {
         { x: 21400, y: 36000, year: "2008", isRight: true },
         { x: 16400, y: 40000, year: "2009", isRight: false },
         { x: 11400, y: 46000, year: "2010", isRight: true },
+    ];
+
+    const contenedoresPersonalizados: ContenedorPersonalizado[] = [
+        { x: 47500, y: 5000, texto: "Registro de nuestra empresa de seguridad bajo el nombre de \"J&V Resguardo\"." },
+        { x: 43100, y: 10000, texto: "Texto 2" },
+        { x: 38800, y: 15000, texto: "Texto 3" },
+        { x: 39400, y: 20000, texto: "Texto 4" },
+        { x: 36400, y: 25000, texto: "Texto 5" },
+        { x: 32400, y: 30000, texto: "Texto 6" },
+        { x: 27000, y: 35000, texto: "Texto 7" },
     ];
 
     useEffect(() => {
@@ -73,6 +89,7 @@ function ContenedorScroll() {
                     </g>
                 </svg>
 
+                {/* 🔴 PUNTOS CON PIN */}
                 {points.map((point, index) => (
                     <div
                         key={index}
@@ -96,6 +113,20 @@ function ContenedorScroll() {
                         >
                             {point.year}
                         </div>
+                    </div>
+                ))}
+
+                {/* 🔵 CAJAS PERSONALIZADAS */}
+                {contenedoresPersonalizados.map((box, index) => (
+                    <div
+                        key={`caja-${index}`}
+                        className={styles.cajaCustom}
+                        style={{
+                            left: `${(box.x / 46057.076) * 100}%`,
+                            top: `${(box.y / 54670.84) * 100}%`,
+                        }}
+                    >
+                        {box.texto}
                     </div>
                 ))}
             </div>

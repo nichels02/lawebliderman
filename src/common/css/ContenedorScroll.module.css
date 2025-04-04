@@ -9,7 +9,7 @@
 /* Contenedor interno - posición inicial en esquina superior derecha */
 .contenedorInterno {
     position: absolute;
-    right: 50vw; /* Empieza pegado a la derecha */
+    right: 50vw;
     top: 0;
     height: 100%;
     width: auto;
@@ -39,12 +39,9 @@
 .puntoContainer {
     position: absolute;
     display: flex;
-
     align-items: center;
     justify-content: center;
     transform: translateX(-10%);
-
-
 }
 
 /* 🟢 Estilo base del título */
@@ -58,11 +55,28 @@
 
 /* Título a la derecha del pin */
 .tituloDerecha {
-    left: calc(50% - 20px); /* separado a la derecha del pin */
+    left: calc(50% - 20px);
 }
 
 /* Título a la izquierda del pin */
 .tituloIzquierda {
-    right: calc(50% + 70px); /* separado a la izquierda del pin */
+    right: calc(50% + 70px);
     text-align: right;
+}
+
+/* 🔶 NUEVO: Cajas personalizadas con texto */
+.cajaCustom {
+    position: absolute;
+    background-color: rgb(244, 22, 22);
+    padding: 1rem;
+    border-radius: 12px;
+    color: white;
+    font-size: clamp(10px, 1vw, 30px);
+    font-weight: normal;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    white-space: normal;
+    width: 400px;
+    height: auto;
+
 }
