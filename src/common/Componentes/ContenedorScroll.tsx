@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import styles from '../css/ContenedorScroll.module.css';
+import { useContent } from './Sistemas/useContent.tsx';
+import { useLanguage } from './Sistemas/LanguageContext.tsx';
 
 interface Point {
     x: number;
@@ -25,73 +27,85 @@ interface ContenedorConImagen {
 function ContenedorScroll() {
     const [scrollPercentage, setScrollPercentage] = useState(0);
     const containerRef = useRef<HTMLDivElement>(null);
+    const content = useContent();
+    const { language } = useLanguage();
 
+    // Obtener datos del contexto
+    const puntosData = content?.Conocenos.contenedorScroll[language].Puntos;
+    const contenedoresSimpleData = content?.Conocenos.contenedorScroll[language].ContenedorSimple;
+    const contenedoresComplejoData = content?.Conocenos.contenedorScroll[language].ContenedorComplejo;
+    const commonImages = content?.Conocenos.contenedorScroll.common.items;
+    const imagenPunto = content?.Conocenos.contenedorScroll.common.imagenDePunto || "src/assets/alfiler.png";
+
+    // 🔴 Puntos con datos del JSON o valores por defecto
     const points: Point[] = [
-        { x: 47500, y: 7000, year: "2000", isRight: true },
-        { x: 43100, y: 12500, year: "2001", isRight: false },
-        { x: 38800, y: 11000, year: "2002", isRight: true },
-        { x: 39400, y: 16000, year: "2003", isRight: false },
-        { x: 36400, y: 19000, year: "2004", isRight: true },
-        { x: 32400, y: 25500, year: "2005", isRight: false },
-        { x: 27000, y: 24000, year: "2006", isRight: true },
-        { x: 26400, y: 30000, year: "2007", isRight: false },
-        { x: 21400, y: 36000, year: "2008", isRight: true },
-        { x: 16400, y: 40000, year: "2009", isRight: false },
-        { x: 11400, y: 46000, year: "2010", isRight: true },
+        { x: 47500, y: 7000, year: puntosData?.Contenedor1?.fecha || "2000", isRight: puntosData?.Contenedor1?.EstaALaDerecha ?? true },
+        { x: 43100, y: 12500, year: puntosData?.Contenedor2?.fecha || "2001", isRight: puntosData?.Contenedor2?.EstaALaDerecha ?? false },
+        { x: 38800, y: 11000, year: puntosData?.Contenedor3?.fecha || "2002", isRight: puntosData?.Contenedor3?.EstaALaDerecha ?? true },
+        { x: 38300, y: 17000, year: puntosData?.Contenedor4?.fecha || "2003", isRight: puntosData?.Contenedor4?.EstaALaDerecha ?? false },
+        { x: 33400, y: 22000, year: puntosData?.Contenedor5?.fecha || "2004", isRight: puntosData?.Contenedor5?.EstaALaDerecha ?? true },
+        { x: 27700, y: 25500, year: puntosData?.Contenedor6?.fecha || "2005", isRight: puntosData?.Contenedor6?.EstaALaDerecha ?? false },
+        { x: 24500, y: 31500, year: puntosData?.Contenedor7?.fecha || "2006", isRight: puntosData?.Contenedor7?.EstaALaDerecha ?? true },
+        { x: 22400, y: 34000, year: puntosData?.Contenedor8?.fecha || "2007", isRight: puntosData?.Contenedor8?.EstaALaDerecha ?? false },
+        { x: 16400, y: 40000, year: puntosData?.Contenedor9?.fecha || "2008", isRight: puntosData?.Contenedor9?.EstaALaDerecha ?? true },
+        { x: 13200, y: 44000, year: puntosData?.Contenedor10?.fecha || "2009", isRight: puntosData?.Contenedor10?.EstaALaDerecha ?? false },
+        { x: 8400, y: 49000, year: puntosData?.Contenedor11?.fecha || "2010", isRight: puntosData?.Contenedor11?.EstaALaDerecha ?? false },
     ];
 
+    // 🔵 Contenedores simples con texto del JSON
     const contenedoresPersonalizados: ContenedorPersonalizado[] = [
-        { x: 47500, y: 5000, texto: "Registro de nuestra empresa de seguridad bajo el nombre de \"J&V Resguardo\"." },
-        { x: 43100, y: 10000, texto: "Texto 2" },
-        { x: 38800, y: 15000, texto: "Texto 3" },
-        { x: 39400, y: 20000, texto: "Texto 4" },
-        { x: 36400, y: 25000, texto: "Texto 5" },
-        { x: 32400, y: 30000, texto: "Texto 6" },
-        { x: 27000, y: 35000, texto: "Texto 7" },
+        { x: 47000, y: 10000, texto: contenedoresSimpleData?.Contenedor1?.Texto || "Registro de nuestra empresa de seguridad bajo el nombre de \"J&V Resguardo\"." },
+        { x: 43200, y: 14500, texto: contenedoresSimpleData?.Contenedor2?.Texto || "Texto 2" },
+        { x: 40300, y: 9000, texto: contenedoresSimpleData?.Contenedor3?.Texto || "Texto 3" },
+        { x: 35700, y: 22000, texto: contenedoresSimpleData?.Contenedor4?.Texto || "Texto 4" },
+        { x: 26400, y: 32000, texto: contenedoresSimpleData?.Contenedor5?.Texto || "Texto 5" },
+        { x: 19800, y: 33000, texto: contenedoresSimpleData?.Contenedor6?.Texto || "Texto 6" },
+        { x: 11000, y: 43000, texto: contenedoresSimpleData?.Contenedor7?.Texto || "Texto 7" },
     ];
 
+    // 🟡 Contenedores complejos con datos del JSON
     const contenedoresConImagen: ContenedorConImagen[] = [
         {
-            x: 42000,
-            y: 7000,
-            titulo: "Nuestro nacimiento",
-            texto: "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas.",
-            imagenUrl: "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
+            x: 44000,
+            y: 4000,
+            titulo: contenedoresComplejoData?.Contenedor1?.Titulo || "Nuestro nacimiento",
+            texto: contenedoresComplejoData?.Contenedor1?.Texto || "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas.",
+            imagenUrl: commonImages?.Contenedor1?.src || "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
         },
         {
-            x: 38000,
-            y: 14000,
-            titulo: "Título 2",
-            texto: "Descripción del segundo punto con imagen.",
-            imagenUrl: "src/assets/ejemplo2.png"
+            x: 35000,
+            y: 14500,
+            titulo: contenedoresComplejoData?.Contenedor2?.Titulo || "Título 2",
+            texto: contenedoresComplejoData?.Contenedor2?.Texto || "Descripción del segundo punto con imagen.",
+            imagenUrl: commonImages?.Contenedor2?.src || "src/assets/ejemplo2.png"
         },
         {
-            x: 33000,
+            x: 30000,
             y: 21000,
-            titulo: "Título 3",
-            texto: "Texto complementario para el tercer punto visual.",
-            imagenUrl: "src/assets/ejemplo3.png"
+            titulo: contenedoresComplejoData?.Contenedor3?.Titulo || "Título 3",
+            texto: contenedoresComplejoData?.Contenedor3?.Texto || "Texto complementario para el tercer punto visual.",
+            imagenUrl: commonImages?.Contenedor3?.src || "src/assets/ejemplo3.png"
         },
         {
-            x: 29000,
-            y: 28000,
-            titulo: "Título 4",
-            texto: "Breve explicación o historia del cuarto punto.",
-            imagenUrl: "src/assets/ejemplo4.png"
+            x: 24000,
+            y: 26000,
+            titulo: contenedoresComplejoData?.Contenedor4?.Titulo || "Título 4",
+            texto: contenedoresComplejoData?.Contenedor4?.Texto || "Breve explicación o historia del cuarto punto.",
+            imagenUrl: commonImages?.Contenedor4?.src || "src/assets/ejemplo4.png"
         },
         {
-            x: 25000,
-            y: 35000,
-            titulo: "Título 5",
-            texto: "Este contenido describe el quinto evento.",
-            imagenUrl: "src/assets/ejemplo5.png"
+            x: 18400,
+            y: 41000,
+            titulo: contenedoresComplejoData?.Contenedor5?.Titulo || "Título 5",
+            texto: contenedoresComplejoData?.Contenedor5?.Texto || "Este contenido describe el quinto evento.",
+            imagenUrl: commonImages?.Contenedor5?.src || "src/assets/ejemplo5.png"
         },
         {
-            x: 21000,
-            y: 42000,
-            titulo: "Título 6",
-            texto: "Una pequeña historia o anécdota final.",
-            imagenUrl: "src/assets/ejemplo6.png"
+            x: 11000,
+            y: 49000,
+            titulo: contenedoresComplejoData?.Contenedor6?.Titulo || "Título 6",
+            texto: contenedoresComplejoData?.Contenedor6?.Texto || "Una pequeña historia o anécdota final.",
+            imagenUrl: commonImages?.Contenedor6?.src || "src/assets/ejemplo6.png"
         },
     ];
 
@@ -142,7 +156,7 @@ function ContenedorScroll() {
                     </g>
                 </svg>
 
-                {/* 🔴 PUNTOS CON PIN */}
+                {/* 🔴 Puntos con alfiler */}
                 {points.map((point, index) => (
                     <div
                         key={index}
@@ -153,23 +167,18 @@ function ContenedorScroll() {
                         }}
                     >
                         <img
-                            src="src/assets/alfiler.png"
+                            src={imagenPunto}
                             alt="Punto"
                             className={styles.punto}
-                            style={{
-                                width: '100px',
-                                height: '100px',
-                            }}
+                            style={{ width: '100px', height: '100px' }}
                         />
-                        <div
-                            className={`${styles.titulo} ${point.isRight ? styles.tituloDerecha : styles.tituloIzquierda}`}
-                        >
+                        <div className={`${styles.titulo} ${point.isRight ? styles.tituloDerecha : styles.tituloIzquierda}`}>
                             {point.year}
                         </div>
                     </div>
                 ))}
 
-                {/* 🔵 CAJAS PERSONALIZADAS */}
+                {/* 🔵 Contenedores simples */}
                 {contenedoresPersonalizados.map((box, index) => (
                     <div
                         key={`caja-${index}`}
@@ -183,11 +192,11 @@ function ContenedorScroll() {
                     </div>
                 ))}
 
-                {/* 🟡 CAJAS CON TEXTO + TÍTULO + IMAGEN */}
+                {/* 🟡 Contenedores complejos con estilos personalizados */}
                 {contenedoresConImagen.map((item, index) => (
                     <div
                         key={`caja-imagen-${index}`}
-                        className={styles.cajaConImagen}
+                        className={`${styles.cajaConImagen} ${styles[`contenedor${index + 1}`]}`}
                         style={{
                             left: `${(item.x / 46057.076) * 100}%`,
                             top: `${(item.y / 54670.84) * 100}%`,

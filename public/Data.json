@@ -445,11 +445,27 @@
       "common": {
         "items": {
           "Contenedor1": {
-            "src": "src/assets/imagen-AUTORIDAD-PORTUARIA-NACIONAL.jpg",
+            "src": "src/assets/nuestro-nacimiento-1.png",
             "alt": "1"
           },
           "Contenedor2": {
-            "src": "src/assets/iso9001_.gif",
+            "src": "src/assets/27-anos-cultura.png",
+            "alt": "2"
+          },
+          "Contenedor3": {
+            "src": "src/assets/Dateando-Ecuador-anuncia-salida-de-la-organización-ALBA-FOTO.jpg",
+            "alt": "2"
+          },
+          "Contenedor4": {
+            "src": "src/assets/Imagen2_up.jpg",
+            "alt": "2"
+          },
+          "Contenedor5": {
+            "src": "src/assets/Imagen2_up.jpg",
+            "alt": "2"
+          },
+          "Contenedor6": {
+            "src": "src/assets/ACADEMIA_FOTO_NEW-uai-720x517.jpg",
             "alt": "2"
           }
         },
@@ -458,46 +474,145 @@
       "es": {
         "Puntos": {
           "Contenedor1": {
-            "fecha": "",
+            "fecha": "1989",
             "EstaALaDerecha": true
           },
           "Contenedor2": {
-            "fecha": "",
+            "fecha": "1996",
             "EstaALaDerecha": true
+          },
+          "Contenedor3": {
+            "fecha": "1998",
+            "EstaALaDerecha": true
+          },
+          "Contenedor4": {
+            "fecha": "1999",
+            "EstaALaDerecha": true
+          },
+          "Contenedor5": {
+            "fecha": "2002",
+            "EstaALaDerecha": true
+          },
+          "Contenedor6": {
+            "fecha": "2008",
+            "EstaALaDerecha": true
+          },
+          "Contenedor7": {
+            "fecha": "2010",
+            "EstaALaDerecha": false
+          },
+          "Contenedor8": {
+            "fecha": "2011",
+            "EstaALaDerecha": true
+          },
+          "Contenedor9": {
+            "fecha": "2016",
+            "EstaALaDerecha": false
+          },
+          "Contenedor10": {
+            "fecha": "2017",
+            "EstaALaDerecha": true
+          },
+          "Contenedor11": {
+            "fecha": "2024",
+            "EstaALaDerecha": false
           }
         },
         "ContenedorSimple": {
           "Contenedor1": {
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+            "Texto": "Registro de nuestra empresa de seguridad bajo el nombre de \"J&V Resguardo\"."
           },
           "Contenedor2": {
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+            "Texto": "Clave 3 inicia sus operaciones en el sector de alarmas."
+          },
+          "Contenedor3": {
+            "Texto": "Se emite comercial \"yungay\" que ironizó al sector de vigilancia."
+          },
+          "Contenedor4": {
+            "Texto": "Recibimos el galardón de mejor lugar para trabajar en Perú."
+          },
+          "Contenedor5": {
+            "Texto": "Lanzamiento del programa La hora de Liderman para el mundo en radio Insomnio."
+          },
+          "Contenedor6": {
+            "Texto": "Lanzamiento de la hora del Vigilante por Radio San Borja y el Facebook Liderman Oficial."
+          },
+          "Contenedor7": {
+            "Texto": "Lanzamiento de la marca Alarmas y consolidación como grupo."
           }
         },
         "ContenedorComplejo": {
           "Contenedor1":{
-            "Titulo": "",
+            "Titulo": "Nuestro nacimiento",
             "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
           },
           "Contenedor2":{
-            "Titulo": "",
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+            "Titulo": "Nace la marca Liderman",
+            "Texto": "Nuestro enfoque está en el corazón de nuestro equipo. Nos comprometemos con su crecimiento profesional, su bienestar y la calidad de vida de sus familias."
           },
           "Contenedor3":{
-            "Titulo": "",
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+            "Titulo": "Internacionalización",
+            "Texto": "Inicio de operaciones de Liderman en Ecuador."
+          },
+          "Contenedor4":{
+            "Titulo": "Nuevas iniciativas",
+            "Texto": "Creemos que la comunicación es clave para mantener una organización alineada. fomentando la empatía y participación para el crecimiento de la empresa y de quienes la integran."
+          },
+          "Contenedor5":{
+            "Titulo": "Liderman Chile",
+            "Texto": "Inicio de operaciones en Chile, contratando a más de 2000 personas."
+          },
+          "Contenedor6":{
+            "Titulo": "Liderman Estados Unidos",
+            "Texto": "Inicio de operaciones en el estado de Florida."
           }
         }
       },
       "en":  {
         "Puntos": {
           "Contenedor1": {
-            "fecha": "",
+            "fecha": "1989",
             "EstaALaDerecha": true
           },
           "Contenedor2": {
-            "fecha": "",
+            "fecha": "1996",
             "EstaALaDerecha": true
+          },
+          "Contenedor3": {
+            "fecha": "1998",
+            "EstaALaDerecha": true
+          },
+          "Contenedor4": {
+            "fecha": "1999",
+            "EstaALaDerecha": true
+          },
+          "Contenedor5": {
+            "fecha": "2002",
+            "EstaALaDerecha": true
+          },
+          "Contenedor6": {
+            "fecha": "2008",
+            "EstaALaDerecha": true
+          },
+          "Contenedor7": {
+            "fecha": "2010",
+            "EstaALaDerecha": true
+          },
+          "Contenedor8": {
+            "fecha": "2011",
+            "EstaALaDerecha": true
+          },
+          "Contenedor9": {
+            "fecha": "2016",
+            "EstaALaDerecha": true
+          },
+          "Contenedor10": {
+            "fecha": "2017",
+            "EstaALaDerecha": true
+          },
+          "Contenedor11": {
+            "fecha": "2024",
+            "EstaALaDerecha": false
           }
         },
         "ContenedorSimple": {
@@ -506,19 +621,46 @@
           },
           "Contenedor2": {
             "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor3": {
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor4": {
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor5": {
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor6": {
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor7": {
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
           }
         },
         "ContenedorComplejo": {
           "Contenedor1":{
-            "Titulo": "",
+            "Titulo": "El titulo",
             "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
           },
           "Contenedor2":{
-            "Titulo": "",
+            "Titulo": "El titulo",
             "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
           },
           "Contenedor3":{
-            "Titulo": "",
+            "Titulo": "El titulo",
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor4":{
+            "Titulo": "El titulo",
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor5":{
+            "Titulo": "El titulo",
+            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
+          },
+          "Contenedor6":{
+            "Titulo": "El titulo",
             "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
           }
         }
@@ -766,6 +908,51 @@
         },
         "Titulo": "Facilities",
         "Texto": "Our team ensures impeccable maintenance, focused on hygiene, organization, and space wellbeing."
+      }
+    },
+    "GridGenerico": {
+      "Contenido": {
+        "imagenGrande": "/images/large-image.jpg",
+        "logo1": "/images/item1.jpg",
+        "logo2": "/images/item2.jpg",
+        "logo3": "/images/item3.jpg",
+        "logo4": "/images/item4.jpg"
+      },
+      "es": {
+        "contenedor1": {
+          "Titulo": "Título 1",
+          "Texto": "Descripción 1"
+        },
+        "contenedor2": {
+          "Titulo": "Título 2",
+          "Texto": "Descripción 2"
+        },
+        "contenedor3": {
+          "Titulo": "Título 3",
+          "Texto": "Descripción 3"
+        },
+        "contenedor4": {
+          "Titulo": "Título 4",
+          "Texto": "Descripción 4"
+        }
+      },
+      "en": {
+        "contenedor1": {
+          "Titulo": "Title 1",
+          "Texto": "Description 1"
+        },
+        "contenedor2": {
+          "Titulo": "Title 2",
+          "Texto": "Description 2"
+        },
+        "contenedor3": {
+          "Titulo": "Title 3",
+          "Texto": "Description 3"
+        },
+        "contenedor4": {
+          "Titulo": "Title 4",
+          "Texto": "Description 4"
+        }
       }
     }
   },

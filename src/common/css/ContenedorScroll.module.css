@@ -48,7 +48,11 @@
 .titulo {
     position: absolute;
     font-size: 3vw;
-    color: var(--color-texto-negro-cambio);
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--color-texto-negro-cambio2);
+    //background: rgba(0, 0, 0, 0.66);
+    border-radius: 10px;
     top: 50%;
     white-space: nowrap;
 }
@@ -76,7 +80,7 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
     white-space: normal;
-    width: 400px;
+    width: 350px;
     height: auto;
 }
 
@@ -89,12 +93,38 @@
     padding: 1rem 1.5rem;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    width: 600px;
+    /*max-width: 550px;*/
+    width: auto;
     height: auto;
     /*max-width: 90vw;*/
     transform: translate(-50%, -50%);
     pointer-events: none;
     font-family: inherit;
+}
+
+/* ESTILOS PERSONALIZADOS PARA CADA CONTENEDOR */
+.cajaConImagen.contenedor1 {
+    width: 550px;
+}
+
+.cajaConImagen.contenedor2 {
+    width: 550px;
+}
+
+.cajaConImagen.contenedor3 {
+    width: 550px;
+}
+
+.cajaConImagen.contenedor4 {
+    width: 550px;
+}
+
+.cajaConImagen.contenedor5 {
+    width: 500px;
+}
+
+.cajaConImagen.contenedor6 {
+    width: 500px;
 }
 
 /* Columna del texto */
@@ -132,7 +162,7 @@
 
 /* Imagen */
 .imagenCaja {
-    max-width: 300px;
+    max-width: 230px;
     background: black;
     max-height: 300px;
     object-fit: contain;
