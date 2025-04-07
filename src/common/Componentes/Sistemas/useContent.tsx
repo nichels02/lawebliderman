@@ -468,6 +468,29 @@ interface ContentData {
         }
     },
     Seguridad: {
+        HeaderCarruselDeImagenes: {
+            Common: {
+                ItemsBotones: Array<{
+                    Imagen: string;
+                    alt: string;
+                }>;
+                imagenDeFondo: string;
+            },
+            es: {
+                Titulo: string;
+                Texto: string;
+                TextosBotones: Array<{
+                    Texto: string;
+                }>;
+            },
+            en: {
+                Titulo: string;
+                Texto:string;
+                TextosBotones: Array<{
+                    Texto: string;
+                }>;
+            }
+        },
         GridGenerico: {
             en: {
                 Sector1: {

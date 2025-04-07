@@ -3,10 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../css/HeaderFotosCarrusel.module.css";
-import { CustomArrowProps } from "react-slick"; // Importamos el tipo correcto
+import { CustomArrowProps } from "react-slick";
 import { CSSProperties } from "react";
+import { useContent } from "./Sistemas/useContent"; // Ajusta la ruta
+import { useLanguage } from "./Sistemas/LanguageContext"; // Ajusta la ruta
 
-// Flechas personalizadas sin texto
 const CustomPrevArrow = ({ className, style, onClick }: CustomArrowProps) => {
     return (
         <div
@@ -28,74 +29,63 @@ const CustomNextArrow = ({ className, style, onClick }: CustomArrowProps) => {
 };
 
 export default function Header() {
-    // Array con imágenes y etiquetas
-    const images = [
-        { id: 1, src: "src/assets/security-señor.png", label: "Opción 1" },
-        { id: 2, src: "src/assets/seguridad-fisica.png", label: "Opción 2" },
-        { id: 3, src: "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg", label: "Opción 3" },
-        { id: 4, src: "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg", label: "Opción 4" },
-        { id: 5, src: "imagen5.jpg", label: "Opción 5" },
-        { id: 6, src: "imagen6.jpg", label: "Opción 6" },
-        { id: 7, src: "imagen7.jpg", label: "Opción 7" },
-        { id: 8, src: "imagen8.jpg", label: "Opción 8" },
-        { id: 9, src: "imagen9.jpg", label: "Opción 9" },
-    ];
+    const { language } = useLanguage();
+    const content = useContent();
 
-    const [selectedImage, setSelectedImage] = useState(images[0].src);
+    // Obtener datos del contexto
+    const headerData = content?.Seguridad.HeaderCarruselDeImagenes;
+    const commonData = headerData?.Common;
+    const languageData = headerData?.[language];
 
+    // Estado para la imagen seleccionada
+    const [selectedImage, setSelectedImage] = useState(
+        commonData?.ItemsBotones?.[0]?.Imagen || ""
+    );
+
+    // Configuración del carrusel
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 4, // Muestra 4 botones a la vez
-        slidesToScroll: 4, // Avanza de 4 en 4
-        arrows: true, // Mantener flechas activas
-        variableWidth: false,
-        prevArrow: <CustomPrevArrow />, // Flecha personalizada
-        nextArrow: <CustomNextArrow />, // Flecha personalizada
-        centerMode: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        arrows: true,
+        prevArrow: <CustomPrevArrow />,
+        nextArrow: <CustomNextArrow />,
         responsive: [
             {
                 breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                },
+                settings: { slidesToShow: 4, slidesToScroll: 4 }
             },
             {
                 breakpoint: 768,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                },
+                settings: { slidesToShow: 3, slidesToScroll: 3 }
             },
             {
                 breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
+                settings: { slidesToShow: 1, slidesToScroll: 1 }
+            }
+        ]
     };
 
-    // Aquí definimos la URL de la imagen de fondo
-    const backgroundImageUrl = "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"; // Ruta de la imagen
+    if (!commonData || !languageData) {
+        return <div>Cargando...</div>; // Estado de carga
+    }
 
     return (
         <header
             className={styles.header}
-            style={{ backgroundImage: `url(${backgroundImageUrl})` }} // Imagen de fondo desde TSX
+            style={{ backgroundImage: `url(${commonData.imagenDeFondo})` }}
         >
             <div className={styles.overlay}>
                 <div className={styles.content}>
-                    {/* Sección Izquierda (Texto) */}
+                    {/* Sección de Texto */}
                     <div className={styles.textContainer}>
-                        <h1>Título Principal</h1>
-                        <p>Este es un texto descriptivo para el encabezado.</p>
+                        <h1>{languageData.Titulo}</h1>
+                        <p>{languageData.Texto}</p>
                     </div>
 
-                    {/* Sección Derecha (Imagen) */}
+                    {/* Imagen Principal */}
                     <div className={styles.imageContainer}>
                         <img src={selectedImage} alt="Imagen dinámica" />
                     </div>
@@ -104,13 +94,15 @@ export default function Header() {
                 {/* Carrusel de Botones */}
                 <div className={styles.carouselContainer}>
                     <Slider {...settings}>
-                        {images.map((item) => (
+                        {commonData.ItemsBotones.map((boton, index) => (
                             <button
-                                key={item.id}
-                                className={`${styles.carouselButton} ${selectedImage === item.src ? styles.active : ""}`}
-                                onClick={() => setSelectedImage(item.src)}
+                                key={index}
+                                className={`${styles.carouselButton} ${
+                                    selectedImage === boton.Imagen ? styles.active : ""
+                                }`}
+                                onClick={() => setSelectedImage(boton.Imagen)}
                             >
-                                {item.label}
+                                {languageData.TextosBotones[index]?.Texto}
                             </button>
                         ))}
                     </Slider>

@@ -446,229 +446,145 @@
         "items": {
           "Contenedor1": {
             "src": "src/assets/nuestro-nacimiento-1.png",
-            "alt": "1"
+            "alt": "company-foundation"
           },
           "Contenedor2": {
             "src": "src/assets/27-anos-cultura.png",
-            "alt": "2"
+            "alt": "corporate-culture"
           },
           "Contenedor3": {
             "src": "src/assets/Dateando-Ecuador-anuncia-salida-de-la-organización-ALBA-FOTO.jpg",
-            "alt": "2"
+            "alt": "ecuador-operations"
           },
           "Contenedor4": {
             "src": "src/assets/Imagen2_up.jpg",
-            "alt": "2"
+            "alt": "new-initiatives"
           },
           "Contenedor5": {
             "src": "src/assets/Imagen2_up.jpg",
-            "alt": "2"
+            "alt": "chile-expansion"
           },
           "Contenedor6": {
             "src": "src/assets/ACADEMIA_FOTO_NEW-uai-720x517.jpg",
-            "alt": "2"
+            "alt": "usa-expansion"
           }
         },
         "imagenDePunto": ""
       },
       "es": {
         "Puntos": {
-          "Contenedor1": {
-            "fecha": "1989",
-            "EstaALaDerecha": true
-          },
-          "Contenedor2": {
-            "fecha": "1996",
-            "EstaALaDerecha": true
-          },
-          "Contenedor3": {
-            "fecha": "1998",
-            "EstaALaDerecha": true
-          },
-          "Contenedor4": {
-            "fecha": "1999",
-            "EstaALaDerecha": true
-          },
-          "Contenedor5": {
-            "fecha": "2002",
-            "EstaALaDerecha": true
-          },
-          "Contenedor6": {
-            "fecha": "2008",
-            "EstaALaDerecha": true
-          },
-          "Contenedor7": {
-            "fecha": "2010",
-            "EstaALaDerecha": false
-          },
-          "Contenedor8": {
-            "fecha": "2011",
-            "EstaALaDerecha": true
-          },
-          "Contenedor9": {
-            "fecha": "2016",
-            "EstaALaDerecha": false
-          },
-          "Contenedor10": {
-            "fecha": "2017",
-            "EstaALaDerecha": true
-          },
-          "Contenedor11": {
-            "fecha": "2024",
-            "EstaALaDerecha": false
-          }
+          "Contenedor1": { "fecha": "1989", "EstaALaDerecha": true },
+          "Contenedor2": { "fecha": "1996", "EstaALaDerecha": true },
+          "Contenedor3": { "fecha": "1998", "EstaALaDerecha": true },
+          "Contenedor4": { "fecha": "1999", "EstaALaDerecha": true },
+          "Contenedor5": { "fecha": "2002", "EstaALaDerecha": true },
+          "Contenedor6": { "fecha": "2008", "EstaALaDerecha": true },
+          "Contenedor7": { "fecha": "2010", "EstaALaDerecha": false },
+          "Contenedor8": { "fecha": "2011", "EstaALaDerecha": true },
+          "Contenedor9": { "fecha": "2016", "EstaALaDerecha": false },
+          "Contenedor10": { "fecha": "2017", "EstaALaDerecha": true },
+          "Contenedor11": { "fecha": "2024", "EstaALaDerecha": false }
         },
         "ContenedorSimple": {
-          "Contenedor1": {
-            "Texto": "Registro de nuestra empresa de seguridad bajo el nombre de \"J&V Resguardo\"."
-          },
-          "Contenedor2": {
-            "Texto": "Clave 3 inicia sus operaciones en el sector de alarmas."
-          },
-          "Contenedor3": {
-            "Texto": "Se emite comercial \"yungay\" que ironizó al sector de vigilancia."
-          },
-          "Contenedor4": {
-            "Texto": "Recibimos el galardón de mejor lugar para trabajar en Perú."
-          },
-          "Contenedor5": {
-            "Texto": "Lanzamiento del programa La hora de Liderman para el mundo en radio Insomnio."
-          },
-          "Contenedor6": {
-            "Texto": "Lanzamiento de la hora del Vigilante por Radio San Borja y el Facebook Liderman Oficial."
-          },
-          "Contenedor7": {
-            "Texto": "Lanzamiento de la marca Alarmas y consolidación como grupo."
-          }
+          "Contenedor1": { "Texto": "Registro de nuestra empresa de seguridad bajo el nombre de \"J&V Resguardo\"." },
+          "Contenedor2": { "Texto": "Clave 3 inicia sus operaciones en el sector de alarmas." },
+          "Contenedor3": { "Texto": "Se emite comercial \"yungay\" que ironizó al sector de vigilancia." },
+          "Contenedor4": { "Texto": "Recibimos el galardón de mejor lugar para trabajar en Perú." },
+          "Contenedor5": { "Texto": "Lanzamiento del programa La hora de Liderman para el mundo en radio Insomnio." },
+          "Contenedor6": { "Texto": "Lanzamiento de la hora del Vigilante por Radio San Borja y el Facebook Liderman Oficial." },
+          "Contenedor7": { "Texto": "Lanzamiento de la marca Alarmas y consolidación como grupo." }
         },
         "ContenedorComplejo": {
-          "Contenedor1":{
-            "Titulo": "Nuestro nacimiento",
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          },
-          "Contenedor2":{
-            "Titulo": "Nace la marca Liderman",
-            "Texto": "Nuestro enfoque está en el corazón de nuestro equipo. Nos comprometemos con su crecimiento profesional, su bienestar y la calidad de vida de sus familias."
-          },
-          "Contenedor3":{
-            "Titulo": "Internacionalización",
-            "Texto": "Inicio de operaciones de Liderman en Ecuador."
-          },
-          "Contenedor4":{
-            "Titulo": "Nuevas iniciativas",
-            "Texto": "Creemos que la comunicación es clave para mantener una organización alineada. fomentando la empatía y participación para el crecimiento de la empresa y de quienes la integran."
-          },
-          "Contenedor5":{
-            "Titulo": "Liderman Chile",
-            "Texto": "Inicio de operaciones en Chile, contratando a más de 2000 personas."
-          },
-          "Contenedor6":{
-            "Titulo": "Liderman Estados Unidos",
-            "Texto": "Inicio de operaciones en el estado de Florida."
-          }
+          "Contenedor1": { "Titulo": "Nuestro nacimiento", "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas." },
+          "Contenedor2": { "Titulo": "Nace la marca Liderman", "Texto": "Nuestro enfoque está en el corazón de nuestro equipo. Nos comprometemos con su crecimiento profesional, su bienestar y la calidad de vida de sus familias." },
+          "Contenedor3": { "Titulo": "Internacionalización", "Texto": "Inicio de operaciones de Liderman en Ecuador." },
+          "Contenedor4": { "Titulo": "Nuevas iniciativas", "Texto": "Creemos que la comunicación es clave para mantener una organización alineada. fomentando la empatía y participación para el crecimiento de la empresa y de quienes la integran." },
+          "Contenedor5": { "Titulo": "Liderman Chile", "Texto": "Inicio de operaciones en Chile, contratando a más de 2000 personas." },
+          "Contenedor6": { "Titulo": "Liderman Estados Unidos", "Texto": "Inicio de operaciones en el estado de Florida." }
         }
       },
-      "en":  {
+      "en": {
         "Puntos": {
-          "Contenedor1": {
-            "fecha": "1989",
-            "EstaALaDerecha": true
-          },
-          "Contenedor2": {
-            "fecha": "1996",
-            "EstaALaDerecha": true
-          },
-          "Contenedor3": {
-            "fecha": "1998",
-            "EstaALaDerecha": true
-          },
-          "Contenedor4": {
-            "fecha": "1999",
-            "EstaALaDerecha": true
-          },
-          "Contenedor5": {
-            "fecha": "2002",
-            "EstaALaDerecha": true
-          },
-          "Contenedor6": {
-            "fecha": "2008",
-            "EstaALaDerecha": true
-          },
-          "Contenedor7": {
-            "fecha": "2010",
-            "EstaALaDerecha": true
-          },
-          "Contenedor8": {
-            "fecha": "2011",
-            "EstaALaDerecha": true
-          },
-          "Contenedor9": {
-            "fecha": "2016",
-            "EstaALaDerecha": true
-          },
-          "Contenedor10": {
-            "fecha": "2017",
-            "EstaALaDerecha": true
-          },
-          "Contenedor11": {
-            "fecha": "2024",
-            "EstaALaDerecha": false
-          }
+          "Contenedor1": { "fecha": "1989", "EstaALaDerecha": true },
+          "Contenedor2": { "fecha": "1996", "EstaALaDerecha": true },
+          "Contenedor3": { "fecha": "1998", "EstaALaDerecha": true },
+          "Contenedor4": { "fecha": "1999", "EstaALaDerecha": true },
+          "Contenedor5": { "fecha": "2002", "EstaALaDerecha": true },
+          "Contenedor6": { "fecha": "2008", "EstaALaDerecha": true },
+          "Contenedor7": { "fecha": "2010", "EstaALaDerecha": false },
+          "Contenedor8": { "fecha": "2011", "EstaALaDerecha": true },
+          "Contenedor9": { "fecha": "2016", "EstaALaDerecha": false },
+          "Contenedor10": { "fecha": "2017", "EstaALaDerecha": true },
+          "Contenedor11": { "fecha": "2024", "EstaALaDerecha": false }
         },
         "ContenedorSimple": {
-          "Contenedor1": {
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          },
-          "Contenedor2": {
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          },
-          "Contenedor3": {
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          },
-          "Contenedor4": {
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          },
-          "Contenedor5": {
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          },
-          "Contenedor6": {
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          },
-          "Contenedor7": {
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          }
+          "Contenedor1": { "Texto": "Registration of our security company under the name \"J&V Resguardo\"." },
+          "Contenedor2": { "Texto": "Clave 3 begins operations in the alarm systems sector." },
+          "Contenedor3": { "Texto": "Release of the \"Yungay\" commercial satirizing the security sector." },
+          "Contenedor4": { "Texto": "We received the Best Workplace in Peru award." },
+          "Contenedor5": { "Texto": "Launch of \"Liderman's Hour\" program worldwide on Insomnio Radio." },
+          "Contenedor6": { "Texto": "Launch of \"The Security Guard's Hour\" on Radio San Borja and Liderman's Official Facebook." },
+          "Contenedor7": { "Texto": "Launch of Alarmas brand and group consolidation." }
         },
         "ContenedorComplejo": {
-          "Contenedor1":{
-            "Titulo": "El titulo",
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          },
-          "Contenedor2":{
-            "Titulo": "El titulo",
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          },
-          "Contenedor3":{
-            "Titulo": "El titulo",
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          },
-          "Contenedor4":{
-            "Titulo": "El titulo",
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          },
-          "Contenedor5":{
-            "Titulo": "El titulo",
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          },
-          "Contenedor6":{
-            "Titulo": "El titulo",
-            "Texto": "Desde el inicio, hemos liderado con pasión y propósito, marcando la diferencia en el sector y en nuestras vidas."
-          }
+          "Contenedor1": { "Titulo": "Our Foundation", "Texto": "From the beginning, we've led with passion and purpose, making a difference in the industry and in our lives." },
+          "Contenedor2": { "Titulo": "Birth of Liderman", "Texto": "Our focus is on our team's core. We commit to their professional growth, well-being, and their families' quality of life." },
+          "Contenedor3": { "Titulo": "Global Expansion", "Texto": "Start of Liderman operations in Ecuador." },
+          "Contenedor4": { "Titulo": "New Initiatives", "Texto": "We believe communication is key to maintaining an aligned organization, fostering empathy and participation for the company's growth and its members." },
+          "Contenedor5": { "Titulo": "Liderman Chile", "Texto": "Start of operations in Chile, hiring over 2,000 people." },
+          "Contenedor6": { "Titulo": "Liderman USA", "Texto": "Start of operations in Florida state." }
         }
       }
     }
   },
 
   "Seguridad": {
+    "HeaderCarruselDeImagenes": {
+      "Common": {
+        "ItemsBotones": [
+          {"Imagen": "src/assets/seguridad-fisica.png", "alt": "physical-security"},
+          {"Imagen": "src/assets/resguardo-personal.jpg", "alt": "personal-protection"},
+          {"Imagen": "src/assets/security-señor.png", "alt": "control-room"},
+          {"Imagen": "src/assets/guardiania.jpg", "alt": "guard-services"},
+          {"Imagen": "src/assets/patrullas-moviles.jpg", "alt": "mobile-patrols"},
+          {"Imagen": "src/assets/estudios-seguridad.jpg", "alt": "security-assessment"},
+          {"Imagen": "src/assets/proteccion-perimetral.jpg", "alt": "perimeter-security"},
+          {"Imagen": "src/assets/event-security.jpg", "alt": "event-security"},
+          {"Imagen": "src/assets/transito-escort.jpg", "alt": "transit-escort"}
+        ],
+        "imagenDeFondo": "src/assets/1.png"
+      },
+      "es": {
+        "Titulo": "Seguridad",
+        "Texto": "Somos la empresa de seguridad más grande del país, con cobertura a nivel nacional, autorizaciones y la capacidad de responder rápidamente a tus necesidades",
+        "TextosBotones": [
+          {"Texto": "Seguridad física"},
+          {"Texto": "Resguardo personal"},
+          {"Texto": "Supervisión de sala de control"},
+          {"Texto": "Guardianía"},
+          {"Texto": "Patrullas móviles"},
+          {"Texto": "Estudios de seguridad"},
+          {"Texto": "Protección perimetral"},
+          {"Texto": "Seguridad de eventos"},
+          {"Texto": "Acompañamiento en transito"}
+        ]
+      },
+      "en": {
+        "Titulo": "Security Solutions",
+        "Texto": "We are the largest security company in the country, with national coverage, certifications, and the capability to rapidly respond to your needs",
+        "TextosBotones": [
+          {"Texto": "Physical Security"},
+          {"Texto": "Personal Protection"},
+          {"Texto": "Control Room Monitoring"},
+          {"Texto": "Guard Services"},
+          {"Texto": "Mobile Patrols"},
+          {"Texto": "Security Assessments"},
+          {"Texto": "Perimeter Protection"},
+          {"Texto": "Event Security"},
+          {"Texto": "Transit Escort Services"}
+        ]
+      }
+    },
     "GridGenerico": {
       "en": {
         "Sector1": {
@@ -838,7 +754,6 @@
         "carta5": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
       }
     }
-
   },
 
   "Servicio": {

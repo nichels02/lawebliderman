@@ -49,12 +49,12 @@
 }
 
 .textContainer h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 5rem;
+    margin-bottom: 30px;
 }
 
 .textContainer p {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /* 📌 Contenedor de imagen */
