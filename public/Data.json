@@ -1006,6 +1006,66 @@
           "Texto": "We adapt corporate meeting rooms with cutting-edge technology, providing optimal solutions to improve connectivity and productivity in corporate environments."
         }
       }
+    },
+    "CuadriculaDeModals": {
+      "Common": {
+        "Fondo1": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
+        "Fondo2": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "Fondo3": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "Fondo4": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
+      },
+      "es": {
+        "Sector1": {
+          "Titulo": "Video verificación",
+          "Texto": "Integración de video y sistema de CCTV P2P conectado a internet que permiten tener una respuesta más eficiente y precisa ante incidentes que no representan una amenaza real.",
+          "MasInformacion": "Más información",
+          "TextoOSimboloDeBoton": "+"
+        },
+        "Sector2": {
+          "Titulo": "Espejo remoto",
+          "Texto": "Módulo diseñado para brindar a nuestros clientes el control de sus cuentas conectadas al servicio de monitoreo de alarmas: visualizar estados, escuchar alertas auditivas, enviar correos y generar reportes de las mismas.",
+          "MasInformacion": "Más información",
+          "TextoOSimboloDeBoton": "+"
+        },
+        "Sector3": {
+          "Titulo": "Reportes y notificaciones",
+          "Texto": "Para facilitar la gestión de nuestro sistema de alarmas, consideramos importante que nuestros clientes tengan medios de reportes automáticos y personalizados.",
+          "MasInformacion": "Más información",
+          "TextoOSimboloDeBoton": "+"
+        },
+        "Sector4": {
+          "Titulo": "Botón de panico",
+          "Texto": "Virtual SmartPanics es un botón que posibilita la emisión de señales de emergencia mediante dispositivos móviles, además de facilitar la transmisión de la ubicación geográfica precisa de quien activa el evento.",
+          "MasInformacion": "Más información",
+          "TextoOSimboloDeBoton": "+"
+        }
+      },
+      "en": {
+        "Sector1": {
+          "Titulo": "",
+          "Texto": "",
+          "MasInformacion": "",
+          "TextoOSimboloDeBoton": ""
+        },
+        "Sector2": {
+          "Titulo": "",
+          "Texto": "",
+          "MasInformacion": "",
+          "TextoOSimboloDeBoton": ""
+        },
+        "Sector3": {
+          "Titulo": "",
+          "Texto": "",
+          "MasInformacion": "",
+          "TextoOSimboloDeBoton": ""
+        },
+        "Sector4": {
+          "Titulo": "",
+          "Texto": "",
+          "MasInformacion": "",
+          "TextoOSimboloDeBoton": ""
+        }
+      }
     }
   },
 

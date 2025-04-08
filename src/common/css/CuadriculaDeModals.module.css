@@ -23,7 +23,7 @@
     justify-content: space-between;
     font-size: 1.2rem;
     font-weight: bold;
-    height: 380px;
+    height: 290px;
     border-radius: 10px;
     padding: 20px;
     position: relative;
@@ -41,7 +41,7 @@
 
 /* Texto alineado a la izquierda */
 .text {
-    width: 70%;
+    width: 85%;
     font-size: 1.1vw;
     font-weight: normal;
     text-align: left;
@@ -69,13 +69,19 @@
     color: black;
     border: none;
     padding: 6px 12px;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     font-size: 0.9rem;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+
+    /* Centrado con Flexbox */
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
 }
+
 
 .button:hover {
     background-color: #e6b800;

@@ -4,111 +4,63 @@ import { createContext, useContext, useState, useEffect } from "react";
 interface ContentData {
 
     Tecnologia: {
-        TextImageSelector: {
+        CuadriculaDeModals: {
             Common: {
-                ImagenBoton1: string;
-                ImagenBoton2: string;
-                ImagenBoton3: string;
-                ImagenBoton4: string;
-                ImagenBoton5: string;
-                imagenALaIzquierda: boolean;
+                Fondo1: string;
+                Fondo2: string;
+                Fondo3: string;
+                Fondo4: string;
             },
             es: {
-                boton1: {
+                Sector1: {
                     Titulo: string;
                     Texto: string;
+                    MasInformacion: string;
+                    TextoOSimboloDeBoton: string;
                 },
-                boton2: {
+                Sector2: {
                     Titulo: string;
                     Texto: string;
+                    MasInformacion: string;
+                    TextoOSimboloDeBoton: string;
                 },
-                boton3: {
+                Sector3: {
                     Titulo: string;
                     Texto: string;
+                    MasInformacion: string;
+                    TextoOSimboloDeBoton: string;
                 },
-                boton4: {
+                Sector4: {
                     Titulo: string;
                     Texto: string;
-                },
-                boton5: {
-                    Titulo: string;
-                    Texto: string;
+                    MasInformacion: string;
+                    TextoOSimboloDeBoton: string;
                 }
             },
             en: {
-                boton1: {
+                Sector1: {
                     Titulo: string;
                     Texto: string;
+                    MasInformacion: string;
+                    TextoOSimboloDeBoton: string;
                 },
-                boton2: {
+                Sector2: {
                     Titulo: string;
                     Texto: string;
+                    MasInformacion: string;
+                    TextoOSimboloDeBoton: string;
                 },
-                boton3: {
+                Sector3: {
                     Titulo: string;
                     Texto: string;
+                    MasInformacion: string;
+                    TextoOSimboloDeBoton: string;
                 },
-                boton4: {
+                Sector4: {
                     Titulo: string;
                     Texto: string;
-                },
-                boton5: {
-                    Titulo: string;
-                    Texto: string;
-                }
-            }
-        }
-        TextImageSelector2: {
-            Common: {
-                ImagenBoton1: string;
-                ImagenBoton2: string;
-                ImagenBoton3: string;
-                ImagenBoton4: string;
-                ImagenBoton5: string;
-                imagenALaIzquierda: boolean;
-            },
-            es: {
-                boton1: {
-                    Titulo: string;
-                    Texto: string;
-                },
-                boton2: {
-                    Titulo: string;
-                    Texto: string;
-                },
-                boton3: {
-                    Titulo: string;
-                    Texto: string;
-                },
-                boton4: {
-                    Titulo: string;
-                    Texto: string;
-                },
-                boton5: {
-                    Titulo: string;
-                    Texto: string;
-                }
-            },
-            en: {
-                boton1: {
-                    Titulo: string;
-                    Texto: string;
-                },
-                boton2: {
-                    Titulo: string;
-                    Texto: string;
-                },
-                boton3: {
-                    Titulo: string;
-                    Texto: string;
-                },
-                boton4: {
-                    Titulo: string;
-                    Texto: string;
-                },
-                boton5: {
-                    Titulo: string;
-                    Texto: string;
+                    MasInformacion: string;
+                    TextoOSimboloDeBoton: string;
                 }
             }
         }
