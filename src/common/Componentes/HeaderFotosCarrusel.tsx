@@ -63,7 +63,7 @@ export default function Header() {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, slidesToScroll: 1 }
+                settings: { slidesToShow: 3, slidesToScroll: 3 }
             }
         ]
     };
