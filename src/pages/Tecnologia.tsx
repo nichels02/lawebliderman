@@ -1,94 +1,71 @@
-// import EspacioVacio from '../common/Componentes/EspacioVacio.tsx';
-// import Marquee from '../common/Componentes/Marquee.tsx';
-// import CardWithExpand from '../common/Componentes/CardWithExpand.tsx';
+import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx';
+import { useContent } from '../common/Componentes/Sistemas/useContent.tsx';
 import FlechaGiro from '../common/Componentes/FlechaGiro.tsx';
-// import PorcentajeNegocio from '../common/Componentes/PorcentajeNegocio.tsx';
-// import DonaRotativa2 from '../common/Componentes/DonaRotativa2.tsx';
-// import TextoTituloEImagen from '../common/Componentes/TextoTituloEImagen.tsx';
-// import ContenedorScroll from '../common/Componentes/ContenedorScroll.tsx';
 import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
 import HeaderCambioDeImagen from "../common/Componentes/HeaderCambioDeImagen.tsx";
 import TextImageSelector from "../common/Componentes/TextImageSelector.tsx";
 import CardGrid from "../common/Componentes/CardGrid.tsx";
 import CuadriculaDeModals from "../common/Componentes/CuadriculaDeModals.tsx";
-//import TituloTextoEImagen2 from "../common/Componentes/TituloTextoEImagen2.tsx";
 
+// Tipos para las claves
+type BotonKey = 'boton1' | 'boton2' | 'boton3' | 'boton4' | 'boton5';
+type ImageKey = 'ImagenBoton1' | 'ImagenBoton2' | 'ImagenBoton3' | 'ImagenBoton4' | 'ImagenBoton5';
 
+// Tipo mejorado para el selector
+type SelectorContent = {
+    Common: {
+        [key in ImageKey]: string; // Solo claves de imagen como strings
+    } & {
+        imagenALaIzquierda: boolean; // Propiedad separada para el boolean
+    };
+    es: Record<BotonKey, { Titulo: string; Texto: string }>;
+    en: Record<BotonKey, { Titulo: string; Texto: string }>;
+};
 
+function Tecnologia() {
+    const { language } = useLanguage();
+    const content = useContent();
 
+    if (!content) return null;
 
-function Tecnologia(){
+    const botones: BotonKey[] = ['boton1', 'boton2', 'boton3', 'boton4', 'boton5'];
+    const imageKeys: ImageKey[] = ['ImagenBoton1', 'ImagenBoton2', 'ImagenBoton3', 'ImagenBoton4', 'ImagenBoton5'];
 
+    const mapSelectorContent = (selector: SelectorContent) => {
+        return botones.map((key, index) => ({
+            description: selector[language][key].Texto,
+            image: selector.Common[imageKeys[index]] // Acceso seguro por índice
+        }));
+    };
 
     return (
         <>
             <HeaderCambioDeImagen />
+
+            {/* Primer Selector */}
             <TextImageSelector
-                items={[
-                    {
-                        description: "Disfruta de la belleza de la naturaleza con este paisaje relajante.",
-                        image: "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
-                    },
-                    {
-                        description: "Colores y formas que crean una estética visual única.",
-                        image: "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
-                    },
-                    {
-                        description: "Un lago sereno rodeado de montañas y naturaleza.",
-                        image: "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg"
-                    },
-                    {
-                        description: "Explora la inmensidad del universo con esta imagen del espacio.",
-                        image: "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg"
-                    },
-                    {
-                        description: "Otra imagen con estética vibrante y atractiva.",
-                        image: "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
-                    },
-                ]}
-                textosBotones={["Naturaleza", "Aesthetic", "Lago", "Espacio", "Repetido"]}
-                imagenALaIzquierda={true} // Cambia a false si quieres que la imagen esté a la derecha
+                items={mapSelectorContent(content.Tecnologia.TextImageSelector)}
+                textosBotones={botones.map(key => (
+                    content.Tecnologia.TextImageSelector[language][key].Titulo
+                ))}
+                imagenALaIzquierda={content.Tecnologia.TextImageSelector.Common.imagenALaIzquierda}
             />
 
-
-
-
+            {/* Segundo Selector */}
             <TextImageSelector
-                items={[
-                    {
-                        description: "﻿\n" +
-                            "\n" +
-                            "Adaptamos salas de reuniones empresariales con tecnología de vanguardia, proporcionando soluciones óptimas para mejorar la conectividad y productividad en entornos corporativos.",
-                        image: "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
-                    },
-                    {
-                        description: "Colores y formas que crean una estética visual única.",
-                        image: "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
-                    },
-                    {
-                        description: "Un lago sereno rodeado de montañas y naturaleza.",
-                        image: "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg"
-                    },
-                    {
-                        description: "Explora la inmensidad del universo con esta imagen del espacio.",
-                        image: "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg"
-                    },
-                    {
-                        description: "Otra imagen con estética vibrante y atractiva.",
-                        image: "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
-                    },
-                ]}
-                textosBotones={["Naturaleza1", "Aesthetic1", "Lago1", "Espacio2", "Repetido4"]}
-                imagenALaIzquierda={false} // Cambia a false si quieres que la imagen esté a la derecha
+                items={mapSelectorContent(content.Tecnologia.TextImageSelector2)}
+                textosBotones={botones.map(key => (
+                    content.Tecnologia.TextImageSelector2[language][key].Titulo
+                ))}
+                imagenALaIzquierda={content.Tecnologia.TextImageSelector2.Common.imagenALaIzquierda}
             />
+
             <CuadriculaDeModals />
             <CardGrid />
             <FlechaGiro />
-
             <FormularioDeContacto />
-
-
         </>
-    )
+    );
 }
-export default Tecnologia
+
+export default Tecnologia;

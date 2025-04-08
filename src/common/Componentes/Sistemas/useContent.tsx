@@ -761,6 +761,114 @@ interface ContentData {
                 boton4: string;
             }
         }
+        TextImageSelector: {
+            Common: {
+                ImagenBoton1: string;
+                ImagenBoton2: string;
+                ImagenBoton3: string;
+                ImagenBoton4: string;
+                ImagenBoton5: string;
+                imagenALaIzquierda: boolean;
+            },
+            es: {
+                boton1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton4: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton5: {
+                    Titulo: string;
+                    Texto: string;
+                }
+            },
+            en: {
+                boton1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton4: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton5: {
+                    Titulo: string;
+                    Texto: string;
+                }
+            }
+        }
+        TextImageSelector2: {
+            Common: {
+                ImagenBoton1: string;
+                ImagenBoton2: string;
+                ImagenBoton3: string;
+                ImagenBoton4: string;
+                ImagenBoton5: string;
+                imagenALaIzquierda: boolean;
+            },
+            es: {
+                boton1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton4: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton5: {
+                    Titulo: string;
+                    Texto: string;
+                }
+            },
+            en: {
+                boton1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton4: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton5: {
+                    Titulo: string;
+                    Texto: string;
+                }
+            }
+        }
     }
     Lidermania:{
         DonaRotativa: {

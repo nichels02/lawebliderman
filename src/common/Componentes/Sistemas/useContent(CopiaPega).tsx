@@ -4,29 +4,112 @@ import { createContext, useContext, useState, useEffect } from "react";
 interface ContentData {
 
     Tecnologia: {
-        HeaderCambioDeImagen:{
+        TextImageSelector: {
             Common: {
-                logo: string;
-                imagenes1: string;
-                imagenes2: string;
-                imagenes3: string;
-                imagenes4: string;
+                ImagenBoton1: string;
+                ImagenBoton2: string;
+                ImagenBoton3: string;
+                ImagenBoton4: string;
+                ImagenBoton5: string;
+                imagenALaIzquierda: boolean;
             },
             es: {
-                Titulo: string;
-                Texto: string;
-                boton1: string;
-                boton2: string;
-                boton3: string;
-                boton4: string;
+                boton1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton4: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton5: {
+                    Titulo: string;
+                    Texto: string;
+                }
             },
             en: {
-                Titulo: string;
-                Texto: string;
-                boton1: string;
-                boton2: string;
-                boton3: string;
-                boton4: string;
+                boton1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton4: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton5: {
+                    Titulo: string;
+                    Texto: string;
+                }
+            }
+        }
+        TextImageSelector2: {
+            Common: {
+                ImagenBoton1: string;
+                ImagenBoton2: string;
+                ImagenBoton3: string;
+                ImagenBoton4: string;
+                ImagenBoton5: string;
+                imagenALaIzquierda: boolean;
+            },
+            es: {
+                boton1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton4: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton5: {
+                    Titulo: string;
+                    Texto: string;
+                }
+            },
+            en: {
+                boton1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton4: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                boton5: {
+                    Titulo: string;
+                    Texto: string;
+                }
             }
         }
     }

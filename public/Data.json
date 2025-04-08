@@ -898,6 +898,114 @@
         "boton3": "Alarms",
         "boton4": "GPS"
       }
+    },
+    "TextImageSelector": {
+      "Common": {
+        "ImagenBoton1": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "ImagenBoton2": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
+        "ImagenBoton3": "src/assets/CCTV.png",
+        "ImagenBoton4": "src/assets/foto-3.png",
+        "ImagenBoton5": "src/assets/foto-6.png",
+        "imagenALaIzquierda": true
+      },
+      "es": {
+        "boton1": {
+          "Titulo": "Alarmas",
+          "Texto": "Nuestros sistemas de alarmas están respaldados por un monitoreo constante para garantizar un funcionamiento preciso y seguro, asegurando que cada activación sea gestionada de manera eficiente y rápida."
+        },
+        "boton2": {
+          "Titulo": "Monitoreo por GPS",
+          "Texto": "Implementamos un monitoreo continuo del sistema GPS para asegurar un rendimiento óptimo, garantizando la protección y localización exacta en todo momento."
+        },
+        "boton3": {
+          "Titulo": "Soluciones CCTV-IA",
+          "Texto": "Instalación, mantenimiento preventivo y correctivo, monitoreo de cámaras en nuestro moderno Centro de Control y mediante plataformas y aplicativos para celulares y tablets. Trabajamos en conjunto con agentes de seguridad y entidades del estado. Además de aplicar la inteligencia artificial que utiliza el comportamiento humano."
+        },
+        "boton4": {
+          "Titulo": "Detección y extinción de incendios",
+          "Texto": "Proveemos instalación, mantenimiento preventivo y correctivo de sistemas de detección y extinción de incendios mediante agua o agentes limpios, garantizando la seguridad y el cumplimiento de las normativas vigentes."
+        },
+        "boton5": {
+          "Titulo": "Mantenimiento preventivo y correctivo",
+          "Texto": "Aplicamos mantenimiento integral a todos nuestros proyectos tecnológicos, garantizando su correcto funcionamiento desde la instalación y a lo largo del tiempo."
+        }
+      },
+      "en": {
+        "boton1": {
+          "Titulo": "Alarms",
+          "Texto": "Our alarm systems are backed by constant monitoring to ensure precise and secure operation, ensuring that each activation is managed efficiently and quickly."
+        },
+        "boton2": {
+          "Titulo": "GPS Monitoring",
+          "Texto": "We implement continuous monitoring of the GPS system to ensure optimal performance, guaranteeing protection and precise location at all times."
+        },
+        "boton3": {
+          "Titulo": "CCTV-AI Solutions",
+          "Texto": "Installation, preventive and corrective maintenance, camera monitoring at our modern Control Center, and through mobile and tablet platforms and applications. We work in collaboration with security agents and state entities. Additionally, we apply artificial intelligence that uses human behavior."
+        },
+        "boton4": {
+          "Titulo": "Fire Detection and Extinguishing",
+          "Texto": "We provide installation, preventive and corrective maintenance of fire detection and extinguishing systems using water or clean agents, ensuring safety and compliance with current regulations."
+        },
+        "boton5": {
+          "Titulo": "Preventive and Corrective Maintenance",
+          "Texto": "We provide comprehensive maintenance for all our technological projects, ensuring their proper operation from installation and throughout their lifespan."
+        }
+      }
+    },
+    "TextImageSelector2": {
+      "Common": {
+        "ImagenBoton1": "src/assets/foto-7.png",
+        "ImagenBoton2": "src/assets/foto-1.png",
+        "ImagenBoton3": "src/assets/foto-8.png",
+        "ImagenBoton4": "src/assets/foto-9.png",
+        "ImagenBoton5": "src/assets/foto-10.png",
+        "imagenALaIzquierda": false
+      },
+      "es": {
+        "boton1": {
+          "Titulo": "Control de acceso e intrusión",
+          "Texto": "Controla y monitorea el acceso a tus instalaciones de forma segura, con alertas en tiempo real ante cualquier intento de intrusión. Nuestras soluciones incluyen reconocimiento facial, huella dactilar, voz y proximidad, asegurando un control eficiente y seguro."
+        },
+        "boton2": {
+          "Titulo": "Drones",
+          "Texto": "Utilizamos drones equipados con inteligencia artificial para patrullaje y vigilancia. Nuestro sistema analiza el comportamiento humano, incluyendo reconocimiento facial y conteo de personas, para una seguridad avanzada y eficaz."
+        },
+        "boton3": {
+          "Titulo": "Cableado estructurado",
+          "Texto": "Implementamos redes de área local (LAN) utilizando tecnología avanzada como UTP, FTP y STP, garantizando una infraestructura sólida y eficiente para tus comunicaciones."
+        },
+        "boton4": {
+          "Titulo": "Automatización BMS",
+          "Texto": "Ofrecemos soluciones integrales para el control y automatización de edificios, creando entornos inteligentes y seguros que se integran con nuestro portafolio de tecnologías avanzadas."
+        },
+        "boton5": {
+          "Titulo": "IP adecuación de salas",
+          "Texto": "Adaptamos salas de reuniones empresariales con tecnología de vanguardia, proporcionando soluciones óptimas para mejorar la conectividad y productividad en entornos corporativos."
+        }
+      },
+      "en": {
+        "boton1": {
+          "Titulo": "Access and Intrusion Control",
+          "Texto": "Control and monitor access to your facilities securely, with real-time alerts for any attempted intrusion. Our solutions include facial recognition, fingerprint, voice, and proximity, ensuring efficient and secure control."
+        },
+        "boton2": {
+          "Titulo": "Drones",
+          "Texto": "We use drones equipped with artificial intelligence for patrolling and surveillance. Our system analyzes human behavior, including facial recognition and people counting, for advanced and effective security."
+        },
+        "boton3": {
+          "Titulo": "Structured Cabling",
+          "Texto": "We implement local area networks (LAN) using advanced technologies such as UTP, FTP, and STP, ensuring a solid and efficient infrastructure for your communications."
+        },
+        "boton4": {
+          "Titulo": "BMS Automation",
+          "Texto": "We offer comprehensive solutions for building control and automation, creating intelligent and secure environments that integrate with our portfolio of advanced technologies."
+        },
+        "boton5": {
+          "Titulo": "IP Room Adaptation",
+          "Texto": "We adapt corporate meeting rooms with cutting-edge technology, providing optimal solutions to improve connectivity and productivity in corporate environments."
+        }
+      }
     }
   },
 
