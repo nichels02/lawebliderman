@@ -873,7 +873,32 @@
   },
 
   "Tecnologia": {
-
+    "HeaderCambioDeImagen": {
+      "Common": {
+        "logo": "src/assets/Logo-Liderman.svg",
+        "Fondo": "src/assets/tecnologia-portada.png",
+        "imagenes1": "src/assets/tecnologia-chica.png",
+        "imagenes2": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "imagenes3": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "imagenes4": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
+      },
+      "es": {
+        "Titulo": "Tecnología",
+        "Texto": "Ofrecemos soluciones tecnológicas avanzadas en seguridad que se adaptan a las exigencias del mundo moderno",
+        "boton1": "Tecnología",
+        "boton2": "Ciberseguridad",
+        "boton3": "Alarmas",
+        "boton4": "Gps"
+      },
+      "en": {
+        "Titulo": "Technology",
+        "Texto": "We offer advanced technological security solutions that meet the demands of the modern world",
+        "boton1": "Technology",
+        "boton2": "Cybersecurity",
+        "boton3": "Alarms",
+        "boton4": "GPS"
+      }
+    }
   },
 
   "Lidermania": {

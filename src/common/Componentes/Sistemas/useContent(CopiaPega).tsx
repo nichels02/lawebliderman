@@ -3,31 +3,33 @@ import { createContext, useContext, useState, useEffect } from "react";
 // 📌 Interfaz completa basada en el JSON
 interface ContentData {
 
-    Seguridad: {
-        HeaderCarruselDeImagenes: {
+    Tecnologia: {
+        HeaderCambioDeImagen:{
             Common: {
-                ItemsBotones: Array<{
-                    Imagen: string;
-                    alt: string;
-                }>;
-                imagenDeFondo: string;
+                logo: string;
+                imagenes1: string;
+                imagenes2: string;
+                imagenes3: string;
+                imagenes4: string;
             },
             es: {
                 Titulo: string;
                 Texto: string;
-                TextosBotones: Array<{
-                    Texto: string;
-                }>;
+                boton1: string;
+                boton2: string;
+                boton3: string;
+                boton4: string;
             },
             en: {
                 Titulo: string;
-                Texto:string;
-                TextosBotones: Array<{
-                    Texto: string;
-                }>;
+                Texto: string;
+                boton1: string;
+                boton2: string;
+                boton3: string;
+                boton4: string;
             }
         }
-    },
+    }
 
 }
 

@@ -733,10 +733,35 @@ interface ContentData {
             }
         }
     }
-    /*
-    Tecnologia: {
 
-    },*/
+    Tecnologia: {
+        HeaderCambioDeImagen:{
+            Common: {
+                logo: string;
+                Fondo: string;
+                imagenes1: string;
+                imagenes2: string;
+                imagenes3: string;
+                imagenes4: string;
+            },
+            es: {
+                Titulo: string;
+                Texto: string;
+                boton1: string;
+                boton2: string;
+                boton3: string;
+                boton4: string;
+            },
+            en: {
+                Titulo: string;
+                Texto: string;
+                boton1: string;
+                boton2: string;
+                boton3: string;
+                boton4: string;
+            }
+        }
+    }
     Lidermania:{
         DonaRotativa: {
             es: {
