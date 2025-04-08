@@ -607,28 +607,28 @@
       },
       "es": {
         "Sector1": {
-          "Titulo": "Título 1",
-          "Texto": "Texto descriptivo."
+          "Titulo": "Personas",
+          "Texto": "Nuestro equipo humano, tanto dentro como fuera de tus instalaciones, está comprometido con reducir riesgos y fomentar una cultura sólida de seguridad."
         },
         "Sector2": {
-          "Titulo": "Título 2",
-          "Texto": "Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."
+          "Titulo": "Sites",
+          "Texto": "Identificamos vulnerabilidades, optimizamos la seguridad y gestionamos de manera eficiente el control de accesos en todos los espacios bajo nuestra protección."
         },
         "Sector3": {
-          "Titulo": "Título 3",
-          "Texto": "Texto descriptivo."
+          "Titulo": "Tecnología en el core",
+          "Texto": "Incorporamos la tecnología en el corazón de nuestros servicios, integrándola en cada etapa para ofrecer soluciones más ágiles, seguras y eficientes."
         },
         "Sector4": {
-          "Titulo": "Título 4",
-          "Texto": "Texto descriptivo."
+          "Titulo": "Procesos",
+          "Texto": "Fortalecemos la seguridad de los procesos operativos de nuestros clientes, eliminando prácticas riesgosas y asegurando la continuidad y protección del negocio."
         }
       },
       "Contenido": {
         "ImagenGrande": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
-        "imagenSector1": "src/assets/Tiktok.svg",
-        "imagenSector2": "src/assets/Tiktok.svg",
-        "imagenSector3": "src/assets/Tiktok.svg",
-        "imagenSector4": "src/assets/Tiktok.svg"
+        "imagenSector1": "src/assets/Recurso 9.svg",
+        "imagenSector2": "src/assets/Recurso 10.svg",
+        "imagenSector3": "src/assets/Recurso 11.svg",
+        "imagenSector4": "src/assets/Recurso 8.svg"
 
       }
     },

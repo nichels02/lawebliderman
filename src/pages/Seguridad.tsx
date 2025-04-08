@@ -7,9 +7,12 @@ import FlechaGiro from '../common/Componentes/FlechaGiro.tsx';
 import GridGenerico from "../common/Componentes/GridGenerico.tsx";
 import GridBarajeable from "../common/Componentes/gridBarajeable.tsx";
 import HeaderFotosCarrusel from "../common/Componentes/HeaderFotosCarrusel.tsx";
+
+
+
 import { useContent } from '../common/Componentes/Sistemas/useContent.tsx'; // Importa el hook del contexto
 import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx';
-import FormularioDeContacto from "../common/Componentes/FormularioDeContacto.tsx"; // Importa el hook de idioma
+import FormularioDeContacto from "../common/Componentes/FormularioDeContacto.tsx";
 
 interface LocalData {
     Sector1: { Titulo: string; Texto: string };
