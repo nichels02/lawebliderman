@@ -4,64 +4,34 @@ import { createContext, useContext, useState, useEffect } from "react";
 interface ContentData {
 
     Tecnologia: {
-        CuadriculaDeModals: {
+        CardGrid: {
             Common: {
-                Fondo1: string;
-                Fondo2: string;
-                Fondo3: string;
-                Fondo4: string;
+                ImagenCarta1: string;
+                ImagenCarta2: string;
+                ImagenCarta3: string;
+                ImagenCarta4: string;
+                ImagenCarta5: string;
+                ImagenCarta6: string;
+                ImagenCarta7: string;
+
             },
-            es: {
-                Sector1: {
-                    Titulo: string;
-                    Texto: string;
-                    MasInformacion: string;
-                    TextoOSimboloDeBoton: string;
-                },
-                Sector2: {
-                    Titulo: string;
-                    Texto: string;
-                    MasInformacion: string;
-                    TextoOSimboloDeBoton: string;
-                },
-                Sector3: {
-                    Titulo: string;
-                    Texto: string;
-                    MasInformacion: string;
-                    TextoOSimboloDeBoton: string;
-                },
-                Sector4: {
-                    Titulo: string;
-                    Texto: string;
-                    MasInformacion: string;
-                    TextoOSimboloDeBoton: string;
-                }
+            es:{
+                Carta1: string;
+                Carta2: string;
+                Carta3: string;
+                Carta4: string;
+                Carta5: string;
+                Carta6: string;
+                Carta7: string;
             },
             en: {
-                Sector1: {
-                    Titulo: string;
-                    Texto: string;
-                    MasInformacion: string;
-                    TextoOSimboloDeBoton: string;
-                },
-                Sector2: {
-                    Titulo: string;
-                    Texto: string;
-                    MasInformacion: string;
-                    TextoOSimboloDeBoton: string;
-                },
-                Sector3: {
-                    Titulo: string;
-                    Texto: string;
-                    MasInformacion: string;
-                    TextoOSimboloDeBoton: string;
-                },
-                Sector4: {
-                    Titulo: string;
-                    Texto: string;
-                    MasInformacion: string;
-                    TextoOSimboloDeBoton: string;
-                }
+                Carta1: string;
+                Carta2: string;
+                Carta3: string;
+                Carta4: string;
+                Carta5: string;
+                Carta6: string;
+                Carta7: string;
             }
         }
     }

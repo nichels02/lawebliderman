@@ -929,6 +929,36 @@ interface ContentData {
                 }
             }
         }
+        CardGrid: {
+            Common: {
+                ImagenCarta1: string;
+                ImagenCarta2: string;
+                ImagenCarta3: string;
+                ImagenCarta4: string;
+                ImagenCarta5: string;
+                ImagenCarta6: string;
+                ImagenCarta7: string;
+
+            },
+            es:{
+                Carta1: string;
+                Carta2: string;
+                Carta3: string;
+                Carta4: string;
+                Carta5: string;
+                Carta6: string;
+                Carta7: string;
+            },
+            en: {
+                Carta1: string;
+                Carta2: string;
+                Carta3: string;
+                Carta4: string;
+                Carta5: string;
+                Carta6: string;
+                Carta7: string;
+            }
+        }
     }
     Lidermania:{
         DonaRotativa: {

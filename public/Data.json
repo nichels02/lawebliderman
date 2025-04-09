@@ -1066,6 +1066,35 @@
           "TextoOSimboloDeBoton": ""
         }
       }
+    },
+    "CardGrid": {
+      "Common": {
+        "ImagenCarta1": "src/assets/Tiktok.svg",
+        "ImagenCarta2": "src/assets/Tiktok.svg",
+        "ImagenCarta3": "src/assets/Tiktok.svg",
+        "ImagenCarta4": "src/assets/Tiktok.svg",
+        "ImagenCarta5": "src/assets/Tiktok.svg",
+        "ImagenCarta6": "src/assets/Tiktok.svg",
+        "ImagenCarta7": "src/assets/Tiktok.svg"
+      },
+      "es": {
+        "Carta1": "Protección contra virus y malwares rasomware y Zero Day-automático.",
+        "Carta2": "Sencillo agente autónomo que protege los terminales tanto en línea, como fuera de línea.",
+        "Carta3": "Solución de protección para los terminales y servidores de la organización.",
+        "Carta4": "Defensa contra IOT.",
+        "Carta5": "Proteccioón en la nube.",
+        "Carta6": "Device Control-and Firewall Control",
+        "Carta7": "Instalación simple y rápida"
+      },
+      "en": {
+        "Carta1": "Protection against viruses, ransomware, malware, and Zero-Day attacks - automatic.",
+        "Carta2": "Simple autonomous agent that protects endpoints both online and offline.",
+        "Carta3": "Protection solution for the organization's endpoints and servers.",
+        "Carta4": "Defense against IoT threats.",
+        "Carta5": "Cloud protection.",
+        "Carta6": "Device Control and Firewall Control.",
+        "Carta7": "Simple and fast installation."
+      }
     }
   },
 

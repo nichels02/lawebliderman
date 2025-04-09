@@ -1,24 +1,40 @@
 import styles from "../css/CardGrid.module.css";
-
-const data = [
-    { text: "Imagen 1", image: "src/assets/youtube.svg" },
-    { text: "Imagen 2", image: "src/assets/youtube.svg" },
-    { text: "Imagen 3", image: "src/assets/youtube.svg" },
-    { text: "Imagen 4", image: "src/assets/youtube.svg" },
-    { text: "Imagen 5", image: "src/assets/youtube.svg" },
-    { text: "Imagen 6", image: "src/assets/youtube.svg" },
-    { text: "Imagen 7", image: "src/assets/youtube.svg" },
-];
+import { useContent } from "./Sistemas/useContent.tsx";
+import { useLanguage } from "./Sistemas/LanguageContext.tsx";
 
 function CardGrid() {
+    const content = useContent();
+    const { language } = useLanguage();
+
+    if (!content) {
+        return <div>Loading...</div>;
+    }
+
+    const { Common, es, en } = content.Tecnologia.CardGrid;
+    const currentLang = language === 'es' ? es : en;
+
+    // Generar array de 1 a 7 para las cartas
+    const cards = Array.from({ length: 7 }, (_, i) => i + 1);
+
     return (
         <div className={styles.grid}>
-            {data.map((item, index) => (
-                <div key={index} className={styles.card}>
-                    <img className={styles.image} src={item.image} alt={item.text} />
-                    <p className={styles.text}>{item.text}</p>
-                </div>
-            ))}
+            {cards.map((cardNumber) => {
+                const imageKey = `ImagenCarta${cardNumber}` as keyof typeof Common;
+                const textKey = `Carta${cardNumber}` as keyof typeof currentLang;
+
+                return (
+                    <div key={cardNumber} className={styles.card}>
+                        <img
+                            className={styles.image}
+                            src={Common[imageKey]}
+                            alt={currentLang[textKey]}
+                        />
+                        <p className={styles.text}>
+                            {currentLang[textKey]}
+                        </p>
+                    </div>
+                );
+            })}
         </div>
     );
 }
