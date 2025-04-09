@@ -571,7 +571,8 @@
           {"Imagen": "src/assets/event-security.jpg", "alt": "event-security"},
           {"Imagen": "src/assets/transito-escort.jpg", "alt": "transit-escort"}
         ],
-        "imagenDeFondo": "src/assets/1.png"
+        "imagenDeFondo": "src/assets/1.png",
+        "logo": "src/assets/Logo-Liderman2.svg"
       },
       "es": {
         "Titulo": "Seguridad",

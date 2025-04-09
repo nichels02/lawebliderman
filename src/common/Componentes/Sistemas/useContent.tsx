@@ -495,6 +495,7 @@ interface ContentData {
                     alt: string;
                 }>;
                 imagenDeFondo: string;
+                "logo": string;
             },
             es: {
                 Titulo: string;
