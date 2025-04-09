@@ -894,7 +894,7 @@
   "Tecnologia": {
     "HeaderCambioDeImagen": {
       "Common": {
-        "logo": "src/assets/Logo-Liderman.svg",
+        "logo": "src/assets/Logo-Liderman2.svg",
         "Fondo": "src/assets/tecnologia-portada.png",
         "imagenes1": "src/assets/tecnologia-chica.png",
         "imagenes2": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
@@ -1118,6 +1118,25 @@
   },
 
   "Lidermania": {
+    "HeaderGenerico": {
+      "Common": {
+        "Fondo": "src/assets/lidermania-fondo.png",
+        "logo": "src/assets/Logo-Liderman2.svg",
+        "ImagenDelCostado": ""
+      },
+      "es": {
+        "Titulo": "Lidermanía",
+        "Texto": "Implementamos un conjunto de prácticas y programas diseñados para atender las necesidades de nuestros Lidermans en los aspectos más importantes para ellos y sus familias, promoviendo un ambiente de apoyo, crecimiento y equilibrio personal.",
+        "Boton1": "Nuestra cultura ➔",
+        "Boton2": "Únete"
+      },
+      "en": {
+        "Titulo": "Leadermania",
+        "Texto": "We have implemented a range of practices and programs aimed at meeting the needs of our Lidermans and their families in the areas that matter most, promoting a supportive environment that encourages growth and personal balance.",
+        "Boton1": "Our culture ➔",
+        "Boton2": "Join us"
+      }
+    },
     "DonaRotativa": {
       "es": {
         "Grupo1": {

@@ -485,7 +485,8 @@ interface ContentData {
                 }
             }
         }
-    },
+    }
+
     Seguridad: {
         HeaderCarruselDeImagenes: {
             Common: {
@@ -680,7 +681,7 @@ interface ContentData {
                 carta5: string;
             }
         }
-    },
+    }
 
     Servicio: {
         header: {
@@ -979,7 +980,27 @@ interface ContentData {
             }
         }
     }
+
     Lidermania:{
+        HeaderGenerico: {
+            Common: {
+                Fondo: string;
+                logo: string;
+                ImagenDelCostado: string;
+            },
+            es: {
+                Titulo: string;
+                Texto: string;
+                Boton1: string;
+                Boton2: string;
+            },
+            en: {
+                Titulo: string;
+                Texto: string;
+                Boton1: string;
+                Boton2: string;
+            }
+        },
         DonaRotativa: {
             es: {
                 Grupo1: {

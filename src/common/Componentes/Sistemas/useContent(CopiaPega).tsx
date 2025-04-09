@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 // 📌 Interfaz completa basada en el JSON
 interface ContentData {
 
-    Conocenos: {
+    Lidermania:{
         HeaderGenerico: {
             Common: {
                 Fondo: string;
@@ -23,7 +23,7 @@ interface ContentData {
                 Boton2: string;
             }
         }
-    },
+    }
 
 }
 
