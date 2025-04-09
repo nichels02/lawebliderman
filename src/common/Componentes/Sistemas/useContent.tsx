@@ -241,6 +241,25 @@ interface ContentData {
     }
 
     Conocenos: {
+        HeaderGenerico: {
+            Common: {
+                Fondo: string;
+                logo: string;
+                ImagenDelCostado: string;
+            },
+            es: {
+                Titulo: string;
+                Texto: string;
+                Boton1: string;
+                Boton2: string;
+            },
+            en: {
+                Titulo: string;
+                Texto: string;
+                Boton1: string;
+                Boton2: string;
+            }
+        },
         contenedorScroll: {
             common: {
                 items: {

@@ -5,7 +5,7 @@ import HeaderGenerico from '../common/Componentes/HeaderGenerico.tsx';
 // import FlechaGiro from '../common/Componentes/FlechaGiro.tsx';
 // import PorcentajeNegocio from '../common/Componentes/PorcentajeNegocio.tsx';
 import DonaRotativa2 from '../common/Componentes/DonaRotativa2.tsx';
-import TextoTituloEImagen from '../common/Componentes/TextoTituloEImagen.tsx';
+// import TextoTituloEImagen from '../common/Componentes/TextoTituloEImagen.tsx';
 import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
 import TituloTextoEImagen2 from "../common/Componentes/TituloTextoEImagen2.tsx";
 
@@ -15,13 +15,7 @@ import TituloTextoEImagen2 from "../common/Componentes/TituloTextoEImagen2.tsx";
 
 function Lidermania(){
 
-    const imagenes = [
-        "https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg",
-        "https://wallpapers.com/images/hd/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
-        "https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
-    ];
 
-    const textosBotones = ["Imagen 1", "Imagen 2", "Imagen 3"];
     return (
         <>
             <HeaderGenerico
@@ -36,13 +30,6 @@ function Lidermania(){
                 onButton2Click={() => console.log("Contratar servicio")}
             />
             <DonaRotativa2 />
-            <TextoTituloEImagen
-                titulo="Título de ejemplo"
-                texto="Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título. Este es un párrafo de ejemplo que acompaña al título."
-                imagenes={imagenes}
-                textosBotones={textosBotones}
-                imagenALaIzquierda={false}
-            />
             <TituloTextoEImagen2 />
             <FormularioDeContacto />
 

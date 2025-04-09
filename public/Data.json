@@ -441,6 +441,25 @@
   },
 
   "Conocenos": {
+    "HeaderGenerico": {
+        "Common": {
+          "Fondo": "src/assets/fondo--conocenos.png",
+          "logo": "src/assets/Logo-Liderman2.svg",
+          "ImagenDelCostado": "src/assets/chica-para-conocenos.png"
+        },
+        "es": {
+          "Titulo": "Conócenos",
+          "Texto": "El valor que aportamos como organización a la sociedad nos permite construir un mundo mejor, más seguro e interconectado.",
+          "Boton1": "NUESTRA HISTORIA ➔",
+          "Boton2": "Contáctanos"
+        },
+        "en": {
+          "Titulo": "About Us",
+          "Texto": "The value we bring as an organization...",
+          "Boton1": "OUR HISTORY ➔",
+          "Boton2": "Contact us"
+        }
+      },
     "contenedorScroll": {
       "common": {
         "items": {
@@ -1163,4 +1182,3 @@
 
 
 }
-
