@@ -1,0 +1,327 @@
+/* CarruselDeTrabajos.module.css */
+
+/* Contenedor Principal */
+.carruselContainer {
+    background: #000;
+    width: 100vw;
+    min-height: 100vh; /* Cambiado de height a min-height */
+    padding: 5rem 2rem;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Slider Contenedor */
+.slider {
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 0 50px; /* Espacio para las flechas */
+}
+
+/* Items del Carrusel */
+.slideItem {
+    background: rgba(40, 40, 40, 0.9);
+    border-radius: 15px;
+    margin: 0 15px;
+    padding: 2rem;
+    height: 700px;
+    width: 350px !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex !important;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slideItem:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(50, 50, 50, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Contenido Textual */
+.contentContainer {
+    padding: 0 0.8rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.slideTitle {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.slideTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #4a90e2, #8e44ad);
+}
+
+/* Ubicación */
+.ubicacionContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.ubicacionIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    filter: invert(0.8);
+}
+
+/* Descripción */
+.descripcionContainer {
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.descripcionPunto {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 0.5rem;
+}
+
+/* Más información */
+.masInformacionLink {
+    text-decoration: none;
+    display: block;
+    margin-top: auto;
+}
+
+.masInformacionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    background: rgba(74, 144, 226, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(74, 144, 226, 0.3);
+}
+
+.masInformacionContainer:hover {
+    background: rgba(74, 144, 226, 0.3);
+}
+
+.masInformacionText {
+    color: #4a90e2;
+    font-size: 0.95rem;
+    font-weight: 500;
+    order: 1;
+}
+
+.masInformacionIcon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+    order: 2;
+}
+
+/* Flechas de Navegación - POSICIÓN FIJADA */
+.customArrow {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Asegura que estén sobre otros elementos */
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 50%;
+}
+
+/* Flecha izquierda */
+.customArrow.prev {
+    left: -25px !important;
+}
+
+/* Flecha derecha */
+.customArrow.next {
+    right: -25px !important;
+}
+
+.customArrow:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.customArrow::before {
+    color: #fff !important;
+    opacity: 0.8 !important;
+    font-size: 24px !important;
+    transition: all 0.3s ease;
+}
+
+.customArrow:hover::before {
+    opacity: 1 !important;
+}
+
+/* Puntos Indicadores */
+.slick-dots {
+    bottom: -50px !important;
+}
+
+.slick-dots li {
+    margin: 0 8px !important;
+}
+
+.slick-dots li button {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+.slick-dots li button::before {
+    color: #fff !important;
+    opacity: 0.4 !important;
+    font-size: 10px !important;
+    transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button::before {
+    color: #4a90e2 !important;
+    opacity: 1 !important;
+    transform: scale(1.4);
+}
+
+/* Efecto de Partículas (Opcional) */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .slideItem {
+        height: 650px;
+        padding: 1.8rem;
+    }
+
+    .slideTitle {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .carruselContainer {
+        padding: 4rem 1.5rem;
+    }
+
+    .slider {
+        width: 95%;
+    }
+
+    .slideItem {
+        height: 600px;
+        padding: 1.5rem;
+    }
+
+    .slideTitle {
+        font-size: 1.5rem;
+    }
+
+    .descripcionPunto {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carruselContainer {
+        padding: 3rem 1rem;
+    }
+
+    .slideItem {
+        height: 550px;
+        padding: 1.3rem;
+        margin: 0 10px;
+    }
+
+    .slideTitle {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .descripcionPunto {
+        font-size: 0.9rem;
+    }
+
+    .customArrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .masInformacionContainer {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .masInformacionText {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider {
+        padding: 0 30px; /* Menos espacio para móviles */
+    }
+
+    .slideItem {
+        height: 500px;
+        padding: 1.2rem;
+    }
+
+    .slideTitle {
+        font-size: 1.3rem;
+    }
+
+    .ubicacionContainer {
+        font-size: 0.85rem;
+    }
+
+    .descripcionPunto {
+        font-size: 0.85rem;
+    }
+
+    .masInformacionIcon {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Ajuste de flechas para móviles */
+    .customArrow.prev {
+        left: -15px !important;
+    }
+
+    .customArrow.next {
+        right: -15px !important;
+    }
+}

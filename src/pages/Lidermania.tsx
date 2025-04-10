@@ -4,6 +4,7 @@ import HeaderGenerico from '../common/Componentes/HeaderGenerico.tsx';
 import DonaRotativa2 from '../common/Componentes/DonaRotativa2.tsx';
 import TituloTextoEImagen2 from "../common/Componentes/TituloTextoEImagen2.tsx";
 import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
+import CarruselDeTrabajos from "../common/Componentes/CarruselDeTrabajos.tsx";
 
 function Lidermania() {
     const content = useContent();
@@ -30,6 +31,7 @@ function Lidermania() {
                 onButton2Click={() => console.log("Contratar servicio")}
             />
             <DonaRotativa2 />
+            <CarruselDeTrabajos />
             <TituloTextoEImagen2 />
             <FormularioDeContacto />
         </>
