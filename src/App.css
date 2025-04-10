@@ -39,9 +39,9 @@ html, body {
 
 .logoHeader {
     position: absolute; /* Posiciona el logo de manera absoluta dentro del header */
-    top: 5%; /* Posición relativa desde la parte superior */
-    left: 5%; /* Posición relativa desde la izquierda */
-    width: 10%; /* Tamaño relativo al contenedor */
+    top: 1vw; /* Posición relativa desde la parte superior */
+    left: 25px; /* Posición relativa desde la izquierda */
+    width: 135px; /* Tamaño relativo al contenedor */
     height: auto; /* Mantiene la relación de aspecto */
     z-index: 1; /* Asegura que el logo esté por encima de la imagen */
 }

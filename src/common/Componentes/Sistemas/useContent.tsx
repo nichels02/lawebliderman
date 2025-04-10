@@ -753,6 +753,53 @@ interface ContentData {
                 Texto: string;
             }
         }
+        GridGenerico: {
+            en: {
+                Sector1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Sector2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Sector3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Sector4: {
+                    Titulo: string;
+                    Texto: string;
+                }
+
+            },
+            es: {
+                Sector1: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Sector2: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Sector3: {
+                    Titulo: string;
+                    Texto: string;
+                },
+                Sector4: {
+                    Titulo: string;
+                    Texto: string;
+                }
+            },
+            Contenido: {
+                ImagenGrande: string;
+                imagenSector1: string;
+                imagenSector2: string;
+                imagenSector3: string;
+                imagenSector4: string;
+
+            }
+        }
     }
 
     Tecnologia: {

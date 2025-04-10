@@ -16,6 +16,7 @@ function Servicio() {
 
     const datos1 = content.Servicio.TextoTituloEImagen;
     const datos2 = content.Servicio.TextoTituloEImagen2;
+    const datos3 = content.Servicio.GridGenerico;
 
     return (
         <>
@@ -56,12 +57,12 @@ function Servicio() {
             />
 
             <GridGenerico
-                largeImage="/images/large-image.jpg"
+                largeImage= {datos3.Contenido.ImagenGrande}
                 items={[
-                    { image: "/images/item1.jpg", title: "Título 1", text: "Descripción 1" },
-                    { image: "/images/item2.jpg", title: "Título 2", text: "Descripción 2" },
-                    { image: "/images/item3.jpg", title: "Título 3", text: "Descripción 3" },
-                    { image: "/images/item4.jpg", title: "Título 4", text: "Descripción 4" }
+                    { image: datos3?.Contenido?.imagenSector1, title: datos3[language]?.Sector1?.Titulo, text: datos3[language]?.Sector1.Texto },
+                    { image: datos3?.Contenido?.imagenSector2, title: datos3[language]?.Sector2?.Titulo, text: datos3[language]?.Sector2.Texto },
+                    { image: datos3?.Contenido?.imagenSector3, title: datos3[language]?.Sector3?.Titulo, text: datos3[language]?.Sector3.Texto },
+                    { image: datos3?.Contenido?.imagenSector4, title: datos3[language]?.Sector4?.Titulo, text: datos3[language]?.Sector4.Texto }
                 ]}
             />
 
