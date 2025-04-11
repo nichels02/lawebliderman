@@ -164,7 +164,7 @@ function CarruselDeTrabajos() {
     };
 
     return (
-        <div className={styles.carruselContainer}>
+        <div id="CarruselDeTrabajos" className={styles.carruselContainer}>
             <Slider {...settings} className={styles.slider}>
                 {carouselData.items.map((item) => (
                     <div key={item.id} className={styles.slideItem}>

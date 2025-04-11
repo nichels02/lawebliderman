@@ -19,7 +19,7 @@ function CardWithExpand() {
     const tecnologia = content.home.CardWithExpand.Tecnologia?.[language];
 
     return (
-        <div className={styles.container}>
+        <div id="CardWithExpand" className={styles.container}>
             <section className={styles.section}>
                 {seguridad && (
                     <div

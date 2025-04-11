@@ -13,7 +13,7 @@ function ImagenYGrid2() {
     const imagenes = data.contenido;
 
     return (
-        <div className={styles.contenedorPadre}>
+        <div id="ImagenYGrid2" className={styles.contenedorPadre}>
             <div className={styles.contenedorHijo}>
                 {/* Imagen principal a la izquierda */}
                 <div className={styles.contenedorIzquierdo}>

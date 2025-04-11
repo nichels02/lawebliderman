@@ -101,7 +101,7 @@ function PorcentajeNegocio() {
     if (!langData) return null;
 
     return (
-        <div className={styles.contenedorPadre}>
+        <div id="PorcentajeNegocio" className={styles.contenedorPadre}>
             <div className={styles.contenedorImagenGrande}>
                 <img src={selectedImage} alt="Imagen dinámica" className={styles.imagenGrande} />
 

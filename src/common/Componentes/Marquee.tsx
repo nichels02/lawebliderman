@@ -30,7 +30,7 @@ function Marquee() {
     if (!content) return <p className={styles.loading}>Cargando...</p>;
 
     return (
-        <div className={styles.marqueeWrapper}>
+        <div id="Marquee" className={styles.marqueeWrapper}>
             <div className={styles.leftFade}></div>
             <div className={styles.marqueeContainer}>
                 <div className={styles.marqueeContent}>

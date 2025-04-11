@@ -106,7 +106,7 @@ function DonaRotativa2() {
     }, [targetRotation]);
 
     return (
-        <div className={styles.wrapper}>
+        <div id="DonaRotativa2" className={styles.wrapper}>
             <div className={styles.imageContainer}>
                 <img
                     src={segments[getActiveSegmentIndex()].image || 'fallback.jpg'}

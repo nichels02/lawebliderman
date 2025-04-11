@@ -25,7 +25,7 @@ const HeaderGenerico: React.FC<HeaderProps> = ({
                                                    logo,
                                                }) => {
     return (
-        <header
+        <header id="HeaderGenerico"
             className={styles.header}
             style={{ backgroundImage: `url(${backgroundImage})` }}
         >

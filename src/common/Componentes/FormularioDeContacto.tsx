@@ -2,7 +2,7 @@ import styles from '../css/FormularioDeContacto.module.css';
 
 const FormularioDeContacto = () => {
     return (
-        <div className={styles.contenedor_principal}>
+        <div id="FormularioDeContacto" className={styles.contenedor_principal}>
             <div className={styles.contenedor_secundario_80}>
                 {/* Contenedor de los tres botones (dentro del contenedor secundario, fuera del formulario) */}
                 <div className={styles.contenedor_botones_externo}>

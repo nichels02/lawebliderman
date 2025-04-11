@@ -4,6 +4,8 @@ import Switch from './Switch.tsx';
 import { useLanguage } from './Sistemas/LanguageContext';
 import { useContent } from './Sistemas/useContent';
 import { isDarkModeEnabled } from './Sistemas/toggleDarkMode.ts';
+import { useLocation, Link } from 'react-router-dom';
+
 
 // Estado global para el color
 let setSVGColorGlobal: (color: string) => void;
@@ -18,6 +20,7 @@ function BarraDeOpciones2() {
     const [showPanel, setShowPanel] = useState(false);
     const { language, setLanguage } = useLanguage();
     const content = useContent();
+    const location = useLocation();
 
     // Estado para el color del SVG (debe declararse antes de cualquier `return`)
     const [svgColor, setSvgColor] = useState(isDarkModeEnabled() ? "#FFFFFF" : "#393939");
@@ -36,7 +39,12 @@ function BarraDeOpciones2() {
 
     return (
         <div className={styles.barra}>
-            <button className={styles.boton}>{textos.contactanos}</button>
+            <Link
+                to={`${location.pathname}#FormularioDeContacto`}
+                className={styles.boton}
+            >
+                {textos.contactanos}
+            </Link>
             <div
                 className={styles.dropdownContainer}
                 onMouseEnter={() => setShowPanel(true)}

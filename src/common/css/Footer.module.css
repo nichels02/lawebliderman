@@ -1,13 +1,24 @@
+/* ===== CONTENEDOR PADRE ===== */
+.footerContainer {
+    width: 100vw;
+    height: 85vh;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ===== FOOTER PRINCIPAL ===== */
 .footer {
-    background-color: #333;
-    color: #fff;
+    color: var(--color-texto-negro-cambio);
     padding: 40px 20px 20px;
-    width: 100%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     box-sizing: border-box;
     font-weight: 400;
 }
 
-/* ===== VERSIÓN ESCRITORIO ===== */
+/* ===== PRIMERA SECCIÓN ===== */
 .topSection {
     display: flex;
     justify-content: space-between;
@@ -25,75 +36,160 @@
 }
 
 .logoText {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.4;
     font-weight: 400;
 }
 
+/* Columnas más compactas y alineadas a izquierda */
 .columnsContainer {
     width: 75%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 40px;
 }
 
 .column {
-    flex: 1;
-    max-width: 200px;
-    margin: 0 15px;
+    flex: 0 1 auto;
+    max-width: 180px;
+    margin: 0;
 }
 
 .column h4 {
-    color: #fff;
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+    color: var(--color-texto-negro-cambio);
+    margin-bottom: 15px;
+    font-size: 1rem;
     font-weight: 700;
 }
 
 .menuButton {
     display: block;
     width: 100%;
-    padding: 8px 0;
-    margin: 5px 0;
+    padding: 6px 0;
+    margin: 4px 0;
     background: none;
     border: none;
-    color: #fff;
+    color: var(--color-texto-negro-cambio);
     text-align: left;
     cursor: pointer;
     transition: all 0.3s;
     font-weight: 400;
-}
-
-.middleSection {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 30px 0;
-}
-
-.mainButton {
-    width: 35%;
-    padding: 15px 20px;
-    background-color: #00a8ff;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: all 0.3s;
-    font-weight: 400;
-}
-
-/* ===== ESTILOS COMUNES ===== */
-.mainButton:hover {
-    background-color: #0090d6;
-    transform: scale(1.05);
+    font-size: 0.85rem;
 }
 
 .menuButton:hover {
-    color: #00a8ff;
+    color: var(--color-rojo-general);
     transform: translateX(5px);
 }
 
+/* ===== ACTION CARDS (ESTILOS MODULARES) ===== */
+.actionCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px 30px;
+    width: 50%;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.actionCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Variantes de color para cards */
+.actionCard.primary {
+    background-color: var(--color-texto-negro-cambio2);
+}
+
+.actionCard.secondary {
+    background-color: var(--color-blancoATransparente);
+}
+
+/* ===== CONTENIDO DE CARDS (ESTILOS MODULARES) ===== */
+.cardTextContent {
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* Estilos base para textos */
+.cardTitle,
+.cardSubtitle {
+    margin: 0;
+    transition: all 0.3s;
+}
+
+/* Variante primary */
+.cardTextContent.primary .cardTitle {
+    color: var(--color-texto-blanco-cambio2);
+    font-size: 1vw;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.cardTextContent.primary .cardSubtitle {
+    color: var(--color-texto-blanco-cambio2);
+    font-size: 1vw;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Variante secondary */
+.cardTextContent.secondary .cardTitle {
+    color: var(--color-texto-negro-cambio);
+    font-size: 1vw;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.cardTextContent.secondary .cardSubtitle {
+    color: var(--color-texto-negro-cambio);
+    font-size: 1vw;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* ===== BOTONES CUADRADOS (ESTILOS MODULARES) ===== */
+.squareButton {
+    border: none;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+/* Variantes de botones */
+.squareButton.primary {
+    background-color: var(--color-rojo-general);
+    color: var(--color-texto-negro-cambio2);
+}
+
+.squareButton.secondary {
+    background-color: var(--color-texto-negro-cambio2);
+    color: var(--color-texto-blanco-cambio-rojo);
+}
+
+/* ===== SEGUNDA SECCIÓN ===== */
+.middleSection {
+    margin: 20px 0;
+}
+
+.actionCardsContainer {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+}
+
+/* ===== TERCERA SECCIÓN ===== */
 .divider {
     border-top: 1px solid #555;
     margin: 20px 0;
@@ -103,28 +199,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    gap: 30px;
 }
 
 .legal {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-grow: 1;
     font-size: 0.8rem;
     font-weight: 400;
+}
+
+.copyright {
+    white-space: nowrap;
 }
 
 .legalLinks {
     display: flex;
     gap: 20px;
-    margin-top: 10px;
 }
 
 .legalButton {
     background: none;
     border: none;
-    color: #fff;
+    color: var(--color-texto-negro-cambio);
     cursor: pointer;
     font-size: 0.9rem;
-    padding: 5px 0;
+    padding: 0;
     font-weight: 400;
+    white-space: nowrap;
 }
 
 .legalButton:hover {
@@ -133,12 +237,13 @@
 
 .socialLinks {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    flex-shrink: 0;
 }
 
 .socialIcon {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     transition: transform 0.3s;
 }
 
@@ -167,42 +272,68 @@
 
     .columnsContainer {
         width: 100%;
-        flex-wrap: wrap;
+        justify-content: space-between;
         gap: 30px;
+        flex-wrap: wrap;
     }
 
     .column {
         flex: 1 1 45%;
-        min-width: 180px;
-        text-align: center;
-        margin: 0 10px;
+        min-width: 160px;
+        max-width: none;
+        margin: 0;
     }
 
     .menuButton {
         text-align: center;
-        padding: 10px 0;
+        padding: 8px 0;
+        font-size: 0.8rem;
     }
 
-    .middleSection {
+    .actionCardsContainer {
         flex-direction: column;
-        align-items: center;
-        gap: 15px;
     }
 
-    .mainButton {
-        width: 90%;
-        max-width: 300px;
+    .actionCard {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cardTextContent {
+        padding-right: 0;
+        margin-bottom: 15px;
+    }
+
+    /* Ajustes de texto para móvil */
+    .cardTextContent.primary .cardTitle,
+    .cardTextContent.secondary .cardTitle,
+    .cardTextContent.primary .cardSubtitle,
+    .cardTextContent.secondary .cardSubtitle {
         font-size: 1rem;
+    }
+
+    .squareButton {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+        align-self: flex-end;
     }
 
     .bottomContent {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        gap: 15px;
+    }
+
+    .legal {
+        flex-direction: column;
+        gap: 15px;
     }
 
     .legalLinks {
-        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
@@ -214,25 +345,32 @@
     .columnsContainer {
         flex-direction: column;
         align-items: center;
+        gap: 25px;
     }
 
     .column {
         flex: 1 1 100%;
+        width: 100%;
         max-width: 300px;
         margin-bottom: 25px;
+        text-align: center;
     }
 
-    .mainButton {
-        width: 100%;
-        padding: 12px 15px;
+    .column h4 {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .menuButton {
+        font-size: 0.78rem;
     }
 
     .socialLinks {
-        gap: 15px;
+        gap: 12px;
     }
 
     .socialIcon {
-        width: 26px;
-        height: 26px;
+        width: 22px;
+        height: 22px;
     }
 }

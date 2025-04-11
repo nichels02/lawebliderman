@@ -7,12 +7,18 @@ html, body {
 }
 
 :root {
-    --color-fondo: #e1e1e1;
+    --color-fondo: #ffffff;
+
+
+
+    --color-blancoATransparente: #c1c2c5;
 
 
     --color-texto-negro: #000000;
     --color-texto-negro-cambio: #393939;
     --color-texto-negro-cambio2: #232323;
+
+    --color-texto-negro-cambio3: #393939;
 
     --color-general-gris: #686868;
 
@@ -21,6 +27,9 @@ html, body {
 
     --color-texto-blanco: #ddd;
     --color-texto-blanco-cambio: #ddd;
+    --color-texto-blanco-cambio2: #ddd;
+
+    --color-texto-blanco-cambio-rojo: #ddd;
 
     --color-rojo-general: #e61717;
     --color-rojo-general-cambio: #e61717;
@@ -31,9 +40,12 @@ html, body {
 .dark-mode {
     --colorUI: rgba(60, 60, 60, 0.73);
     --color-fondo: #202020;
+    --color-blancoATransparente: rgba(255, 255, 255, 0);
     --color-texto-negro-cambio: #ffffff;
     --color-texto-negro-cambio2: #fafafa;
+    --color-texto-blanco-cambio-rojo: #e61717;
     --color-texto-blanco-cambio: #000000;
+    --color-texto-blanco-cambio2: #272727;
     --color-rojo-general-cambio: #ac0000;
 }
 
