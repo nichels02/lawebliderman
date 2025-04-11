@@ -26,12 +26,13 @@
 }
 
 .logoSection {
-    width: 20%;
+    width: 25%;
     padding-right: 30px;
+    padding-top: 30px;
 }
 
 .logo {
-    width: 150px;
+    width: 200px;
     margin-bottom: 15px;
 }
 
