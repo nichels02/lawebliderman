@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../css/CarruselDeTrabajos.module.css';
 
 interface CarouselItem {
@@ -16,7 +16,7 @@ interface CarouselItem {
 function CarruselDeTrabajos() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isAnimating, setIsAnimating] = useState(false);
+    const [direction, setDirection] = useState(0);
 
     const getItemsPerView = () => {
         if (windowWidth < 768) return 1;
@@ -52,27 +52,54 @@ function CarruselDeTrabajos() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const handleNavigation = (direction: number) => {
-        if (isAnimating) return;
-
-        setIsAnimating(true);
+    const handleNavigation = (newDirection: number) => {
+        setDirection(newDirection);
         setCurrentIndex(prev => {
-            const newIndex = prev + direction;
-            if (newIndex < 0) return carouselData.length - 1;
+            const increment = newDirection * itemsPerView;
+            const newIndex = prev + increment;
+
+            if (newIndex < 0) return carouselData.length - itemsPerView;
             if (newIndex >= carouselData.length) return 0;
             return newIndex;
         });
-
-        setTimeout(() => setIsAnimating(false), 300);
     };
 
-    const TarjetaTrabajo = ({ item }: { item: CarouselItem }) => (
+    const itemVariants = {
+        enter: (direction: number) => ({
+            x: direction > 0 ? (cardWidth + gap) * itemsPerView : -(cardWidth + gap) * itemsPerView,
+            opacity: 0,
+            transition: {
+                delay: 0,
+                duration: 0.3
+            }
+        }),
+        center: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.3
+            }
+        },
+        exit: (direction: number) => ({
+            x: direction < 0 ? (cardWidth + gap) * itemsPerView : -(cardWidth + gap) * itemsPerView,
+            opacity: 0,
+            transition: {
+                duration: 0.4
+            }
+        })
+    };
+
+    const TarjetaTrabajo = ({ item, custom }: { item: CarouselItem; custom: number }) => (
         <motion.div
             className={styles.card}
             style={{ width: `${cardWidth}px` }}
+            custom={custom}
+            variants={itemVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
             whileHover={{
                 boxShadow: "0 15px 30px rgba(0, 0, 0, 0.5)",
-                transform: "translateY(-5px)"
             }}
         >
             <h3 className={styles.title}>{item.title}</h3>
@@ -119,13 +146,21 @@ function CarruselDeTrabajos() {
                 </button>
 
                 <div className={styles.cardsWrapper}>
-                    <div className={styles.cardsContainer}>
-                        {Array.from({ length: itemsPerView }).map((_, index) => {
-                            const realIndex = (currentIndex + index) % carouselData.length;
-                            const item = carouselData[realIndex];
-                            return <TarjetaTrabajo key={`${realIndex}-${index}`} item={item} />;
-                        })}
-                    </div>
+                    <AnimatePresence mode="wait" custom={direction}>
+                        <div className={styles.cardsContainer} key={currentIndex}>
+                            {Array.from({ length: itemsPerView }).map((_, index) => {
+                                const realIndex = currentIndex + index;
+                                const item = carouselData[realIndex % carouselData.length];
+                                return (
+                                    <TarjetaTrabajo
+                                        key={`${realIndex}-${currentIndex}`}
+                                        item={item}
+                                        custom={direction}
+                                    />
+                                );
+                            })}
+                        </div>
+                    </AnimatePresence>
                 </div>
 
                 <button

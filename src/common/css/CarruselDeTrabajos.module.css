@@ -7,7 +7,6 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: #1834bf;
     padding: 2rem 0;
     box-sizing: border-box;
 }
@@ -15,7 +14,6 @@
 .navContainer {
     display: flex;
     align-items: center;
-    background: #3adf21;
     width: 100%;
     height: auto;
     box-sizing: border-box;
@@ -25,7 +23,6 @@
 .cardsContainer {
     display: flex;
     overflow: hidden;
-    background: red;
     width: 100%;
     max-width: 1200px;
     gap: 20px;
@@ -34,6 +31,17 @@
     box-sizing: border-box;
     padding: 0 20px; /* Espaciado lateral para móviles */
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 .navButton {
