@@ -63,7 +63,7 @@ function GridBarajeable() {
         <div className={styles.gridContainer}>
             {/* Elemento grande */}
             <div className={styles.mainItem} style={{ backgroundImage: `url(${mainItem.image})` }}>
-                <div className={styles.overlay}>
+                <div className={styles.mainOverlay}>
                     {mainItem.showTitle && <h2>{mainItem.text}</h2>} {/* ✅ Solo si showTitle es true */}
                     <p>{mainItem.description}</p> {/* ✅ Siempre visible */}
                 </div>

@@ -28,8 +28,8 @@ function HeaderServicio() {
             <img src={logo} alt="Logo" className="logoHeader" />
             <div className={styles.container}>
                 <div className={styles.left}>
-                    <h1>{textos.Titulo}</h1>
-                    <p>{textos.Texto}</p>
+                    <h1 className={styles.title}>{textos.Titulo}</h1>
+                    <p className={styles.text}>{textos.Texto}</p>
                 </div>
                 <div className={styles.right}>
                     <img src={imagenLateral} alt="Imagen descriptiva" />

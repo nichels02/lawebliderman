@@ -70,12 +70,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    padding: 1.5rem;
+    padding-top: 1.5rem;
     align-content: start;
 }
 
 .contenedorMedioIzquierdo,
 .contenedorMedioDerecho {
+    width: 100%;
     padding: 0;
     border-radius: 12px;
     box-sizing: border-box;
@@ -92,7 +93,8 @@
 }
 
 .logo {
-    width: clamp(50px, 6vw, 80px);
+    width: clamp(40px, 3.3vw, 80px);
+    left: 1000px;
     height: auto;
 }
 

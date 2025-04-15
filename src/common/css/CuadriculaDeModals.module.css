@@ -15,31 +15,60 @@
     gap: 20px;
 }
 
-/* Estilos de los cuadros */
+/* Cada cuadro */
 .box {
+    position: relative;
+    height: 290px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Fondo separado */
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    filter: grayscale(100%) brightness(70%);
+    background-position: center;
+    z-index: 0;
+}
+
+.backgroundImage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* capa negra con transparencia */
+    z-index: 1;
+}
+
+/* Contenido sobre el fondo */
+.content {
+    position: relative;
+    z-index: 1;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-size: 1.2rem;
     font-weight: bold;
-    height: 290px;
-    border-radius: 10px;
+    height: 100%;
     padding: 20px;
-    position: relative;
-    overflow: hidden; /* Evita que la imagen sobresalga */
-    background-size: cover; /* Imagen cubre todo sin deformarse */
-    background-position: center; /* Expande desde el centro */
 }
 
-/* Título del cuadro centrado */
+/* Título */
 .title {
     font-size: 2vw;
     text-align: center;
     margin-bottom: 5px;
 }
 
-/* Texto alineado a la izquierda */
+/* Texto */
 .text {
     width: 85%;
     font-size: 1.1vw;
@@ -48,10 +77,10 @@
     flex-grow: 1;
     margin-left: auto;
     margin-right: auto;
-    display: block; /* Asegura que funcione el margin auto */
+    display: block;
 }
 
-/* Contenedor en la esquina inferior derecha */
+/* Contenedor inferior */
 .bottomRightContainer {
     position: absolute;
     bottom: 10px;
@@ -76,25 +105,23 @@
     border-radius: 5px;
     cursor: pointer;
 
-    /* Centrado con Flexbox */
     display: flex;
-    justify-content: center;  /* Centra horizontalmente */
-    align-items: center;      /* Centra verticalmente */
+    justify-content: center;
+    align-items: center;
 }
-
 
 .button:hover {
     background-color: #e6b800;
 }
 
-/* Texto pequeño antes del botón */
+/* Texto pequeño */
 .smallText {
     font-size: 1rem;
     font-weight: normal;
     opacity: 0.8;
 }
 
-/* Responsivo: en móviles, una sola columna */
+/* Responsivo */
 @media (max-width: 600px) {
     .grid {
         grid-template-columns: 1fr;

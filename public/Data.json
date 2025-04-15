@@ -429,11 +429,11 @@
       },
       "contenido": {
         "imagenPrincipal": "src/assets/Inicio/2022-11-10-foto-web-Lidermania.jpg",
-        "logo1": "https://d1ih8jugeo2m5m.cloudfront.net/2022/12/que-es-un-logo-lays.png",
-        "logo2": "https://d1ih8jugeo2m5m.cloudfront.net/2022/12/que-es-un-logo-lays.png",
-        "boton1ImagenIzquierda": "src/assets/youtube.svg",
+        "logo1": "src/assets/Inicio/Recurso 20_nuevo.svg",
+        "logo2": "src/assets/Inicio/Recurso 21_nuevo.svg",
+        "boton1ImagenIzquierda": "src/assets/Inicio/Recurso 23_nuevo.svg",
         "boton1ImagenDerecha": "src/assets/youtube.svg",
-        "boton2ImagenIzquierda": "src/assets/youtube.svg",
+        "boton2ImagenIzquierda": "src/assets/Inicio/Recurso 22_nuevo.svg",
         "boton2ImagenDerecha": "src/assets/youtube.svg"
       }
     }
@@ -480,7 +480,7 @@
             "alt": "new-initiatives"
           },
           "Contenedor5": {
-            "src": "src/assets/Conocenos/Imagen2_up.jpg",
+            "src": "src/assets/Conocenos/fb9c2de7170051c1a0ebd426ebb0a7e1.jpg",
             "alt": "chile-expansion"
           },
           "Contenedor6": {
@@ -715,7 +715,7 @@
         "carta1": {
           "text": "Element 1",
           "description": "Description of element 1",
-          "showTitle": true
+          "showTitle": false
         },
         "carta2": {
           "text": "Element 2",
@@ -725,7 +725,7 @@
         "carta3": {
           "text": "Element 3",
           "description": "Description of element 3",
-          "showTitle": false
+          "showTitle": true
         },
         "carta4": {
           "text": "Element 4",
@@ -742,7 +742,7 @@
         "carta1": {
           "text": "Elemento 1",
           "description": "Descripción del elemento 1",
-          "showTitle": true
+          "showTitle": false
         },
         "carta2": {
           "text": "Elemento 2",
@@ -752,7 +752,7 @@
         "carta3": {
           "text": "Elemento 3",
           "description": "Descripción del elemento 3",
-          "showTitle": false
+          "showTitle": true
         },
         "carta4": {
           "text": "Elemento 4",
@@ -766,11 +766,11 @@
         }
       },
       "contenido": {
-        "carta1": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
-        "carta2": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
-        "carta3": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
-        "carta4": "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg",
-        "carta5": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
+        "carta1": "src/assets/Seguridad/3.png",
+        "carta2": "src/assets/Seguridad/7ed48365da670aa30e2c0c52c624bbe8.jpg",
+        "carta3": "src/assets/Seguridad/994b06b87c487fb19dcc8ab31b7426ee.jpg",
+        "carta4": "src/assets/Seguridad/d2fe2e83d3db73a8f54eecb5ed2b2b11.jpg",
+        "carta5": "src/assets/Seguridad/3004083193b0d0c1c373ce63f7962872.jpg"
       }
     }
   },
@@ -780,10 +780,10 @@
       "Contenido": {
         "logo": "src/assets/ImagenesGenerales/Logo-Liderman2.svg",
         "Fondo": "src/assets/Servicio/fondo-servicios.png",
-        "ImagenDelCostado": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
+        "ImagenDelCostado": "src/assets/Servicio/Imagen-facilities.png"
       },
       "es": {
-        "Titulo": "Título del Servicio",
+        "Titulo": "Servicios",
         "Texto": "Descripción breve del servicio ofrecido."
       },
       "en": {
@@ -794,7 +794,7 @@
     "TextoTituloEImagen": {
       "Contenido": {
         "Imagen1": "src/assets/Servicio/parking.png",
-        "Imagen2": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
+        "Imagen2": "src/assets/Servicio/554e92e6ec866bbf03de6d44038fff9b.png",
         "Imagen3": "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg"
       },
       "es": {
@@ -843,7 +843,7 @@
         "Titulo": "Facilities",
         "Texto": "Our team ensures impeccable maintenance, focused on hygiene, organization, and space wellbeing."
       }
-    },
+    }, "_comment": "Tengo que modificarlo para que haya textos en la imagen",
     "GridGenerico": {
       "en": {
         "Sector1": {
@@ -896,7 +896,7 @@
       "Common": {
         "logo": "src/assets/ImagenesGenerales/Logo-Liderman2.svg",
         "Fondo": "src/assets/Tecnologia/tecnologia-portada.png",
-        "imagenes1": "src/assets/Tecnologia/tecnologia-portada.png",
+        "imagenes1": "src/assets/Tecnologia/tecnologia-chica.png",
         "imagenes2": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
         "imagenes3": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
         "imagenes4": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
@@ -1028,10 +1028,10 @@
     },
     "CuadriculaDeModals": {
       "Common": {
-        "Fondo1": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
-        "Fondo2": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
-        "Fondo3": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
-        "Fondo4": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg"
+        "Fondo1": "src/assets/Tecnologia/66f988b7eb7722b62baae81a4c1a1463.png",
+        "Fondo2": "src/assets/Tecnologia/f6bc9e4e963f6e16a0720f9c1f986864.jpg",
+        "Fondo3": "src/assets/Tecnologia/9a2c3d0e718a590f094fe5bb01a37e41.jpg",
+        "Fondo4": "src/assets/Tecnologia/3924529e66a322eb4af6bcf534059f17.jpg"
       },
       "es": {
         "Sector1": {
@@ -1122,7 +1122,7 @@
       "Common": {
         "Fondo": "src/assets/Lidermania/lidermania-fondo.png",
         "logo": "src/assets/ImagenesGenerales/Logo-Liderman2.svg",
-        "ImagenDelCostado": ""
+        "ImagenDelCostado": "src/assets/Lidermania/9f91a9d6484d2babecc2143d56e2809d.png"
       },
       "es": {
         "Titulo": "Lidermanía",
@@ -1175,10 +1175,10 @@
         }
       },
       "contenido": {
-        "Imagen1": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
-        "Imagen2": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
-        "Imagen3": "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg",
-        "Imagen4": "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg"
+        "Imagen1": "src/assets/Lidermania/92dd066318dd79582d5efc48bd8a1b56.jpg",
+        "Imagen2": "src/assets/Lidermania/3110e07e7c3f8b698813459e7a4eeaeb.jpg",
+        "Imagen3": "src/assets/Lidermania/dc3873446ce1d893c869ecd622c8207b.jpg",
+        "Imagen4": "src/assets/Lidermania/51ee4d48107f8d348f5f4247762ec23c.jpg"
       }
     }
   }
