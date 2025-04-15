@@ -18,7 +18,6 @@ function CarruselDeTrabajos() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
 
-    // Configuración responsiva
     const getItemsPerView = () => {
         if (windowWidth < 768) return 1;
         if (windowWidth < 1024) return 2;
@@ -28,11 +27,8 @@ function CarruselDeTrabajos() {
     const itemsPerView = getItemsPerView();
     const cardWidth = Math.min(350, windowWidth * 0.8 / itemsPerView);
     const gap = 20;
-
-    // Calculamos el padding necesario para centrar
     const containerPadding = Math.max(20, (windowWidth - (itemsPerView * cardWidth + (itemsPerView - 1) * gap)) / 2);
 
-    // Datos del carrusel
     const carouselData = Array.from({ length: 10000 }, (_, i) => ({
         id: i + 1,
         title: `Título ${i + 1}`,
@@ -62,7 +58,6 @@ function CarruselDeTrabajos() {
         setIsAnimating(true);
         setCurrentIndex(prev => {
             const newIndex = prev + direction;
-            // Lógica circular
             if (newIndex < 0) return carouselData.length - 1;
             if (newIndex >= carouselData.length) return 0;
             return newIndex;
@@ -123,12 +118,14 @@ function CarruselDeTrabajos() {
                     ◀
                 </button>
 
-                <div className={styles.cardsContainer}>
-                    {Array.from({ length: itemsPerView }).map((_, index) => {
-                        const realIndex = (currentIndex + index) % carouselData.length;
-                        const item = carouselData[realIndex];
-                        return <TarjetaTrabajo key={`${realIndex}-${index}`} item={item} />;
-                    })}
+                <div className={styles.cardsWrapper}>
+                    <div className={styles.cardsContainer}>
+                        {Array.from({ length: itemsPerView }).map((_, index) => {
+                            const realIndex = (currentIndex + index) % carouselData.length;
+                            const item = carouselData[realIndex];
+                            return <TarjetaTrabajo key={`${realIndex}-${index}`} item={item} />;
+                        })}
+                    </div>
                 </div>
 
                 <button
