@@ -3,26 +3,114 @@ import { createContext, useContext, useState, useEffect } from "react";
 // 📌 Interfaz completa basada en el JSON
 interface ContentData {
 
-    Lidermania:{
-        HeaderGenerico: {
+    Tecnologia: {
+        Modal1: {
             Common: {
-                Fondo: string;
-                logo: string;
-                ImagenDelCostado: string;
-            },
+                Imagen: string;
+            };
             es: {
                 Titulo: string;
                 Texto: string;
-                Boton1: string;
-                Boton2: string;
-            },
+                BotonCerrar: string;
+            };
             en: {
                 Titulo: string;
                 Texto: string;
-                Boton1: string;
-                Boton2: string;
-            }
-        }
+                BotonCerrar: string;
+            };
+        };
+        Modal2: {
+            Common: {
+                ImagenIzq: string;
+                ImagenDer: string;
+            };
+            es: {
+                Titulo: string;
+                Texto: string;
+                TituloDer: string;
+                TituloIzq: string;
+                TextoDer: string;
+                TextoIzq: string;
+                BotonCerrar: string;
+            };
+            en: {
+                Titulo: string;
+                Texto: string;
+                TituloDer: string;
+                TituloIzq: string;
+                TextoDer: string;
+                TextoIzq: string;
+                BotonCerrar: string;
+            };
+        };
+        Modal3: {
+            Common: {
+                ImagenDerArriba: string;
+                ImagenIzqArriba: string;
+                ImagenDerAbajo: string;
+                ImagenIzqAbajo: string;
+            };
+            es: {
+                Titulo: string;
+                Texto: string;
+                TituloDerArriba: string;
+                TituloIzqArriba: string;
+                TituloDerAbajo: string;
+                TituloIzqAbajo: string;
+                TextoDerArriba: string;
+                TextoIzqArriba: string;
+                TextoDerAbajo: string;
+                TextoIzqAbajo: string;
+                BotonCerrar: string;
+            };
+            en: {
+                Titulo: string;
+                Texto: string;
+                TituloDerArriba: string;
+                TituloIzqArriba: string;
+                TituloDerAbajo: string;
+                TituloIzqAbajo: string;
+                TextoDerArriba: string;
+                TextoIzqArriba: string;
+                TextoDerAbajo: string;
+                TextoIzqAbajo: string;
+                BotonCerrar: string;
+            };
+        };
+        Modal4: {
+            Common: {
+                Imagen1: string;
+                Imagen2: string;
+                Imagen3: string;
+                Imagen4: string;
+            };
+            es: {
+                Titulo: string;
+                Texto: string;
+                Subtitulo1: string;
+                Subtitulo2: string;
+                Subtitulo3: string;
+                Subtitulo4: string;
+                Texto1: string;
+                Texto2: string;
+                Texto3: string;
+                Texto4: string;
+                BotonCerrar: string;
+            };
+            en: {
+                Titulo: string;
+                Texto: string;
+                Subtitulo1: string;
+                Subtitulo2: string;
+                Subtitulo3: string;
+                Subtitulo4: string;
+                Texto1: string;
+                Texto2: string;
+                Texto3: string;
+                Texto4: string;
+                BotonCerrar: string;
+            };
+        };
     }
 
 }

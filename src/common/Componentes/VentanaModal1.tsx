@@ -1,8 +1,19 @@
 import { useState } from "react";
 import styles from "../css/VentanaModal1.module.css";
+import { useContent } from "./Sistemas/useContent.tsx"; // Importa el hook del ContentProvider
+import { useLanguage } from "./Sistemas/LanguageContext.tsx"; // Importa el hook del LanguageProvider
 
 function VentanaModal1() {
     const [isOpen, setIsOpen] = useState(true); // Inicialmente está abierto por defecto
+    const { language } = useLanguage(); // Obtiene el idioma actual
+    const data = useContent(); // Obtiene los datos del contexto
+
+    if (!data) {
+        return <div>Cargando...</div>; // Muestra un mensaje mientras se carga el contenido
+    }
+
+    // Accede a los datos del Modal1 dependiendo del idioma actual
+    const modalData = language === 'es' ? data.Tecnologia.Modal1.es : data.Tecnologia.Modal1.en;
 
     // Función para cerrar el modal
     const closeModal = () => setIsOpen(false);
@@ -22,23 +33,21 @@ function VentanaModal1() {
                     <div className={styles.modal}>
                         {/* Header del modal */}
                         <div className={styles.modalHeader}>
-                            <h5 className={styles.modalTitle}>Título del Panel</h5>
+                            <h5 className={styles.modalTitle}>{modalData.Titulo}</h5>
                         </div>
 
                         {/* Cuerpo del modal */}
                         <div className={styles.modalBody}>
                             {/* Contenedor izquierdo */}
                             <div className={styles.modalBodyLeft}>
-                                <p>Monitorea en tiempo real con nuestro sistema de CCTV P2P, conectado a internet. Obtén respuestas rápidas y precisas para incidentes sin riesgo. garantizando una gestión más eficiente.</p>
-                                <p>Utilizamos una licencia especial de protocolo P2P, que simplifica la instalación al evitar abrir puertos en tu router, brindándote mayor seguridad y facilidad.</p>
-
+                                <p>{modalData.Texto}</p>
                             </div>
 
                             {/* Contenedor derecho */}
                             <div className={styles.modalBodyRight}>
                                 <img
                                     className={styles.modalImage}
-                                    src="src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg"
+                                    src={data.Tecnologia.Modal1.Common.Imagen}
                                     alt="Imagen del modal"
                                 />
                             </div>
@@ -46,7 +55,9 @@ function VentanaModal1() {
 
                         {/* Footer del modal */}
                         <div className={styles.modalFooter}>
-                            <button onClick={closeModal} className={styles.closeButton}>Cerrar</button>
+                            <button onClick={closeModal} className={styles.closeButton}>
+                                {modalData.BotonCerrar}
+                            </button>
                         </div>
                     </div>
                 </div>

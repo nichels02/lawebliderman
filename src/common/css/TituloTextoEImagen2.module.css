@@ -18,7 +18,7 @@
 
 /* Estilos del título */
 .title {
-    font-size: 2rem;
+    font-size: clamp(10px, 2.54vw, 80px);
     font-weight: bold;
     color: #333;
     margin-bottom: 0.5rem;
@@ -27,6 +27,7 @@
 /* Estilo diferente para una parte del título */
 .highlight {
     color: #e63946; /* Color rojo fuerte */
+    font-size: clamp(10px, 3vw, 80px);
     font-weight: bold;
     font-style: italic;
 }

@@ -488,7 +488,7 @@
             "alt": "usa-expansion"
           }
         },
-        "imagenDePunto": ""
+        "imagenDePunto": "src/assets/ImagenesPrueba/alfiler.png"
       },
       "es": {
         "Puntos": {
@@ -1061,29 +1061,136 @@
       },
       "en": {
         "Sector1": {
-          "Titulo": "",
-          "Texto": "",
-          "MasInformacion": "",
-          "TextoOSimboloDeBoton": ""
+          "Titulo": "Video Verification",
+          "Texto": "Integration of video and CCTV P2P system connected to the internet that allows for a more efficient and accurate response to incidents that do not pose a real threat.",
+          "MasInformacion": "More information",
+          "TextoOSimboloDeBoton": "+"
         },
         "Sector2": {
-          "Titulo": "",
-          "Texto": "",
-          "MasInformacion": "",
-          "TextoOSimboloDeBoton": ""
+          "Titulo": "Remote Mirror",
+          "Texto": "Module designed to give our clients control over their accounts connected to the alarm monitoring service: view statuses, listen to audible alerts, send emails, and generate reports.",
+          "MasInformacion": "More information",
+          "TextoOSimboloDeBoton": "+"
         },
         "Sector3": {
-          "Titulo": "",
-          "Texto": "",
-          "MasInformacion": "",
-          "TextoOSimboloDeBoton": ""
+          "Titulo": "Reports and Notifications",
+          "Texto": "To facilitate the management of our alarm system, we consider it important that our clients have means for automatic and personalized reports.",
+          "MasInformacion": "More information",
+          "TextoOSimboloDeBoton": "+"
         },
         "Sector4": {
-          "Titulo": "",
-          "Texto": "",
-          "MasInformacion": "",
-          "TextoOSimboloDeBoton": ""
+          "Titulo": "Panic Button",
+          "Texto": "Virtual SmartPanics is a button that allows the transmission of emergency signals via mobile devices, in addition to providing the precise geographical location of the person activating the event.",
+          "MasInformacion": "More information",
+          "TextoOSimboloDeBoton": "+"
         }
+      }
+    },
+    "Modal1": {
+      "Common": {
+        "Imagen": "src/assets/ImagenesPrueba/Tiktok.svg"
+      },
+      "es": {
+        "Titulo": "Título del Panel",
+        "Texto": "Monitorea en tiempo real con nuestro sistema de CCTV P2P, conectado a internet. Obtén respuestas rápidas y precisas para incidentes sin riesgo, garantizando una gestión más eficiente. Utilizamos una licencia especial de protocolo P2P, que simplifica la instalación al evitar abrir puertos en tu router, brindándote mayor seguridad y facilidad.",
+        "BotonCerrar": "Cerrar"
+      },
+      "en": {
+        "Titulo": "Panel Title",
+        "Texto": "Monitor in real-time with our P2P CCTV system, connected to the internet. Get quick and accurate responses to incidents without risk, ensuring more efficient management. We use a special P2P protocol license, which simplifies installation by avoiding the need to open ports on your router, providing you with greater security and ease.",
+        "BotonCerrar": "Close"
+      }
+    },
+    "Modal2": {
+      "Common": {
+        "ImagenIzq": "src/assets/ImagenesPrueba/Tiktok.svg",
+        "ImagenDer": "src/assets/ImagenesPrueba/Tiktok.svg"
+      },
+      "es": {
+        "Titulo": "Título del Panel",
+        "Texto": "Nuestra plataforma permite a los clientes corporativos gestionar sus cuentas conectadas al servicio de monitoreo de alarmas de Liderman. Accede desde cualquier navegador para revisar el estado de tus cuentas en tiempo real, recibir alertas auditivas, contactar con Liderman y generar reportes personalizados.",
+        "TituloDer": "Título Derecha",
+        "TituloIzq": "Título Izquierda",
+        "TextoDer": "Texto debajo del título derecho.",
+        "TextoIzq": "Texto debajo del título izquierdo.",
+        "BotonCerrar": "Cerrar"
+      },
+      "en": {
+        "Titulo": "Panel Title",
+        "Texto": "Our platform allows corporate clients to manage their accounts connected to the Liderman alarm monitoring service. Access it from any browser to check the status of your accounts in real-time, receive auditory alerts, contact Liderman, and generate custom reports.",
+        "TituloDer": "Right Title",
+        "TituloIzq": "Left Title",
+        "TextoDer": "Text below the right title.",
+        "TextoIzq": "Text below the left title.",
+        "BotonCerrar": "Close"
+      }
+    },
+    "Modal3": {
+      "Common": {
+        "ImagenDerArriba": "src/assets/ImagenesPrueba/facebook.svg",
+        "ImagenIzqArriba": "src/assets/ImagenesPrueba/facebook.svg",
+        "ImagenDerAbajo": "src/assets/ImagenesPrueba/facebook.svg",
+        "ImagenIzqAbajo": "src/assets/ImagenesPrueba/facebook.svg"
+      },
+      "es": {
+        "Titulo": "Título del Panel",
+        "Texto": "Viftual SmartPanics: Información de tus cuentas en la palma de tu mano",
+        "TituloDerArriba": "Título Derecha",
+        "TituloIzqArriba": "Título Izquierda",
+        "TituloDerAbajo": "Título Derecha Inferior",
+        "TituloIzqAbajo": "Título Izquierda Inferior",
+        "TextoDerArriba": "Texto debajo del título derecho.",
+        "TextoIzqArriba": "Texto debajo del título izquierdo.",
+        "TextoDerAbajo": "Texto debajo del título derecho inferior.",
+        "TextoIzqAbajo": "Texto debajo del título izquierdo inferior.",
+        "BotonCerrar": "Cerrar"
+      },
+      "en": {
+        "Titulo": "Panel Title",
+        "Texto": "Viftual SmartPanics: Account information at your fingertips",
+        "TituloDerArriba": "Right Title",
+        "TituloIzqArriba": "Left Title",
+        "TituloDerAbajo": "Right Lower Title",
+        "TituloIzqAbajo": "Left Lower Title",
+        "TextoDerArriba": "Text below the right title.",
+        "TextoIzqArriba": "Text below the left title.",
+        "TextoDerAbajo": "Text below the right lower title.",
+        "TextoIzqAbajo": "Text below the left lower title.",
+        "BotonCerrar": "Close"
+      }
+    },
+    "Modal4": {
+      "Common": {
+        "Imagen1": "src/assets/ImagenesPrueba/facebook.svg",
+        "Imagen2": "src/assets/ImagenesPrueba/facebook.svg",
+        "Imagen3": "src/assets/ImagenesPrueba/facebook.svg",
+        "Imagen4": "src/assets/ImagenesPrueba/facebook.svg"
+      },
+      "es": {
+        "Titulo": "Título del Panel",
+        "Texto": "Nuestra plataforma permite a los clientes corporativos gestionar sus cuentas conectadas al servicio de monitoreo de alarmas de Liderman. Accede desde cualquier navegador para revisar el estado de tus cuentas en tiempo real, recibir alertas auditivas, contactar con Liderman y generar reportes personalizados.",
+        "Subtitulo1": "Monitoreo en Tiempo Real",
+        "Subtitulo2": "Alertas Instantáneas",
+        "Subtitulo3": "Reportes Personalizados",
+        "Subtitulo4": "Soporte 24/7",
+        "Texto1": "Seguimiento continuo de todas tus alarmas conectadas",
+        "Texto2": "Notificaciones inmediatas ante cualquier evento",
+        "Texto3": "Genera documentos detallados en múltiples formatos",
+        "Texto4": "Conexión directa con nuestro equipo técnico",
+        "BotonCerrar": "Cerrar Panel"
+      },
+      "en": {
+        "Titulo": "Panel Title",
+        "Texto": "Our platform allows corporate clients to manage their accounts connected to the Liderman alarm monitoring service. Access from any browser to check the status of your accounts in real-time, receive auditory alerts, contact Liderman, and generate customized reports.",
+        "Subtitulo1": "Real-Time Monitoring",
+        "Subtitulo2": "Instant Alerts",
+        "Subtitulo3": "Custom Reports",
+        "Subtitulo4": "24/7 Support",
+        "Texto1": "Continuous tracking of all your connected alarms",
+        "Texto2": "Immediate notifications for any event",
+        "Texto3": "Generate detailed documents in multiple formats",
+        "Texto4": "Direct connection with our technical team",
+        "BotonCerrar": "Close Panel"
       }
     },
     "CardGrid": {
@@ -1180,6 +1287,22 @@
         "Imagen3": "src/assets/Lidermania/dc3873446ce1d893c869ecd622c8207b.jpg",
         "Imagen4": "src/assets/Lidermania/51ee4d48107f8d348f5f4247762ec23c.jpg"
       }
+    },
+    "TituloTextoEImagen2": {
+      "Common": {
+        "ImagenDelCostado": "src/assets/Lidermania/LIDERMANIA.jpg"
+      },
+      "es": {
+        "Titulo": "Contamos con un equipo dedicado exclusivamente a la protección del /bienestar social/",
+        "Subtitulo": "Somos una empresa formal que cumple todos los beneficios sociales de ley para un correcto funcionamiento.",
+        "Subtitulo2": "Con Liderman tienes la seguridad y orientación de cubrir riesgos como un tercero solidario."
+      },
+      "en": {
+        "Titulo": "We have a team dedicated exclusively to protecting /social well-being/",
+        "Subtitulo": "We are a formal company that complies with all legally mandated social benefits for proper operation.",
+        "Subtitulo2": "With Liderman, you have the security and guidance to cover risks as a solidary third party."
+      }
+
     }
   }
 

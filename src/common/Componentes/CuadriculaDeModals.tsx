@@ -41,7 +41,7 @@ function CuadriculaDeModals() {
             image: commonData.Fondo3,
             moreInfoText: modalData.Sector3.MasInformacion,
             buttonText: modalData.Sector3.TextoOSimboloDeBoton,
-            component: <VentanaModal3 />
+            component: <VentanaModal4 />
         },
         {
             title: modalData.Sector4.Titulo,
@@ -49,7 +49,7 @@ function CuadriculaDeModals() {
             image: commonData.Fondo4,
             moreInfoText: modalData.Sector4.MasInformacion,
             buttonText: modalData.Sector4.TextoOSimboloDeBoton,
-            component: <VentanaModal4 />
+            component: <VentanaModal3 />
         }
     ];
 

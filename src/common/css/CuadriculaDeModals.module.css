@@ -94,7 +94,7 @@
 
 /* Botón */
 .button {
-    background-color: #ffcc00;
+    background-color: var(--color-rojo-general);
     color: black;
     border: none;
     padding: 6px 12px;

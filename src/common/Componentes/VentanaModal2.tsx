@@ -1,13 +1,23 @@
 import { useState } from "react";
+import { useContent } from "./Sistemas/useContent.tsx";  // Asegúrate de que el nombre de la ruta sea el correcto
+import { useLanguage } from "./Sistemas/LanguageContext.tsx";  // Asegúrate de que el nombre de la ruta sea el correcto
 import styles from "../css/VentanaModal2.module.css";
 
 function VentanaModal2() {
-    const [isOpen, setIsOpen] = useState(true); // Inicialmente está abierto por defecto
+    const [isOpen, setIsOpen] = useState(true);
+    const { language } = useLanguage();  // Obtener el idioma actual
+    const content = useContent();  // Obtener los datos del JSON
 
-    // Función para cerrar el modal
+    // Si los datos aún no están disponibles, muestra un mensaje de carga.
+    if (!content) {
+        return <div>Cargando...</div>;
+    }
+
+    // Obtenemos los datos correspondientes para el modal en el idioma actual
+    const modalData = content.Tecnologia.Modal2[language];
+
     const closeModal = () => setIsOpen(false);
 
-    // Función para cerrar el modal al hacer clic fuera del panel
     const handleOverlayClick = (e: React.MouseEvent) => {
         if (e.target === e.currentTarget) {
             closeModal();
@@ -16,43 +26,37 @@ function VentanaModal2() {
 
     return (
         <>
-            {/* Panel */}
             {isOpen && (
                 <div className={styles.modalOverlay} onClick={handleOverlayClick}>
                     <div className={styles.modal}>
-                        {/* Header del modal */}
                         <div className={styles.modalHeader}>
-                            <h5 className={styles.modalTitle}>Título del Panel</h5>
+                            <h5 className={styles.modalTitle}>{modalData.Titulo}</h5>
                         </div>
 
-                        {/* Cuerpo del modal */}
                         <div className={styles.modalBody}>
-                            {/* Contenedor principal */}
                             <div className={styles.mainTextContainer}>
-                                <p className={styles.mainText}>
-
-                                    Nuestra plataforma permite a los clientes corporativos gestionar sus cuentas conectadas al servicio de monitoreo de alarmas de Liderman. Accede desde cualquier navegador para revisar el estado de tus cuentas en tiempo real, recibir alertas auditivas, contactar con Liderman y generar reportes personalizados.</p>
+                                <p className={styles.mainText}>{modalData.Texto}</p>
                             </div>
 
-                            {/* Contenedor izquierdo y derecho */}
                             <div className={styles.row}>
                                 <div className={styles.containerLeft}>
-                                    <img className={styles.image} src="src/assets/Tiktok.svg" alt="Imagen izquierda" />
-                                    <h6 className={styles.title}>Título Izquierda</h6>
-                                    <p className={styles.text}>Texto debajo del título izquierdo.</p>
+                                    <img className={styles.image} src={content.Tecnologia.Modal2.Common.ImagenIzq} alt="Imagen izquierda" />
+                                    <h6 className={styles.title}>{modalData.TituloIzq}</h6>
+                                    <p className={styles.text}>{modalData.TextoIzq}</p>
                                 </div>
 
                                 <div className={styles.containerRight}>
-                                    <img className={styles.image} src="src/assets/Tiktok.svg" alt="Imagen derecha" />
-                                    <h6 className={styles.title}>Título Derecha</h6>
-                                    <p className={styles.text}>Texto debajo del título derecho.</p>
+                                    <img className={styles.image} src={content.Tecnologia.Modal2.Common.ImagenDer} alt="Imagen derecha" />
+                                    <h6 className={styles.title}>{modalData.TituloDer}</h6>
+                                    <p className={styles.text}>{modalData.TextoDer}</p>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Footer del modal */}
                         <div className={styles.modalFooter}>
-                            <button onClick={closeModal} className={styles.closeButton}>Cerrar</button>
+                            <button onClick={closeModal} className={styles.closeButton}>
+                                {modalData.BotonCerrar}
+                            </button>
                         </div>
                     </div>
                 </div>
