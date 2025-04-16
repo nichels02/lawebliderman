@@ -25,7 +25,7 @@ function CuadriculaDeModals() {
             image: commonData.Fondo1,
             moreInfoText: modalData.Sector1.MasInformacion,
             buttonText: modalData.Sector1.TextoOSimboloDeBoton,
-            component: <VentanaModal1 />
+            component: (onClose: () => void) => <VentanaModal1 onClose={onClose} />
         },
         {
             title: modalData.Sector2.Titulo,
@@ -33,7 +33,7 @@ function CuadriculaDeModals() {
             image: commonData.Fondo2,
             moreInfoText: modalData.Sector2.MasInformacion,
             buttonText: modalData.Sector2.TextoOSimboloDeBoton,
-            component: <VentanaModal2 />
+            component: (onClose: () => void) => <VentanaModal2 onClose={onClose} />
         },
         {
             title: modalData.Sector3.Titulo,
@@ -41,7 +41,7 @@ function CuadriculaDeModals() {
             image: commonData.Fondo3,
             moreInfoText: modalData.Sector3.MasInformacion,
             buttonText: modalData.Sector3.TextoOSimboloDeBoton,
-            component: <VentanaModal4 />
+            component: (onClose: () => void) => <VentanaModal4 onClose={onClose} />
         },
         {
             title: modalData.Sector4.Titulo,
@@ -49,7 +49,7 @@ function CuadriculaDeModals() {
             image: commonData.Fondo4,
             moreInfoText: modalData.Sector4.MasInformacion,
             buttonText: modalData.Sector4.TextoOSimboloDeBoton,
-            component: <VentanaModal3 />
+            component: (onClose: () => void) => <VentanaModal3 onClose={onClose} />
         }
     ];
 
@@ -73,7 +73,9 @@ function CuadriculaDeModals() {
                     </div>
                 ))}
             </div>
-            {modalAbierto !== null && modals[modalAbierto].component}
+
+            {/* Renderiza el modal actual con la función onClose */}
+            {modalAbierto !== null && modals[modalAbierto].component(() => setModalAbierto(null))}
         </div>
     );
 }
