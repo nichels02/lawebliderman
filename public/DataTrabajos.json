@@ -4,6 +4,12 @@
     "IconoUbicacion": ""
 
   },
+  "filtrosDisponibles": {
+    "Ubicacion": ["Callao", "Lima", "Zona Norte", "Zona Sur"],
+    "NivelDeEstudios": ["Secundaria", "Tecnico", "Universitario"],
+    "ExperienciaMinimaMeses": ["Sin experiencia", "3 meses", "6 meses", "9 meses", "1 año", "+2 años"],
+    "DisponibilidadLaboral": ["6 horas", "8 horas", "12 horas"]
+  },
   "listaDeTrabajos": [
     {
       "es": {
@@ -33,9 +39,13 @@
       "Common": {
         "Logo": "",
         "Link": ""
+      },
+      "Filtros": {
+        "Ubicacion": "",
+        "NivelDeEstudios": "",
+        "ExperienciaMinimaMeses": 3,
+        "DisponivilidadLaboral": 3
       }
     }
   ]
-
-
 }
