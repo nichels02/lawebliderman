@@ -1,34 +1,26 @@
 import { useState } from "react";
 import styles from "../css/BarraDeBusquedaYFiltros.module.css";
+// Importa el archivo JSON
+import filtrosData from "../../../public/DataTrabajos.json";
 
-const filtros: { titulo: string; opciones: string[] }[] = [
-    {
-        titulo: "Ubicación",
-        opciones: ["Callao", "Lima", "Zona Norte", "Zona Sur"],
-    },
-    {
-        titulo: "Nivel de Estudios",
-        opciones: ["Secundaria", "Técnico", "Universitario"],
-    },
-    {
-        titulo: "Experiencia",
-        opciones: ["Sin experiencia", "3 meses", "6 meses", "9 meses", "1 año", "+2 años"],
-    },
-    {
-        titulo: "Disponibilidad Laboral",
-        opciones: ["6 horas", "8 horas", "12 horas"],
-    },
-];
+// Tipo derivado de la estructura del JSON
+type FiltrosDisponibles = typeof filtrosData.filtrosDisponibles;
 
 function BarraDeBusquedaYFiltros() {
     const [mostrarFiltros, setMostrarFiltros] = useState(false);
-    const [valoresSeleccionados, setValoresSeleccionados] = useState<{ [clave: string]: string }>({});
+    const [valoresSeleccionados, setValoresSeleccionados] = useState<
+        Partial<Record<keyof FiltrosDisponibles, string>>
+    >({});
+
+    // Usamos los filtros desde el JSON importado
+    const filtros: FiltrosDisponibles = filtrosData.filtrosDisponibles;
+    const clavesFiltros = Object.keys(filtros) as (keyof FiltrosDisponibles)[];
 
     const toggleFiltros = () => {
         setMostrarFiltros((prev) => !prev);
     };
 
-    const handleCambioFiltro = (titulo: string, valor: string) => {
+    const handleCambioFiltro = (titulo: keyof FiltrosDisponibles, valor: string) => {
         setValoresSeleccionados((prev) => ({
             ...prev,
             [titulo]: valor,
@@ -53,16 +45,22 @@ function BarraDeBusquedaYFiltros() {
 
             {mostrarFiltros && (
                 <div className={styles.filtrosContenedor}>
-                    {filtros.map((filtro, index) => (
-                        <div key={index} className={styles.filtro}>
-                            <label className={styles.tituloFiltro}>{filtro.titulo}:</label>
+                    {clavesFiltros.map((clave, idx) => (
+                        <div key={idx} className={styles.filtro}>
+                            <label className={styles.tituloFiltro}>
+                                {clave.replace(/([A-Z])/g, " $1").toUpperCase()}:
+                            </label>
                             <select
-                                value={valoresSeleccionados[filtro.titulo] || ""}
-                                onChange={(e) => handleCambioFiltro(filtro.titulo, e.target.value)}
+                                value={valoresSeleccionados[clave] ?? ""}
+                                onChange={(e) => handleCambioFiltro(clave, e.target.value)}
                             >
-                                <option value="" disabled>Selecciona una opción</option>
-                                {filtro.opciones.map((opcion, i) => (
-                                    <option key={i} value={opcion}>{opcion}</option>
+                                <option value="" disabled>
+                                    Selecciona una opción
+                                </option>
+                                {filtros[clave].map((opcion, i) => (
+                                    <option key={i} value={opcion}>
+                                        {opcion}
+                                    </option>
                                 ))}
                             </select>
                         </div>
@@ -70,7 +68,7 @@ function BarraDeBusquedaYFiltros() {
                 </div>
             )}
 
-            {/* Debug temporal: mostrar valores seleccionados */}
+            {/* Para depuración */}
             {/* <pre>{JSON.stringify(valoresSeleccionados, null, 2)}</pre> */}
         </div>
     );
