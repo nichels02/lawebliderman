@@ -95,7 +95,7 @@
 /* Botón */
 .button {
     background-color: var(--color-rojo-general);
-    color: black;
+    color: var(--color-texto-blanco);
     border: none;
     padding: 6px 12px;
     width: 30px;
@@ -111,7 +111,7 @@
 }
 
 .button:hover {
-    background-color: #e6b800;
+    background-color: var(--color-rojo-generalOscuro);
 }
 
 /* Texto pequeño */

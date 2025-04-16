@@ -15,6 +15,7 @@ html, body {
 
 
     --color-texto-negro: #000000;
+    --color-texto-negro2: #232323;
     --color-texto-negro-cambio: #393939;
     --color-texto-negro-cambio2: #232323;
 
@@ -25,13 +26,14 @@ html, body {
     --colorUI: rgba(241, 241, 241,  0.73);
 
 
-    --color-texto-blanco: #ddd;
+    --color-texto-blanco: #f3f3f3;
     --color-texto-blanco-cambio: #ddd;
     --color-texto-blanco-cambio2: #ddd;
 
     --color-texto-blanco-cambio-rojo: #ddd;
 
     --color-rojo-general: #e61717;
+    --color-rojo-generalOscuro: #ac0000;
     --color-rojo-general-cambio: #e61717;
 }
 

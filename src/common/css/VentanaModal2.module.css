@@ -30,7 +30,7 @@
 
 /* Header del modal */
 .modalHeader {
-    background-color: #007bff;
+    background-color: var(--color-rojo-general);
     color: white;
     padding: 15px;
     display: flex;
@@ -48,10 +48,9 @@
 /* Cuerpo del modal */
 .modalBody {
     padding: 20px;
-    background-color: #f4f4f4;
     color: #333;
     flex-grow: 1;
-    overflow: auto;
+    overflow: hidden;
 }
 
 /* Contenedor principal de texto */
@@ -64,9 +63,8 @@
 .mainText {
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #333;
+    color: var(--color-texto-negro2);
     padding: 10px;
-    background-color: #e9ecef;
     border-radius: 5px;
 }
 
@@ -80,42 +78,45 @@
 .containerLeft,
 .containerRight {
     width: 48%; /* Cada uno toma el 48% del ancho */
-    background-color: #fff;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    /* O: */
+    justify-content: flex-start; /* Si el problema es en el eje vertical */
 
     /* Usamos flexbox para centrar los elementos dentro de los contenedores */
     display: flex;
     flex-direction: column; /* Organiza los elementos verticalmente */
     align-items: center; /* Centra los elementos en el eje horizontal */
-    justify-content: center; /* Centra los elementos en el eje vertical */
+    /*justify-content: center; /* Centra los elementos en el eje vertical */
 }
 
 .containerLeft img,
 .containerRight img {
     background: black;
-    width: 20%; /* Imagen ocupa todo el ancho del contenedor */
-    height: auto;
+    width: auto; /* Imagen ocupa todo el ancho del contenedor */
+    height: 50%;
     border-radius: 8px;
 }
 
 .title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #007bff;
-    margin-top: 10px;
+    font-size:clamp(14px, 1.5vw, 40px) ;
+    font-weight: normal;
+    padding-top: 25px;
+    color: var(--color-texto-negro);
+    margin: 0;
 }
 
 .text {
-    font-size: 1rem;
+    font-size:clamp(14px, 1.2vw, 40px);
     color: #555;
-    margin-top: 10px;
+    margin-top: 0;
+    padding-top: 5px;
+    text-align: center;
 }
 
 /* Footer del modal */
 .modalFooter {
-    background-color: #cc6969; /* Fondo gris más oscuro */
     padding: 10px;
     display: flex;
     justify-content: center; /* Centra el contenido horizontalmente */
@@ -129,7 +130,7 @@
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
-    background-color: #007bff; /* Fondo azul */
+    background-color: var(--color-rojo-general); /* Fondo azul */
     color: white; /* Texto blanco */
     border: none;
     border-radius: 5px;
@@ -138,5 +139,5 @@
 }
 
 .closeButton:hover {
-    background-color: #0056b3;
+    background-color: var(--color-rojo-generalOscuro);
 }

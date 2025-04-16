@@ -38,13 +38,15 @@ function VentanaModal2({ onClose }: { onClose: () => void }) {
                             <div className={styles.containerLeft}>
                                 <img className={styles.image} src={content.Tecnologia.Modal2.Common.ImagenIzq} alt="Imagen izquierda" />
                                 <h6 className={styles.title}>{modalData.TituloIzq}</h6>
-                                <p className={styles.text}>{modalData.TextoIzq}</p>
+                                <div className={styles.text}>{modalData.TextoIzq}</div>
+
                             </div>
 
                             <div className={styles.containerRight}>
                                 <img className={styles.image} src={content.Tecnologia.Modal2.Common.ImagenDer} alt="Imagen derecha" />
                                 <h6 className={styles.title}>{modalData.TituloDer}</h6>
-                                <p className={styles.text}>{modalData.TextoDer}</p>
+                                <div className={styles.text}>{modalData.TextoDer}</div>
+
                             </div>
                         </div>
                     </div>

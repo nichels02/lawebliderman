@@ -1109,10 +1109,10 @@
       "es": {
         "Titulo": "Título del Panel",
         "Texto": "Nuestra plataforma permite a los clientes corporativos gestionar sus cuentas conectadas al servicio de monitoreo de alarmas de Liderman. Accede desde cualquier navegador para revisar el estado de tus cuentas en tiempo real, recibir alertas auditivas, contactar con Liderman y generar reportes personalizados.",
-        "TituloDer": "Título Derecha",
-        "TituloIzq": "Título Izquierda",
-        "TextoDer": "Texto debajo del título derecho.",
-        "TextoIzq": "Texto debajo del título izquierdo.",
+        "TituloDer": "Reporte historico",
+        "TituloIzq": "Recepción de evento",
+        "TextoDer": "Permite obtener un informe de todos los eventos recibidos.",
+        "TextoIzq": "Permite recibir todos los eventos del cliente en forma automática. incluyendo las alarmas de forma sonora.",
         "BotonCerrar": "Cerrar"
       },
       "en": {
@@ -1135,14 +1135,14 @@
       "es": {
         "Titulo": "Título del Panel",
         "Texto": "Viftual SmartPanics: Información de tus cuentas en la palma de tu mano",
-        "TituloDerArriba": "Título Derecha",
-        "TituloIzqArriba": "Título Izquierda",
-        "TituloDerAbajo": "Título Derecha Inferior",
-        "TituloIzqAbajo": "Título Izquierda Inferior",
-        "TextoDerArriba": "Texto debajo del título derecho.",
-        "TextoIzqArriba": "Texto debajo del título izquierdo.",
-        "TextoDerAbajo": "Texto debajo del título derecho inferior.",
-        "TextoIzqAbajo": "Texto debajo del título izquierdo inferior.",
+        "TituloDerArriba": "Incendio",
+        "TituloIzqArriba": "SOS Pánico",
+        "TituloDerAbajo": "En camino",
+        "TituloIzqAbajo": "Asistencia",
+        "TextoDerArriba": "Envía un evento de fuego a la central de monitoreo.",
+        "TextoIzqArriba": "Envía un evento de Pánico a la central de monitoreo.",
+        "TextoDerAbajo": "Define el tiempo de llegada a un determinado lugar y genera una alerta en caso el tiempo se agote.",
+        "TextoIzqAbajo": "Envia un pedido de asistencia o evento de alarma médica a la central de monitoreo.",
         "BotonCerrar": "Cerrar"
       },
       "en": {
@@ -1167,16 +1167,16 @@
         "Imagen4": "src/assets/ImagenesPrueba/facebook.svg"
       },
       "es": {
-        "Titulo": "Título del Panel",
-        "Texto": "Nuestra plataforma permite a los clientes corporativos gestionar sus cuentas conectadas al servicio de monitoreo de alarmas de Liderman. Accede desde cualquier navegador para revisar el estado de tus cuentas en tiempo real, recibir alertas auditivas, contactar con Liderman y generar reportes personalizados.",
-        "Subtitulo1": "Monitoreo en Tiempo Real",
-        "Subtitulo2": "Alertas Instantáneas",
-        "Subtitulo3": "Reportes Personalizados",
-        "Subtitulo4": "Soporte 24/7",
-        "Texto1": "Seguimiento continuo de todas tus alarmas conectadas",
-        "Texto2": "Notificaciones inmediatas ante cualquier evento",
-        "Texto3": "Genera documentos detallados en múltiples formatos",
-        "Texto4": "Conexión directa con nuestro equipo técnico",
+        "Titulo": "Reportes y notificaciones",
+        "Texto": "Queremos que tengas acceso a reportes automáticos y personalizados, diseñados para brindarte información precisa y relevante en todo momento.",
+        "Subtitulo1": "Notificaciones Push mediante",
+        "Subtitulo2": "Notificacaciones mediante",
+        "Subtitulo3": "notificaciones mediante",
+        "Subtitulo4": "Reportes de gestión",
+        "Texto1": "nuestra aplicación SmartPanics",
+        "Texto2": "correo electronico",
+        "Texto3": "SMS",
+        "Texto4": "dashboard de control",
         "BotonCerrar": "Cerrar Panel"
       },
       "en": {

@@ -30,7 +30,7 @@
 
 /* Header del modal */
 .modalHeader {
-    background-color: #007bff; /* Fondo azul */
+    background-color: var(--color-rojo-general); /* Fondo azul */
     color: white; /* Texto blanco */
     padding: 15px;
     display: flex;
@@ -48,7 +48,7 @@
 /* Cuerpo del modal */
 .modalBody {
     padding: 20px;
-    background-color: #979746; /* Fondo gris claro */
+    background-color: var(--color-texto-blanco); /* Fondo gris claro */
     color: #333; /* Texto oscuro para legibilidad */
     flex-grow: 1; /* El cuerpo se expandirá para llenar el espacio disponible */
     display: flex; /* Flexbox para alinear los elementos dentro */
@@ -95,7 +95,7 @@
 
 /* Footer del modal */
 .modalFooter {
-    background-color: #cc6969; /* Fondo gris más oscuro */
+    background-color: var(--color-texto-blanco); /* Fondo gris más oscuro */
     padding: 10px;
     display: flex;
     justify-content: center; /* Centra el contenido horizontalmente */
@@ -109,7 +109,7 @@
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
-    background-color: #007bff; /* Fondo azul */
+    background-color: var(--color-rojo-general); /* Fondo azul */
     color: white; /* Texto blanco */
     border: none;
     border-radius: 5px;
@@ -118,5 +118,5 @@
 }
 
 .closeButton:hover {
-    background-color: #0056b3; /* Azul más oscuro cuando se pasa el cursor */
+    background-color: var(--color-rojo-generalOscuro); /* Azul más oscuro cuando se pasa el cursor */
 }
