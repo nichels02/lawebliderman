@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useContent } from '../common/Componentes/Sistemas/useContent.tsx';
 import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx';
 import HeaderGenerico from '../common/Componentes/HeaderGenerico.tsx';
@@ -6,10 +7,12 @@ import TituloTextoEImagen2 from "../common/Componentes/TituloTextoEImagen2.tsx";
 import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
 import CarruselDeTrabajos from "../common/Componentes/CarruselDeTrabajos.tsx";
 import BarraDeBusquedaYFiltros from "../common/Componentes/BarraDeBusquedaYFiltros.tsx";
+import { Trabajo } from '../common/Componentes/Sistemas/trabajos.interface.ts'; // Asegúrate de tener esta ruta bien
 
 function Lidermania() {
     const content = useContent();
     const { language } = useLanguage();
+    const [trabajosFiltrados, setTrabajosFiltrados] = useState<Trabajo[]>([]);
 
     if (!content) {
         return <div>Loading...</div>;
@@ -32,8 +35,11 @@ function Lidermania() {
                 onButton2Click={() => console.log("Contratar servicio")}
             />
             <DonaRotativa2 />
-            <BarraDeBusquedaYFiltros />
-            <CarruselDeTrabajos />
+
+            <BarraDeBusquedaYFiltros onBuscar={setTrabajosFiltrados} />
+
+            <CarruselDeTrabajos trabajos={trabajosFiltrados} />
+
             <TituloTextoEImagen2 />
             <FormularioDeContacto />
         </>

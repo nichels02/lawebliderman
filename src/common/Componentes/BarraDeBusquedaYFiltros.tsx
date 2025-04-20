@@ -1,28 +1,36 @@
 import { useEffect, useState } from "react";
 import styles from "../css/BarraDeBusquedaYFiltros.module.css";
+import { JSONDatosTrabajos, Trabajo } from "./Sistemas/trabajos.interface.ts"; // Ajusta la ruta si es necesario
 
-// Tipado para los datos del JSON
 interface FiltrosDisponibles {
     [clave: string]: string[];
 }
 
-function BarraDeBusquedaYFiltros() {
+interface Props {
+    onBuscar: (trabajosFiltrados: Trabajo[]) => void;
+}
+
+function BarraDeBusquedaYFiltros({ onBuscar }: Props) {
     const [mostrarFiltros, setMostrarFiltros] = useState(false);
     const [filtros, setFiltros] = useState<FiltrosDisponibles>({});
     const [valoresSeleccionados, setValoresSeleccionados] = useState<
         Partial<Record<string, string>>
     >({});
+    const [textoBusqueda, setTextoBusqueda] = useState("");
+    const [todosLosTrabajos, setTodosLosTrabajos] = useState<Trabajo[]>([]);
 
     useEffect(() => {
         fetch("/DataTrabajos.json")
             .then((res) => res.json())
-            .then((data) => {
+            .then((data: JSONDatosTrabajos) => {
                 setFiltros(data.filtrosDisponibles);
+                setTodosLosTrabajos(data.listaDeTrabajos);
+                onBuscar(data.listaDeTrabajos); // Mostrar todos al inicio
             })
             .catch((error) => {
-                console.error("Error al cargar filtros:", error);
+                console.error("Error al cargar datos:", error);
             });
-    }, []);
+    }, [onBuscar]);
 
     const toggleFiltros = () => {
         setMostrarFiltros((prev) => !prev);
@@ -35,6 +43,23 @@ function BarraDeBusquedaYFiltros() {
         }));
     };
 
+    const handleBuscar = () => {
+        const trabajosFiltrados = todosLosTrabajos.filter((trabajo) => {
+            // Filtros por campo exacto
+            const coincideConFiltros = Object.entries(valoresSeleccionados).every(
+                ([clave, valor]) => trabajo.Filtros[clave as keyof typeof trabajo.Filtros] === valor
+            );
+
+            // Búsqueda textual por título (en español)
+            const coincideConBusqueda =
+                trabajo.es.Titulo.toLowerCase().includes(textoBusqueda.toLowerCase());
+
+            return coincideConFiltros && coincideConBusqueda;
+        });
+
+        onBuscar(trabajosFiltrados);
+    };
+
     return (
         <div className={styles.contenedorPrincipal}>
             <div className={styles.filaSuperior}>
@@ -43,8 +68,12 @@ function BarraDeBusquedaYFiltros() {
                         type="text"
                         placeholder="Buscar..."
                         className={styles.input}
+                        value={textoBusqueda}
+                        onChange={(e) => setTextoBusqueda(e.target.value)}
                     />
-                    <button className={styles.botonBuscar}>🔍</button>
+                    <button className={styles.botonBuscar} onClick={handleBuscar}>
+                        🔍
+                    </button>
                 </div>
                 <button className={styles.botonFiltros} onClick={toggleFiltros}>
                     Filtros

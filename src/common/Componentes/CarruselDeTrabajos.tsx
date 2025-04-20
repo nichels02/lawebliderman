@@ -1,19 +1,15 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../css/CarruselDeTrabajos.module.css';
+import { Trabajo } from './Sistemas/trabajos.interface';
+import { useLanguage } from './Sistemas/LanguageContext.tsx'; // <-- Importar contexto de idioma
 
-interface CarouselItem {
-    id: number;
-    title: string;
-    ubicacion: string;
-    imagenUbicacion: string;
-    descripcion: string[];
-    masInformacion: string;
-    imagenMasInformacion: string;
-    link: string;
+interface CarruselDeTrabajosProps {
+    trabajos: Trabajo[];
 }
 
-function CarruselDeTrabajos() {
+function CarruselDeTrabajos({ trabajos }: CarruselDeTrabajosProps) {
+    const { language } = useLanguage(); // <-- Obtener idioma actual
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState(0);
@@ -29,23 +25,6 @@ function CarruselDeTrabajos() {
     const gap = 20;
     const containerPadding = Math.max(20, (windowWidth - (itemsPerView * cardWidth + (itemsPerView - 1) * gap)) / 2);
 
-    const carouselData = Array.from({ length: 10000 }, (_, i) => ({
-        id: i + 1,
-        title: `Título ${i + 1}`,
-        ubicacion: "Callao",
-        imagenUbicacion: "https://cdn-icons-png.flaticon.com/512/2776/2776067.png",
-        descripcion: [
-            "• Secundaria completa certificada o C4.",
-            "• Curso sucamec vigente (deseable), en caso no esté vigente Liderman te capacita.",
-            "• Experiencia mínima de 03 meses como Agente de Seguridad (certificada).",
-            "• Disponibilidad para laborar 12 horas rotativas.",
-            "• Disponibilidad para laborar en Callao."
-        ],
-        masInformacion: "Más información",
-        imagenMasInformacion: "https://cdn-icons-png.flaticon.com/512/1384/1384062.png",
-        link: `https://ejemplo.com/oferta-${i + 1}`
-    }));
-
     useEffect(() => {
         const handleResize = () => setWindowWidth(window.innerWidth);
         window.addEventListener('resize', handleResize);
@@ -58,8 +37,8 @@ function CarruselDeTrabajos() {
             const increment = newDirection * itemsPerView;
             const newIndex = prev + increment;
 
-            if (newIndex < 0) return carouselData.length - itemsPerView;
-            if (newIndex >= carouselData.length) return 0;
+            if (newIndex < 0) return trabajos.length - itemsPerView;
+            if (newIndex >= trabajos.length) return 0;
             return newIndex;
         });
     };
@@ -68,69 +47,69 @@ function CarruselDeTrabajos() {
         enter: (direction: number) => ({
             x: direction > 0 ? (cardWidth + gap) * itemsPerView : -(cardWidth + gap) * itemsPerView,
             opacity: 0,
-            transition: {
-                delay: 0,
-                duration: 0.3
-            }
+            transition: { duration: 0.3 }
         }),
         center: {
             x: 0,
             opacity: 1,
-            transition: {
-                duration: 0.3
-            }
+            transition: { duration: 0.3 }
         },
         exit: (direction: number) => ({
             x: direction < 0 ? (cardWidth + gap) * itemsPerView : -(cardWidth + gap) * itemsPerView,
             opacity: 0,
-            transition: {
-                duration: 0.4
-            }
+            transition: { duration: 0.4 }
         })
     };
 
-    const TarjetaTrabajo = ({ item, custom }: { item: CarouselItem; custom: number }) => (
-        <motion.div
-            className={styles.card}
-            style={{ width: `${cardWidth}px` }}
-            custom={custom}
-            variants={itemVariants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            whileHover={{
-                boxShadow: "0 15px 30px rgba(0, 0, 0, 0.5)",
-            }}
-        >
-            <h3 className={styles.title}>{item.title}</h3>
-            <div className={styles.location}>
-                <img
-                    src={item.imagenUbicacion}
-                    alt="Ubicación"
-                    className={styles.locationIcon}
-                />
-                <span>{item.ubicacion}</span>
-            </div>
-            <ul className={styles.description}>
-                {item.descripcion.map((desc, i) => (
-                    <li key={i} className={styles.descriptionItem}>{desc}</li>
-                ))}
-            </ul>
-            <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
+    const TarjetaTrabajo = ({ item, custom }: { item: Trabajo; custom: number }) => {
+        const datos = item[language]; // <-- Acceder a datos en el idioma correcto
+        return (
+            <motion.div
+                className={styles.card}
+                style={{ width: `${cardWidth}px` }}
+                custom={custom}
+                variants={itemVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                whileHover={{
+                    boxShadow: "0 15px 30px rgba(0, 0, 0, 0.5)",
+                }}
             >
-                {item.masInformacion}
-                <img
-                    src={item.imagenMasInformacion}
-                    alt="Más información"
-                    className={styles.linkIcon}
-                />
-            </a>
-        </motion.div>
-    );
+                <h3 className={styles.title}>{datos.Titulo}</h3>
+                <div className={styles.location}>
+                    <img
+                        src={item.Common.Logo}
+                        alt="Ubicación"
+                        className={styles.locationIcon}
+                    />
+                    <span>{datos.Ubicacion}</span>
+                </div>
+                <ul className={styles.description}>
+                    {datos.Descripcion.map((desc, i) => (
+                        <li key={i} className={styles.descriptionItem}>{desc}</li>
+                    ))}
+                </ul>
+                <a
+                    href={item.Common.Link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.link}
+                >
+                    {datos.MasInformacion}
+                    <img
+                        src={item.Common.Logo}
+                        alt="Más información"
+                        className={styles.linkIcon}
+                    />
+                </a>
+            </motion.div>
+        );
+    };
+
+    if (trabajos.length === 0) {
+        return <div className={styles.container}>No hay trabajos disponibles</div>;
+    }
 
     return (
         <div className={styles.container}>
@@ -138,19 +117,14 @@ function CarruselDeTrabajos() {
                 className={styles.navContainer}
                 style={{ padding: `0 ${containerPadding}px` }}
             >
-                <button
-                    className={styles.navButton}
-                    onClick={() => handleNavigation(-1)}
-                >
-                    ◀
-                </button>
+                <button className={styles.navButton} onClick={() => handleNavigation(-1)}>◀</button>
 
                 <div className={styles.cardsWrapper}>
                     <AnimatePresence mode="wait" custom={direction}>
                         <div className={styles.cardsContainer} key={currentIndex}>
                             {Array.from({ length: itemsPerView }).map((_, index) => {
                                 const realIndex = currentIndex + index;
-                                const item = carouselData[realIndex % carouselData.length];
+                                const item = trabajos[realIndex % trabajos.length];
                                 return (
                                     <TarjetaTrabajo
                                         key={`${realIndex}-${currentIndex}`}
@@ -163,12 +137,7 @@ function CarruselDeTrabajos() {
                     </AnimatePresence>
                 </div>
 
-                <button
-                    className={styles.navButton}
-                    onClick={() => handleNavigation(1)}
-                >
-                    ▶
-                </button>
+                <button className={styles.navButton} onClick={() => handleNavigation(1)}>▶</button>
             </div>
         </div>
     );
