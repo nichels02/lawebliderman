@@ -1,26 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../css/BarraDeBusquedaYFiltros.module.css";
-// Importa el archivo JSON
-import filtrosData from "../../../public/DataTrabajos.json";
 
-// Tipo derivado de la estructura del JSON
-type FiltrosDisponibles = typeof filtrosData.filtrosDisponibles;
+// Tipado para los datos del JSON
+interface FiltrosDisponibles {
+    [clave: string]: string[];
+}
 
 function BarraDeBusquedaYFiltros() {
     const [mostrarFiltros, setMostrarFiltros] = useState(false);
+    const [filtros, setFiltros] = useState<FiltrosDisponibles>({});
     const [valoresSeleccionados, setValoresSeleccionados] = useState<
-        Partial<Record<keyof FiltrosDisponibles, string>>
+        Partial<Record<string, string>>
     >({});
 
-    // Usamos los filtros desde el JSON importado
-    const filtros: FiltrosDisponibles = filtrosData.filtrosDisponibles;
-    const clavesFiltros = Object.keys(filtros) as (keyof FiltrosDisponibles)[];
+    useEffect(() => {
+        fetch("/DataTrabajos.json")
+            .then((res) => res.json())
+            .then((data) => {
+                setFiltros(data.filtrosDisponibles);
+            })
+            .catch((error) => {
+                console.error("Error al cargar filtros:", error);
+            });
+    }, []);
 
     const toggleFiltros = () => {
         setMostrarFiltros((prev) => !prev);
     };
 
-    const handleCambioFiltro = (titulo: keyof FiltrosDisponibles, valor: string) => {
+    const handleCambioFiltro = (titulo: string, valor: string) => {
         setValoresSeleccionados((prev) => ({
             ...prev,
             [titulo]: valor,
@@ -45,10 +53,13 @@ function BarraDeBusquedaYFiltros() {
 
             {mostrarFiltros && (
                 <div className={styles.filtrosContenedor}>
-                    {clavesFiltros.map((clave, idx) => (
+                    {Object.keys(filtros).map((clave, idx) => (
                         <div key={idx} className={styles.filtro}>
                             <label className={styles.tituloFiltro}>
-                                {clave.replace(/([A-Z])/g, " $1").toUpperCase()}:
+                                {String(clave)
+                                    .replace(/([A-Z])/g, " $1")
+                                    .toUpperCase()}
+                                :
                             </label>
                             <select
                                 value={valoresSeleccionados[clave] ?? ""}
@@ -67,9 +78,6 @@ function BarraDeBusquedaYFiltros() {
                     ))}
                 </div>
             )}
-
-            {/* Para depuración */}
-            {/* <pre>{JSON.stringify(valoresSeleccionados, null, 2)}</pre> */}
         </div>
     );
 }
