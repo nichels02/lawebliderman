@@ -1,0 +1,361 @@
+/* Estilos generales para el contenedor de la página */
+.contenedorPagina {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    height: 190vh;
+    background: none;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.ImagenFondo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Estilo para el contenedor intermedio */
+.contenedorIntermedio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    width: 90%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.59);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1;
+    padding: 30px;
+    gap: 20px;
+}
+
+.contenidoCentral {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 600px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(76, 189, 51);
+    padding: 5px;
+    max-width: 520px;
+}
+
+/* Imagen lateral */
+.imagenLateral {
+    position: absolute;
+    flex: 1;
+    max-width: 50%;
+    right: 0;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Contenedor inferior */
+.contenedorExtraInferior {
+    margin-top: 0px;
+    height: auto;
+    padding: 20px;
+    background-color: var(--color-rojo-general);
+    border-radius: 15px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.contenedorExtraInferior img {
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Estilos para los textos */
+.textoEncabezado {
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.textoPrincipal {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #ffffff;
+}
+
+.textoSecundario {
+    font-size: 11px;
+    font-weight: lighter;
+    color: #cccccc;
+}
+
+/* Barra superior */
+.barraSuperior {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.barraSuperior button {
+    padding: 6px 12px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.62);
+    backdrop-filter: blur(10px);
+    height: 50px;
+    width: 25%;
+    color: #000000;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.barraSuperior button:hover {
+    background-color: var(--color-rojo-general);
+    color: white;
+}
+
+/* Contenedor principal del formulario */
+.formularioContainer {
+    background-color: rgb(32, 32, 32);
+    padding: 15px;
+    height: 500px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 480px;
+}
+
+/* Encabezado */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.encabezado h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.dropdown {
+    padding: 6px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    color: #ffffff;
+}
+
+/* Estilos para el formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Estructura de columnas */
+.dosColumnas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-size: 10px;
+    margin-bottom: 3px;
+    color: #ffffff;
+}
+
+.campo input {
+    padding: 6px;
+    font-size: 12px;
+    border: 1px solid #ffffff;
+    border-top: none;
+    background: none;
+    border-left: none;
+    border-right: none;
+    color: #ffffff;
+}
+
+/* Estilos para el grupo de checkboxes */
+.checkboxGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    color: #ffffff;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkboxCustom {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.checkbox:checked + .checkboxCustom {
+    background-color: white;
+    box-shadow: 0 0 0 5px #afafaf;
+}
+
+.checkboxGroup label:hover .checkboxCustom {
+    cursor: pointer;
+}
+
+/* Estilo para el área de mensaje */
+.areaMensaje {
+    display: flex;
+    flex-direction: column;
+}
+
+.areaMensaje label {
+    font-size: 10px;
+    margin-bottom: 3px;
+    color: #ffffff;
+}
+
+.areaMensaje textarea {
+    padding: 6px;
+    font-size: 12px;
+    max-height: 120px;
+    border: 1px solid #ddd;
+    background: none;
+    color: #ffffff;
+    resize: vertical;
+}
+
+.contactoYBoton {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para el contacto alternativo */
+.contactoAlternativo {
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.contactoAlternativo p {
+    margin-bottom: 3px;
+}
+
+.contactoAlternativo a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contactoAlternativo a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el botón de enviar */
+.botonEnviarContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.botonEnviar {
+    padding: 8px 14px;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botonEnviar:hover {
+    background-color: var(--color-rojo-general);
+    color:white;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .contenedorIntermedio {
+        flex-direction: column;
+    }
+
+    .imagenLateral {
+        position: relative;
+        max-width: 100%;
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    .barraSuperior {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .formularioContainer {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .dosColumnas {
+        grid-template-columns: 1fr;
+    }
+
+    .campo input,
+    .areaMensaje textarea {
+        font-size: 12px;
+    }
+
+    .botonEnviar {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .contenedorExtraInferior {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .contenedorExtraInferior img {
+        margin: 0 auto;
+    }
+}

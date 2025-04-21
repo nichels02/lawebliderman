@@ -15,6 +15,7 @@ import BarraDeOpcionesRedes from './common/Componentes/BarraDeOpcionesRedes.tsx'
 import Footer from './common/Componentes/Footer.tsx';
 import { LanguageProvider } from './common/Componentes/Sistemas/LanguageContext'; // Importa el LanguageProvider
 import ScrollToTop from "./common/Componentes/Sistemas/ScrollToTop.tsx";
+import FormularioDeContacto2 from "./common/Componentes/FormularioDeContacto2.tsx";
 
 function App() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // ✅ Define si es móvil
@@ -56,6 +57,8 @@ function App() {
                         <Route path="/Tecnologia" element={<Tecnologia />} />
                     </Routes>
 
+                    <FormularioDeContacto2 />
+                    <FormularioDeContacto2 />
                     <Footer />
                 </BrowserRouter>
             </LanguageProvider>
