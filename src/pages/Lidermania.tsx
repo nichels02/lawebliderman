@@ -21,6 +21,9 @@ function Lidermania() {
     const { Common, es, en } = content.Lidermania.HeaderGenerico;
     const currentLang = language === 'es' ? es : en;
 
+    // Obtener el ícono de "no hay trabajos" desde content.Common
+    const noJobsIcon = content.Lidermania.CarruselDeTrabajos.Common.IconoDeNoHayTrabajos || "";
+
     return (
         <>
             <HeaderGenerico
@@ -38,7 +41,7 @@ function Lidermania() {
 
             <BarraDeBusquedaYFiltros onBuscar={setTrabajosFiltrados} />
 
-            <CarruselDeTrabajos trabajos={trabajosFiltrados} />
+            <CarruselDeTrabajos trabajos={trabajosFiltrados} iconoNoHayTrabajos={noJobsIcon} />
 
             <TituloTextoEImagen2 />
             <FormularioDeContacto />

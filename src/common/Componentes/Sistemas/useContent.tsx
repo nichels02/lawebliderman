@@ -1215,6 +1215,11 @@ interface ContentData {
                 Subtitulo2: string;
             }
         }
+        CarruselDeTrabajos: {
+            Common:{
+                IconoDeNoHayTrabajos: string
+            }
+        }
     }
 
 

@@ -2,14 +2,15 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../css/CarruselDeTrabajos.module.css';
 import { Trabajo } from './Sistemas/trabajos.interface';
-import { useLanguage } from './Sistemas/LanguageContext.tsx'; // <-- Importar contexto de idioma
+import { useLanguage } from './Sistemas/LanguageContext.tsx';
 
 interface CarruselDeTrabajosProps {
     trabajos: Trabajo[];
+    iconoNoHayTrabajos: string; // <- añadimos esta prop
 }
 
-function CarruselDeTrabajos({ trabajos }: CarruselDeTrabajosProps) {
-    const { language } = useLanguage(); // <-- Obtener idioma actual
+function CarruselDeTrabajos({ trabajos, iconoNoHayTrabajos }: CarruselDeTrabajosProps) {
+    const { language } = useLanguage();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState(0);
@@ -62,7 +63,7 @@ function CarruselDeTrabajos({ trabajos }: CarruselDeTrabajosProps) {
     };
 
     const TarjetaTrabajo = ({ item, custom }: { item: Trabajo; custom: number }) => {
-        const datos = item[language]; // <-- Acceder a datos en el idioma correcto
+        const datos = item[language];
         return (
             <motion.div
                 className={styles.card}
@@ -108,8 +109,18 @@ function CarruselDeTrabajos({ trabajos }: CarruselDeTrabajosProps) {
     };
 
     if (trabajos.length === 0) {
-        return <div className={styles.container}>No hay trabajos disponibles</div>;
+        return (
+            <div className={styles.container}>
+                <img
+                    src={iconoNoHayTrabajos}
+                    alt="No hay trabajos"
+                    className={styles.noJobsIcon}
+                />
+            </div>
+        );
     }
+
+    const mostrarFlechas = trabajos.length >= itemsPerView;
 
     return (
         <div className={styles.container}>
@@ -117,27 +128,27 @@ function CarruselDeTrabajos({ trabajos }: CarruselDeTrabajosProps) {
                 className={styles.navContainer}
                 style={{ padding: `0 ${containerPadding}px` }}
             >
-                <button className={styles.navButton} onClick={() => handleNavigation(-1)}>◀</button>
+                {mostrarFlechas && (
+                    <button className={styles.navButton} onClick={() => handleNavigation(-1)}>◀</button>
+                )}
 
                 <div className={styles.cardsWrapper}>
                     <AnimatePresence mode="wait" custom={direction}>
                         <div className={styles.cardsContainer} key={currentIndex}>
-                            {Array.from({ length: itemsPerView }).map((_, index) => {
-                                const realIndex = currentIndex + index;
-                                const item = trabajos[realIndex % trabajos.length];
-                                return (
-                                    <TarjetaTrabajo
-                                        key={`${realIndex}-${currentIndex}`}
-                                        item={item}
-                                        custom={direction}
-                                    />
-                                );
-                            })}
+                            {trabajos.slice(currentIndex, currentIndex + itemsPerView).map((item, index) => (
+                                <TarjetaTrabajo
+                                    key={`${index}-${currentIndex}`}
+                                    item={item}
+                                    custom={direction}
+                                />
+                            ))}
                         </div>
                     </AnimatePresence>
                 </div>
 
-                <button className={styles.navButton} onClick={() => handleNavigation(1)}>▶</button>
+                {mostrarFlechas && (
+                    <button className={styles.navButton} onClick={() => handleNavigation(1)}>▶</button>
+                )}
             </div>
         </div>
     );

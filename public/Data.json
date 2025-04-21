@@ -1303,6 +1303,11 @@
         "Subtitulo2": "With Liderman, you have the security and guidance to cover risks as a solidary third party."
       }
 
+    },
+    "CarruselDeTrabajos": {
+      "Common":{
+        "IconoDeNoHayTrabajos": "src/assets/ImagenesPrueba/no-entry_1159417.png"
+      }
     }
   }
 
