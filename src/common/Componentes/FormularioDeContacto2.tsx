@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import styles from '../css/FormularioDeContacto2.module.css';
+import { FormValidatorSingleton } from './Sistemas/FormValidator.ts';
 import imagen from '../../assets/ImagenesPrueba/1920x1080-hd-space-u95406v61bxyrx3s.jpg';
 import imagenLateral from '../../assets/ImagenesPrueba/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg';
 import logoEmpresa from '../../assets/ImagenesPrueba/facebook.svg';
 
 const FormularioDeContacto2 = () => {
-    // Estado inicial basado en la interfaz FormularioContacto
     const [formData, setFormData] = useState({
         nombre: '',
         apellido: '',
@@ -17,56 +17,82 @@ const FormularioDeContacto2 = () => {
             tecnologia: false
         },
         mensaje: '',
-        pais: 'pe' // Valor por defecto para Perú
+        pais: 'pe'
     });
 
-    // Manejador de cambios para inputs normales
+    const [error, setError] = useState<string | null>(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
+        setFormData(prev => ({
+            ...prev,
             [name]: value
-        });
+        }));
     };
 
-    // Manejador de cambios para checkboxes
     const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, checked } = e.target;
-        setFormData({
-            ...formData,
+        setFormData(prev => ({
+            ...prev,
             intereses: {
-                ...formData.intereses,
+                ...prev.intereses,
                 [name]: checked
             }
-        });
+        }));
     };
 
-    // Manejador del envío del formulario
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Datos del formulario:', formData);
-        // Aquí puedes agregar la lógica para enviar los datos a tu API
+        setIsSubmitting(true);
+        setError(null);
+
+        try {
+            const validator = FormValidatorSingleton.getInstance();
+            const validation = validator.validateForm(formData);
+
+            if (!validation.isValid) {
+                setError(validation.errorMessage || 'Error en el formulario');
+                return;
+            }
+
+            // Simulación de envío a API
+            console.log('Enviando datos:', formData);
+            await new Promise(resolve => setTimeout(resolve, 1000)); // Simular delay
+
+            // Reset después de enviar (opcional)
+            setFormData({
+                nombre: '',
+                apellido: '',
+                correo: '',
+                telefono: '',
+                intereses: { seguridad: false, servicios: false, tecnologia: false },
+                mensaje: '',
+                pais: 'pe'
+            });
+
+            alert('Formulario enviado con éxito!');
+
+        } catch {
+            setError('Error al enviar el formulario');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
         <div className={styles.contenedorPagina}>
-            {/* Imagen de fondo */}
             <img src={imagen} alt="Fondo" className={styles.ImagenFondo} />
 
-            {/* Contenedor intermedio */}
             <div className={styles.contenedorIntermedio}>
-                {/* Contenedor central */}
                 <div className={styles.contenidoCentral}>
-                    {/* Botones superiores */}
                     <div className={styles.barraSuperior}>
-                        <button>Botón 1</button>
-                        <button>Botón 2</button>
-                        <button>Botón 3</button>
+                        <button type="button">Botón 1</button>
+                        <button type="button">Botón 2</button>
+                        <button type="button">Botón 3</button>
                     </div>
 
-                    {/* Contenedor del formulario */}
                     <div className={styles.formularioContainer}>
-                        {/* Encabezado */}
                         <div className={styles.encabezado}>
                             <h2>Contáctanos</h2>
                             <select
@@ -82,53 +108,61 @@ const FormularioDeContacto2 = () => {
                         </div>
 
                         <form className={styles.formulario} onSubmit={handleSubmit}>
-                            {/* Fila de inputs en dos columnas */}
+                            {error && (
+                                <div className={styles.errorMessage}>
+                                    {error}
+                                </div>
+                            )}
+
                             <div className={styles.dosColumnas}>
                                 <div className={styles.campo}>
-                                    <label htmlFor="nombre">Nombre</label>
+                                    <label htmlFor="nombre">Nombre*</label>
                                     <input
                                         type="text"
                                         id="nombre"
                                         name="nombre"
                                         value={formData.nombre}
                                         onChange={handleInputChange}
+                                        required
                                     />
                                 </div>
                                 <div className={styles.campo}>
-                                    <label htmlFor="apellido">Apellido</label>
+                                    <label htmlFor="apellido">Apellido*</label>
                                     <input
                                         type="text"
                                         id="apellido"
                                         name="apellido"
                                         value={formData.apellido}
                                         onChange={handleInputChange}
+                                        required
                                     />
                                 </div>
                                 <div className={styles.campo}>
-                                    <label htmlFor="correo">Correo electrónico</label>
+                                    <label htmlFor="correo">Correo electrónico*</label>
                                     <input
                                         type="email"
                                         id="correo"
                                         name="correo"
                                         value={formData.correo}
                                         onChange={handleInputChange}
+                                        required
                                     />
                                 </div>
                                 <div className={styles.campo}>
-                                    <label htmlFor="telefono">Teléfono</label>
+                                    <label htmlFor="telefono">Teléfono*</label>
                                     <input
                                         type="tel"
                                         id="telefono"
                                         name="telefono"
                                         value={formData.telefono}
                                         onChange={handleInputChange}
+                                        required
                                     />
                                 </div>
                             </div>
 
-                            {/* Checkboxes en fila horizontal */}
                             <fieldset className={styles.checkboxGroup}>
-                                <legend>Elige las soluciones de tu interés</legend>
+                                <legend>Elige las soluciones de tu interés*</legend>
                                 <label className={styles.checkboxLabel}>
                                     <input
                                         type="checkbox"
@@ -164,9 +198,8 @@ const FormularioDeContacto2 = () => {
                                 </label>
                             </fieldset>
 
-                            {/* Área de mensaje */}
                             <div className={styles.areaMensaje}>
-                                <label htmlFor="mensaje">Mensaje</label>
+                                <label htmlFor="mensaje">Mensaje*</label>
                                 <textarea
                                     id="mensaje"
                                     name="mensaje"
@@ -174,40 +207,36 @@ const FormularioDeContacto2 = () => {
                                     onChange={handleInputChange}
                                     placeholder="Escríbenos aquí..."
                                     rows={5}
+                                    required
                                 />
                             </div>
 
-                            {/* Sección final de contacto alternativo y botón */}
                             <div className={styles.contactoYBoton}>
-                                {/* Contacto alternativo */}
                                 <div className={styles.contactoAlternativo}>
                                     <p>También nos puedes contactar por:</p>
                                     <a href="mailto:contacto@empresa.com">contacto@empresa.com</a>
                                 </div>
 
-                                {/* Botón enviar */}
                                 <div className={styles.botonEnviarContainer}>
-                                    <button type="submit" className={styles.botonEnviar}>
-                                        Enviar mensaje
+                                    <button
+                                        type="submit"
+                                        className={styles.botonEnviar}
+                                        disabled={isSubmitting}
+                                    >
+                                        {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
                                     </button>
                                 </div>
                             </div>
                         </form>
                     </div>
 
-                    {/* Contenedor extra inferior */}
                     <div className={styles.contenedorExtraInferior}>
-                        {/* Columna 1: Imagen */}
                         <img src={logoEmpresa} alt="Logo de la empresa" />
-
-                        {/* Columna 2: Oficina central */}
                         <div>
                             <p className={styles.textoEncabezado}>Oficina central</p>
                             <p className={styles.textoPrincipal}>(01) 204 5200</p>
                             <p className={styles.textoSecundario}>Anexos 5259-5258-52254</p>
                         </div>
-
-                        {/* Columna 3: Liderman Alarmas */}
                         <div>
                             <p className={styles.textoEncabezado}>Liderman Alarmas</p>
                             <p className={styles.textoPrincipal}>(511) 204 5200</p>
@@ -216,7 +245,6 @@ const FormularioDeContacto2 = () => {
                     </div>
                 </div>
 
-                {/* Imagen lateral derecha */}
                 <img src={imagenLateral} alt="Ilustración" className={styles.imagenLateral} />
             </div>
         </div>

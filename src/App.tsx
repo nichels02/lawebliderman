@@ -58,7 +58,6 @@ function App() {
                     </Routes>
 
                     <FormularioDeContacto2 />
-                    <FormularioDeContacto2 />
                     <Footer />
                 </BrowserRouter>
             </LanguageProvider>
