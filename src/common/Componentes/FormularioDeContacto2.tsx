@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../css/FormularioDeContacto2.module.css';
-import { FormValidatorSingleton } from './Sistemas/FormValidator.ts';
+import { FormValidatorSingleton } from './Sistemas/FormValidator';
 import imagen from '../../assets/ImagenesPrueba/1920x1080-hd-space-u95406v61bxyrx3s.jpg';
 import imagenLateral from '../../assets/ImagenesPrueba/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg';
 import logoEmpresa from '../../assets/ImagenesPrueba/facebook.svg';
@@ -22,6 +22,7 @@ const FormularioDeContacto2 = () => {
 
     const [error, setError] = useState<string | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [success, setSuccess] = useState(false);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -46,21 +47,25 @@ const FormularioDeContacto2 = () => {
         e.preventDefault();
         setIsSubmitting(true);
         setError(null);
+        setSuccess(false);
 
         try {
+            console.log('[Form] Iniciando validación...');
             const validator = FormValidatorSingleton.getInstance();
-            const validation = validator.validateForm(formData);
+            const validation = await validator.validateForm(formData);
+
+            console.log('[Form] Resultado validación:', validation);
 
             if (!validation.isValid) {
+                console.error('[Form] Error de validación:', validation.errorMessage);
                 setError(validation.errorMessage || 'Error en el formulario');
                 return;
             }
 
-            // Simulación de envío a API
-            console.log('Enviando datos:', formData);
-            await new Promise(resolve => setTimeout(resolve, 1000)); // Simular delay
+            console.log('[Form] Validación exitosa, datos enviados al backend');
+            setSuccess(true);
 
-            // Reset después de enviar (opcional)
+            // Reset del formulario
             setFormData({
                 nombre: '',
                 apellido: '',
@@ -73,8 +78,9 @@ const FormularioDeContacto2 = () => {
 
             alert('Formulario enviado con éxito!');
 
-        } catch {
-            setError('Error al enviar el formulario');
+        } catch (err) {
+            console.error('[Form] Error en el proceso:', err);
+            setError('Ocurrió un error al procesar el formulario. Por favor intente nuevamente.');
         } finally {
             setIsSubmitting(false);
         }
@@ -108,11 +114,8 @@ const FormularioDeContacto2 = () => {
                         </div>
 
                         <form className={styles.formulario} onSubmit={handleSubmit}>
-                            {error && (
-                                <div className={styles.errorMessage}>
-                                    {error}
-                                </div>
-                            )}
+                            {error && <div className={styles.errorMessage}>{error}</div>}
+                            {success && <div className={styles.successMessage}>¡Formulario enviado con éxito!</div>}
 
                             <div className={styles.dosColumnas}>
                                 <div className={styles.campo}>

@@ -4,16 +4,21 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 
 
-dotenv.config();
+dotenv.config({ path: './datosDeBaseDeDatos.env' });
+
+console.log('HOST:', process.env.DB_HOST);
+console.log('USER:', process.env.DB_USER);
+console.log('PASS:', process.env.DB_PASSWORD);
+console.log('DB:', process.env.DB_NAME);
+
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-/*
+
 app.use(cors({
-    origin: 'http://www.youtube.com'
+    origin: 'http://localhost:5173' // ← usa el puerto donde corre tu Vite
 }));
-*/
 
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -23,10 +28,12 @@ const db = mysql.createConnection({
 });
 
 db.connect(err => {
+    console.log('llego a backend');
     if (err) {
         console.error('Error conectando a MySQL:', err);
         return;
     }
+    console.log('llego a backend2');
     console.log('Conectado a MySQL ✅');
 });
 
