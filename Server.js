@@ -2,7 +2,7 @@ import express from 'express';
 import mysql from 'mysql2';
 import dotenv from 'dotenv';
 import cors from 'cors';
-
+import enviarCorreo from './enviarCorreo.js'; // Asegúrate de que la ruta sea correcta
 
 dotenv.config({ path: './datosDeBaseDeDatos.env' });
 
@@ -10,7 +10,6 @@ console.log('HOST:', process.env.DB_HOST);
 console.log('USER:', process.env.DB_USER);
 console.log('PASS:', process.env.DB_PASSWORD);
 console.log('DB:', process.env.DB_NAME);
-
 
 const app = express();
 app.use(cors());
@@ -51,6 +50,11 @@ app.post('/clientes', (req, res) => {
             console.error('Error insertando datos:', err);
             return res.status(500).json({ error: 'Error al guardar los datos' });
         }
+
+        // Una vez que el cliente es agregado a la base de datos, se envía el correo
+        const cliente = { nombre, apellido, correo, telefono, seguridad, servicios, tecnologia, ubicacion, mensaje };
+        enviarCorreo(cliente); // Llamamos a la función que envía el correo
+
         res.status(201).json({ message: 'Cliente agregado con éxito', id: result.insertId });
     });
 });
