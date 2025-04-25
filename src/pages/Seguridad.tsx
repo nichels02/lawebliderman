@@ -12,7 +12,6 @@ import HeaderFotosCarrusel from "../common/Componentes/HeaderFotosCarrusel.tsx";
 
 import { useContent } from '../common/Componentes/Sistemas/useContent.tsx'; // Importa el hook del contexto
 import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx';
-import FormularioDeContacto from "../common/Componentes/FormularioDeContacto.tsx";
 
 interface LocalData {
     Sector1: { Titulo: string; Texto: string };
@@ -87,7 +86,6 @@ function Seguridad() {
             />
             <FlechaGiro />
             <GridBarajeable />
-            <FormularioDeContacto/>
         </>
     );
 }

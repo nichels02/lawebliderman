@@ -93,7 +93,6 @@
 
 .containerLeft img,
 .containerRight img {
-    background: black;
     width: auto; /* Imagen ocupa todo el ancho del contenedor */
     height: 50%;
     border-radius: 8px;

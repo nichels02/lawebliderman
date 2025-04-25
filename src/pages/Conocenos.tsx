@@ -2,7 +2,6 @@ import { useContent } from '../common/Componentes/Sistemas/useContent.tsx';
 import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx';
 import HeaderGenerico from '../common/Componentes/HeaderGenerico.tsx';
 import ContenedorScroll from '../common/Componentes/ContenedorScroll.tsx';
-import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
 
 function Conocenos() {
     const content = useContent();
@@ -29,7 +28,6 @@ function Conocenos() {
                 onButton2Click={() => console.log("Contratar servicio")}
             />
             <ContenedorScroll />
-            <FormularioDeContacto />
         </>
     );
 }

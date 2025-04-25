@@ -488,7 +488,7 @@
             "alt": "usa-expansion"
           }
         },
-        "imagenDePunto": "src/assets/ImagenesPrueba/alfiler.png"
+        "imagenDePunto": "src/assets/Conocenos/Elemento.svg"
       },
       "es": {
         "Puntos": {
@@ -920,8 +920,8 @@
     },
     "TextImageSelector": {
       "Common": {
-        "ImagenBoton1": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
-        "ImagenBoton2": "src/assets/1920x1080-aesthetic-glrfk0ntspz3tvxg.jpg",
+        "ImagenBoton1": "src/assets/Tecnologia/559522c18c93fdd3099f4f38b868cb9a3a320960.png",
+        "ImagenBoton2": "src/assets/Tecnologia/63ab4d9c0fc4d068daa25ae5b67765a4aa6f87d6.png",
         "ImagenBoton3": "src/assets/Tecnologia/CCTV.png",
         "ImagenBoton4": "src/assets/Tecnologia/foto-3.png",
         "ImagenBoton5": "src/assets/Tecnologia/foto-6.png",
@@ -1088,7 +1088,7 @@
     },
     "Modal1": {
       "Common": {
-        "Imagen": "src/assets/ImagenesPrueba/Tiktok.svg"
+        "Imagen": "src/assets/Tecnologia/6da6d8f4440045b3fa6f9f18fa19092326cd0794.png"
       },
       "es": {
         "Titulo": "Título del Panel",
@@ -1103,8 +1103,8 @@
     },
     "Modal2": {
       "Common": {
-        "ImagenIzq": "src/assets/ImagenesPrueba/Tiktok.svg",
-        "ImagenDer": "src/assets/ImagenesPrueba/Tiktok.svg"
+        "ImagenIzq": "src/assets/Tecnologia/9.svg",
+        "ImagenDer": "src/assets/Tecnologia/10.svg"
       },
       "es": {
         "Titulo": "Título del Panel",
@@ -1127,10 +1127,10 @@
     },
     "Modal3": {
       "Common": {
-        "ImagenDerArriba": "src/assets/ImagenesPrueba/facebook.svg",
-        "ImagenIzqArriba": "src/assets/ImagenesPrueba/facebook.svg",
-        "ImagenDerAbajo": "src/assets/ImagenesPrueba/facebook.svg",
-        "ImagenIzqAbajo": "src/assets/ImagenesPrueba/facebook.svg"
+        "ImagenDerArriba": "src/assets/Tecnologia/7.svg",
+        "ImagenIzqArriba": "src/assets/Tecnologia/5.svg",
+        "ImagenDerAbajo": "src/assets/Tecnologia/8.svg",
+        "ImagenIzqAbajo": "src/assets/Tecnologia/6.svg"
       },
       "es": {
         "Titulo": "Título del Panel",
@@ -1161,10 +1161,10 @@
     },
     "Modal4": {
       "Common": {
-        "Imagen1": "src/assets/ImagenesPrueba/facebook.svg",
-        "Imagen2": "src/assets/ImagenesPrueba/facebook.svg",
-        "Imagen3": "src/assets/ImagenesPrueba/facebook.svg",
-        "Imagen4": "src/assets/ImagenesPrueba/facebook.svg"
+        "Imagen1": "src/assets/Tecnologia/2.svg",
+        "Imagen2": "src/assets/Tecnologia/1.svg",
+        "Imagen3": "src/assets/Tecnologia/3.svg",
+        "Imagen4": "src/assets/Tecnologia/4.svg"
       },
       "es": {
         "Titulo": "Reportes y notificaciones",
@@ -1195,13 +1195,13 @@
     },
     "CardGrid": {
       "Common": {
-        "ImagenCarta1": "src/assets/Tiktok.svg",
-        "ImagenCarta2": "src/assets/Tiktok.svg",
-        "ImagenCarta3": "src/assets/Tiktok.svg",
-        "ImagenCarta4": "src/assets/Tiktok.svg",
-        "ImagenCarta5": "src/assets/Tiktok.svg",
-        "ImagenCarta6": "src/assets/Tiktok.svg",
-        "ImagenCarta7": "src/assets/Tiktok.svg"
+        "ImagenCarta1": "src/assets/Tecnologia/Recurso 1.svg",
+        "ImagenCarta2": "src/assets/Tecnologia/Recurso 2.svg",
+        "ImagenCarta3": "src/assets/Tecnologia/Recurso 3.svg",
+        "ImagenCarta4": "src/assets/Tecnologia/Recurso 4.svg",
+        "ImagenCarta5": "src/assets/Tecnologia/Recurso 5.svg",
+        "ImagenCarta6": "src/assets/Tecnologia/Recurso 6.svg",
+        "ImagenCarta7": "src/assets/Tecnologia/Recurso 7.svg"
       },
       "es": {
         "Carta1": "Protección contra virus y malwares rasomware y Zero Day-automático.",

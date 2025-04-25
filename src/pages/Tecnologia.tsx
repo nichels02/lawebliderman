@@ -1,7 +1,6 @@
 import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx';
 import { useContent } from '../common/Componentes/Sistemas/useContent.tsx';
 import FlechaGiro from '../common/Componentes/FlechaGiro.tsx';
-import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
 import HeaderCambioDeImagen from "../common/Componentes/HeaderCambioDeImagen.tsx";
 import TextImageSelector from "../common/Componentes/TextImageSelector.tsx";
 import CardGrid from "../common/Componentes/CardGrid.tsx";
@@ -63,7 +62,6 @@ function Tecnologia() {
             <CuadriculaDeModals />
             <CardGrid />
             <FlechaGiro />
-            <FormularioDeContacto />
         </>
     );
 }

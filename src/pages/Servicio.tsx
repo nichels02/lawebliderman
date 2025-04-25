@@ -5,7 +5,6 @@ import HeaderServicio from "../common/Componentes/HeaderServicio";
 import TextoTituloEImagen from "../common/Componentes/TextoTituloEImagen";
 import GridGenerico from "../common/Componentes/GridGenerico";
 import GridBarajeable from "../common/Componentes/gridBarajeable";
-import FormularioDeContacto from "../common/Componentes/FormularioDeContacto";
 
 function Servicio() {
     const content = useContent();
@@ -67,7 +66,6 @@ function Servicio() {
             />
 
             <GridBarajeable />
-            <FormularioDeContacto />
         </>
     );
 }

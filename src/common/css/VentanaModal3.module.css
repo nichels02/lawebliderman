@@ -89,7 +89,6 @@
 
 
 .container img {
-    background: black;
     width: auto; /* Imagen ocupa todo el ancho del contenedor */
     height: clamp(50px, 7vw,200px);
     border-radius: 8px;
