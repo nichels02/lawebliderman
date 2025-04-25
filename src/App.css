@@ -6,8 +6,9 @@ html, body {
     padding: 0; /* Elimina rellenos predeterminados */
 }
 
+
 :root {
-    --color-fondo: #ffffff;
+    --color-fondo: #fbf9f9;
 
 
 

@@ -4,7 +4,8 @@ import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx'
 import HeaderGenerico from '../common/Componentes/HeaderGenerico.tsx';
 import DonaRotativa2 from '../common/Componentes/DonaRotativa2.tsx';
 import TituloTextoEImagen2 from "../common/Componentes/TituloTextoEImagen2.tsx";
-import FormularioDeContacto from '../common/Componentes/FormularioDeContacto.tsx';
+
+
 import CarruselDeTrabajos from "../common/Componentes/CarruselDeTrabajos.tsx";
 import BarraDeBusquedaYFiltros from "../common/Componentes/BarraDeBusquedaYFiltros.tsx";
 import { Trabajo } from '../common/Componentes/Sistemas/trabajos.interface.ts'; // Asegúrate de tener esta ruta bien
@@ -44,7 +45,6 @@ function Lidermania() {
             <CarruselDeTrabajos trabajos={trabajosFiltrados} iconoNoHayTrabajos={noJobsIcon} />
 
             <TituloTextoEImagen2 />
-            <FormularioDeContacto />
         </>
     );
 }
