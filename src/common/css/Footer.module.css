@@ -254,6 +254,9 @@
 
 /* ===== VERSIÓN MÓVIL ===== */
 @media (max-width: 768px) {
+    .footerContainer{
+        height: auto;
+    }
     .topSection {
         flex-direction: column;
         align-items: center;
@@ -339,6 +342,9 @@
 }
 
 @media (max-width: 480px) {
+    .footerContainer{
+        height: auto;
+    }
     .footer {
         padding: 30px 15px;
     }
