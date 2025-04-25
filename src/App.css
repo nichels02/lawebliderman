@@ -5,6 +5,10 @@ html, body {
     margin: 0; /* Elimina márgenes predeterminados */
     padding: 0; /* Elimina rellenos predeterminados */
 }
+/** {*/
+/*    border: 1px solid rgba(255, 0, 0, 0); !* Aplica un borde rojo de 1px a todos los elementos *!*/
+/*    box-sizing: border-box; !* Incluye el borde en el cálculo del tamaño del elemento *!*/
+/*}*/
 
 
 :root {

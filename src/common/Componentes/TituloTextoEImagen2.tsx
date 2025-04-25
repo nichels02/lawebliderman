@@ -30,16 +30,18 @@ function TituloTextoEImagen2() {
     });
 
     return (
-        <div className={styles.container}>
-            <div className={styles.textContainer}>
-                <h2 className={styles.title}>
-                    {renderTitulo}
-                </h2>
-                <p className={styles.text}>{subtitulo}</p>
-                <p className={styles.text}>{subtitulo2}</p>
-            </div>
-            <div className={styles.imageContainer}>
-                <img className={styles.image} src={imagenUrl} alt="Ejemplo" />
+        <div className={styles.parentContainer}> {/* Contenedor padre con estilo propio */}
+            <div className={styles.container}>
+                <div className={styles.textContainer}>
+                    <h2 className={styles.title}>
+                        {renderTitulo}
+                    </h2>
+                    <p className={styles.text}>{subtitulo}</p>
+                    <p className={styles.text}>{subtitulo2}</p>
+                </div>
+                <div className={styles.imageContainer}>
+                    <img className={styles.image} src={imagenUrl} alt="Ejemplo" />
+                </div>
             </div>
         </div>
     );
