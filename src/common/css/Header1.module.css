@@ -1,5 +1,5 @@
 .header {
-    width: 100%;
+    width: 100vw;
     overflow: hidden; /* Evita desbordamientos */
     position: relative; /* Para posicionar correctamente la imagen, textos y logo */
     padding-bottom: 4%; /* Espacio vacío debajo del contenedor padre */
@@ -15,6 +15,8 @@
     width: 100%; /* Ocupa el 100% del ancho del contenedor */
     height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
     display: block; /* Elimina espacios adicionales debajo de la imagen */
+    min-height: 300px;
+    object-fit: cover;
 }
 
 h1, p {
@@ -96,6 +98,7 @@ h1, p {
 
 /* Estilo para el botón secundario */
 .buttonSecondary {
+    width: 30%; /* Ancho relativo al contenedor */
     padding: 1vw 2vw; /* Espaciado interno relativo al contenedor */
     font-size: 1.2vw; /* Tamaño de fuente relativo al contenedor */
     color: var(--color-texto-negro); /* Color del texto */
@@ -134,7 +137,6 @@ h1, p {
 
 /* Estilo para los elementos de la fila superior */
 .gridItemTop {
-    background-color: rgba(55, 255, 0, 0); /* Fondo rojo semitransparente */
     font-weight: bold;
     border-radius: 10px; /* Bordes redondeados */
     font-size: clamp(20px, 4vw, 60px); /* Reducimos el tamaño de fuente para que se ajuste mejor */
@@ -145,7 +147,6 @@ h1, p {
 
 /* Estilo para los elementos de la fila inferior */
 .gridItemBottom {
-    background-color: rgba(28, 28, 158, 0); /* Fondo azul semitransparente */
     font-weight: normal;
     border-radius: 10px; /* Bordes redondeados */
     font-size: clamp(12px, 1vw, 24px); /* Tamaño de fuente relativo al contenedor */
@@ -168,15 +169,15 @@ h1, p {
 
 @media (max-width: 768px) {
     .text1 {
-        font-size: 6vw; /* Aumenta ligeramente el tamaño para mejorar legibilidad */
+        font-size: clamp(18px, 5vw, 35px);
     }
 
     .text2 {
-        font-size: 6.5vw;
+        font-size: clamp(18px, 6vw, 35px);
     }
 
     .text3 {
-        font-size: clamp(12px, 2vw, 24px);
+        font-size: clamp(12px, 1vw, 24px);
     }
 
     .logo {
@@ -188,7 +189,7 @@ h1, p {
         top: 25%;
     }
     .buttonContainer{
-        top: 80%; /* Ajusta la posición vertical según sea necesario */
+        top: clamp(250px, 75%, 270px); /* Ajusta la posición vertical según sea necesario */
         left: 8%;
         width: 50%;
     }
@@ -197,12 +198,65 @@ h1, p {
 
     }
     .centeredBottomContainer{
-        /*bottom: -25px !important;*/
-        width: 70%;
+        bottom: 20px;
+        /*bottom: clamp(-25px, -0.5vw, 0px);*/
+        width: 75%;
+        gap: 0; /* Espacio entre los elementos del grid */
+    }
 
+    .gridItemTop{
+        font-size: clamp(20px, 3vw, 60px);
+    }
+
+    .gridItemBottom{
+        font-size: clamp(12px, 0.8vw, 24px);
     }
 
     .header {
         padding-bottom: 9%; /* Espacio vacío debajo del contenedor padre */
+    }
+}
+
+
+@media (max-width: 600px){
+    .header {
+        padding-bottom: 13%; /* Espacio vacío debajo del contenedor padre */
+    }
+
+
+    .buttonContainer{
+        top: clamp(230px, 80%, 250px); /* Ajusta la posición vertical según sea necesario */
+        left: 8%;
+        width: 50%;
+        height: 23px;
+    }
+
+    .centeredBottomContainer{
+        bottom: clamp(0px, 1%, 10px);
+        width: 85%;
+        gap: 0; /* Espacio entre los elementos del grid */
+    }
+
+    .gridItemTop{
+        font-size: 17px;
+    }
+
+    .gridItemBottom{
+        font-size: 12px;
+    }
+
+
+}
+
+
+@media (max-width: 470px){
+    .header {
+        padding-bottom: 15%; /* Espacio vacío debajo del contenedor padre */
+    }
+    .buttonContainer{
+        top: 70%;
+    }
+    .buttonPrimary,.buttonSecondary{
+        min-width: 75px;
     }
 }
