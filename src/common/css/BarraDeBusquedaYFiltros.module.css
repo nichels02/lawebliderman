@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    width: 100%;
+    width: 100vw;
+    height: auto;
     gap: 1rem;
 }
 
@@ -11,24 +11,28 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    width: 100%;
+    height: clamp( 20px, 10vw, 70px);
+    justify-content: center;
 }
 
 .barra {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    border-radius: 999px;
+    border-radius: 10px;
     padding: 0.1rem 0.6rem;
     background-color: white;
-    width: 400px;
-    height: 28px;
+    width: 70%;
+    height: 100%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative; /* Añadido */
 }
 
 .input {
     border: none;
     outline: none;
-    font-size: 0.9rem;
+    font-size: clamp( 20px, 2vw, 40px);
     flex: 1;
     background: transparent;
     padding: 0 0.4rem;
@@ -42,6 +46,8 @@
     font-size: 1rem;
     padding: 0 0.2rem;
     color: #555;
+    position: absolute; /* Añadido */
+    right: 0; /* Añadido */
 }
 
 .botonFiltros {
@@ -53,9 +59,11 @@
     cursor: pointer;
     font-size: 0.9rem;
     transition: background-color 0.2s;
-    height: 28px;
+    height: 100%;
+    width: 10%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .botonFiltros:hover {
@@ -67,6 +75,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     width: 80%;
+    height: auto;
     background-color: #d5d5d5;
     padding: 1rem;
     border-radius: 8px;
@@ -75,7 +84,7 @@
 
 .filtro label {
     display: block;
-    font-size: 1rem;
+    font-size: clamp(20px, 3vw, 25px);
     margin-bottom: 0.5rem;
     font-weight: 600;
     color: #333;
@@ -83,6 +92,7 @@
 
 .filtro select {
     width: 100%;
+    height: clamp(40px, 4vw, 60px);
     padding: 0.5rem;
     border-radius: 6px;
     border: 1px solid #ccc;
@@ -91,6 +101,7 @@
     color: #444;
     font-weight: 500;
     transition: border-color 0.2s;
+    
 }
 
 .filtro select:focus {
