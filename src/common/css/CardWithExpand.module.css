@@ -10,21 +10,20 @@
     width: 100%;
     height: 600px;
     overflow: hidden;
+    gap: 10px;
 }
 
 /* ====== IMAGENES ====== */
 .imgContainer {
     flex: 1; /* Mantiene el diseño original en pantallas grandes */
     height: 100%;
-    margin-right: 10px;
-    margin-left: 10px;
     cursor: pointer;
     transition: flex-grow 0.3s ease;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 80px; /* Mínimo tamaño colapsado */
+    min-width: 70px; /* Mínimo tamaño colapsado */
 }
 
 .imgContainer.expanded {
@@ -95,6 +94,8 @@
 }
 
 .list li {
+    margin-bottom: 10px;
+    line-height: 1;
     font-size: 15px;
     font-weight: normal;
     white-space: nowrap; /* Evita saltos de línea en los ítems */
@@ -132,10 +133,11 @@
 
     .section {
         height: 500px;
+        gap: 7px;
     }
 
     .imgContainer {
-        min-width: 50px; /* Hace que los elementos colapsados sean más pequeños */
+        min-width: 30px; /* Hace que los elementos colapsados sean más pequeños */
         flex: 0.5;
     }
 
@@ -148,11 +150,6 @@
 
     }
 
-    .imgContainer {
-
-        margin-right: 7px;
-        margin-left: 7px;
-    }
 
     .text {
         font-size: 22px;
@@ -168,7 +165,7 @@
     }
 
     .list li {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .subtitle {
@@ -181,3 +178,87 @@
     }
 }
 
+
+
+
+@media (max-width: 500px){
+    .section {
+        height: 350px;
+    }
+    .list li {
+        font-size: 12px;
+        max-width: 80%;
+        white-space: normal;
+        overflow-wrap: break-word; /* Hace que el texto se divida si es muy largo */
+        word-break: break-word;    /* Asegura cortes en palabras muy largas */
+    }
+}
+
+@media (max-width: 450px){
+    .text {
+        font-size: 16px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+    .leftText {
+        width: 60%;
+    }
+    .list{
+        width: 100%;
+    }
+    .list li {
+        /*background: red;*/
+        overflow-wrap: break-word; /* Hace que el texto se divida si es muy largo */
+        word-break: break-word;    /* Asegura cortes en palabras muy largas */
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        font-size: 12px;
+        white-space: normal;
+    }
+    .section {
+        max-width: 100%;
+        gap: 3px;
+    }
+    .imgContainer {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 30px; /* O el mínimo que quieras */
+        min-width: 0;
+        width: 10px; /* O el ancho mínimo que prefieras */
+    }
+    .imgContainer.expanded {
+        flex-grow: 1; /* Solo el expandido crece */
+        flex-basis: auto; /* Deja que use el espacio restante */
+    }
+    .img{
+        min-width: 0;
+    }
+
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 370px){
+    .imgContainer.expanded {
+        max-width: 300px;
+    }
+}
+@media (max-width: 360px){
+    .imgContainer.expanded {
+        max-width: 250px;
+    }
+}
+@media (max-width: 340px){
+    .imgContainer.expanded {
+        max-width: 240px;
+    }
+}
+@media (max-width: 330px){
+    .imgContainer.expanded {
+        max-width: 230px;
+    }
+}
