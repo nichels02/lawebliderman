@@ -126,6 +126,48 @@
 
 
 /* ====== MEDIA QUERIES PARA MÓVILES ====== */
+
+
+@media (min-width: 1601px) {
+    .section{
+        justify-content: center; /* Centra hijos horizontalmente */
+    }
+    .imgContainer {
+        max-width: 300px; /* Hace que los elementos colapsados sean más pequeños */
+        flex: 0.5;
+    }
+
+    .imgContainer.expanded {
+        max-width: 1600px;
+        flex-grow: 6; /* Expande más en móviles */
+    }
+    .text {
+        font-size: clamp(35px,3vw,70px);
+    }
+    .list li {
+        font-size: clamp(18px, 1.5vw, 30px);
+    }
+    .subtitle {
+        font-size: clamp(25px, 2vw, 70px);
+    }
+    .exploreButton {
+        font-size: 30px;
+    }
+}
+@media (max-width: 1600px){
+    .text {
+        font-size: clamp(35px,3vw,300px);
+    }
+    .list li {
+        font-size: clamp(18px, 1.5vw, 100px);
+    }
+    .subtitle {
+        font-size: clamp(25px, 2vw, 100px);
+    }
+    .exploreButton {
+        font-size: 30px;
+    }
+}
 @media (max-width: 768px) {
     .container {
         width: 100%;
@@ -152,7 +194,7 @@
 
 
     .text {
-        font-size: 22px;
+        font-size: 28px;
     }
 
     .leftText {
@@ -165,11 +207,15 @@
     }
 
     .list li {
-        font-size: 12px;
+        font-size: 20px;
+        width: 80%;
+        white-space: normal;
+        overflow-wrap: break-word; /* Hace que el texto se divida si es muy largo */
+        word-break: break-word;    /* Asegura cortes en palabras muy largas */
     }
 
     .subtitle {
-        font-size: 18px;
+        font-size: 28px;
     }
 
     .exploreButton {
@@ -188,9 +234,6 @@
     .list li {
         font-size: 12px;
         max-width: 80%;
-        white-space: normal;
-        overflow-wrap: break-word; /* Hace que el texto se divida si es muy largo */
-        word-break: break-word;    /* Asegura cortes en palabras muy largas */
     }
 }
 
