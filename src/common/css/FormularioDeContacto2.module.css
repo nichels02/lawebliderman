@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     padding: 15px;
-    height: 190vh;
+    height: 90vw;
+    width: 100vw;
     background: none;
     position: relative;
     align-items: center;
@@ -38,16 +39,21 @@
 
 /* Estilo para el contenedor intermedio */
 .contenedorIntermedio {
+    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
+    /*max-width: 1728px;*/
+    /*max-height: 1008px;*/
     width: 90%;
     height: 80%;
-    background: rgba(0, 0, 0, 0.59);
+    background: rgba(122, 122, 122, 0.59);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
+    bottom: 5%;
     z-index: 1;
     padding: 30px;
     gap: 20px;
@@ -56,78 +62,179 @@
 .contenidoCentral {
     position: relative;
     z-index: 1;
-    width: 100%;
-    height: 600px;
-    bottom: 20px;
+    width: 50%;
+    height: 90%;
+    left: 10px;
+    bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(76, 189, 51);
-    padding: 5px;
-    max-width: 520px;
+    /*background: rgba(76, 189, 51, 0.54);*/
+    padding: 20px;
+    max-width: 900px;
 }
 
 /* Imagen lateral */
 .imagenLateral {
     position: absolute;
     flex: 1;
-    max-width: 50%;
-    right: 0;
-    height: 50%;
+    right: -200px;
+    height: 80%;
     object-fit: cover;
     border-radius: 10px;
 }
 
 /* Contenedor inferior */
 .contenedorExtraInferior {
-    margin-top: 0px;
+    margin-top: -10px;
     height: auto;
     padding: 20px;
     background-color: var(--color-rojo-general);
     border-radius: 15px;
     width: 100%;
     display: grid;
-    grid-template-columns: 50px 1fr 1fr;
+    grid-template-columns: clamp(70px, 5.2vw, 100px) 1fr 1fr;
     gap: 20px;
     align-items: center;
 }
 
 .contenedorExtraInferior img {
-    width: 100%;
-    max-width: 50px;
+    width: clamp(70px, 5.2vw, 100px);
     height: auto;
     border-radius: 5px;
 }
 
 /* Estilos para los textos */
 .textoEncabezado {
-    font-size: 12px;
+    font-size: clamp(16px, 1.5vw, 20px);
     font-weight: normal;
     margin-bottom: 5px;
     color: #ffffff;
 }
 
 .textoPrincipal {
-    font-size: 18px;
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: bold;
     margin-bottom: 3px;
     color: #ffffff;
 }
 
 .textoSecundario {
-    font-size: 11px;
+    font-size: clamp(16px, 1.5vw, 20px);
     font-weight: lighter;
     color: #cccccc;
 }
 
 /* Barra superior */
+/* Estilos para el carrusel de botones */
 .barraSuperior {
     width: 100%;
-    max-width: 480px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    max-width: 600px;
+    height: 80px;
+    margin: 0 auto 20px;
+    position: relative;
+    padding: 0 30px; /* Espacio para que los botones no toquen los bordes */
 }
+
+
+
+
+/* Estilos para las flechas del carrusel */
+.customPrevArrow,
+.customNextArrow {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.customPrevArrow:hover,
+.customNextArrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.customPrevArrow::before {
+    content: '←';
+    display: block;
+}
+
+.customNextArrow::before {
+    content: '→';
+    display: block;
+}
+
+/* Posicionamiento de las flechas */
+.customPrevArrow {
+    left: -50px;
+}
+
+.customNextArrow {
+    right: -50px;
+}
+
+
+
+
+
+/* Contenedor del slider */
+.slick-slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Evita desbordamiento */
+}
+
+/* Cada slide individual */
+.slick-slide {
+    padding: 0 10px; /* Espacio entre botones */
+    display: flex;
+    width: 100px;
+    justify-content: center;
+}
+
+/* Contenedor de los slides */
+.slick-list {
+    margin: 0 -5px;
+    overflow: visible;
+}
+
+/* Estilo para los botones del carrusel */
+.botonCarrusel {
+    padding: 8px 16px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.62);
+    backdrop-filter: blur(10px);
+    min-height: clamp(60px, 4.2vw, 80px);
+    width: 100%;
+    min-width: clamp(100px, 8.9vw, 170px);
+    color: #000000;
+    font-size: clamp(12px, 1.5vw, 22px) !important;
+    cursor: pointer;
+    border-radius: 20px !important;
+    transition: all 0.3s ease;
+    margin: 0 auto; /* Centrado horizontal */
+    white-space: nowrap;
+    text-align: center;
+}
+
+.botonCarrusel:hover {
+    background-color: var(--color-rojo-general);
+    color: white;
+}
+
+/* Efecto para el slide activo (centrado) */
+.slick-center .botonCarrusel {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 
 .barraSuperior button {
     padding: 6px 12px;
@@ -152,14 +259,10 @@
 .formularioContainer {
     background-color: rgb(32, 32, 32);
     padding: 15px;
-    height: 500px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    height: 70%;
+    border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 480px;
+    width: 95%;
 }
 
 /* Encabezado */
@@ -171,14 +274,14 @@
 }
 
 .encabezado h2 {
-    font-size: 18px;
+    font-size: 40px;
     font-weight: 600;
     color: #ffffff;
 }
 
 .dropdown {
     padding: 6px;
-    font-size: 12px;
+    font-size: 18px;
     border-radius: 5px;
     border: 1px solid #ddd;
     color: #ffffff;
@@ -204,34 +307,37 @@
 }
 
 .campo label {
-    font-size: 10px;
+    margin-top: 30px;
+    font-size: clamp(12px, 1.5vw, 22px);
     margin-bottom: 3px;
     color: #ffffff;
 }
 
 .campo input {
     padding: 6px;
-    font-size: 12px;
-    border: 1px solid #ffffff;
-    border-top: none;
+    font-size: clamp(12px, 1.5vw, 22px);
+    font-weight: 10;
+    border: none;
+    border-bottom: 1px solid #ffffff;
     background: none;
-    border-left: none;
-    border-right: none;
     color: #ffffff;
 }
 
 /* Estilos para el grupo de checkboxes */
 .checkboxGroup {
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
+    font-size: 20px;
     margin-bottom: 10px;
+
     border: none;
 }
 
 .checkboxLabel {
     display: flex;
     align-items: center;
-    font-size: 10px;
+    font-size: 20px;
     color: #ffffff;
 }
 
@@ -264,14 +370,15 @@
 }
 
 .areaMensaje label {
-    font-size: 10px;
+    margin-top: 30px;
+    font-size: 20px;
     margin-bottom: 3px;
     color: #ffffff;
 }
 
 .areaMensaje textarea {
     padding: 6px;
-    font-size: 12px;
+    font-size: 18px;
     max-height: 120px;
     border: 1px solid #ddd;
     background: none;
@@ -280,13 +387,14 @@
 }
 
 .contactoYBoton {
+    margin-top: 30px;
     display: flex;
     align-items: center;
 }
 
 /* Estilos para el contacto alternativo */
 .contactoAlternativo {
-    font-size: 10px;
+    font-size: 18px;
     margin-top: 10px;
 }
 
@@ -297,7 +405,7 @@
 .contactoAlternativo a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -316,7 +424,7 @@
     padding: 8px 14px;
     background-color: white;
     color: black;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 600;
     border: none;
     border-radius: 5px;
@@ -331,6 +439,15 @@
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
+
+    .customPrevArrow {
+        left: -30px;
+    }
+
+    .customNextArrow {
+        right: -30px;
+    }
+
     .contenedorIntermedio {
         flex-direction: column;
     }
@@ -340,11 +457,6 @@
         max-width: 100%;
         height: 200px;
         margin-top: 20px;
-    }
-
-    .barraSuperior {
-        flex-direction: column;
-        gap: 8px;
     }
 
     .formularioContainer {
@@ -374,5 +486,33 @@
 
     .contenedorExtraInferior img {
         margin: 0 auto;
+    }
+    .barraSuperior {
+        padding: 0 20px;
+    }
+
+    .botonCarrusel {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .barraSuperior {
+        padding: 0 15px;
+    }
+    .customPrevArrow,
+    .customNextArrow {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .customPrevArrow {
+        left: -20px;
+    }
+
+    .customNextArrow {
+        right: -20px;
     }
 }

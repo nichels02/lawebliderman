@@ -3,7 +3,69 @@ import styles from '../css/FormularioDeContacto2.module.css';
 import { FormValidatorSingleton } from './Sistemas/FormValidator';
 import imagen from '../../assets/Inicio/foto-footer.png';
 import imagenLateral from '../../assets/Inicio/Peru.svg';
-import logoEmpresa from '../../assets/ImagenesPrueba/facebook.svg';
+import logoEmpresa from '../../assets/Inicio/Recurso 24_nuevo.svg';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+interface ArrowProps {
+    className?: string;
+    style?: React.CSSProperties;
+    onClick?: React.MouseEventHandler<HTMLDivElement>;
+}
+
+const CustomPrevArrow: React.FC<ArrowProps> = ({ className, style, onClick }) => {
+    return (
+        <div
+            className={`${className} ${styles.customPrevArrow}`}
+            style={{ ...style }}
+            onClick={onClick}
+            aria-label="Previous slide"
+        />
+    );
+};
+
+const CustomNextArrow: React.FC<ArrowProps> = ({ className, style, onClick }) => {
+    return (
+        <div
+            className={`${className} ${styles.customNextArrow}`}
+            style={{ ...style }}
+            onClick={onClick}
+            aria-label="Next slide"
+        />
+    );
+};
+
+const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "0px",
+    autoplay: false,
+    autoplaySpeed: 3000,
+    arrows: true,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
+};
+
+// ... (el resto del componente FormularioDeContacto2 permanece igual)
 
 const FormularioDeContacto2 = () => {
     const [formData, setFormData] = useState({
@@ -93,9 +155,20 @@ const FormularioDeContacto2 = () => {
             <div className={styles.contenedorIntermedio}>
                 <div className={styles.contenidoCentral}>
                     <div className={styles.barraSuperior}>
-                        <button type="button">Botón 1</button>
-                        <button type="button">Botón 2</button>
-                        <button type="button">Botón 3</button>
+                        <Slider {...sliderSettings}>
+                            <div>
+                                <button type="button" className={styles.botonCarrusel}>Botón 1</button>
+                            </div>
+                            <div>
+                                <button type="button" className={styles.botonCarrusel}>Botón 2</button>
+                            </div>
+                            <div>
+                                <button type="button" className={styles.botonCarrusel}>Botón 3</button>
+                            </div>
+                            <div>
+                                <button type="button" className={styles.botonCarrusel}>Botón 4</button>
+                            </div>
+                        </Slider>
                     </div>
 
                     <div className={styles.formularioContainer}>
