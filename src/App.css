@@ -59,7 +59,7 @@ html, body {
 
 .logoHeader {
     position: absolute; /* Posiciona el logo de manera absoluta dentro del header */
-    top: 1vw; /* Posición relativa desde la parte superior */
+    top: 10px; /* Posición relativa desde la parte superior */
     left: 25px; /* Posición relativa desde la izquierda */
     width: 135px; /* Tamaño relativo al contenedor */
     height: auto; /* Mantiene la relación de aspecto */
@@ -74,10 +74,15 @@ html, body {
 }
 @media (max-width: 768px) {
     .logoHeader {
+        top: 10px; /* Posición relativa desde la parte superior */
         width: 15%; /* Hace el logo más visible en pantallas pequeñas */
     }
 }
-
+@media (max-width: 500px) {
+    .logoHeader {
+        width: 20%; /* Hace el logo más visible en pantallas pequeñas */
+    }
+}
 
 /* Asegúrate de que ningún elemento se desborde */
 * {

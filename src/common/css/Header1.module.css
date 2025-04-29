@@ -164,9 +164,35 @@ h1, p {
     .logo {
         width: 12%; /* Aumenta un poco el tamaño del logo para mayor visibilidad */
     }
+    .buttonContainer{
+        top: 410px;
+    }
 
 }
-
+@media (max-width: 945px){
+    .buttonContainer{
+        top: 390px;
+    }
+}
+@media (max-width: 910px){
+    .buttonContainer{
+        top: 370px;
+    }
+}
+@media (max-width: 890px){
+    .buttonContainer{
+        top: 360px;
+    }
+    .header {
+        padding-bottom: 8%; /* Espacio vacío debajo del contenedor padre */
+    }
+    .centeredBottomContainer{
+        bottom: 0px;
+        /*bottom: clamp(-25px, -0.5vw, 0px);*/
+        width: 75%;
+        gap: 0; /* Espacio entre los elementos del grid */
+    }
+}
 @media (max-width: 768px) {
     .text1 {
         font-size: clamp(18px, 5vw, 35px);
