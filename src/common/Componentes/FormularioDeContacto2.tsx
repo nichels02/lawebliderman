@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from '../css/FormularioDeContacto2.module.css';
 import { FormValidatorSingleton } from './Sistemas/FormValidator';
-import imagen from '../../assets/ImagenesPrueba/1920x1080-hd-space-u95406v61bxyrx3s.jpg';
-import imagenLateral from '../../assets/ImagenesPrueba/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg';
+import imagen from '../../assets/Inicio/foto-footer.png';
+import imagenLateral from '../../assets/Inicio/Peru.svg';
 import logoEmpresa from '../../assets/ImagenesPrueba/facebook.svg';
 
 const FormularioDeContacto2 = () => {

@@ -87,8 +87,8 @@ html, body {
 /* Asegúrate de que ningún elemento se desborde */
 * {
     box-sizing: border-box; /* Incluye padding y border en el ancho */
+    outline: 1px solid rgba(255, 0, 0, 0);
 }
-
 
 /* Estilos para el contenedor del carrusel */
 .headerCarruselContainer {
