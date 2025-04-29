@@ -1,6 +1,8 @@
+
+
 .contenedorPadre {
-    width: 100%;
-    min-height: 100vh;
+    width: 100vw;
+    height: auto;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -9,9 +11,9 @@
 
 .contenedorImagenGrande {
     position: relative;
-    width: 95%;
+    min-width: 0 !important;
+    width: 90%;
     max-width: 1400px;
-    aspect-ratio: 16/9;
     border-radius: 40px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -89,7 +91,7 @@
 }
 
 .textoFijo {
-    font-size: clamp(10px, 1.2vw, 16px);
+    font-size: clamp(14px, 1.2vw, 16px);
     color: white;
     line-height: 1.4;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
@@ -104,7 +106,14 @@
     text-align: center;
     white-space: nowrap;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: clamp(16px, 1.8vw, 24px);
     z-index: 3;
+}
+
+.activo {
+    font-weight: bold;
+    font-size: clamp(20px, 2.5vw, 28px); /* O el tamaño que quieras para destacados */
+    transition: font-size 0.3s, font-weight 0.3s; /* Para que el cambio sea suave */
 }
 
 .texto-0 { right: 10%; bottom: 10%; }
@@ -117,16 +126,54 @@
     left: 5%;
     top: 45%;
     transform: translateY(-50%);
-    font-size: clamp(10px, 1vw, 14px);
+    font-size: clamp(12px, 1vw, 14px);
     width: 100px;
     color: white;
     line-height: 1.4;
     padding: 10px;
     border-radius: 8px;
     z-index: 3;
+    white-space: pre-line;
 }
+@media(min-width: 1920px){
 
-@media (min-width: 481px) and (max-width: 768px) {
+}
+@media(max-width: 1920px){
+    .textoOtros {
+        top: 45%;
+        font-size: clamp(14px, 2vw, 24px);
+        width: 20%;
+        line-height: 1;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .textoFijo {
+        font-size: clamp(14px, 2vw, 24px);
+        width: 100%;
+        line-height: 1;
+    }
+    .contenedorTextoFijo{
+        left: 3.5%;
+        width: 70%;
+    }
+}
+@media(max-width: 1400px){
+    .textoOtros {
+        top: 37%;
+        font-size: clamp(14px, 1.7vw, 24px);
+        width: 20%;
+        line-height: 1;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .textoFijo {
+        font-size: clamp(14px, 1.7vw, 24px);
+        width: 90%;
+        line-height: 1;
+    }
+}
+@media(max-width: 768px) {
 
     .contenedorFondo {
         position: absolute;
@@ -157,7 +204,8 @@
 
     .contenedorImagenGrande {
         border-radius: 20px;
-        aspect-ratio: 1/1;
+        width: 90vw;
+        height: 90vw;
     }
 
     .contenedorGrafico {
@@ -169,14 +217,91 @@
         transform: translate(50%, -50%) scale(0.9);
     }
 
+    .texto {
+        font-size: clamp(16px, 2vw, 24px);
+
+    }
+    .activo {
+        font-size: clamp(20px, 3vw, 28px);
+
+    }
+
+
     .texto-0 { right: -5%; bottom: 10%; }
     .texto-1 { right: 20%; bottom: 35%; }
     .texto-2 { right: 20%; top: 35%; }
     .texto-3 { right: 5%; top: 20%; }
 
     .textoOtros {
-        width: 100px;
+        width: 150px;
         top: 35%;
-        font-size: clamp(10px, 3vw, 12px);
+        font-size: clamp(14px, 2.5vw, 20px);
     }
+    .textoFijo {
+        font-size: clamp(14px, 2.5vw, 20px);
+        width: 100%;
+        line-height: 1;
+    }
+}
+
+
+@media(max-width: 550px){
+    .textoOtros {
+        width: 150px;
+        top: 35%;
+        left: 3%;
+        font-size: clamp(12px, 2vw, 20px);
+    }
+    .textoFijo {
+        font-size: clamp(12px, 2vw, 20px);
+        width: 100%;
+        line-height: 1;
+    }
+
+    .contenedorTextoFijo{
+        left: 0;
+        bottom: 0;
+        width: 70%;
+    }
+}
+
+@media(max-width: 450px){
+
+    .contenedorPadre{
+        padding: 10px;
+    }
+    .contenedorImagenGrande {
+        width: 90vw;
+        height: 125vw;
+    }
+    .texto {
+        font-size: clamp(13px, 1vw, 24px);
+
+    }
+    .activo {
+        font-size: clamp(16px, 2vw, 28px);
+
+    }
+    .textoOtros {
+        width: 150px;
+        top: 35%;
+        font-size: 12px;
+    }
+    .contenedorTextoFijo{
+        width: 75%;
+    }
+    .textoFijo {
+        font-size: 12px;
+        width: 100%;
+        line-height: 1;
+    }
+    .texto-0 { right: -8%; bottom: 10%; }
+    .texto-1 { right: 20%; bottom: 35%; }
+    .texto-2 { right: 20%; top: 35%; }
+    .texto-3 { right: 5%; top: 20%; }
+
+}
+
+@media(max-width: 350px){
+    .texto-1 { right: 20%; bottom: 40%; }
 }

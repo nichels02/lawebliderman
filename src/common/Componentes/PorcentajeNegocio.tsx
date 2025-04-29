@@ -59,7 +59,7 @@ function PorcentajeNegocio() {
                 circumference: 180,
                 rotation: -180,
                 layout: { padding: 0 },
-                cutout: 70, // Aquí usamos `cutout` en lugar de `cutoutPercentage`
+                cutout: 70,
                 plugins: {
                     legend: { display: false },
                     tooltip: { enabled: false }
@@ -97,7 +97,6 @@ function PorcentajeNegocio() {
         return () => myChart.destroy();
     }, [spacing, isMobile, language, langData]);
 
-    // Si los datos aún no han llegado, no renderizar nada
     if (!langData) return null;
 
     return (
@@ -124,13 +123,11 @@ function PorcentajeNegocio() {
                 {langData.items.map((item, index) => (
                     <div
                         key={index}
-                        className={`${styles.texto} ${styles[`texto-${index}`]}`}
-                        style={{
-                            fontWeight: hoveredSegment === index ? 'bold' : 'normal',
-                            fontSize: hoveredSegment === index
-                                ? 'clamp(16px, 2.5vw, 28px)'
-                                : 'clamp(12px, 1.8vw, 20px)',
-                        }}
+                        className={`
+                            ${styles.texto} 
+                            ${styles[`texto-${index}`]} 
+                            ${hoveredSegment === index ? styles.activo : ''}
+                        `}
                     >
                         {item.label}
                     </div>
@@ -138,7 +135,7 @@ function PorcentajeNegocio() {
 
                 {showOtrosText && (
                     <div className={styles.textoOtros}>
-                        {langData.otrosCategories.join(" · ")}
+                        {langData.otrosCategories.join("\n")}
                     </div>
                 )}
             </div>
