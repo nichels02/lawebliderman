@@ -1,11 +1,15 @@
 .textContainer {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 20px;
-    width: 75vw;
-    margin: 0 auto;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
 }
 
 .texto {
+    max-width: 600px;
     font-size: 24px;
     font-weight: 400;
     color: var(--color-texto-negro-cambio2);
