@@ -450,13 +450,13 @@
         "es": {
           "Titulo": "Conócenos",
           "Texto": "El valor que aportamos como organización a la sociedad nos permite construir un mundo mejor, más seguro e interconectado.",
-          "Boton1": "NUESTRA HISTORIA ➔",
+          "Boton1": "NUESTRA HISTORIA➔",
           "Boton2": "Contáctanos"
         },
         "en": {
           "Titulo": "About Us",
           "Texto": "The value we bring as an organization...",
-          "Boton1": "OUR HISTORY ➔",
+          "Boton1": "OUR HISTORY➔",
           "Boton2": "Contact us"
         }
       },
@@ -1234,13 +1234,13 @@
       "es": {
         "Titulo": "Lidermanía",
         "Texto": "Implementamos un conjunto de prácticas y programas diseñados para atender las necesidades de nuestros Lidermans en los aspectos más importantes para ellos y sus familias, promoviendo un ambiente de apoyo, crecimiento y equilibrio personal.",
-        "Boton1": "Nuestra cultura ➔",
+        "Boton1": "Nuestra cultura➔",
         "Boton2": "Únete"
       },
       "en": {
         "Titulo": "Leadermania",
         "Texto": "We have implemented a range of practices and programs aimed at meeting the needs of our Lidermans and their families in the areas that matter most, promoting a supportive environment that encourages growth and personal balance.",
-        "Boton1": "Our culture ➔",
+        "Boton1": "Our culture➔",
         "Boton2": "Join us"
       }
     },
