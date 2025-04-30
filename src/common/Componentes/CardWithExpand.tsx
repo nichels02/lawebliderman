@@ -1,14 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "./Sistemas/LanguageContext";
 import { useContent } from "./Sistemas/useContent.tsx";
 import styles from "../css/CardWithExpand.module.css";
 
 function CardWithExpand() {
-    const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+    const [expandedIndex, setExpandedIndex] = useState<number>(0); // Inicia con el primer card expandido
     const navigate = useNavigate();
     const { language } = useLanguage();
     const content = useContent();
+
+    // Opcional: Si quieres que se cierre al hacer clic fuera de los cards
+    useEffect(() => {
+        const handleClickOutside = (e: MouseEvent) => {
+            const target = e.target as HTMLElement;
+            if (!target.closest(`.${styles.imgContainer}`)) {
+                // No cerramos completamente, sino que volvemos al default (0)
+                setExpandedIndex(0);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     if (!content || !content.home || !content.home.CardWithExpand) {
         return <p>Cargando...</p>;
@@ -25,6 +41,7 @@ function CardWithExpand() {
                     <div
                         className={`${styles.imgContainer} ${expandedIndex === 0 ? styles.expanded : ""}`}
                         onMouseEnter={() => setExpandedIndex(0)}
+                        onClick={() => setExpandedIndex(0)}
                     >
                         <img
                             src={content.home.CardWithExpand.Seguridad.imageUrl}
@@ -48,6 +65,7 @@ function CardWithExpand() {
                     <div
                         className={`${styles.imgContainer} ${expandedIndex === 1 ? styles.expanded : ""}`}
                         onMouseEnter={() => setExpandedIndex(1)}
+                        onClick={() => setExpandedIndex(1)}
                     >
                         <img
                             src={content.home.CardWithExpand.Servicios.imageUrl}
@@ -81,6 +99,7 @@ function CardWithExpand() {
                     <div
                         className={`${styles.imgContainer} ${expandedIndex === 2 ? styles.expanded : ""}`}
                         onMouseEnter={() => setExpandedIndex(2)}
+                        onClick={() => setExpandedIndex(2)}
                     >
                         <img
                             src={content.home.CardWithExpand.Tecnologia.imageUrl}
