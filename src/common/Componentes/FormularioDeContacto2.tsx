@@ -65,7 +65,6 @@ const sliderSettings = {
     ]
 };
 
-// ... (el resto del componente FormularioDeContacto2 permanece igual)
 
 const FormularioDeContacto2 = () => {
     const [formData, setFormData] = useState({
