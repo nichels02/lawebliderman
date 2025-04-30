@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import styles from '../css/FormularioDeContacto2.module.css';
 import { FormValidatorSingleton } from './Sistemas/FormValidator';
 import imagen from '../../assets/Inicio/foto-footer.png';
-import imagenLateral from '../../assets/Inicio/Peru.svg';
+import imagenLateral1 from '../../assets/Inicio/Peru.svg';
+import imagenLateral2 from '../../assets/Inicio/chile.svg';
+import imagenLateral3 from '../../assets/Inicio/eucador.svg';
+import imagenLateral4 from '../../assets/Inicio/USa.svg';
 import logoEmpresa from '../../assets/Inicio/Recurso 24_nuevo.svg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -65,7 +68,6 @@ const sliderSettings = {
     ]
 };
 
-
 const FormularioDeContacto2 = () => {
     const [formData, setFormData] = useState({
         nombre: '',
@@ -84,6 +86,7 @@ const FormularioDeContacto2 = () => {
     const [error, setError] = useState<string | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [imagenActual, setImagenActual] = useState(imagenLateral1);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -102,6 +105,39 @@ const FormularioDeContacto2 = () => {
                 [name]: checked
             }
         }));
+    };
+
+    const cambiarImagen = (botonIndex: number) => {
+        switch(botonIndex) {
+            case 0:
+                setImagenActual(imagenLateral1); // Perú
+                break;
+            case 1:
+                setImagenActual(imagenLateral2); // Chile
+                break;
+            case 2:
+                setImagenActual(imagenLateral3); // Ecuador
+                break;
+            case 3:
+                setImagenActual(imagenLateral4); // USA
+                break;
+            default:
+                setImagenActual(imagenLateral1);
+        }
+    };
+
+    const renderBotonesCarrusel = () => {
+        return [0, 1, 2, 3].map((index) => (
+            <div key={index}>
+                <button
+                    type="button"
+                    className={styles.botonCarrusel}
+                    onClick={() => cambiarImagen(index)}
+                >
+                    Botón {index + 1}
+                </button>
+            </div>
+        ));
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -126,7 +162,6 @@ const FormularioDeContacto2 = () => {
             console.log('[Form] Validación exitosa, datos enviados al backend');
             setSuccess(true);
 
-            // Reset del formulario
             setFormData({
                 nombre: '',
                 apellido: '',
@@ -155,18 +190,7 @@ const FormularioDeContacto2 = () => {
                 <div className={styles.contenidoCentral}>
                     <div className={styles.barraSuperior}>
                         <Slider {...sliderSettings}>
-                            <div>
-                                <button type="button" className={styles.botonCarrusel}>Botón 1</button>
-                            </div>
-                            <div>
-                                <button type="button" className={styles.botonCarrusel}>Botón 2</button>
-                            </div>
-                            <div>
-                                <button type="button" className={styles.botonCarrusel}>Botón 3</button>
-                            </div>
-                            <div>
-                                <button type="button" className={styles.botonCarrusel}>Botón 4</button>
-                            </div>
+                            {renderBotonesCarrusel()}
                         </Slider>
                     </div>
 
@@ -320,7 +344,7 @@ const FormularioDeContacto2 = () => {
                     </div>
                 </div>
 
-                <img src={imagenLateral} alt="Ilustración" className={styles.imagenLateral} />
+                <img src={imagenActual} alt="Ilustración" className={styles.imagenLateral} />
             </div>
         </div>
     );
