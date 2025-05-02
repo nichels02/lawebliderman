@@ -20,8 +20,8 @@
 }
 
 .contenedorImagen img {
-    width: auto;
-    height: 170%;
+    width: 170%;
+    height: auto;
 
     transition: transform 0.3s ease;
 }
@@ -107,11 +107,11 @@
     }
 
     .contenedorImagen img {
-        width: 60%;
+        width: 90%;
     }
 
     .textoCentro {
-        font-size: 18px;
+        font-size: clamp(16px, 2.5vw, 20px);
     }
 
     .contenedor {
@@ -144,7 +144,7 @@
     }
 
     .contenedorImagen {
-        width: 55%;
+        width: 90%;
         height: auto;
     }
 
@@ -153,7 +153,8 @@
     }
 
     .textoCentro {
-        font-size: 16px;
+        width: 20%;
+        font-size: clamp(14px, 2.3vw, 18px);
     }
 
     .contenedor {
