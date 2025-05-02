@@ -24,6 +24,7 @@
 
 .container {
     width: 82%;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,7 +33,9 @@
 }
 
 .left {
+    position: relative;
     width: 50%;
+    height: 25vw;
     color: white;
 }
 
@@ -45,7 +48,7 @@
     background: radial-gradient(
             ellipse,
             rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0) 70%,
+            rgba(0, 0, 0, 0) 75%,
             rgba(0, 0, 0, 0) 100%
     );
     background-size: 100% 100%;       /* Deforma verticalmente */
@@ -57,16 +60,22 @@
 }
 
 .title{
+    position: absolute;
+    z-index: 3;
     font-size: clamp(10px, 6.5vw, 150px);
     font-weight: bold;
     padding-bottom: 30px;
+    top:2%;
 }
 
 
 .text{
+    position: absolute;
+    z-index: 3;
     font-size: clamp(10px, 1.8vw, 70px);
     color: #ffffff;
     padding-bottom: 30px;
+    bottom: 16%;
 }
 
 .right {

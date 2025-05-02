@@ -1,6 +1,6 @@
 import styles from "../css/HeaderServicio.module.css";
 import { useContent } from "./Sistemas/useContent.tsx"; // Ajusta la ruta según tu estructura
-import { useLanguage } from "./Sistemas/LanguageContext.tsx"; // Ajusta la ruta según tu estructura
+import { useLanguage } from "./Sistemas/LanguageContext.tsx";
 
 function HeaderServicio() {
     const content = useContent();
@@ -28,6 +28,7 @@ function HeaderServicio() {
             <img src={logo} alt="Logo" className="logoHeader" />
             <div className={styles.container}>
                 <div className={styles.left}>
+                    <div className={styles.contenedorFondo}></div>
                     <h1 className={styles.title}>{textos.Titulo}</h1>
                     <p className={styles.text}>{textos.Texto}</p>
                 </div>
