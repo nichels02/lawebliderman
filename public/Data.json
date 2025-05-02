@@ -713,61 +713,91 @@
     "GridBarajeable": {
       "en": {
         "carta1": {
-          "text": "Element 1",
-          "description": "Description of element 1",
-          "showTitle": false
-        },
-        "carta2": {
-          "text": "Element 2",
-          "description": "Description of element 2",
+          "text": "Data Loading and Management",
+          "description": [
+            "· Updates data (tabular or graphical) during processes.",
+            "· User and system permissions management."
+          ],
           "showTitle": true
         },
+        "carta2": {
+          "text": "No Title",
+          "description": [
+            "We have a round management system with real-time monitoring for security personnel."
+          ],
+          "showTitle": false
+        },
         "carta3": {
-          "text": "Element 3",
-          "description": "Description of element 3",
+          "text": "Territory Planning",
+          "description": [
+            "· Optimizes the route and sequence of each agent's visits.",
+            "· Follows business rules and compares them with geographic variables."
+          ],
           "showTitle": true
         },
         "carta4": {
-          "text": "Element 4",
-          "description": "Description of element 4",
+          "text": "Field Operations",
+          "description": [
+            "· Optimized visit sequencing.",
+            "· GPS-based supervision.",
+            "· Task start and end logging."
+          ],
           "showTitle": true
         },
         "carta5": {
-          "text": "Element 5",
-          "description": "Description of element 5",
+          "text": "Proactivity Analysis",
+          "description": [
+            "· Analysis of custom management indicators.",
+            "· Recognition and incentive system."
+          ],
           "showTitle": true
         }
       },
       "es": {
         "carta1": {
-          "text": "Elemento 1",
-          "description": "Descripción del elemento 1",
-          "showTitle": false
-        },
-        "carta2": {
-          "text": "Elemento 2",
-          "description": "Descripción del elemento 2",
+          "text": "Carga de datos y administración",
+          "description": [
+            "· Actualiza datos(tabulares o gráficos) durante los procesos.",
+            "· Administración de usuarios y permisos del sistema."
+          ],
           "showTitle": true
         },
+        "carta2": {
+          "text": "Sin Titulo",
+          "description": [
+            "Contamos con un sistema de gestión de rondas con monitoreo en linea para personal de vigilancia."
+          ],
+          "showTitle": false
+        },
         "carta3": {
-          "text": "Elemento 3",
-          "description": "Descripción del elemento 3",
+          "text": "Planificación de territorios ",
+          "description": [
+            "· Optimiza la ruta y secuencia de las visitas de cada gestor.",
+            "· Sigue reglas de negocio y la compara con la variable geográfica."
+          ],
           "showTitle": true
         },
         "carta4": {
-          "text": "Elemento 4",
-          "description": "Descripción del elemento 4",
+          "text": "Operación de campo",
+          "description": [
+            "· Secuencia de visita optimizada.",
+            "· Supervisión por Gps.",
+            "· Registro de inicio y fin de tareas."
+          ],
           "showTitle": true
         },
         "carta5": {
-          "text": "Elemento 5",
-          "description": "Descripción del elemento 5",
+          "text": "Analisis de proactividad",
+          "description": [
+            "· Análisis de indicadores propios de gestión.",
+            "· Sistema de reconocimientos e incentivos."
+          ],
           "showTitle": true
         }
       },
       "contenido": {
-        "carta1": "src/assets/Seguridad/3.png",
-        "carta2": "src/assets/Seguridad/7ed48365da670aa30e2c0c52c624bbe8.jpg",
+        "carta1": "src/assets/Seguridad/7ed48365da670aa30e2c0c52c624bbe8.jpg",
+        "carta2": "src/assets/Seguridad/3.png",
         "carta3": "src/assets/Seguridad/994b06b87c487fb19dcc8ab31b7426ee.jpg",
         "carta4": "src/assets/Seguridad/d2fe2e83d3db73a8f54eecb5ed2b2b11.jpg",
         "carta5": "src/assets/Seguridad/3004083193b0d0c1c373ce63f7962872.jpg"

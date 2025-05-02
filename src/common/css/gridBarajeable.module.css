@@ -1,8 +1,15 @@
+.contenedorPadre{
+    width: 100vw;
+    overflow: hidden;
+    height: auto;
+}
+
 .gridContainer {
     display: grid;
     grid-template-columns: 11fr 11fr 10fr 10fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
+    max-width: 1670px;
     width: 87%;
     height: 600px;
     margin: 0 auto;
@@ -69,7 +76,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    width: 70%;
     z-index: 3;
     height: clamp(30%, auto, 60%);
     text-align: center;
@@ -82,6 +89,7 @@
     composes: overlay;
     top: auto;
     bottom: 10%;
+    width: clamp(50%, calc(800px - 50%), 80%);
 }
 
 /* 🔹 Cambia la opacidad al hacer hover */
@@ -91,5 +99,33 @@
 
 h2, h3, p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 17px;
+}
+h2{
+    font-size: 32px;
+}
+@media (max-width: 1452px){
+    h3, p {
+        margin: 0;
+        font-size: 14px;
+    }
+    .p2 {
+        font-weight: 200;
+    }
+    .p1{
+        padding: 0;
+    }
+    .overlay{
+        width: 70%;
+    }
+    .mainOverlay{
+        width: clamp(50%, calc(800px - 50%), 80%);
+    }
+}
+
+@media (max-width: 1200px){
+    .gridContainer{
+        height:clamp(300px, 40vw, 600px);
+    }
+
 }

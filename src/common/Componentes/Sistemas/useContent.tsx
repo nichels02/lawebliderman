@@ -623,54 +623,54 @@ interface ContentData {
             en: {
                 carta1: {
                     text:  string;
-                    description:  string;
+                    description:  string[];
                     showTitle: boolean;
                 },
                 carta2: {
                     text:  string;
-                    description:  string;
+                    description:  string[];
                     showTitle: boolean;
                 },
                 carta3: {
                     text:  string;
-                    description:  string;
+                    description:  string[];
                     showTitle: boolean;
                 },
                 carta4: {
                     text:  string;
-                    description: string;
+                    description: string[];
                     showTitle: boolean;
                 },
                 carta5: {
                     text:  string;
-                    description:  string;
+                    description:  string[];
                     showTitle: boolean;
                 }
             },
             es: {
                 carta1: {
                     text:  string;
-                    description:  string;
+                    description:  string[];
                     showTitle: boolean;
                 },
                 carta2: {
                     text:  string;
-                    description:  string;
+                    description:  string[];
                     showTitle: boolean;
                 },
                 carta3: {
                     text:  string;
-                    description:  string;
+                    description:  string[];
                     showTitle: boolean;
                 },
                 carta4: {
                     text:  string;
-                    description:  string;
+                    description:  string[];
                     showTitle: boolean;
                 },
                 carta5: {
                     text:  string;
-                    description:  string;
+                    description:  string[];
                     showTitle: boolean;
                 }
             },

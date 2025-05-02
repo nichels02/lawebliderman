@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { useContent } from './Sistemas/useContent'; // Asegúrate de importar correctamente
-import { useLanguage } from './Sistemas/LanguageContext'; // Asegúrate de importar correctamente
+import { useContent } from './Sistemas/useContent';
+import { useLanguage } from './Sistemas/LanguageContext';
 import styles from "../css/gridBarajeable.module.css";
 
 interface Item {
@@ -8,37 +8,41 @@ interface Item {
     text: string;
     image: string;
     showTitle: boolean;
-    description: string;
+    description: string[];
 }
 
 function GridBarajeable() {
     const [mainItem, setMainItem] = useState<Item | null>(null);
     const [smallItems, setSmallItems] = useState<Item[]>([]);
+    const [isMobile, setIsMobile] = useState<boolean>(false); // nuevo estado
 
-    // Obtener el contenido del contexto
     const content = useContent();
-
-    // Obtener el idioma actual del contexto
     const { language } = useLanguage();
 
-    // Cuando se recibe el contenido, actualizar los elementos
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768); // puedes ajustar el ancho según tu diseño
+        };
+
+        handleResize(); // inicializa al montar
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     useEffect(() => {
         if (content) {
             const languageData = content.Seguridad.GridBarajeable[language];
 
-            // Mapear los datos del contexto a los elementos del grid
             const updatedItems = Object.keys(languageData).map((key, index) => {
                 const item = languageData[key as keyof typeof languageData];
-
-                // Acceder a las rutas de las imágenes directamente desde el contenido
                 const imagePath = content.Seguridad.GridBarajeable.contenido[key as keyof typeof content.Seguridad.GridBarajeable.contenido];
 
                 return {
                     id: index + 1,
                     text: item.text,
-                    image: imagePath,  // Usamos directamente la ruta de la imagen del JSON
+                    image: imagePath,
                     showTitle: item.showTitle,
-                    description: item.description,
+                    description: Array.isArray(item.description) ? item.description : [item.description],
                 };
             });
 
@@ -47,9 +51,8 @@ function GridBarajeable() {
         }
     }, [content, language]);
 
-    // Verificar si los datos están disponibles
     if (!content || !mainItem) {
-        return <div>Loading...</div>; // Mostrar un mensaje de carga mientras se cargan los datos
+        return <div>Loading...</div>;
     }
 
     const handleClick = (clickedItem: Item) => {
@@ -60,28 +63,35 @@ function GridBarajeable() {
     };
 
     return (
-        <div className={styles.gridContainer}>
-            {/* Elemento grande */}
-            <div className={styles.mainItem} style={{ backgroundImage: `url(${mainItem.image})` }}>
-                <div className={styles.mainOverlay}>
-                    {mainItem.showTitle && <h2>{mainItem.text}</h2>} {/* ✅ Solo si showTitle es true */}
-                    <p>{mainItem.description}</p> {/* ✅ Siempre visible */}
-                </div>
-            </div>
-
-            {/* Elementos pequeños */}
-            {smallItems.map(item => (
-                <div
-                    key={item.id}
-                    className={styles.smallItem}
-                    style={{ backgroundImage: `url(${item.image})` }}
-                    onClick={() => handleClick(item)}>
-                    <div className={styles.overlay}>
-                        {item.showTitle && <h3>{item.text}</h3>} {/* ✅ Solo si showTitle es true */}
-                        <p>{item.description}</p> {/* ✅ Siempre visible */}
+        <div className={styles.contenedorPadre}>
+            <div className={styles.gridContainer}>
+                {/* Elemento grande */}
+                <div className={styles.mainItem} style={{ backgroundImage: `url(${mainItem.image})` }}>
+                    <div className={styles.mainOverlay}>
+                        {mainItem.showTitle && <h2>{mainItem.text}</h2>}
+                        {mainItem.description.map((desc, idx) => (
+                            <p key={idx} className="p1">{desc}</p>
+                        ))}
                     </div>
                 </div>
-            ))}
+
+                {/* Elementos pequeños */}
+                {smallItems.map(item => (
+                    <div
+                        key={item.id}
+                        className={styles.smallItem}
+                        style={{ backgroundImage: `url(${item.image})` }}
+                        onClick={() => handleClick(item)}
+                    >
+                        <div className={styles.overlay}>
+                            {item.showTitle && <h3>{item.text}</h3>}
+                            {!isMobile && item.description.map((desc, idx) => (
+                                <p key={idx} className="p2">{desc}</p>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
