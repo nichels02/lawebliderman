@@ -37,6 +37,7 @@ const HeaderGenerico: React.FC<HeaderProps> = ({
             />
 
             <div className={styles.content}>
+                <div className={styles.contenedorFondo}></div>
                 <h1 className={styles.title}>{title}</h1>
                 <p className={styles.description}>{description}</p>
                 <div className={styles.buttonContainer}>
