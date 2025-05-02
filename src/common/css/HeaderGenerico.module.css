@@ -17,7 +17,7 @@
     color: var(--color-texto-blanco);
     width: 40%;
     max-width: 720px;
-    padding: 40px;
+    padding: 100px;
     position: absolute;
     left: 9%;
     top: 50%;
@@ -27,23 +27,49 @@
     transition: all 0.3s ease;
 }
 
+.contenedorFondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+            ellipse,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0) 70%,
+            rgba(0, 0, 0, 0) 100%
+    );
+    background-size: 100% 100%;       /* Deforma verticalmente */
+    background-repeat: no-repeat;   /* Evita que se repita */
+    background-position: center;    /* Lo centra */
+    z-index: 2;
+    pointer-events: none;
+    border-radius: inherit;
+}
+
 .title {
+    position: relative;
     font-size: clamp(35px, 5.5vw, 70px);
     font-weight: 800;
     line-height: 1.15;
     margin-bottom: 30px;
     letter-spacing: -0.5px;
+    z-index: 3;
 }
 
 .description {
+    position: relative;
     font-size: clamp(16px, 1.5vw, 28px);
     margin-bottom: 30px;
     line-height: 1.6;
     font-weight: 300;
     opacity: 0.9;
+    z-index: 3;
 }
 
 .buttonContainer {
+    position: relative;
+    z-index: 3;
     display: flex;
     flex-direction: row;
     gap: 20px;
