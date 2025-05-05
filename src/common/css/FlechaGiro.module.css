@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh; /* Base en 100vh */
+    height: 100vw; /* Base en 100vh */
     position: relative;
     overflow: hidden;
 }
@@ -144,7 +144,7 @@
     }
 
     .contenedorImagen {
-        width: 90%;
+        width: 85%;
         height: auto;
     }
 
