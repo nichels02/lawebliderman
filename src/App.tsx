@@ -1,21 +1,27 @@
 import { useState, useEffect } from "react";
-import { ContentProvider } from "./common/Componentes/Sistemas/useContent.tsx"; // Importa el Provider
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+
+//Paginas
 import Home from './pages/Home.tsx';
 import Conocenos from './pages/Conocenos.tsx';
 import Lidermania from './pages/Lidermania.tsx';
 import Seguridad from './pages/Seguridad.tsx';
 import Servicio from './pages/Servicio.tsx';
 import Tecnologia from './pages/Tecnologia.tsx';
+
+//Componentes compartidos
 import BarraDeOpciones from './common/Componentes/BarraDeOpciones.tsx';
 import BarraDeOpciones2 from './common/Componentes/BarraDeOpciones2.tsx';
 import BarraDeOpciones3 from './common/Componentes/BarraDeOpciones3.tsx';
 import BarraDeOpcionesRedes from './common/Componentes/BarraDeOpcionesRedes.tsx';
 import Footer from './common/Componentes/Footer.tsx';
+import FormularioDeContacto2 from "./common/Componentes/FormularioDeContacto2.tsx";
+
+//sistemas importantes
 import { LanguageProvider } from './common/Componentes/Sistemas/LanguageContext'; // Importa el LanguageProvider
 import ScrollToTop from "./common/Componentes/Sistemas/ScrollToTop.tsx";
-import FormularioDeContacto2 from "./common/Componentes/FormularioDeContacto2.tsx";
+import { ContentProvider } from "./common/Componentes/Sistemas/useContent.tsx"; // Importa el Provider
 
 function App() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // ✅ Define si es móvil
