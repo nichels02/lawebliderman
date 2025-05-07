@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
-import { Chart, ArcElement, ChartEvent, ActiveElement } from 'chart.js';
+import { Chart, ArcElement, DoughnutController, ChartEvent, ActiveElement } from 'chart.js';
 import styles from '../css/DonaRotativa2.module.css';
 import { useContent } from './Sistemas/useContent.tsx';
 import { useLanguage } from './Sistemas/LanguageContext.tsx';
 
-Chart.register(ArcElement);
+// Registrar los componentes necesarios de Chart.js
+Chart.register(ArcElement, DoughnutController);
 
 function DonaRotativa2() {
     const chartRef = useRef<HTMLCanvasElement | null>(null);
+    const chartInstanceRef = useRef<Chart | null>(null); // Referencia para la instancia del gráfico
     const [targetRotation, setTargetRotation] = useState(0);
     const chartContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -59,6 +61,11 @@ function DonaRotativa2() {
         const ctx = chartRef.current.getContext('2d');
         if (!ctx) return;
 
+        // Destruir el gráfico anterior si existe
+        if (chartInstanceRef.current) {
+            chartInstanceRef.current.destroy();
+        }
+
         const data = {
             datasets: [{
                 data: [25, 25, 25, 25],
@@ -94,9 +101,19 @@ function DonaRotativa2() {
             }
         };
 
-        const chart = new Chart(ctx, { type: 'doughnut', data, options });
+        // Crear nueva instancia del gráfico y guardar la referencia
+        chartInstanceRef.current = new Chart(ctx, {
+            type: 'doughnut',
+            data,
+            options
+        });
 
-        return () => chart.destroy();
+        return () => {
+            if (chartInstanceRef.current) {
+                chartInstanceRef.current.destroy();
+                chartInstanceRef.current = null;
+            }
+        };
     }, [targetRotation]);
 
     useEffect(() => {
