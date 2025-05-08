@@ -5,14 +5,16 @@
 .marqueeWrapper {
     position: relative;
     width: 100vw;
-    overflow: hidden;
+
 }
 
 .marqueeContainer {
-    width: 100%;
+    width: 99%;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .marqueeContent {
