@@ -3,114 +3,102 @@ import { createContext, useContext, useState, useEffect } from "react";
 // 📌 Interfaz completa basada en el JSON
 interface ContentData {
 
-    Tecnologia: {
-        Modal1: {
+    home: {
+        Footer: {
             Common: {
-                Imagen: string;
-            };
+                LidermanLogoDark: string;
+                LidermanLogoLight: string;
+                facebookLight: string;
+                facebookDark: string;
+                tiktokLight: string;
+                tiktokDark: string;
+                linkedinLight: string;
+                linkedinDark: string;
+                youtubeLight: string;
+                youtubeDark: string;
+
+            },
             es: {
-                Titulo: string;
-                Texto: string;
-                BotonCerrar: string;
-            };
+                Eslogan: string;
+                Inicio: {
+                    Titulo: string;
+                    Soluciones:string;
+                    Certificaciones: string;
+                    Presencia: string;
+                    Cultura: string;
+                },
+                Conocenos: {
+                    Titulo: string;
+                    QuienesSomos: string;
+                    Historia: string;
+                },
+                Soluciones: {
+                    Titulo: string;
+                    Seguridad: string;
+                    Tecnologia: string;
+                    Servicio: string;
+                },
+                lidermania: {
+                    Titulo: string;
+                    MejoresPersonas: string;
+                    CuatroAmas: string;
+                    Unete: string;
+                },
+                "Boton1": {
+                    "Titulo": string;
+                    "Subtitulo": string;
+                },
+                "Boton2": {
+                    "Titulo": string;
+                    "Subtitulo": string;
+                },
+                TextosFinales: {
+                    DerechosReservados: string;
+                    TerminosYCondiciones: string;
+                    PoliticaDePrivacidad: string;
+                }
+            },
             en: {
-                Titulo: string;
-                Texto: string;
-                BotonCerrar: string;
-            };
-        };
-        Modal2: {
-            Common: {
-                ImagenIzq: string;
-                ImagenDer: string;
-            };
-            es: {
-                Titulo: string;
-                Texto: string;
-                TituloDer: string;
-                TituloIzq: string;
-                TextoDer: string;
-                TextoIzq: string;
-                BotonCerrar: string;
-            };
-            en: {
-                Titulo: string;
-                Texto: string;
-                TituloDer: string;
-                TituloIzq: string;
-                TextoDer: string;
-                TextoIzq: string;
-                BotonCerrar: string;
-            };
-        };
-        Modal3: {
-            Common: {
-                ImagenDerArriba: string;
-                ImagenIzqArriba: string;
-                ImagenDerAbajo: string;
-                ImagenIzqAbajo: string;
-            };
-            es: {
-                Titulo: string;
-                Texto: string;
-                TituloDerArriba: string;
-                TituloIzqArriba: string;
-                TituloDerAbajo: string;
-                TituloIzqAbajo: string;
-                TextoDerArriba: string;
-                TextoIzqArriba: string;
-                TextoDerAbajo: string;
-                TextoIzqAbajo: string;
-                BotonCerrar: string;
-            };
-            en: {
-                Titulo: string;
-                Texto: string;
-                TituloDerArriba: string;
-                TituloIzqArriba: string;
-                TituloDerAbajo: string;
-                TituloIzqAbajo: string;
-                TextoDerArriba: string;
-                TextoIzqArriba: string;
-                TextoDerAbajo: string;
-                TextoIzqAbajo: string;
-                BotonCerrar: string;
-            };
-        };
-        Modal4: {
-            Common: {
-                Imagen1: string;
-                Imagen2: string;
-                Imagen3: string;
-                Imagen4: string;
-            };
-            es: {
-                Titulo: string;
-                Texto: string;
-                Subtitulo1: string;
-                Subtitulo2: string;
-                Subtitulo3: string;
-                Subtitulo4: string;
-                Texto1: string;
-                Texto2: string;
-                Texto3: string;
-                Texto4: string;
-                BotonCerrar: string;
-            };
-            en: {
-                Titulo: string;
-                Texto: string;
-                Subtitulo1: string;
-                Subtitulo2: string;
-                Subtitulo3: string;
-                Subtitulo4: string;
-                Texto1: string;
-                Texto2: string;
-                Texto3: string;
-                Texto4: string;
-                BotonCerrar: string;
-            };
-        };
+                Eslogan: string;
+                Inicio: {
+                    Titulo: string;
+                    Soluciones: string;
+                    Certificaciones: string;
+                    Presencia: string;
+                    Cultura: string;
+                },
+                Conocenos: {
+                    Titulo: string;
+                    QuienesSomos: string;
+                    Historia: string;
+                },
+                Soluciones: {
+                    Titulo: string;
+                    Seguridad: string;
+                    Tecnologia: string;
+                    Servicio: string;
+                },
+                lidermania: {
+                    Titulo: string;
+                    MejoresPersonas: string;
+                    CuatroAmas: string;
+                    Unete: string;
+                },
+                Boton1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Boton2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                TextosFinales: {
+                    DerechosReservados: string;
+                    TerminosYCondiciones: string;
+                    PoliticaDePrivacidad: string;
+                }
+            }
+        }
     }
 
 }

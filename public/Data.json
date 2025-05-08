@@ -436,8 +436,106 @@
         "boton2ImagenIzquierda": "src/assets/Inicio/Recurso 22_nuevo.svg",
         "boton2ImagenDerecha": "src/assets/youtube.svg"
       }
-    }
+    },
+    "Footer": {
+      "Common": {
+        "LidermanLogoDark": "src/assets/ImagenesGenerales/Logo-Liderman.svg",
+        "LidermanLogoLight": "src/assets/ImagenesGenerales/Logo-Liderman3.svg",
+        "facebookLight": "src/assets/ImagenesGenerales/LogoFacebook2.svg",
+        "facebookDark": "src/assets/ImagenesGenerales/LogoFacebook.svg",
+        "tiktokLight": "src/assets/ImagenesGenerales/LogoTiktok2.svg",
+        "tiktokDark": "src/assets/ImagenesGenerales/LogoTiktok.svg",
+        "linkedinLight": "src/assets/ImagenesGenerales/LogoLinkedin2.svg",
+        "linkedinDark": "src/assets/ImagenesGenerales/LogoLinkedin.svg",
+        "youtubeLight": "src/assets/ImagenesGenerales/LogoYoutube2.svg",
+        "youtubeDark": "src/assets/ImagenesGenerales/LogoYoutube.svg"
 
+      },
+      "es": {
+        "Eslogan": "Valemos tanto como lo que cuidamos",
+        "Inicio": {
+          "Titulo": "Inicio",
+          "Soluciones":"Soluciones",
+          "Certificaciones": "Certificaciones",
+          "Presencia": "Presencia",
+          "Cultura": "Cultura"
+        },
+        "Conocenos": {
+          "Titulo": "Conócenos",
+          "QuienesSomos": "¿Quiénes somos?",
+          "Historia": "Historia"
+        },
+        "Soluciones": {
+          "Titulo": "Soluciones",
+          "Seguridad": "Seguridad",
+          "Tecnologia": "Tecnología",
+          "Servicio": "Servicios"
+        },
+        "lidermania": {
+          "Titulo": "Lidermanía",
+          "MejoresPersonas": "Mejores Personas",
+          "CuatroAmas": "4 AMAS",
+          "Unete": "Únete al equipo"
+        },
+        "Boton1": {
+          "Titulo": "¿Necesitas asesoría?",
+          "Subtitulo": "Nuestros especialistas están listos para ayudarte"
+        },
+        "Boton2": {
+          "Titulo": "Trabaja con nosotros",
+          "Subtitulo": "Sé parte de nuestro equipo de expertos"
+        },
+        "TextosFinales": {
+          "DerechosReservados": "© 2025 Liderman. Todos los derechos reservados.",
+          "TerminosYCondiciones": "Términos y Condiciones",
+          "PoliticaDePrivacidad": "Política de Privacidad"
+        }
+      },
+      "en": {
+        "Eslogan": "We are worth as much as what we care for",
+        "Inicio": {
+          "Titulo": "Home",
+          "Soluciones": "Solutions",
+          "Certificaciones": "Certifications",
+          "Presencia": "Presence",
+          "Cultura": "Culture"
+        },
+        "Conocenos": {
+          "Titulo": "About Us",
+          "QuienesSomos": "Who we are?",
+          "Historia": "History"
+        },
+        "Soluciones": {
+          "Titulo": "Solutions",
+          "Seguridad": "Security",
+          "Tecnologia": "Technology",
+          "Servicio": "Services"
+        },
+        "lidermania": {
+          "Titulo": "Lidermanía",
+          "MejoresPersonas": "Best People",
+          "CuatroAmas": "4 AMAS",
+          "Unete": "Join the team"
+        },
+        "Boton1": {
+          "Titulo": "Need advice?",
+          "Subtitulo": "Our specialists are ready to help you"
+        },
+        "Boton2": {
+          "Titulo": "Work with us",
+          "Subtitulo": "Be part of our team of experts"
+        },
+        "TextosFinales": {
+          "DerechosReservados": "© 2025 Liderman. All rights reserved.",
+          "TerminosYCondiciones": "Terms and Conditions",
+          "PoliticaDePrivacidad": "Privacy Policy"
+        }
+      }
+
+
+
+
+    }
   },
 
   "Conocenos": {

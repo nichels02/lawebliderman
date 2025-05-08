@@ -236,8 +236,101 @@ interface ContentData {
                 boton2ImagenDerecha: string;
             }
         }
+        Footer: {
+            Common: {
+                LidermanLogoDark: string;
+                LidermanLogoLight: string;
+                facebookLight: string;
+                facebookDark: string;
+                tiktokLight: string;
+                tiktokDark: string;
+                linkedinLight: string;
+                linkedinDark: string;
+                youtubeLight: string;
+                youtubeDark: string;
 
-
+            },
+            es: {
+                Eslogan: string;
+                Inicio: {
+                    Titulo: string;
+                    Soluciones:string;
+                    Certificaciones: string;
+                    Presencia: string;
+                    Cultura: string;
+                },
+                Conocenos: {
+                    Titulo: string;
+                    QuienesSomos: string;
+                    Historia: string;
+                },
+                Soluciones: {
+                    Titulo: string;
+                    Seguridad: string;
+                    Tecnologia: string;
+                    Servicio: string;
+                },
+                lidermania: {
+                    Titulo: string;
+                    MejoresPersonas: string;
+                    CuatroAmas: string;
+                    Unete: string;
+                },
+                "Boton1": {
+                    "Titulo": string;
+                    "Subtitulo": string;
+                },
+                "Boton2": {
+                    "Titulo": string;
+                    "Subtitulo": string;
+                },
+                TextosFinales: {
+                    DerechosReservados: string;
+                    TerminosYCondiciones: string;
+                    PoliticaDePrivacidad: string;
+                }
+            },
+            en: {
+                Eslogan: string;
+                Inicio: {
+                    Titulo: string;
+                    Soluciones: string;
+                    Certificaciones: string;
+                    Presencia: string;
+                    Cultura: string;
+                },
+                Conocenos: {
+                    Titulo: string;
+                    QuienesSomos: string;
+                    Historia: string;
+                },
+                Soluciones: {
+                    Titulo: string;
+                    Seguridad: string;
+                    Tecnologia: string;
+                    Servicio: string;
+                },
+                lidermania: {
+                    Titulo: string;
+                    MejoresPersonas: string;
+                    CuatroAmas: string;
+                    Unete: string;
+                },
+                Boton1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Boton2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                TextosFinales: {
+                    DerechosReservados: string;
+                    TerminosYCondiciones: string;
+                    PoliticaDePrivacidad: string;
+                }
+            }
+        }
     }
 
     Conocenos: {

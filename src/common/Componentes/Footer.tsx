@@ -1,25 +1,15 @@
 import { useEffect, useState } from 'react';
 import styles from '../css/Footer.module.css';
-import { Link } from 'react-router-dom'; // Asegúrate de importar Link
-
-
-// Importar ambas versiones de cada imagen
-import logoLight from '../../assets/ImagenesGenerales/Logo-Liderman3.svg';
-import logoDark from '../../assets/ImagenesGenerales/Logo-Liderman.svg';
-import facebookLight from '../../assets/ImagenesGenerales/LogoFacebook2.svg';
-import facebookDark from '../../assets/ImagenesGenerales/LogoFacebook.svg';
-import tiktokLight from '../../assets/ImagenesGenerales/LogoTiktok2.svg';
-import tiktokDark from '../../assets/ImagenesGenerales/LogoTiktok.svg';
-import linkedinLight from '../../assets/ImagenesGenerales/LogoLinkedin2.svg';
-import linkedinDark from '../../assets/ImagenesGenerales/LogoLinkedin.svg';
-import youtubeLight from '../../assets/ImagenesGenerales/LogoYoutube2.svg';
-import youtubeDark from '../../assets/ImagenesGenerales/LogoYoutube.svg';
+import { Link } from 'react-router-dom';
+import { useLanguage } from './Sistemas/LanguageContext';
+import { useContent } from './Sistemas/useContent';
 
 function Footer() {
     const [darkMode, setDarkMode] = useState(false);
+    const { language } = useLanguage();
+    const content = useContent();
 
     useEffect(() => {
-        // Verificar el modo actual al montar el componente
         const checkDarkMode = () => {
             const isDark = document.documentElement.classList.contains('dark-mode');
             setDarkMode(isDark);
@@ -27,7 +17,6 @@ function Footer() {
 
         checkDarkMode();
 
-        // Configurar un observador para cambios en el atributo class
         const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
                 if (mutation.attributeName === 'class') {
@@ -44,12 +33,17 @@ function Footer() {
         return () => observer.disconnect();
     }, []);
 
-    // Seleccionar imágenes basadas en el modo actual
-    const logo = darkMode ? logoDark : logoLight;
-    const facebookIcon = darkMode ? facebookDark : facebookLight;
-    const tiktokIcon = darkMode ? tiktokDark : tiktokLight;
-    const linkedinIcon = darkMode ? linkedinDark : linkedinLight;
-    const youtubeIcon = darkMode ? youtubeDark : youtubeLight;
+    if (!content) return null;
+
+    const footerContent = content.home.Footer;
+    const common = footerContent.Common;
+    const localized = footerContent[language];
+
+    const logo = darkMode ? common.LidermanLogoDark : common.LidermanLogoLight;
+    const facebookIcon = darkMode ? common.facebookDark : common.facebookLight;
+    const tiktokIcon = darkMode ? common.tiktokDark : common.tiktokLight;
+    const linkedinIcon = darkMode ? common.linkedinDark : common.linkedinLight;
+    const youtubeIcon = darkMode ? common.youtubeDark : common.youtubeLight;
 
     return (
         <div className={styles.footerContainer}>
@@ -58,100 +52,59 @@ function Footer() {
                 <div className={styles.topSection}>
                     <div className={styles.logoSection}>
                         <img src={logo} alt="Logo Liderman" className={styles.logo} />
-                        <p className={styles.logoText}>Valemos tanto como lo que cuidamos</p>
+                        <p className={styles.logoText}>{localized.Eslogan}</p>
                     </div>
 
                     <div className={styles.columnsContainer}>
                         <div className={styles.column}>
-                            <h4>Inicio</h4>
-                            <Link
-                                to="/#CardWithExpand"  // Navega a "/" con hash
-                                className={styles.menuButton}
-                            >
-                                Soluciones
+                            <h4>{localized.Inicio.Titulo}</h4>
+                            <Link to="/#CardWithExpand" className={styles.menuButton}>
+                                {localized.Inicio.Soluciones}
                             </Link>
-                            <Link
-                                to="/#Marquee"  // Navega a "/" con hash
-                                className={styles.menuButton}
-                            >
-                                Certificaciones
+                            <Link to="/#Marquee" className={styles.menuButton}>
+                                {localized.Inicio.Certificaciones}
                             </Link>
-                            <Link
-                                to="/#PorcentajeNegocio"  // Navega a "/" con hash
-                                className={styles.menuButton}
-                            >
-                                Presencia
+                            <Link to="/#PorcentajeNegocio" className={styles.menuButton}>
+                                {localized.Inicio.Presencia}
                             </Link>
-                            <Link
-                                to="/#ImagenYGrid2"  // Navega a "/" con hash
-                                className={styles.menuButton}
-                            >
-                                Cultura
+                            <Link to="/#ImagenYGrid2" className={styles.menuButton}>
+                                {localized.Inicio.Cultura}
                             </Link>
                         </div>
 
                         <div className={styles.column}>
-
-                            <h4>Conócenos</h4>
-                            <Link
-                                to="/Conocenos#HeaderGenerico"  // Navega a "/" con hash
-                                className={styles.menuButton}
-                            >
-                                ¿Quiénes somos?
+                            <h4>{localized.Conocenos.Titulo}</h4>
+                            <Link to="/Conocenos#HeaderGenerico" className={styles.menuButton}>
+                                {localized.Conocenos.QuienesSomos}
                             </Link>
-                            <Link
-                                to="/Conocenos#HeaderGenerico"  // Navega a "/" con hash
-                                className={styles.menuButton}
-                            >
-                                Historia
+                            <Link to="/Conocenos#HeaderGenerico" className={styles.menuButton}>
+                                {localized.Conocenos.Historia}
                             </Link>
                         </div>
 
                         <div className={styles.column}>
-
-
-
-                            <h4>Soluciones</h4>
-                            <Link
-                                to="/Seguridad"  // Navega a "/" con hash
-                                className={styles.menuButton}
-                            >
-                                Seguridad
+                            <h4>{localized.Soluciones.Titulo}</h4>
+                            <Link to="/Seguridad" className={styles.menuButton}>
+                                {localized.Soluciones.Seguridad}
                             </Link>
-                            <Link
-                                to="/Tecnologia"  // Navega a "/" con hash
-                                className={styles.menuButton}
-                            >
-                                Tecnología
+                            <Link to="/Tecnologia" className={styles.menuButton}>
+                                {localized.Soluciones.Tecnologia}
                             </Link>
-                            <Link
-                                to="/Servicio"  // Navega a "/" con hash
-                                className={styles.menuButton}
-                            >
-                                Servicios
+                            <Link to="/Servicio" className={styles.menuButton}>
+                                {localized.Soluciones.Servicio}
                             </Link>
-
                         </div>
 
                         <div className={styles.column}>
-                            <h4>Lidermanía</h4>
-                            <Link
-                                to="/Lidermania#DonaRotativa2"  // Navega a "/" con hash
-                                className={styles.menuButton}
-                            >
-                                Mejores Personas
+                            <h4>{localized.lidermania.Titulo}</h4>
+                            <Link to="/Lidermania#DonaRotativa2" className={styles.menuButton}>
+                                {localized.lidermania.MejoresPersonas}
                             </Link>
-                            <Link
-                                to="/Lidermania#DonaRotativa2"  // Navega a "/" con hash
-                                className={styles.menuButton}
-                            >
-                                4 AMAS
+                            <Link to="/Lidermania#DonaRotativa2" className={styles.menuButton}>
+                                {localized.lidermania.CuatroAmas}
                             </Link>
-                            <Link
-                                to="/Lidermania#CarruselDeTrabajos"  // Navega a "/" con hash
-                                className={styles.menuButton}
-                            >
-                                Únete al equipo
+                            <Link to="/Lidermania#CarruselDeTrabajos" className={styles.menuButton}>
+                                {localized.lidermania.Unete}
                             </Link>
                         </div>
                     </div>
@@ -163,8 +116,8 @@ function Footer() {
                         {/* Card Primaria */}
                         <div className={`${styles.actionCard} ${styles.primary}`}>
                             <div className={`${styles.cardTextContent} ${styles.primary}`}>
-                                <h3 className={styles.cardTitle}>¿Necesitas asesoría?</h3>
-                                <p className={styles.cardSubtitle}>Nuestros especialistas están listos para ayudarte</p>
+                                <h3 className={styles.cardTitle}>{localized.Boton1.Titulo}</h3>
+                                <p className={styles.cardSubtitle}>{localized.Boton1.Subtitulo}</p>
                             </div>
                             <button className={`${styles.squareButton} ${styles.primary}`}>➔</button>
                         </div>
@@ -172,8 +125,8 @@ function Footer() {
                         {/* Card Secundaria */}
                         <div className={`${styles.actionCard} ${styles.secondary}`}>
                             <div className={`${styles.cardTextContent} ${styles.secondary}`}>
-                                <h3 className={styles.cardTitle}>Trabaja con nosotros</h3>
-                                <p className={styles.cardSubtitle}>Sé parte de nuestro equipo de expertos</p>
+                                <h3 className={styles.cardTitle}>{localized.Boton2.Titulo}</h3>
+                                <p className={styles.cardSubtitle}>{localized.Boton2.Subtitulo}</p>
                             </div>
                             <button className={`${styles.squareButton} ${styles.secondary}`}>➔</button>
                         </div>
@@ -186,9 +139,11 @@ function Footer() {
 
                     <div className={styles.bottomContent}>
                         <div className={styles.legal}>
-                            <span className={styles.copyright}>&copy; 2025 Liderman. Todos los derechos reservados.</span>
-                            <button className={styles.legalButton}>Términos y Condiciones</button>
-                            <button className={styles.legalButton}>Política de Privacidad</button>
+                            <span className={styles.copyright}>
+                                &copy; 2025 Liderman. {localized.TextosFinales.DerechosReservados}
+                            </span>
+                            <button className={styles.legalButton}>{localized.TextosFinales.TerminosYCondiciones}</button>
+                            <button className={styles.legalButton}>{localized.TextosFinales.PoliticaDePrivacidad}</button>
                         </div>
 
                         <div className={styles.socialLinks}>
