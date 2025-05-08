@@ -448,8 +448,13 @@
         "linkedinLight": "src/assets/ImagenesGenerales/LogoLinkedin2.svg",
         "linkedinDark": "src/assets/ImagenesGenerales/LogoLinkedin.svg",
         "youtubeLight": "src/assets/ImagenesGenerales/LogoYoutube2.svg",
-        "youtubeDark": "src/assets/ImagenesGenerales/LogoYoutube.svg"
-
+        "youtubeDark": "src/assets/ImagenesGenerales/LogoYoutube.svg",
+        "Links": {
+          "youtube": "https://www.youtube.com",
+          "tiktok": "https://www.tiktok.com",
+          "linkedin": "https://www.linkedin.com",
+          "facebook": "https://www.facebook.com"
+        }
       },
       "es": {
         "Eslogan": "Valemos tanto como lo que cuidamos",

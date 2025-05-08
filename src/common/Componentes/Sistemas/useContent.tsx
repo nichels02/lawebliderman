@@ -248,7 +248,12 @@ interface ContentData {
                 linkedinDark: string;
                 youtubeLight: string;
                 youtubeDark: string;
-
+                Links: {
+                    youtube: string;
+                    tiktok: string;
+                    linkedin: string;
+                    facebook: string;
+                }
             },
             es: {
                 Eslogan: string;

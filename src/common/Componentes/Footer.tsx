@@ -147,19 +147,20 @@ function Footer() {
                         </div>
 
                         <div className={styles.socialLinks}>
-                            <a href="#" className={styles.socialLink}>
+                            <a href={common.Links.facebook} className={styles.socialLink} target="_blank" rel="noopener noreferrer">
                                 <img src={facebookIcon} alt="Facebook" className={styles.socialIcon} />
                             </a>
-                            <a href="#" className={styles.socialLink}>
+                            <a href={common.Links.tiktok} className={styles.socialLink} target="_blank" rel="noopener noreferrer">
                                 <img src={tiktokIcon} alt="Tiktok" className={styles.socialIcon} />
                             </a>
-                            <a href="#" className={styles.socialLink}>
+                            <a href={common.Links.linkedin} className={styles.socialLink} target="_blank" rel="noopener noreferrer">
                                 <img src={linkedinIcon} alt="LinkedIn" className={styles.socialIcon} />
                             </a>
-                            <a href="#" className={styles.socialLink}>
+                            <a href={common.Links.youtube} className={styles.socialLink} target="_blank" rel="noopener noreferrer">
                                 <img src={youtubeIcon} alt="YouTube" className={styles.socialIcon} />
                             </a>
                         </div>
+
                     </div>
                 </div>
             </footer>
