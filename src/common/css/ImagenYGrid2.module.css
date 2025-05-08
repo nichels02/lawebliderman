@@ -179,6 +179,42 @@
     margin: 0;
 }
 
+.iconoContenedorIzquierdo,
+.iconoContenedorDerecho{
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    overflow: hidden;
+    position: relative;
+
+}
+.iconoContenedorIzquierdo{
+    background: var(--color-texto-blanco);
+}
+.iconoContenedorDerecho{
+    background: var(--color-rojo-general);
+}
+
+.TextoContenedorBotonD,
+.TextoContenedorBotonI{
+    position: absolute;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    top:50%;
+    line-height:50%;
+    height: auto;
+    font-size: 20px;
+}
+.TextoContenedorBotonD{
+    color: white;
+}
+.TextoContenedorBotonI{
+    color: black;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .contenedorHijo {

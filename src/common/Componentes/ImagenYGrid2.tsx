@@ -53,9 +53,12 @@ function ImagenYGrid2() {
                                     <p className={styles.tituloBotonIzquierdo}>{textos.boton1.titulo}</p>
                                     <p className={styles.subtituloBotonIzquierdo}>{textos.boton1.subtitulo}</p>
                                 </div>
-                                <img src={imagenes.boton1ImagenDerecha} alt="Icono derecha" className={styles.imagenBoton} />
+                                <div className={styles.iconoContenedorDerecho}>
+                                    <div className={styles.TextoContenedorBotonD}>➔</div>
+                                </div>
                             </button>
                         </div>
+
                         <div className={styles.contenedorInferiorDerecho}>
                             <button className={styles.botonContenedorDerecho}>
                                 <img src={imagenes.boton2ImagenIzquierda} alt="Icono izquierda" className={styles.imagenBoton} />
@@ -63,7 +66,9 @@ function ImagenYGrid2() {
                                     <p className={styles.tituloBotonDerecho}>{textos.boton2.titulo}</p>
                                     <p className={styles.subtituloBotonDerecho}>{textos.boton2.subtitulo}</p>
                                 </div>
-                                <img src={imagenes.boton2ImagenDerecha} alt="Icono derecha" className={styles.imagenBoton} />
+                                <div className={styles.iconoContenedorIzquierdo}>
+                                    <div className={styles.TextoContenedorBotonI}>➔</div>
+                                </div>
                             </button>
                         </div>
                     </div>

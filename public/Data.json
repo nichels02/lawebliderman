@@ -432,9 +432,7 @@
         "logo1": "src/assets/Inicio/Recurso 20_nuevo.svg",
         "logo2": "src/assets/Inicio/Recurso 21_nuevo.svg",
         "boton1ImagenIzquierda": "src/assets/Inicio/Recurso 23_nuevo.svg",
-        "boton1ImagenDerecha": "src/assets/youtube.svg",
-        "boton2ImagenIzquierda": "src/assets/Inicio/Recurso 22_nuevo.svg",
-        "boton2ImagenDerecha": "src/assets/youtube.svg"
+        "boton2ImagenIzquierda": "src/assets/Inicio/Recurso 22_nuevo.svg"
       }
     },
     "Footer": {

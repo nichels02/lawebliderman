@@ -231,9 +231,7 @@ interface ContentData {
                 logo1: string;
                 logo2: string;
                 boton1ImagenIzquierda: string;
-                boton1ImagenDerecha: string;
                 boton2ImagenIzquierda: string;
-                boton2ImagenDerecha: string;
             }
         }
         Footer: {
