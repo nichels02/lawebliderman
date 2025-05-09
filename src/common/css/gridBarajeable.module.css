@@ -6,7 +6,7 @@
 
 .gridContainer {
     display: grid;
-    grid-template-columns: 11fr 11fr 10fr 10fr;
+    grid-template-columns: 10fr 10fr 10fr 10fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     max-width: 1670px;
@@ -21,7 +21,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    margin-right: 60px;
+    margin-right: 3.125vw;
     display: flex;
     border-radius: 20px;
     align-items: center;  /* Centrado vertical */
@@ -87,8 +87,7 @@
 
 .mainOverlay{
     composes: overlay;
-    top: auto;
-    bottom: 10%;
+    align-items: center;
     width: clamp(50%, calc(800px - 50%), 80%);
 }
 
@@ -121,11 +120,48 @@ h2{
     .mainOverlay{
         width: clamp(50%, calc(800px - 50%), 80%);
     }
+    .mainItem {
+        margin-right: 2vw;
+    }
 }
 
-@media (max-width: 1200px){
-    .gridContainer{
-        height:clamp(300px, 40vw, 600px);
+@media (max-width: 1250px){
+    .mainItem {
+        margin-right: 0;
+    }
+    .gridContainer {
+        display: grid;
+        grid-template-columns: 10fr 10fr 10fr;
+        grid-template-rows: repeat(3, 1fr);
+        width: 87%;
+        height: 87vw;
+    }
+    /* gridBarajeable.module.css */
+    .mainTitle {
+        font-size: clamp(1.5rem, 2vw, 2rem);
+        text-shadow: 1px 1px 4px black;
+        margin-bottom: 10px;
     }
 
+}
+@media (max-width: 686px){
+    .gridContainer {
+        display: grid;
+        grid-template-columns: 10fr 10fr;
+        grid-template-rows: repeat(4, 1fr);
+        width: 87%;
+        height: clamp(730px, 150vw, 10000px);
+    }
+}
+@media (max-width: 470px){
+    .gridContainer {
+        display: grid;
+        grid-template-columns: 10fr;
+        grid-template-rows: 4fr 4fr 2fr 2fr 2fr 2fr;
+        width: 87%;
+        height: clamp(900px, 150vw, 10000px);
+    }
+    .mainItem {
+        grid-column: span 1; /* Ocupa solo una columna */
+    }
 }
