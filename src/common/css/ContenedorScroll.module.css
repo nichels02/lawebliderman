@@ -2,7 +2,7 @@
 .contenedorScroll {
     position: relative;
     width: 100vw;
-    height: 500vh; /* 4 pantallas de altura para el scroll vertical */
+    height: 281.25vw; /* 4 pantallas de altura para el scroll vertical */
     overflow: visible;
 }
 
@@ -20,7 +20,7 @@
 /* SVG - muy ancho pero manteniendo proporciones */
 .svgScroll {
     width: 450vw;
-    height: 450vh;
+    height: 253.125vw;
     display: block;
     overflow: visible;
     z-index: -10;
@@ -51,7 +51,7 @@
     padding-left: 20px;
     padding-right: 20px;
     color: var(--color-texto-negro-cambio2);
-    //background: rgba(0, 0, 0, 0.66);
+//background: rgba(0, 0, 0, 0.66);
     border-radius: 10px;
     top: 50%;
     white-space: nowrap;
