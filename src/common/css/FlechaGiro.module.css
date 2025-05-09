@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vw; /* Base en 100vh */
+    height: clamp(300px, 100vw, 900px); /* Base en 100vh */
     position: relative;
     overflow: hidden;
 }
@@ -84,21 +84,26 @@
     font-weight: normal;
     color: var(--color-texto-negro-cambio);
 }
-
+.contenedor1, .contenedor2, .contenedor3,
+.contenedor4, .contenedor5,.contenedor6 {
+    position: absolute;
+}
 /* Posicionamiento de los contenedores alrededor de la imagen */
-.contenedor1 { top: 10%; right: 18%; }
+.contenedor1 { top: 15%; right: 18%; }
 .contenedor2 { top: 38%; right: 10%; }
-.contenedor3 { top: 66%; right: 18%; }
-.contenedor4 { top: 10%; left: 18%; }
+.contenedor3 { top: 70%; right: 18%; }
+
+
+.contenedor4 { top: 15%; left: 18%; }
 .contenedor5 { top: 38%; left: 10%; }
-.contenedor6 { top: 66%; left: 18%; }
+.contenedor6 { top: 70%; left: 18%; }
 
 /* ----------- RESPONSIVE ----------- */
 
 /* Para tablets */
 @media (max-width: 1024px) {
     .contenedorPadre {
-        height: 90vh; /* Se reduce un poco en tablets */
+        height: clamp(300px, 100vw, 800px); /* Se reduce un poco en tablets */
     }
 
     .contenedorImagen {
@@ -129,19 +134,20 @@
         font-size: 12px;
     }
 
-    .contenedor1 { top: 12%; right: 16%; }
+    .contenedor1 { top: 16%; right: 16%; }
     .contenedor2 { top: 40%; right: 8%; }
-    .contenedor3 { top: 68%; right: 16%; }
-    .contenedor4 { top: 12%; left: 16%; }
+    .contenedor3 { top: 65%; right: 16%; }
+
+    .contenedor4 { top: 16%; left: 16%; }
     .contenedor5 { top: 40%; left: 8%; }
-    .contenedor6 { top: 68%; left: 16%; }
+    .contenedor6 { top: 65%; left: 16%; }
 }
 
 /* Para móviles */
 @media (max-width: 768px) {
-    .contenedorPadre {
-        height: 85vh; /* Se sigue reduciendo en móviles */
-    }
+    /*.contenedorPadre {*/
+    /*    height: 85vh; !* Se sigue reduciendo en móviles *!*/
+    /*}*/
 
     .contenedorImagen {
         width: 85%;
@@ -171,13 +177,20 @@
     .texto {
         font-size: 10px;
     }
+    .contenedor1, .contenedor2, .contenedor3,
+    .contenedor4, .contenedor5,.contenedor6 {
+        /*transform: translate(50%,50%);*/
+    }
 
-    .contenedor1 { top: 8%; right: 12%; }
-    .contenedor2 { top: 36%; right: 6%; }
-    .contenedor3 { top: 64%; right: 12%; }
-    .contenedor4 { top: 8%; left: 12%; }
-    .contenedor5 { top: 36%; left: 6%; }
-    .contenedor6 { top: 64%; left: 12%; }
+
+    .contenedor1 { top: 16%; left: 10%; }
+    .contenedor2 { top: 8%; right: 40%; }
+    .contenedor3 { top: 16%; right: 10%; }
+
+
+    .contenedor4 { top: 65%; left: 70%; }
+    .contenedor5 { top: 80%; left: 40%; }
+    .contenedor6 { top: 65%; left: 10%; }
 }
 
 /* Para móviles pequeños */
