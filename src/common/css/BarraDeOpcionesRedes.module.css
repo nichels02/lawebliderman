@@ -38,7 +38,7 @@
 .icono:hover {
     transform: scale(1.1);
 }
-@media (max-width: 768px) { /* Ajusta este valor si es necesario */
+@media (max-width: 810px) { /* Ajusta este valor si es necesario */
     .barra {
         display: none;
     }
