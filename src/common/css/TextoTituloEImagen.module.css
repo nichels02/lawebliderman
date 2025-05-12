@@ -1,5 +1,5 @@
 .contenedor {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column; /* Cambiamos a columna para que los botones estén debajo */
     justify-content: center;
@@ -11,7 +11,9 @@
     display: flex;
     align-items: center; /* Centramos los elementos en el eje vertical */
     justify-content: flex-start; /* Alineamos al principio en el eje horizontal */
-    max-width: 1200px;
+    max-width: 1800px;
+    padding-left: 5%;
+    padding-right: 5%;
     width: 100%;
 }
 
@@ -40,7 +42,7 @@
 }
 
 .titulo {
-    font-size: 6vw;
+    font-size: clamp(2rem, 6vw, 100px);
     margin-bottom: 1rem;
     color: #931f1f; /* Ejemplo: color azul para la variante 1 */
 }
@@ -90,6 +92,7 @@
     margin-top: -30px; /* Movemos los botones hacia arriba */
     padding: 10px;
     width: 100%;
+    max-width: 1800px;
     height: 50%;
     position: relative; /* Posicionamiento relativo */
     z-index: 1; /* Aseguramos que los botones estén sobre la imagen */
@@ -109,4 +112,67 @@
 
 .boton:hover {
     background-color: #333;
+}
+@media (max-width: 1200px){
+    .boton{
+        /*width: 20%;*/
+        width: clamp(1px, calc(472px - 20%),100000px);
+    }
+    .botonesContainer{
+        gap: 4.16vw;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .boton {
+        width: 45%; /* Dos botones por línea con algo de espacio entre ellos */
+        min-width: 150px; /* Evita que se hagan muy pequeños */
+    }
+}
+
+@media (max-width: 500px){
+    .botonesContainer {
+        flex-wrap: wrap; /* Permite que los botones pasen a la siguiente línea */
+        gap: 20px;
+
+    }
+    .boton {
+        width: 45+
+        %; /* Dos botones por línea con algo de espacio entre ellos */
+        min-width: 150px; /* Evita que se hagan muy pequeños */
+    }
+}
+
+@media (max-width: 882px){
+    .boton{
+        width: 25%;
+    }
+}
+@media (max-width: 1080px) {
+    .contenido {
+        flex-direction: column;
+
+        align-items: center; /* Centra imagen y texto en columna */
+        text-align: center; /* Opcional: centra el texto si quieres */
+    }
+
+    .imagenContainer {
+        width: 100%;
+        height: auto; /* Para que la altura se ajuste al contenido */
+        padding: 10px 0;
+    }
+
+    .textoContainer {
+        width: 100%;
+        height: auto; /* El alto ya no necesita ser el 100% del contenedor */
+        padding: 10px 20px;
+    }
+
+    .botonesContainer {
+
+        margin-top: 20px; /* Espacio encima de los botones */
+        position: static; /* Quitamos el posicionamiento relativo si ya no hace falta */
+    }
 }
