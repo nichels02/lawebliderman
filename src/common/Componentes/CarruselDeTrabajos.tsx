@@ -22,7 +22,7 @@ function CarruselDeTrabajos({ trabajos, iconoNoHayTrabajos }: CarruselDeTrabajos
     };
 
     const itemsPerView = getItemsPerView();
-    const cardWidth = Math.min(350, windowWidth * 0.8 / itemsPerView);
+    const cardWidth = Math.min(512, windowWidth * 0.8 / itemsPerView);
     const gap = 20;
     const containerPadding = Math.max(20, (windowWidth - (itemsPerView * cardWidth + (itemsPerView - 1) * gap)) / 2);
 

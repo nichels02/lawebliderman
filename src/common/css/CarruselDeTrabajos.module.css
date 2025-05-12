@@ -5,7 +5,8 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 30vw;
     overflow: hidden;
     padding: 2rem 0;
     box-sizing: border-box;
@@ -19,12 +20,14 @@
     box-sizing: border-box;
     justify-content: center;
 }
+.cardsWrapper{
 
+}
 .cardsContainer {
     display: flex;
     overflow: hidden;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1616px;
     gap: 20px;
     justify-content: center;
     scroll-behavior: smooth;
