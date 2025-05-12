@@ -139,8 +139,7 @@
 
     }
     .boton {
-        width: 45+
-        %; /* Dos botones por línea con algo de espacio entre ellos */
+        width: 45%; /* Dos botones por línea con algo de espacio entre ellos */
         min-width: 150px; /* Evita que se hagan muy pequeños */
     }
 }
