@@ -1,4 +1,9 @@
 /* Contenedor principal */
+.elContenedorPadre{
+    width:100vw;
+    height: auto;
+    max-width: 200vw;
+}
 .container {
     width: 87%;
     margin: auto;
@@ -109,6 +114,7 @@
     .gridItem img {
         width: 60px;
         height: 60px;
+        padding-left: 0;
     }
 
     .textContainer {
