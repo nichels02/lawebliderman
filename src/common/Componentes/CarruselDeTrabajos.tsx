@@ -21,8 +21,11 @@ function CarruselDeTrabajos({ trabajos, iconoNoHayTrabajos }: CarruselDeTrabajos
         return 3;
     };
 
+
+    const TamanoMinimoDeCambio= windowWidth > 660;
     const itemsPerView = getItemsPerView();
-    const cardWidth = Math.min(512, windowWidth * 0.8 / itemsPerView);
+    const cardWidth = TamanoMinimoDeCambio? Math.min(512, windowWidth * 0.8 / itemsPerView) :
+                                                    Math.min(512, windowWidth * 0.6 / itemsPerView);
     const gap = 20;
     const containerPadding = Math.max(20, (windowWidth - (itemsPerView * cardWidth + (itemsPerView - 1) * gap)) / 2);
 
