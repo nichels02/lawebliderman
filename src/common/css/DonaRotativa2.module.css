@@ -31,8 +31,8 @@
 
 /* Contenedor del gráfico */
 .chartWrapper {
-    width: 55vw;
-    height: 55vw;
+    width: calc(min(1920px, 100vw)*0.55);
+    height: calc(min(1920px, 100vw)*0.55);
     display: flex;
     position: relative;
     justify-content: center;
@@ -105,7 +105,7 @@
 
     .imageContainer {
         width: 45%;
-        height: 150vh;
+        height: min(1920px, 100vw);
     }
 }
 
