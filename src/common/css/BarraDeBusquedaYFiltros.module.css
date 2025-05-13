@@ -12,6 +12,7 @@
     align-items: center;
     gap: 0.5rem;
     width: 100%;
+    max-width: 1920px;
     height: clamp( 20px, 10vw, 70px);
     justify-content: center;
 }
@@ -57,7 +58,7 @@
     padding: 0.25rem 0.6rem;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     transition: background-color 0.2s;
     height: 100%;
     width: 10%;
@@ -107,4 +108,13 @@
 .filtro select:focus {
     border-color: #999;
     outline: none;
+}
+@media (max-width: 768px) {
+    .botonFiltros{
+        width: 20%;
+    }
+    .barra {
+        width: 60%;
+    }
+
 }
