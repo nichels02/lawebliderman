@@ -6,6 +6,7 @@ import { useContent } from './Sistemas/useContent';
 
 function Footer() {
     const [darkMode, setDarkMode] = useState(false);
+    const [esPantallaChica, setEsPantallaChica] = useState(window.innerWidth <= 600); // Inicializa el estado
     const { language } = useLanguage();
     const content = useContent();
 
@@ -30,7 +31,18 @@ function Footer() {
             attributeFilter: ['class']
         });
 
-        return () => observer.disconnect();
+        // Agregar listener para cambio de tamaño de la ventana
+        const handleResize = () => {
+            setEsPantallaChica(window.innerWidth <= 600); // Actualiza el estado
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup: quitar el listener cuando el componente se desmonte
+        return () => {
+            observer.disconnect();
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     if (!content) return null;
@@ -44,6 +56,20 @@ function Footer() {
     const tiktokIcon = darkMode ? common.tiktokDark : common.tiktokLight;
     const linkedinIcon = darkMode ? common.linkedinDark : common.linkedinLight;
     const youtubeIcon = darkMode ? common.youtubeDark : common.youtubeLight;
+
+    // Modificación: declarar textoDerechos como React.ReactNode
+    let textoDerechos: React.ReactNode = localized.TextosFinales.DerechosReservados;
+
+    // Comprobamos si textoDerechos es un string antes de aplicar los métodos
+    if (typeof textoDerechos === 'string' && esPantallaChica && textoDerechos.includes('.')) {
+        const partes = textoDerechos.split(/\. (.+)/); // Divide el texto en el primer punto
+        textoDerechos = (
+            <>
+                {partes[0]}.<br />
+                {partes[1]}
+            </>
+        );
+    }
 
     return (
         <div className={styles.footerContainer}>
@@ -140,7 +166,7 @@ function Footer() {
                     <div className={styles.bottomContent}>
                         <div className={styles.legal}>
                             <span className={styles.copyright}>
-                                &copy; 2025 Liderman. {localized.TextosFinales.DerechosReservados}
+                                {textoDerechos}
                             </span>
                             <button className={styles.legalButton}>{localized.TextosFinales.TerminosYCondiciones}</button>
                             <button className={styles.legalButton}>{localized.TextosFinales.PoliticaDePrivacidad}</button>

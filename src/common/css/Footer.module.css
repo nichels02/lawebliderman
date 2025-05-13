@@ -1,7 +1,7 @@
 /* ===== CONTENEDOR PADRE ===== */
 .footerContainer {
     width: 100vw;
-    height: 85vh;
+    height: auto;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -12,7 +12,7 @@
     color: var(--color-texto-negro-cambio);
     padding: 40px 20px 20px;
     width: 90%;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     box-sizing: border-box;
     font-weight: 400;
@@ -22,7 +22,7 @@
 .topSection {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: clamp(40px, 5vw,100px);
 }
 
 .logoSection {
@@ -32,14 +32,16 @@
 }
 
 .logo {
-    width: 200px;
+    width:clamp( 150px, 90%,1000px);
+    height: auto;
     margin-bottom: 15px;
 }
 
 .logoText {
-    font-size: 0.85rem;
+    font-size: clamp(1rem, 1.3vw,1.5rem);
     line-height: 1.4;
     font-weight: 400;
+    width: clamp(150px, 100%, 10000px);
 }
 
 /* Columnas más compactas y alineadas a izquierda */
@@ -47,7 +49,7 @@
     width: 75%;
     display: flex;
     justify-content: flex-start;
-    gap: 40px;
+    gap: clamp(40px, 5.3vw ,100px);
 }
 
 .column {
@@ -59,10 +61,12 @@
 .column h4 {
     color: var(--color-texto-negro-cambio);
     margin-bottom: 15px;
-    font-size: 1rem;
+    font-size: clamp(1.1rem, 1.3vw,1.5rem);
     font-weight: 700;
 }
-
+.column a {
+    font-size: clamp(1rem, 1vw,1.1rem);
+}
 .menuButton {
     display: block;
     width: 100%;
@@ -125,14 +129,14 @@
 /* Variante primary */
 .cardTextContent.primary .cardTitle {
     color: var(--color-texto-blanco-cambio2);
-    font-size: 1vw;
+    font-size: clamp(18px, 1.8vw, 30px);
     font-weight: 600;
     margin-bottom: 8px;
 }
 
 .cardTextContent.primary .cardSubtitle {
     color: var(--color-texto-blanco-cambio2);
-    font-size: 1vw;
+    font-size: clamp(16px, 1.1vw, 30px);
     font-weight: 400;
     opacity: 0.9;
 }
@@ -140,14 +144,14 @@
 /* Variante secondary */
 .cardTextContent.secondary .cardTitle {
     color: var(--color-texto-negro-cambio);
-    font-size: 1vw;
+    font-size: clamp(18px, 1.8vw, 30px);
     font-weight: 700;
     margin-bottom: 8px;
 }
 
 .cardTextContent.secondary .cardSubtitle {
     color: var(--color-texto-negro-cambio);
-    font-size: 1vw;
+    font-size: clamp(16px, 1.1vw, 30px);
     font-weight: 400;
     opacity: 0.8;
 }
@@ -156,13 +160,13 @@
 .squareButton {
     border: none;
     border-radius: 8px;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 100vw, 2rem);
     transition: all 0.3s;
     flex-shrink: 0;
     padding: 0;
@@ -172,6 +176,7 @@
 .squareButton.primary {
     background-color: var(--color-rojo-general);
     color: var(--color-texto-negro-cambio2);
+
 }
 
 .squareButton.secondary {
@@ -181,7 +186,8 @@
 
 /* ===== SEGUNDA SECCIÓN ===== */
 .middleSection {
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: clamp(30px, 3vw,60px);
 }
 
 .actionCardsContainer {
@@ -201,6 +207,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+    margin-bottom: clamp(70px, 5vw,100px);
 }
 
 .legal {
@@ -220,13 +227,15 @@
     display: flex;
     gap: 20px;
 }
-
+.copyright,
+.legalButton{
+    font-size: 1.1rem;
+}
 .legalButton {
     background: none;
     border: none;
     color: var(--color-texto-negro-cambio);
     cursor: pointer;
-    font-size: 0.9rem;
     padding: 0;
     font-weight: 400;
     white-space: nowrap;
@@ -243,13 +252,37 @@
 }
 
 .socialIcon {
-    width: 24px;
-    height: 24px;
+    width: clamp(30px, 3vw,56px);
+    height: auto;
     transition: transform 0.3s;
 }
 
 .socialIcon:hover {
     transform: scale(1.2);
+}
+
+@media (max-width: 1200px) and (min-width: 920px) {
+    .columnsContainer{
+        margin-left: 36px;
+        gap: 10px;
+    }
+}
+@media (max-width: 1341px){
+    .bottomContent {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .legal {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+@media (max-width: 919px) and (min-width: 769px) {
+    .columnsContainer{
+        margin-left: 50px;
+    }
 }
 
 /* ===== VERSIÓN MÓVIL ===== */
@@ -270,7 +303,7 @@
     }
 
     .logo {
-        width: 130px;
+        width: clamp(150px, 50%, 250px);
         margin: 0 auto 15px;
     }
 
@@ -287,7 +320,9 @@
         max-width: none;
         margin: 0;
     }
-
+    .column h4{
+        text-align: center;
+    }
     .menuButton {
         text-align: center;
         padding: 8px 0;
@@ -311,10 +346,13 @@
 
     /* Ajustes de texto para móvil */
     .cardTextContent.primary .cardTitle,
-    .cardTextContent.secondary .cardTitle,
+    .cardTextContent.secondary .cardTitle{
+        font-size: 1.4rem;
+    }
+
     .cardTextContent.primary .cardSubtitle,
     .cardTextContent.secondary .cardSubtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .squareButton {
@@ -324,21 +362,19 @@
         align-self: flex-end;
     }
 
-    .bottomContent {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
 
-    .legal {
-        flex-direction: column;
-        gap: 15px;
-    }
 
     .legalLinks {
         flex-direction: column;
         gap: 10px;
     }
+
+
+    .socialIcon {
+        width: clamp(30px, 7vw,56px);
+    }
+
+
 }
 
 @media (max-width: 480px) {
@@ -374,10 +410,5 @@
 
     .socialLinks {
         gap: 12px;
-    }
-
-    .socialIcon {
-        width: 22px;
-        height: 22px;
     }
 }
