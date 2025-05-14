@@ -76,7 +76,7 @@ function App() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth <= 810);
+        const handleResize = () => setIsMobile(window.innerWidth <= 958);
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
@@ -95,7 +95,8 @@ function App() {
                     )}
 
                     {isMobile && <BarraDeOpciones3 />}
-                    <BarraDeOpcionesRedes />
+                    {!isMobile && <BarraDeOpcionesRedes />}
+
 
                     <Suspense fallback={<div>Cargando página...</div>}>
                         <Routes>

@@ -10,26 +10,12 @@
     -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
     border-radius: 25px;
     padding: 4px 8px; /* Padding igual al otro componente */
-    width: 20%; /* Ancho ligeramente mayor para que quepa el Switch */
+    width: 20vw; /* Ancho ligeramente mayor para que quepa el Switch */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    height: 3vw;
 }
 
-/* Ajustes para pantallas medianas (tablets) */
-@media (max-width: 1024px) {
-    .barra {
-        width: 26%; /* Más ancho en tablets */
-        padding: 4px 6px; /* Padding más compacto */
-    }
-}
-
-/* Ajustes para pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-    .barra {
-        width: 36%; /* Más ancho en móviles */
-        padding: 4px 4px; /* Padding más compacto */
-    }
-}
 
 .boton {
     background-color: transparent;
@@ -43,9 +29,10 @@
     position: relative;
     font-weight: normal;
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    font-size: clamp(0.7rem, 1.1vw, 0.8rem);
+    font-size: clamp(1rem, 1vw,1.3rem);
     flex-grow: 0;
     text-align: center;
+
 }
 
 /* Estilos para el ícono del globo */
@@ -54,8 +41,8 @@
     display: inline-block;
     fill: var(--color-texto-negro-cambio) !important;
     vertical-align: middle; /* Alinea verticalmente con la flecha */
-    width: 16px; /* Ancho reducido */
-    height: 16px; /* Alto reducido */
+    width: 1.8vw; /* Ancho reducido */
+    height: 1.8vw; /* Alto reducido */
 }
 .iconoSVG{
     color: var(--color-texto-negro-cambio) !important;
@@ -111,4 +98,37 @@
 /* Estilos para el Switch (sin cambios) */
 .switch {
     margin-left: 4px; /* Espacio entre el último botón y el Switch */
+}
+
+/* Ajustes para tablets */
+@media(max-width:  1200px){
+
+    .barra {
+        width: 22vw;
+        min-width: 0px;
+        max-width: 672px;
+        height: 3.5vw;
+    }
+    .boton {
+        font-size: clamp(1.1rem, 1.5vw,1.4rem);
+    }
+}
+/* Ajustes para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .barra {
+        width: 26vw; /* Más ancho en tablets */
+        padding: 4px 6px; /* Padding más compacto */
+    }
+
+    .boton {
+        font-size: clamp(0.8rem, 1.3vw, 1.5rem);
+    }
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .barra {
+        width: 36%; /* Más ancho en móviles */
+        padding: 4px 4px; /* Padding más compacto */
+    }
 }
