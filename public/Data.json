@@ -709,22 +709,21 @@
     "GridGenerico": {
       "en": {
         "Sector1": {
-          "Titulo": "",
-          "Texto": ""
+          "Titulo": "People",
+          "Texto": "Our human team, both on-site and off-site, is committed to reducing risks and fostering a strong safety culture."
         },
         "Sector2": {
-          "Titulo": "",
-          "Texto": ""
+          "Titulo": "Sites",
+          "Texto": "We identify vulnerabilities, optimize security, and efficiently manage access control in all the spaces under our protection."
         },
         "Sector3": {
-          "Titulo": "",
-          "Texto": ""
+          "Titulo": "Technology at the Core",
+          "Texto": "We incorporate technology at the heart of our services, integrating it at every stage to deliver more agile, secure, and efficient solutions."
         },
         "Sector4": {
-          "Titulo": "",
-          "Texto": ""
+          "Titulo": "Processes",
+          "Texto": "We strengthen the security of our clients' operational processes by eliminating risky practices and ensuring business continuity and protection."
         }
-
       },
       "es": {
         "Sector1": {
@@ -856,6 +855,7 @@
       },
       "es": {
         "carta1": {
+
           "text": "Carga de datos y administración",
           "description": [
             "· Actualiza datos(tabulares o gráficos) durante los procesos.",
@@ -978,20 +978,20 @@
     "GridGenerico": {
       "en": {
         "Sector1": {
-          "Titulo": "",
-          "Texto": ""
+          "Titulo": "People",
+          "Texto": "Our human team, both within and outside your facilities, is committed to reducing risks and fostering a strong culture of safety."
         },
         "Sector2": {
-          "Titulo": "",
-          "Texto": ""
+          "Titulo": "Sites",
+          "Texto": "We identify vulnerabilities, optimize security, and efficiently manage access control in all the spaces under our protection."
         },
         "Sector3": {
-          "Titulo": "",
-          "Texto": ""
+          "Titulo": "Technology at the Core",
+          "Texto": "We incorporate technology at the heart of our services, integrating it at every stage to deliver more agile, secure, and efficient solutions."
         },
         "Sector4": {
-          "Titulo": "",
-          "Texto": ""
+          "Titulo": "Processes",
+          "Texto": "We strengthen the security of our clients' operational processes by eliminating risky practices and ensuring business continuity and protection."
         }
       },
       "es": {
