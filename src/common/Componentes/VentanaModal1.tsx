@@ -1,28 +1,59 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "../css/VentanaModal1.module.css";
-import { useContent } from "./Sistemas/useContent.tsx"; // Importa el hook del ContentProvider
-import { useLanguage } from "./Sistemas/LanguageContext.tsx"; // Importa el hook del LanguageProvider
+import { useContent } from "./Sistemas/useContent.tsx";
+import { useLanguage } from "./Sistemas/LanguageContext.tsx";
 
 type VentanaModal1Props = {
     onClose: () => void;
 };
 
 function VentanaModal1({ onClose }: VentanaModal1Props) {
-    const [isOpen, setIsOpen] = useState(true); // Inicialmente está abierto por defecto
-    const { language } = useLanguage(); // Obtiene el idioma actual
-    const data = useContent(); // Obtiene los datos del contexto
+    const [isOpen, setIsOpen] = useState(true);
+    const { language } = useLanguage();
+    const data = useContent();
+
+    const scrollYRef = useRef<number>(0); // guardamos el scroll sin depender del DOM
+
+    useEffect(() => {
+        if (isOpen) {
+            scrollYRef.current = window.scrollY;
+
+            document.body.style.overflow = "hidden";
+            document.body.style.position = "fixed";
+            document.body.style.top = `-${scrollYRef.current}px`;
+            document.body.style.width = "100%";
+        } else {
+            // restaurar el scroll
+            document.body.style.overflow = "";
+            document.body.style.position = "";
+            document.body.style.top = "";
+            document.body.style.width = "";
+
+            window.scrollTo(0, scrollYRef.current);
+        }
+
+        // limpieza por si se desmonta
+        return () => {
+            document.body.style.overflow = "";
+            document.body.style.position = "";
+            document.body.style.top = "";
+            document.body.style.width = "";
+
+            window.scrollTo(0, scrollYRef.current);
+        };
+    }, [isOpen]);
 
     useEffect(() => {
         if (!isOpen) {
-            onClose(); // Notifica al padre que el modal se cerró
+            onClose();
         }
     }, [isOpen, onClose]);
 
     if (!data) {
-        return <div>Cargando...</div>; // Muestra un mensaje mientras se carga el contenido
+        return <div>Cargando...</div>;
     }
 
-    const modalData = language === 'es' ? data.Tecnologia.Modal1.es : data.Tecnologia.Modal1.en;
+    const modalData = language === "es" ? data.Tecnologia.Modal1.es : data.Tecnologia.Modal1.en;
 
     const closeModal = () => setIsOpen(false);
 

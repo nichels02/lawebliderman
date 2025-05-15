@@ -1,63 +1,111 @@
-import { useContent } from "./Sistemas/useContent.tsx";  // Asegúrate de que el nombre de la ruta sea el correcto
-import { useLanguage } from "./Sistemas/LanguageContext.tsx";  // Asegúrate de que el nombre de la ruta sea el correcto
+import { useState, useEffect, useRef } from "react";
+import { useContent } from "./Sistemas/useContent.tsx";
+import { useLanguage } from "./Sistemas/LanguageContext.tsx";
 import styles from "../css/VentanaModal2.module.css";
 
-// Cambiar la definición del componente para recibir `onClose` como prop
-function VentanaModal2({ onClose }: { onClose: () => void }) {
-    const { language } = useLanguage();  // Obtener el idioma actual
-    const content = useContent();  // Obtener los datos del JSON
+type VentanaModal2Props = {
+    onClose: () => void;
+};
 
-    // Si los datos aún no están disponibles, muestra un mensaje de carga.
+function VentanaModal2({ onClose }: VentanaModal2Props) {
+    const [isOpen, setIsOpen] = useState(true);
+    const { language } = useLanguage();
+    const content = useContent();
+
+    const scrollYRef = useRef<number>(0);
+
+    useEffect(() => {
+        if (isOpen) {
+            scrollYRef.current = window.scrollY;
+
+            document.body.style.overflow = "hidden";
+            document.body.style.position = "fixed";
+            document.body.style.top = `-${scrollYRef.current}px`;
+            document.body.style.width = "100%";
+        } else {
+            document.body.style.overflow = "";
+            document.body.style.position = "";
+            document.body.style.top = "";
+            document.body.style.width = "";
+
+            window.scrollTo(0, scrollYRef.current);
+        }
+
+        return () => {
+            document.body.style.overflow = "";
+            document.body.style.position = "";
+            document.body.style.top = "";
+            document.body.style.width = "";
+
+            window.scrollTo(0, scrollYRef.current);
+        };
+    }, [isOpen]);
+
+    useEffect(() => {
+        if (!isOpen) {
+            onClose();
+        }
+    }, [isOpen, onClose]);
+
     if (!content) {
         return <div>Cargando...</div>;
     }
 
-    // Obtenemos los datos correspondientes para el modal en el idioma actual
     const modalData = content.Tecnologia.Modal2[language];
+
+    const closeModal = () => setIsOpen(false);
 
     const handleOverlayClick = (e: React.MouseEvent) => {
         if (e.target === e.currentTarget) {
-            onClose();  // Llamar a onClose cuando se hace clic fuera del modal
+            closeModal();
         }
     };
 
     return (
         <>
-            <div className={styles.modalOverlay} onClick={handleOverlayClick}>
-                <div className={styles.modal}>
-                    <div className={styles.modalHeader}>
-                        <h5 className={styles.modalTitle}>{modalData.Titulo}</h5>
-                    </div>
-
-                    <div className={styles.modalBody}>
-                        <div className={styles.mainTextContainer}>
-                            <p className={styles.mainText}>{modalData.Texto}</p>
+            {isOpen && (
+                <div className={styles.modalOverlay} onClick={handleOverlayClick}>
+                    <div className={styles.modal}>
+                        <div className={styles.modalHeader}>
+                            <h5 className={styles.modalTitle}>{modalData.Titulo}</h5>
                         </div>
 
-                        <div className={styles.row}>
-                            <div className={styles.containerLeft}>
-                                <img className={styles.image} src={content.Tecnologia.Modal2.Common.ImagenIzq} alt="Imagen izquierda" />
-                                <h6 className={styles.title}>{modalData.TituloIzq}</h6>
-                                <div className={styles.text}>{modalData.TextoIzq}</div>
-
+                        <div className={styles.modalBody}>
+                            <div className={styles.mainTextContainer}>
+                                <p className={styles.mainText}>{modalData.Texto}</p>
                             </div>
 
-                            <div className={styles.containerRight}>
-                                <img className={styles.image} src={content.Tecnologia.Modal2.Common.ImagenDer} alt="Imagen derecha" />
-                                <h6 className={styles.title}>{modalData.TituloDer}</h6>
-                                <div className={styles.text}>{modalData.TextoDer}</div>
+                            <div className={styles.row}>
+                                <div className={styles.containerLeft}>
+                                    <img
+                                        className={styles.image}
+                                        src={content.Tecnologia.Modal2.Common.ImagenIzq}
+                                        alt="Imagen izquierda"
+                                    />
+                                    <h6 className={styles.title}>{modalData.TituloIzq}</h6>
+                                    <div className={styles.text}>{modalData.TextoIzq}</div>
+                                </div>
 
+                                <div className={styles.containerRight}>
+                                    <img
+                                        className={styles.image}
+                                        src={content.Tecnologia.Modal2.Common.ImagenDer}
+                                        alt="Imagen derecha"
+                                    />
+                                    <h6 className={styles.title}>{modalData.TituloDer}</h6>
+                                    <div className={styles.text}>{modalData.TextoDer}</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className={styles.modalFooter}>
-                        <button onClick={onClose} className={styles.closeButton}>
-                            {modalData.BotonCerrar}
-                        </button>
+                        <div className={styles.modalFooter}>
+                            <button onClick={closeModal} className={styles.closeButton}>
+                                {modalData.BotonCerrar}
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            )}
         </>
     );
 }
