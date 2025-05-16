@@ -18,6 +18,8 @@
     background-color: #fff;
     width: 80%;
     height: 95%; /* Altura fija para el modal */
+    max-height: 1080px;
+    max-width: 1920px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -41,16 +43,18 @@
 
 /* Título del header */
 .modalTitle {
-    font-size: 1.5rem;
+    font-size: clamp(1.4rem, 2vw, 2.3rem);
     font-weight: bold;
 }
 
 /* Cuerpo del modal */
 .modalBody {
+    overflow: hidden;
+    overflow-y: auto;      /* Habilita scroll vertical solo si el contenido excede la altura */
     padding: 20px;
     color: #333;
     flex-grow: 1;
-    overflow: hidden;
+
 }
 
 /* Contenedor principal de texto */
@@ -61,18 +65,18 @@
 }
 
 .mainText {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.4vw, 1.7rem);
     line-height: 1.6;
     color: var(--color-texto-negro2);
     padding: 10px;
     border-radius: 5px;
 }
-
 /* Contenedores de izquierda y derecha */
 .row {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: calc((((clamp(800px, 100vh, 1200px) - 800px) *  0.0025) * 110) + 30px);
+    height: clamp(200px, (1vh + 1vw)*60, 400px);
 }
 
 .containerLeft,
@@ -99,15 +103,16 @@
 }
 
 .title {
-    font-size:clamp(14px, 1.5vw, 40px) ;
+    font-size:clamp(1rem, 1.7vw, 2rem) ;
     font-weight: normal;
     padding-top: 25px;
     color: var(--color-texto-negro);
     margin: 0;
 }
 
+
 .text {
-    font-size:clamp(14px, 1.2vw, 40px);
+    font-size:clamp(1rem, 1.3vw, 25px);
     color: #555;
     margin-top: 0;
     padding-top: 5px;
@@ -124,19 +129,119 @@
     position: relative;
 }
 
-/* Estilo para el botón de cerrar */
 .closeButton {
     padding: 10px 20px;
-    font-size: 1rem;
+    width: 15%;
+    height: 40%;
+    font-size: clamp(1.3rem, 1.42vw, 1.7rem);
     cursor: pointer;
-    background-color: var(--color-rojo-general); /* Fondo azul */
-    color: white; /* Texto blanco */
+    background-color: var(--color-rojo-general);
+    color: white;
     border: none;
     border-radius: 5px;
-    top: 10px;
     position: absolute;
+    top: 30%;
+    transform: translateY(calc(-50% - 10px)); /* mueve hacia arriba sin romper el centrado */
 }
 
 .closeButton:hover {
     background-color: var(--color-rojo-generalOscuro);
 }
+/*
+portrait    es cuando el ancho es menor al alto
+------
+|    |
+|    |
+|    |
+------
+landscape   es cuando el  alto es menor al ancho
+-----------
+|         |
+-----------
+*/
+@media (max-height: 830px){
+    .closeButton {
+        top: 50%;
+        transform: translateY(calc(-50%)); /* mueve hacia arriba sin romper el centrado */
+        line-height: 50%;
+        height: 60%;
+    }
+}
+@media (max-height: 722px){
+    .row {
+        margin-top: 0;
+    }
+    .mainTextContainer{
+        margin-bottom: 0;
+    }
+    .mainText{
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 1600px){
+    .containerLeft img,
+    .containerRight img {
+        width: auto; /* Imagen ocupa todo el ancho del contenedor */
+        height: clamp( 90px, (1vh + 1vw)*8, 180px);
+    }
+
+    .text{
+        font-size: clamp(1rem, (1vh + 1vw)*1.1, 1.5rem);
+
+    }
+    .title{
+        font-size: clamp(1.4rem, (1vh + 1vw)*1.2, 1.85rem);
+    }
+    .mainText{
+        font-size: clamp(1rem, (1vh + 1vw)*1.1, 2rem);
+    }
+    .modalTitle{
+        font-size: clamp(1.4rem,calc((1vh + 1vw)*1.8), 2.5rem)
+    }
+    .closeButton{
+        font-size: clamp(1rem, (1vh + 1vw)*1.1, 2rem);
+    }
+
+}
+
+@media (max-width: 1200px){
+    .mainText{
+
+    }
+}
+@media (max-width: 700px), (max-height: 700px) {
+    .modalBody {
+
+        scrollbar-color: rgba(0, 0, 0, 0.7) transparent;
+    }
+    .modalBody::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.7); /* Negro semi-transparente para oscurecer */
+    }
+    .modalBody {
+        max-height: 60vh;      /* Limita la altura del modalBody a 60% de la altura de la ventana */
+        padding-right: 10px;   /* Espacio a la derecha para que el scroll no tape contenido */
+    }
+
+    .row {
+        flex-direction: column; /* Cambia la dirección de los hijos de fila (horizontal) a columna (vertical) */
+        margin-top: 20px;       /* Espacio arriba para separar de otros elementos */
+        height: auto;           /* La altura se adapta automáticamente al contenido vertical */
+    }
+
+    .containerLeft,
+    .containerRight {
+        width: 100%;            /* Hace que los contenedores ocupen todo el ancho disponible */
+        margin-bottom: 20px;    /* Espacio debajo para separar los bloques apilados */
+    }
+    .closeButton{
+        font-size: clamp(1.3rem, (1vh + 1vw)*1.1, 2rem);
+        top: 50%;
+        transform: translateY(calc(-50%)); /* mueve hacia arriba sin romper el centrado */
+        line-height: 50%;
+        min-width: 100px;
+        height: 50%;
+        width: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
