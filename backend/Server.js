@@ -12,12 +12,12 @@ console.log('PASS:', process.env.DB_PASSWORD);
 console.log('DB:', process.env.DB_NAME);
 
 const app = express();
-app.use(cors());
-app.use(express.json());
 
 app.use(cors({
-    origin: 'http://localhost:5173' // ← usa el puerto donde corre tu Vite
+    origin: 'http://localhost:5173' // puerto donde corre tu frontend (Vite)
 }));
+
+app.use(express.json());
 
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -27,16 +27,14 @@ const db = mysql.createConnection({
 });
 
 db.connect(err => {
-    console.log('llego a backend');
     if (err) {
         console.error('Error conectando a MySQL:', err);
         return;
     }
-    console.log('llego a backend2');
     console.log('Conectado a MySQL ✅');
 });
 
-// 📌 Ruta para agregar un cliente a la base de datos
+// Ruta para agregar un cliente a la base de datos
 app.post('/clientes', (req, res) => {
     const { nombre, apellido, correo, telefono, seguridad, servicios, tecnologia, ubicacion, mensaje } = req.body;
 
@@ -48,14 +46,15 @@ app.post('/clientes', (req, res) => {
     db.query(sql, values, (err, result) => {
         if (err) {
             console.error('Error insertando datos:', err);
-            return res.status(500).json({ error: 'Error al guardar los datos' });
+            return res.status(500).json({ success: false, error: 'Error al guardar los datos' });
         }
 
-        // Una vez que el cliente es agregado a la base de datos, se envía el correo
+        // Enviar correo después de insertar exitosamente
         const cliente = { nombre, apellido, correo, telefono, seguridad, servicios, tecnologia, ubicacion, mensaje };
-        enviarCorreo(cliente); // Llamamos a la función que envía el correo
+        enviarCorreo(cliente);
 
-        res.status(201).json({ message: 'Cliente agregado con éxito', id: result.insertId });
+        // Responder solo con success: true y el id insertado
+        res.status(201).json({ success: true, id: result.insertId });
     });
 });
 
