@@ -7,6 +7,8 @@ import imagenLateral2 from '../../assets/Inicio/chile.svg';
 import imagenLateral3 from '../../assets/Inicio/eucador.svg';
 import imagenLateral4 from '../../assets/Inicio/USa.svg';
 import logoEmpresa from '../../assets/Inicio/Recurso 24_nuevo.svg';
+import LogoColaboradores from '../../assets/Inicio/Recurso 24_nuevo.svg';
+import LogoCoberturaDeRiesgo from '../../assets/Inicio/Recurso 24_nuevo.svg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -187,6 +189,26 @@ const FormularioDeContacto2 = () => {
             <img src={imagen} alt="Fondo" className={styles.ImagenFondo} />
 
             <div className={styles.contenedorIntermedio}>
+
+
+                <div className={styles.InfoExtra1}>
+                    <img src={LogoColaboradores} alt="Imagen 1" className={styles.InfoExtraImagen} />
+                    <div className={styles.InfoExtraTexto}>
+                        <h3 className={styles.InfoExtraTitulo}>Colaboradores</h3>
+                        <p className={styles.InfoExtraNumero}>+15,000</p>
+                    </div>
+                </div>
+
+                <div className={styles.InfoExtra2}>
+                    <img src={LogoCoberturaDeRiesgo} alt="Imagen 1" className={styles.InfoExtraImagen} />
+                    <div className={styles.InfoExtraTexto}>
+                        <h3 className={styles.InfoExtraTitulo}>Cobertura De Riesgo</h3>
+                        <p className={styles.InfoExtraNumero}>$2,000,000</p>
+                    </div>
+                </div>
+
+
+
                 <div className={styles.contenidoCentral}>
                     <div className={styles.barraSuperior}>
                         <Slider {...sliderSettings}>

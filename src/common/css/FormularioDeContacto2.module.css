@@ -447,6 +447,58 @@
     background-color: var(--color-rojo-general);
     color:white;
 }
+
+.InfoExtra1,
+.InfoExtra2{
+    position: absolute;
+    /*width: 370px;*/
+    /*width: 300px;*/
+    width: clamp(300px, calc(300px + (100vw - 1025px) / 895 * 70), 370px);
+    /*height: 130px;*/
+    /*height: 100px;*/
+    height: clamp(120px, calc(100px + (100vw - 1025px) / 895 * 30), 130px);
+    background: red;
+    border-radius: 10px;
+    align-items: center; /* Centrado vertical */
+    display: flex;
+    z-index: 10;
+    right: 2%;
+}
+
+.InfoExtra1{
+    /*bottom: 220px;*/
+    /*bottom: 140px;*/
+    bottom: clamp(160px, calc(140px + (100vw - 1025px) / 895 * 80), 220px);
+    /*display: none;*/
+}
+
+.InfoExtra2{
+    /*bottom: 60px;*/
+    /*bottom: 30px;*/
+    bottom: clamp(30px, calc(30px + (100vw - 1025px) / 895 * 30), 60px);
+}
+.InfoExtraImagen{
+    height: 70%;
+    width: auto;
+    margin: 0 12px;
+}
+.InfoExtraTitulo{
+    font-size: 24px;
+    color: white;
+    font-weight: 400;
+}
+.InfoExtraNumero{
+    color: white;
+    font-weight: 620;
+    font-size: 34px;
+}
+
+
+
+
+
+
+
 @media (max-width: 1435px) and  (min-width: 1025px){
     .botonCarrusel{
         margin-left: calc(
@@ -454,6 +506,18 @@
         - clamp(100px, 8.9vw, 170px))/2);
     }
 
+}
+@media (max-width: 1708px) and (min-width: 1368px) {
+    .InfoExtra1,
+    .InfoExtra2{
+        width: 270px;
+        height: 130px;
+    }
+    .InfoExtraNumero{
+        color: white;
+        font-weight: 620;
+        font-size: 30px;
+    }
 }
 @media (max-width: 1300px){
     .imagenLateral {
@@ -464,6 +528,13 @@
     }
 }
 @media (max-width: 1024px){
+
+    .InfoExtra1,
+    .InfoExtra2{
+        display: none;
+    }
+
+
     .imagenLateral {
         display: none; /* Ocultar completamente */
     }

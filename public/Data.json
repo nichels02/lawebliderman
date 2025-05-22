@@ -435,6 +435,165 @@
         "boton2ImagenIzquierda": "src/assets/Inicio/Recurso 22_nuevo.svg"
       }
     },
+    "Formulario": {
+      "es": {
+        "BotonesYDesplegable": {
+          "Peru": "Perú",
+          "Usa": "Estados Unidos",
+          "Chile": "Chile",
+          "Ecuador": "Ecuador"
+        },
+        "Titulo": "Contáctanos",
+        "Nombre": "Nombre*",
+        "Apellido": "Apellido*",
+        "Correo": "Correo electrónico*",
+        "Telefono": "Teléfono*",
+        "TextoCheckBox": "Elige las soluciones de tu interés*",
+        "Seguridad": "Seguridad",
+        "Servicios": "Servicios",
+        "Tecnologia": "Tecnología",
+        "Mensaje": "Mensaje*",
+        "TextoGuiaMensaje": "Escríbenos aquí...",
+        "OtroMetodoDeContacto": "También nos puedes contactar por:",
+        "ElContactoExtra": "contacto@empresa.com",
+        "BotonEnviar": "Enviar mensaje",
+        "MensajeAprobatorio": "¡Formulario enviado con éxito!",
+
+        "ContenedorInferior":{
+          "Peru": {
+            "OficinaCentral": "Oficina central",
+            "NumeroOC": "(01) 204 Perú",
+            "Anexo": "Anexos 5259-5258-52254",
+
+            "LidermanAlarmas": "Liderman Alarmas",
+            "NumeroLA": "(511) 204 5200",
+            "AtencionAlCliente": "Atención al cliente: (511) 611-2300"
+          },
+          "Usa": {
+            "OficinaCentral": "Oficina central",
+            "NumeroOC": "(01) 204 USA",
+            "Anexo": "Anexos 5259-5258-52254",
+
+            "LidermanAlarmas": "Liderman Alarmas",
+            "NumeroLA": "(511) 204 5200",
+            "AtencionAlCliente": "Atención al cliente: (511) 611-2300"
+          },
+          "Chile": {
+            "OficinaCentral": "Oficina central",
+            "NumeroOC": "(01) 204 Chile",
+            "Anexo": "Anexos 5259-5258-52254",
+
+            "LidermanAlarmas": "Liderman Alarmas",
+            "NumeroLA": "(511) 204 5200",
+            "AtencionAlCliente": "Atención al cliente: (511) 611-2300"
+          },
+          "Ecuador": {
+            "OficinaCentral": "Oficina central",
+            "NumeroOC": "(01) 204 Ecuador",
+            "Anexo": "Anexos 5259-5258-52254",
+
+            "LidermanAlarmas": "Liderman Alarmas",
+            "NumeroLA": "(511) 204 5200",
+            "AtencionAlCliente": "Atención al cliente: (511) 611-2300"
+          }
+        },
+
+        "Colaboradores": {
+          "Titulo": "Colaboradores",
+          "Numero": "+15,000"
+        },
+        "CoberturaDeRiesgo":{
+          "Titulo": "Cobertura De Riesgo",
+          "Numero": "$2,000,000"
+        }
+      },
+      "en": {
+        "BotonesYDesplegable": {
+          "Peru": "Peru",
+          "Usa": "United States",
+          "Chile": "Chile",
+          "Ecuador": "Ecuador"
+        },
+        "Titulo": "Contact Us",
+        "Nombre": "First Name*",
+        "Apellido": "Last Name*",
+        "Correo": "Email*",
+        "Telefono": "Phone*",
+        "TextoCheckBox": "Select the solutions you are interested in*",
+        "Seguridad": "Security",
+        "Servicios": "Services",
+        "Tecnologia": "Technology",
+        "Mensaje": "Message*",
+        "TextoGuiaMensaje": "Write to us here...",
+        "OtroMetodoDeContacto": "You can also contact us at:",
+        "ElContactoExtra": "contact@empresa.com",
+        "BotonEnviar": "Send Message",
+        "MensajeAprobatorio": "Form successfully submitted!",
+
+
+
+        "ContenedorInferior": {
+          "Peru": {
+            "OficinaCentral": "Head Office",
+            "NumeroOC": "(01) 204 5200",
+            "Anexo": "Extensions 5259-5258-52254",
+
+            "LidermanAlarmas": "Liderman Alarms",
+            "NumeroLA": "(511) 204 5200",
+            "AtencionAlCliente": "Customer Service: (511) 611-2300"
+          },
+          "Usa": {
+            "OficinaCentral": "Head Office",
+            "NumeroOC": "(01) 204 5200",
+            "Anexo": "Extensions 5259-5258-52254",
+
+            "LidermanAlarmas": "Liderman Alarms",
+            "NumeroLA": "(511) 204 5200",
+            "AtencionAlCliente": "Customer Service: (511) 611-2300"
+          },
+          "Chile": {
+            "OficinaCentral": "Head Office",
+            "NumeroOC": "(01) 204 5200",
+            "Anexo": "Extensions 5259-5258-52254",
+
+            "LidermanAlarmas": "Liderman Alarms",
+            "NumeroLA": "(511) 204 5200",
+            "AtencionAlCliente": "Customer Service: (511) 611-2300"
+          },
+          "Ecuador": {
+            "OficinaCentral": "Head Office",
+            "NumeroOC": "(01) 204 5200",
+            "Anexo": "Extensions 5259-5258-52254",
+
+            "LidermanAlarmas": "Liderman Alarms",
+            "NumeroLA": "(511) 204 5200",
+            "AtencionAlCliente": "Customer Service: (511) 611-2300"
+          }
+        }
+
+
+      },
+      "common": {
+        "imagenDeFondo": "",
+        "ImagenDeLaDerecha":{
+          "Peru": "",
+          "Usa": "",
+          "Ecuador": "",
+          "Chile": ""
+        },
+        "Colaboradores": "",
+        "CoberturaDeRiesgo": "",
+        "ImagenContenedorInferior": ""
+      }
+    },
+    "ValidadorFormulario": {
+      "es": {
+
+      },
+      "en": {
+
+      }
+    },
     "Footer": {
       "Common": {
         "LidermanLogoDark": "src/assets/ImagenesGenerales/Logo-Liderman.svg",
@@ -1184,7 +1343,7 @@
           "TextoOSimboloDeBoton": "+"
         },
         "Sector4": {
-          "Titulo": "Botón de panico",
+          "Titulo": "Botón de pánico",
           "Texto": "Virtual SmartPanics es un botón que posibilita la emisión de señales de emergencia mediante dispositivos móviles, además de facilitar la transmisión de la ubicación geográfica precisa de quien activa el evento.",
           "MasInformacion": "Más información",
           "TextoOSimboloDeBoton": "+"
@@ -1264,7 +1423,7 @@
         "ImagenIzqAbajo": "src/assets/Tecnologia/6.svg"
       },
       "es": {
-        "Titulo": "Botón de panico",
+        "Titulo": "Botón de pánico",
         "Texto": "Viftual SmartPanics: Información de tus cuentas en la palma de tu mano",
         "TituloDerArriba": "Incendio",
         "TituloIzqArriba": "SOS Pánico",
@@ -1308,7 +1467,7 @@
         "Texto2": "correo electronico",
         "Texto3": "SMS",
         "Texto4": "dashboard de control",
-        "BotonCerrar": "Cerrar Panel"
+        "BotonCerrar": "Cerrar"
       },
       "en": {
         "Titulo": "Panel Title",
@@ -1321,7 +1480,7 @@
         "Texto2": "Immediate notifications for any event",
         "Texto3": "Generate detailed documents in multiple formats",
         "Texto4": "Direct connection with our technical team",
-        "BotonCerrar": "Close Panel"
+        "BotonCerrar": "Close"
       }
     },
     "CardGrid": {
