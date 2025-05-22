@@ -203,9 +203,10 @@ const FormularioDeContacto2 = () => {
                                 value={formData.pais}
                                 onChange={handleInputChange}
                             >
-                                <option value="pe">Perú</option>
-                                <option value="us">Estados Unidos</option>
-                                <option value="cl">Chile</option>
+                                <option value="Perú">Perú</option>
+                                <option value="Estados Unidos">Estados Unidos</option>
+                                <option value="Chile">Chile</option>
+                                <option value="Ecuador">Ecuador</option>
                             </select>
                         </div>
 
