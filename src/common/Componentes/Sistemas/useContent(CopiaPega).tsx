@@ -4,99 +4,154 @@ import { createContext, useContext, useState, useEffect } from "react";
 interface ContentData {
 
     home: {
-        Footer: {
-            Common: {
-                LidermanLogoDark: string;
-                LidermanLogoLight: string;
-                facebookLight: string;
-                facebookDark: string;
-                tiktokLight: string;
-                tiktokDark: string;
-                linkedinLight: string;
-                linkedinDark: string;
-                youtubeLight: string;
-                youtubeDark: string;
-
-            },
+        Formulario: {
             es: {
-                Eslogan: string;
-                Inicio: {
+                BotonesYDesplegable: {
+                    Peru: string;
+                    Usa: string;
+                    Chile: string;
+                    Ecuador: string;
+                },
+                Titulo: string;
+                Nombre: string;
+                Apellido: string;
+                Correo: string;
+                Telefono: string;
+                TextoCheckBox: string;
+                Seguridad: string;
+                Servicios: string;
+                Tecnologia: string;
+                Mensaje: string;
+                TextoGuiaMensaje: string;
+                OtroMetodoDeContacto: string;
+                ElContactoExtra: string;
+                BotonEnviar: string;
+                MensajeAprobatorio: string;
+
+                ContenedorInferior:{
+                    Peru: {
+                        OficinaCentral: string;
+                        NumeroOC: string;
+                        Anexo: string;
+
+                        LidermanAlarmas: string;
+                        NumeroLA: string;
+                        AtencionAlCliente: string;
+                    },
+                    Usa: {
+                        OficinaCentral: string;
+                        NumeroOC: string;
+                        Anexo: string;
+
+                        LidermanAlarmas: string;
+                        NumeroLA: string;
+                        AtencionAlCliente: string;
+                    },
+                    Chile: {
+                        OficinaCentral: string;
+                        NumeroOC: string;
+                        Anexo: string;
+
+                        LidermanAlarmas: string;
+                        NumeroLA: string;
+                        AtencionAlCliente: string;
+                    },
+                    Ecuador: {
+                        OficinaCentral: string;
+                        NumeroOC: string;
+                        Anexo: string;
+
+                        LidermanAlarmas: string;
+                        NumeroLA: string;
+                        AtencionAlCliente: string;
+                    }
+                },
+
+                Colaboradores: {
                     Titulo: string;
-                    Soluciones:string;
-                    Certificaciones: string;
-                    Presencia: string;
-                    Cultura: string;
+                    Numero: string;
                 },
-                Conocenos: {
+                CoberturaDeRiesgo:{
                     Titulo: string;
-                    QuienesSomos: string;
-                    Historia: string;
-                },
-                Soluciones: {
-                    Titulo: string;
-                    Seguridad: string;
-                    Tecnologia: string;
-                    Servicio: string;
-                },
-                lidermania: {
-                    Titulo: string;
-                    MejoresPersonas: string;
-                    CuatroAmas: string;
-                    Unete: string;
-                },
-                "Boton1": {
-                    "Titulo": string;
-                    "Subtitulo": string;
-                },
-                "Boton2": {
-                    "Titulo": string;
-                    "Subtitulo": string;
-                },
-                TextosFinales: {
-                    DerechosReservados: string;
-                    TerminosYCondiciones: string;
-                    PoliticaDePrivacidad: string;
+                    Numero: string;
                 }
             },
             en: {
-                Eslogan: string;
-                Inicio: {
-                    Titulo: string;
-                    Soluciones: string;
-                    Certificaciones: string;
-                    Presencia: string;
-                    Cultura: string;
+                BotonesYDesplegable: {
+                    Peru: string;
+                    Usa: string;
+                    Chile: string;
+                    Ecuador: string;
                 },
-                Conocenos: {
-                    Titulo: string;
-                    QuienesSomos: string;
-                    Historia: string;
-                },
-                Soluciones: {
-                    Titulo: string;
-                    Seguridad: string;
-                    Tecnologia: string;
-                    Servicio: string;
-                },
-                lidermania: {
-                    Titulo: string;
-                    MejoresPersonas: string;
-                    CuatroAmas: string;
-                    Unete: string;
-                },
-                Boton1: {
-                    Titulo: string;
-                    Subtitulo: string;
-                },
-                Boton2: {
-                    Titulo: string;
-                    Subtitulo: string;
-                },
-                TextosFinales: {
-                    DerechosReservados: string;
-                    TerminosYCondiciones: string;
-                    PoliticaDePrivacidad: string;
+                Titulo: string;
+                Nombre: string;
+                Apellido: string;
+                Correo: string;
+                Telefono: string;
+                TextoCheckBox: string;
+                Seguridad: string;
+                Servicios: string;
+                Tecnologia: string;
+                Mensaje: string;
+                TextoGuiaMensaje: string;
+                OtroMetodoDeContacto: string;
+                ElContactoExtra: string;
+                BotonEnviar: string;
+                MensajeAprobatorio: string;
+
+
+
+                ContenedorInferior: {
+                    Peru: {
+                        OficinaCentral: string;
+                        NumeroOC: string;
+                        Anexo: string;
+
+                        LidermanAlarmas: string;
+                        NumeroLA: string;
+                        AtencionAlCliente: string;
+                    },
+                    Usa: {
+                        OficinaCentral: string;
+                        NumeroOC: string;
+                        Anexo: string;
+
+                        LidermanAlarmas: string;
+                        NumeroLA: string;
+                        AtencionAlCliente: string;
+                    },
+                    Chile: {
+                        OficinaCentral: string;
+                        NumeroOC: string;
+                        Anexo: string;
+
+                        LidermanAlarmas: string;
+                        NumeroLA: string;
+                        AtencionAlCliente: string;
+                    },
+                    Ecuador: {
+                        OficinaCentral: string;
+                        NumeroOC: string;
+                        Anexo: string;
+
+                        LidermanAlarmas: string;
+                        NumeroLA: string;
+                        AtencionAlCliente: string;
+                    }
                 }
+
+            },
+            common: {
+                imagenDeFondo: string;
+                ImagenDeLaDerecha:{
+                    Peru: string;
+                    Usa: string;
+                    Ecuador: string;
+                    Chile: string;
+                },
+                Colaboradores: string;
+                CoberturaDeReisgo: string;
+                ImagenContenedorInferior: string;
             }
         }
     }

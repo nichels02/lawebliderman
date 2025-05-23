@@ -256,6 +256,7 @@ interface ContentData {
                 OtroMetodoDeContacto: string;
                 ElContactoExtra: string;
                 BotonEnviar: string;
+                BotonEnviando: string;
                 MensajeAprobatorio: string;
 
                 ContenedorInferior:{
@@ -327,6 +328,7 @@ interface ContentData {
                 OtroMetodoDeContacto: string;
                 ElContactoExtra: string;
                 BotonEnviar: string;
+                BotonEnviando: string;
                 MensajeAprobatorio: string;
 
 
@@ -370,6 +372,15 @@ interface ContentData {
                     }
                 }
 
+
+                Colaboradores: {
+                    Titulo: string;
+                    Numero: string;
+                },
+                CoberturaDeRiesgo:{
+                    Titulo: string;
+                    Numero: string;
+                }
             },
             common: {
                 imagenDeFondo: string;

@@ -12,6 +12,8 @@ import LogoCoberturaDeRiesgo from '../../assets/Inicio/Recurso 24_nuevo.svg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useContent } from './Sistemas/useContent.tsx'; // o el path correcto
+import { useLanguage } from './Sistemas/LanguageContext.tsx';
 
 interface ArrowProps {
     className?: string;
@@ -30,56 +32,7 @@ const CustomPrevArrow: React.FC<ArrowProps> = ({ className, style, onClick }) =>
     );
 };
 
-const ContenedorInferior={
-    Peru:{
-        oficina: {
-            titulo: 'Oficina central',
-            principal: '(01) 204 Peru',
-            secundario: 'Anexos 5259-5258-52254'
-        },
-        alarmas: {
-            titulo: 'Liderman Alarmas',
-            principal: '(511) 204 5200',
-            secundario: 'Atención al cliente: (511) 611-2300'
-        }
-    },
-    USA:{
-        oficina: {
-            titulo: 'Oficina central',
-            principal: '(01) 204 USA',
-            secundario: 'Anexos 5259-5258-52254'
-        },
-        alarmas: {
-            titulo: 'Liderman Alarmas',
-            principal: '(511) 204 5200',
-            secundario: 'Atención al cliente: (511) 611-2300'
-        }
-    },
-    Chile:{
-        oficina: {
-            titulo: 'Oficina central',
-            principal: '(01) 204 Chile',
-            secundario: 'Anexos 5259-5258-52254'
-        },
-        alarmas: {
-            titulo: 'Liderman Alarmas',
-            principal: '(511) 204 5200',
-            secundario: 'Atención al cliente: (511) 611-2300'
-        }
-    },
-    Ecuador:{
-        oficina: {
-            titulo: 'Oficina central',
-            principal: '(01) 204 Ecuador',
-            secundario: 'Anexos 5259-5258-52254'
-        },
-        alarmas: {
-            titulo: 'Liderman Alarmas',
-            principal: '(511) 204 5200',
-            secundario: 'Atención al cliente: (511) 611-2300'
-        }
-    }
-}
+
 
 const CustomNextArrow: React.FC<ArrowProps> = ({ className, style, onClick }) => {
     return (
@@ -123,8 +76,26 @@ const sliderSettings = {
 
 const FormularioDeContacto2 = () => {
 
-    type PaisKey = 'Peru' | 'Chile' | 'Ecuador' | 'USA';
+    type PaisKey = 'Peru' | 'Chile' | 'Ecuador' | 'Usa';
     const [Pais, setPais] = useState<PaisKey>("Peru");
+
+    const content = useContent();
+    const { language } = useLanguage();
+
+    const ContenedorInferior={
+        oficina: {
+            titulo: content?.home.Formulario[language].ContenedorInferior[Pais].OficinaCentral,
+            principal:  content?.home.Formulario[language].ContenedorInferior[Pais].NumeroOC,
+            secundario:  content?.home.Formulario[language].ContenedorInferior[Pais].Anexo
+        },
+        alarmas: {
+            titulo: content?.home.Formulario[language].ContenedorInferior[Pais].LidermanAlarmas,
+            principal:  content?.home.Formulario[language].ContenedorInferior[Pais].NumeroLA,
+            secundario:  content?.home.Formulario[language].ContenedorInferior[Pais].AtencionAlCliente
+        }
+    }
+
+
 
     const [formData, setFormData] = useState({
         nombre: '',
@@ -180,7 +151,7 @@ const FormularioDeContacto2 = () => {
                 break;
             case 3:
                 setImagenActual(imagenLateral4); // USA
-                setPais("USA");
+                setPais("Usa");
                 break;
             default:
                 setImagenActual(imagenLateral1);
@@ -188,7 +159,7 @@ const FormularioDeContacto2 = () => {
         }
     };
 
-    const textosBotones = ["Peru", "Chile", "Ecuador", "USA"];
+    const textosBotones = [content?.home.Formulario[language].BotonesYDesplegable.Peru, content?.home.Formulario[language].BotonesYDesplegable.Chile, content?.home.Formulario[language].BotonesYDesplegable.Ecuador, content?.home.Formulario[language].BotonesYDesplegable.Usa];
 
 
     const renderBotonesCarrusel = () => {
@@ -257,16 +228,16 @@ const FormularioDeContacto2 = () => {
                 <div className={styles.InfoExtra1}>
                     <img src={LogoColaboradores} alt="Imagen 1" className={styles.InfoExtraImagen} />
                     <div className={styles.InfoExtraTexto}>
-                        <h3 className={styles.InfoExtraTitulo}>Colaboradores</h3>
-                        <p className={styles.InfoExtraNumero}>+15,000</p>
+                        <h3 className={styles.InfoExtraTitulo}>{content?.home.Formulario[language].Colaboradores.Titulo}</h3>
+                        <p className={styles.InfoExtraNumero}>{content?.home.Formulario[language].Colaboradores.Numero}</p>
                     </div>
                 </div>
 
                 <div className={styles.InfoExtra2}>
                     <img src={LogoCoberturaDeRiesgo} alt="Imagen 1" className={styles.InfoExtraImagen} />
                     <div className={styles.InfoExtraTexto}>
-                        <h3 className={styles.InfoExtraTitulo}>Cobertura De Riesgo</h3>
-                        <p className={styles.InfoExtraNumero}>$2,000,000</p>
+                        <h3 className={styles.InfoExtraTitulo}>{content?.home.Formulario[language].CoberturaDeRiesgo.Titulo}</h3>
+                        <p className={styles.InfoExtraNumero}>{content?.home.Formulario[language].CoberturaDeRiesgo.Numero}</p>
                     </div>
                 </div>
 
@@ -281,27 +252,27 @@ const FormularioDeContacto2 = () => {
 
                     <div className={styles.formularioContainer}>
                         <div className={styles.encabezado}>
-                            <h2>Contáctanos</h2>
+                            <h2>{content?.home.Formulario[language].Titulo}</h2>
                             <select
                                 className={styles.dropdown}
                                 name="pais"
                                 value={formData.pais}
                                 onChange={handleInputChange}
                             >
-                                <option value="Perú">Perú</option>
-                                <option value="Estados Unidos">Estados Unidos</option>
-                                <option value="Chile">Chile</option>
-                                <option value="Ecuador">Ecuador</option>
+                                <option value="Perú">{content?.home.Formulario[language].BotonesYDesplegable.Peru}</option>
+                                <option value="Estados Unidos">{content?.home.Formulario[language].BotonesYDesplegable.Usa}</option>
+                                <option value="Chile">{content?.home.Formulario[language].BotonesYDesplegable.Chile}</option>
+                                <option value="Ecuador">{content?.home.Formulario[language].BotonesYDesplegable.Ecuador}</option>
                             </select>
                         </div>
 
                         <form className={styles.formulario} onSubmit={handleSubmit}>
                             {error && <div className={styles.errorMessage}>{error}</div>}
-                            {success && <div className={styles.successMessage}>¡Formulario enviado con éxito!</div>}
+                            {success && <div className={styles.successMessage}>{content?.home.Formulario[language].MensajeAprobatorio}</div>}
 
                             <div className={styles.dosColumnas}>
                                 <div className={styles.campo}>
-                                    <label htmlFor="nombre">Nombre*</label>
+                                    <label htmlFor="nombre">{content?.home.Formulario[language].Nombre}</label>
                                     <input
                                         type="text"
                                         id="nombre"
@@ -312,7 +283,7 @@ const FormularioDeContacto2 = () => {
                                     />
                                 </div>
                                 <div className={styles.campo}>
-                                    <label htmlFor="apellido">Apellido*</label>
+                                    <label htmlFor="apellido">{content?.home.Formulario[language].Apellido}</label>
                                     <input
                                         type="text"
                                         id="apellido"
@@ -323,7 +294,7 @@ const FormularioDeContacto2 = () => {
                                     />
                                 </div>
                                 <div className={styles.campo}>
-                                    <label htmlFor="correo">Correo electrónico*</label>
+                                    <label htmlFor="correo">{content?.home.Formulario[language].Correo}</label>
                                     <input
                                         type="email"
                                         id="correo"
@@ -334,7 +305,7 @@ const FormularioDeContacto2 = () => {
                                     />
                                 </div>
                                 <div className={styles.campo}>
-                                    <label htmlFor="telefono">Teléfono*</label>
+                                    <label htmlFor="telefono">{content?.home.Formulario[language].Telefono}</label>
                                     <input
                                         type="tel"
                                         id="telefono"
@@ -347,7 +318,7 @@ const FormularioDeContacto2 = () => {
                             </div>
 
                             <fieldset className={styles.checkboxGroup}>
-                                <legend>Elige las soluciones de tu interés*</legend>
+                                <legend>{content?.home.Formulario[language].TextoCheckBox}</legend>
                                 <label className={styles.checkboxLabel}>
                                     <input
                                         type="checkbox"
@@ -357,7 +328,7 @@ const FormularioDeContacto2 = () => {
                                         className={styles.checkbox}
                                     />
                                     <span className={styles.checkboxCustom}></span>
-                                    Seguridad
+                                    {content?.home.Formulario[language].Seguridad}
                                 </label>
                                 <label className={styles.checkboxLabel}>
                                     <input
@@ -368,7 +339,7 @@ const FormularioDeContacto2 = () => {
                                         className={styles.checkbox}
                                     />
                                     <span className={styles.checkboxCustom}></span>
-                                    Servicios
+                                    {content?.home.Formulario[language].Servicios}
                                 </label>
                                 <label className={styles.checkboxLabel}>
                                     <input
@@ -379,18 +350,18 @@ const FormularioDeContacto2 = () => {
                                         className={styles.checkbox}
                                     />
                                     <span className={styles.checkboxCustom}></span>
-                                    Tecnología
+                                    {content?.home.Formulario[language].Tecnologia}
                                 </label>
                             </fieldset>
 
                             <div className={styles.areaMensaje}>
-                                <label htmlFor="mensaje">Mensaje*</label>
+                                <label htmlFor="mensaje">{content?.home.Formulario[language].Mensaje}</label>
                                 <textarea
                                     id="mensaje"
                                     name="mensaje"
                                     value={formData.mensaje}
                                     onChange={handleInputChange}
-                                    placeholder="Escríbenos aquí..."
+                                    placeholder={content?.home.Formulario[language].TextoGuiaMensaje}
                                     rows={5}
                                     required
                                 />
@@ -399,7 +370,7 @@ const FormularioDeContacto2 = () => {
                             <div className={styles.contactoYBoton}>
                                 <div className={styles.contactoAlternativo}>
                                     <p>También nos puedes contactar por:</p>
-                                    <a href="mailto:contacto@empresa.com">contacto@empresa.com</a>
+                                    <a href="mailto:${content?.home.Formulario[language].ElContactoExtra}">{content?.home.Formulario[language].ElContactoExtra}</a>
                                 </div>
 
                                 <div className={styles.botonEnviarContainer}>
@@ -408,7 +379,7 @@ const FormularioDeContacto2 = () => {
                                         className={styles.botonEnviar}
                                         disabled={isSubmitting}
                                     >
-                                        {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+                                        {isSubmitting ? content?.home.Formulario[language].BotonEnviando : content?.home.Formulario[language].BotonEnviar}
                                     </button>
                                 </div>
                             </div>
@@ -417,14 +388,14 @@ const FormularioDeContacto2 = () => {
                     <div className={styles.contenedorExtraInferior}>
                         <img src={logoEmpresa} alt="Logo de la empresa" />
                         <div>
-                            <p className={styles.textoEncabezado}>{ContenedorInferior[Pais].oficina.titulo}</p>
-                            <p className={styles.textoPrincipal}>{ContenedorInferior[Pais].oficina.principal}</p>
-                            <p className={styles.textoSecundario}>{ContenedorInferior[Pais].oficina.secundario}</p>
+                            <p className={styles.textoEncabezado}>{ContenedorInferior.oficina.titulo}</p>
+                            <p className={styles.textoPrincipal}>{ContenedorInferior.oficina.principal}</p>
+                            <p className={styles.textoSecundario}>{ContenedorInferior.oficina.secundario}</p>
                         </div>
                         <div>
-                            <p className={styles.textoEncabezado}>{ContenedorInferior[Pais].alarmas.titulo}</p>
-                            <p className={styles.textoPrincipal}>{ContenedorInferior[Pais].alarmas.principal}</p>
-                            <p className={styles.textoSecundario}>{ContenedorInferior[Pais].alarmas.secundario}</p>
+                            <p className={styles.textoEncabezado}>{ContenedorInferior.alarmas.titulo}</p>
+                            <p className={styles.textoPrincipal}>{ContenedorInferior.alarmas.principal}</p>
+                            <p className={styles.textoSecundario}>{ContenedorInferior.alarmas.secundario}</p>
                         </div>
                     </div>
                 </div>
