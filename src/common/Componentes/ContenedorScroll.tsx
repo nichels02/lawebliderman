@@ -115,7 +115,7 @@ function ContenedorScroll() {
 
             const { offsetTop, offsetHeight } = containerRef.current;
             const scrollY = window.scrollY;
-            const relativeScroll = scrollY - offsetTop;
+            const relativeScroll = scrollY - (offsetTop/1.5 +((window.innerWidth -400)/(1920-600) *(offsetTop - offsetTop/1.7) ));
 
             const rawPercentage = (relativeScroll / offsetHeight) * 100;
             let adjustedPercentage = rawPercentage * 1.2;
@@ -170,7 +170,7 @@ function ContenedorScroll() {
                             src={imagenPunto}
                             alt="Punto"
                             className={styles.punto}
-                            style={{ width: '100px', height: '100px' }}
+                            // style={{ width: '100px', height: '100px' }}
                         />
                         <div className={`${styles.titulo} ${point.isRight ? styles.tituloDerecha : styles.tituloIzquierda}`}>
                             {point.year}

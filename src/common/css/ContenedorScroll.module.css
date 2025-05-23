@@ -29,8 +29,8 @@
 /* 🔴 Estilos para los puntos (imágenes) */
 .punto {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 300px;
+    height: 300px;
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
@@ -75,12 +75,12 @@
     padding: 1rem;
     border-radius: 12px;
     color: white;
-    font-size: clamp(10px, 1vw, 30px);
+    font-size: clamp(1.6rem, 1.5vw, 2rem);
     font-weight: normal;
     transform: translate(-50%, -50%);
     pointer-events: none;
     white-space: normal;
-    width: 350px;
+    width: 400px;
     height: auto;
 }
 
@@ -104,27 +104,31 @@
 
 /* ESTILOS PERSONALIZADOS PARA CADA CONTENEDOR */
 .cajaConImagen.contenedor1 {
-    width: 550px;
+    max-width: 816px;
 }
 
 .cajaConImagen.contenedor2 {
-    width: 550px;
+    flex-direction: column;
+    max-width: 816px;
 }
 
 .cajaConImagen.contenedor3 {
-    width: 550px;
+    max-width: 1100px;
 }
 
 .cajaConImagen.contenedor4 {
-    width: 550px;
+    max-width: 816px;
+    flex-direction: column;
 }
 
 .cajaConImagen.contenedor5 {
-    width: 500px;
+    width: 700px;
+    flex-direction: column;
 }
 
 .cajaConImagen.contenedor6 {
-    width: 500px;
+    width: 700px;
+    flex-direction: column;
 }
 
 /* Columna del texto */
@@ -137,7 +141,7 @@
 
 /* Título dentro de la caja */
 .tituloCaja {
-    font-size: clamp(16px, 2vw, 24px);
+    font-size: clamp(1.8rem, 2.5vw, 3rem);
     margin: 0 0 0.5rem 0;
     font-weight: bold;
     line-height: 1.6;
@@ -146,7 +150,7 @@
 
 /* Texto descriptivo */
 .textoCaja {
-    font-size: clamp(12px, 1vw, 18px);
+    font-size: clamp(1.6rem, 1.5vw, 2rem);
     font-weight: normal;
     color: white;
     margin: 0;
@@ -162,9 +166,10 @@
 
 /* Imagen */
 .imagenCaja {
-    max-width: 230px;
+    /*max-width: 230px;*/
+    max-width: 500px;
     background: black;
-    max-height: 300px;
+    /*max-height: 300px;*/
     object-fit: contain;
     border-radius: 8px;
 }
