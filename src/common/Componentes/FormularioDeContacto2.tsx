@@ -30,6 +30,57 @@ const CustomPrevArrow: React.FC<ArrowProps> = ({ className, style, onClick }) =>
     );
 };
 
+const ContenedorInferior={
+    Peru:{
+        oficina: {
+            titulo: 'Oficina central',
+            principal: '(01) 204 Peru',
+            secundario: 'Anexos 5259-5258-52254'
+        },
+        alarmas: {
+            titulo: 'Liderman Alarmas',
+            principal: '(511) 204 5200',
+            secundario: 'Atención al cliente: (511) 611-2300'
+        }
+    },
+    USA:{
+        oficina: {
+            titulo: 'Oficina central',
+            principal: '(01) 204 USA',
+            secundario: 'Anexos 5259-5258-52254'
+        },
+        alarmas: {
+            titulo: 'Liderman Alarmas',
+            principal: '(511) 204 5200',
+            secundario: 'Atención al cliente: (511) 611-2300'
+        }
+    },
+    Chile:{
+        oficina: {
+            titulo: 'Oficina central',
+            principal: '(01) 204 Chile',
+            secundario: 'Anexos 5259-5258-52254'
+        },
+        alarmas: {
+            titulo: 'Liderman Alarmas',
+            principal: '(511) 204 5200',
+            secundario: 'Atención al cliente: (511) 611-2300'
+        }
+    },
+    Ecuador:{
+        oficina: {
+            titulo: 'Oficina central',
+            principal: '(01) 204 Ecuador',
+            secundario: 'Anexos 5259-5258-52254'
+        },
+        alarmas: {
+            titulo: 'Liderman Alarmas',
+            principal: '(511) 204 5200',
+            secundario: 'Atención al cliente: (511) 611-2300'
+        }
+    }
+}
+
 const CustomNextArrow: React.FC<ArrowProps> = ({ className, style, onClick }) => {
     return (
         <div
@@ -71,6 +122,10 @@ const sliderSettings = {
 };
 
 const FormularioDeContacto2 = () => {
+
+    type PaisKey = 'Peru' | 'Chile' | 'Ecuador' | 'USA';
+    const [Pais, setPais] = useState<PaisKey>("Peru");
+
     const [formData, setFormData] = useState({
         nombre: '',
         apellido: '',
@@ -113,30 +168,38 @@ const FormularioDeContacto2 = () => {
         switch(botonIndex) {
             case 0:
                 setImagenActual(imagenLateral1); // Perú
+                setPais("Peru");
                 break;
             case 1:
                 setImagenActual(imagenLateral2); // Chile
+                setPais("Chile");
                 break;
             case 2:
                 setImagenActual(imagenLateral3); // Ecuador
+                setPais("Ecuador");
                 break;
             case 3:
                 setImagenActual(imagenLateral4); // USA
+                setPais("USA");
                 break;
             default:
                 setImagenActual(imagenLateral1);
+                setPais("Peru");
         }
     };
 
+    const textosBotones = ["Peru", "Chile", "Ecuador", "USA"];
+
+
     const renderBotonesCarrusel = () => {
-        return [0, 1, 2, 3].map((index) => (
+        return textosBotones.map((texto, index) => (
             <div key={index}>
                 <button
                     type="button"
                     className={styles.botonCarrusel}
                     onClick={() => cambiarImagen(index)}
                 >
-                    Botón {index + 1}
+                    {texto}
                 </button>
             </div>
         ));
@@ -351,18 +414,17 @@ const FormularioDeContacto2 = () => {
                             </div>
                         </form>
                     </div>
-
                     <div className={styles.contenedorExtraInferior}>
                         <img src={logoEmpresa} alt="Logo de la empresa" />
                         <div>
-                            <p className={styles.textoEncabezado}>Oficina central</p>
-                            <p className={styles.textoPrincipal}>(01) 204 5200</p>
-                            <p className={styles.textoSecundario}>Anexos 5259-5258-52254</p>
+                            <p className={styles.textoEncabezado}>{ContenedorInferior[Pais].oficina.titulo}</p>
+                            <p className={styles.textoPrincipal}>{ContenedorInferior[Pais].oficina.principal}</p>
+                            <p className={styles.textoSecundario}>{ContenedorInferior[Pais].oficina.secundario}</p>
                         </div>
                         <div>
-                            <p className={styles.textoEncabezado}>Liderman Alarmas</p>
-                            <p className={styles.textoPrincipal}>(511) 204 5200</p>
-                            <p className={styles.textoSecundario}>Atención al cliente: (511) 611-2300</p>
+                            <p className={styles.textoEncabezado}>{ContenedorInferior[Pais].alarmas.titulo}</p>
+                            <p className={styles.textoPrincipal}>{ContenedorInferior[Pais].alarmas.principal}</p>
+                            <p className={styles.textoSecundario}>{ContenedorInferior[Pais].alarmas.secundario}</p>
                         </div>
                     </div>
                 </div>
