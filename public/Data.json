@@ -457,6 +457,7 @@
         "OtroMetodoDeContacto": "También nos puedes contactar por:",
         "ElContactoExtra": "contacto@empresa.com",
         "BotonEnviar": "Enviar mensaje",
+        "BotonEnviando": "Enviando...",
         "MensajeAprobatorio": "¡Formulario enviado con éxito!",
 
         "ContenedorInferior":{
@@ -528,6 +529,7 @@
         "OtroMetodoDeContacto": "You can also contact us at:",
         "ElContactoExtra": "contact@empresa.com",
         "BotonEnviar": "Send Message",
+        "BotonEnviando": "Sending...",
         "MensajeAprobatorio": "Form successfully submitted!",
 
 
@@ -569,8 +571,17 @@
             "NumeroLA": "(511) 204 5200",
             "AtencionAlCliente": "Customer Service: (511) 611-2300"
           }
-        }
+        },
 
+
+        "Colaboradores": {
+          "Titulo": "Team Members",
+          "Numero": "+15,000"
+        },
+        "CoberturaDeRiesgo": {
+          "Titulo": "Risk Coverage",
+          "Numero": "$2,000,000"
+        }
 
       },
       "common": {
