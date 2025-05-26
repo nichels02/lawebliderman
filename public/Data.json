@@ -831,17 +831,10 @@
   "Seguridad": {
     "HeaderCarruselDeImagenes": {
       "Common": {
-        "ItemsBotones": [
-          {"Imagen": "src/assets/Seguridad/seguridad-fisica.png", "alt": "physical-security"},
-          {"Imagen": "src/assets/resguardo-personal.jpg", "alt": "personal-protection"},
-          {"Imagen": "src/assets/Seguridad/security-señor.png", "alt": "control-room"},
-          {"Imagen": "src/assets/guardiania.jpg", "alt": "guard-services"},
-          {"Imagen": "src/assets/patrullas-moviles.jpg", "alt": "mobile-patrols"},
-          {"Imagen": "src/assets/estudios-seguridad.jpg", "alt": "security-assessment"},
-          {"Imagen": "src/assets/proteccion-perimetral.jpg", "alt": "perimeter-security"},
-          {"Imagen": "src/assets/event-security.jpg", "alt": "event-security"},
-          {"Imagen": "src/assets/transito-escort.jpg", "alt": "transit-escort"}
-        ],
+        "ImagenDerecha":{
+          "imagen": "src/assets/Seguridad/seguridad-fisica.png",
+          "alt": "physical-security"
+        },
         "imagenDeFondo": "src/assets/Seguridad/1.png",
         "logo": "src/assets/ImagenesGenerales/Logo-Liderman2.svg"
       },
@@ -849,30 +842,84 @@
         "Titulo": "Seguridad",
         "Texto": "Somos la empresa de seguridad más grande del país, con cobertura a nivel nacional, autorizaciones y la capacidad de responder rápidamente a tus necesidades",
         "TextosBotones": [
-          {"Texto": "Seguridad física"},
-          {"Texto": "Resguardo personal"},
-          {"Texto": "Supervisión de sala de control"},
-          {"Texto": "Guardianía"},
-          {"Texto": "Patrullas móviles"},
-          {"Texto": "Estudios de seguridad"},
-          {"Texto": "Protección perimetral"},
-          {"Texto": "Seguridad de eventos"},
-          {"Texto": "Acompañamiento en transito"}
+          {
+            "Texto": "SEGURIDAD ",
+            "TextoDescripcion": "En Liderman protegemos lo que más valoras. Combinamos tecnología, personal altamente capacitado y un enfoque humano para ofrecer soluciones de seguridad integrales, confiables y adaptadas a cada necesidad. Estamos donde más nos necesitas, con compromiso y excelencia. "
+          },
+          {
+            "Texto": "SEGURIDAD FÍSICA",
+            "TextoDescripcion": "Ofrecemos protección presencial con personal capacitado, cercano y siempre alerta. Cuidamos personas, bienes e instalaciones con una actitud proactiva y con soluciones a la medida de cada cliente."
+          },
+          {
+            "Texto": "RESGUARDO PERSONAL",
+            "TextoDescripcion": "Protegemos tu integridad con profesionalismo, cercanía y absoluta confidencialidad. Nuestro personal está preparado para anticiparse a los riesgos y brindarte protección en todo momento."
+          },
+          {
+            "Texto": "SUPERVISIÓN DE SALA DE CONTROL",
+            "TextoDescripcion": "Monitoreamos en tiempo real lo que sucede en tus instalaciones, con operadores altamente capacitados y tecnología de punta. Detectamos incidentes, coordinamos respuestas inmediatas y garantizamos una supervisión constante para tu total tranquilidad."
+          },
+          {
+            "Texto": "GUARDIANÍA",
+            "TextoDescripcion": "Brindamos guardianía confiable y cercana, con personal capacitado que combina vigilancia, control de accesos y atención al cliente. Estamos presentes con actitud proactiva, cuidando cada espacio como si fuera nuestro."
+          },
+          {
+            "Texto": "TECNOLOGÍA",
+            "TextoDescripcion": "Integramos soluciones tecnológicas de última generación para anticiparnos a los riesgos y actuar con rapidez. Cámaras inteligentes, analítica de video, control de accesos y monitoreo remoto, todo conectado para brindarte una seguridad más eficiente, precisa y proactiva."
+          },
+          {
+            "Texto": "CIBERSEGURIDAD ",
+            "TextoDescripcion": "Integramos soluciones de ciberseguridad avanzada y tecnología inteligente para proteger tu información. Nuestro portafolio incluye servicios de monitoreo y análisis de riesgos cibernéticos, gestión de accesos, videovigilancia inteligente, control perimetral y sistemas integrados de seguridad electrónica. Combinamos innovación, experiencia y tecnología de punta para brindarte protección 24/7 en el mundo digital y físico."
+          },
+          {
+            "Texto": "ALARMAS",
+            "TextoDescripcion": "Brindamos soluciones de alarmas inteligentes diseñadas para proteger tus instalaciones con tecnología de última generación. Nuestros sistemas integran sensores de movimiento, detección perimetral, monitoreo en tiempo real y conexión directa a nuestras centrales de vigilancia. Garantizamos una respuesta rápida y efectiva ante cualquier incidencia, fortaleciendo la seguridad de tu entorno a través de herramientas digitales confiables e innovadoras."
+          },
+          {
+            "Texto": "GPS",
+            "TextoDescripcion": "Combinamos tecnología avanzada con experiencia en seguridad para ofrecer soluciones GPS de alta precisión. Nuestros servicios incluyen detección de intrusos, monitoreo en tiempo real, alertas automáticas y rastreo satelital de vehículos, activos o personal. Todo esto conectado a nuestra central de vigilancia 24/7, garantizando una respuesta inmediata y un control total desde cualquier lugar mediante plataformas digitales y apps móviles."
+          }
         ]
       },
       "en": {
         "Titulo": "Security Solutions",
         "Texto": "We are the largest security company in the country, with national coverage, certifications, and the capability to rapidly respond to your needs",
         "TextosBotones": [
-          {"Texto": "Physical Security"},
-          {"Texto": "Personal Protection"},
-          {"Texto": "Control Room Monitoring"},
-          {"Texto": "Guard Services"},
-          {"Texto": "Mobile Patrols"},
-          {"Texto": "Security Assessments"},
-          {"Texto": "Perimeter Protection"},
-          {"Texto": "Event Security"},
-          {"Texto": "Transit Escort Services"}
+          {
+            "Texto": "Physical Security",
+            "TextoDescripcion": ""
+          },
+          {
+            "Texto": "Personal Protection",
+            "TextoDescripcion": ""
+          },
+          {
+            "Texto": "Control Room Monitoring",
+            "TextoDescripcion": ""
+          },
+          {
+            "Texto": "Guard Services",
+            "TextoDescripcion": ""
+          },
+          {
+            "Texto": "Mobile Patrols",
+            "TextoDescripcion": ""
+          },
+          {
+            "Texto": "Security Assessments",
+            "TextoDescripcion": ""
+          },
+          {
+            "Texto": "Perimeter Protection",
+            "TextoDescripcion": ""
+          },
+          {
+            "Texto": "Event Security",
+            "TextoDescripcion": ""
+          },
+          {
+            "Texto": "Transit Escort Services",
+            "TextoDescripcion": ""
+          }
         ]
       }
     },

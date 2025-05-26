@@ -190,7 +190,6 @@
 
     /* 📌 Estilos de botones */
     .carouselButton {
-        background: rgba(191, 24, 24, 0.73);
         /*color: white;*/
         /*border: 2px solid white;*/
         /*padding: clamp(5px, 1vh, 10px) clamp(10px, 2vw, 20px);*/
@@ -244,7 +243,6 @@
     }
     /* 📌 Estilos de botones */
     .carouselButton {
-        background: rgba(24, 77, 191, 0.73);
         /*color: white;*/
         /*border: 2px solid white;*/
         /*padding: clamp(5px, 1vh, 10px) clamp(10px, 2vw, 20px);*/
@@ -290,7 +288,6 @@
     }
     /* 📌 Estilos de botones */
     .carouselButton {
-        background: rgba(60, 191, 24, 0.73);
         /*color: white;*/
         /*border: 2px solid white;*/
         /*padding: clamp(5px, 1vh, 10px) clamp(10px, 2vw, 20px);*/

@@ -32,17 +32,13 @@ export default function Header() {
     const { language } = useLanguage();
     const content = useContent();
 
-    // Obtener datos del contexto
     const headerData = content?.Seguridad.HeaderCarruselDeImagenes;
     const commonData = headerData?.Common;
     const languageData = headerData?.[language];
 
-    // Estado para la imagen seleccionada
-    const [selectedImage, setSelectedImage] = useState(
-        commonData?.ItemsBotones?.[0]?.Imagen || ""
-    );
+    // Estado: sin botón seleccionado al inicio
+    const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-    // Configuración del carrusel
     const settings = {
         dots: false,
         infinite: true,
@@ -53,23 +49,14 @@ export default function Header() {
         prevArrow: <CustomPrevArrow />,
         nextArrow: <CustomNextArrow />,
         responsive: [
-            {
-                breakpoint: 1024,
-                settings: { slidesToShow: 4, slidesToScroll: 4 }
-            },
-            {
-                breakpoint: 768,
-                settings: { slidesToShow: 3, slidesToScroll: 3 }
-            },
-            {
-                breakpoint: 480,
-                settings: { slidesToShow: 3, slidesToScroll: 3 }
-            }
+            { breakpoint: 1024, settings: { slidesToShow: 4, slidesToScroll: 4 } },
+            { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 3 } },
+            { breakpoint: 480, settings: { slidesToShow: 3, slidesToScroll: 3 } }
         ]
     };
 
     if (!commonData || !languageData) {
-        return <div>Cargando...</div>; // Estado de carga
+        return <div>Cargando...</div>;
     }
 
     return (
@@ -77,38 +64,42 @@ export default function Header() {
             className={styles.header}
             style={{ backgroundImage: `url(${commonData.imagenDeFondo})` }}
         >
-            {/* Aquí agregamos el logo nuevo */}
-            <img
-                src= {commonData.logo}
-                className="logoHeader"
-                alt="Logo"
-            />
+            {/* Logo */}
+            <img src={commonData.logo} className="logoHeader" alt="Logo" />
+
             <div className={styles.overlay}>
                 <div className={styles.content}>
-                    {/* Sección de Texto */}
+                    {/* Título y texto dinámico */}
                     <div className={styles.textContainer}>
                         <h1>{languageData.Titulo}</h1>
-                        <p>{languageData.Texto}</p>
+                        <p>
+                            {selectedIndex === null
+                                ? languageData.Texto
+                                : languageData.TextosBotones[selectedIndex]?.TextoDescripcion}
+                        </p>
                     </div>
 
-                    {/* Imagen Principal */}
+                    {/* Imagen fija */}
                     <div className={styles.imageContainer}>
-                        <img src={selectedImage} alt="Imagen dinámica" />
+                        <img
+                            src={commonData.ImagenDerecha?.imagen}
+                            alt={commonData.ImagenDerecha?.alt}
+                        />
                     </div>
                 </div>
 
-                {/* Carrusel de Botones */}
+                {/* Carrusel de botones */}
                 <div className={styles.carouselContainer}>
                     <Slider {...settings}>
-                        {commonData.ItemsBotones.map((boton, index) => (
+                        {languageData.TextosBotones.map((boton, index) => (
                             <button
                                 key={index}
                                 className={`${styles.carouselButton} ${
-                                    selectedImage === boton.Imagen ? styles.active : ""
+                                    selectedIndex === index ? styles.active : ""
                                 }`}
-                                onClick={() => setSelectedImage(boton.Imagen)}
+                                onClick={() => setSelectedIndex(index)}
                             >
-                                {languageData.TextosBotones[index]?.Texto}
+                                {boton.Texto}
                             </button>
                         ))}
                     </Slider>

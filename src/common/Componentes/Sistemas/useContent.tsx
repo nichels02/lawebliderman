@@ -747,10 +747,10 @@ interface ContentData {
     Seguridad: {
         HeaderCarruselDeImagenes: {
             Common: {
-                ItemsBotones: Array<{
-                    Imagen: string;
+                ImagenDerecha: {
+                    imagen: string;
                     alt: string;
-                }>;
+                };
                 imagenDeFondo: string;
                 "logo": string;
             },
@@ -759,6 +759,7 @@ interface ContentData {
                 Texto: string;
                 TextosBotones: Array<{
                     Texto: string;
+                    TextoDescripcion: string;
                 }>;
             },
             en: {
@@ -766,6 +767,7 @@ interface ContentData {
                 Texto:string;
                 TextosBotones: Array<{
                     Texto: string;
+                    TextoDescripcion: string;
                 }>;
             }
         },
