@@ -25,6 +25,7 @@
 .image {
     width: 100px;
     border-radius: 8px;
+    max-width: 80%;
 }
 
 /* Texto */
@@ -70,4 +71,53 @@
 .card:nth-child(7) {
     grid-column: 11 / span 3;
     grid-row: 2;
+}
+
+@media (max-width: 600px){
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 3 columnas */
+        grid-template-rows: auto auto; /* que crezca automáticamente */
+        gap: 1rem;
+        width: 85vw;
+    }
+    /* Texto */
+    .text {
+        font-size: 0.8rem;
+    }
+
+    .card:nth-child(1) {
+        grid-column: 1 / span 1;
+        grid-row: 2;
+    }
+
+    .card:nth-child(2) {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    .card:nth-child(3) {
+        grid-column: 2 / span 1;
+        grid-row: 2;
+    }
+
+    /* Segunda fila (4 elementos, cada uno ocupa 3 partes) */
+    .card:nth-child(4) {
+        grid-column: 1 / span 1;
+        grid-row: 3;
+    }
+
+    .card:nth-child(5) {
+        grid-column: 2 / span 1;
+        grid-row: 3;
+    }
+
+    .card:nth-child(6) {
+        grid-column: 1 / span 1;
+        grid-row: 4;
+    }
+
+    .card:nth-child(7) {
+        grid-column: 2 / span 1;
+        grid-row: 4;
+    }
 }
