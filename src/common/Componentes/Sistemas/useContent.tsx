@@ -1100,26 +1100,47 @@ interface ContentData {
             Common: {
                 logo: string;
                 Fondo: string;
-                imagenes1: string;
-                imagenes2: string;
-                imagenes3: string;
-                imagenes4: string;
+                imagenDerecha: string;
             },
             es: {
                 Titulo: string;
                 Texto: string;
-                boton1: string;
-                boton2: string;
-                boton3: string;
-                boton4: string;
+                boton1: {
+                    Nombre: string;
+                    Texto: string;
+                },
+                boton2: {
+                    Nombre: string;
+                    Texto: string;
+                },
+                boton3: {
+                    Nombre: string;
+                    Texto: string;
+                },
+                boton4: {
+                    Nombre: string;
+                    Texto: string;
+                },
             },
             en: {
                 Titulo: string;
                 Texto: string;
-                boton1: string;
-                boton2: string;
-                boton3: string;
-                boton4: string;
+                boton1: {
+                    Nombre: string;
+                    Texto: string;
+                },
+                boton2: {
+                    Nombre: string;
+                    Texto: string;
+                },
+                boton3: {
+                    Nombre: string;
+                    Texto: string;
+                },
+                boton4: {
+                    Nombre: string;
+                    Texto: string;
+                },
             }
         }
         TextImageSelector: {
