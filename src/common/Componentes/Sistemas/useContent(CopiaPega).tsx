@@ -4,155 +4,37 @@ import { createContext, useContext, useState, useEffect } from "react";
 interface ContentData {
 
     home: {
-        Formulario: {
+        ValidadorFormulario: {
             es: {
-                BotonesYDesplegable: {
-                    Peru: string;
-                    Usa: string;
-                    Chile: string;
-                    Ecuador: string;
-                },
-                Titulo: string;
-                Nombre: string;
-                Apellido: string;
-                Correo: string;
-                Telefono: string;
-                TextoCheckBox: string;
-                Seguridad: string;
-                Servicios: string;
-                Tecnologia: string;
-                Mensaje: string;
-                TextoGuiaMensaje: string;
-                OtroMetodoDeContacto: string;
-                ElContactoExtra: string;
-                BotonEnviar: string;
-                MensajeAprobatorio: string;
+                NombreVacio: string;
+                ApellidoVacio: string;
+                CorreoVacio: string;
+                FormatoDeCorreo: string;
+                TelefonoVacio: string;
+                TelefonoSoloNumeros: string;
+                TelefonoCantidadDeDigitos: string;
+                MensajeVacio: string;
+                PaisVacio: string;
+                InteresVacio: string;
+                ErrorGuardando: string;
+                ErrorDeConexion: string;
 
-                ContenedorInferior:{
-                    Peru: {
-                        OficinaCentral: string;
-                        NumeroOC: string;
-                        Anexo: string;
-
-                        LidermanAlarmas: string;
-                        NumeroLA: string;
-                        AtencionAlCliente: string;
-                    },
-                    Usa: {
-                        OficinaCentral: string;
-                        NumeroOC: string;
-                        Anexo: string;
-
-                        LidermanAlarmas: string;
-                        NumeroLA: string;
-                        AtencionAlCliente: string;
-                    },
-                    Chile: {
-                        OficinaCentral: string;
-                        NumeroOC: string;
-                        Anexo: string;
-
-                        LidermanAlarmas: string;
-                        NumeroLA: string;
-                        AtencionAlCliente: string;
-                    },
-                    Ecuador: {
-                        OficinaCentral: string;
-                        NumeroOC: string;
-                        Anexo: string;
-
-                        LidermanAlarmas: string;
-                        NumeroLA: string;
-                        AtencionAlCliente: string;
-                    }
-                },
-
-                Colaboradores: {
-                    Titulo: string;
-                    Numero: string;
-                },
-                CoberturaDeRiesgo:{
-                    Titulo: string;
-                    Numero: string;
-                }
             },
             en: {
-                BotonesYDesplegable: {
-                    Peru: string;
-                    Usa: string;
-                    Chile: string;
-                    Ecuador: string;
-                },
-                Titulo: string;
-                Nombre: string;
-                Apellido: string;
-                Correo: string;
-                Telefono: string;
-                TextoCheckBox: string;
-                Seguridad: string;
-                Servicios: string;
-                Tecnologia: string;
-                Mensaje: string;
-                TextoGuiaMensaje: string;
-                OtroMetodoDeContacto: string;
-                ElContactoExtra: string;
-                BotonEnviar: string;
-                MensajeAprobatorio: string;
-
-
-
-                ContenedorInferior: {
-                    Peru: {
-                        OficinaCentral: string;
-                        NumeroOC: string;
-                        Anexo: string;
-
-                        LidermanAlarmas: string;
-                        NumeroLA: string;
-                        AtencionAlCliente: string;
-                    },
-                    Usa: {
-                        OficinaCentral: string;
-                        NumeroOC: string;
-                        Anexo: string;
-
-                        LidermanAlarmas: string;
-                        NumeroLA: string;
-                        AtencionAlCliente: string;
-                    },
-                    Chile: {
-                        OficinaCentral: string;
-                        NumeroOC: string;
-                        Anexo: string;
-
-                        LidermanAlarmas: string;
-                        NumeroLA: string;
-                        AtencionAlCliente: string;
-                    },
-                    Ecuador: {
-                        OficinaCentral: string;
-                        NumeroOC: string;
-                        Anexo: string;
-
-                        LidermanAlarmas: string;
-                        NumeroLA: string;
-                        AtencionAlCliente: string;
-                    }
-                }
-
-            },
-            common: {
-                imagenDeFondo: string;
-                ImagenDeLaDerecha:{
-                    Peru: string;
-                    Usa: string;
-                    Ecuador: string;
-                    Chile: string;
-                },
-                Colaboradores: string;
-                CoberturaDeReisgo: string;
-                ImagenContenedorInferior: string;
+                NombreVacio: string;
+                ApellidoVacio: string;
+                CorreoVacio: string;
+                FormatoDeCorreo: string;
+                TelefonoVacio: string;
+                TelefonoSoloNumeros: string;
+                TelefonoCantidadDeDigitos: string;
+                MensajeVacio: string;
+                PaisVacio: string;
+                InteresVacio: string;
+                ErrorGuardando: string;
+                ErrorDeConexion: string;
             }
+
         }
     }
 

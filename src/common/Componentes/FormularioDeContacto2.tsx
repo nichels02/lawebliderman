@@ -245,7 +245,7 @@ const FormularioDeContacto2 = () => {
     };
 
     return (
-        <div className={styles.contenedorPagina}>
+        <div id="FormularioDeContacto" className={styles.contenedorPagina}>
             <img src={imagen} alt="Fondo" className={styles.ImagenFondo} />
 
             <div className={styles.contenedorIntermedio}>
