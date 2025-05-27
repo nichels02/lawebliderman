@@ -18,6 +18,8 @@
     background-color: #fff;
     width: 80%;
     height: 95%; /* Altura fija para el modal */
+    max-height: 1080px;
+    max-width: 1920px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -41,7 +43,7 @@
 
 /* Título del header */
 .modalTitle {
-    font-size: 1.5rem;
+    font-size: clamp(1.4rem, 1.67vw, 2rem);
     font-weight: bold;
 }
 
@@ -51,7 +53,7 @@
     color: #333;
     flex-grow: 1;
     overflow: hidden;
-
+    overflow-y: auto;
 }
 
 /* Contenedor principal de texto */
@@ -61,7 +63,7 @@
 }
 
 .mainText {
-    font-size: clamp(10px, 0.9vw, 100px);
+    font-size: clamp(1rem, 0.9vw, 100px);
     width: 97%;
     line-height: 1.6;
     color: #333;
@@ -127,22 +129,51 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10%;
+    height: 20%;
     position: relative;
 }
 
-/* Estilo para el botón de cerrar */
 .closeButton {
-    font-size: 1rem;
+    padding: 10px 20px;
+    width: 15%;
+    height: 40%;
+    font-size: clamp(1.3rem, 1.42vw, 1.7rem);
     cursor: pointer;
     background-color: var(--color-rojo-general);
     color: white;
     border: none;
     border-radius: 5px;
-    bottom: 30px;
     position: absolute;
+    top: 50%;
+    transform: translateY(calc(-50% - 10px)); /* mueve hacia arriba sin romper el centrado */
 }
 
 .closeButton:hover {
     background-color: var(--color-rojo-generalOscuro);
+}
+@media (max-width: 1200px) {
+    .modalFooter {
+        /*padding: 10px;*/
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+        height:clamp(40px, calc((1vw + 1vh)*20), 100px);
+        /*position: relative;*/
+    }
+    .closeButton {
+        padding: 0 0;
+        width: 30%;
+        min-width: 80px;
+        min-height: 25px;
+        /*height: 40%;*/
+        /*font-size: clamp(1.3rem, 1.42vw, 1.7rem);*/
+        /*cursor: pointer;*/
+        /*background-color: var(--color-rojo-general);*/
+        /*color: white;*/
+        /*border: none;*/
+        /*border-radius: 5px;*/
+        /*position: absolute;*/
+        /*top: 50%;*/
+        transform: translateY(calc(-50%)); /* mueve hacia arriba sin romper el centrado */
+    }
 }

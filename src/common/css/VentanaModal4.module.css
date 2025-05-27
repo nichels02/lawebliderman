@@ -2,8 +2,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -16,6 +16,8 @@
     background-color: #fff;
     width: 90%;
     height: 85%;
+    max-height: 1080px;
+    max-width: 1920px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -36,8 +38,9 @@
     height: 10%;
 }
 
+/* Título del header */
 .modalTitle {
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 1.67vw, 2rem);
     font-weight: bold;
 }
 
@@ -46,6 +49,7 @@
     color: #333;
     flex-grow: 1;
     overflow: hidden;
+    overflow-y: auto;
 }
 
 .mainTextContainer {
@@ -55,7 +59,7 @@
 }
 
 .mainText {
-    font-size: 1vw;
+    font-size: clamp(1.3rem, 2vw, 2rem);
     width: 80%;
     line-height: 1.6;
     color: #333;
@@ -84,50 +88,106 @@
 
 
 .container img {
-    width: auto;
-    height: 50%;
+    width: 60%;
+    height: auto;
     margin-bottom: 15px;
     border-radius: 8px;
 }
 
 .title {
-    font-size: clamp(12px,1.2vw, 30px);
-    font-weight: 300;
+    font-size: clamp(25px,1.5vw, 30px);
+    font-weight: 400;
     color: #555;
     margin: 10px 0;
     text-align: center;
 }
 
 .text {
-    font-size: 0.95rem;
+    font-size: clamp(22px,1.5vw, 30px);
     color: var(--color-texto-negro2);
     margin: 5px 0;
+    font-weight: 600;
     line-height: 1.5;
     text-align: center;
 }
 
+/* Footer del modal */
 .modalFooter {
-    padding: 15px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10%;
+    height: 20%;
+    position: relative;
 }
 
 .closeButton {
-    padding: 12px 35px;
-    font-size: 1.1rem;
+    padding: 10px 20px;
+    width: 15%;
+    height: 40%;
+    font-size: clamp(1.3rem, 1.42vw, 1.7rem);
     cursor: pointer;
     background-color: var(--color-rojo-general);
-    color: var(--color-texto-blanco);
-    bottom: 30px;
+    color: white;
     border: none;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    border-radius: 5px;
     position: absolute;
+    top: 50%;
+    transform: translateY(calc(-50% - 10px)); /* mueve hacia arriba sin romper el centrado */
 }
 
 .closeButton:hover {
     background-color: var(--color-rojo-generalOscuro);
+}
+/*
+portrait    es cuando el ancho es menor al alto
+------
+|    |
+|    |
+|    |
+------
+landscape   es cuando el  alto es menor al ancho
+-----------
+|         |
+-----------
+*/
+@media (max-width: 1100px), (max-height: 700px){
+    .modalFooter{
+        height:calc((1vh + 1vw)*10);
+    }
+    .closeButton{
+        transform: translateY(calc(-50%)); /* mueve hacia arriba sin romper el centrado */
+        height: 60%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 48%; /* 2 columnas */
+    }
+}
+@media (max-width: 740px) {
+    .closeButton{
+        width: 30%;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        width: 100%; /* 1 columna */
+    }
+    .mainText{
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .closeButton{
+        width: 50%;
+    }
+}
+
+@media (max-height: 930px) {
+    .modalFooter{
+        height: clamp(10px, calc((1vh + 1vw)*20), 200px);
+    }
 }
