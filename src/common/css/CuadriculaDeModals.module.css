@@ -1,6 +1,6 @@
 /* Contenedor principal */
 .container {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@
 /* Texto */
 .text {
     width: 85%;
-    font-size: 1.1vw;
+    font-size: clamp(1.2rem, 1.1vw, 2rem);
     font-weight: normal;
     text-align: left;
     flex-grow: 1;
@@ -122,8 +122,40 @@
 }
 
 /* Responsivo */
-@media (max-width: 600px) {
+
+@media (max-width: 1450px) {
+    .button{
+
+    }
+    .text{
+        font-size: clamp(1rem, 1vw, 2rem);
+    }
+    .title{
+
+    }
+    .smallText{
+
+    }
+    .bottomRightContainer{
+        bottom: clamp(-100px, -2vw, 10px);
+    }
+}
+@media (max-width: 900px) {
     .grid {
         grid-template-columns: 1fr;
+    }
+    .title{
+        font-size:clamp(2rem, 4vw, 2.5rem);
+    }
+}
+
+@media (max-width: 470px){
+    .box{
+        height: 400px;
+    }
+}
+@media (max-width: 350px){
+    .box{
+        height: 450px;
     }
 }
