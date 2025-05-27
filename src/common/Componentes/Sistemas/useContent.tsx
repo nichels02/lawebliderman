@@ -258,6 +258,7 @@ interface ContentData {
                 BotonEnviar: string;
                 BotonEnviando: string;
                 MensajeAprobatorio: string;
+                MensajeDesaprobatorio: string;
 
                 ContenedorInferior:{
                     Peru: {
@@ -330,6 +331,7 @@ interface ContentData {
                 BotonEnviar: string;
                 BotonEnviando: string;
                 MensajeAprobatorio: string;
+                MensajeDesaprobatorio: string;
 
 
 
@@ -394,6 +396,38 @@ interface ContentData {
                 CoberturaDeReisgo: string;
                 ImagenContenedorInferior: string;
             }
+        },
+        ValidadorFormulario: {
+            es: {
+                NombreVacio: string;
+                ApellidoVacio: string;
+                CorreoVacio: string;
+                FormatoDeCorreo: string;
+                TelefonoVacio: string;
+                TelefonoSoloNumeros: string;
+                TelefonoCantidadDeDigitos: string;
+                MensajeVacio: string;
+                PaisVacio: string;
+                InteresVacio: string;
+                ErrorGuardando: string;
+                ErrorDeConexion: string;
+
+            },
+            en: {
+                NombreVacio: string;
+                ApellidoVacio: string;
+                CorreoVacio: string;
+                FormatoDeCorreo: string;
+                TelefonoVacio: string;
+                TelefonoSoloNumeros: string;
+                TelefonoCantidadDeDigitos: string;
+                MensajeVacio: string;
+                PaisVacio: string;
+                InteresVacio: string;
+                ErrorGuardando: string;
+                ErrorDeConexion: string;
+            }
+
         },
         Footer: {
             Common: {

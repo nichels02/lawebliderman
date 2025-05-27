@@ -190,10 +190,35 @@ const FormularioDeContacto2 = () => {
             console.log('[Form] Resultado validación:', validation);
 
             if (!validation.isValid) {
-                console.error('[Form] Error de validación:', validation.errorMessage);
-                setError(validation.errorMessage || 'Error en el formulario');
+                const errores = validation.errores as unknown as Record<string, boolean | undefined>;
+                const mensajes = (content?.home.ValidadorFormulario[language] || {}) as Record<string, string | undefined>;
+
+                const clavesEnOrden = [
+                    "NombreVacio",
+                    "ApellidoVacio",
+                    "CorreoVacio",
+                    "FormatoDeCorreo",
+                    "TelefonoVacio",
+                    "TelefonoSoloNumeros",
+                    "TelefonoCantidadDeDigitos",
+                    "MensajeVacio",
+                    "PaisVacio",
+                    "ErrorGuardando",
+                    "ErrorDeConexion"
+                ];
+
+                for (const clave of clavesEnOrden) {
+                    if (errores[clave]) {
+                        const mensaje = mensajes[clave] || "Error en el formulario";
+                        console.error("[Form] Error de validación:", mensaje);
+                        setError(mensaje);
+                        break;
+                    }
+                }
+
                 return;
             }
+
 
             console.log('[Form] Validación exitosa, datos enviados al backend');
             setSuccess(true);
@@ -208,11 +233,12 @@ const FormularioDeContacto2 = () => {
                 pais: 'pe'
             });
 
-            alert('Formulario enviado con éxito!');
+            alert(content?.home.Formulario[language].MensajeAprobatorio);
 
         } catch (err) {
             console.error('[Form] Error en el proceso:', err);
-            setError('Ocurrió un error al procesar el formulario. Por favor intente nuevamente.');
+            const MensajeDesaprobatorio = content?.home.Formulario[language].MensajeDesaprobatorio;
+            setError(MensajeDesaprobatorio !== undefined ? MensajeDesaprobatorio : null);
         } finally {
             setIsSubmitting(false);
         }

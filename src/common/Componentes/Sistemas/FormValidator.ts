@@ -1,4 +1,5 @@
 import { FormularioContacto } from './FormularioContacto.interface';
+import { ErroresFormulario } from './ErroresFormulario.interface.ts';
 import ConectarBackend from './ConectarBackend.ts';
 
 export class FormValidatorSingleton {
@@ -13,68 +14,93 @@ export class FormValidatorSingleton {
         return FormValidatorSingleton.instance;
     }
 
-    public async validateForm(data: FormularioContacto): Promise<{ isValid: boolean; errorMessage?: string }> {
-        // Validar nombre y apellido
+    private getErroresDefault(): ErroresFormulario {
+        return {
+            NombreVacio: false,
+            ApellidoVacio: false,
+            CorreoVacio: false,
+            FormatoDeCorreo: false,
+            TelefonoVacio: false,
+            TelefonoSoloNumeros: false,
+            TelefonoCantidadDeDigitos: false,
+            MensajeVacio: false,
+            PaisVacio: false,
+            InteresVacio: false,
+            ErrorGuardando: false,
+            ErrorDeConexion: false,
+        };
+    }
+
+    public async validateForm(data: FormularioContacto): Promise<{ isValid: boolean; errores: ErroresFormulario }> {
+        const errores = this.getErroresDefault();
+
         if (!data.nombre || data.nombre.trim() === '') {
-            return { isValid: false, errorMessage: 'El nombre no puede estar vacío' };
+            errores.NombreVacio = true;
+            return { isValid: false, errores };
         }
+
         if (!data.apellido || data.apellido.trim() === '') {
-            return { isValid: false, errorMessage: 'El apellido no puede estar vacío' };
+            errores.ApellidoVacio = true;
+            return { isValid: false, errores };
         }
 
-        // Validar correo
         if (!data.correo || data.correo.trim() === '') {
-            return { isValid: false, errorMessage: 'El correo no puede estar vacío' };
-        }
-        if (!this.isValidEmail(data.correo)) {
-            return { isValid: false, errorMessage: 'El formato del correo no es válido' };
+            errores.CorreoVacio = true;
+            return { isValid: false, errores };
         }
 
-        // Validar teléfono
-        if (!data.telefono || data.telefono.trim() === '') {
-            return { isValid: false, errorMessage: 'El teléfono no puede estar vacío' };
+        if (!this.isValidEmail(data.correo)) {
+            errores.FormatoDeCorreo = true;
+            return { isValid: false, errores };
         }
+
+        if (!data.telefono || data.telefono.trim() === '') {
+            errores.TelefonoVacio = true;
+            return { isValid: false, errores };
+        }
+
         const numericPhone = data.telefono.replace(/\s+/g, '');
         if (/[^0-9]/.test(numericPhone)) {
-            return { isValid: false, errorMessage: 'El teléfono solo debe contener dígitos numéricos' };
+            errores.TelefonoSoloNumeros = true;
+            return { isValid: false, errores };
         }
+
         if (numericPhone.length < 7 || numericPhone.length > 15) {
-            return { isValid: false, errorMessage: 'El teléfono debe tener entre 7 y 15 dígitos' };
+            errores.TelefonoCantidadDeDigitos = true;
+            return { isValid: false, errores };
         }
 
-        // Validar mensaje y país
         if (!data.mensaje || data.mensaje.trim() === '') {
-            return { isValid: false, errorMessage: 'El mensaje no puede estar vacío' };
-        }
-        if (!data.pais || data.pais.trim() === '') {
-            return { isValid: false, errorMessage: 'El país no puede estar vacío' };
+            errores.MensajeVacio = true;
+            return { isValid: false, errores };
         }
 
-        // Validar al menos un interés
+        if (!data.pais || data.pais.trim() === '') {
+            errores.PaisVacio = true;
+            return { isValid: false, errores };
+        }
+
         const { seguridad, servicios, tecnologia } = data.intereses;
         if (!seguridad && !servicios && !tecnologia) {
-            return { isValid: false, errorMessage: 'Debe seleccionar al menos un interés' };
+            errores.InteresVacio = true;
+            return { isValid: false, errores };
         }
 
-        // Intentar enviar los datos al backend
         try {
             const response = await ConectarBackend.getInstance().enviarDatos(data);
             if (!response.success) {
-                return { isValid: false, errorMessage: response.error || 'Error al guardar los datos' };
+                errores.ErrorGuardando = true;
+                return { isValid: false, errores };
             }
-        } catch (error) {
-            return {
-                isValid: false,
-                errorMessage: error instanceof Error ? error.message : 'Error de conexión con el servidor'
-            };
+        } catch {
+            errores.ErrorDeConexion = true;
+            return { isValid: false, errores };
         }
 
-        // Todo válido
-        return { isValid: true };
+        return { isValid: true, errores };
     }
 
     private isValidEmail(email: string): boolean {
-        // Acepta letras, números, puntos, guiones y dominios válidos
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return emailRegex.test(email);
     }

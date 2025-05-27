@@ -459,6 +459,7 @@
         "BotonEnviar": "Enviar mensaje",
         "BotonEnviando": "Enviando...",
         "MensajeAprobatorio": "¡Formulario enviado con éxito!",
+        "MensajeDesaprobatorio": "Ocurrió un error al procesar el formulario. Por favor intente nuevamente.",
 
         "ContenedorInferior":{
           "Peru": {
@@ -531,6 +532,7 @@
         "BotonEnviar": "Send Message",
         "BotonEnviando": "Sending...",
         "MensajeAprobatorio": "Form successfully submitted!",
+        "MensajeDesaprobatorio": "An error occurred while processing the form. Please try again.",
 
 
 
@@ -599,11 +601,35 @@
     },
     "ValidadorFormulario": {
       "es": {
+        "NombreVacio": "El nombre no puede estar vacío",
+        "ApellidoVacio": "El apellido no puede estar vacío",
+        "CorreoVacio": "El correo no puede estar vacío",
+        "FormatoDeCorreo": "El formato del correo no es válido",
+        "TelefonoVacio": "El teléfono no puede estar vacío",
+        "TelefonoSoloNumeros": "El teléfono solo debe contener dígitos numéricos",
+        "TelefonoCantidadDeDigitos": "El teléfono debe tener entre 7 y 15 dígitos",
+        "MensajeVacio": "El mensaje no puede estar vacío",
+        "PaisVacio": "El país no puede estar vacío",
+        "InteresVacio": "Debe seleccionar al menos un interés",
+        "ErrorGuardando": "Error al guardar los datos",
+        "ErrorDeConexion": "Error de conexión con el servidor"
 
       },
       "en": {
-
+        "NombreVacio": "Name cannot be empty",
+        "ApellidoVacio": "Last name cannot be empty",
+        "CorreoVacio": "Email cannot be empty",
+        "FormatoDeCorreo": "Email format is not valid",
+        "TelefonoVacio": "Phone number cannot be empty",
+        "TelefonoSoloNumeros": "Phone number must contain only numeric digits",
+        "TelefonoCantidadDeDigitos": "Phone number must be between 7 and 15 digits long",
+        "MensajeVacio": "Message cannot be empty",
+        "PaisVacio": "Country cannot be empty",
+        "InteresVacio": "At least one interest must be selected",
+        "ErrorGuardando": "Error saving data",
+        "ErrorDeConexion": "Connection error with the server"
       }
+
     },
     "Footer": {
       "Common": {
