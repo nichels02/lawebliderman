@@ -121,7 +121,7 @@
 }
 
 /* ---- Responsive para móviles ---- */
-@media (max-width: 810px) {
+@media (max-width: 1000px) {
     .barra {
         flex-direction: column;
         align-items: flex-start;

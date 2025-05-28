@@ -53,8 +53,8 @@ function BarraDeOpciones3() {
 
             {/* Barra de opciones */}
             <div className={`${styles.barra} ${showBar ? styles.visible : ""}`}>
-                <Link to="/" className={styles.boton}>{textos1.inicio}</Link>
-                <Link to="/Conocenos" className={styles.boton}>{textos1.conocenos}</Link>
+                <Link to="/" className={styles.boton} onClick={() => setShowBar(!showBar)}>{textos1.inicio}</Link>
+                <Link to="/Conocenos" className={styles.boton} onClick={() => setShowBar(!showBar)}>{textos1.conocenos}</Link>
 
                 {/* Dropdown soluciones */}
                 <div className={styles.dropdown}>
@@ -67,19 +67,25 @@ function BarraDeOpciones3() {
 
                     {showDropdown && (
                         <div className={styles.panel}>
-                            <Link to="/Seguridad" className={styles.boton}>{textos1.seguridad}</Link>
-                            <Link to="/Servicio" className={styles.boton}>{textos1.servicio}</Link>
-                            <Link to="/Tecnologia" className={styles.boton}>{textos1.tecnologia}</Link>
+                            <Link to="/Seguridad" className={styles.boton} onClick={() => setShowBar(!showBar)}>{textos1.seguridad}</Link>
+                            <Link to="/Servicio" className={styles.boton} onClick={() => setShowBar(!showBar)}>{textos1.servicio}</Link>
+                            <Link to="/Tecnologia" className={styles.boton} onClick={() => setShowBar(!showBar)}>{textos1.tecnologia}</Link>
                         </div>
                     )}
                 </div>
 
-                <Link to="/Lidermania" className={styles.boton}>
+                <Link to="/Lidermania" className={styles.boton} onClick={() => setShowBar(!showBar)}>
                     {textos1.lidermania} <span className={styles.highlight}>{textos1.unete}</span>
                 </Link>
 
                 {/* Botón Contacto */}
-                <button className={styles.boton}>{textos2.contactanos}</button>
+                <Link
+                    to={`${location.pathname}#FormularioDeContacto`}
+                    className={styles.boton}
+                    onClick={() => setShowBar(false)} // o true, según lo que quieras
+                >
+                    {textos2.contactanos}
+                </Link>
 
                 {/* Dropdown idioma con el nuevo SVG */}
                 <div className={styles.dropdown}>
