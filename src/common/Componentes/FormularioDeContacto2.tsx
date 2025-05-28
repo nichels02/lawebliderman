@@ -7,13 +7,12 @@ import imagenLateral2 from '../../assets/Inicio/chile.svg';
 import imagenLateral3 from '../../assets/Inicio/eucador.svg';
 import imagenLateral4 from '../../assets/Inicio/USa.svg';
 import logoEmpresa from '../../assets/Inicio/Recurso 24_nuevo.svg';
-import LogoColaboradores from '../../assets/Inicio/Recurso 24_nuevo.svg';
-import LogoCoberturaDeRiesgo from '../../assets/Inicio/Recurso 24_nuevo.svg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useContent } from './Sistemas/useContent.tsx'; // o el path correcto
 import { useLanguage } from './Sistemas/LanguageContext.tsx';
+import TituloYSubtituloGenerico from "./TituloYSubtituloGenerico.tsx";
 
 interface ArrowProps {
     className?: string;
@@ -247,12 +246,17 @@ const FormularioDeContacto2 = () => {
     return (
         <div id="FormularioDeContacto" className={styles.contenedorPagina}>
             <img src={imagen} alt="Fondo" className={styles.ImagenFondo} />
-
+            <TituloYSubtituloGenerico
+                titulo={content?.home.Formulario[language].TituloPrincipal|| ''}
+                subtitulo={content?.home.Formulario[language].SubtituloPrincipal|| ''}
+                className={styles.TituloYSubtitulo}
+                textoEspecial={true}
+            />
             <div className={styles.contenedorIntermedio}>
 
 
                 <div className={styles.InfoExtra1}>
-                    <img src={LogoColaboradores} alt="Imagen 1" className={styles.InfoExtraImagen} />
+                    <img src={content?.home.Formulario.common.Colaboradores} alt="Imagen 1" className={styles.InfoExtraImagen} />
                     <div className={styles.InfoExtraTexto}>
                         <h3 className={styles.InfoExtraTitulo}>{content?.home.Formulario[language].Colaboradores.Titulo}</h3>
                         <p className={styles.InfoExtraNumero}>{content?.home.Formulario[language].Colaboradores.Numero}</p>
@@ -260,7 +264,7 @@ const FormularioDeContacto2 = () => {
                 </div>
 
                 <div className={styles.InfoExtra2}>
-                    <img src={LogoCoberturaDeRiesgo} alt="Imagen 1" className={styles.InfoExtraImagen} />
+                    <img src={content?.home.Formulario.common.CoberturaDeRiesgo} alt="Imagen 1" className={styles.InfoExtraImagen} />
                     <div className={styles.InfoExtraTexto}>
                         <h3 className={styles.InfoExtraTitulo}>{content?.home.Formulario[language].CoberturaDeRiesgo.Titulo}</h3>
                         <p className={styles.InfoExtraNumero}>{content?.home.Formulario[language].CoberturaDeRiesgo.Numero}</p>

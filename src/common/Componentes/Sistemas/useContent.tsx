@@ -3,6 +3,44 @@ import { createContext, useContext, useState, useEffect } from "react";
 // 📌 Interfaz completa basada en el JSON
 interface ContentData {
     home: {
+        Titulos: {
+            es: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+                Titulo3: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo4: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            },
+            en: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+                Titulo3: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo4: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            }
+        },
         Header: {
             en: {
                 titulo: string;
@@ -242,6 +280,8 @@ interface ContentData {
                     Chile: string;
                     Ecuador: string;
                 },
+                TituloPrincipal: string;
+                SubtituloPrincipal: string;
                 Titulo: string;
                 Nombre: string;
                 Apellido: string;
@@ -315,6 +355,8 @@ interface ContentData {
                     Chile: string;
                     Ecuador: string;
                 },
+                TituloPrincipal: string;
+                SubtituloPrincipal: string;
                 Titulo: string;
                 Nombre: string;
                 Apellido: string;
@@ -393,7 +435,7 @@ interface ContentData {
                     Chile: string;
                 },
                 Colaboradores: string;
-                CoberturaDeReisgo: string;
+                CoberturaDeRiesgo: string;
                 ImagenContenedorInferior: string;
             }
         },
@@ -532,6 +574,28 @@ interface ContentData {
     }
 
     Conocenos: {
+        Titulos: {
+            es: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            },
+            en: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            }
+        },
         HeaderGenerico: {
             Common: {
                 Fondo: string;
@@ -779,6 +843,28 @@ interface ContentData {
     }
 
     Seguridad: {
+        Titulos: {
+            es: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            },
+            en: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            }
+        },
         HeaderCarruselDeImagenes: {
             Common: {
                 ImagenDerecha: {
@@ -978,6 +1064,28 @@ interface ContentData {
     }
 
     Servicio: {
+        Titulos: {
+            es: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            },
+            en: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            }
+        },
         header: {
             Contenido: {
                 logo: string;
@@ -1096,6 +1204,36 @@ interface ContentData {
     }
 
     Tecnologia: {
+        Titulos: {
+            es: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+                Titulo3: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            },
+            en: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+                Titulo3: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            }
+        },
         HeaderCambioDeImagen:{
             Common: {
                 logo: string;
@@ -1451,6 +1589,28 @@ interface ContentData {
     }
 
     Lidermania:{
+        Titulos: {
+            es: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            },
+            en: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            }
+        },
         HeaderGenerico: {
             Common: {
                 Fondo: string;

@@ -8,7 +8,8 @@ import TituloTextoEImagen2 from "../common/Componentes/TituloTextoEImagen2.tsx";
 
 import CarruselDeTrabajos from "../common/Componentes/CarruselDeTrabajos.tsx";
 import BarraDeBusquedaYFiltros from "../common/Componentes/BarraDeBusquedaYFiltros.tsx";
-import { Trabajo } from '../common/Componentes/Sistemas/trabajos.interface.ts'; // Asegúrate de tener esta ruta bien
+import { Trabajo } from '../common/Componentes/Sistemas/trabajos.interface.ts';
+import TituloYSubtituloGenerico from "../common/Componentes/TituloYSubtituloGenerico.tsx"; // Asegúrate de tener esta ruta bien
 
 function Lidermania() {
     const content = useContent();
@@ -38,8 +39,19 @@ function Lidermania() {
                 onButton1Click={() => console.log("Ver más info")}
                 onButton2Click={() => console.log("Contratar servicio")}
             />
+            <div style={{ marginBottom: '70px' }}></div>
+            <TituloYSubtituloGenerico
+                titulo={content.Lidermania.Titulos[language].Titulo1.Titulo}
+                subtitulo={content.Lidermania.Titulos[language].Titulo1.Subtitulo}
+            />
+            <div style={{ marginBottom: '100px' }}></div>
             <DonaRotativa2 />
-
+            <div style={{ marginBottom: '100px' }}></div>
+            <TituloYSubtituloGenerico
+                titulo={content.Lidermania.Titulos[language].Titulo2.Titulo}
+                subtitulo={content.Lidermania.Titulos[language].Titulo2.Subtitulo}
+            />
+            <div style={{ marginBottom: '100px' }}></div>
             <BarraDeBusquedaYFiltros onBuscar={setTrabajosFiltrados} />
 
             <CarruselDeTrabajos trabajos={trabajosFiltrados} iconoNoHayTrabajos={noJobsIcon} />

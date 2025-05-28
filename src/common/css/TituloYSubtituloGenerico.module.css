@@ -7,14 +7,20 @@
 
 .titulo {
 
-    font-size: clamp(24px, 2.25vw, 40px); /* Tamaño de fuente adaptable */
+    font-size: clamp(24px, 4vw, 50px); /* Tamaño de fuente adaptable */
     font-weight: bold;
     margin-bottom: 10px;
     color: var(--color-rojo-general);
 }
 
 .subtitulo {
+    margin: 0;
     font-weight: normal;
-    font-size: clamp(24px, 1vw, 40px);
+    font-size: clamp(18px, 2.8vw, 40px);
     color: var(--color-general-gris);
+}
+.textoEspecial{
+    font-weight: normal;
+    font-size: clamp(18px, 2.8vw, 40px);
+    color: var(--color-texto-blanco);
 }

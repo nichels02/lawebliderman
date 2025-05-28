@@ -1,17 +1,25 @@
 import React from 'react';
 import styles from '../css/TituloYSubtituloGenerico.module.css';
 
-// Definimos las props que recibirá el componente
 interface TituloYSubtituloGenericoProps {
     titulo: string;
     subtitulo: string;
+    className?: string;
+    textoEspecial?: boolean;
 }
 
-const TituloYSubtituloGenerico: React.FC<TituloYSubtituloGenericoProps> = ({ titulo, subtitulo }) => {
+const TituloYSubtituloGenerico: React.FC<TituloYSubtituloGenericoProps> = ({
+                                                                               titulo,
+                                                                               subtitulo,
+                                                                               className,
+                                                                               textoEspecial = false,
+                                                                           }) => {
     return (
-        <div className={styles.contenedor}>
+        <div className={`${styles.contenedor} ${className || ''}`}>
             <h1 className={styles.titulo}>{titulo}</h1>
-            <h2 className={styles.subtitulo}>{subtitulo}</h2>
+            <h2 className={`${styles.subtitulo} ${textoEspecial ? styles.textoEspecial : ''}`}>
+                {subtitulo}
+            </h2>
         </div>
     );
 };

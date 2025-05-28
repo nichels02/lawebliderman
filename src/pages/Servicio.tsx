@@ -5,6 +5,7 @@ import HeaderServicio from "../common/Componentes/HeaderServicio";
 import TextoTituloEImagen from "../common/Componentes/TextoTituloEImagen";
 import GridGenerico from "../common/Componentes/GridGenerico";
 import GridBarajeable from "../common/Componentes/gridBarajeable";
+import TituloYSubtituloGenerico from "../common/Componentes/TituloYSubtituloGenerico.tsx";
 
 function Servicio() {
     const content = useContent();
@@ -16,11 +17,12 @@ function Servicio() {
     const datos1 = content.Servicio.TextoTituloEImagen;
     const datos2 = content.Servicio.TextoTituloEImagen2;
     const datos3 = content.Servicio.GridGenerico;
+    const datos4 = content.Servicio.Titulos;
 
     return (
         <>
             <HeaderServicio />
-
+            <div style={{ marginBottom: '70px' }}></div>
             <TextoTituloEImagen
                 titulo={datos1[language].Titulo}
                 texto={datos1[language].Texto}
@@ -54,7 +56,10 @@ function Servicio() {
                 ]}
                 imagenALaIzquierda={false}
             />
-
+            <TituloYSubtituloGenerico
+                titulo={datos4[language].Titulo1.Titulo}
+                subtitulo={datos4[language].Titulo1.Subtitulo}
+            />
             <GridGenerico
                 largeImage= {datos3.Contenido.ImagenGrande}
                 items={[
@@ -64,7 +69,10 @@ function Servicio() {
                     { image: datos3?.Contenido?.imagenSector4, title: datos3[language]?.Sector4?.Titulo, text: datos3[language]?.Sector4.Texto }
                 ]}
             />
-
+            <TituloYSubtituloGenerico
+                titulo={datos4[language].Titulo2.Titulo}
+                subtitulo={datos4[language].Titulo2.Subtitulo}
+            />
             <GridBarajeable />
         </>
     );

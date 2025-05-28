@@ -5,6 +5,7 @@ import HeaderCambioDeImagen from "../common/Componentes/HeaderCambioDeImagen.tsx
 import TextImageSelector from "../common/Componentes/TextImageSelector.tsx";
 import CardGrid from "../common/Componentes/CardGrid.tsx";
 import CuadriculaDeModals from "../common/Componentes/CuadriculaDeModals.tsx";
+import TituloYSubtituloGenerico from "../common/Componentes/TituloYSubtituloGenerico.tsx";
 
 // Tipos para las claves
 type BotonKey = 'boton1' | 'boton2' | 'boton3' | 'boton4' | 'boton5';
@@ -41,6 +42,10 @@ function Tecnologia() {
         <>
             <HeaderCambioDeImagen />
 
+            <TituloYSubtituloGenerico
+                titulo={content.Tecnologia.Titulos[language].Titulo1.Titulo}
+                subtitulo={content.Tecnologia.Titulos[language].Titulo1.Subtitulo}
+            />
             {/* Primer Selector */}
             <TextImageSelector
                 items={mapSelectorContent(content.Tecnologia.TextImageSelector)}
@@ -58,8 +63,15 @@ function Tecnologia() {
                 ))}
                 imagenALaIzquierda={content.Tecnologia.TextImageSelector2.Common.imagenALaIzquierda}
             />
-
+            <TituloYSubtituloGenerico
+                titulo={content.Tecnologia.Titulos[language].Titulo2.Titulo}
+                subtitulo={content.Tecnologia.Titulos[language].Titulo2.Subtitulo}
+            />
             <CuadriculaDeModals />
+            <TituloYSubtituloGenerico
+                titulo={content.Tecnologia.Titulos[language].Titulo3.Titulo}
+                subtitulo={content.Tecnologia.Titulos[language].Titulo3.Subtitulo}
+            />
             <CardGrid />
             <FlechaGiro />
         </>

@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     padding: 15px;
-    height: clamp(1500px, 90vw, 1728px);
+    /*height: clamp(1500px, 90vw, 1728px);*/
+    height: 1700px;
     width: 100vw;
     background: none;
     position: relative;
@@ -30,7 +31,7 @@
     color: #ff0000;
     position: absolute;
 
-    top: clamp(220px, calc(220px + ((100vw - 1025px) * 20 / 895)), 240px);
+    top: 230px;
     left:clamp(45px, calc(45px + ((100vw - 1025px) * 15 / 895)), 60px);
 
     width: 70%;
@@ -56,6 +57,7 @@
     /*max-height: 1008px;*/
     width: 90%;
     height: 80%;
+    /*min-height: ;*/
     background: rgba(122, 122, 122, 0.59);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -96,7 +98,7 @@
 /* Contenedor inferior */
 .contenedorExtraInferior {
     /*display: none;*/
-    transform: translateY( clamp(-70px, calc( (8px + (((100vw - 1757px)/163)*(70 - 8)))*-1  ), -8px) );
+    transform: translateY( -8px );
     margin-top: -10px;
     height: auto;
     padding: 20px;
@@ -288,7 +290,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    margin-top: 40px;
 }
 
 .encabezado h2 {
@@ -466,7 +469,7 @@
     /*height: 130px;*/
     /*height: 100px;*/
     height: clamp(120px, calc(100px + (100vw - 1025px) / 895 * 30), 130px);
-    background: red;
+    background: var(--color-rojo-general);
     border-radius: 10px;
     align-items: center; /* Centrado vertical */
     display: flex;
@@ -493,7 +496,7 @@
     margin: 0 12px;
 }
 .InfoExtraTitulo{
-    font-size: 24px;
+    font-size: 20px;
     color: white;
     font-weight: 400;
     margin: 0;
@@ -502,13 +505,42 @@
     color: white;
     font-weight: 620;
     font-size: 34px;
+    margin: 0;
+}
+
+.TituloYSubtitulo{
+    position: absolute;
+    top: 5%;
+    left: 6%;
 }
 
 
 
-
-
-
+@media (min-width: 1920px) {
+    .TituloYSubtitulo{
+        left: calc(50vw - 834px);
+    }
+}
+@media (max-width: 1200px){
+    .TituloYSubtitulo{
+        top: calc(150px - 5%);
+    }
+}
+@media (max-width: 900px){
+    .TituloYSubtitulo{
+        top: calc(150px - 3%);
+    }
+}
+@media (max-width: 768px) {
+    .TituloYSubtitulo{
+        top: calc(200px - 1%);
+    }
+}
+@media (max-width: 565px){
+    .TituloYSubtitulo{
+        top: calc(200px - 5%);
+    }
+}
 
 @media (max-width: 1435px) and  (min-width: 1025px){
     .botonCarrusel{
@@ -569,7 +601,7 @@
         /*top: 220px; !*691*!*/
         /*left: 48px;*/
 
-        top: 220px;
+        top: 240px;
         left:clamp(48px, calc(48px + ((100vw - 691px) * 4 / 333)), 52px);
 
     }
@@ -585,9 +617,11 @@
 }
 
 @media (max-width: 768px) {
-
+    .errorMessage{
+        top: 220px;
+    }
     .contenedorPagina{
-        height: 1850px;
+        height: 1950px;
     }
     .customPrevArrow {
         left: -30px;
@@ -661,7 +695,7 @@
 
 @media (max-width: 690px){
     .contenedorPagina{
-        height: 1950px;
+        height: 2100px;
     }
     .encabezado h2 {
         margin-bottom: 0;
@@ -758,7 +792,7 @@
 }
 @media (max-width: 464px) {
     .contenedorPagina{
-        height: 2000px;
+        height: 2100px;
     }
     .contenedorExtraInferior {
         width: 90%;

@@ -12,6 +12,7 @@ import HeaderFotosCarrusel from "../common/Componentes/HeaderFotosCarrusel.tsx";
 
 import { useContent } from '../common/Componentes/Sistemas/useContent.tsx'; // Importa el hook del contexto
 import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx';
+import TituloYSubtituloGenerico from "../common/Componentes/TituloYSubtituloGenerico.tsx";
 
 interface LocalData {
     Sector1: { Titulo: string; Texto: string };
@@ -59,6 +60,11 @@ function Seguridad() {
     return (
         <>
             <HeaderFotosCarrusel />
+            <TituloYSubtituloGenerico
+                titulo={data.Seguridad.Titulos[language].Titulo1.Titulo}
+                subtitulo={data.Seguridad.Titulos[language].Titulo1.Subtitulo}
+                // className={}
+            />
             <GridGenerico
                 largeImage={data.Seguridad.GridGenerico.Contenido.ImagenGrande}
                 items={[
@@ -85,6 +91,12 @@ function Seguridad() {
                 ]}
             />
             <FlechaGiro />
+            <div style={{ marginBottom: '-70px' }}></div>
+            <TituloYSubtituloGenerico
+                titulo={data.Seguridad.Titulos[language].Titulo2.Titulo}
+                subtitulo={data.Seguridad.Titulos[language].Titulo2.Subtitulo}
+            />
+            <div style={{ marginBottom: '70px' }}></div>
             <GridBarajeable />
         </>
     );
