@@ -1,5 +1,43 @@
 {
   "home": {
+    "Titulos": {
+      "es": {
+        "Titulo1": {
+          "Titulo": "Soluciones",
+          "Subtitulo": "para tu tranquilidad"
+        },
+        "Titulo2": {
+          "Titulo": "Certificaciones",
+          "Subtitulo": "Obtenidas"
+        },
+        "Titulo3": {
+          "Titulo": "Presencia",
+          "Subtitulo": "en todos los sectores"
+        },
+        "Titulo4": {
+          "Titulo": "Supervisión",
+          "Subtitulo": "y control"
+        }
+      },
+      "en": {
+        "Titulo1": {
+          "Titulo": "Solutions",
+          "Subtitulo": "for your peace of mind"
+        },
+        "Titulo2": {
+          "Titulo": "Certifications",
+          "Subtitulo": "Achieved"
+        },
+        "Titulo3": {
+          "Titulo": "Presence",
+          "Subtitulo": "across all sectors"
+        },
+        "Titulo4": {
+          "Titulo": "Monitoring",
+          "Subtitulo": "and control"
+        }
+      }
+    },
     "Header": {
       "en": {
         "titulo": "We are as valuable",
@@ -443,6 +481,9 @@
           "Chile": "Chile",
           "Ecuador": "Ecuador"
         },
+        "TituloPrincipal": "Líderes",
+        "SubtituloPrincipal": "a nivel regional",
+
         "Titulo": "Contáctanos",
         "Nombre": "Nombre*",
         "Apellido": "Apellido*",
@@ -516,6 +557,9 @@
           "Chile": "Chile",
           "Ecuador": "Ecuador"
         },
+        "TituloPrincipal": "",
+        "SubtituloPrincipal": "",
+
         "Titulo": "Contact Us",
         "Nombre": "First Name*",
         "Apellido": "Last Name*",
@@ -594,8 +638,8 @@
           "Ecuador": "",
           "Chile": ""
         },
-        "Colaboradores": "",
-        "CoberturaDeRiesgo": "",
+        "Colaboradores": "src/assets/Inicio/Icono 1 _LIDERMAN.svg",
+        "CoberturaDeRiesgo": "src/assets/Inicio/Icono 2 _LIDERMAN.svg",
         "ImagenContenedorInferior": ""
       }
     },
@@ -738,6 +782,28 @@
   },
 
   "Conocenos": {
+    "Titulos": {
+      "es": {
+        "Titulo1": {
+          "Titulo": "Cómo",
+          "Subtitulo": "operamos"
+        },
+        "Titulo2": {
+          "Titulo": "Supervisión",
+          "Subtitulo": "y control"
+        }
+      },
+      "en": {
+        "Titulo1": {
+          "Titulo": "How",
+          "Subtitulo": "we operate"
+        },
+        "Titulo2": {
+          "Titulo": "Monitoring",
+          "Subtitulo": "and control"
+        }
+      }
+    },
     "HeaderGenerico": {
         "Common": {
           "Fondo": "src/assets/Conocenos/fondo--conocenos.png",
@@ -855,6 +921,28 @@
   },
 
   "Seguridad": {
+    "Titulos": {
+      "es": {
+        "Titulo1": {
+          "Titulo": "Cómo",
+          "Subtitulo": "operamos"
+        },
+        "Titulo2": {
+          "Titulo": "Supervisión",
+          "Subtitulo": "y control"
+        }
+      },
+      "en": {
+        "Titulo1": {
+          "Titulo": "How",
+          "Subtitulo": "we operate"
+        },
+        "Titulo2": {
+          "Titulo": "Monitoring",
+          "Subtitulo": "and control"
+        }
+      }
+    },
     "HeaderCarruselDeImagenes": {
       "Common": {
         "ImagenDerecha":{
@@ -1118,6 +1206,28 @@
   },
 
   "Servicio": {
+    "Titulos": {
+      "es": {
+        "Titulo1": {
+          "Titulo": "Cómo",
+          "Subtitulo": "operamos"
+        },
+        "Titulo2": {
+          "Titulo": "Supervisión",
+          "Subtitulo": "y control"
+        }
+      },
+      "en": {
+        "Titulo1": {
+          "Titulo": "How",
+          "Subtitulo": "we operate"
+        },
+        "Titulo2": {
+          "Titulo": "Monitoring",
+          "Subtitulo": "and control"
+        }
+      }
+    },
     "header": {
       "Contenido": {
         "logo": "src/assets/ImagenesGenerales/Logo-Liderman2.svg",
@@ -1160,10 +1270,10 @@
     },
     "TextoTituloEImagen2": {
       "Contenido": {
-        "Imagen1": "src/assets/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+        "Imagen1": "src/assets/Servicio/Foto_web_liderman_2.png",
         "Imagen2": "src/assets/Servicio/facilities.png",
         "Imagen3": "src/assets/Servicio/jardineria.png",
-        "Imagen4": "src/assets/1920x1080-hd-space-u95406v61bxyrx3s.jpg"
+        "Imagen4": "src/assets/Servicio/Foto_web_liderman_1.png"
       },
       "es": {
         "botones": {
@@ -1234,6 +1344,36 @@
   },
 
   "Tecnologia": {
+    "Titulos": {
+      "es": {
+        "Titulo1": {
+          "Titulo": "Soluciones",
+          "Subtitulo": "Tecnológicas"
+        },
+        "Titulo2": {
+          "Titulo": "Sistemas de alarmas",
+          "Subtitulo": "para seguridad y atención emergencias"
+        },
+        "Titulo3": {
+          "Titulo": "Ciberseguridad",
+          "Subtitulo": "Características de nuestra solución"
+        }
+      },
+      "en": {
+        "Titulo1": {
+          "Titulo": "Solutions",
+          "Subtitulo": "Technological"
+        },
+        "Titulo2": {
+          "Titulo": "Alarm systems",
+          "Subtitulo": "for security and emergency response"
+        },
+        "Titulo3": {
+          "Titulo": "Cybersecurity",
+          "Subtitulo": "Features of our solution"
+        }
+      }
+    },
     "HeaderCambioDeImagen": {
       "Common": {
         "logo": "src/assets/ImagenesGenerales/Logo-Liderman2.svg",
@@ -1588,6 +1728,28 @@
   },
 
   "Lidermania": {
+    "Titulos": {
+      "es": {
+        "Titulo1": {
+          "Titulo": "Mejores personas",
+          "Subtitulo": "brindan mejores resultados"
+        },
+        "Titulo2": {
+          "Titulo": "Trabaja con nosotros",
+          "Subtitulo": "Nuestras vacantes más recientes"
+        }
+      },
+      "en": {
+        "Titulo1": {
+          "Titulo": "Better people",
+          "Subtitulo": "deliver better results"
+        },
+        "Titulo2": {
+          "Titulo": "Work with us",
+          "Subtitulo": "Our latest job openings"
+        }
+      }
+    },
     "HeaderGenerico": {
       "Common": {
         "Fondo": "src/assets/Lidermania/lidermania-fondo.png",
