@@ -26,10 +26,17 @@
 
 
 .errorMessage {
+
     color: #ff0000;
+    position: absolute;
+
+    top: clamp(220px, calc(220px + ((100vw - 1025px) * 20 / 895)), 240px);
+    left:clamp(45px, calc(45px + ((100vw - 1025px) * 15 / 895)), 60px);
+
+    width: 70%;
     background-color: #ffeeee;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: -20px;
     border-radius: 4px;
     border: 1px solid #ffcccc;
 }
@@ -227,7 +234,9 @@
     border-radius: 20px !important;
     transition: all 0.3s ease;
     /*margin: 0 auto; !* Centrado horizontal *!*/
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     text-align: center;
 }
 
@@ -550,6 +559,20 @@
         /*transform: translateY( clamp(-70px, calc( (8px + (((100vw - 1757px)/163)*(70 - 8)))*-1  ), -8px) );*/
         transform: translateY(-8px)
     }
+    .errorMessage{
+        /*top: clamp(220px, calc(220px + ((100vw - 1025px) * 20 / 895)), 240px);*/
+        /*left:clamp(45px, calc(45px + ((100vw - 1025px) * 15 / 895)), 60px);*/
+
+        /*top: 220px;*/    /*1024*/
+        /*left: 52px;*/
+
+        /*top: 220px; !*691*!*/
+        /*left: 48px;*/
+
+        top: 220px;
+        left:clamp(48px, calc(48px + ((100vw - 691px) * 4 / 333)), 52px);
+
+    }
 }
 /* Estilos responsivos */
 @media (max-width: 813px) and  (min-width: 769px){
@@ -584,12 +607,15 @@
         height: 200px;
         margin-top: 20px;
     }
+    .areaMensaje label{
+        margin-top: 0;
+    }
 
     .formularioContainer {
         padding: 15px;
 
-        /*height: clamp(880px, 78%, 9000px);*/
-        height: 2000px!important;
+        height: clamp(880px, 95%, 9000px);
+        /*height: 2000px!important;*/
         padding-bottom: 50px;
     }
     .contenedorExtraInferior {
@@ -640,6 +666,9 @@
     .encabezado h2 {
         margin-bottom: 0;
     }
+    .encabezado{
+        margin-bottom: 70px;
+    }
     .areaMensaje label {
         margin-top: 0;
         margin-bottom: 3px;
@@ -669,11 +698,35 @@
         margin-top: 5px;
         margin-left: 0;
     }
+    .errorMessage{
+        /*top: clamp(220px, calc(220px + ((100vw - 1025px) * 20 / 895)), 240px);*/
+        /*left:clamp(45px, calc(45px + ((100vw - 1025px) * 15 / 895)), 60px);*/
 
+        /*top: 220px;*/    /*690*/
+        /*left: 52px;*/
+
+        /*top: 220px; !*691*!*/
+        /*left: 48px;*/
+
+        top: 280px;
+        left: 13px;
+
+    }
 
 
 }
+@media (max-width: 565px){
+    .errorMessage{
 
+        top: 260px;
+        left: 13px;
+        width: 90%;
+
+    }
+    .contenedorIntermedio {
+        height: 85%;
+    }
+}
 @media (max-width: 480px) {
     .barraSuperior {
         padding: 0 15px;
