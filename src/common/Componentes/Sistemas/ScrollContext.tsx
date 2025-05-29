@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 
-export type ScrollMode = "center" | "top" | { offset: number };
+type ScrollMode = "center" | "top" | "bottom" | { offset: number };
+
 
 interface ScrollContextType {
     scrollMode: ScrollMode;

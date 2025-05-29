@@ -7,42 +7,50 @@ function ScrollToTop() {
     const { scrollMode, targetHash, setTargetHash } = useScrollContext();
 
     useEffect(() => {
-        if (!targetHash) return;
+        if (targetHash) {
+            const scrollToElement = (element: HTMLElement) => {
+                const elementRect = element.getBoundingClientRect();
+                let scrollPosition: number;
 
-        const scrollToElement = (element: HTMLElement) => {
-            const elementRect = element.getBoundingClientRect();
-            let scrollPosition: number;
+                if (scrollMode === "center") {
+                    const elementHalfHeight = elementRect.height / 2;
+                    const viewportHalfHeight = window.innerHeight / 2;
+                    scrollPosition = window.scrollY + elementRect.top - viewportHalfHeight + elementHalfHeight;
+                } else if (scrollMode === "top") {
+                    scrollPosition = window.scrollY + elementRect.top;
+                } else if (scrollMode === "bottom") {
+                    // esta bueno, hace que el bottom del componente y del viewport estan juntos
+                    // scrollPosition = window.scrollY + elementRect.bottom - window.innerHeight;
+                       scrollPosition = window.scrollY + element.getBoundingClientRect().bottom;
+                } else if (typeof scrollMode === "object" && scrollMode.offset !== undefined) {
+                    scrollPosition = window.scrollY + elementRect.top - scrollMode.offset;
+                } else {
+                    scrollPosition = window.scrollY + elementRect.top; // fallback
+                }
 
-            if (scrollMode === "center") {
-                const elementHalfHeight = elementRect.height / 2;
-                const viewportHalfHeight = window.innerHeight / 2;
-                scrollPosition = window.scrollY + elementRect.top - viewportHalfHeight + elementHalfHeight;
-            } else if (scrollMode === "top") {
-                scrollPosition = window.scrollY + elementRect.top;
-            } else if (typeof scrollMode === "object" && scrollMode.offset !== undefined) {
-                scrollPosition = window.scrollY + elementRect.top - scrollMode.offset;
+                window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+            };
+
+            const element = document.getElementById(targetHash);
+            if (element) {
+                setTimeout(() => {
+                    scrollToElement(element);
+                    setTargetHash(null);  // Solo limpio después de hacer scroll
+                }, 0);
             } else {
-                scrollPosition = window.scrollY + elementRect.top; // Fallback
+                // Si no encontró el elemento, limpiar igual para evitar loops
+                setTargetHash(null);
             }
-
-            window.scrollTo({ top: scrollPosition, behavior: "smooth" });
-        };
-
-        const element = document.getElementById(targetHash);
-        if (element) {
-            setTimeout(() => scrollToElement(element), 0);
+        } else {
+            // Sin targetHash, scroll al top
+            window.scrollTo({ top: 0, behavior: "smooth" });
         }
-
-        // Limpiar el target para evitar re-scroll en renders futuros
-        setTargetHash(null);
-
     }, [pathname, key, targetHash, scrollMode, setTargetHash]);
 
     return null;
 }
 
 export default ScrollToTop;
-
 
 /*
 

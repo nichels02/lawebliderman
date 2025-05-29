@@ -2,7 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useScrollContext } from "./ScrollContext.tsx";
 
-type ScrollMode = "center" | "top" | { offset: number };
+type ScrollMode = "center" | "top" | "bottom" | { offset: number };
+
 
 interface ScrollLinkProps {
     to: string; // ruta + hash, ej: "/Conocenos#HeaderGenerico"
