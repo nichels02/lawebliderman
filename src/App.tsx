@@ -20,6 +20,7 @@ import BarraDeOpcionesRedes from './common/Componentes/BarraDeOpcionesRedes.tsx'
 import { LanguageProvider } from './common/Componentes/Sistemas/LanguageContext';
 import ScrollToTop from "./common/Componentes/Sistemas/ScrollToTop.tsx";
 import { ContentProvider } from "./common/Componentes/Sistemas/useContent.tsx";
+import { ScrollProvider } from "./common/Componentes/Sistemas/ScrollContext.tsx";
 
 // Lazy loading diferido para Footer y Formulario
 const LazyFormulario = lazy(() => import('./common/Componentes/FormularioDeContacto2.tsx'));
@@ -82,35 +83,38 @@ function App() {
     }, []);
 
     return (
-        <ContentProvider>
-            <LanguageProvider>
-                <BrowserRouter>
-                    <ScrollToTop />
+        <ScrollProvider>
+            <ContentProvider>
+                <LanguageProvider>
+                    <BrowserRouter>
 
-                    {!isMobile && (
-                        <>
-                            <BarraDeOpciones />
-                            <BarraDeOpciones2 />
-                        </>
-                    )}
+                        <ScrollToTop/>
 
-                    {isMobile && <BarraDeOpciones3 />}
-                    {!isMobile && <BarraDeOpcionesRedes />}
+                        {!isMobile && (
+                            <>
+                                <BarraDeOpciones/>
+                                <BarraDeOpciones2/>
+                            </>
+                        )}
+
+                        {isMobile && <BarraDeOpciones3/>}
+                        {!isMobile && <BarraDeOpcionesRedes/>}
 
 
-                    <Suspense fallback={<div>Cargando página...</div>}>
-                        <Routes>
-                            <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
-                            <Route path="/Conocenos" element={<PageWrapper><Conocenos /></PageWrapper>} />
-                            <Route path="/Lidermania" element={<PageWrapper><Lidermania /></PageWrapper>} />
-                            <Route path="/Seguridad" element={<PageWrapper><Seguridad /></PageWrapper>} />
-                            <Route path="/Servicio" element={<PageWrapper><Servicio /></PageWrapper>} />
-                            <Route path="/Tecnologia" element={<PageWrapper><Tecnologia /></PageWrapper>} />
-                        </Routes>
-                    </Suspense>
-                </BrowserRouter>
-            </LanguageProvider>
-        </ContentProvider>
+                        <Suspense fallback={<div>Cargando página...</div>}>
+                            <Routes>
+                                <Route path="/" element={<PageWrapper><Home/></PageWrapper>}/>
+                                <Route path="/Conocenos" element={<PageWrapper><Conocenos/></PageWrapper>}/>
+                                <Route path="/Lidermania" element={<PageWrapper><Lidermania/></PageWrapper>}/>
+                                <Route path="/Seguridad" element={<PageWrapper><Seguridad/></PageWrapper>}/>
+                                <Route path="/Servicio" element={<PageWrapper><Servicio/></PageWrapper>}/>
+                                <Route path="/Tecnologia" element={<PageWrapper><Tecnologia/></PageWrapper>}/>
+                            </Routes>
+                        </Suspense>
+                    </BrowserRouter>
+                </LanguageProvider>
+            </ContentProvider>
+        </ScrollProvider>
     );
 }
 

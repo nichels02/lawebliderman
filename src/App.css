@@ -10,6 +10,11 @@ html, body {
 /*    box-sizing: border-box; !* Incluye el borde en el cálculo del tamaño del elemento *!*/
 /*}*/
 
+.no-scroll {
+    overflow-y: hidden !important;
+    height: 100%;
+    /* padding-right: 15px;  /* Opcional: para evitar salto de layout al ocultar scrollbar */
+}
 
 :root {
     color: #a5a5a5;
