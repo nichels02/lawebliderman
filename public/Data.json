@@ -1196,9 +1196,9 @@
         }
       },
       "contenido": {
-        "carta1": "src/assets/Seguridad/7ed48365da670aa30e2c0c52c624bbe8.jpg",
+        "carta1": "src/assets/Seguridad/Laptop.png",
         "carta2": "src/assets/Seguridad/3.png",
-        "carta3": "src/assets/Seguridad/994b06b87c487fb19dcc8ab31b7426ee.jpg",
+        "carta3": "src/assets/Seguridad/HombreConMuchasPantallas.png",
         "carta4": "src/assets/Seguridad/d2fe2e83d3db73a8f54eecb5ed2b2b11.jpg",
         "carta5": "src/assets/Seguridad/3004083193b0d0c1c373ce63f7962872.jpg"
       }
@@ -1532,8 +1532,8 @@
     "CuadriculaDeModals": {
       "Common": {
         "Fondo1": "src/assets/Tecnologia/66f988b7eb7722b62baae81a4c1a1463.png",
-        "Fondo2": "src/assets/Tecnologia/f6bc9e4e963f6e16a0720f9c1f986864.jpg",
-        "Fondo3": "src/assets/Tecnologia/9a2c3d0e718a590f094fe5bb01a37e41.jpg",
+        "Fondo2": "src/assets/Tecnologia/SeñorConTelefono.png",
+        "Fondo3": "src/assets/Tecnologia/SeñorConTelefono2.png",
         "Fondo4": "src/assets/Tecnologia/3924529e66a322eb4af6bcf534059f17.jpg"
       },
       "es": {
