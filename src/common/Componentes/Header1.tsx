@@ -13,7 +13,7 @@ function Header1() {
     const imagenes = content.home.Header.contenido; // ✅ Seguridad de tipos
 
     return (
-        <header className={styles.header}>
+        <header id="Home1" className={styles.header}>
             <div className={styles.headerImageContainer}>
                 <img src={imagenes.imagen_De_Fondo} alt="Header Image" className={styles.headerImage} />
                 <div className={styles.textContainer}>
