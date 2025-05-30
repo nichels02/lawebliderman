@@ -570,6 +570,14 @@
         min-width: 0;
     }
 }
+@media (max-width: 1151px) and (min-width: 1025px){
+    .contenedorExtraInferior{
+        transform: translateY( -20px );
+    }
+    .encabezado{
+        margin-top: -10px;
+    }
+}
 @media (max-width: 1024px){
 
     .InfoExtra1,
