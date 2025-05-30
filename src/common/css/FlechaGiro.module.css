@@ -179,57 +179,49 @@
     }
     .contenedor1, .contenedor2, .contenedor3,
     .contenedor4, .contenedor5,.contenedor6 {
-        /*transform: translate(50%,50%);*/
+        transform: translate(50%,50%);
     }
 
 
-    .contenedor1 { top: 16%; left: 10%; }
-    .contenedor2 { top: 8%; right: 40%; }
-    .contenedor3 { top: 16%; right: 10%; }
+    .contenedor1 { top: 2%; right: 80%;}
+    .contenedor2 { top: -9%; right: 50%; bottom:auto; }
+    .contenedor3 { top: 2%; right: 20%; }
 
 
-    .contenedor4 { top: 65%; left: 70%; }
-    .contenedor5 { top: 80%; left: 40%; }
-    .contenedor6 { top: 65%; left: 10%; }
+    .contenedor4 { bottom: 18%; right: 20%; top:auto; left: auto;}
+    .contenedor5 { bottom: 5%; right: 50%; top:auto; left: auto; }
+    .contenedor6 { bottom: 18%; right: 80%; top:auto; left: auto;}
 }
 
 /* Para móviles pequeños */
-@media (max-width: 480px) {
-    .contenedorPadre {
-        height: 80vh; /* Mantiene proporción adecuada */
+@media (max-width: 580px) {
+    .texto{
+        width: 50%;
     }
-
-    .contenedorImagen {
-        width: 65%;
+    .contenedorPadre{
+        height: 130vw;
     }
-
     .contenedorImagen img {
-        width: 45%;
+        width: 60%;
+    }
+}
+
+@media (max-width: 500px){
+    .textoCentro{
+        font-size: clamp(12px, 1.7vw, 18px);
+    }
+}
+@media (max-width: 400px) {
+    .contenedorPadre{
+        height: 150vw;
+    }
+    .textoCentro{
+        width: 30%;
+    }
+}
+@media (max-width: 375px) {
+    .contenedorPadre{
+        height: 170vw;
     }
 
-    .textoCentro {
-        font-size: 14px;
-    }
-
-    .contenedor {
-        width: 110px;
-        height: 170px;
-    }
-
-    .numero {
-        width: 35px;
-        height: 35px;
-        font-size: 14px;
-    }
-
-    .texto {
-        font-size: 9px;
-    }
-
-    .contenedor1 { top: 10%; right: 10%; }
-    .contenedor2 { top: 38%; right: 5%; }
-    .contenedor3 { top: 66%; right: 10%; }
-    .contenedor4 { top: 10%; left: 10%; }
-    .contenedor5 { top: 38%; left: 5%; }
-    .contenedor6 { top: 66%; left: 10%; }
 }
