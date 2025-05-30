@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from '../css/Footer.module.css';
 import { Link } from 'react-router-dom';
+import ScrollLink from './Sistemas/ScrollLink';
 import { useLanguage } from './Sistemas/LanguageContext';
 import { useContent } from './Sistemas/useContent';
 
@@ -84,35 +85,38 @@ function Footer() {
                     <div className={styles.columnsContainer}>
                         <div className={styles.column}>
                             <h4>{localized.Inicio.Titulo}</h4>
-                            <Link to="/#CardWithExpand" className={styles.menuButton}>
+                            <ScrollLink to="/#Home1" scrollMode="bottom" className={styles.menuButton} >
                                 {localized.Inicio.Soluciones}
-                            </Link>
-                            <Link to="/#Marquee" className={styles.menuButton}>
+                            </ScrollLink>
+                            <ScrollLink to="/#Marquee" scrollMode="center" className={styles.menuButton} >
                                 {localized.Inicio.Certificaciones}
-                            </Link>
-                            <Link to="/#PorcentajeNegocio" className={styles.menuButton}>
+                            </ScrollLink>
+                            <ScrollLink to="/#PorcentajeNegocio" scrollMode="center" className={styles.menuButton} >
                                 {localized.Inicio.Presencia}
-                            </Link>
-                            <Link to="/#ImagenYGrid2" className={styles.menuButton}>
+                            </ScrollLink>
+                            <ScrollLink to="/#ImagenYGrid2" scrollMode="center" className={styles.menuButton} >
                                 {localized.Inicio.Cultura}
-                            </Link>
+                            </ScrollLink>
                         </div>
 
                         <div className={styles.column}>
                             <h4>{localized.Conocenos.Titulo}</h4>
-                            <Link to="/Conocenos#HeaderGenerico" className={styles.menuButton}>
+                            <ScrollLink to="/Conocenos#HeaderGenerico" scrollMode="top" className={styles.menuButton} >
                                 {localized.Conocenos.QuienesSomos}
-                            </Link>
-                            <Link to="/Conocenos#HeaderGenerico" className={styles.menuButton}>
+                            </ScrollLink>
+
+                            <ScrollLink to="/Conocenos#HeaderGenerico" scrollMode="bottom" className={styles.menuButton} >
                                 {localized.Conocenos.Historia}
-                            </Link>
+                            </ScrollLink>
+
                         </div>
 
                         <div className={styles.column}>
                             <h4>{localized.Soluciones.Titulo}</h4>
-                            <Link to="/Seguridad" className={styles.menuButton}>
+
+                            <ScrollLink to="/Seguridad" className={styles.menuButton} >
                                 {localized.Soluciones.Seguridad}
-                            </Link>
+                            </ScrollLink>
                             <Link to="/Tecnologia" className={styles.menuButton}>
                                 {localized.Soluciones.Tecnologia}
                             </Link>
@@ -123,15 +127,19 @@ function Footer() {
 
                         <div className={styles.column}>
                             <h4>{localized.lidermania.Titulo}</h4>
-                            <Link to="/Lidermania#DonaRotativa2" className={styles.menuButton}>
+
+                            <ScrollLink to="/Lidermania#DonaRotativa2" scrollMode="center" className={styles.menuButton} >
                                 {localized.lidermania.MejoresPersonas}
-                            </Link>
-                            <Link to="/Lidermania#DonaRotativa2" className={styles.menuButton}>
+                            </ScrollLink>
+
+                            <ScrollLink to="/Lidermania#DonaRotativa2" scrollMode="center" className={styles.menuButton} >
                                 {localized.lidermania.CuatroAmas}
-                            </Link>
-                            <Link to="/Lidermania#CarruselDeTrabajos" className={styles.menuButton}>
+                            </ScrollLink>
+
+                            <ScrollLink to="/Lidermania#CarruselDeTrabajos" scrollMode="center" className={styles.menuButton} >
                                 {localized.lidermania.Unete}
-                            </Link>
+                            </ScrollLink>
+
                         </div>
                     </div>
                 </div>

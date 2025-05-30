@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { useScrollContext } from "./ScrollContext";
 
@@ -6,7 +6,15 @@ function ScrollToTop() {
     const { pathname, key } = useLocation();
     const { scrollMode, targetHash, setTargetHash } = useScrollContext();
 
+    const previousPathnameRef = useRef<string | null>(null);
+    const attemptsRef = useRef(0);
+    const maxAttempts = 10;
+    const delayMs = 100;
+
     useEffect(() => {
+        const isNewPage = previousPathnameRef.current !== pathname;
+        previousPathnameRef.current = pathname;
+
         if (targetHash) {
             const scrollToElement = (element: HTMLElement) => {
                 const elementRect = element.getBoundingClientRect();
@@ -19,30 +27,36 @@ function ScrollToTop() {
                 } else if (scrollMode === "top") {
                     scrollPosition = window.scrollY + elementRect.top;
                 } else if (scrollMode === "bottom") {
-                    // esta bueno, hace que el bottom del componente y del viewport estan juntos
-                    // scrollPosition = window.scrollY + elementRect.bottom - window.innerHeight;
-                       scrollPosition = window.scrollY + element.getBoundingClientRect().bottom;
+                    scrollPosition = window.scrollY + elementRect.bottom;
                 } else if (typeof scrollMode === "object" && scrollMode.offset !== undefined) {
                     scrollPosition = window.scrollY + elementRect.top - scrollMode.offset;
                 } else {
-                    scrollPosition = window.scrollY + elementRect.top; // fallback
+                    scrollPosition = window.scrollY + elementRect.top;
                 }
 
                 window.scrollTo({ top: scrollPosition, behavior: "smooth" });
             };
 
-            const element = document.getElementById(targetHash);
-            if (element) {
-                setTimeout(() => {
+            const tryScroll = () => {
+                const element = document.getElementById(targetHash);
+                if (element) {
                     scrollToElement(element);
-                    setTargetHash(null);  // Solo limpio después de hacer scroll
-                }, 0);
-            } else {
-                // Si no encontró el elemento, limpiar igual para evitar loops
-                setTargetHash(null);
-            }
-        } else {
-            // Sin targetHash, scroll al top
+                    setTargetHash(null);
+                    attemptsRef.current = 0;
+                } else {
+                    attemptsRef.current++;
+                    if (attemptsRef.current < maxAttempts) {
+                        setTimeout(tryScroll, delayMs);
+                    } else {
+                        setTargetHash(null);
+                        attemptsRef.current = 0;
+                    }
+                }
+            };
+
+            tryScroll();
+        } else if (isNewPage) {
+            // Solo hacemos scroll al top si realmente cambiamos de página
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     }, [pathname, key, targetHash, scrollMode, setTargetHash]);
