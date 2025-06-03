@@ -2,7 +2,7 @@
 .contenedorScroll {
     position: relative;
     width: 100vw;
-    height: 281.25vw; /* 4 pantallas de altura para el scroll vertical */
+    height:  400vh; /* 4 pantallas de altura para el scroll vertical */
     overflow: visible;
 }
 
@@ -19,12 +19,21 @@
 
 /* SVG - muy ancho pero manteniendo proporciones */
 .svgScroll {
-    width: 450vw;
-    height: 253.125vw;
+    width: calc((1vw + 1vh)*300);
+    height: 100%;
     display: block;
     overflow: visible;
     z-index: -10;
 }
+
+/*!* SVG - muy ancho pero manteniendo proporciones *!*/
+/*.svgScroll {*/
+/*    width: 450vw;*/
+/*    height: 253.125vw;*/
+/*    display: block;*/
+/*    overflow: visible;*/
+/*    z-index: -10;*/
+/*}*/
 
 /* 🔴 Estilos para los puntos (imágenes) */
 .punto {
@@ -75,13 +84,16 @@
     padding: 1rem;
     border-radius: 12px;
     color: white;
-    font-size: clamp(1.6rem, 1.5vw, 2rem);
+    font-size: clamp(1.2rem, 1.5vw, 2rem);
     font-weight: normal;
     transform: translate(-50%, -50%);
     pointer-events: none;
     white-space: normal;
     width: 400px;
     height: auto;
+
+
+    display: none;
 }
 
 /* 🟡 NUEVO: Cajas con título, texto e imagen */
@@ -100,10 +112,15 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
     font-family: inherit;
+
+
+
+    /*display: none;*/
 }
 
 /* ESTILOS PERSONALIZADOS PARA CADA CONTENEDOR */
 .cajaConImagen.contenedor1 {
+    flex-direction: column;
     max-width: 816px;
 }
 
@@ -167,9 +184,132 @@
 /* Imagen */
 .imagenCaja {
     /*max-width: 230px;*/
-    max-width: 500px;
+    max-width: 26.042vw;
+    min-width: 283.33px;
     background: black;
     /*max-height: 300px;*/
     object-fit: contain;
     border-radius: 8px;
+}
+
+/*imagen */
+@media (max-width: 1400px){
+    .cajaConImagen{
+        width: 40vw;
+        max-width: none;
+    }
+    .cajaConImagen.contenedor3 {
+        width: 60vw;
+    }
+}
+@media (max-width: 1082px) {
+    .cajaConImagen{
+        width: calc(575px - 15vw) ;
+        min-width: 0;
+        max-width: none;
+    }
+    .imagenCaja {
+        /*max-width: 230px;*/
+        max-width: 26.042vw;
+        min-width: 283.33px;
+        background: black;
+        /*max-height: 300px;*/
+        object-fit: contain;
+        border-radius: 8px;
+    }
+
+    /* Título dentro de la caja */
+    .tituloCaja {
+        font-size: clamp(1.5rem, 2.3vw, 3rem);
+        margin: 0 0 0.5rem 0;
+        font-weight: bold;
+        line-height: 1.6;
+        color: white;
+    }
+
+    /* Texto descriptivo */
+    .textoCaja {
+        font-size: clamp(1rem, 1.8vw, 2rem);
+        font-weight: normal;
+        color: white;
+        margin: 0;
+    }
+
+    .cajaConImagen.contenedor5 {
+        width: 33vw;
+    }
+
+    .cajaConImagen.contenedor6 {
+        width: 37vw;
+    }
+}
+@media (max-width: 935px){
+    .cajaConImagen.contenedor3 {
+        width: 35vw;
+        flex-direction: column;
+    }
+    .cajaConImagen.contenedor5 {
+        width: 38vw;
+    }
+    .cajaConImagen.contenedor6 {
+        width: 40vw;
+    }
+}
+@media (max-width: 843px){
+    .cajaConImagen.contenedor3 {
+        width: 43vw;
+    }
+    .cajaConImagen.contenedor5 {
+        width: 43vw;
+    }
+}
+@media (max-width: 750px){
+    .cajaConImagen.contenedor6 {
+        width: 45vw;
+    }
+}
+@media (max-width: 700px){
+    .cajaConImagen.contenedor3 {
+        width: 45vw;
+    }
+    .cajaConImagen.contenedor5 {
+        width: 45vw;
+    }
+}
+@media (max-width: 780px){
+
+}
+
+/*Punto*/
+@media (max-width: 1920px) {
+    .punto {
+        /*position: absolute;*/
+        width: 15.625vw;
+        height: 15.625vw;
+        min-width: 88px;
+        min-height: 88px;
+        /*transform: translate(-50%, -50%);*/
+        /*pointer-events: none;*/
+    }
+
+    /* 🔵 Contenedor del punto, con el título al lado */
+    .puntoContainer {
+        /*position: absolute;*/
+        /*display: flex;*/
+        /*align-items: center;*/
+        /*justify-content: center;*/
+        /*transform: translateX(-10%);*/
+    }
+
+    /* 🟢 Estilo base del título */
+    .titulo {
+        /*position: absolute;*/
+        font-size: clamp(1.7rem,3vw, 3rem);
+        /*padding-left: 20px;*/
+        /*padding-right: 20px;*/
+        /*color: var(--color-texto-negro-cambio2);*/
+        /*border-radius: 10px;*/
+        /*top: 50%;*/
+        /*white-space: nowrap;*/
+    }
 }

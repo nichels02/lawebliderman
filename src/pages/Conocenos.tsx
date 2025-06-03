@@ -1,7 +1,7 @@
 import { useContent } from '../common/Componentes/Sistemas/useContent.tsx';
 import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx';
 import HeaderGenerico from '../common/Componentes/HeaderGenerico.tsx';
-import ContenedorScroll from '../common/Componentes/ContenedorScroll.tsx';
+import ContenedorScrollNuevo1 from '../common/Componentes/ContenedorScrollNuevo1.tsx';
 import TituloYSubtituloGenerico from "../common/Componentes/TituloYSubtituloGenerico.tsx";
 
 function Conocenos() {
@@ -34,7 +34,7 @@ function Conocenos() {
                 subtitulo={content.Conocenos.Titulos[language].Titulo1.Subtitulo}
             />
             <div style={{ marginBottom: '70px' }}></div>
-            <ContenedorScroll />
+            <ContenedorScrollNuevo1 />
         </>
     );
 }

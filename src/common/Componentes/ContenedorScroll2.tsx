@@ -1,30 +1,48 @@
-import { useRef, useLayoutEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import LineaDeTiempo from "../../assets/Conocenos/LineaDeTiempo.svg";
 
 function ContenedorScroll2() {
     const containerRef = useRef<HTMLDivElement>(null);
     const imgRef = useRef<HTMLImageElement>(null);
+    const [scrollDistance, setScrollDistance] = useState(0);
 
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start end", "end start"], // cuando entra y cuando sale
-    });
+    // 1. Calcular dimensiones cuando la imagen carga
+    useEffect(() => {
+        const updateDimensions = () => {
+            if (containerRef.current && imgRef.current) {
+                const imgWidth = imgRef.current.scrollWidth;
+                const containerWidth = containerRef.current.offsetWidth;
+                const distance = imgWidth - containerWidth;
 
-    const [moveDistance, setMoveDistance] = useState(0);
+                if (distance > 0) {
+                    setScrollDistance(distance);
+                    console.log(`Imagen más ancha que contenedor por ${distance}px`);
+                } else {
+                    console.warn("La imagen NO es más ancha que el contenedor. Aumenta el ancho de la imagen.");
+                }
+            }
+        };
 
-    // Calcular cuánto debe moverse la imagen
-    useLayoutEffect(() => {
         const img = imgRef.current;
-        const container = containerRef.current;
-        if (img && container) {
-            const diff = img.scrollWidth - container.offsetWidth;
-            setMoveDistance(-diff); // desplazamiento negativo (de derecha a izquierda)
+        if (img) {
+            img.addEventListener('load', updateDimensions);
+            if (img.complete) updateDimensions();
         }
+
+        return () => {
+            if (img) img.removeEventListener('load', updateDimensions);
+        };
     }, []);
 
-    // Mapear progreso de scroll a desplazamiento horizontal
-    const x = useTransform(scrollYProgress, [0, 1], [0, moveDistance]);
+    // 2. Configurar scroll
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"],
+    });
+
+    // 3. Transformación
+    const x = useTransform(scrollYProgress, [0, 1], [0, -scrollDistance]);
 
     return (
         <div
@@ -32,7 +50,9 @@ function ContenedorScroll2() {
             style={{
                 position: "relative",
                 overflow: "hidden",
-                height: "300vh", // suficiente scroll vertical
+                height: "150vh",
+                width: "100%",
+                border: "2px dashed red", // Para debug
             }}
         >
             <motion.img
@@ -41,12 +61,13 @@ function ContenedorScroll2() {
                 alt="Linea de tiempo"
                 style={{
                     x,
-                    width: "1500px", // o el tamaño real de tu SVG
-                    height: "auto",
-                    maxWidth: "none",
                     position: "absolute",
-                    top: "50%",
-                    transform: "translateY(-50%)",
+                    height: "100%",
+                    width: "auto",
+                    top: 0,
+                    left: 0,
+                    willChange: "transform",
+                    minWidth: "150%", // Garantiza overflow
                 }}
             />
         </div>

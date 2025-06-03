@@ -1,0 +1,166 @@
+/* ContenedorScrollNuevo1.module.css */
+
+.contenedorExterno {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-y;
+}
+
+.contenedorInterno {
+    display: grid;
+    grid-template-columns: 0.7fr repeat(10, 2fr  0.4fr) 2fr 0.7fr;
+    width: 300vw;
+    min-width: 5000px;
+    pointer-events: auto;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    gap: 8px; /* opcional para separar nodos */
+}
+
+/* Nodos tipo 1 y 2 (por ejemplo puntos en la línea de tiempo) */
+.tipo-1 {
+    background-color: #3498db;
+    width: 1.72%;
+    height: 10%;
+    justify-self: center; /* para centrar en la celda */
+    align-self: center;
+}
+
+.tipo-2 {
+    background-color: #e74c3c;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+}
+
+.lineaDeTiempoImg {
+    width: 100%;
+    height: 8%;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+
+.TextoDePunto{
+    position: absolute;
+    color: #000000;
+    width:100px ;
+    height: 100px;
+    bottom:clamp(calc(52% + 30px), 57%, 10000px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    text-align: center;
+    z-index:0 ;
+
+}
+.EstiloGeneralPunto{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 52%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 101;
+}
+
+.EstiloGeneralConTexto{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: clamp(calc(52% + 100px), 60%, 10000px);
+    font-size: 16px;
+    color: #0a4d8c;
+    background: #8f2626;
+
+}
+.EstiloGeneralConTextoInvertido{
+    bottom: auto;
+    top: clamp(calc(52% + 50px), 60%, 10000px);
+}
+
+.EstiloGeneralConTextoEImagen{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: clamp(calc(52% + 100px), 60%, 10000px);
+    font-size: 16px;
+    color: #0a4d8c;
+    background: #8f2626;
+    display: flex;
+    flex-direction: column;
+}
+.EstiloGeneralConTextoEImagenInvertido{
+    bottom: auto;
+    top: clamp(calc(52% + 50px), 60%, 10000px);
+}
+
+.Posicion1, .Posicion2, .Posicion3,
+.Posicion4, .Posicion5, .Posicion6,
+.Posicion7, .Posicion8, .Posicion9,
+.Posicion10, .Posicion11{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #3adf21;
+}
+
+
+
+
+.Posicion1 {
+    grid-column: 2;
+    position: relative;
+}
+
+.Posicion2 {
+    grid-column: 4;
+}
+
+.Posicion3 {
+    grid-column: 6;
+}
+
+.Posicion4 {
+    grid-column: 8;
+}
+
+.Posicion5 {
+    grid-column: 10;
+}
+
+.Posicion6 {
+    grid-column: 12;
+}
+
+.Posicion7 {
+    grid-column: 14;
+}
+
+.Posicion8 {
+    grid-column: 16;
+}
+
+.Posicion9 {
+    grid-column: 18;
+}
+
+.Posicion10 {
+    grid-column: 20;
+}
+
+.Posicion11 {
+    grid-column: 22;
+}
+

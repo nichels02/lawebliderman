@@ -647,50 +647,17 @@ interface ContentData {
             },
             es: {
                 Puntos: {
-                    Contenedor1: {
-                        fecha: string;
-                        EstaALaDerecha: boolean;
-                    },
-                    Contenedor2: {
-                        fecha: string;
-                        EstaALaDerecha: boolean;
-                    },
-                    Contenedor3: {
-                        fecha: string;
-                        EstaALaDerecha: boolean;
-                    },
-                    Contenedor4: {
-                        fecha: string;
-                        EstaALaDerecha: boolean;
-                    },
-                    Contenedor5: {
-                        fecha: string;
-                        EstaALaDerecha: boolean;
-                    },
-                    Contenedor6: {
-                        fecha: string;
-                        EstaALaDerecha: boolean;
-                    },
-                    Contenedor7: {
-                        fecha: string;
-                        EstaALaDerecha: boolean;
-                    },
-                    Contenedor8: {
-                        fecha: string;
-                        EstaALaDerecha: boolean;
-                    },
-                    Contenedor9: {
-                        fecha: string;
-                        EstaALaDerecha: boolean;
-                    },
-                    Contenedor10: {
-                        fecha: string;
-                        EstaALaDerecha: boolean;
-                    },
-                    Contenedor11: {
-                        fecha: string;
-                        EstaALaDerecha: boolean;
-                    }
+                    Contenedor1: { fecha: string; },
+                    Contenedor2: { fecha: string; },
+                    Contenedor3: { fecha: string; },
+                    Contenedor4: { fecha: string; },
+                    Contenedor5: { fecha: string; },
+                    Contenedor6: { fecha: string; },
+                    Contenedor7: { fecha: string; },
+                    Contenedor8: { fecha: string; },
+                    Contenedor9: { fecha: string; },
+                    Contenedor10: { fecha: string; },
+                    Contenedor11: { fecha: string; }
                 },
                 ContenedorSimple: {
                     Contenedor1: {
