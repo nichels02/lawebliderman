@@ -2,7 +2,7 @@
 
 .contenedorExterno {
     width: 100vw;
-    height: 100vh;
+    height: 1200px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -91,19 +91,35 @@
 }
 
 .EstiloGeneralConTextoEImagen{
-    width: 100px;
-    height: 100px;
+    width: 90%;
+    height: auto;
     position: absolute;
-    bottom: clamp(calc(52% + 100px), 60%, 10000px);
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: clamp(calc(52% + 190px), 60%, 10000px);
     font-size: 16px;
-    color: #0a4d8c;
-    background: #8f2626;
+    color: var(--color-texto-blanco);
+    background: var(--color-rojo-general);
+    white-space: normal;
+    border-radius: 15px;
+    padding: 0 3%;
     display: flex;
     flex-direction: column;
 }
+.Titulo{
+
+}
+.Imagen{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+.texto{
+
+}
 .EstiloGeneralConTextoEImagenInvertido{
-    bottom: auto;
-    top: clamp(calc(52% + 50px), 60%, 10000px);
+    bottom: auto !important;
+    top: clamp(calc(52% + 50px), 55%, 10000px)!important;
 }
 
 .Posicion1, .Posicion2, .Posicion3,
