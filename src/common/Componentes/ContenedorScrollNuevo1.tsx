@@ -76,6 +76,21 @@ function ContenedorScrollNuevo1() {
                         draggable={false}
                     />
                     <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor1.fecha}</span>
+                    <div className={`${styles.EstiloGeneralConTextoEImagen} ${content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor1.EstaAbajo ? styles.EstiloGeneralConTextoEImagenInvertido : ''}`}>
+                    <h3 className={styles.Titulo}>
+                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor1.Titulo}
+                        </h3>
+                        <p className={styles.texto}>
+                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor1.Texto}
+                        </p>
+                        <img
+                            src={content?.Conocenos.contenedorScroll.common.items.Contenedor1.src}
+                            alt={content?.Conocenos.contenedorScroll.common.items.Contenedor1.alt}
+                            className={styles.Imagen}
+                            draggable={false}
+                        />
+
+                    </div>
                 </div>
 
                 <div className={styles.Posicion2}>
