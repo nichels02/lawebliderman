@@ -53,8 +53,9 @@ h1, p {
 }
 
 .text3 {
+    width: 85%;
     text-shadow: none; /* Elimina la sombra del texto */
-    font-size: 1.2vw; /* Tamaño relativo al contenedor */
+    font-size: clamp(20px,1.35vw,28px); /* Tamaño relativo al contenedor */
     color: var(--color-texto-blanco); /* Color del tercer texto */
 }
 
@@ -69,7 +70,7 @@ h1, p {
 
 .buttonContainer {
     position: absolute; /* Posiciona el contenedor de botones de manera absoluta */
-    top: 73%; /* Ajusta la posición vertical según sea necesario */
+    top: 75%; /* Ajusta la posición vertical según sea necesario */
     left: 10%; /* Misma posición horizontal que el textContainer */
     width: 40%; /* Mismo ancho que el textContainer */
     height: 6%; /* Altura relativa al contenedor */
@@ -155,6 +156,17 @@ h1, p {
     justify-content: center; /* Centra horizontalmente */
     padding-bottom: 8%; /* Espacio vacío debajo del contenedor padre */
 }
+@media (max-width: 1550px) {
+    .text3 {
+        width: 85%;
+        font-size: clamp(20px,1.5vw,28px); /* Tamaño relativo al contenedor */
+    }
+}
+@media (max-width: 1200px) {
+    .buttonContainer{
+        top: 78%; /* Ajusta la posición vertical según sea necesario */
+    }
+}
 @media (max-width: 1024px) {
 
     .text3 {
@@ -165,23 +177,23 @@ h1, p {
         width: 12%; /* Aumenta un poco el tamaño del logo para mayor visibilidad */
     }
     .buttonContainer{
-        top: 410px;
+        top: 78%;
     }
 
 }
 @media (max-width: 945px){
     .buttonContainer{
-        top: 390px;
+        /*top: 390px;*/
     }
 }
 @media (max-width: 910px){
     .buttonContainer{
-        top: 370px;
+        /*top: 370px;*/
     }
 }
-@media (max-width: 890px){
+@media (max-width: 900px){
     .buttonContainer{
-        top: 360px;
+        /*top: 360px;*/
     }
     .header {
         padding-bottom: 8%; /* Espacio vacío debajo del contenedor padre */
@@ -193,6 +205,15 @@ h1, p {
         gap: 0; /* Espacio entre los elementos del grid */
     }
 }
+@media (max-width: 800px) {
+    .text3 {
+        font-size: clamp(12px, 1vw, 24px);
+    }
+    .buttonPrimary,.buttonSecondary{
+        font-size: clamp(12px, 1vw, 24px);
+
+    }
+}
 @media (max-width: 768px) {
     .text1 {
         font-size: clamp(18px, 5vw, 35px);
@@ -202,9 +223,7 @@ h1, p {
         font-size: clamp(18px, 6vw, 35px);
     }
 
-    .text3 {
-        font-size: clamp(12px, 1vw, 24px);
-    }
+
 
     .logo {
         width: 15%; /* Hace el logo más visible en pantallas pequeñas */
@@ -215,14 +234,11 @@ h1, p {
         top: 25%;
     }
     .buttonContainer{
-        top: clamp(250px, 75%, 270px); /* Ajusta la posición vertical según sea necesario */
+        /*top: clamp(250px, 75%, 270px); !* Ajusta la posición vertical según sea necesario *!*/
         left: 8%;
         width: 50%;
     }
-    .buttonPrimary,.buttonSecondary{
-        font-size: clamp(12px, 1vw, 24px);
 
-    }
     .centeredBottomContainer{
         bottom: 20px;
         /*bottom: clamp(-25px, -0.5vw, 0px);*/
@@ -251,7 +267,7 @@ h1, p {
 
 
     .buttonContainer{
-        top: clamp(230px, 80%, 250px); /* Ajusta la posición vertical según sea necesario */
+        /*top: clamp(230px, 80%, 250px); !* Ajusta la posición vertical según sea necesario *!*/
         left: 8%;
         width: 50%;
         height: 23px;
@@ -280,9 +296,15 @@ h1, p {
         padding-bottom: 15%; /* Espacio vacío debajo del contenedor padre */
     }
     .buttonContainer{
-        top: 70%;
+        /*top: 70%;*/
     }
     .buttonPrimary,.buttonSecondary{
         min-width: 75px;
+    }
+}
+@media (max-width: 337px) {
+    .centeredBottomContainer{
+        bottom: 0;
+        width: 90%;
     }
 }

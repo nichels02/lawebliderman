@@ -46,7 +46,6 @@ interface ContentData {
                 titulo: string;
                 subtitulo: string;
                 descripcion1: string;
-                descripcion2: string;
                 botonPrimario: string;
                 botonSecundario: string;
                 trabajadores: string;
@@ -60,7 +59,6 @@ interface ContentData {
                 titulo: string;
                 subtitulo: string;
                 descripcion1: string;
-                descripcion2: string;
                 botonPrimario: string;
                 botonSecundario: string;
                 trabajadores: string;

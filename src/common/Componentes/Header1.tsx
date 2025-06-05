@@ -20,7 +20,6 @@ function Header1() {
                     <h1 className={styles.text1}>{textos.titulo}</h1>
                     <p className={styles.text2}>{textos.subtitulo}</p>
                     <p className={styles.text3}>{textos.descripcion1}</p>
-                    <p className={styles.text3}>{textos.descripcion2}</p>
                 </div>
                 <div className={styles.buttonContainer}>
                     <button className={styles.buttonPrimary}>{textos.botonPrimario}</button>
