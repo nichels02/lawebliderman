@@ -91,7 +91,6 @@ function Seguridad() {
                 ]}
             />
             <FlechaGiro />
-            <div style={{ marginBottom: '-70px' }}></div>
             <TituloYSubtituloGenerico
                 titulo={data.Seguridad.Titulos[language].Titulo2.Titulo}
                 subtitulo={data.Seguridad.Titulos[language].Titulo2.Subtitulo}

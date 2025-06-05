@@ -14,7 +14,7 @@
 .gridContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(3, 1fr);
     gap: 10px;
     align-items: stretch; /* 🔹 Asegura que todas las celdas tengan la misma altura */
 }
@@ -74,7 +74,7 @@
     font-size: 1rem;
     color: var(--color-rojo-general);
     text-align: left;
-    width: 90px;
+    min-width: 90px;
     word-wrap: break-word;
 }
 
@@ -84,7 +84,8 @@
     font-size: 0.9rem;
     color: var(--color-texto-negro-cambio);
     line-height: 1.4;
-    max-width: 400px;
+
+    max-width: 62%;
     word-wrap: break-word;
 
     height: 60px; /* 🔹 Altura fija para alinear todos */
@@ -92,20 +93,57 @@
     text-overflow: ellipsis;
 }
 
+@media (min-width: 1920px) {
+    .gridItem p {
+        font-size: 1.3rem;
+        height: auto;
+    }
+    .gridItem h4 {
+        font-size: 1.6rem;
+        min-width: 140px;
+    }
+}
+@media (max-width: 1920px) {
+    .gridItem p {
+        font-size: 1.3rem;
+        height: auto;
+    }
+    .gridItem h4 {
+        font-size: 1.6rem;
+        min-width: 140px;
+    }
+}
+@media (max-width: 1450px) {
+    .gridItem p {
+        font-size: 1.154rem;
+        height: auto;
+    }
+    .gridItem h4 {
+        font-size: 1.3rem;
+        min-width: 110px;
+    }
+}
+@media (max-width: 1200px) {
+    .gridItem h4 {
+        font-size: 1.3rem;
+        /*min-width: 90px;*/
+    }
+}
 /* Responsividad para pantallas más pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .gridContainer {
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-rows:auto ;
     }
 
     .largeItem {
-        grid-column: auto;
         grid-row: auto;
         height: 250px;
     }
 
     .gridItem {
+        margin-top: 10px;
+
         flex-direction: column;
         text-align: center;
         padding: 8px;
@@ -113,7 +151,7 @@
 
     .gridItem img {
         width: 60px;
-        height: 60px;
+        height: auto;
         padding-left: 0;
     }
 
@@ -127,6 +165,6 @@
 
     .gridItem p {
         text-align: center;
-        height: 40px; /* 🔹 Altura más baja para móviles */
+        height: auto; /* 🔹 Altura más baja para móviles */
     }
 }

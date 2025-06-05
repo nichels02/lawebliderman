@@ -145,22 +145,21 @@
 
 /* Para móviles */
 @media (max-width: 768px) {
-    /*.contenedorPadre {*/
-    /*    height: 85vh; !* Se sigue reduciendo en móviles *!*/
-    /*}*/
-
+    .contenedorPadre{
+        height: 120vw;
+    }
     .contenedorImagen {
         width: 85%;
         height: auto;
     }
 
     .contenedorImagen img {
-        width: 50%;
+        width: 70%;
     }
 
     .textoCentro {
         width: 20%;
-        font-size: clamp(14px, 2.3vw, 18px);
+        font-size: clamp(14px, 3vw, 26px);
     }
 
     .contenedor {
@@ -175,7 +174,7 @@
     }
 
     .texto {
-        font-size: 14px;
+        font-size: 18px;
     }
     .contenedor1, .contenedor2, .contenedor3,
     .contenedor4, .contenedor5,.contenedor6 {
@@ -183,46 +182,66 @@
     }
 
 
-    .contenedor1 { top: 2%; right: 80%;}
-    .contenedor2 { top: -9%; right: 50%; bottom:auto; }
-    .contenedor3 { top: 2%; right: 20%; }
+    .contenedor1 { top: 7%; right: 87%;}
+    .contenedor2 { top: -5%; right: 50%; bottom:auto; }
+    .contenedor3 { top: 7%; right: 13%; }
 
 
-    .contenedor4 { bottom: 18%; right: 20%; top:auto; left: auto;}
-    .contenedor5 { bottom: 5%; right: 50%; top:auto; left: auto; }
-    .contenedor6 { bottom: 18%; right: 80%; top:auto; left: auto;}
+    .contenedor4 { bottom: 25%; right: 13%; top:auto; left: auto;}
+    .contenedor5 { bottom: 10%; right: 50%; top:auto; left: auto; }
+    .contenedor6 { bottom: 25%; right: 87%; top:auto; left: auto;}
 }
 
 /* Para móviles pequeños */
 @media (max-width: 580px) {
-    .texto {
-        width: 60%;
-        font-size: 12px;
-    }
     .contenedorPadre{
-        height: 130vw;
+        height: 155vw;
+    }
+    .texto {
+        width: 80%;
+        font-size: 16px;
+    }
+    .textoCentro {
+        width: 40%;
+        font-size: clamp(14px, 3.5vw, 26px);
     }
     .contenedorImagen img {
-        width: 60%;
+        width: 70%;
     }
 }
 
 @media (max-width: 500px){
-    .textoCentro{
-        font-size: clamp(12px, 1.7vw, 18px);
+    .textoCentro {
+        font-size: clamp(14px, 3.9vw, 26px);
     }
 }
 @media (max-width: 400px) {
     .contenedorPadre{
-        height: 150vw;
+        height: 180vw;
+    }
+    .contenedorImagen img {
+        width: 90%;
     }
     .textoCentro{
-        width: 30%;
+        width: 40%;
+        font-size: clamp(14px, 5vw, 26px);
     }
+
+    .contenedor1 { top: -5%; right: 87%;}
+    .contenedor2 { top: -10%; right: 50%;}
+    .contenedor3 { top: -5%; right: 13%; }
+
+
+    .contenedor4 { bottom: 14%; right: 13%;}
+    .contenedor5 { bottom: 10%; right: 50%;}
+    .contenedor6 { bottom: 14%; right: 87%;}
+
+
+
 }
 @media (max-width: 375px) {
     .contenedorPadre{
-        height: 170vw;
+        height: 200vw;
     }
 
 }
