@@ -36,8 +36,12 @@ function HeaderCambioDeImagen() {
     return (
         <div
             className={styles.contenedorPadre}
-            style={{ backgroundImage: `url(${content?.Common?.Fondo ?? ""})` }}
+            // style={{ backgroundImage: `url(${content?.Common?.Fondo ?? ""})` }}
         >
+            <div
+                className={styles.backgroundOverlay}
+                style={{ backgroundImage: `url(${content?.Common?.Fondo ?? ""})` }}
+            />
             <img
                 src={content?.Common?.logo}
                 alt="Logo"

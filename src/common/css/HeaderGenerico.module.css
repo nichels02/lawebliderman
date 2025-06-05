@@ -12,6 +12,18 @@
     padding: 40px;
     box-sizing: border-box;
 }
+.backgroundOverlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.7); /* Oscurece solo la imagen */
+    z-index: 0;
+}
 
 .content {
     color: var(--color-texto-blanco);
@@ -33,12 +45,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(
-            ellipse,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0) 70%,
-            rgba(0, 0, 0, 0) 100%
-    );
     background-size: 100% 100%;       /* Deforma verticalmente */
     background-repeat: no-repeat;   /* Evita que se repita */
     background-position: center;    /* Lo centra */
@@ -60,6 +66,7 @@
 .description {
     position: relative;
     font-size: clamp(16px, 1.5vw, 28px);
+    width: 85%;
     margin-bottom: 30px;
     line-height: 1.6;
     font-weight: 300;

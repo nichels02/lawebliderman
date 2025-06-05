@@ -11,6 +11,18 @@
     background-position: center;
 }
 
+.backgroundOverlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5); /* oscurece solo la imagen */
+    z-index: 0;
+}
+
 /* Contenedor del texto + imagen (igualado al .content original) */
 .contenedorContenido {
     position: relative;

@@ -62,8 +62,12 @@ export default function Header() {
     return (
         <header
             className={styles.header}
-            style={{ backgroundImage: `url(${commonData.imagenDeFondo})` }}
+            // style={{ backgroundImage: `url(${commonData.imagenDeFondo})` }}
         >
+            <div
+                className={styles.backgroundOverlay}
+                style={{ backgroundImage: `url(${commonData.imagenDeFondo})` }}
+            />
             {/* Logo */}
             <img src={commonData.logo} className="logoHeader" alt="Logo" />
 

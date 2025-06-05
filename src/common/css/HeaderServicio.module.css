@@ -18,10 +18,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.7);
 }
 
 .container {
-    width: 82%;
+    width: 85%;
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -45,12 +46,7 @@
     width: 100%;
 
     height: 100%;
-    background: radial-gradient(
-            ellipse,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0) 75%,
-            rgba(0, 0, 0, 0) 100%
-    );
+
     background-size: 100% 100%;       /* Deforma verticalmente */
     background-repeat: no-repeat;   /* Evita que se repita */
     background-position: center;    /* Lo centra */
@@ -73,8 +69,10 @@
 .text{
     position: relative;
     z-index: 3;
-    font-size: clamp(10px, 1.8vw, 70px);
+    font-size: clamp(10px, 1.6vw, 70px);
+    margin-top: 20px;
     color: #ffffff;
+    width: 90%;
 }
 
 .right {
