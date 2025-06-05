@@ -99,7 +99,7 @@
 }
 
 .boton {
-    padding: 15px 20px; /* Ajustamos el padding para que los botones tengan más altura */
+    padding: 15px 0; /* Ajustamos el padding para que los botones tengan más altura */
     background-color: #1a1a1a;
     color: white;
     border: none;

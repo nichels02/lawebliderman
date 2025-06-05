@@ -1087,13 +1087,11 @@ interface ContentData {
             Contenido: {
                 Imagen1: string;
                 Imagen2: string;
-                Imagen3: string;
             },
             es: {
                 botones: {
                     Texto1: string;
                     Texto2: string;
-                    Texto3: string;
                 },
                 Titulo: string;
                 Texto: string;

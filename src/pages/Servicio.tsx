@@ -29,12 +29,10 @@ function Servicio() {
                 imagenes={[
                     datos1.Contenido.Imagen1,
                     datos1.Contenido.Imagen2,
-                    datos1.Contenido.Imagen3,
                 ]}
                 textosBotones={[
                     datos1[language].botones.Texto1,
                     datos1[language].botones.Texto2,
-                    datos1[language].botones.Texto3,
                 ]}
                 imagenALaIzquierda={true}
             />
