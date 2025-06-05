@@ -206,6 +206,9 @@
 }
 
 @media (max-width: 768px) {
+    .header {
+        height: auto;
+    }
     .content {
         flex-direction: column;
         width: 90%;
@@ -259,9 +262,6 @@
 }
 
 @media (max-width: 480px) {
-    .header {
-        height: clamp(400px, 120vh, 700px);
-    }
 
     .textContainer h1 {
         font-size: clamp(24px, 8vw, 32px);
