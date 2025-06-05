@@ -1246,14 +1246,12 @@
     "TextoTituloEImagen": {
       "Contenido": {
         "Imagen1": "src/assets/Servicio/parking.png",
-        "Imagen2": "src/assets/Servicio/554e92e6ec866bbf03de6d44038fff9b.png",
-        "Imagen3": "src/assets/1920x1080-full-hd-nature-clear-lake-and-flowers-5et15sh9gemfv0jt.jpg"
+        "Imagen2": "src/assets/Servicio/554e92e6ec866bbf03de6d44038fff9b.png"
       },
       "es": {
         "botones": {
           "Texto1": "Valet parking",
-          "Texto2": "Administración de estacionamientos",
-          "Texto3": "Gestión de eventos"
+          "Texto2": "Administración de estacionamientos"
         },
         "Titulo": "Parking",
         "Texto": "Rapidez y seguridad en el manejo de vehículos, brindando una experiencia premium a los usuarios y facilitando la logística de estacionamiento en eventos y establecimientos."
@@ -1261,8 +1259,7 @@
       "en": {
         "botones": {
           "Texto1": "Valet parking",
-          "Texto2": "Parking management",
-          "Texto3": "Event logistics"
+          "Texto2": "Parking management"
         },
         "Titulo": "Parking",
         "Texto": "Speed and safety in vehicle handling, delivering a premium experience for users and streamlining parking logistics at events and venues."
