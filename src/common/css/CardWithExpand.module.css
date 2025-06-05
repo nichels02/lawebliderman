@@ -133,12 +133,12 @@
         justify-content: center; /* Centra hijos horizontalmente */
     }
     .imgContainer {
-        max-width: 300px; /* Hace que los elementos colapsados sean más pequeños */
+        max-width: 500px; /* Hace que los elementos colapsados sean más pequeños */
         flex: 0.5;
     }
 
     .imgContainer.expanded {
-        max-width: 1600px;
+        max-width: 1100px;
         flex-grow: 6; /* Expande más en móviles */
     }
     .text {
@@ -153,6 +153,24 @@
     .exploreButton {
         font-size: 30px;
     }
+    .exploreButton{
+        margin-top: 0;
+    }
+}
+@media (min-width: 1800px) {
+    .imgContainer {
+        max-width: 900px; /* Hace que los elementos colapsados sean más pequeños */
+        flex: 0.5;
+    }
+    .imgContainer.expanded {
+        max-width: 1200px;
+        flex-grow: 6; /* Expande más en móviles */
+    }
+    .subtitle {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
 }
 @media (max-width: 1600px){
     .text {
