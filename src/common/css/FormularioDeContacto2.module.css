@@ -124,11 +124,13 @@
     font-weight: normal;
     margin-bottom: 5px;
     color: #ffffff;
+    margin-top: 0;
 }
 
 .textoPrincipal {
     font-size: clamp(18px, 2vw, 24px);
     font-weight: bold;
+    margin-top: 0;
     margin-bottom: 3px;
     color: #ffffff;
 }
@@ -137,6 +139,7 @@
     font-size: clamp(16px, 1.5vw, 20px);
     font-weight: lighter;
     color: #cccccc;
+    margin: 0;
 }
 
 /* Barra superior */
@@ -422,6 +425,7 @@
 }
 
 .contactoAlternativo p {
+    margin-top: 0;
     margin-bottom: 3px;
 }
 
