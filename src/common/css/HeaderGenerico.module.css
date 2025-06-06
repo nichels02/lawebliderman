@@ -86,7 +86,7 @@
 
 .button {
     background-color: var(--color-rojo-general);
-    color: var(--color-texto-blanco);
+    color: var(--color-texto-blanco)!important;
     border: none;
     padding: 16px 10px;
     font-size: clamp(16px, 1.3vw, 25px);

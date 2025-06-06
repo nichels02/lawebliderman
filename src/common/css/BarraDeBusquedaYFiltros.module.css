@@ -85,7 +85,7 @@
 
 .filtro label {
     display: block;
-    font-size: clamp(20px, 3vw, 25px);
+    font-size: clamp(16px, 1.2vw, 25px);
     margin-bottom: 0.5rem;
     font-weight: 600;
     color: #333;

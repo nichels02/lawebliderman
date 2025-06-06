@@ -14,7 +14,6 @@
     justify-content: center;
     gap: clamp(8px, 1.5vh, 16px); /* Espaciado más adaptable */
     padding: clamp(8px, 2vh, 20px) clamp(4px, 0.8vw, 12px);
-    box-shadow: 0 0.4vh 1vw rgba(255, 0, 0, 0.2);
     z-index: 1000;
 }
 

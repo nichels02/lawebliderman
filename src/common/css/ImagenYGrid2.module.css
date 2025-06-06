@@ -193,10 +193,14 @@
     align-items: center; /* Centra verticalmente */
     overflow: hidden;
     position: relative;
-
+    transition: transform 0.3s ease;
 }
 .iconoContenedorIzquierdo{
     background: var(--color-texto-blanco);
+}
+.iconoContenedorDerecho:hover,
+.iconoContenedorIzquierdo:hover{
+    transform: translateY(-10%) scale(110%);
 }
 .iconoContenedorDerecho{
     background: var(--color-rojo-general);
@@ -214,10 +218,10 @@
     font-size: 20px;
 }
 .TextoContenedorBotonD{
-    color: white;
+    color: white !important;
 }
 .TextoContenedorBotonI{
-    color: black;
+    color: black !important;
 }
 
 /* Responsive Design */

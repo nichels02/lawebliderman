@@ -45,7 +45,7 @@ function PorcentajeNegocio() {
                 backgroundColor: new Array(langData.items.length).fill('rgba(195,195,195,0.8)'),
                 borderColor: new Array(langData.items.length).fill('rgba(204,16,116,0)'),
                 borderWidth: 1,
-                hoverBackgroundColor: new Array(langData.items.length).fill('rgb(181,14,14)'),
+                hoverBackgroundColor: new Array(langData.items.length).fill('rgb(255,0,0)'),
                 spacing: spacing,
             }]
         };

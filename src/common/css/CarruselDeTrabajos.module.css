@@ -132,14 +132,14 @@
     content: "•";
     position: absolute;
     left: 0;
-    color: #0f6bcc;
+    color: #ffffff;
 }
 
 .link {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #0f6bcc;
+    color: var(--color-rojo-general);
     margin-top: auto;
     padding: 10px 0;
     font-weight: bold;
@@ -147,7 +147,7 @@
 }
 
 .link:hover {
-    color: #0a4d8c;
+    color: var(--color-rojo-generalOscuro);
 }
 
 .linkIcon {
