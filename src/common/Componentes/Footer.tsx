@@ -153,7 +153,26 @@ function Footer() {
                                 <h3 className={styles.cardTitle}>{localized.Boton1.Titulo}</h3>
                                 <p className={styles.cardSubtitle}>{localized.Boton1.Subtitulo}</p>
                             </div>
-                            <button className={`${styles.squareButton} ${styles.primary}`}>➔</button>
+                            {/*<button className={`${styles.squareButton} ${styles.primary}`}>➔</button>*/}
+
+
+
+                            {/*Por Si Acaso No es Link Externo*/}
+                            {/*<ScrollLink to="/Lidermania#DonaRotativa2" scrollMode="top"*/}
+                            {/*            className={`${styles.squareButton} ${styles.primary}`}>*/}
+                            {/*    ➔*/}
+                            {/*</ScrollLink>*/}
+
+                            <a
+                                href="https://youtube.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`${styles.squareButton} ${styles.primary}`}
+                            >
+                                ➔
+                            </a>
+
+
                         </div>
 
                         {/* Card Secundaria */}
@@ -162,7 +181,11 @@ function Footer() {
                                 <h3 className={styles.cardTitle}>{localized.Boton2.Titulo}</h3>
                                 <p className={styles.cardSubtitle}>{localized.Boton2.Subtitulo}</p>
                             </div>
-                            <button className={`${styles.squareButton} ${styles.secondary}`}>➔</button>
+                            {/*<button className={`${styles.squareButton} ${styles.secondary}`}>➔</button>*/}
+                            <ScrollLink to="/Lidermania#CarruselDeTrabajos" scrollMode="bottom"
+                                        className={`${styles.squareButton} ${styles.secondary}`}>
+                                ➔
+                            </ScrollLink>
                         </div>
                     </div>
                 </div>
@@ -176,8 +199,24 @@ function Footer() {
                             <span className={styles.copyright}>
                                 {textoDerechos}
                             </span>
-                            <button className={styles.legalButton}>{localized.TextosFinales.TerminosYCondiciones}</button>
-                            <button className={styles.legalButton}>{localized.TextosFinales.PoliticaDePrivacidad}</button>
+                            <a
+                                href={common.Links.LinkTerminosYCondiciones}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.legalButton}
+                            >
+                                {localized.TextosFinales.TerminosYCondiciones}
+                            </a>
+
+                            <a
+                                href={common.Links.LinkPoliticaYPrivacidad}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.legalButton}
+                            >
+                                {localized.TextosFinales.PoliticaDePrivacidad}
+                            </a>
+
                         </div>
 
                         <div className={styles.socialLinks}>

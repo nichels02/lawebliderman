@@ -689,7 +689,10 @@
           "youtube": "https://www.youtube.com",
           "tiktok": "https://www.tiktok.com",
           "linkedin": "https://www.linkedin.com",
-          "facebook": "https://www.facebook.com"
+          "facebook": "https://www.facebook.com",
+
+          "LinkTerminosYCondiciones":"https://youtube.com",
+          "LinkPoliticaYPrivacidad": "https://youtube.com"
         }
       },
       "es": {

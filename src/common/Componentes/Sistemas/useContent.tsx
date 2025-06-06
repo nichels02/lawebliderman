@@ -486,6 +486,9 @@ interface ContentData {
                     tiktok: string;
                     linkedin: string;
                     facebook: string;
+
+                    LinkTerminosYCondiciones: string;
+                    LinkPoliticaYPrivacidad: string;
                 }
             },
             es: {

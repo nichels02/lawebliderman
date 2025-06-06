@@ -1,6 +1,7 @@
 import styles from '../css/imagenYGrid2.module.css';
 import { useContent } from './Sistemas/useContent.tsx';
 import { useLanguage } from './Sistemas/LanguageContext.tsx';
+import ScrollLink from "./Sistemas/ScrollLink.tsx";
 
 function ImagenYGrid2() {
     const content = useContent();
@@ -47,29 +48,36 @@ function ImagenYGrid2() {
                     {/* Botones de acción */}
                     <div className={styles.contenedorInferior}>
                         <div className={styles.contenedorInferiorIzquierdo}>
-                            <button className={styles.botonContenedorIzquierdo}>
+                            <div className={styles.botonContenedorIzquierdo}>
                                 <img src={imagenes.boton1ImagenIzquierda} alt="Icono izquierda" className={styles.imagenBoton} />
                                 <div className={styles.textosBoton}>
                                     <p className={styles.tituloBotonIzquierdo}>{textos.boton1.titulo}</p>
                                     <p className={styles.subtituloBotonIzquierdo}>{textos.boton1.subtitulo}</p>
                                 </div>
                                 <div className={styles.iconoContenedorDerecho}>
-                                    <div className={styles.TextoContenedorBotonD}>➔</div>
+                                    <ScrollLink to="/Lidermania#DonaRotativa2" scrollMode="top" className={styles.TextoContenedorBotonD} >
+                                        ➔
+                                    </ScrollLink>
                                 </div>
-                            </button>
+                            </div>
                         </div>
 
                         <div className={styles.contenedorInferiorDerecho}>
-                            <button className={styles.botonContenedorDerecho}>
+                            <div className={styles.botonContenedorDerecho}>
                                 <img src={imagenes.boton2ImagenIzquierda} alt="Icono izquierda" className={styles.imagenBoton} />
                                 <div className={styles.textosBoton}>
                                     <p className={styles.tituloBotonDerecho}>{textos.boton2.titulo}</p>
                                     <p className={styles.subtituloBotonDerecho}>{textos.boton2.subtitulo}</p>
                                 </div>
                                 <div className={styles.iconoContenedorIzquierdo}>
-                                    <div className={styles.TextoContenedorBotonI}>➔</div>
+                                    {/*<div >*/}
+                                    {/*    ➔*/}
+                                    {/*</div>*/}
+                                    <ScrollLink to="/Lidermania#CarruselDeTrabajos" scrollMode="top" className={styles.TextoContenedorBotonI} >
+                                        ➔
+                                    </ScrollLink>
                                 </div>
-                            </button>
+                            </div>
                         </div>
                     </div>
                 </div>
