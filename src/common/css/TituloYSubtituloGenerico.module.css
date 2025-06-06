@@ -24,3 +24,10 @@
     font-size: clamp(18px, 2.8vw, 40px);
     color: var(--color-texto-blanco);
 }
+/*@media (max-width: 1024px) {*/
+/*    .contenedor{*/
+/*        width: 100%;*/
+/*        left: auto;*/
+/*        margin: 0 auto;*/
+/*    }*/
+/*}*/

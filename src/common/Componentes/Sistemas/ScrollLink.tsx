@@ -10,6 +10,7 @@ interface ScrollLinkProps {
     scrollMode?: ScrollMode;
     className?: string;
     children: React.ReactNode;
+    onClick?: () => void;
 }
 
 export default function ScrollLink({
@@ -17,12 +18,17 @@ export default function ScrollLink({
                                        scrollMode = "center",
                                        className,
                                        children,
+                                       onClick,
                                    }: ScrollLinkProps) {
     const navigate = useNavigate();
     const scrollContext = useScrollContext();
 
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
+
+        if (onClick) {
+            onClick();
+        }
 
         // Separar ruta y hash
         const [path, hash] = to.split("#");

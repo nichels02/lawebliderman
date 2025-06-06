@@ -36,8 +36,10 @@ function Lidermania() {
                 description={currentLang.Texto}
                 button1Text={currentLang.Boton1}
                 button2Text={currentLang.Boton2}
-                onButton1Click={() => console.log("Ver más info")}
-                onButton2Click={() => console.log("Contratar servicio")}
+                onButton2ClickPosicion={"/Lidermania#CarruselDeTrabajos"}
+                onButton2ClickModo={"top"}
+                onButton1ClickPosicion={"/Lidermania#DonaRotativa2"}
+                onButton1ClickModo={"top"}
             />
             <div style={{ marginBottom: '70px' }}></div>
             <TituloYSubtituloGenerico
@@ -46,7 +48,7 @@ function Lidermania() {
             />
             <div style={{ marginBottom: '100px' }}></div>
             <DonaRotativa2 />
-            <div style={{ marginBottom: '100px' }}></div>
+            <div style={{ marginBottom: '100px' }} id="CarruselDeTrabajos"></div>
             <TituloYSubtituloGenerico
                 titulo={content.Lidermania.Titulos[language].Titulo2.Titulo}
                 subtitulo={content.Lidermania.Titulos[language].Titulo2.Subtitulo}

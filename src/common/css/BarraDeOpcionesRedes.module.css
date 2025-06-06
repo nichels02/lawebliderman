@@ -42,7 +42,8 @@
 
 
 /* 🔹 Ajustes para pantallas grandes (monitores) */
-@media (min-width: 1440px) {
+/*@media (min-width: 1440px) {*/
+@media (min-width: 700px) {
     .barra {
         width: 5vw;
         max-width: 80px;

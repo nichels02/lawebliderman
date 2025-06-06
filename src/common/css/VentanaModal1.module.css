@@ -260,5 +260,8 @@ landscape   es cuando el  alto es menor al ancho
     }
 }
 @media (max-width: 600px) and (orientation: portrait){
-
+    .closeButton{
+        width: 25%;
+        min-width: 70px;
+    }
 }

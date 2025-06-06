@@ -1,6 +1,7 @@
 import { useContent } from "./Sistemas/useContent";
 import { useLanguage } from "./Sistemas/LanguageContext";
 import styles from "../css/Header1.module.css";
+import ScrollLink from "./Sistemas/ScrollLink.tsx";
 
 function Header1() {
     const { language } = useLanguage();
@@ -22,8 +23,12 @@ function Header1() {
                     <p className={styles.text3}>{textos.descripcion1}</p>
                 </div>
                 <div className={styles.buttonContainer}>
-                    <button className={styles.buttonPrimary}>{textos.botonPrimario}</button>
-                    <button className={styles.buttonSecondary}>{textos.botonSecundario}</button>
+                    <ScrollLink to="/#Home1" scrollMode="bottom" className={styles.buttonPrimary} >
+                        {textos.botonPrimario}
+                    </ScrollLink>
+                    <ScrollLink to="/Lidermania#CarruselDeTrabajos" scrollMode="bottom" className={styles.buttonSecondary} >
+                        {textos.botonSecundario}
+                    </ScrollLink>
                 </div>
                 <img src={imagenes.logo} alt="Logo" className="logoHeader" />
             </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../css/HeaderGenerico.module.css";
-
+import ScrollLink from "./Sistemas/ScrollLink.tsx";
+type PosibleScrollMode = "center" | "top" | "bottom";
 interface HeaderProps {
     backgroundImage: string;
     sideImage: string;
@@ -8,8 +9,10 @@ interface HeaderProps {
     description: string;
     button1Text: string;
     button2Text: string;
-    onButton1Click: () => void;
-    onButton2Click: () => void;
+    onButton1ClickPosicion: string;
+    onButton1ClickModo: PosibleScrollMode;
+    onButton2ClickPosicion: string;
+    onButton2ClickModo: PosibleScrollMode;
     logo?: string;
 }
 
@@ -20,8 +23,10 @@ const HeaderGenerico: React.FC<HeaderProps> = ({
                                                    description,
                                                    button1Text,
                                                    button2Text,
-                                                   onButton1Click,
-                                                   onButton2Click,
+                                                   onButton1ClickPosicion,
+                                                   onButton1ClickModo,
+                                                   onButton2ClickPosicion,
+                                                   onButton2ClickModo,
                                                    logo,
                                                }) => {
     return (
@@ -45,18 +50,12 @@ const HeaderGenerico: React.FC<HeaderProps> = ({
                 <h1 className={styles.title}>{title}</h1>
                 <p className={styles.description}>{description}</p>
                 <div className={styles.buttonContainer}>
-                    <button
-                        className={styles.button}
-                        onClick={onButton1Click}
-                    >
+                    <ScrollLink to={onButton1ClickPosicion} scrollMode={onButton1ClickModo} className={styles.button} >
                         {button1Text}
-                    </button>
-                    <button
-                        className={styles.button}
-                        onClick={onButton2Click}
-                    >
+                    </ScrollLink>
+                    <ScrollLink to={onButton2ClickPosicion} scrollMode={onButton2ClickModo} className={styles.button} >
                         {button2Text}
-                    </button>
+                    </ScrollLink>
                 </div>
             </div>
         </header>

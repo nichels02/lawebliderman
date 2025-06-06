@@ -105,7 +105,7 @@ function Footer() {
                                 {localized.Conocenos.QuienesSomos}
                             </ScrollLink>
 
-                            <ScrollLink to="/Conocenos#HeaderGenerico" scrollMode="bottom" className={styles.menuButton} >
+                            <ScrollLink to="/Conocenos#LineaDeTiempo" scrollMode="bottom" className={styles.menuButton} >
                                 {localized.Conocenos.Historia}
                             </ScrollLink>
 

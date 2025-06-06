@@ -25,8 +25,10 @@ function Conocenos() {
                 description={currentLang.Texto}
                 button1Text={currentLang.Boton1}
                 button2Text={currentLang.Boton2}
-                onButton1Click={() => console.log("Ver más info")}
-                onButton2Click={() => console.log("Contratar servicio")}
+                onButton1ClickPosicion={"/Conocenos#LineaDeTiempo"}
+                onButton1ClickModo={"top"}
+                onButton2ClickPosicion={"/Conocenos#FormularioDeContacto"}
+                onButton2ClickModo={"top"}
             />
             <div style={{ marginBottom: '40px' }}></div>
             <TituloYSubtituloGenerico

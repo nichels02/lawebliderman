@@ -96,7 +96,7 @@ function ContenedorScrollNuevo1() {
     const handleTouchEnd = endDrag;
 
     return (
-        <div
+        <div id="LineaDeTiempo"
             ref={contenedorRef}
             className={styles.contenedorExterno}
             onMouseDown={handleMouseDown}

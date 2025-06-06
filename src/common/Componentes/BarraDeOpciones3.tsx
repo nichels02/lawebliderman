@@ -5,6 +5,7 @@ import { isDarkModeEnabled } from "./Sistemas/toggleDarkMode.ts";
 import { useContent } from "./Sistemas/useContent";
 import { useLanguage } from "./Sistemas/LanguageContext";
 import Switch from "./Switch.tsx";
+import ScrollLink from "./Sistemas/ScrollLink.tsx";
 
 let setSVGColorGlobal: (color: string) => void;
 
@@ -79,13 +80,20 @@ function BarraDeOpciones3() {
                 </Link>
 
                 {/* Botón Contacto */}
-                <Link
-                    to={`${location.pathname}#FormularioDeContacto`}
-                    className={styles.boton}
-                    onClick={() => setShowBar(false)} // o true, según lo que quieras
-                >
+                {/*<Link*/}
+                {/*    to={`${location.pathname}#FormularioDeContacto`}*/}
+                {/*    className={styles.boton}*/}
+                {/*    onClick={() => setShowBar(false)} // o true, según lo que quieras*/}
+                {/*>*/}
+                {/*    {textos2.contactanos}*/}
+                {/*</Link>*/}
+
+                <ScrollLink to= {`${location.pathname}#FormularioDeContacto`}
+                            scrollMode="top" className={styles.boton} onClick={() => setShowBar(false)}>
                     {textos2.contactanos}
-                </Link>
+                </ScrollLink>
+
+
 
                 {/* Dropdown idioma con el nuevo SVG */}
                 <div className={styles.dropdown}>

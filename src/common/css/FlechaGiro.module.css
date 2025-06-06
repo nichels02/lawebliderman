@@ -71,7 +71,7 @@
 
 /* Contenedor activo */
 .activo .numero {
-    background-color: #ff0000; /* El color que desees para el fondo activo */
+    background-color: var(--color-rojo-general); /* El color que desees para el fondo activo */
 }
 
 /* Texto debajo del número */
@@ -227,14 +227,14 @@
         font-size: clamp(14px, 5vw, 26px);
     }
 
-    .contenedor1 { top: -5%; right: 87%;}
+    .contenedor1 { top: -5%; right: 82%;}
     .contenedor2 { top: -10%; right: 50%;}
-    .contenedor3 { top: -5%; right: 13%; }
+    .contenedor3 { top: -5%; right: 18%; }
 
 
-    .contenedor4 { bottom: 14%; right: 13%;}
+    .contenedor4 { bottom: 14%; right: 18%;}
     .contenedor5 { bottom: 10%; right: 50%;}
-    .contenedor6 { bottom: 14%; right: 87%;}
+    .contenedor6 { bottom: 14%; right: 82%;}
 
 
 

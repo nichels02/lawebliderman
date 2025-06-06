@@ -44,7 +44,7 @@
 .titulo {
     font-size: clamp(2rem, 6vw, 100px);
     margin-bottom: 1rem;
-    color: #931f1f; /* Ejemplo: color azul para la variante 1 */
+    color: var(--color-rojo-general); /* Ejemplo: color azul para la variante 1 */
 }
 
 .texto {
@@ -100,7 +100,7 @@
 
 .boton {
     padding: 15px 0; /* Ajustamos el padding para que los botones tengan más altura */
-    background-color: #1a1a1a;
+    background-color: #070707;
     color: white;
     border: none;
     border-radius: 15px;

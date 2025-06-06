@@ -4,8 +4,8 @@ import Switch from './Switch.tsx';
 import { useLanguage } from './Sistemas/LanguageContext';
 import { useContent } from './Sistemas/useContent';
 import { isDarkModeEnabled } from './Sistemas/toggleDarkMode.ts';
-import { useLocation, Link } from 'react-router-dom';
-
+import { useLocation } from 'react-router-dom';
+import ScrollLink from "./Sistemas/ScrollLink.tsx";
 
 // Estado global para el color
 let setSVGColorGlobal: (color: string) => void;
@@ -39,12 +39,16 @@ function BarraDeOpciones2() {
 
     return (
         <div className={styles.barra}>
-            <Link
-                to={`${location.pathname}#FormularioDeContacto`}
-                className={styles.boton}
-            >
+            {/*<Link*/}
+            {/*    to={}*/}
+            {/*    className={styles.boton}*/}
+            {/*>*/}
+            {/*    {textos.contactanos}*/}
+            {/*</Link>*/}
+            <ScrollLink to= {`${location.pathname}#FormularioDeContacto`}
+                 scrollMode="top" className={styles.boton} >
                 {textos.contactanos}
-            </Link>
+            </ScrollLink>
             <div
                 className={styles.dropdownContainer}
                 onMouseEnter={() => setShowPanel(true)}
