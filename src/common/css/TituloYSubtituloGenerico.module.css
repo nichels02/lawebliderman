@@ -7,7 +7,7 @@
 
 .titulo {
 
-    font-size: clamp(24px, 4vw, 50px); /* Tamaño de fuente adaptable */
+    font-size: calc(24px + (((clamp(320px, 100vw, 1920px) - 320px) / 1600) * 32)); /* Tamaño de fuente adaptable */
     font-weight: bold;
     margin-bottom: 10px;
     color: var(--color-rojo-general);
@@ -16,7 +16,7 @@
 .subtitulo {
     margin: 0;
     font-weight: normal;
-    font-size: clamp(18px, 2.8vw, 40px);
+    font-size: calc(18px + (((clamp(320px, 100vw, 1920px) - 320px) / 1600) * 22));
     color: var(--color-general-gris);
 }
 .textoEspecial{
@@ -24,10 +24,3 @@
     font-size: clamp(18px, 2.8vw, 40px);
     color: var(--color-texto-blanco);
 }
-/*@media (max-width: 1024px) {*/
-/*    .contenedor{*/
-/*        width: 100%;*/
-/*        left: auto;*/
-/*        margin: 0 auto;*/
-/*    }*/
-/*}*/
