@@ -1,0 +1,9 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <mask id="mask">
+    <!-- Cuadrado sólido -->
+    <rect x="0" y="0" width="200" height="200" rx="30" fill="white"/>
+    <!-- Logo de TikTok en SVG -->
+    <path d="M130 50c4 6 10 11 17 14 5 2 11 3 17 3v25c-8 1-16-1-24-4-7-3-13-8-17-14v58a37 37 0 1 1-37-37v25a12 12 0 1 0 12 12V50h32z" fill="black"/>
+  </mask>
+  <rect x="0" y="0" width="200" height="200" rx="30" fill="white" mask="url(#mask)"/>
+</svg>
