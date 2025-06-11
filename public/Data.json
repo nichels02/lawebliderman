@@ -106,19 +106,19 @@
     },
     "BarraDeRedes": {
       "Item1": {
-        "Link": "https://www.youtube.com",
+        "Link": "https://www.facebook.com/LidermanOficial",
         "imagen": "src/assets/ImagenesGenerales/LogoFacebook.svg"
       },
       "Item2": {
-        "Link": "https://www.youtube.com",
+        "Link": "https://www.tiktok.com/@lidermanplay",
         "imagen": "src/assets/ImagenesGenerales/LogoTiktok.svg"
       },
       "Item3": {
-        "Link": "https://www.youtube.com",
+        "Link": "https://www.linkedin.com/company/liderman/?originalSubdomain=pe",
         "imagen": "src/assets/ImagenesGenerales/LogoLinkedin.svg"
       },
       "Item4": {
-        "Link": "https://www.youtube.com",
+        "Link": "https://www.youtube.com/LidermanOficial",
         "imagen": "src/assets/ImagenesGenerales/LogoYoutube.svg"
       }
     },
@@ -686,13 +686,13 @@
         "youtubeLight": "src/assets/ImagenesGenerales/LogoYoutube2.svg",
         "youtubeDark": "src/assets/ImagenesGenerales/LogoYoutube.svg",
         "Links": {
-          "youtube": "https://www.youtube.com",
-          "tiktok": "https://www.tiktok.com",
-          "linkedin": "https://www.linkedin.com",
-          "facebook": "https://www.facebook.com",
+          "youtube": "https://www.youtube.com/LidermanOficial",
+          "tiktok": "https://www.tiktok.com/@lidermanplay",
+          "linkedin": "https://www.linkedin.com/company/liderman/?originalSubdomain=pe",
+          "facebook": "https://www.facebook.com/LidermanOficial",
 
-          "LinkTerminosYCondiciones":"https://youtube.com",
-          "LinkPoliticaYPrivacidad": "https://youtube.com"
+          "LinkTerminosYCondiciones":"src/assets/PDF/Liderman-Terminos-y-Condiciones.pdf",
+          "LinkPoliticaYPrivacidad": "src/assets/PDF/Liderman-Poliìtica-de-Privacidad.pdf"
         }
       },
       "es": {
