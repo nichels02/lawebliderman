@@ -629,16 +629,16 @@
 
       },
       "common": {
-        "imagenDeFondo": "",
+        "imagenDeFondo": "src/assets/Inicio/foto-footer.png",
         "ImagenDeLaDerecha":{
-          "Peru": "",
-          "Usa": "",
-          "Ecuador": "",
-          "Chile": ""
+          "Peru": "src/assets/Inicio/Peru.svg",
+          "Usa": "src/assets/Inicio/USa.svg",
+          "Ecuador": "src/assets/Inicio/eucador.svg",
+          "Chile": "src/assets/Inicio/chile.svg"
         },
         "Colaboradores": "src/assets/Inicio/Icono 1 _LIDERMAN.svg",
         "CoberturaDeRiesgo": "src/assets/Inicio/Icono 2 _LIDERMAN.svg",
-        "ImagenContenedorInferior": ""
+        "ImagenContenedorInferior": "src/assets/Inicio/Recurso 24_nuevo.svg"
       }
     },
     "ValidadorFormulario": {
