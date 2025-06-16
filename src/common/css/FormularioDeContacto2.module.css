@@ -98,8 +98,8 @@
 /* Contenedor inferior */
 .contenedorExtraInferior {
     /*display: none;*/
-    transform: translateY( -8px );
-    margin-top: -10px;
+    /*transform: translateY( -8px );*/
+    margin-top: 30px;
     height: auto;
     padding: 20px;
     background-color: var(--color-rojo-general);
@@ -132,13 +132,13 @@
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 3px;
-    color: #ffffff;
+    color: var(--color-texto-blanco);
 }
 
 .textoSecundario {
     font-size: clamp(16px, 1.5vw, 20px);
-    font-weight: lighter;
-    color: #cccccc;
+    font-weight: 350;
+    color: var(--color-texto-blanco);
     margin: 0;
 }
 
@@ -576,7 +576,7 @@
 }
 @media (max-width: 1151px) and (min-width: 1025px){
     .contenedorExtraInferior{
-        transform: translateY( -20px );
+        /*transform: translateY( -20px );*/
     }
     .encabezado{
         margin-top: -10px;
@@ -601,7 +601,7 @@
     }
     .contenedorExtraInferior{
         /*transform: translateY( clamp(-70px, calc( (8px + (((100vw - 1757px)/163)*(70 - 8)))*-1  ), -8px) );*/
-        transform: translateY(-8px)
+        /*transform: translateY(-8px)*/
     }
     .errorMessage{
         /*top: clamp(220px, calc(220px + ((100vw - 1025px) * 20 / 895)), 240px);*/
@@ -666,7 +666,7 @@
     }
     .contenedorExtraInferior {
         width: 60%;
-        transform: translateY(-30px)
+        /*transform: translateY(-30px)*/
     }
     .dosColumnas {
         grid-template-columns: 1fr;
