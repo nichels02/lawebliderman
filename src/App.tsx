@@ -74,7 +74,7 @@ function PageWrapper({ children }: { children: React.ReactNode }) {
 }
 
 function App() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 958);
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth <= 958);

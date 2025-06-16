@@ -5,6 +5,7 @@ html, body {
     margin: 0; /* Elimina márgenes predeterminados */
     padding: 0; /* Elimina rellenos predeterminados */
 }
+
 /** {*/
 /*    border: 1px solid rgba(255, 0, 0, 0); !* Aplica un borde rojo de 1px a todos los elementos *!*/
 /*    box-sizing: border-box; !* Incluye el borde en el cálculo del tamaño del elemento *!*/
@@ -23,8 +24,6 @@ html, body {
 
 
     --color-blancoATransparente: #c1c2c5;
-
-
     --color-texto-negro: #000000;
     --color-texto-negro2: #232323;
     --color-texto-negro-cambio: #393939;
@@ -43,9 +42,9 @@ html, body {
 
     --color-texto-blanco-cambio-rojo: #ddd;
 
-    --color-rojo-general: #e61717;
-    --color-rojo-generalOscuro: #ac0000;
-    --color-rojo-general-cambio: #e61717;
+    --color-rojo-general: #ff0000;
+    --color-rojo-generalOscuro: #b80b0b;
+    --color-rojo-general-cambio: #ff0000;
 }
 
 
@@ -56,10 +55,11 @@ html, body {
     --color-blancoATransparente: rgba(255, 255, 255, 0);
     --color-texto-negro-cambio: #ffffff;
     --color-texto-negro-cambio2: #fafafa;
-    --color-texto-blanco-cambio-rojo: #e61717;
+    --color-texto-blanco-cambio-rojo: #b80b0b;
     --color-texto-blanco-cambio: #000000;
     --color-texto-blanco-cambio2: #272727;
-    --color-rojo-general-cambio: #ac0000;
+    --color-rojo-generalOscuro: #a60d0d;
+    --color-rojo-general-cambio: #b80b0b;
 }
 
 .logoHeader {
