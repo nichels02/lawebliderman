@@ -3,6 +3,7 @@ import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx'
 import HeaderGenerico from '../common/Componentes/HeaderGenerico.tsx';
 import ContenedorScrollNuevo1 from '../common/Componentes/ContenedorScrollNuevo1.tsx';
 import TituloYSubtituloGenerico from "../common/Componentes/TituloYSubtituloGenerico.tsx";
+import Style from "../common/css/pages/Conocenos.module.css";
 
 function Conocenos() {
     const content = useContent();
@@ -30,12 +31,10 @@ function Conocenos() {
                 onButton2ClickPosicion={"/Conocenos#FormularioDeContacto"}
                 onButton2ClickModo={"top"}
             />
-            <div style={{ marginBottom: '40px' }}></div>
-            <TituloYSubtituloGenerico
+            <TituloYSubtituloGenerico className={Style.LineaDeTiempo}
                 titulo={content.Conocenos.Titulos[language].Titulo1.Titulo}
                 subtitulo={content.Conocenos.Titulos[language].Titulo1.Subtitulo}
             />
-            <div style={{ marginBottom: '70px' }}></div>
             <ContenedorScrollNuevo1 />
         </>
     );
