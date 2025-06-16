@@ -47,6 +47,7 @@
     font-size: 1rem;
     padding: 0 0.2rem;
     color: #555;
+    height: 100%;
     position: absolute; /* Añadido */
     right: 0; /* Añadido */
 }
@@ -108,6 +109,12 @@
 .filtro select:focus {
     border-color: #999;
     outline: none;
+}
+.ImagenBoton{
+    height: 70%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
 }
 @media (max-width: 768px) {
     .botonFiltros{

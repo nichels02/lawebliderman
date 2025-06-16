@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "../css/BarraDeBusquedaYFiltros.module.css";
 import { JSONDatosTrabajos, Trabajo } from "./Sistemas/trabajos.interface.ts"; // Ajusta la ruta si es necesario
+import { useContent } from './Sistemas/useContent.tsx';
 
 interface FiltrosDisponibles {
     [clave: string]: string[];
@@ -72,7 +73,7 @@ function BarraDeBusquedaYFiltros({ onBuscar }: Props) {
                         onChange={(e) => setTextoBusqueda(e.target.value)}
                     />
                     <button className={styles.botonBuscar} onClick={handleBuscar}>
-                        🔍
+                        <img className={styles.ImagenBoton} src={useContent()?.Lidermania.CarruselDeTrabajos.Common.LupaDeBusqueda} alt="lupa" />
                     </button>
                 </div>
                 <button className={styles.botonFiltros} onClick={toggleFiltros}>

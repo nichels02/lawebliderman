@@ -3,12 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../css/CarruselDeTrabajos.module.css';
 import { Trabajo } from './Sistemas/trabajos.interface';
 import { useLanguage } from './Sistemas/LanguageContext.tsx';
+import { useContent } from './Sistemas/useContent.tsx';
 
 interface CarruselDeTrabajosProps {
     trabajos: Trabajo[];
     iconoNoHayTrabajos: string; // <- añadimos esta prop
 }
-
+/*•*/
 function CarruselDeTrabajos({ trabajos, iconoNoHayTrabajos }: CarruselDeTrabajosProps) {
     const { language } = useLanguage();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -83,7 +84,7 @@ function CarruselDeTrabajos({ trabajos, iconoNoHayTrabajos }: CarruselDeTrabajos
                 <h3 className={styles.title}>{datos.Titulo}</h3>
                 <div className={styles.location}>
                     <img
-                        src={item.Common.Logo}
+                        src={useContent()?.Lidermania.CarruselDeTrabajos.Common.IconoDeUbicacion}
                         alt="Ubicación"
                         className={styles.locationIcon}
                     />
