@@ -1,4 +1,4 @@
-import styles from '../css/imagenYGrid2.module.css';
+import styles from '../css/ImagenYGrid2.module.css';
 import { useContent } from './Sistemas/useContent.tsx';
 import { useLanguage } from './Sistemas/LanguageContext.tsx';
 import ScrollLink from "./Sistemas/ScrollLink.tsx";
