@@ -48,7 +48,7 @@
         "trabajadores": "Workers globally",
         "years": "Years of market leadership",
         "clientes": "Satisfied customers",
-        "Numero_trabajadores": "+24,000",
+        "Numero_trabajadores": "+25,000",
         "Numero_years": "35",
         "Numero_clientes": "2,100"
       },
@@ -61,13 +61,13 @@
         "trabajadores": "Trabajadores a nivel global",
         "years": "Años de liderazgo en el mercado",
         "clientes": "Clientes satisfechos",
-        "Numero_trabajadores": "+24,000",
+        "Numero_trabajadores": "+25,000",
         "Numero_years": "35",
         "Numero_clientes": "2,100"
       },
       "contenido": {
-        "logo": "src/assets/ImagenesGenerales/Logo-Liderman2.svg",
-        "imagen_De_Fondo": "src/assets/Inicio/PORTADA.jpg"
+        "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
+        "imagen_De_Fondo": "/assets/Inicio/PORTADA.jpg"
       }
     },
     "BarraDeOpciones": {
@@ -107,19 +107,19 @@
     "BarraDeRedes": {
       "Item1": {
         "Link": "https://www.facebook.com/LidermanOficial",
-        "imagen": "src/assets/ImagenesGenerales/LogoFacebook.svg"
+        "imagen": "/assets/ImagenesGenerales/LogoFacebook.svg"
       },
       "Item2": {
         "Link": "https://www.tiktok.com/@lidermanplay",
-        "imagen": "src/assets/ImagenesGenerales/LogoTiktok.svg"
+        "imagen": "/assets/ImagenesGenerales/LogoTiktok.svg"
       },
       "Item3": {
         "Link": "https://www.linkedin.com/company/liderman/?originalSubdomain=pe",
-        "imagen": "src/assets/ImagenesGenerales/LogoLinkedin.svg"
+        "imagen": "/assets/ImagenesGenerales/LogoLinkedin.svg"
       },
       "Item4": {
         "Link": "https://www.youtube.com/LidermanOficial",
-        "imagen": "src/assets/ImagenesGenerales/LogoYoutube.svg"
+        "imagen": "/assets/ImagenesGenerales/LogoYoutube.svg"
       }
     },
     "CardWithExpand": {
@@ -156,7 +156,7 @@
           ],
           "buttonText": "Explore ➔"
         },
-        "imageUrl": "src/assets/Inicio/SEGURIDAD.jpg",
+        "imageUrl": "/assets/Inicio/SEGURIDAD.jpg",
         "link": "/Seguridad"
       },
       "Servicios": {
@@ -196,7 +196,7 @@
           ],
           "buttonText": "Explore ➔"
         },
-        "imageUrl": "src/assets/Inicio/SERVICIOS.jpg",
+        "imageUrl": "/assets/Inicio/SERVICIOS.jpg",
         "link": "/Servicio"
       },
       "Tecnologia": {
@@ -232,7 +232,7 @@
           "fourthSubtitle": "GPS",
           "buttonText": "Explore ➔"
         },
-        "imageUrl": "src/assets/Inicio/TECNOLOGIA.jpg",
+        "imageUrl": "/assets/Inicio/TECNOLOGIA.jpg",
         "link": "/Tecnologia"
       }
     },
@@ -240,72 +240,72 @@
       "common": {
         "items": [
           {
-            "src": "src/assets/Inicio/imagen-AUTORIDAD-PORTUARIA-NACIONAL.jpg",
+            "src": "/assets/Inicio/imagen-AUTORIDAD-PORTUARIA-NACIONAL.jpg",
             "alt": "1"
           },
           {
-            "src": "src/assets/Inicio/iso9001_.gif",
+            "src": "/assets/Inicio/iso9001_.gif",
             "alt": "2"
           },
           {
-            "src": "src/assets/Inicio/iso14001.png",
+            "src": "/assets/Inicio/iso14001.png",
             "alt": "3"
           },
           {
-            "src": "src/assets/Inicio/ISO 18788.jpg",
+            "src": "/assets/Inicio/ISO 18788.jpg",
             "alt": "4"
           },
           {
-            "src": "src/assets/Inicio/ISO 37001.jpg",
+            "src": "/assets/Inicio/ISO 37001.jpg",
             "alt": "5"
           },
           {
-            "src": "src/assets/Inicio/logo-basc-peru.png",
+            "src": "/assets/Inicio/logo-basc-peru.png",
             "alt": "6"
           },
           {
-            "src": "src/assets/Inicio/logo_DGAC.png",
+            "src": "/assets/Inicio/logo_DGAC.png",
             "alt": "7"
           },
           {
-            "src": "src/assets/Inicio/SGS-ISO-45001.jpg",
-            "alt": "7"
+            "src": "/assets/Inicio/SGS-ISO-45001.jpg",
+            "alt": "8"
           }
         ]
       },
       "es": {
         "items": [
           {
-            "subtitle1": "Subtítulo 1-1",
-            "subtitle2": "Subtítulo 1-2"
+            "subtitle1": "Sistema",
+            "subtitle2": "Portuario Nacional"
           },
           {
-            "subtitle1": "Subtítulo 2-1",
-            "subtitle2": "Subtítulo 2-2"
+            "subtitle1": "ISO 9001",
+            "subtitle2": "Gestión de Calidad"
           },
           {
-            "subtitle1": "Subtítulo 3-1",
-            "subtitle2": "Subtítulo 3-2"
+            "subtitle1": "ISO 14001",
+            "subtitle2": "Gestión de Seguridad"
           },
           {
-            "subtitle1": "Subtítulo 4-1",
-            "subtitle2": "Subtítulo 4-2"
+            "subtitle1": "ISO 18788",
+            "subtitle2": "Gestión de Seguridad"
           },
           {
-            "subtitle1": "Subtítulo 5-1",
-            "subtitle2": "Subtítulo 5-2"
+            "subtitle1": "ISO 37001",
+            "subtitle2": "Gestión Antisoborno"
           },
           {
-            "subtitle1": "Subtítulo 6-1",
-            "subtitle2": "Subtítulo 6-2"
+            "subtitle1": "Business Alliance for",
+            "subtitle2": "Secure Commerce Logística y comercio"
           },
           {
-            "subtitle1": "Subtítulo 7-1",
-            "subtitle2": "Subtítulo 7-2"
+            "subtitle1": "Dirección General",
+            "subtitle2": "de  Aeronáutica Civil"
           },
           {
-            "subtitle1": "Subtítulo 7-1",
-            "subtitle2": "Subtítulo 7-2"
+            "subtitle1": "ISO 45001",
+            "subtitle2": "Gestión Antisoborno"
           }
         ]
       },
@@ -349,10 +349,10 @@
     "porcentajeNegocio": {
       "common": {
         "images": [
-          "src/assets/Inicio/MINERIA.jpg",
-          "src/assets/Inicio/INDUSTRIA.jpg",
-          "src/assets/Inicio/RETAIL.jpg",
-          "src/assets/Inicio/OTROS.jpg"
+          "/assets/Inicio/MINERIA.jpg",
+          "/assets/Inicio/INDUSTRIA.jpg",
+          "/assets/Inicio/RETAIL.jpg",
+          "/assets/Inicio/OTROS.jpg"
         ]
       },
       "es": {
@@ -464,11 +464,11 @@
         }
       },
       "contenido": {
-        "imagenPrincipal": "src/assets/Inicio/2022-11-10-foto-web-Lidermania.jpg",
-        "logo1": "src/assets/Inicio/Recurso 20_nuevo.svg",
-        "logo2": "src/assets/Inicio/Recurso 21_nuevo.svg",
-        "boton1ImagenIzquierda": "src/assets/Inicio/Recurso 23_nuevo.svg",
-        "boton2ImagenIzquierda": "src/assets/Inicio/Recurso 22_nuevo.svg"
+        "imagenPrincipal": "/assets/Inicio/2022-11-10-foto-web-Lidermania.jpg",
+        "logo1": "/assets/Inicio/Recurso 20_nuevo.svg",
+        "logo2": "/assets/Inicio/Recurso 21_nuevo.svg",
+        "boton1ImagenIzquierda": "/assets/Inicio/Recurso 23_nuevo.svg",
+        "boton2ImagenIzquierda": "/assets/Inicio/Recurso 22_nuevo.svg"
       }
     },
     "Formulario": {
@@ -541,7 +541,7 @@
 
         "Colaboradores": {
           "Titulo": "Colaboradores",
-          "Numero": "+15,000"
+          "Numero": "+25,000"
         },
         "CoberturaDeRiesgo":{
           "Titulo": "Cobertura De Riesgo",
@@ -620,7 +620,7 @@
 
         "Colaboradores": {
           "Titulo": "Team Members",
-          "Numero": "+15,000"
+          "Numero": "+25,000"
         },
         "CoberturaDeRiesgo": {
           "Titulo": "Risk Coverage",
@@ -629,16 +629,16 @@
 
       },
       "common": {
-        "imagenDeFondo": "src/assets/Inicio/foto-footer.png",
+        "imagenDeFondo": "/assets/Inicio/foto-footer.png",
         "ImagenDeLaDerecha":{
-          "Peru": "src/assets/Inicio/Peru.svg",
-          "Usa": "src/assets/Inicio/USa.svg",
-          "Ecuador": "src/assets/Inicio/eucador.svg",
-          "Chile": "src/assets/Inicio/chile.svg"
+          "Peru": "/assets/Inicio/Peru.svg",
+          "Usa": "/assets/Inicio/USa.svg",
+          "Ecuador": "/assets/Inicio/eucador.svg",
+          "Chile": "/assets/Inicio/chile.svg"
         },
-        "Colaboradores": "src/assets/Inicio/Icono 1 _LIDERMAN.svg",
-        "CoberturaDeRiesgo": "src/assets/Inicio/Icono 2 _LIDERMAN.svg",
-        "ImagenContenedorInferior": "src/assets/Inicio/Recurso 24_nuevo.svg"
+        "Colaboradores": "/assets/Inicio/Icono 1 _LIDERMAN.svg",
+        "CoberturaDeRiesgo": "/assets/Inicio/Icono 2 _LIDERMAN.svg",
+        "ImagenContenedorInferior": "/assets/Inicio/Recurso 24_nuevo.svg"
       }
     },
     "ValidadorFormulario": {
@@ -675,24 +675,24 @@
     },
     "Footer": {
       "Common": {
-        "LidermanLogoDark": "src/assets/ImagenesGenerales/Logo-Liderman.svg",
-        "LidermanLogoLight": "src/assets/ImagenesGenerales/Logo-Liderman3.svg",
-        "facebookLight": "src/assets/ImagenesGenerales/LogoFacebook2.svg",
-        "facebookDark": "src/assets/ImagenesGenerales/LogoFacebook.svg",
-        "tiktokLight": "src/assets/ImagenesGenerales/LogoTiktok2.svg",
-        "tiktokDark": "src/assets/ImagenesGenerales/LogoTiktok.svg",
-        "linkedinLight": "src/assets/ImagenesGenerales/LogoLinkedin2.svg",
-        "linkedinDark": "src/assets/ImagenesGenerales/LogoLinkedin.svg",
-        "youtubeLight": "src/assets/ImagenesGenerales/LogoYoutube2.svg",
-        "youtubeDark": "src/assets/ImagenesGenerales/LogoYoutube.svg",
+        "LidermanLogoDark": "/assets/ImagenesGenerales/Logo-Liderman.svg",
+        "LidermanLogoLight": "/assets/ImagenesGenerales/Logo-Liderman3.svg",
+        "facebookLight": "/assets/ImagenesGenerales/LogoFacebook2.svg",
+        "facebookDark": "/assets/ImagenesGenerales/LogoFacebook.svg",
+        "tiktokLight": "/assets/ImagenesGenerales/LogoTiktok2.svg",
+        "tiktokDark": "/assets/ImagenesGenerales/LogoTiktok.svg",
+        "linkedinLight": "/assets/ImagenesGenerales/LogoLinkedin2.svg",
+        "linkedinDark": "/assets/ImagenesGenerales/LogoLinkedin.svg",
+        "youtubeLight": "/assets/ImagenesGenerales/LogoYoutube2.svg",
+        "youtubeDark": "/assets/ImagenesGenerales/LogoYoutube.svg",
         "Links": {
           "youtube": "https://www.youtube.com/LidermanOficial",
           "tiktok": "https://www.tiktok.com/@lidermanplay",
           "linkedin": "https://www.linkedin.com/company/liderman/?originalSubdomain=pe",
           "facebook": "https://www.facebook.com/LidermanOficial",
 
-          "LinkTerminosYCondiciones":"src/assets/PDF/Liderman-Terminos-y-Condiciones.pdf",
-          "LinkPoliticaYPrivacidad": "src/assets/PDF/Liderman-Poliìtica-de-Privacidad.pdf"
+          "LinkTerminosYCondiciones":"/assets/PDF/Liderman-Terminos-y-Condiciones.pdf",
+          "LinkPoliticaYPrivacidad": "/assets/PDF/Liderman-Poliìtica-de-Privacidad.pdf"
         }
       },
       "es": {
@@ -807,9 +807,9 @@
     },
     "HeaderGenerico": {
         "Common": {
-          "Fondo": "src/assets/Conocenos/fondo--conocenos.png",
-          "logo": "src/assets/ImagenesGenerales/Logo-Liderman2.svg",
-          "ImagenDelCostado": "src/assets/Conocenos/chica-para-conocenos.png"
+          "Fondo": "/assets/Conocenos/fondo--conocenos.png",
+          "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
+          "ImagenDelCostado": "/assets/Conocenos/chica-para-conocenos.png"
         },
         "es": {
           "Titulo": "Conócenos",
@@ -828,31 +828,32 @@
       "common": {
         "items": {
           "Contenedor1": {
-            "src": "src/assets/Conocenos/nuestro-nacimiento-1.png",
+            "src": "/assets/Conocenos/nuestro-nacimiento-1.png",
             "alt": "company-foundation"
           },
           "Contenedor2": {
-            "src": "src/assets/Conocenos/27-anos-cultura.png",
+            "src": "/assets/Conocenos/27-anos-cultura.png",
             "alt": "corporate-culture"
           },
           "Contenedor3": {
-            "src": "src/assets/Conocenos/Dateando-Ecuador-anuncia-salida-de-la-organización-ALBA-FOTO.jpg",
+            "src": "/assets/Conocenos/Dateando-Ecuador-anuncia-salida-de-la-organización-ALBA-FOTO.jpg",
             "alt": "ecuador-operations"
           },
           "Contenedor4": {
-            "src": "src/assets/Conocenos/Imagen2_up.jpg",
+            "src": "/assets/Conocenos/Imagen2_up.jpg",
             "alt": "new-initiatives"
           },
           "Contenedor5": {
-            "src": "src/assets/Conocenos/fb9c2de7170051c1a0ebd426ebb0a7e1.jpg",
+            "src": "/assets/Conocenos/fb9c2de7170051c1a0ebd426ebb0a7e1.jpg",
             "alt": "chile-expansion"
           },
           "Contenedor6": {
-            "src": "src/assets/Conocenos/ACADEMIA_FOTO_NEW-uai-720x517.jpg",
+            "src": "/assets/Conocenos/ACADEMIA_FOTO_NEW-uai-720x517.jpg",
             "alt": "usa-expansion"
           }
         },
-        "imagenDePunto": "src/assets/Conocenos/Icono ubicación.svg"
+        "imagenDePunto": "/assets/Conocenos/Icono ubicación.svg",
+        "LineaDeTiempo": "/assets/Conocenos/Linea distribucion 2.svg"
       },
       "es": {
         "Puntos": {
@@ -947,11 +948,11 @@
     "HeaderCarruselDeImagenes": {
       "Common": {
         "ImagenDerecha":{
-          "imagen": "src/assets/Seguridad/seguridad-fisica.png",
+          "imagen": "/assets/Seguridad/seguridad-fisica.png",
           "alt": "physical-security"
         },
-        "imagenDeFondo": "src/assets/Seguridad/1.png",
-        "logo": "src/assets/ImagenesGenerales/Logo-Liderman2.svg"
+        "imagenDeFondo": "/assets/Seguridad/1.png",
+        "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg"
       },
       "es": {
         "Titulo": "Seguridad",
@@ -1044,11 +1045,11 @@
         }
       },
       "Contenido": {
-        "ImagenGrande": "src/assets/Seguridad/seguridad-operamos.png",
-        "imagenSector1": "src/assets/ImagenesGenerales/Recurso 9.svg",
-        "imagenSector2": "src/assets/ImagenesGenerales/Recurso 10.svg",
-        "imagenSector3": "src/assets/ImagenesGenerales/Recurso 11.svg",
-        "imagenSector4": "src/assets/ImagenesGenerales/Recurso 8.svg"
+        "ImagenGrande": "/assets/Seguridad/seguridad-operamos.png",
+        "imagenSector1": "/assets/ImagenesGenerales/Recurso 9.svg",
+        "imagenSector2": "/assets/ImagenesGenerales/Recurso 10.svg",
+        "imagenSector3": "/assets/ImagenesGenerales/Recurso 11.svg",
+        "imagenSector4": "/assets/ImagenesGenerales/Recurso 8.svg"
       }
     },
     "FlechaGiro": {
@@ -1107,7 +1108,7 @@
         }
       },
       "Contenido": {
-        "ImagenFlecha": "src/assets/Seguridad/Recurso 12.svg"
+        "ImagenFlecha": "/assets/Seguridad/Recurso 12.svg"
       }
     },
     "GridBarajeable": {
@@ -1197,11 +1198,11 @@
         }
       },
       "contenido": {
-        "carta1": "src/assets/Seguridad/Laptop.png",
-        "carta2": "src/assets/Seguridad/3.png",
-        "carta3": "src/assets/Seguridad/HombreConMuchasPantallas.png",
-        "carta4": "src/assets/Seguridad/d2fe2e83d3db73a8f54eecb5ed2b2b11.jpg",
-        "carta5": "src/assets/Seguridad/3004083193b0d0c1c373ce63f7962872.jpg"
+        "carta1": "/assets/Seguridad/Laptop.png",
+        "carta2": "/assets/Seguridad/3.png",
+        "carta3": "/assets/Seguridad/HombreConMuchasPantallas.png",
+        "carta4": "/assets/Seguridad/d2fe2e83d3db73a8f54eecb5ed2b2b11.jpg",
+        "carta5": "/assets/Seguridad/3004083193b0d0c1c373ce63f7962872.jpg"
       }
     }
   },
@@ -1231,23 +1232,23 @@
     },
     "header": {
       "Contenido": {
-        "logo": "src/assets/ImagenesGenerales/Logo-Liderman2.svg",
-        "Fondo": "src/assets/Servicio/fondo-servicios.png",
-        "ImagenDelCostado": "src/assets/Servicio/Imagen-facilities.png"
+        "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
+        "Fondo": "/assets/Servicio/fondo-servicios.png",
+        "ImagenDelCostado": "/assets/Servicio/Imagen-facilities.png"
       },
       "es": {
         "Titulo": "Servicios",
         "Texto": "Expandimos nuestros servicios para brindar asistencia integral en el mantenimiento y gestión de las soluciones que más necesita tu empresa."
       },
       "en": {
-        "Titulo": "Service Title",
+        "Titulo": "Service",
         "Texto": "We have expanded our services to provide comprehensive support in the maintenance and management of the solutions your company needs most."
       }
     },
     "TextoTituloEImagen": {
       "Contenido": {
-        "Imagen1": "src/assets/Servicio/parking.png",
-        "Imagen2": "src/assets/Servicio/554e92e6ec866bbf03de6d44038fff9b.png"
+        "Imagen1": "/assets/Servicio/parking.png",
+        "Imagen2": "/assets/Servicio/554e92e6ec866bbf03de6d44038fff9b.png"
       },
       "es": {
         "botones": {
@@ -1268,10 +1269,10 @@
     },
     "TextoTituloEImagen2": {
       "Contenido": {
-        "Imagen1": "src/assets/Servicio/Foto_web_liderman_2.png",
-        "Imagen2": "src/assets/Servicio/facilities.png",
-        "Imagen3": "src/assets/Servicio/jardineria.png",
-        "Imagen4": "src/assets/Servicio/Foto_web_liderman_1.png"
+        "Imagen1": "/assets/Servicio/Foto_web_liderman_2.png",
+        "Imagen2": "/assets/Servicio/facilities.png",
+        "Imagen3": "/assets/Servicio/jardineria.png",
+        "Imagen4": "/assets/Servicio/Foto_web_liderman_1.png"
       },
       "es": {
         "botones": {
@@ -1332,11 +1333,11 @@
         }
       },
       "Contenido": {
-        "ImagenGrande": "src/assets/Servicio/como-operamos-facilities.png",
-        "imagenSector1": "src/assets/ImagenesGenerales/Recurso 9.svg",
-        "imagenSector2": "src/assets/ImagenesGenerales/Recurso 10.svg",
-        "imagenSector3": "src/assets/ImagenesGenerales/Recurso 11.svg",
-        "imagenSector4": "src/assets/ImagenesGenerales/Recurso 8.svg"
+        "ImagenGrande": "/assets/Servicio/como-operamos-facilities.png",
+        "imagenSector1": "/assets/ImagenesGenerales/Recurso 9.svg",
+        "imagenSector2": "/assets/ImagenesGenerales/Recurso 10.svg",
+        "imagenSector3": "/assets/ImagenesGenerales/Recurso 11.svg",
+        "imagenSector4": "/assets/ImagenesGenerales/Recurso 8.svg"
       }
     }
   },
@@ -1374,9 +1375,9 @@
     },
     "HeaderCambioDeImagen": {
       "Common": {
-        "logo": "src/assets/ImagenesGenerales/Logo-Liderman2.svg",
-        "Fondo": "src/assets/Tecnologia/tecnologia-portada.png",
-        "imagenDerecha": "src/assets/Tecnologia/tecnologia-chica.png"
+        "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
+        "Fondo": "/assets/Tecnologia/tecnologia-portada.png",
+        "imagenDerecha": "/assets/Tecnologia/tecnologia-chica.png"
       },
       "es": {
         "Titulo": "Tecnología",
@@ -1421,11 +1422,11 @@
     },
     "TextImageSelector": {
       "Common": {
-        "ImagenBoton1": "src/assets/Tecnologia/559522c18c93fdd3099f4f38b868cb9a3a320960.png",
-        "ImagenBoton2": "src/assets/Tecnologia/63ab4d9c0fc4d068daa25ae5b67765a4aa6f87d6.png",
-        "ImagenBoton3": "src/assets/Tecnologia/CCTV.png",
-        "ImagenBoton4": "src/assets/Tecnologia/foto-3.png",
-        "ImagenBoton5": "src/assets/Tecnologia/foto-6.png",
+        "ImagenBoton1": "/assets/Tecnologia/559522c18c93fdd3099f4f38b868cb9a3a320960.png",
+        "ImagenBoton2": "/assets/Tecnologia/63ab4d9c0fc4d068daa25ae5b67765a4aa6f87d6.png",
+        "ImagenBoton3": "/assets/Tecnologia/CCTV.png",
+        "ImagenBoton4": "/assets/Tecnologia/foto-3.png",
+        "ImagenBoton5": "/assets/Tecnologia/foto-6.png",
         "imagenALaIzquierda": true
       },
       "es": {
@@ -1475,11 +1476,11 @@
     },
     "TextImageSelector2": {
       "Common": {
-        "ImagenBoton1": "src/assets/Tecnologia/foto-7.png",
-        "ImagenBoton2": "src/assets/Tecnologia/foto-1.png",
-        "ImagenBoton3": "src/assets/Tecnologia/foto-8.png",
-        "ImagenBoton4": "src/assets/Tecnologia/foto-9.png",
-        "ImagenBoton5": "src/assets/Tecnologia/foto-10.png",
+        "ImagenBoton1": "/assets/Tecnologia/foto-7.png",
+        "ImagenBoton2": "/assets/Tecnologia/foto-1.png",
+        "ImagenBoton3": "/assets/Tecnologia/foto-8.png",
+        "ImagenBoton4": "/assets/Tecnologia/foto-9.png",
+        "ImagenBoton5": "/assets/Tecnologia/foto-10.png",
         "imagenALaIzquierda": false
       },
       "es": {
@@ -1529,10 +1530,10 @@
     },
     "CuadriculaDeModals": {
       "Common": {
-        "Fondo1": "src/assets/Tecnologia/66f988b7eb7722b62baae81a4c1a1463.png",
-        "Fondo2": "src/assets/Tecnologia/SeñorConTelefono.png",
-        "Fondo3": "src/assets/Tecnologia/SeñorConTelefono2.png",
-        "Fondo4": "src/assets/Tecnologia/3924529e66a322eb4af6bcf534059f17.jpg"
+        "Fondo1": "/assets/Tecnologia/66f988b7eb7722b62baae81a4c1a1463.png",
+        "Fondo2": "/assets/Tecnologia/SeñorConTelefono.png",
+        "Fondo3": "/assets/Tecnologia/SeñorConTelefono2.png",
+        "Fondo4": "/assets/Tecnologia/3924529e66a322eb4af6bcf534059f17.jpg"
       },
       "es": {
         "Sector1": {
@@ -1589,7 +1590,7 @@
     },
     "Modal1": {
       "Common": {
-        "Imagen": "src/assets/Tecnologia/6da6d8f4440045b3fa6f9f18fa19092326cd0794.png"
+        "Imagen": "/assets/Tecnologia/6da6d8f4440045b3fa6f9f18fa19092326cd0794.png"
       },
       "es": {
         "Titulo": "Video verificación",
@@ -1604,8 +1605,8 @@
     },
     "Modal2": {
       "Common": {
-        "ImagenIzq": "src/assets/Tecnologia/9.svg",
-        "ImagenDer": "src/assets/Tecnologia/10.svg"
+        "ImagenIzq": "/assets/Tecnologia/9.svg",
+        "ImagenDer": "/assets/Tecnologia/10.svg"
       },
       "es": {
         "Titulo": "Espejo remoto",
@@ -1628,10 +1629,10 @@
     },
     "Modal3": {
       "Common": {
-        "ImagenDerArriba": "src/assets/Tecnologia/7.svg",
-        "ImagenIzqArriba": "src/assets/Tecnologia/5.svg",
-        "ImagenDerAbajo": "src/assets/Tecnologia/8.svg",
-        "ImagenIzqAbajo": "src/assets/Tecnologia/6.svg"
+        "ImagenDerArriba": "/assets/Tecnologia/7.svg",
+        "ImagenIzqArriba": "/assets/Tecnologia/5.svg",
+        "ImagenDerAbajo": "/assets/Tecnologia/8.svg",
+        "ImagenIzqAbajo": "/assets/Tecnologia/6.svg"
       },
       "es": {
         "Titulo": "Botón de pánico",
@@ -1662,10 +1663,10 @@
     },
     "Modal4": {
       "Common": {
-        "Imagen1": "src/assets/Tecnologia/2.svg",
-        "Imagen2": "src/assets/Tecnologia/1.svg",
-        "Imagen3": "src/assets/Tecnologia/3.svg",
-        "Imagen4": "src/assets/Tecnologia/4.svg"
+        "Imagen1": "/assets/Tecnologia/2.svg",
+        "Imagen2": "/assets/Tecnologia/1.svg",
+        "Imagen3": "/assets/Tecnologia/3.svg",
+        "Imagen4": "/assets/Tecnologia/4.svg"
       },
       "es": {
         "Titulo": "Reportes y notificaciones",
@@ -1696,13 +1697,13 @@
     },
     "CardGrid": {
       "Common": {
-        "ImagenCarta1": "src/assets/Tecnologia/Recurso 1.svg",
-        "ImagenCarta2": "src/assets/Tecnologia/Recurso 2.svg",
-        "ImagenCarta3": "src/assets/Tecnologia/Recurso 3.svg",
-        "ImagenCarta4": "src/assets/Tecnologia/Recurso 4.svg",
-        "ImagenCarta5": "src/assets/Tecnologia/Recurso 5.svg",
-        "ImagenCarta6": "src/assets/Tecnologia/Recurso 6.svg",
-        "ImagenCarta7": "src/assets/Tecnologia/Recurso 7.svg"
+        "ImagenCarta1": "/assets/Tecnologia/Recurso 1.svg",
+        "ImagenCarta2": "/assets/Tecnologia/Recurso 2.svg",
+        "ImagenCarta3": "/assets/Tecnologia/Recurso 3.svg",
+        "ImagenCarta4": "/assets/Tecnologia/Recurso 4.svg",
+        "ImagenCarta5": "/assets/Tecnologia/Recurso 5.svg",
+        "ImagenCarta6": "/assets/Tecnologia/Recurso 6.svg",
+        "ImagenCarta7": "/assets/Tecnologia/Recurso 7.svg"
       },
       "es": {
         "Carta1": "Protección contra virus y malwares rasomware y Zero Day-automático.",
@@ -1750,9 +1751,9 @@
     },
     "HeaderGenerico": {
       "Common": {
-        "Fondo": "src/assets/Lidermania/lidermania-fondo.png",
-        "logo": "src/assets/ImagenesGenerales/Logo-Liderman2.svg",
-        "ImagenDelCostado": "src/assets/Lidermania/9f91a9d6484d2babecc2143d56e2809d.png"
+        "Fondo": "/assets/Lidermania/lidermania-fondo.png",
+        "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
+        "ImagenDelCostado": "/assets/Lidermania/9f91a9d6484d2babecc2143d56e2809d.png"
       },
       "es": {
         "Titulo": "Lidermanía",
@@ -1805,15 +1806,15 @@
         }
       },
       "contenido": {
-        "Imagen1": "src/assets/Lidermania/92dd066318dd79582d5efc48bd8a1b56.jpg",
-        "Imagen2": "src/assets/Lidermania/3110e07e7c3f8b698813459e7a4eeaeb.jpg",
-        "Imagen3": "src/assets/Lidermania/dc3873446ce1d893c869ecd622c8207b.jpg",
-        "Imagen4": "src/assets/Lidermania/51ee4d48107f8d348f5f4247762ec23c.jpg"
+        "Imagen1": "/assets/Lidermania/92dd066318dd79582d5efc48bd8a1b56.jpg",
+        "Imagen2": "/assets/Lidermania/3110e07e7c3f8b698813459e7a4eeaeb.jpg",
+        "Imagen3": "/assets/Lidermania/dc3873446ce1d893c869ecd622c8207b.jpg",
+        "Imagen4": "/assets/Lidermania/51ee4d48107f8d348f5f4247762ec23c.jpg"
       }
     },
     "TituloTextoEImagen2": {
       "Common": {
-        "ImagenDelCostado": "src/assets/Lidermania/LIDERMANIA.jpg"
+        "ImagenDelCostado": "/assets/Lidermania/LIDERMANIA.jpg"
       },
       "es": {
         "Titulo": "Contamos con un equipo dedicado exclusivamente a la protección del /bienestar social/",
@@ -1829,7 +1830,9 @@
     },
     "CarruselDeTrabajos": {
       "Common":{
-        "IconoDeNoHayTrabajos": "src/assets/ImagenesPrueba/no-entry_1159417.png"
+        "IconoDeNoHayTrabajos": "",
+        "LupaDeBusqueda": "/assets/Lidermania/Lupa.svg",
+        "IconoDeUbicacion": "/assets/Lidermania/PuntoUbicacion.svg"
       }
     }
   }
