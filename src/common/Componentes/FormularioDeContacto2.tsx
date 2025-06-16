@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import styles from '../css/FormularioDeContacto2.module.css';
 import { FormValidatorSingleton } from './Sistemas/FormValidator';
-import imagen from '../../assets/Inicio/foto-footer.png';
-import imagenLateral1 from '../../assets/Inicio/Peru.svg';
-import imagenLateral2 from '../../assets/Inicio/chile.svg';
-import imagenLateral3 from '../../assets/Inicio/eucador.svg';
-import imagenLateral4 from '../../assets/Inicio/USa.svg';
-import logoEmpresa from '../../assets/Inicio/Recurso 24_nuevo.svg';
+// import imagen from '../../assets/Inicio/foto-footer.png';
+// import imagenLateral1 from '../../assets/Inicio/Peru.svg';
+// import imagenLateral2 from '../../assets/Inicio/chile.svg';
+// import imagenLateral3 from '../../assets/Inicio/eucador.svg';
+// import imagenLateral4 from '../../assets/Inicio/USa.svg';
+// import logoEmpresa from '../../assets/Inicio/Recurso 24_nuevo.svg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -113,7 +113,7 @@ const FormularioDeContacto2 = () => {
     const [error, setError] = useState<string | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [success, setSuccess] = useState(false);
-    const [imagenActual, setImagenActual] = useState(imagenLateral1);
+    const [imagenActual, setImagenActual] = useState(content?.home.Formulario.common.ImagenDeLaDerecha.Peru);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -137,23 +137,23 @@ const FormularioDeContacto2 = () => {
     const cambiarImagen = (botonIndex: number) => {
         switch(botonIndex) {
             case 0:
-                setImagenActual(imagenLateral1); // Perú
+                setImagenActual(content?.home.Formulario.common.ImagenDeLaDerecha.Peru); // Perú
                 setPais("Peru");
                 break;
             case 1:
-                setImagenActual(imagenLateral2); // Chile
+                setImagenActual(content?.home.Formulario.common.ImagenDeLaDerecha.Chile); // Chile
                 setPais("Chile");
                 break;
             case 2:
-                setImagenActual(imagenLateral3); // Ecuador
+                setImagenActual(content?.home.Formulario.common.ImagenDeLaDerecha.Ecuador); // Ecuador
                 setPais("Ecuador");
                 break;
             case 3:
-                setImagenActual(imagenLateral4); // USA
+                setImagenActual(content?.home.Formulario.common.ImagenDeLaDerecha.Usa); // USA
                 setPais("Usa");
                 break;
             default:
-                setImagenActual(imagenLateral1);
+                setImagenActual(content?.home.Formulario.common.ImagenDeLaDerecha.Peru);
                 setPais("Peru");
         }
     };
@@ -245,7 +245,7 @@ const FormularioDeContacto2 = () => {
 
     return (
         <div id="FormularioDeContacto" className={styles.contenedorPagina}>
-            <img src={imagen} alt="Fondo" className={styles.ImagenFondo} />
+            <img src={content?.home.Formulario.common.imagenDeFondo} alt="Fondo" className={styles.ImagenFondo} />
             <TituloYSubtituloGenerico
                 titulo={content?.home.Formulario[language].TituloPrincipal|| ''}
                 subtitulo={content?.home.Formulario[language].SubtituloPrincipal|| ''}
@@ -416,7 +416,7 @@ const FormularioDeContacto2 = () => {
                         </form>
                     </div>
                     <div className={styles.contenedorExtraInferior}>
-                        <img src={logoEmpresa} alt="Logo de la empresa" />
+                        <img src={content?.home.Formulario.common.ImagenContenedorInferior} alt="Logo de la empresa" />
                         <div>
                             <p className={styles.textoEncabezado}>{ContenedorInferior.oficina.titulo}</p>
                             <p className={styles.textoPrincipal}>{ContenedorInferior.oficina.principal}</p>
