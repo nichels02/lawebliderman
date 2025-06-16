@@ -645,6 +645,8 @@ interface ContentData {
                     }
                 },
                 imagenDePunto: string;
+                LineaDeTiempo: string;
+
             },
             es: {
                 Puntos: {
@@ -1672,7 +1674,9 @@ interface ContentData {
         }
         CarruselDeTrabajos: {
             Common:{
-                IconoDeNoHayTrabajos: string
+                IconoDeNoHayTrabajos:string
+                LupaDeBusqueda: string;
+                IconoDeUbicacion: string;
             }
         }
     }
