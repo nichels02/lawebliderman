@@ -34,6 +34,7 @@
 .marqueeItem {
     width: 100%;
     height: auto;
+    filter: grayscale(100%);
 }
 
 .subtitleContainer {
