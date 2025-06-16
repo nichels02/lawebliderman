@@ -1,21 +1,17 @@
 import { useEffect } from "react";
 import styles from "../css/Marquee.module.css";
 import { useContent } from "./Sistemas/useContent.tsx";
-import { useLanguage } from "./Sistemas/LanguageContext.tsx";
 
 function Marquee() {
     // Obtener datos del JSON y el idioma actual
     const content = useContent();
-    const { language } = useLanguage();
 
     // Usar valores por defecto para evitar errores si los datos aún no están disponibles
     const generalItems = content?.home.Marquee.common.items ?? [];
-    const localizedItems = content?.home.Marquee[language]?.items ?? [];
 
     // Fusionar imágenes con subtítulos del idioma actual
-    const marqueeItems = generalItems.map((item, index) => ({
-        ...item,
-        ...(localizedItems[index] || { subtitle1: "", subtitle2: "" }) // Evitar errores si aún no hay datos
+    const marqueeItems = generalItems.map((item, ) => ({
+        ...item
     }));
 
     const numImages = marqueeItems.length;
@@ -38,10 +34,6 @@ function Marquee() {
                         marqueeItems.map((item, index) => (
                             <div key={`${repetition}-${index}`} className={styles.marqueeItemContainer}>
                                 <img className={styles.marqueeItem} src={item.src} alt={item.alt} />
-                                <div className={styles.subtitleContainer}>
-                                    <p className={styles.subtitle1}>{item.subtitle1}</p>
-                                    <p className={styles.subtitle2}>{item.subtitle2}</p>
-                                </div>
                             </div>
                         ))
                     )}
