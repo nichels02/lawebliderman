@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import LineaDeTiempo from "../../assets/Conocenos/Linea distribucion 2.svg";
+// import LineaDeTiempo from "../../assets/Conocenos/Linea distribucion 2.svg";
 import styles from "../css/ContenedorScrollNuevo1.module.css";
 import { useContent } from "./Sistemas/useContent.tsx";
 import { useLanguage } from "./Sistemas/LanguageContext.tsx";
@@ -110,7 +110,7 @@ function ContenedorScrollNuevo1() {
         >
             <div className={styles.contenedorInterno}>
                 <img
-                    src={LineaDeTiempo}
+                    src={content?.Conocenos.contenedorScroll.common.LineaDeTiempo}
                     alt="Línea de tiempo"
                     className={styles.lineaDeTiempoImg}
                     draggable={false}
