@@ -1,0 +1,61 @@
+.ContenedorPadre{
+    width: 100vw;
+}
+.contenedorCentrado{
+    width: 80%;
+    margin: 0 auto;
+}
+.GridPadre{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 6%;
+    row-gap: 5%;
+}
+
+.GridObjeto{
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    row-gap: 0;
+}
+.EspacioImagen{
+    grid-row: 1;
+    background: #700a8c;
+    display: flex;
+    max-height: 100%;
+    align-items: center;   /* centra verticalmente */
+    justify-content: center; /* centra horizontalmente */
+    height: 310px;
+}
+
+.EspacioTexto{
+    grid-row: 2;
+    max-height: 100%;
+    background: #0a4d8c;
+    display: flex;
+    align-items: center;   /* centra verticalmente */
+    justify-content: center; /* centra horizontalmente */
+}
+.ImagenDelDocumento{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.TextoDelObjeto{
+    font-size: 2rem;
+    text-align: center;
+    margin: auto 0;
+    transition: all 0.3s ease;
+}
+
+.GridObjeto:hover .ImagenDelDocumento{
+    transform: translateY(-20px) scale(1.05);
+}
+.GridObjeto:hover .TextoDelObjeto{
+    color: red;
+}
