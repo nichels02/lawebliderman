@@ -12,10 +12,27 @@ export default function enviarCorreo(cliente) {
         }
     });
 
+    let PaisSeleccionado;
+
+    switch (cliente.ubicacion){
+        case 'Perú':
+            PaisSeleccionado="Peru";
+            break;
+        case 'Estados Unidos':
+            PaisSeleccionado="Usa";
+            break;
+        case 'Chile':
+            PaisSeleccionado="Chile";
+            break;
+        case 'Ecuador':
+            PaisSeleccionado="Ecuador";
+            break;
+    }
+
     const serviciosSeleccionados = [
-        { tipo: 'Servicios', activo: cliente.servicios, correo: process.env.EMAIL_SERVICIOS },
-        { tipo: 'Tecnología', activo: cliente.tecnologia, correo: process.env.EMAIL_TECNOLOGIA },
-        { tipo: 'Seguridad', activo: cliente.seguridad, correo: process.env.EMAIL_SEGURIDAD }
+        { tipo: 'Servicios', activo: cliente.servicios, correo: process.env[`EMAIL_SERVICIOS_${PaisSeleccionado}`] },
+        { tipo: 'Tecnología', activo: cliente.tecnologia, correo: process.env[`EMAIL_TECNOLOGIA_${PaisSeleccionado}`] },
+        { tipo: 'Seguridad', activo: cliente.seguridad, correo: process.env[`EMAIL_SEGURIDAD_${PaisSeleccionado}`] }
     ];
 
     serviciosSeleccionados.forEach(servicio => {
