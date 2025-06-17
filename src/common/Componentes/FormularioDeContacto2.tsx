@@ -107,7 +107,7 @@ const FormularioDeContacto2 = () => {
             tecnologia: false
         },
         mensaje: '',
-        pais: 'pe'
+        pais: 'Perú'
     });
 
     const [error, setError] = useState<string | null>(null);
@@ -229,7 +229,7 @@ const FormularioDeContacto2 = () => {
                 telefono: '',
                 intereses: { seguridad: false, servicios: false, tecnologia: false },
                 mensaje: '',
-                pais: 'pe'
+                pais: 'Perú'
             });
 
             alert(content?.home.Formulario[language].MensajeAprobatorio);
@@ -342,7 +342,6 @@ const FormularioDeContacto2 = () => {
                                         name="telefono"
                                         value={formData.telefono}
                                         onChange={handleInputChange}
-                                        required
                                     />
                                 </div>
                             </div>
@@ -393,7 +392,6 @@ const FormularioDeContacto2 = () => {
                                     onChange={handleInputChange}
                                     placeholder={content?.home.Formulario[language].TextoGuiaMensaje}
                                     rows={5}
-                                    required
                                 />
                             </div>
 

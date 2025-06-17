@@ -54,26 +54,29 @@ export class FormValidatorSingleton {
             return { isValid: false, errores };
         }
 
-        if (!data.telefono || data.telefono.trim() === '') {
-            errores.TelefonoVacio = true;
-            return { isValid: false, errores };
+        if (data.telefono && data.telefono.trim() !== '') {
+            const numericPhone = data.telefono.replace(/\s+/g, '');
+
+            // Acepta solo números y un "+" solo si está al inicio
+            if (!/^\+?\d+$/.test(numericPhone)) {
+                errores.TelefonoSoloNumeros = true;
+                return { isValid: false, errores };
+            }
+
+            // Calcula la longitud del número sin contar el "+"
+            const lengthWithoutPlus = numericPhone.startsWith('+')
+                ? numericPhone.slice(1).length
+                : numericPhone.length;
+
+            if (lengthWithoutPlus < 7 || lengthWithoutPlus > 15) {
+                errores.TelefonoCantidadDeDigitos = true;
+                return { isValid: false, errores };
+            }
         }
 
-        const numericPhone = data.telefono.replace(/\s+/g, '');
-        if (/[^0-9]/.test(numericPhone)) {
-            errores.TelefonoSoloNumeros = true;
-            return { isValid: false, errores };
-        }
 
-        if (numericPhone.length < 7 || numericPhone.length > 15) {
-            errores.TelefonoCantidadDeDigitos = true;
-            return { isValid: false, errores };
-        }
 
-        if (!data.mensaje || data.mensaje.trim() === '') {
-            errores.MensajeVacio = true;
-            return { isValid: false, errores };
-        }
+
 
         if (!data.pais || data.pais.trim() === '') {
             errores.PaisVacio = true;
