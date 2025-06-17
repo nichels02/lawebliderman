@@ -98,7 +98,7 @@
 .containerLeft img,
 .containerRight img {
     width: auto; /* Imagen ocupa todo el ancho del contenedor */
-    height: 50%;
+    height: clamp(50px, (1vw + 1vh) * 5, 200px);
     border-radius: 8px;
 }
 
@@ -182,7 +182,7 @@ landscape   es cuando el  alto es menor al ancho
     .containerLeft img,
     .containerRight img {
         width: auto; /* Imagen ocupa todo el ancho del contenedor */
-        height: clamp( 90px, (1vh + 1vw)*8, 180px);
+        height: clamp(90px, (1vw + 1vh) * 5,200px);
     }
 
     .text{

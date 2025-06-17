@@ -88,8 +88,8 @@
 
 
 .container img {
-    width: 60%;
-    height: auto;
+    width: auto;
+    height: clamp(50px, (1vw + 1vh) * 5,200px);
     margin-bottom: 15px;
     border-radius: 8px;
 }
