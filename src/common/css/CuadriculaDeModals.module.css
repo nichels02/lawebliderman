@@ -19,7 +19,7 @@
 /* Cada cuadro */
 .box {
     position: relative;
-    height: 290px;
+    height: 350px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -90,7 +90,7 @@
     align-items: center;
     gap: 8px;
     width: 200px;
-    height: 130px;
+    height: 60px;
 }
 
 /* Botón */
@@ -136,9 +136,6 @@
     }
     .smallText{
 
-    }
-    .bottomRightContainer{
-        bottom: clamp(-100px, -2vw, 10px);
     }
 }
 @media (max-width: 900px) {
