@@ -103,6 +103,10 @@ h2, h3, p {
 }
 h2{
     font-size: 32px;
+    line-height: 1;
+}
+.mainTitle{
+    padding-bottom: 20px;
 }
 @media (max-width: 1452px){
     h3, p {
