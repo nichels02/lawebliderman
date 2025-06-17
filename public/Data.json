@@ -79,7 +79,7 @@
         "servicio": "Servicio",
         "tecnologia": "Tecnología",
         "lidermania": "Lidermania",
-        "unete": "únete"
+        "unete": "Únete"
       },
       "en": {
         "inicio": "Home",
@@ -270,78 +270,6 @@
           {
             "src": "/assets/Inicio/SGS-ISO-45001.jpg",
             "alt": "8"
-          }
-        ]
-      },
-      "es": {
-        "items": [
-          {
-            "subtitle1": "Sistema",
-            "subtitle2": "Portuario Nacional"
-          },
-          {
-            "subtitle1": "ISO 9001",
-            "subtitle2": "Gestión de Calidad"
-          },
-          {
-            "subtitle1": "ISO 14001",
-            "subtitle2": "Gestión de Seguridad"
-          },
-          {
-            "subtitle1": "ISO 18788",
-            "subtitle2": "Gestión de Seguridad"
-          },
-          {
-            "subtitle1": "ISO 37001",
-            "subtitle2": "Gestión Antisoborno"
-          },
-          {
-            "subtitle1": "Business Alliance for",
-            "subtitle2": "Secure Commerce Logística y comercio"
-          },
-          {
-            "subtitle1": "Dirección General",
-            "subtitle2": "de  Aeronáutica Civil"
-          },
-          {
-            "subtitle1": "ISO 45001",
-            "subtitle2": "Gestión Antisoborno"
-          }
-        ]
-      },
-      "en": {
-        "items": [
-          {
-            "subtitle1": "Subtitle 1-1",
-            "subtitle2": "Subtitle 1-2"
-          },
-          {
-            "subtitle1": "Subtitle 2-1",
-            "subtitle2": "Subtitle 2-2"
-          },
-          {
-            "subtitle1": "Subtitle 3-1",
-            "subtitle2": "Subtitle 3-2"
-          },
-          {
-            "subtitle1": "Subtitle 4-1",
-            "subtitle2": "Subtitle 4-2"
-          },
-          {
-            "subtitle1": "Subtitle 5-1",
-            "subtitle2": "Subtitle 5-2"
-          },
-          {
-            "subtitle1": "Subtitle 6-1",
-            "subtitle2": "Subtitle 6-2"
-          },
-          {
-            "subtitle1": "Subtitle 7-1",
-            "subtitle2": "Subtitle 7-2"
-          },
-          {
-            "subtitle1": "Subtitle 7-1",
-            "subtitle2": "Subtitle 7-2"
           }
         ]
       }

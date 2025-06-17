@@ -194,22 +194,6 @@ interface ContentData {
                         alt: string;
                     }[
                         ]
-            },
-            es: {
-                items:
-                    {
-                        subtitle1: string;
-                        subtitle2: string;
-                    }[
-                        ]
-            },
-            en: {
-                items:
-                    {
-                        subtitle1: string;
-                        subtitle2: string;
-                    }[
-                        ]
             }
         }
         porcentajeNegocio: {
