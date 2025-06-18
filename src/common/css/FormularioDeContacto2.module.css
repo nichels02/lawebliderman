@@ -293,8 +293,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
-    margin-top: 40px;
+    /*margin-bottom: 25px;*/
+    /*margin-top: 40px;*/
 }
 
 .encabezado h2 {
@@ -583,7 +583,9 @@
     }
 }
 @media (max-width: 1024px){
-
+    .formularioContainer{
+        height: clamp(800px, 70%, 9000px);
+    }
     .InfoExtra1,
     .InfoExtra2{
         display: none;
@@ -618,6 +620,20 @@
 
     }
 }
+@media(max-width: 1024px) and (min-width: 769px){
+    .contenedorIntermedio{
+        height: 80%;
+        bottom: 60px;
+
+    }
+    .contenedorPagina{
+        height: 1500px;
+    }
+    .contactoYBoton{
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+}
 /* Estilos responsivos */
 @media (max-width: 813px) and  (min-width: 769px){
     .botonCarrusel{
@@ -632,8 +648,8 @@
     .errorMessage{
         top: 220px;
     }
-    .contenedorPagina{
-        height: 1950px;
+    .TituloYSubtitulo{
+        top: calc(200px - 7%);
     }
     .customPrevArrow {
         left: -30px;
@@ -644,9 +660,12 @@
     }
 
     .contenedorIntermedio {
-        flex-direction: column;
+        min-height: 1560px;
+        /*flex-direction: column;*/
     }
-
+    .contenedorPagina{
+        height: 1850px;
+    }
     .imagenLateral {
         position: relative;
         max-width: 100%;
@@ -707,13 +726,13 @@
 
 @media (max-width: 690px){
     .contenedorPagina{
-        height: 2100px;
+        height: 2000px;
     }
     .encabezado h2 {
         margin-bottom: 0;
     }
     .encabezado{
-        margin-bottom: 70px;
+        margin-bottom: 20px;
     }
     .areaMensaje label {
         margin-top: 0;
@@ -738,7 +757,9 @@
         width: 110%;
     }
     .contenedorIntermedio{
-        padding-left: 0;
+        min-height: 1700px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .botonEnviarContainer {
         margin-top: 5px;
@@ -770,7 +791,7 @@
 
     }
     .contenedorIntermedio {
-        height: 85%;
+        height: 80%;
     }
 }
 @media (max-width: 480px) {
@@ -811,6 +832,16 @@
     }
 }
 
+@media(max-width: 417px){
+    .contenedorIntermedio{
+        bottom: auto;
+
+    }
+    .contenidoCentral{
+
+        bottom: 5%;
+    }
+}
 @media (max-width: 357px) {
     .contenedorPagina{
         height: 2100px;
@@ -820,7 +851,12 @@
         font-size: clamp(0px, 11vw, 40px);
     }
 }
+@media(max-width: 320px){
+    .contenidoCentral{
 
+        bottom: 6%;
+    }
+}
 /*@media (max-width: 357px) {*/
 /*    .contenedorPagina{*/
 /*        height: 2050px;*/
