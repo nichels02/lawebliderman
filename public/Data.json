@@ -1763,6 +1763,83 @@
         "IconoDeUbicacion": "/assets/Lidermania/PuntoUbicacion.svg"
       }
     }
+  },
+
+  "PaginaLegal": {
+    "GridDocumentoLegal": [
+      {
+        "es": {
+          "Nombre": "Documento legal"
+        },
+        "en": {
+          "Nombre": "Document Legal"
+        },
+        "Common": {
+          "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+          "Pdf":"/assets/PDF/Liderman-Poliìtica-de-Privacidad.pdf"
+        }
+      },
+      {
+        "es": {
+          "Nombre": "Documento legal"
+        },
+        "en": {
+          "Nombre": "Document Legal"
+        },
+        "Common": {
+          "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+          "Pdf":"/assets/PDF/Liderman-Poliìtica-de-Privacidad.pdf"
+        }
+      },
+      {
+        "es": {
+          "Nombre": "Documento legal"
+        },
+        "en": {
+          "Nombre": "Document Legal"
+        },
+        "Common": {
+          "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+          "Pdf":"/assets/PDF/Liderman-Poliìtica-de-Privacidad.pdf"
+        }
+      },
+      {
+        "es": {
+          "Nombre": "Documento legal"
+        },
+        "en": {
+          "Nombre": "Document Legal"
+        },
+        "Common": {
+          "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+          "Pdf":"/assets/PDF/Liderman-Poliìtica-de-Privacidad.pdf"
+        }
+      },
+      {
+        "es": {
+          "Nombre": "Documento legal"
+        },
+        "en": {
+          "Nombre": "Document Legal"
+        },
+        "Common": {
+          "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+          "Pdf":"/assets/PDF/Liderman-Poliìtica-de-Privacidad.pdf"
+        }
+      },
+      {
+        "es": {
+          "Nombre": "Documento legal"
+        },
+        "en": {
+          "Nombre": "Document Legal"
+        },
+        "Common": {
+          "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+          "Pdf":"/assets/PDF/Liderman-Poliìtica-de-Privacidad.pdf"
+        }
+      }
+    ]
   }
 
 

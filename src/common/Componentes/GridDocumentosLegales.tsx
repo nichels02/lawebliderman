@@ -2,107 +2,44 @@
 // import { useContent } from './Sistemas/useContent';
 // import { useLanguage } from './Sistemas/LanguageContext';
 import styles from "../css/GridDocumentosLegales.module.css";
-import Imagen1 from "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png";
+
+import { useLanguage } from './Sistemas/LanguageContext';
+import { useContent } from './Sistemas/useContent';
 
 
 function GridDocumentosLegales() {
 
-
+    const { language } = useLanguage();
+    const Documentos = useContent()?.PaginaLegal?.GridDocumentoLegal;
     return (
         <div className={styles.ContenedorPadre}>
             <div className={styles.contenedorCentrado}>
                 <div className={styles.GridPadre}>
-                    <div className={styles.GridObjeto} /*onClick={""}*/>
-                        <div className={styles.EspacioImagen}>
-                            <img src={Imagen1} className={styles.ImagenDelDocumento}/>
-                        </div>
-                        <div className={styles.EspacioTexto}>
-                            <div className={styles.TextoDelObjeto}>
-                                Objeto legal
-                            </div>
-                        </div>
-                    </div>
 
-                    <div className={styles.GridObjeto}>
-                        <div className={styles.EspacioImagen}>
-                            <img src={Imagen1} className={styles.ImagenDelDocumento}/>
-                        </div>
-                        <div className={styles.EspacioTexto}>
-                            <div className={styles.TextoDelObjeto}>
-                                Objeto legal
+                    {Documentos?.map((doc, index) => (
+                        <a
+                            key={index}
+                            href={doc.Common.Pdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.GridObjeto}
+                        >
+                            <div className={styles.EspacioImagen}>
+                                <img
+                                    src={doc.Common.Imagen}
+                                    alt={doc[language]?.Nombre || "Documento"}
+                                    className={styles.ImagenDelDocumento}
+                                />
                             </div>
-                        </div>
-                    </div>
-                    <div className={styles.GridObjeto}>
-                        <div className={styles.EspacioImagen}>
-                            <img src={Imagen1} className={styles.ImagenDelDocumento}/>
-                        </div>
-                        <div className={styles.EspacioTexto}>
-                            <div className={styles.TextoDelObjeto}>
-                                Objeto legal
+                            <div className={styles.EspacioTexto}>
+                                <div className={styles.TextoDelObjeto}>
+                                    {doc[language]?.Nombre || "Sin nombre"}
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className={styles.GridObjeto}>
-                        <div className={styles.EspacioImagen}>
-                            <img src={Imagen1} className={styles.ImagenDelDocumento}/>
-                        </div>
-                        <div className={styles.EspacioTexto}>
-                            <div className={styles.TextoDelObjeto}>
-                                Objeto legal
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.GridObjeto}>
-                        <div className={styles.EspacioImagen}>
-                            <img src={Imagen1} className={styles.ImagenDelDocumento}/>
-                        </div>
-                        <div className={styles.EspacioTexto}>
-                            <div className={styles.TextoDelObjeto}>
-                                Objeto legal
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.GridObjeto}>
-                        <div className={styles.EspacioImagen}>
-                            <img src={Imagen1} className={styles.ImagenDelDocumento}/>
-                        </div>
-                        <div className={styles.EspacioTexto}>
-                            <div className={styles.TextoDelObjeto}>
-                                Objeto legal
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.GridObjeto}>
-                        <div className={styles.EspacioImagen}>
-                            <img src={Imagen1} className={styles.ImagenDelDocumento}/>
-                        </div>
-                        <div className={styles.EspacioTexto}>
-                            <div className={styles.TextoDelObjeto}>
-                                Objeto legal
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.GridObjeto}>
-                        <div className={styles.EspacioImagen}>
-                            <img src={Imagen1} className={styles.ImagenDelDocumento}/>
-                        </div>
-                        <div className={styles.EspacioTexto}>
-                            <div className={styles.TextoDelObjeto}>
-                                Objeto legal
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.GridObjeto}>
-                        <div className={styles.EspacioImagen}>
-                            <img src={Imagen1} className={styles.ImagenDelDocumento}/>
-                        </div>
-                        <div className={styles.EspacioTexto}>
-                            <div className={styles.TextoDelObjeto}>
-                                Objeto legal
-                            </div>
-                        </div>
-                    </div>
+                        </a>
+                    ))}
+
+
                 </div>
             </div>
         </div>

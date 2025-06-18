@@ -15,11 +15,13 @@
 .GridObjeto{
     display: grid;
     grid-template-rows: 3fr 1fr;
+    background: #191919;
+    padding: 10px;
+    border-radius: 20px;
     row-gap: 0;
 }
 .EspacioImagen{
     grid-row: 1;
-    background: #700a8c;
     display: flex;
     max-height: 100%;
     align-items: center;   /* centra verticalmente */
@@ -30,7 +32,6 @@
 .EspacioTexto{
     grid-row: 2;
     max-height: 100%;
-    background: #0a4d8c;
     display: flex;
     align-items: center;   /* centra verticalmente */
     justify-content: center; /* centra horizontalmente */

@@ -192,8 +192,7 @@ interface ContentData {
                     {
                         src: string;
                         alt: string;
-                    }[
-                        ]
+                    }[]
             }
         }
         porcentajeNegocio: {
@@ -1665,6 +1664,21 @@ interface ContentData {
         }
     }
 
+    PaginaLegal: {
+        GridDocumentoLegal: {
+            es: {
+                Nombre: string;
+            },
+            en: {
+                Nombre: string;
+            },
+            Common: {
+                Imagen: string;
+                Pdf: string;
+            }
+
+        }[]
+    }
 
 
 
