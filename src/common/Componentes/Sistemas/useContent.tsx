@@ -838,7 +838,7 @@ interface ContentData {
                 ImagenDerecha: {
                     imagen: string;
                     alt: string;
-                };
+                }[]
                 imagenDeFondo: string;
                 "logo": string;
             },

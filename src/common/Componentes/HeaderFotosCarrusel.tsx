@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from "../css/HeaderFotosCarrusel.module.css";
 import { CustomArrowProps } from "react-slick";
 import { CSSProperties } from "react";
-import { useContent } from "./Sistemas/useContent"; // Ajusta la ruta
-import { useLanguage } from "./Sistemas/LanguageContext"; // Ajusta la ruta
+import { useContent } from "./Sistemas/useContent";
+import { useLanguage } from "./Sistemas/LanguageContext";
 
 const CustomPrevArrow = ({ className, style, onClick }: CustomArrowProps) => {
     return (
@@ -36,7 +36,6 @@ export default function Header() {
     const commonData = headerData?.Common;
     const languageData = headerData?.[language];
 
-    // Estado: sin botón seleccionado al inicio
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
     const settings = {
@@ -55,40 +54,47 @@ export default function Header() {
         ]
     };
 
-    if (!commonData || !languageData) {
-        return <div>Cargando...</div>;
-    }
+    if (!commonData || !languageData) return <div>Cargando...</div>;
+
+    const imagenActual =
+        selectedIndex !== null
+            ? commonData.ImagenDerecha?.[selectedIndex]?.imagen ?? ""
+            : commonData.ImagenDerecha?.[0]?.imagen ?? "";
+
+    const altActual =
+        selectedIndex !== null
+            ? commonData.ImagenDerecha?.[selectedIndex]?.alt ?? ""
+            : commonData.ImagenDerecha?.[0]?.alt ?? "";
+
+    const tituloActual =
+        selectedIndex !== null
+            ? languageData.TextosBotones[selectedIndex]?.Texto ?? ""
+            : languageData.Titulo;
+
+    const descripcionActual =
+        selectedIndex !== null
+            ? languageData.TextosBotones[selectedIndex]?.TextoDescripcion ?? ""
+            : languageData.Texto;
 
     return (
-        <header
-            className={styles.header}
-            // style={{ backgroundImage: `url(${commonData.imagenDeFondo})` }}
-        >
+        <header className={styles.header}>
             <div
                 className={styles.backgroundOverlay}
                 style={{ backgroundImage: `url(${commonData.imagenDeFondo})` }}
             />
-            {/* Logo */}
             <img src={commonData.logo} className="logoHeader" alt="Logo" />
 
             <div className={styles.overlay}>
                 <div className={styles.content}>
                     {/* Título y texto dinámico */}
                     <div className={styles.textContainer}>
-                        <h1>{languageData.Titulo}</h1>
-                        <p>
-                            {selectedIndex === null
-                                ? languageData.Texto
-                                : languageData.TextosBotones[selectedIndex]?.TextoDescripcion}
-                        </p>
+                        <h1>{tituloActual}</h1>
+                        <p>{descripcionActual}</p>
                     </div>
 
-                    {/* Imagen fija */}
+                    {/* Imagen dinámica a la derecha */}
                     <div className={styles.imageContainer}>
-                        <img
-                            src={commonData.ImagenDerecha?.imagen}
-                            alt={commonData.ImagenDerecha?.alt}
-                        />
+                        <img src={imagenActual} alt={altActual} />
                     </div>
                 </div>
 

@@ -875,10 +875,21 @@
     },
     "HeaderCarruselDeImagenes": {
       "Common": {
-        "ImagenDerecha":{
-          "imagen": "/assets/Seguridad/seguridad-fisica.png",
-          "alt": "physical-security"
-        },
+        "ImagenDerecha":[
+          {
+            "imagen": "/assets/Seguridad/seguridad-fisica.png",
+            "alt": "physical-security"
+          },
+          {
+            "imagen": "/assets/Seguridad/seguridad-fisica.png",
+            "alt": "physical-security"
+          },
+          {
+            "imagen": "/assets/Seguridad/seguridad-fisica.png",
+            "alt": "physical-security"
+          }
+        ],
+
         "imagenDeFondo": "/assets/Seguridad/1.png",
         "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg"
       },
