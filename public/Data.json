@@ -1305,7 +1305,14 @@
       "Common": {
         "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
         "Fondo": "/assets/Tecnologia/tecnologia-portada.png",
-        "imagenDerecha": "/assets/Tecnologia/tecnologia-chica.png"
+        "ImagenDerecha": {
+          "boton1": "",
+          "boton2": "/assets/Tecnologia/tecnologia-chica.png",
+          "boton3": "",
+          "boton4": "/assets/Tecnologia/tecnologia-chica.png"
+        },
+
+        "imagenDerecha1": "/assets/Tecnologia/tecnologia-chica.png"
       },
       "es": {
         "Titulo": "Tecnología",

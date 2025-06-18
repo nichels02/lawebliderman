@@ -26,12 +26,18 @@ function HeaderCambioDeImagen() {
     const actualContent = langContent ?? fallbackContent;
 
     const [textoActual, setTextoActual] = useState("");
+    const [tituloActual, setTituloActual] = useState("");
+    const [imagenActual, setImagenActual] = useState("");
 
     useEffect(() => {
         if (actualContent?.Texto) {
             setTextoActual(actualContent.Texto);
+            setTituloActual(actualContent.Titulo);
+            setImagenActual(content?.Common?.ImagenDerecha?.boton1 ?? "");
         }
-    }, [actualContent]);
+    }, [actualContent, content?.Common?.ImagenDerecha]);
+
+
 
     return (
         <div
@@ -51,7 +57,7 @@ function HeaderCambioDeImagen() {
             <div className={styles.contenedorContenido}>
                 <div className={styles.contenedorTexto}>
                     <h1 className={styles.titulo}>
-                        {actualContent?.Titulo ?? ""}
+                        {tituloActual}
                     </h1>
                     <p className={styles.texto}>
                         {textoActual}
@@ -60,7 +66,7 @@ function HeaderCambioDeImagen() {
 
                 <div className={styles.contenedorImagen}>
                     <img
-                        src={content?.Common?.imagenDerecha ?? ""}
+                        src={imagenActual}
                         alt="Imagen Principal"
                         className={styles.imagenPrincipal}
                     />
@@ -85,7 +91,11 @@ function HeaderCambioDeImagen() {
                             className={styles.boton}
                             onClick={() => {
                                 if (isValidBoton) {
+                                    const botonId = `boton${index}` as 'boton1' | 'boton2' | 'boton3' | 'boton4';
+                                    const nuevaImagen = content?.Common?.ImagenDerecha?.[botonId] ?? "";
+                                    setTituloActual((boton as Boton).Nombre);
                                     setTextoActual((boton as Boton).Texto);
+                                    setImagenActual(nuevaImagen);
                                 }
                             }}
                         >

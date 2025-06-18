@@ -1204,7 +1204,13 @@ interface ContentData {
             Common: {
                 logo: string;
                 Fondo: string;
-                imagenDerecha: string;
+                ImagenDerecha: {
+                    boton1: string;
+                    boton2: string;
+                    boton3: string;
+                    boton4: string;
+                },
+                imagenDerecha1: string;
             },
             es: {
                 Titulo: string;
