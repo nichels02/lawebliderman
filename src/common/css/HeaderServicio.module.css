@@ -29,6 +29,7 @@
     align-items: center;
     position: relative;
     z-index: 1;
+    flex-direction: row; /* Aseguramos que en pantallas grandes siga siendo horizontal */
 }
 
 .left {
@@ -106,9 +107,27 @@
 /*    }*/
 /*}*/
 
+@media (max-width: 768px) {
+    /* Cambios para vista vertical */
+    .header{
+        height: 100vw;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;     /* O center si querés centrarlos */
+        text-align: center;       /* Si querés centrar el texto */
+    }
+    .left{
+        height: auto;
+        width: 70%;
+    }
+    .text{
+        width: 100%;
+    }
+
+}
 @media (max-width: 600px){
     .text{
-        position: absolute;
         z-index: 3;
         font-size: clamp(10px, 1.8vw, 70px);
         color: #ffffff;
