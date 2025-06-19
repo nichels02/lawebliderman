@@ -2,6 +2,7 @@ import styles from '../css/ImagenYGrid2.module.css';
 import { useContent } from './Sistemas/useContent.tsx';
 import { useLanguage } from './Sistemas/LanguageContext.tsx';
 import ScrollLink from "./Sistemas/ScrollLink.tsx";
+import TituloYSubtituloGenerico from "./TituloYSubtituloGenerico.tsx";
 
 function ImagenYGrid2() {
     const content = useContent();
@@ -14,7 +15,16 @@ function ImagenYGrid2() {
     const imagenes = data.contenido;
 
     return (
+
+
+
+        <div className={styles.ContenedorInicial}>
+            <TituloYSubtituloGenerico
+                titulo={content.home.Titulos[language].Titulo4.Titulo}
+                subtitulo={content.home.Titulos[language].Titulo4.Subtitulo}
+            />
         <div id="ImagenYGrid2" className={styles.contenedorPadre}>
+
             <div className={styles.contenedorHijo}>
                 {/* Imagen principal a la izquierda */}
                 <div className={styles.contenedorIzquierdo}>
@@ -82,6 +92,7 @@ function ImagenYGrid2() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }
