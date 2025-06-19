@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { useContent } from './Sistemas/useContent';
-import { useLanguage } from './Sistemas/LanguageContext';
 import styles from "../css/gridBarajeable.module.css";
 
 interface Item {
@@ -11,13 +9,14 @@ interface Item {
     description: string[];
 }
 
-function GridBarajeable() {
+interface GridBarajeableProps {
+    items: Item[]; // Lista completa, el primero será el main
+}
+
+function GridBarajeable({ items }: GridBarajeableProps) {
     const [mainItem, setMainItem] = useState<Item | null>(null);
     const [smallItems, setSmallItems] = useState<Item[]>([]);
     const [isMobile, setIsMobile] = useState<boolean>(false);
-
-    const content = useContent();
-    const { language } = useLanguage();
 
     useEffect(() => {
         const handleResize = () => {
@@ -29,29 +28,15 @@ function GridBarajeable() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    // Actualiza los items cuando cambian las props
     useEffect(() => {
-        if (content) {
-            const languageData = content.Seguridad.GridBarajeable[language];
-
-            const updatedItems = Object.keys(languageData).map((key, index) => {
-                const item = languageData[key as keyof typeof languageData];
-                const imagePath = content.Seguridad.GridBarajeable.contenido[key as keyof typeof content.Seguridad.GridBarajeable.contenido];
-
-                return {
-                    id: index + 1,
-                    text: item.text,
-                    image: imagePath,
-                    showTitle: item.showTitle,
-                    description: Array.isArray(item.description) ? item.description : [item.description],
-                };
-            });
-
-            setMainItem(updatedItems[0]);
-            setSmallItems(updatedItems.slice(1));
+        if (items.length > 0) {
+            setMainItem(items[0]);
+            setSmallItems(items.slice(1));
         }
-    }, [content, language]);
+    }, [items]);
 
-    if (!content || !mainItem) {
+    if (!mainItem) {
         return <div>Loading...</div>;
     }
 

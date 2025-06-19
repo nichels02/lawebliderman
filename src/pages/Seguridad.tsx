@@ -11,6 +11,12 @@ import Style from "../common/css/pages/Seguridad.module.css";
 
 
 
+
+
+
+
+
+
 import { useContent } from '../common/Componentes/Sistemas/useContent.tsx'; // Importa el hook del contexto
 import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx';
 import TituloYSubtituloGenerico from "../common/Componentes/TituloYSubtituloGenerico.tsx";
@@ -40,6 +46,16 @@ function Seguridad() {
     const { language } = useLanguage();
     const [localData, setLocalData] = useState<LocalData | null>(null);
 
+
+
+
+
+
+
+
+
+
+
     useEffect(() => {
         if (data && language) {
             // Asegúrate de que los datos existen antes de usarlos
@@ -50,6 +66,25 @@ function Seguridad() {
     // Si no hay datos o no está cargado el contexto, no renderices el componente
     if (!localData || !data) return <div>Cargando...</div>;
 
+
+
+
+    // Crear los items que necesita GridBarajeable
+    const gridBarajeableRaw = data.Seguridad.GridBarajeable[language];
+    const gridContenido = data.Seguridad.GridBarajeable.contenido;
+
+    const barajeableItems = Object.keys(gridBarajeableRaw).map((key, index) => {
+        const item = gridBarajeableRaw[key as keyof typeof gridBarajeableRaw];
+        const imagePath = gridContenido[key as keyof typeof gridContenido];
+
+        return {
+            id: index + 1,
+            text: item.text,
+            image: imagePath,
+            showTitle: item.showTitle,
+            description: Array.isArray(item.description) ? item.description : [item.description],
+        };
+    });
     /*
     const imagenes = [
         "https://wallpapers.com/images/hd/1920x1080-hd-space-u95406v61bxyrx3s.jpg",
@@ -97,7 +132,7 @@ function Seguridad() {
                 subtitulo={data.Seguridad.Titulos[language].Titulo2.Subtitulo}
             />
             <div style={{ marginBottom: '70px' }}></div>
-            <GridBarajeable />
+            <GridBarajeable items={barajeableItems} />
         </>
     );
 }

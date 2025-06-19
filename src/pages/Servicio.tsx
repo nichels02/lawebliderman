@@ -20,10 +20,29 @@ function Servicio() {
     const datos3 = content.Servicio.GridGenerico;
     const datos4 = content.Servicio.Titulos;
 
+    // 🧩 Preparar items para GridBarajeable
+    const datosBarajeable = content.Servicio.GridBarajeable;
+    const rawItems = datosBarajeable[language];
+    const contenido = datosBarajeable.contenido;
+
+    const barajeableItems = Object.keys(rawItems).map((key, index) => {
+        const item = rawItems[key as keyof typeof rawItems];
+        const imagePath = contenido[key as keyof typeof contenido];
+
+        return {
+            id: index + 1,
+            text: item.text,
+            image: imagePath,
+            showTitle: item.showTitle,
+            description: Array.isArray(item.description) ? item.description : [item.description],
+        };
+    });
+
     return (
         <>
             <HeaderServicio />
             <div style={{ marginBottom: '70px' }}></div>
+
             <TextoTituloEImagen
                 titulo={datos1[language].Titulo}
                 texto={datos1[language].Texto}
@@ -55,24 +74,44 @@ function Servicio() {
                 ]}
                 imagenALaIzquierda={false}
             />
+
             <TituloYSubtituloGenerico className={Style.GridGenerico}
-                titulo={datos4[language].Titulo1.Titulo}
-                subtitulo={datos4[language].Titulo1.Subtitulo}
+                                      titulo={datos4[language].Titulo1.Titulo}
+                                      subtitulo={datos4[language].Titulo1.Subtitulo}
             />
+
             <GridGenerico
-                largeImage= {datos3.Contenido.ImagenGrande}
+                largeImage={datos3.Contenido.ImagenGrande}
                 items={[
-                    { image: datos3?.Contenido?.imagenSector1, title: datos3[language]?.Sector1?.Titulo, text: datos3[language]?.Sector1.Texto },
-                    { image: datos3?.Contenido?.imagenSector2, title: datos3[language]?.Sector2?.Titulo, text: datos3[language]?.Sector2.Texto },
-                    { image: datos3?.Contenido?.imagenSector3, title: datos3[language]?.Sector3?.Titulo, text: datos3[language]?.Sector3.Texto },
-                    { image: datos3?.Contenido?.imagenSector4, title: datos3[language]?.Sector4?.Titulo, text: datos3[language]?.Sector4.Texto }
+                    {
+                        image: datos3.Contenido.imagenSector1,
+                        title: datos3[language].Sector1.Titulo,
+                        text: datos3[language].Sector1.Texto,
+                    },
+                    {
+                        image: datos3.Contenido.imagenSector2,
+                        title: datos3[language].Sector2.Titulo,
+                        text: datos3[language].Sector2.Texto,
+                    },
+                    {
+                        image: datos3.Contenido.imagenSector3,
+                        title: datos3[language].Sector3.Titulo,
+                        text: datos3[language].Sector3.Texto,
+                    },
+                    {
+                        image: datos3.Contenido.imagenSector4,
+                        title: datos3[language].Sector4.Titulo,
+                        text: datos3[language].Sector4.Texto,
+                    },
                 ]}
             />
+
             <TituloYSubtituloGenerico className={Style.gridBarajeable}
-                titulo={datos4[language].Titulo2.Titulo}
-                subtitulo={datos4[language].Titulo2.Subtitulo}
+                                      titulo={datos4[language].Titulo2.Titulo}
+                                      subtitulo={datos4[language].Titulo2.Subtitulo}
             />
-            <GridBarajeable />
+
+            <GridBarajeable items={barajeableItems} />
         </>
     );
 }
