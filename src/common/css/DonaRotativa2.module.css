@@ -72,10 +72,10 @@
     transition: transform 0.5s ease;
 }
 
-.label1 { top: 10%; left: 45%; transform-origin: center; }
-.label2 { top: 48%; left: 3%; transform-origin: center; }
-.label3 { bottom: 10%; left: 45%; transform-origin: center; }
-.label4 { top: 48%; right: 3%; transform-origin: center; }
+.label1 { margin: 0 auto; top: 10%;  transform-origin: center; }
+.label2 { margin: auto 0; left: 3%; transform-origin: center; }
+.label3 { margin: 0 auto; bottom: 10%;  transform-origin: center; }
+.label4 { margin: auto 0; right: 3%; transform-origin: center; }
 
 /* Texto central */
 .centerText {
@@ -120,18 +120,18 @@
         font-size: clamp(17px, 1vw, 25px);
     }
 
-    .label1 { top: 10%; left: 40%; }
-    .label2 { top: 48%; left: 3%; }
-    .label3 { bottom: 10%; left: 45%; }
-    .label4 { top: 48%; right: 1%; }
+    /*.label1 { top: 10%; left: 40%; }*/
+    /*.label2 { top: 48%; left: 3%; }*/
+    /*.label3 { bottom: 10%; left: 45%; }*/
+    /*.label4 { top: 48%; right: 1%; }*/
 }
 
 
 @media (max-width: 1024px) {
-    .label1 { top: 10%; left: 38%; }
-    .label2 { top: 45%; left: -3%; }
-    .label3 { bottom: 10%; left: 41%; }
-    .label4 { top: 45%; right: -3%;  }
+    .label1 { top: 8%; }
+    .label2 { left: -5px; }
+    .label3 { bottom: 8%; }
+    .label4 { right: -5px;  }
 
 
     .wrapper {
@@ -148,8 +148,8 @@
     }
 
     .chartWrapper {
-        width: clamp(300px, 60vw, 700px);
-        height: clamp(300px, 60vw, 700px);
+        width: clamp(300px, 80vw, 1000px);
+        height: clamp(300px, 80vw, 1000px);
         margin-top: -120px;
         position: relative;
         left: 0;
@@ -180,7 +180,19 @@
 
 @media (max-width: 500px) {
     .centerText {
-        width: 40%;
-        font-size: clamp(15px, 3vw, 24px);
+        width: 50%;
+        font-size: clamp(13px, 3vw, 24px);
+    }
+}
+@media (max-width: 400px) {
+    .label1 { top: 6%; }
+    .label2 { left: -10px; }
+    .label3 { bottom: 6%; }
+    .label4 { right: -10px;  }
+}
+@media (max-width: 350px) {
+    .chartWrapper {
+        width: clamp(300px, 100%, 1000px);
+        height: clamp(300px, 100%, 1000px);
     }
 }

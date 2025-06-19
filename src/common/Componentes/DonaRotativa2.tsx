@@ -79,7 +79,7 @@ function DonaRotativa2() {
         const options = {
             rotation: 45,
             circumference: 360,
-            cutout: '50%',
+            cutout: '65%',
             animation: false,
             responsive: true,
             maintainAspectRatio: false,
