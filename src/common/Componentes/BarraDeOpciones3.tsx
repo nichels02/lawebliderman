@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "../css/BarraDeOpciones3.module.css";
 import { isDarkModeEnabled } from "./Sistemas/toggleDarkMode.ts";
@@ -24,6 +24,8 @@ function BarraDeOpciones3() {
     const [showLanguagePanel, setShowLanguagePanel] = useState(false);
     const [svgColor, setSvgColor] = useState(isDarkModeEnabled() ? "#FFFFFF" : "#393939");
 
+    const barraRef = useRef<HTMLDivElement>(null); // <<< NUEVO
+
     useEffect(() => {
         setSVGColorGlobal = setSvgColor;
     }, []);
@@ -37,6 +39,22 @@ function BarraDeOpciones3() {
 
         return () => observer.disconnect();
     }, []);
+
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (barraRef.current && !barraRef.current.contains(event.target as Node)) {
+                setShowBar(false);
+            }
+        }
+
+        if (showBar) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [showBar]); // <<< NUEVO
 
     if (!content || !content.home || !content.home.BarraDeOpciones || !content.home.BarraDeOpciones2) {
         return <p>Cargando...</p>;
@@ -53,7 +71,7 @@ function BarraDeOpciones3() {
             </button>
 
             {/* Barra de opciones */}
-            <div className={`${styles.barra} ${showBar ? styles.visible : ""}`}>
+            <div ref={barraRef} className={`${styles.barra} ${showBar ? styles.visible : ""}`}>
                 <Link to="/" className={styles.boton} onClick={() => setShowBar(!showBar)}>{textos1.inicio}</Link>
                 <Link to="/Conocenos" className={styles.boton} onClick={() => setShowBar(!showBar)}>{textos1.conocenos}</Link>
 
@@ -79,21 +97,10 @@ function BarraDeOpciones3() {
                     {textos1.lidermania} <span className={styles.highlight}>{textos1.unete}</span>
                 </Link>
 
-                {/* Botón Contacto */}
-                {/*<Link*/}
-                {/*    to={`${location.pathname}#FormularioDeContacto`}*/}
-                {/*    className={styles.boton}*/}
-                {/*    onClick={() => setShowBar(false)} // o true, según lo que quieras*/}
-                {/*>*/}
-                {/*    {textos2.contactanos}*/}
-                {/*</Link>*/}
-
-                <ScrollLink to= {`${location.pathname}#FormularioDeContacto`}
+                <ScrollLink to={`${location.pathname}#FormularioDeContacto`}
                             scrollMode="top" className={styles.boton} onClick={() => setShowBar(false)}>
                     {textos2.contactanos}
                 </ScrollLink>
-
-
 
                 {/* Dropdown idioma con el nuevo SVG */}
                 <div className={styles.dropdown}>
