@@ -6,7 +6,7 @@ import TextImageSelector from "../common/Componentes/TextImageSelector.tsx";
 import CardGrid from "../common/Componentes/CardGrid.tsx";
 import CuadriculaDeModals from "../common/Componentes/CuadriculaDeModals.tsx";
 import TituloYSubtituloGenerico from "../common/Componentes/TituloYSubtituloGenerico.tsx";
-import Style from "../common/css/pages/Tecnologia.module.css"
+// import Style from "../common/css/pages/Tecnologia.module.css"
 
 // Tipos para las claves
 type BotonKey = 'boton1' | 'boton2' | 'boton3' | 'boton4' | 'boton5';
@@ -43,7 +43,8 @@ function Tecnologia() {
         <>
             <HeaderCambioDeImagen />
 
-            <TituloYSubtituloGenerico className={Style.TextImagenSelector}
+            <TituloYSubtituloGenerico
+                // className={Style.TextImagenSelector}
                 titulo={content.Tecnologia.Titulos[language].Titulo1.Titulo}
                 subtitulo={content.Tecnologia.Titulos[language].Titulo1.Subtitulo}
             />
@@ -64,12 +65,14 @@ function Tecnologia() {
                 ))}
                 imagenALaIzquierda={content.Tecnologia.TextImageSelector2.Common.imagenALaIzquierda}
             />
-            <TituloYSubtituloGenerico className={Style.CuadriculaDeModals}
+            <TituloYSubtituloGenerico
+                // className={Style.CuadriculaDeModals}
                 titulo={content.Tecnologia.Titulos[language].Titulo2.Titulo}
                 subtitulo={content.Tecnologia.Titulos[language].Titulo2.Subtitulo}
             />
             <CuadriculaDeModals />
-            <TituloYSubtituloGenerico className={Style.CardGrid}
+            <TituloYSubtituloGenerico
+                // className={Style.CardGrid}
                 titulo={content.Tecnologia.Titulos[language].Titulo3.Titulo}
                 subtitulo={content.Tecnologia.Titulos[language].Titulo3.Subtitulo}
             />

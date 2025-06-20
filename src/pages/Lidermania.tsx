@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 import { useContent } from '../common/Componentes/Sistemas/useContent.tsx';
 import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx';
 import HeaderGenerico from '../common/Componentes/HeaderGenerico.tsx';
@@ -6,15 +6,12 @@ import DonaRotativa2 from '../common/Componentes/DonaRotativa2.tsx';
 import TituloTextoEImagen2 from "../common/Componentes/TituloTextoEImagen2.tsx";
 
 
-import CarruselDeTrabajos from "../common/Componentes/CarruselDeTrabajos.tsx";
-import BarraDeBusquedaYFiltros from "../common/Componentes/BarraDeBusquedaYFiltros.tsx";
-import { Trabajo } from '../common/Componentes/Sistemas/trabajos.interface.ts';
-import TituloYSubtituloGenerico from "../common/Componentes/TituloYSubtituloGenerico.tsx"; // Asegúrate de tener esta ruta bien
+import TituloYSubtituloGenerico from "../common/Componentes/TituloYSubtituloGenerico.tsx";
+import RedireccionamientoAFacebookTrabajos from "../common/Componentes/RedireccionamientoAFacebookTrabajos.tsx"; // Asegúrate de tener esta ruta bien
 
 function Lidermania() {
     const content = useContent();
     const { language } = useLanguage();
-    const [trabajosFiltrados, setTrabajosFiltrados] = useState<Trabajo[]>([]);
 
     if (!content) {
         return <div>Loading...</div>;
@@ -24,7 +21,6 @@ function Lidermania() {
     const currentLang = language === 'es' ? es : en;
 
     // Obtener el ícono de "no hay trabajos" desde content.Common
-    const noJobsIcon = content.Lidermania.CarruselDeTrabajos.Common.IconoDeNoHayTrabajos || "";
 
     return (
         <>
@@ -41,22 +37,20 @@ function Lidermania() {
                 onButton1ClickPosicion={"/Lidermania#DonaRotativa2"}
                 onButton1ClickModo={"top"}
             />
-            <div style={{ marginBottom: '70px' }}></div>
+            {/*<div style={{ marginBottom: '70px' }}></div>*/}
             <TituloYSubtituloGenerico
                 titulo={content.Lidermania.Titulos[language].Titulo1.Titulo}
                 subtitulo={content.Lidermania.Titulos[language].Titulo1.Subtitulo}
             />
-            <div style={{ marginBottom: '100px' }}></div>
+            {/*<div style={{ marginBottom: '100px' }}></div>*/}
             <DonaRotativa2 />
-            <div style={{ marginBottom: '100px' }} id="CarruselDeTrabajos"></div>
+            {/*<div style={{ marginBottom: '100px' }} id="CarruselDeTrabajos"></div>*/}
             <TituloYSubtituloGenerico
                 titulo={content.Lidermania.Titulos[language].Titulo2.Titulo}
                 subtitulo={content.Lidermania.Titulos[language].Titulo2.Subtitulo}
             />
-            <div style={{ marginBottom: '100px' }}></div>
-            <BarraDeBusquedaYFiltros onBuscar={setTrabajosFiltrados} />
-
-            <CarruselDeTrabajos trabajos={trabajosFiltrados} iconoNoHayTrabajos={noJobsIcon} />
+            {/*<div style={{ marginBottom: '100px' }}></div>*/}
+            <RedireccionamientoAFacebookTrabajos />
 
             <TituloTextoEImagen2 />
         </>

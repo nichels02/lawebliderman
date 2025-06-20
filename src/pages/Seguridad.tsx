@@ -7,7 +7,7 @@ import FlechaGiro from '../common/Componentes/FlechaGiro.tsx';
 import GridGenerico from "../common/Componentes/GridGenerico.tsx";
 import GridBarajeable from "../common/Componentes/gridBarajeable.tsx";
 import HeaderFotosCarrusel from "../common/Componentes/HeaderFotosCarrusel.tsx";
-import Style from "../common/css/pages/Seguridad.module.css";
+// import Style from "../common/css/pages/Seguridad.module.css";
 
 
 
@@ -96,7 +96,8 @@ function Seguridad() {
     return (
         <>
             <HeaderFotosCarrusel />
-            <TituloYSubtituloGenerico className={Style.GridGenerico}
+            <TituloYSubtituloGenerico
+                // className={Style.GridGenerico}
                 titulo={data.Seguridad.Titulos[language].Titulo1.Titulo}
                 subtitulo={data.Seguridad.Titulos[language].Titulo1.Subtitulo}
                 // className={}
@@ -127,7 +128,8 @@ function Seguridad() {
                 ]}
             />
             <FlechaGiro />
-            <TituloYSubtituloGenerico className={Style.CardBarajeable}
+            <TituloYSubtituloGenerico
+                // className={Style.CardBarajeable}
                 titulo={data.Seguridad.Titulos[language].Titulo2.Titulo}
                 subtitulo={data.Seguridad.Titulos[language].Titulo2.Subtitulo}
             />

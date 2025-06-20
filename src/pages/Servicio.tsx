@@ -6,7 +6,7 @@ import TextoTituloEImagen from "../common/Componentes/TextoTituloEImagen";
 import GridGenerico from "../common/Componentes/GridGenerico";
 import GridBarajeable from "../common/Componentes/gridBarajeable";
 import TituloYSubtituloGenerico from "../common/Componentes/TituloYSubtituloGenerico.tsx";
-import Style from "../common/css/pages/Servicio.module.css";
+// import Style from "../common/css/pages/Servicio.module.css";
 
 function Servicio() {
     const content = useContent();
@@ -41,7 +41,7 @@ function Servicio() {
     return (
         <>
             <HeaderServicio />
-            <div style={{ marginBottom: '70px' }}></div>
+            {/*<div style={{ marginBottom: '70px' }}></div>*/}
 
             <TextoTituloEImagen
                 titulo={datos1[language].Titulo}
@@ -75,9 +75,10 @@ function Servicio() {
                 imagenALaIzquierda={false}
             />
 
-            <TituloYSubtituloGenerico className={Style.GridGenerico}
-                                      titulo={datos4[language].Titulo1.Titulo}
-                                      subtitulo={datos4[language].Titulo1.Subtitulo}
+            <TituloYSubtituloGenerico
+                // className={Style.GridGenerico}
+                titulo={datos4[language].Titulo1.Titulo}
+                subtitulo={datos4[language].Titulo1.Subtitulo}
             />
 
             <GridGenerico
@@ -106,9 +107,10 @@ function Servicio() {
                 ]}
             />
 
-            <TituloYSubtituloGenerico className={Style.gridBarajeable}
-                                      titulo={datos4[language].Titulo2.Titulo}
-                                      subtitulo={datos4[language].Titulo2.Subtitulo}
+            <TituloYSubtituloGenerico
+                // className={Style.gridBarajeable}
+                titulo={datos4[language].Titulo2.Titulo}
+                subtitulo={datos4[language].Titulo2.Subtitulo}
             />
 
             <GridBarajeable items={barajeableItems} />

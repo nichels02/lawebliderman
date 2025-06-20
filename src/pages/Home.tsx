@@ -7,14 +7,13 @@ import ImagenYGrid2 from '../common/Componentes/ImagenYGrid2.tsx';
 import TextoGeneral from '../common/Componentes/TextoGeneral.tsx';
 import { useContent } from '../common/Componentes/Sistemas/useContent.tsx';
 import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx';
-import Style from '../common/css/pages/Home.module.css'
+// import Style from '../common/css/pages/Home.module.css'
+// import GridDocumentosLegales from "../common/Componentes/GridDocumentosLegales.tsx";
 
 
-
-
-function Home(){
+function Home() {
         const content = useContent();
-        const { language } = useLanguage();
+        const {language} = useLanguage();
 
         if (!content) {
                 return <div>Loading...</div>;
@@ -22,52 +21,50 @@ function Home(){
 
         return (
             <>
-
                 <Header1/>
 
 
-                <TituloYSubtituloGenerico className={Style.TituloCardWithExpand}
+                <TituloYSubtituloGenerico
+                    // className={Style.TituloCardWithExpand}
                     titulo={content.home.Titulos[language].Titulo1.Titulo}
                     subtitulo={content.home.Titulos[language].Titulo1.Subtitulo}
                 />
                 <CardWithExpand/>
 
 
-                <TituloYSubtituloGenerico className={Style.Marquee}
+                <TituloYSubtituloGenerico
+                    // className={Style.Marquee}
                     titulo={content.home.Titulos[language].Titulo2.Titulo}
                     subtitulo={content.home.Titulos[language].Titulo2.Subtitulo}
                 />
                 <Marquee/>
 
 
-
-                <div className={Style.TextoGeneral}>
+                <div
+                    // className={Style.TextoGeneral}
+                >
                     <TextoGeneral
-                                  texto="El servicio que brindamos es a través de nuestros colaboradores, *ellos son el centro* de toda nuestra gestión."/>
+                        texto="El servicio que brindamos es a través de nuestros colaboradores, *ellos son el centro* de toda nuestra gestión."/>
                 </div>
 
 
-                <TituloYSubtituloGenerico className={Style.PorcentajeDeNegocio}
+                <TituloYSubtituloGenerico
+                    // className={Style.PorcentajeDeNegocio}
                     titulo={content.home.Titulos[language].Titulo3.Titulo}
                     subtitulo={content.home.Titulos[language].Titulo3.Subtitulo}
                 />
                 <PorcentajeNegocio/>
 
+                {/*<GridDocumentosLegales/>*/}
 
 
-
-                <div className={Style.contenedorPadre}>
-                    <TituloYSubtituloGenerico className={Style.ImagenYGrid}
-                        titulo={content.home.Titulos[language].Titulo4.Titulo}
-                        subtitulo={content.home.Titulos[language].Titulo4.Subtitulo}
-                    />
-                </div>
                 <ImagenYGrid2/>
-                <div className={Style.DespuesDelImagenYGrid}>
+                {/*<div className={Style.DespuesDelImagenYGrid}>*/}
 
-                </div>
+                {/*</div>*/}
 
             </>
         )
 }
+
 export default Home
