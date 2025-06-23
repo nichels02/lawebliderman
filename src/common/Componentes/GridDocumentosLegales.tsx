@@ -28,7 +28,6 @@ function GridDocumentosLegales() {
                                 <img
                                     src={doc.Common.Imagen}
                                     alt={doc[language]?.Nombre || "Documento"}
-                                    className={styles.ImagenDelDocumento}
                                 />
                             </div>
                             <div className={styles.EspacioTexto}>
