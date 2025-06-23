@@ -40,7 +40,13 @@ function Servicio() {
 
     return (
         <>
-            <HeaderServicio />
+            <HeaderServicio
+                fondo={content.Servicio.header.Contenido.Fondo}
+                logo={content.Servicio.header.Contenido.logo}
+                imagenLateral={content.Servicio.header.Contenido.ImagenDelCostado}
+                titulo={content.Servicio.header[language].Titulo}
+                texto={content.Servicio.header[language].Texto}
+            />
             {/*<div style={{ marginBottom: '70px' }}></div>*/}
 
             <TextoTituloEImagen
