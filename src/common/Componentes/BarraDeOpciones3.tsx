@@ -116,7 +116,7 @@ function BarraDeOpciones3() {
                 <Link to="/Lidermania" className={styles.boton} onClick={() => setShowBar(!showBar)}>
                     {textos1.lidermania} <span className={styles.highlight}>{textos1.unete}</span>
                 </Link>
-                <Link to="/Legal" className={styles.boton}>
+                <Link to="/Legal" className={styles.boton} onClick={() => setShowBar(!showBar)}>
                     {textos1.Legal}
                 </Link>
 
