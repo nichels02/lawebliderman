@@ -1880,6 +1880,43 @@
   },
 
   "PaginaLegal": {
+    "Titulos": {
+      "es": {
+        "Titulo1": {
+          "Titulo": "Cómo",
+          "Subtitulo": "operamos"
+        },
+        "Titulo2": {
+          "Titulo": "Supervisión",
+          "Subtitulo": "y control"
+        }
+      },
+      "en": {
+        "Titulo1": {
+          "Titulo": "How",
+          "Subtitulo": "we operate"
+        },
+        "Titulo2": {
+          "Titulo": "Monitoring",
+          "Subtitulo": "and control"
+        }
+      }
+    },
+    "header": {
+      "Contenido": {
+        "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
+        "Fondo": "/assets/Servicio/fondo-servicios.png",
+        "ImagenDelCostado": "/assets/Servicio/Imagen-facilities.png"
+      },
+      "es": {
+        "Titulo": "Servicios",
+        "Texto": "Expandimos nuestros servicios para brindar asistencia integral en el mantenimiento y gestión de las soluciones que más necesita tu empresa."
+      },
+      "en": {
+        "Titulo": "Service",
+        "Texto": "We have expanded our services to provide comprehensive support in the maintenance and management of the solutions your company needs most."
+      }
+    },
     "GridDocumentoLegal": [
       {
         "es": {

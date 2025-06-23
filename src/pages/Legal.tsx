@@ -19,16 +19,16 @@ function Legal() {
     return (
         <>
             <HeaderServicio
-                fondo={content.Servicio.header.Contenido.Fondo}
-                logo={content.Servicio.header.Contenido.logo}
-                imagenLateral={content.Servicio.header.Contenido.ImagenDelCostado}
-                titulo={content.Servicio.header[language].Titulo}
-                texto={content.Servicio.header[language].Texto}
+                fondo={content.PaginaLegal.header.Contenido.Fondo}
+                logo={content.PaginaLegal.header.Contenido.logo}
+                imagenLateral={content.PaginaLegal.header.Contenido.ImagenDelCostado}
+                titulo={content.PaginaLegal.header[language].Titulo}
+                texto={content.PaginaLegal.header[language].Texto}
             />
             <TituloYSubtituloGenerico
                 // className={Style.LineaDeTiempo}
-                titulo={content.Conocenos.Titulos[language].Titulo1.Titulo}
-                subtitulo={content.Conocenos.Titulos[language].Titulo1.Subtitulo}
+                titulo={content.PaginaLegal.Titulos[language].Titulo1.Titulo}
+                subtitulo={content.PaginaLegal.Titulos[language].Titulo1.Subtitulo}
             />
             <GridDocumentosLegales/>
         </>

@@ -1736,6 +1736,43 @@ interface ContentData {
     }
 
     PaginaLegal: {
+        Titulos: {
+            es: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            },
+            en: {
+                Titulo1: {
+                    Titulo: string;
+                    Subtitulo: string;
+                },
+                Titulo2: {
+                    Titulo: string;
+                    Subtitulo: string;
+                }
+            }
+        },
+        header: {
+            Contenido: {
+                logo: string;
+                Fondo: string;
+                ImagenDelCostado: string;
+            },
+            es:{
+                Titulo: string;
+                Texto: string;
+            },
+            en: {
+                Titulo: string;
+                Texto: string;
+            }
+        }
         GridDocumentoLegal: {
             es: {
                 Nombre: string;
