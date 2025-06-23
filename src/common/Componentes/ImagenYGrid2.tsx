@@ -17,82 +17,85 @@ function ImagenYGrid2() {
     return (
 
 
-
         <div className={styles.ContenedorInicial}>
             <TituloYSubtituloGenerico
                 titulo={content.home.Titulos[language].Titulo4.Titulo}
                 subtitulo={content.home.Titulos[language].Titulo4.Subtitulo}
             />
-        <div id="ImagenYGrid2" className={styles.contenedorPadre}>
+            <div id="ImagenYGrid2" className={styles.contenedorPadre}>
 
-            <div className={styles.contenedorHijo}>
-                {/* Imagen principal a la izquierda */}
-                <div className={styles.contenedorIzquierdo}>
-                    <img src={imagenes.imagenPrincipal} alt="Imagen principal" className={styles.imagen} />
-                </div>
-
-                {/* Contenido a la derecha */}
-                <div className={styles.contenedorDerecho}>
-                    {/* Títulos superiores */}
-                    <div className={styles.contenedorSuperior}>
-                        <p className={styles.textoSuperior}>{textos.tituloSuperior}</p>
-                        <p className={styles.textoInferior}>{textos.tituloInferior}</p>
+                <div className={styles.contenedorHijo}>
+                    {/* Imagen principal a la izquierda */}
+                    <div className={styles.contenedorIzquierdo}>
+                        <img src={imagenes.imagenPrincipal} alt="Imagen principal" className={styles.imagen}/>
                     </div>
 
-                    {/* Sección de reconocimientos */}
-                    <div className={styles.contenedorMedio}>
-                        <div className={styles.contenedorMedioIzquierdo}>
-                            <div className={styles.contenedorLogoTexto}>
-                                <img src={imagenes.logo1} alt="Reconocimiento 1" className={styles.logo} />
-                                <p className={styles.textoLogo}>{textos.reconocimiento1}</p>
-                            </div>
+                    {/* Contenido a la derecha */}
+                    <div className={styles.contenedorDerecho}>
+                        {/* Títulos superiores */}
+                        <div className={styles.contenedorSuperior}>
+                            <p className={styles.textoSuperior}>{textos.tituloSuperior}</p>
+                            <p className={styles.textoInferior}>{textos.tituloInferior}</p>
                         </div>
-                        <div className={styles.contenedorMedioDerecho}>
-                            <div className={styles.contenedorLogoTexto}>
-                                <img src={imagenes.logo2} alt="Reconocimiento 2" className={styles.logo} />
-                                <p className={styles.textoLogo}>{textos.reconocimiento2}</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    {/* Botones de acción */}
-                    <div className={styles.contenedorInferior}>
-                        <div className={styles.contenedorInferiorIzquierdo}>
-                            <div className={styles.botonContenedorIzquierdo}>
-                                <img src={imagenes.boton1ImagenIzquierda} alt="Icono izquierda" className={styles.imagenBoton} />
-                                <div className={styles.textosBoton}>
-                                    <p className={styles.tituloBotonIzquierdo}>{textos.boton1.titulo}</p>
-                                    <p className={styles.subtituloBotonIzquierdo}>{textos.boton1.subtitulo}</p>
+                        {/* Sección de reconocimientos */}
+                        <div className={styles.contenedorMedio}>
+                            <div className={styles.contenedorMedioIzquierdo}>
+                                <div className={styles.contenedorLogoTexto}>
+                                    <img src={imagenes.logo1} alt="Reconocimiento 1" className={styles.logo}/>
+                                    <p className={styles.textoLogo}>{textos.reconocimiento1}</p>
                                 </div>
-                                <div className={styles.iconoContenedorDerecho}>
-                                    <ScrollLink to="/Lidermania#DonaRotativa2" scrollMode="top" className={styles.TextoContenedorBotonD} >
-                                        ➔
-                                    </ScrollLink>
+                            </div>
+                            <div className={styles.contenedorMedioDerecho}>
+                                <div className={styles.contenedorLogoTexto}>
+                                    <img src={imagenes.logo2} alt="Reconocimiento 2" className={styles.logo}/>
+                                    <p className={styles.textoLogo}>{textos.reconocimiento2}</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className={styles.contenedorInferiorDerecho}>
-                            <div className={styles.botonContenedorDerecho}>
-                                <img src={imagenes.boton2ImagenIzquierda} alt="Icono izquierda" className={styles.imagenBoton} />
-                                <div className={styles.textosBoton}>
-                                    <p className={styles.tituloBotonDerecho}>{textos.boton2.titulo}</p>
-                                    <p className={styles.subtituloBotonDerecho}>{textos.boton2.subtitulo}</p>
+                        {/* Botones de acción */}
+                        <div className={styles.contenedorInferior}>
+                            <div className={styles.contenedorInferiorIzquierdo}>
+                                <div className={styles.botonContenedorIzquierdo}>
+                                    <img src={imagenes.boton1ImagenIzquierda} alt="Icono izquierda"
+                                         className={styles.imagenBoton}/>
+                                    <div className={styles.textosBoton}>
+                                        <p className={styles.tituloBotonIzquierdo}>{textos.boton1.titulo}</p>
+                                        <p className={styles.subtituloBotonIzquierdo}>{textos.boton1.subtitulo}</p>
+                                    </div>
+                                    <div className={styles.iconoContenedorDerecho}>
+                                        <ScrollLink to="/Lidermania#DonaRotativa2" scrollMode="top"
+                                                    className={styles.TextoContenedorBotonD}>
+                                            ➔
+                                        </ScrollLink>
+                                    </div>
                                 </div>
-                                <div className={styles.iconoContenedorIzquierdo}>
-                                    {/*<div >*/}
-                                    {/*    ➔*/}
-                                    {/*</div>*/}
-                                    <ScrollLink to="/Lidermania#CarruselDeTrabajos" scrollMode="top" className={styles.TextoContenedorBotonI} >
-                                        ➔
-                                    </ScrollLink>
+                            </div>
+
+                            <div className={styles.contenedorInferiorDerecho}>
+                                <div className={styles.botonContenedorDerecho}>
+                                    <img src={imagenes.boton2ImagenIzquierda} alt="Icono izquierda"
+                                         className={styles.imagenBoton}/>
+                                    <div className={styles.textosBoton}>
+                                        <p className={styles.tituloBotonDerecho}>{textos.boton2.titulo}</p>
+                                        <p className={styles.subtituloBotonDerecho}>{textos.boton2.subtitulo}</p>
+                                    </div>
+                                    <div className={styles.iconoContenedorIzquierdo}>
+                                        {/*<div >*/}
+                                        {/*    ➔*/}
+                                        {/*</div>*/}
+                                        <ScrollLink to="/Lidermania#CarruselDeTrabajos" scrollMode="top"
+                                                    className={styles.TextoContenedorBotonI}>
+                                            ➔
+                                        </ScrollLink>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     );
 }
