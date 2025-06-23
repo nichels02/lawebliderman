@@ -19,12 +19,14 @@ function BarraDeOpciones3() {
     const { language, setLanguage } = useLanguage();
     const content = useContent();
 
+    const toggleButtonRef = useRef<HTMLButtonElement>(null);
+    const barraRef = useRef<HTMLDivElement>(null);
+
+    const lastCloseTimeRef = useRef<number>(0);
     const [showBar, setShowBar] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false);
     const [showLanguagePanel, setShowLanguagePanel] = useState(false);
     const [svgColor, setSvgColor] = useState(isDarkModeEnabled() ? "#FFFFFF" : "#393939");
-
-    const barraRef = useRef<HTMLDivElement>(null); // <<< NUEVO
 
     useEffect(() => {
         setSVGColorGlobal = setSvgColor;
@@ -42,7 +44,16 @@ function BarraDeOpciones3() {
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
-            if (barraRef.current && !barraRef.current.contains(event.target as Node)) {
+            const target = event.target as Node;
+
+            const clickedInsideBar = barraRef.current?.contains(target);
+            const clickedToggleButton = toggleButtonRef.current?.contains(target);
+
+            if (!clickedInsideBar) {
+                setShowBar(false);
+                lastCloseTimeRef.current = Date.now(); // ← esto es clave
+            }
+            else if(clickedToggleButton) {
                 setShowBar(false);
             }
         }
@@ -54,7 +65,7 @@ function BarraDeOpciones3() {
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [showBar]); // <<< NUEVO
+    }, [showBar]);
 
     if (!content || !content.home || !content.home.BarraDeOpciones || !content.home.BarraDeOpciones2) {
         return <p>Cargando...</p>;
@@ -66,7 +77,16 @@ function BarraDeOpciones3() {
     return (
         <>
             {/* Botón SIEMPRE visible para abrir la barra */}
-            <button className={styles.toggleButton} onClick={() => setShowBar(!showBar)}>
+            <button
+                ref={toggleButtonRef}
+                className={styles.toggleButton}
+                onClick={() => {
+                    const now = Date.now();
+                    if (!showBar && now - lastCloseTimeRef.current > 500) {
+                        setShowBar(true);
+                    }
+                }}
+            >
                 ☰
             </button>
 
@@ -95,6 +115,9 @@ function BarraDeOpciones3() {
 
                 <Link to="/Lidermania" className={styles.boton} onClick={() => setShowBar(!showBar)}>
                     {textos1.lidermania} <span className={styles.highlight}>{textos1.unete}</span>
+                </Link>
+                <Link to="/Legal" className={styles.boton}>
+                    {textos1.Legal}
                 </Link>
 
                 <ScrollLink to={`${location.pathname}#FormularioDeContacto`}

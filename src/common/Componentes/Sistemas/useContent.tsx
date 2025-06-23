@@ -84,6 +84,7 @@ interface ContentData {
                 tecnologia: string;
                 lidermania: string;
                 unete: string;
+                Legal: string;
             },
             en: {
                 inicio: string;
@@ -94,6 +95,7 @@ interface ContentData {
                 tecnologia: string;
                 lidermania: string;
                 unete: string;
+                Legal: string;
             };
         };
         BarraDeOpciones2: {

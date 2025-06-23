@@ -98,11 +98,16 @@
     letter-spacing: 0.2px;
 }
 
+@media(max-width: 1330px){
+    .barra{
+        width: 45vw;
+    }
+}
+
 /* Ajustes para tablets */
 @media(max-width:  1200px){
 
     .barra {
-        width: 45vw;
         min-width: 0px;
         max-width: 672px;
         height: 3.5vw;
@@ -117,9 +122,16 @@
         font-size: clamp(1rem, 0.9vw, 1.1rem);
     }
 }
+@media (max-width: 1120px) {
+    .barra{
+        transform: translateX(-60%);
+        width: 50vw;
+    }
+
+}
 @media (max-width: 1024px) {
     .barra {
-        width: 35vw;
+        width: 45vw;
         padding: 4px 6px;
     }
 

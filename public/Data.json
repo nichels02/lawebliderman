@@ -79,7 +79,8 @@
         "servicio": "Servicio",
         "tecnologia": "Tecnología",
         "lidermania": "Lidermania",
-        "unete": "Únete"
+        "unete": "Únete",
+        "Legal": "Legal"
       },
       "en": {
         "inicio": "Home",
@@ -89,7 +90,8 @@
         "servicio": "Service",
         "tecnologia": "Technology",
         "lidermania": "Lidermania",
-        "unete": "Join"
+        "unete": "Join",
+        "Legal": "Legal"
       }
     },
     "BarraDeOpciones2": {

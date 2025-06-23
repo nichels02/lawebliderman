@@ -76,6 +76,10 @@ function BarraDeOpciones() {
             <Link to="/Lidermania" className={styles.boton}>
                 {textos.lidermania} <span className={styles.highlight}>{textos.unete}</span>
             </Link>
+
+            <Link to="/Legal" className={styles.boton}>
+                {textos.Legal}
+            </Link>
         </div>
     );
 }
