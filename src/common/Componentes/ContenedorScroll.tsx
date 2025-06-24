@@ -335,7 +335,7 @@
 //                             top: `${(point.y / 54670.84) * 100}%`,
 //                         }}
 //                     >
-//                         <img
+//                         <LazyImage
 //                             src={imagenPunto}
 //                             alt="Punto"
 //                             className={styles.punto}
@@ -376,7 +376,7 @@
 //                             <p className={styles.textoCaja}>{item.texto}</p>
 //                         </div>
 //                         <div className={styles.columnaImagen}>
-//                             <img src={item.imagenUrl} alt={`Imagen ${index + 1}`} className={styles.imagenCaja} />
+//                             <LazyImage src={item.imagenUrl} alt={`Imagen ${index + 1}`} className={styles.imagenCaja} />
 //                         </div>
 //                     </div>
 //                 ))}

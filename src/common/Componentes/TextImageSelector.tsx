@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "../css/TextImageSelector.module.css";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 interface Item {
     description: string;
@@ -26,7 +27,7 @@ function TextImageSelector({
                 <div className={styles.textContainer}>
                     <p className={styles.description}>{items[activeIndex].description}</p>
                 </div>
-                <img
+                <LazyImage
                     className={styles.image}
                     src={items[activeIndex].image}
                     alt="Contenido visual"

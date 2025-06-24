@@ -7,6 +7,7 @@ import { CustomArrowProps } from "react-slick";
 import { CSSProperties } from "react";
 import { useContent } from "./Sistemas/useContent";
 import { useLanguage } from "./Sistemas/LanguageContext";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 const CustomPrevArrow = ({ className, style, onClick }: CustomArrowProps) => {
     return (
@@ -82,7 +83,7 @@ export default function Header() {
                 className={styles.backgroundOverlay}
                 style={{ backgroundImage: `url(${commonData.imagenDeFondo})` }}
             />
-            <img src={commonData.logo} className="logoHeader" alt="Logo" />
+            <LazyImage src={commonData.logo} className="logoHeader" alt="Logo" />
 
             <div className={styles.overlay}>
                 <div className={styles.content}>
@@ -94,7 +95,7 @@ export default function Header() {
 
                     {/* Imagen dinámica a la derecha */}
                     <div className={styles.imageContainer}>
-                        <img src={imagenActual} alt={altActual} />
+                        <LazyImage src={imagenActual} alt={altActual} />
                     </div>
                 </div>
 

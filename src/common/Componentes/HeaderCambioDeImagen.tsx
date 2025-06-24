@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "../css/HeaderCambioDeImagen.module.css";
 import { useContent } from "./Sistemas/useContent.tsx";
 import { useLanguage } from "./Sistemas/LanguageContext.tsx";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 type Boton = {
     Nombre: string;
@@ -48,7 +49,7 @@ function HeaderCambioDeImagen() {
                 className={styles.backgroundOverlay}
                 style={{ backgroundImage: `url(${content?.Common?.Fondo ?? ""})` }}
             />
-            <img
+            <LazyImage
                 src={content?.Common?.logo}
                 alt="Logo"
                 className="logoHeader"
@@ -65,7 +66,7 @@ function HeaderCambioDeImagen() {
                 </div>
 
                 <div className={styles.contenedorImagen}>
-                    <img
+                    <LazyImage
                         src={imagenActual}
                         alt="Imagen Principal"
                         className={styles.imagenPrincipal}

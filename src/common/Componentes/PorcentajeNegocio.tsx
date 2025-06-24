@@ -3,6 +3,7 @@ import { Chart, ActiveElement, ChartConfiguration } from 'chart.js/auto';
 import styles from '../css/PorcentajeNegocio.module.css';
 import { useContent } from './Sistemas/useContent.tsx';
 import { useLanguage } from './Sistemas/LanguageContext.tsx';
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 function PorcentajeNegocio() {
     const chartRef = useRef<HTMLCanvasElement>(null);
@@ -102,7 +103,7 @@ function PorcentajeNegocio() {
     return (
         <div id="PorcentajeNegocio" className={styles.contenedorPadre}>
             <div className={styles.contenedorImagenGrande}>
-                <img src={selectedImage} alt="Imagen dinámica" className={styles.imagenGrande} />
+                <LazyImage src={selectedImage} alt="Imagen dinámica" className={styles.imagenGrande} />
 
                 {showOtrosText ? (
                     <div className={styles.contenedorFondo2}></div>

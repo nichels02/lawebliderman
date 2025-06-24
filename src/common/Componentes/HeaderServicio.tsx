@@ -1,5 +1,6 @@
 // HeaderServicio.tsx
 import styles from "../css/HeaderServicio.module.css";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 interface HeaderServicioProps {
     fondo: string;
@@ -19,13 +20,13 @@ function HeaderServicio({
     return (
         <header className={styles.header}>
             <div className={styles.headerImageContainer}>
-                <img
+                <LazyImage
                     src={fondo}
                     alt="Header Fondo"
                     className={styles.headerImage}
                 />
             </div>
-            <img src={logo} alt="Logo" className="logoHeader" />
+            <LazyImage src={logo} alt="Logo" className="logoHeader" />
             <div className={styles.container}>
                 <div className={styles.left}>
                     <div className={styles.contenedorFondo}></div>
@@ -33,7 +34,7 @@ function HeaderServicio({
                     <p className={styles.text}>{texto}</p>
                 </div>
                 <div className={styles.right}>
-                    <img src={imagenLateral} alt="Imagen descriptiva" />
+                    <LazyImage src={imagenLateral} alt="Imagen descriptiva" />
                 </div>
             </div>
         </header>

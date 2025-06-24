@@ -3,6 +3,7 @@ import { useContent } from './Sistemas/useContent.tsx';
 import { useLanguage } from './Sistemas/LanguageContext.tsx';
 import ScrollLink from "./Sistemas/ScrollLink.tsx";
 import TituloYSubtituloGenerico from "./TituloYSubtituloGenerico.tsx";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 function ImagenYGrid2() {
     const content = useContent();
@@ -27,7 +28,7 @@ function ImagenYGrid2() {
                 <div className={styles.contenedorHijo}>
                     {/* Imagen principal a la izquierda */}
                     <div className={styles.contenedorIzquierdo}>
-                        <img src={imagenes.imagenPrincipal} alt="Imagen principal" className={styles.imagen}/>
+                        <LazyImage src={imagenes.imagenPrincipal} alt="Imagen principal" className={styles.imagen}/>
                     </div>
 
                     {/* Contenido a la derecha */}
@@ -42,13 +43,13 @@ function ImagenYGrid2() {
                         <div className={styles.contenedorMedio}>
                             <div className={styles.contenedorMedioIzquierdo}>
                                 <div className={styles.contenedorLogoTexto}>
-                                    <img src={imagenes.logo1} alt="Reconocimiento 1" className={styles.logo}/>
+                                    <LazyImage src={imagenes.logo1} alt="Reconocimiento 1" className={styles.logo}/>
                                     <p className={styles.textoLogo}>{textos.reconocimiento1}</p>
                                 </div>
                             </div>
                             <div className={styles.contenedorMedioDerecho}>
                                 <div className={styles.contenedorLogoTexto}>
-                                    <img src={imagenes.logo2} alt="Reconocimiento 2" className={styles.logo}/>
+                                    <LazyImage src={imagenes.logo2} alt="Reconocimiento 2" className={styles.logo}/>
                                     <p className={styles.textoLogo}>{textos.reconocimiento2}</p>
                                 </div>
                             </div>
@@ -58,7 +59,7 @@ function ImagenYGrid2() {
                         <div className={styles.contenedorInferior}>
                             <div className={styles.contenedorInferiorIzquierdo}>
                                 <div className={styles.botonContenedorIzquierdo}>
-                                    <img src={imagenes.boton1ImagenIzquierda} alt="Icono izquierda"
+                                    <LazyImage src={imagenes.boton1ImagenIzquierda} alt="Icono izquierda"
                                          className={styles.imagenBoton}/>
                                     <div className={styles.textosBoton}>
                                         <p className={styles.tituloBotonIzquierdo}>{textos.boton1.titulo}</p>
@@ -75,7 +76,7 @@ function ImagenYGrid2() {
 
                             <div className={styles.contenedorInferiorDerecho}>
                                 <div className={styles.botonContenedorDerecho}>
-                                    <img src={imagenes.boton2ImagenIzquierda} alt="Icono izquierda"
+                                    <LazyImage src={imagenes.boton2ImagenIzquierda} alt="Icono izquierda"
                                          className={styles.imagenBoton}/>
                                     <div className={styles.textosBoton}>
                                         <p className={styles.tituloBotonDerecho}>{textos.boton2.titulo}</p>

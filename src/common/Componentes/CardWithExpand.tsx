@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useLanguage } from "./Sistemas/LanguageContext";
 import { useContent } from "./Sistemas/useContent.tsx";
 import styles from "../css/CardWithExpand.module.css";
+import LazyImage from './Sistemas/LazyImage.tsx'; // o ajusta el path si está en otro lado
 
 function CardWithExpand() {
     const [expandedIndex, setExpandedIndex] = useState<number>(0); // Inicia con el primer card expandido
@@ -43,7 +44,7 @@ function CardWithExpand() {
                         onMouseEnter={() => setExpandedIndex(0)}
                         onClick={() => setExpandedIndex(0)}
                     >
-                        <img
+                        <LazyImage
                             src={content.home.CardWithExpand.Seguridad.imageUrl}
                             alt={seguridad.title}
                             className={`${styles.img} ${styles.seguridad}`}
@@ -67,7 +68,7 @@ function CardWithExpand() {
                         onMouseEnter={() => setExpandedIndex(1)}
                         onClick={() => setExpandedIndex(1)}
                     >
-                        <img
+                        <LazyImage
                             src={content.home.CardWithExpand.Servicios.imageUrl}
                             alt={servicios.title}
                             className={`${styles.img} ${styles.servicios}`}
@@ -101,7 +102,7 @@ function CardWithExpand() {
                         onMouseEnter={() => setExpandedIndex(2)}
                         onClick={() => setExpandedIndex(2)}
                     >
-                        <img
+                        <LazyImage
                             src={content.home.CardWithExpand.Tecnologia.imageUrl}
                             alt={tecnologia.title}
                             className={`${styles.img} ${styles.tecnologia}`}

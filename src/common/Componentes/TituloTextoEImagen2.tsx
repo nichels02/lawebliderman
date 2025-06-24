@@ -1,6 +1,7 @@
 import { useContent } from "./Sistemas/useContent.tsx";
 import { useLanguage } from "./Sistemas/LanguageContext.tsx";
 import styles from "../css/TituloTextoEImagen2.module.css";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 function TituloTextoEImagen2() {
     const contentData = useContent();
@@ -40,7 +41,7 @@ function TituloTextoEImagen2() {
                     <p className={styles.text}>{subtitulo2}</p>
                 </div>
                 <div className={styles.imageContainer}>
-                    <img className={styles.image} src={imagenUrl} alt="Ejemplo" />
+                    <LazyImage className={styles.image} src={imagenUrl} alt="Ejemplo" />
                 </div>
             </div>
         </div>

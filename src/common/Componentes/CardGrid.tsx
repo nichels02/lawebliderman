@@ -1,6 +1,7 @@
 import styles from "../css/CardGrid.module.css";
 import { useContent } from "./Sistemas/useContent.tsx";
 import { useLanguage } from "./Sistemas/LanguageContext.tsx";
+import LazyImage from './Sistemas/LazyImage.tsx'; // o ajusta el path si está en otro lado
 
 function CardGrid() {
     const content = useContent();
@@ -24,7 +25,7 @@ function CardGrid() {
 
                 return (
                     <div key={cardNumber} className={styles.card}>
-                        <img
+                        <LazyImage
                             className={styles.image}
                             src={Common[imageKey]}
                             alt={currentLang[textKey]}

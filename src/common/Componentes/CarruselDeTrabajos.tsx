@@ -4,6 +4,7 @@ import styles from '../css/CarruselDeTrabajos.module.css';
 import { Trabajo } from './Sistemas/trabajos.interface';
 import { useLanguage } from './Sistemas/LanguageContext.tsx';
 import { useContent } from './Sistemas/useContent.tsx';
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 interface CarruselDeTrabajosProps {
     trabajos: Trabajo[];
@@ -83,7 +84,7 @@ function CarruselDeTrabajos({ trabajos, iconoNoHayTrabajos }: CarruselDeTrabajos
             >
                 <h3 className={styles.title}>{datos.Titulo}</h3>
                 <div className={styles.location}>
-                    <img
+                    <LazyImage
                         src={useContent()?.Lidermania.CarruselDeTrabajos.Common.IconoDeUbicacion}
                         alt="Ubicación"
                         className={styles.locationIcon}
@@ -102,7 +103,7 @@ function CarruselDeTrabajos({ trabajos, iconoNoHayTrabajos }: CarruselDeTrabajos
                     className={styles.link}
                 >
                     {datos.MasInformacion}
-                    <img
+                    <LazyImage
                         src={item.Common.Logo}
                         alt="Más información"
                         className={styles.linkIcon}
@@ -115,7 +116,7 @@ function CarruselDeTrabajos({ trabajos, iconoNoHayTrabajos }: CarruselDeTrabajos
     if (trabajos.length === 0) {
         return (
             <div className={styles.container}>
-                <img
+                <LazyImage
                     src={iconoNoHayTrabajos}
                     alt="No hay trabajos"
                     className={styles.noJobsIcon}

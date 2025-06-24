@@ -1,6 +1,7 @@
 // import { useEffect } from "react";
 import styles from "../css/RedireccionamientoAFacebookTrabajos.module.css";
 import imagen1 from "/assets/Lidermania/Banner-trabaja-con-nosotros.jpg"
+import LazyImage from './Sistemas/LazyImage.tsx';
 // import { useContent } from "./Sistemas/useContent.tsx";
 
 function RedireccionamientoAFacebookTrabajos() {
@@ -9,7 +10,7 @@ function RedireccionamientoAFacebookTrabajos() {
         <div className={styles.ContenedorPadre}>
             <div className={styles.ContenedorCentrado}>
                 <div className={styles.ContenedorImagen}>
-                    <img src={imagen1} className={styles.Laimagen}/>
+                    <LazyImage src={imagen1} className={styles.Laimagen}/>
                     <div className={styles.ContenedorInterno}>
                         <div className={styles.ContenedorGrid}>
                             <p className={styles.Texto}>

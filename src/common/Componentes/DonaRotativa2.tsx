@@ -3,6 +3,7 @@ import { Chart, ArcElement, DoughnutController, ChartEvent, ActiveElement } from
 import styles from '../css/DonaRotativa2.module.css';
 import { useContent } from './Sistemas/useContent.tsx';
 import { useLanguage } from './Sistemas/LanguageContext.tsx';
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 // Registrar los componentes necesarios de Chart.js
 Chart.register(ArcElement, DoughnutController);
@@ -125,7 +126,7 @@ function DonaRotativa2() {
     return (
         <div id="DonaRotativa2" className={styles.wrapper}>
             <div className={styles.imageContainer}>
-                <img
+                <LazyImage
                     src={segments[getActiveSegmentIndex()].image || 'fallback.jpg'}
                     alt="Fondo dinámico"
                     className={styles.backgroundImage}

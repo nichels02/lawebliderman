@@ -2,6 +2,7 @@ import { useContent } from "./Sistemas/useContent";
 import { useLanguage } from "./Sistemas/LanguageContext";
 import styles from "../css/Header1.module.css";
 import ScrollLink from "./Sistemas/ScrollLink.tsx";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 function Header1() {
     const { language } = useLanguage();
@@ -16,7 +17,7 @@ function Header1() {
     return (
         <header id="Home1" className={styles.header}>
             <div className={styles.headerImageContainer}>
-                <img src={imagenes.imagen_De_Fondo} alt="Header Image" className={styles.headerImage} />
+                <LazyImage src={imagenes.imagen_De_Fondo} alt="Header Image" className={styles.headerImage} />
                 <div className={styles.textContainer}>
                     <h1 className={styles.text1}>{textos.titulo}</h1>
                     <p className={styles.text2}>{textos.subtitulo}</p>
@@ -30,7 +31,7 @@ function Header1() {
                         {textos.botonSecundario}
                     </ScrollLink>
                 </div>
-                <img src={imagenes.logo} alt="Logo" className="logoHeader" />
+                <LazyImage src={imagenes.logo} alt="Logo" className="logoHeader" />
             </div>
             <div className={styles.centeredBottomContainer}>
                 <div className={styles.gridItemTop}>{textos.Numero_trabajadores}</div>

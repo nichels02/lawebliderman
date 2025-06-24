@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useContent } from './Sistemas/useContent.tsx'; // Ajusta la ruta según corresponda
 import { useLanguage } from './Sistemas/LanguageContext.tsx'; // Ajusta la ruta según corresponda
 import styles from '../css/FlechaGiro.module.css';
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 function FlechaGiro() {
     const content = useContent();
@@ -103,7 +104,7 @@ function FlechaGiro() {
     return (
         <div className={styles.contenedorPadre} onMouseMove={handleMouseMove}>
             <div className={styles.contenedorImagen}>
-                <img
+                <LazyImage
                     src={content.Seguridad.FlechaGiro.Contenido.ImagenFlecha}
                     alt="Flecha"
                     style={{ transform: `rotate(${rotationAngle}deg)`, transition: 'transform 0.3s ease' }}

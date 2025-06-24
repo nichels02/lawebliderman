@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useContent } from "./Sistemas/useContent";  // Importar el contexto de contenido
+import LazyImage from './Sistemas/LazyImage.tsx';
+
 import { useLanguage } from "./Sistemas/LanguageContext";  // Importar el contexto de idioma
 import styles from "../css/VentanaModal4.module.css";
 
@@ -77,7 +79,7 @@ function VentanaModal4({ onClose }: { onClose: () => void }) {
                             {/* Fila única con 4 contenedores */}
                             <div className={styles.row}>
                                 <div className={styles.container}>
-                                    <img
+                                    <LazyImage
                                         className={styles.image}
                                         src={modalData.Common.Imagen1}
                                         alt="Función 1"
@@ -87,7 +89,7 @@ function VentanaModal4({ onClose }: { onClose: () => void }) {
                                 </div>
 
                                 <div className={styles.container}>
-                                    <img
+                                    <LazyImage
                                         className={styles.image}
                                         src={modalData.Common.Imagen2}
                                         alt="Función 2"
@@ -97,7 +99,7 @@ function VentanaModal4({ onClose }: { onClose: () => void }) {
                                 </div>
 
                                 <div className={styles.container}>
-                                    <img
+                                    <LazyImage
                                         className={styles.image}
                                         src={modalData.Common.Imagen3}
                                         alt="Función 3"
@@ -107,7 +109,7 @@ function VentanaModal4({ onClose }: { onClose: () => void }) {
                                 </div>
 
                                 <div className={styles.container}>
-                                    <img
+                                    <LazyImage
                                         className={styles.image}
                                         src={modalData.Common.Imagen4}
                                         alt="Función 4"

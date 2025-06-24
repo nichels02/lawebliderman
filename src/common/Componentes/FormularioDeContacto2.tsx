@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useContent } from './Sistemas/useContent.tsx'; // o el path correcto
 import { useLanguage } from './Sistemas/LanguageContext.tsx';
 import TituloYSubtituloGenerico from "./TituloYSubtituloGenerico.tsx";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 interface ArrowProps {
     className?: string;
@@ -245,7 +246,7 @@ const FormularioDeContacto2 = () => {
 
     return (
         <div id="FormularioDeContacto" className={styles.contenedorPagina}>
-            <img src={content?.home.Formulario.common.imagenDeFondo} alt="Fondo" className={styles.ImagenFondo} />
+            <LazyImage src={content?.home.Formulario.common.imagenDeFondo} alt="Fondo" className={styles.ImagenFondo} />
             <TituloYSubtituloGenerico
                 titulo={content?.home.Formulario[language].TituloPrincipal|| ''}
                 subtitulo={content?.home.Formulario[language].SubtituloPrincipal|| ''}
@@ -256,7 +257,7 @@ const FormularioDeContacto2 = () => {
 
 
                 <div className={styles.InfoExtra1}>
-                    <img src={content?.home.Formulario.common.Colaboradores} alt="Imagen 1" className={styles.InfoExtraImagen} />
+                    <LazyImage src={content?.home.Formulario.common.Colaboradores} alt="Imagen 1" className={styles.InfoExtraImagen} />
                     <div className={styles.InfoExtraTexto}>
                         <h3 className={styles.InfoExtraTitulo}>{content?.home.Formulario[language].Colaboradores.Titulo}</h3>
                         <p className={styles.InfoExtraNumero}>{content?.home.Formulario[language].Colaboradores.Numero}</p>
@@ -264,7 +265,7 @@ const FormularioDeContacto2 = () => {
                 </div>
 
                 <div className={styles.InfoExtra2}>
-                    <img src={content?.home.Formulario.common.CoberturaDeRiesgo} alt="Imagen 1" className={styles.InfoExtraImagen} />
+                    <LazyImage src={content?.home.Formulario.common.CoberturaDeRiesgo} alt="Imagen 1" className={styles.InfoExtraImagen} />
                     <div className={styles.InfoExtraTexto}>
                         <h3 className={styles.InfoExtraTitulo}>{content?.home.Formulario[language].CoberturaDeRiesgo.Titulo}</h3>
                         <p className={styles.InfoExtraNumero}>{content?.home.Formulario[language].CoberturaDeRiesgo.Numero}</p>
@@ -414,7 +415,7 @@ const FormularioDeContacto2 = () => {
                         </form>
                     </div>
                     <div className={styles.contenedorExtraInferior}>
-                        <img src={content?.home.Formulario.common.ImagenContenedorInferior} alt="Logo de la empresa" />
+                        <LazyImage src={content?.home.Formulario.common.ImagenContenedorInferior} alt="Logo de la empresa" />
                         <div>
                             <p className={styles.textoEncabezado}>{ContenedorInferior.oficina.titulo}</p>
                             <p className={styles.textoPrincipal}>{ContenedorInferior.oficina.principal}</p>
@@ -428,7 +429,7 @@ const FormularioDeContacto2 = () => {
                     </div>
                 </div>
 
-                <img src={imagenActual} alt="Ilustración" className={styles.imagenLateral} />
+                <LazyImage src={imagenActual} alt="Ilustración" className={styles.imagenLateral} />
             </div>
         </div>
     );

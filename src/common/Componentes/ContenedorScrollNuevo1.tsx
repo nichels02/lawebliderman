@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import styles from "../css/ContenedorScrollNuevo1.module.css";
 import { useContent } from "./Sistemas/useContent.tsx";
 import { useLanguage } from "./Sistemas/LanguageContext.tsx";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 function ContenedorScrollNuevo1() {
     const content = useContent();
@@ -109,14 +110,14 @@ function ContenedorScrollNuevo1() {
             style={{ cursor: isDragging ? "grabbing" : "grab" }}
         >
             <div className={styles.contenedorInterno}>
-                <img
+                <LazyImage
                     src={content?.Conocenos.contenedorScroll.common.LineaDeTiempo}
                     alt="Línea de tiempo"
                     className={styles.lineaDeTiempoImg}
                     draggable={false}
                 />
                 <div className={styles.Posicion1}>
-                    <img
+                    <LazyImage
                         src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
                         alt="Punto 1"
                         className={styles.EstiloGeneralPunto}
@@ -132,7 +133,7 @@ function ContenedorScrollNuevo1() {
                         <p className={styles.texto}>
                             {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor1.Texto}
                         </p>
-                        <img
+                        <LazyImage
                             src={content?.Conocenos.contenedorScroll.common.items.Contenedor1.src}
                             alt={content?.Conocenos.contenedorScroll.common.items.Contenedor1.alt}
                             className={styles.Imagen}
@@ -148,7 +149,7 @@ function ContenedorScrollNuevo1() {
 
                 </div>
                 <div className={styles.Posicion2}>
-                    <img
+                    <LazyImage
                         src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
                         alt="Punto 2"
                         className={styles.EstiloGeneralPunto}
@@ -162,7 +163,7 @@ function ContenedorScrollNuevo1() {
                     </div>
                 </div>
                 <div className={styles.Posicion3}>
-                    <img
+                    <LazyImage
                         src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
                         alt="Punto 3"
                         className={styles.EstiloGeneralPunto}
@@ -176,7 +177,7 @@ function ContenedorScrollNuevo1() {
                     </div>
                 </div>
                 <div className={styles.Posicion4}>
-                    <img
+                    <LazyImage
                         src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
                         alt="Punto 4"
                         className={styles.EstiloGeneralPunto}
@@ -189,7 +190,7 @@ function ContenedorScrollNuevo1() {
                         <p className={styles.texto}>
                             {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor2.Texto}
                         </p>
-                        <img
+                        <LazyImage
                             src={content?.Conocenos.contenedorScroll.common.items.Contenedor2.src}
                             alt={content?.Conocenos.contenedorScroll.common.items.Contenedor2.alt}
                             className={styles.Imagen}
@@ -199,7 +200,7 @@ function ContenedorScrollNuevo1() {
                     <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor4.fecha}</span>
                 </div>
                 <div className={styles.Posicion5}>
-                    <img
+                    <LazyImage
                         src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
                         alt="Punto 5"
                         className={styles.EstiloGeneralPunto}
@@ -213,7 +214,7 @@ function ContenedorScrollNuevo1() {
                         <p className={styles.texto}>
                             {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor3.Texto}
                         </p>
-                        <img
+                        <LazyImage
                             src={content?.Conocenos.contenedorScroll.common.items.Contenedor3.src}
                             alt={content?.Conocenos.contenedorScroll.common.items.Contenedor3.alt}
                             className={styles.Imagen}
@@ -227,7 +228,7 @@ function ContenedorScrollNuevo1() {
                     </div>
                 </div>
                 <div className={styles.Posicion6}>
-                    <img
+                    <LazyImage
                         src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
                         alt="Punto 6"
                         className={styles.EstiloGeneralPunto}
@@ -241,7 +242,7 @@ function ContenedorScrollNuevo1() {
                         <p className={styles.texto}>
                             {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor4.Texto}
                         </p>
-                        <img
+                        <LazyImage
                             src={content?.Conocenos.contenedorScroll.common.items.Contenedor4.src}
                             alt={content?.Conocenos.contenedorScroll.common.items.Contenedor4.alt}
                             className={styles.Imagen}
@@ -250,7 +251,7 @@ function ContenedorScrollNuevo1() {
                     </div>
                 </div>
                 <div className={styles.Posicion7}>
-                    <img
+                    <LazyImage
                         src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
                         alt="Punto 7"
                         className={styles.EstiloGeneralPunto}
@@ -264,7 +265,7 @@ function ContenedorScrollNuevo1() {
                     </div>
                 </div>
                 <div className={styles.Posicion8}>
-                    <img
+                    <LazyImage
                         src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
                         alt="Punto 8"
                         className={styles.EstiloGeneralPunto}
@@ -278,7 +279,7 @@ function ContenedorScrollNuevo1() {
                     </div>
                 </div>
                 <div className={styles.Posicion9}>
-                    <img
+                    <LazyImage
                         src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
                         alt="Punto 9"
                         className={styles.EstiloGeneralPunto}
@@ -292,7 +293,7 @@ function ContenedorScrollNuevo1() {
                         <p className={styles.texto}>
                             {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor5.Texto}
                         </p>
-                        <img
+                        <LazyImage
                             src={content?.Conocenos.contenedorScroll.common.items.Contenedor5.src}
                             alt={content?.Conocenos.contenedorScroll.common.items.Contenedor5.alt}
                             className={styles.Imagen}
@@ -301,7 +302,7 @@ function ContenedorScrollNuevo1() {
                     </div>
                 </div>
                 <div className={styles.Posicion10}>
-                    <img
+                    <LazyImage
                         src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
                         alt="Punto 10"
                         className={styles.EstiloGeneralPunto}
@@ -315,7 +316,7 @@ function ContenedorScrollNuevo1() {
                     </div>
                 </div>
                 <div className={styles.Posicion11}>
-                    <img
+                    <LazyImage
                         src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
                         alt="Punto 11"
                         className={styles.EstiloGeneralPunto}
@@ -329,7 +330,7 @@ function ContenedorScrollNuevo1() {
                         <p className={styles.texto}>
                             {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor6.Texto}
                         </p>
-                        <img
+                        <LazyImage
                             src={content?.Conocenos.contenedorScroll.common.items.Contenedor6.src}
                             alt={content?.Conocenos.contenedorScroll.common.items.Contenedor6.alt}
                             className={styles.Imagen}

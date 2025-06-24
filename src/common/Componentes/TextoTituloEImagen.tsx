@@ -1,5 +1,6 @@
 import { useState } from 'react'; // Importamos solo useState
 import styles from '../css/TextoTituloEImagen.module.css';
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 // Definimos una interfaz para las props
 interface TextoTituloEImagenProps {
@@ -29,7 +30,7 @@ function TextoTituloEImagen({ titulo, texto, imagenes, textosBotones, imagenALaI
                 {imagenALaIzquierda ? (
                     <>
                         <div className={styles.imagenContainer}>
-                            <img src={imagenes[imagenActual]} alt="Imagen" className={styles.imagen} />
+                            <LazyImage src={imagenes[imagenActual]} alt="Imagen" className={styles.imagen} />
                         </div>
                         <div className={generarClase('textoContainer', variante)}>
                             <h2 className={generarClase('titulo', variante)}>{titulo}</h2>
@@ -43,7 +44,7 @@ function TextoTituloEImagen({ titulo, texto, imagenes, textosBotones, imagenALaI
                             <p className={generarClase('texto', variante)}>{texto}</p>
                         </div>
                         <div className={styles.imagenContainer}>
-                            <img src={imagenes[imagenActual]} alt="Imagen" className={styles.imagen} />
+                            <LazyImage src={imagenes[imagenActual]} alt="Imagen" className={styles.imagen} />
                         </div>
                     </>
                 )}

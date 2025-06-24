@@ -2,6 +2,7 @@
 // import { useContent } from './Sistemas/useContent';
 // import { useLanguage } from './Sistemas/LanguageContext';
 import styles from "../css/GridDocumentosLegales.module.css";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 import { useLanguage } from './Sistemas/LanguageContext';
 import { useContent } from './Sistemas/useContent';
@@ -25,7 +26,7 @@ function GridDocumentosLegales() {
                             className={styles.GridObjeto}
                         >
                             <div className={styles.EspacioImagen}>
-                                <img
+                                <LazyImage
                                     src={doc.Common.Imagen}
                                     alt={doc[language]?.Nombre || "Documento"}
                                 />

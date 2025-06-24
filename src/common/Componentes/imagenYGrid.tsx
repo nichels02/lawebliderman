@@ -1,4 +1,5 @@
 import styles from '../css/imagenYGrid.module.css'; // Importa el archivo CSS único
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 function imagenYGrid() {
     return (
@@ -7,7 +8,7 @@ function imagenYGrid() {
             <div className={styles.contentContainer}>
                 {/* Sección de la imagen (logo) */}
                 <div className={styles.imageSection}>
-                    <img src="https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg" alt="Logo" className={styles.image} />
+                    <LazyImage src="https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg" alt="Logo" className={styles.image} />
                 </div>
 
                 {/* Contenedor vertical para los elementos */}
@@ -21,13 +22,13 @@ function imagenYGrid() {
                     <div className={styles.horizontalContainer}>
                         {/* Cuadro 3 con imagen y texto */}
                         <div className={`${styles.gridItemWithContent} ${styles.commonStyle}`}>
-                            <img src="https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg" alt="Imagen 3" />
+                            <LazyImage src="https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg" alt="Imagen 3" />
                             <p>Texto 3</p>
                         </div>
 
                         {/* Cuadro 4 con imagen y texto */}
                         <div className={`${styles.gridItemWithContent} ${styles.commonStyle}`}>
-                            <img src="https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg" alt="Imagen 4" />
+                            <LazyImage src="https://wallpapers.com/images/hd/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg" alt="Imagen 4" />
                             <p>Texto 4</p>
                         </div>
                     </div>

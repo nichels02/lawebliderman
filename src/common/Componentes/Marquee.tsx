@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import styles from "../css/Marquee.module.css";
 import { useContent } from "./Sistemas/useContent.tsx";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 function Marquee() {
     // Obtener datos del JSON y el idioma actual
@@ -33,7 +34,7 @@ function Marquee() {
                     {[...Array(3)].map((_, repetition) =>
                         marqueeItems.map((item, index) => (
                             <div key={`${repetition}-${index}`} className={styles.marqueeItemContainer}>
-                                <img className={styles.marqueeItem} src={item.src} alt={item.alt} />
+                                <LazyImage className={styles.marqueeItem} src={item.src} alt={item.alt} />
                             </div>
                         ))
                     )}

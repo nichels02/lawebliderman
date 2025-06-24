@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useContent } from "./Sistemas/useContent.tsx";
 import { useLanguage } from "./Sistemas/LanguageContext.tsx";
 import styles from "../css/VentanaModal2.module.css";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 type VentanaModal2Props = {
     onClose: () => void;
@@ -77,7 +78,7 @@ function VentanaModal2({ onClose }: VentanaModal2Props) {
 
                             <div className={styles.row}>
                                 <div className={styles.containerLeft}>
-                                    <img
+                                    <LazyImage
                                         className={styles.image}
                                         src={content.Tecnologia.Modal2.Common.ImagenIzq}
                                         alt="Imagen izquierda"
@@ -87,7 +88,7 @@ function VentanaModal2({ onClose }: VentanaModal2Props) {
                                 </div>
 
                                 <div className={styles.containerRight}>
-                                    <img
+                                    <LazyImage
                                         className={styles.image}
                                         src={content.Tecnologia.Modal2.Common.ImagenDer}
                                         alt="Imagen derecha"

@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "../css/HeaderGenerico.module.css";
 import ScrollLink from "./Sistemas/ScrollLink.tsx";
+import LazyImage from './Sistemas/LazyImage.tsx';
+
 type PosibleScrollMode = "center" | "top" | "bottom";
 interface HeaderProps {
     backgroundImage: string;
@@ -38,8 +40,8 @@ const HeaderGenerico: React.FC<HeaderProps> = ({
                 className={styles.backgroundOverlay}
                 style={{ backgroundImage: `url(${backgroundImage})` }}
             />
-            {logo && <img src={logo} alt="Logo" className="logoHeader" />}
-            <img
+            {logo && <LazyImage src={logo} alt="Logo" className="logoHeader" />}
+            <LazyImage
                 src={sideImage}
                 alt="Ilustración"
                 className={styles.sideImage}

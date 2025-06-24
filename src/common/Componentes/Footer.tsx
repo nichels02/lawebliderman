@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ScrollLink from './Sistemas/ScrollLink';
 import { useLanguage } from './Sistemas/LanguageContext';
 import { useContent } from './Sistemas/useContent';
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 function Footer() {
     const [darkMode, setDarkMode] = useState(false);
@@ -78,7 +79,7 @@ function Footer() {
                 {/* Primera Sección */}
                 <div className={styles.topSection}>
                     <div className={styles.logoSection}>
-                        <img src={logo} alt="Logo Liderman" className={styles.logo} />
+                        <LazyImage src={logo} alt="Logo Liderman" className={styles.logo} />
                         <p className={styles.logoText}>{localized.Eslogan}</p>
                     </div>
 
@@ -221,16 +222,16 @@ function Footer() {
 
                         <div className={styles.socialLinks}>
                             <a href={common.Links.facebook} className={styles.socialLink} target="_blank" rel="noopener noreferrer">
-                                <img src={facebookIcon} alt="Facebook" className={styles.socialIcon} />
+                                <LazyImage src={facebookIcon} alt="Facebook" className={styles.socialIcon} />
                             </a>
                             <a href={common.Links.tiktok} className={styles.socialLink} target="_blank" rel="noopener noreferrer">
-                                <img src={tiktokIcon} alt="Tiktok" className={styles.socialIcon} />
+                                <LazyImage src={tiktokIcon} alt="Tiktok" className={styles.socialIcon} />
                             </a>
                             <a href={common.Links.linkedin} className={styles.socialLink} target="_blank" rel="noopener noreferrer">
-                                <img src={linkedinIcon} alt="LinkedIn" className={styles.socialIcon} />
+                                <LazyImage src={linkedinIcon} alt="LinkedIn" className={styles.socialIcon} />
                             </a>
                             <a href={common.Links.youtube} className={styles.socialLink} target="_blank" rel="noopener noreferrer">
-                                <img src={youtubeIcon} alt="YouTube" className={styles.socialIcon} />
+                                <LazyImage src={youtubeIcon} alt="YouTube" className={styles.socialIcon} />
                             </a>
                         </div>
 

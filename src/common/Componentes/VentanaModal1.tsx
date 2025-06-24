@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "../css/VentanaModal1.module.css";
 import { useContent } from "./Sistemas/useContent.tsx";
 import { useLanguage } from "./Sistemas/LanguageContext.tsx";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 type VentanaModal1Props = {
     onClose: () => void;
@@ -77,7 +78,7 @@ function VentanaModal1({ onClose }: VentanaModal1Props) {
                                 <p>{modalData.Texto}</p>
                             </div>
                             <div className={styles.modalBodyRight}>
-                                <img
+                                <LazyImage
                                     className={styles.modalImage}
                                     src={data.Tecnologia.Modal1.Common.Imagen}
                                     alt="Imagen del modal"

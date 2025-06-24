@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useContent } from "./Sistemas/useContent.tsx";  // Contexto de los datos
+import LazyImage from './Sistemas/LazyImage.tsx';
+
 import { useLanguage } from "./Sistemas/LanguageContext.tsx"; // Contexto de los idiomas
 import styles from "../css/VentanaModal3.module.css";
 
@@ -77,7 +79,7 @@ function VentanaModal3({ onClose }: { onClose: () => void }) {
 
                             <div className={styles.row}>
                                 <div className={styles.container}>
-                                    <img
+                                    <LazyImage
                                         className={styles.image}
                                         src={modalData.Common.ImagenIzqArriba}
                                         alt="Imagen izquierda"
@@ -87,7 +89,7 @@ function VentanaModal3({ onClose }: { onClose: () => void }) {
                                 </div>
 
                                 <div className={styles.container}>
-                                    <img
+                                    <LazyImage
                                         className={styles.image}
                                         src={modalData.Common.ImagenDerArriba}
                                         alt="Imagen derecha"
@@ -99,7 +101,7 @@ function VentanaModal3({ onClose }: { onClose: () => void }) {
 
                             <div className={styles.row}>
                                 <div className={styles.container}>
-                                    <img
+                                    <LazyImage
                                         className={styles.image}
                                         src={modalData.Common.ImagenIzqAbajo}
                                         alt="Imagen inferior izquierda"
@@ -109,7 +111,7 @@ function VentanaModal3({ onClose }: { onClose: () => void }) {
                                 </div>
 
                                 <div className={styles.container}>
-                                    <img
+                                    <LazyImage
                                         className={styles.image}
                                         src={modalData.Common.ImagenDerAbajo}
                                         alt="Imagen inferior derecha"

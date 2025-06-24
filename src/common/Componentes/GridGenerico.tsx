@@ -1,4 +1,5 @@
 import styles from "../css/GridGenerico.module.css";
+import LazyImage from './Sistemas/LazyImage.tsx';
 
 interface IGridItem {
     image: string;
@@ -18,13 +19,13 @@ function GridGenerico({ largeImage, items }: GridGenericoProps) {
                 <div className={styles.gridContainer}>
                     {/* Celda fusionada con imagen grande */}
                     <div className={styles.largeItem}>
-                        <img src={largeImage} alt="Imagen grande" />
+                        <LazyImage src={largeImage} alt="Imagen grande" />
                     </div>
 
                     {/* Celdas normales */}
                     {items.map((item, index) => (
                         <div key={index} className={styles.gridItem}>
-                            <img src={item.image} alt={`Imagen ${index + 1}`} />
+                            <LazyImage src={item.image} alt={`Imagen ${index + 1}`} />
                             <h4>{item.title}</h4>
                             <p>{item.text}</p>
                         </div>
