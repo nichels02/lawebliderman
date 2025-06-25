@@ -96,9 +96,11 @@
 
 /* Botones (igualado a .carouselButton) */
 .boton {
-    background: rgba(0, 0, 0, 0.73);
+    background: rgba(30, 30, 30, 0.3);
     color: white;
-    border: 2px solid white;
+    border: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: clamp(5px, 1vh, 10px) clamp(10px, 2vw, 20px);
     font-size: clamp(12px, 1.5vw, 16px);
     cursor: pointer;
@@ -115,11 +117,17 @@
 }
 
 .boton:hover {
-    background: white;
+    background: rgba(168, 168, 168, 0.3);
     color: black;
     transform: none; /* Eliminamos el scale para mantener consistencia */
 }
-
+.boton.active :hover{
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+}
+.boton.active{
+    background: rgba(255, 0, 0, 0.5);
+}
 /* 📌 Responsivo (actualizado) */
 @media (max-width: 1024px) {
     .contenedorContenido {

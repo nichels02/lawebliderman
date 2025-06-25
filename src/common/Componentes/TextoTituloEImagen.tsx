@@ -56,7 +56,7 @@ function TextoTituloEImagen({ titulo, texto, imagenes, textosBotones, imagenALaI
                     <button
                         key={index}
                         onClick={() => setImagenActual(index)}
-                        className={styles.boton}
+                        className={`${styles.boton} ${imagenActual === index ? styles.active : ''}`}
                     >
                         {textoBoton}
                     </button>

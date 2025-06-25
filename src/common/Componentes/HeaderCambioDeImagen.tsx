@@ -29,6 +29,7 @@ function HeaderCambioDeImagen() {
     const [textoActual, setTextoActual] = useState("");
     const [tituloActual, setTituloActual] = useState("");
     const [imagenActual, setImagenActual] = useState("");
+    const [botonActivo, setBotonActivo] = useState<1 | 2 | 3 | 4>(1); // 👈 Estado para el botón activo
 
     useEffect(() => {
         if (actualContent?.Texto) {
@@ -38,13 +39,8 @@ function HeaderCambioDeImagen() {
         }
     }, [actualContent, content?.Common?.ImagenDerecha]);
 
-
-
     return (
-        <div
-            className={styles.contenedorPadre}
-            // style={{ backgroundImage: `url(${content?.Common?.Fondo ?? ""})` }}
-        >
+        <div className={styles.contenedorPadre}>
             <div
                 className={styles.backgroundOverlay}
                 style={{ backgroundImage: `url(${content?.Common?.Fondo ?? ""})` }}
@@ -57,12 +53,8 @@ function HeaderCambioDeImagen() {
 
             <div className={styles.contenedorContenido}>
                 <div className={styles.contenedorTexto}>
-                    <h1 className={styles.titulo}>
-                        {tituloActual}
-                    </h1>
-                    <p className={styles.texto}>
-                        {textoActual}
-                    </p>
+                    <h1 className={styles.titulo}>{tituloActual}</h1>
+                    <p className={styles.texto}>{textoActual}</p>
                 </div>
 
                 <div className={styles.contenedorImagen}>
@@ -79,7 +71,6 @@ function HeaderCambioDeImagen() {
                     const key = `boton${index}` as keyof LanguageContent;
                     const boton = actualContent?.[key];
 
-                    // ✅ Validación para asegurar que es del tipo Boton
                     const isValidBoton =
                         typeof boton === "object" &&
                         boton !== null &&
@@ -89,7 +80,7 @@ function HeaderCambioDeImagen() {
                     return (
                         <button
                             key={index}
-                            className={styles.boton}
+                            className={`${styles.boton} ${botonActivo === index ? styles.active : ""}`} // 👈 Clase condicional
                             onClick={() => {
                                 if (isValidBoton) {
                                     const botonId = `boton${index}` as 'boton1' | 'boton2' | 'boton3' | 'boton4';
@@ -97,6 +88,7 @@ function HeaderCambioDeImagen() {
                                     setTituloActual((boton as Boton).Nombre);
                                     setTextoActual((boton as Boton).Texto);
                                     setImagenActual(nuevaImagen);
+                                    setBotonActivo(index as 1 | 2 | 3 | 4); // 👈 Cambia el botón activo
                                 }
                             }}
                         >
