@@ -4,7 +4,7 @@
     flex-direction: column;
     padding: 15px;
     /*height: clamp(1500px, 90vw, 1728px);*/
-    height: 1700px;
+    height: 1400px;
     width: 100vw;
     background: none;
     position: relative;
@@ -25,21 +25,34 @@
 
 
 
+.successMessage,
+.errorMessage{
 
-.errorMessage {
-
-    color: #ff0000;
     position: absolute;
 
-    top: 230px;
-    left:clamp(45px, calc(45px + ((100vw - 1025px) * 15 / 895)), 60px);
-
+    top: 0;
+    /*left:clamp(45px, calc(45px + ((100vw - 1025px) * 15 / 895)), 60px);*/
+    left: 0;
+    font-size: 18px;
     width: 70%;
-    background-color: #ffeeee;
-    padding: 10px;
+    padding-top: 10px;
     margin-bottom: -20px;
     border-radius: 4px;
+
+}
+
+.successMessage{
+
+
+}
+
+.errorMessage {
+    color: #ff0000;
+
+    background-color: #ffeeee;
+
     border: 1px solid #ffcccc;
+
 }
 
 
@@ -62,9 +75,9 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     overflow: hidden;
-    bottom: 5%;
+    bottom: 3%;
     z-index: 1;
-    padding: 30px;
+    padding: 0 30px;
     gap: 20px;
 }
 
@@ -87,9 +100,9 @@
 .imagenLateral {
     position: absolute;
     flex: 1;
-    right: -200px;
-    bottom: 45%;
-    width: 65%;
+    right: 10px;
+    bottom: calc(600px - ((clamp(1500px, 100vw, 1920px) - 1500px)/420)*(600 - 500));
+    width: 50%;
     transform: translateY(50%);
     object-fit: cover;
     border-radius: 10px;
@@ -293,8 +306,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*margin-bottom: 25px;*/
-    /*margin-top: 40px;*/
+    margin-bottom: 15px;
+    margin-top: 40px;
 }
 
 .encabezado h2 {
@@ -313,9 +326,11 @@
 
 /* Estilos para el formulario */
 .formulario {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding-top: 25px;
 }
 
 /* Estructura de columnas */
@@ -334,14 +349,14 @@
 
 .campo label {
     margin-top: 30px;
-    font-size: clamp(18px, 1.5vw, 22px);
+    font-size: clamp(16px, 1.05vw, 20px);
     margin-bottom: 3px;
     color: #ffffff;
 }
 
 .campo input {
     padding: 6px;
-    font-size: clamp(18px, 1.5vw, 22px);
+    font-size: clamp(16px, 1.05vw, 20px);
     font-weight: 10;
     border: none;
     border-bottom: 1px solid #ffffff;
@@ -351,12 +366,12 @@
 
 /* Estilos para el grupo de checkboxes */
 .checkboxGroup {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     font-size: 20px;
     margin-bottom: 10px;
-
+    padding-left: 0;
     border: none;
 }
 
@@ -396,7 +411,7 @@
 }
 
 .areaMensaje label {
-    margin-top: 20px;
+    margin-top: 0;
     font-size: 20px;
     margin-bottom: 3px;
     color: #ffffff;
@@ -413,7 +428,7 @@
 }
 
 .contactoYBoton {
-    margin-top: 30px;
+    margin-top: 15px;
     display: flex;
     align-items: center;
 }
@@ -514,7 +529,7 @@
 
 .TituloYSubtitulo{
     position: absolute;
-    top: 0;
+    top: -2%;
     left: 6%;
 }
 
@@ -523,6 +538,25 @@
 @media (min-width: 1920px) {
     .TituloYSubtitulo{
         left: calc(50vw - 834px);
+    }
+}
+@media (max-width: 1565px) and (min-width: 1300px) {
+    .imagenLateral{
+        /*bottom: calc(700px - ((100vw - 1700px)/220)*(700 - 612));*/
+        width: calc(704px - ((100vw - 1565px)/265 * (704 - 670)));
+        right: calc(-10px - ((1565px - 100vw) / 265 * 140));
+
+    }
+}
+@media (max-width: 1300px) and (min-width: 1025px) {
+    .imagenLateral{
+        /*bottom: calc(700px - ((100vw - 1700px)/220)*(700 - 612));*/
+
+        /*width: calc(704px - ((100vw - 1300px)/275 * (704 - 670)));*/
+        right: calc(-150px - ((1300px - 100vw) / 275 * 80));
+        width:738px;
+        /*right: -200px;*/
+
     }
 }
 
@@ -537,7 +571,7 @@
 @media (max-width: 1708px) and (min-width: 1368px) {
     .InfoExtra1,
     .InfoExtra2{
-        width: 270px;
+        /*width: 270px;*/
         height: 130px;
     }
     .InfoExtraNumero{
@@ -548,19 +582,16 @@
 }
 @media (max-width: 1300px){
     .imagenLateral {
-        right: -20%;
-        bottom: 45%;
-        width: 70%;
-        min-width: 0;
+
     }
 }
 @media (max-width: 1151px) and (min-width: 1025px){
     .contenedorExtraInferior{
         /*transform: translateY( -20px );*/
     }
-    .encabezado{
-        margin-top: -10px;
-    }
+    /*.encabezado{*/
+    /*    margin-top: -10px;*/
+    /*}*/
 }
 @media (max-width: 1024px){
     .formularioContainer{
@@ -585,20 +616,6 @@
         /*transform: translateY( clamp(-70px, calc( (8px + (((100vw - 1757px)/163)*(70 - 8)))*-1  ), -8px) );*/
         /*transform: translateY(-8px)*/
     }
-    .errorMessage{
-        /*top: clamp(220px, calc(220px + ((100vw - 1025px) * 20 / 895)), 240px);*/
-        /*left:clamp(45px, calc(45px + ((100vw - 1025px) * 15 / 895)), 60px);*/
-
-        /*top: 220px;*/    /*1024*/
-        /*left: 52px;*/
-
-        /*top: 220px; !*691*!*/
-        /*left: 48px;*/
-
-        top: 240px;
-        left:clamp(48px, calc(48px + ((100vw - 691px) * 4 / 333)), 52px);
-
-    }
 }
 @media(max-width: 1024px) and (min-width: 769px){
     .contenedorIntermedio{
@@ -607,7 +624,7 @@
 
     }
     .contenedorPagina{
-        height: 1500px;
+        height: 1300px;
     }
     .contactoYBoton{
         margin-bottom: 20px;
@@ -625,9 +642,7 @@
 }
 
 @media (max-width: 768px) {
-    .errorMessage{
-        top: 220px;
-    }
+
     .customPrevArrow {
         left: -30px;
     }
@@ -637,11 +652,11 @@
     }
 
     .contenedorIntermedio {
-        min-height: 1560px;
+        min-height: 1460px;
         /*flex-direction: column;*/
     }
     .contenedorPagina{
-        height: 1850px;
+        height: 1650px;
     }
     .imagenLateral {
         position: relative;
@@ -702,14 +717,22 @@
 }
 
 @media (max-width: 690px){
+    .dosColumnas{
+        margin-top: 20px;
+    }
+    .campo label {
+        margin-top: 0;
+    }
     .contenedorPagina{
-        height: 2000px;
+        height: 1650px;
     }
     .encabezado h2 {
         margin-bottom: 0;
+        padding-bottom: 10px;
     }
     .encabezado{
         margin-bottom: 20px;
+        margin-top: 20px;
     }
     .areaMensaje label {
         margin-top: 0;
@@ -730,40 +753,28 @@
         flex-direction: column; /* Esto los pone uno debajo del otro */
         align-items: flex-start;
     }
-    .formularioContainer {
-        width: 110%;
-    }
+    /*.formularioContainer {*/
+    /*    width: 110%;*/
+    /*}*/
+
     .contenedorIntermedio{
-        min-height: 1700px;
+        min-height: 1450px;
         padding-left: 10px;
         padding-right: 10px;
+        padding-top: 30px;
+        align-items: flex-start;
     }
     .botonEnviarContainer {
         margin-top: 5px;
         margin-left: 0;
     }
-    .errorMessage{
-        /*top: clamp(220px, calc(220px + ((100vw - 1025px) * 20 / 895)), 240px);*/
-        /*left:clamp(45px, calc(45px + ((100vw - 1025px) * 15 / 895)), 60px);*/
-
-        /*top: 220px;*/    /*690*/
-        /*left: 52px;*/
-
-        /*top: 220px; !*691*!*/
-        /*left: 48px;*/
-
-        top: 280px;
-        left: 13px;
-
+    .formularioContainer{
+        padding-bottom: 30px;
     }
-
 
 }
 @media (max-width: 565px){
     .errorMessage{
-
-        top: 260px;
-        left: 13px;
         width: 90%;
 
     }
@@ -772,6 +783,12 @@
     }
 }
 @media (max-width: 480px) {
+    .contenedorPagina{
+        height: 1700px;
+    }
+    .contenedorIntermedio{
+        height:  1500px;
+    }
     .barraSuperior {
         padding: 0 15px;
     }
@@ -801,44 +818,30 @@
     /*}*/
 }
 @media (max-width: 464px) {
-    .contenedorPagina{
-        height: 2100px;
-    }
+
     .contenedorExtraInferior {
         width: 90%;
     }
 }
 
 @media(max-width: 417px){
+    .contenedorPagina{
+        height: 1650px;
+    }
+    .TituloYSubtitulo{
+        top: -4%;
+    }
     .contenedorIntermedio{
-        bottom: auto;
+        height: 1500px;
 
     }
     .contenidoCentral{
-
-        bottom: 5%;
+        padding: 20px 5px;
     }
 }
 @media (max-width: 357px) {
-    .contenedorPagina{
-        height: 2100px;
-    }
     .encabezado h2 {
         /*font-size: 40px;*/
         font-size: clamp(0px, 11vw, 40px);
     }
 }
-@media(max-width: 320px){
-    .contenidoCentral{
-
-        bottom: 6%;
-    }
-}
-/*@media (max-width: 357px) {*/
-/*    .contenedorPagina{*/
-/*        height: 2050px;*/
-/*    }*/
-/*    !*.contenedorExtraInferior {*!*/
-/*    !*    width: 90%;*!*/
-/*    !*}*!*/
-/*}*/
