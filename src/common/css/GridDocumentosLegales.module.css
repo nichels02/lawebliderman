@@ -58,7 +58,7 @@
 
 .TextoDelObjeto{
     /*font-size: 1.3rem;*/
-    font-size: calc(1rem + (clamp(320px, 100vw, 1920px)* 4.8/1600));
+    font-size: calc(0.89rem + (clamp(320px, 100vw, 1920px)* 4.8/1600));
     text-align: center;
     margin: auto 0;
     transition: all 0.3s ease;
@@ -103,7 +103,13 @@
 }
 @media (max-width: 370px) {
     .GridPadre{
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         row-gap: 10px;
+    }
+    .GridObjeto{
+        height: 160px;
+    }
+    .contenedorCentrado{
+        width: 90%;
     }
 }
