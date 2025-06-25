@@ -1906,7 +1906,7 @@
       "Contenido": {
         "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
         "Fondo": "/assets/Servicio/fondo-servicios.png",
-        "ImagenDelCostado": "/assets/Servicio/Imagen-facilities.png"
+        "ImagenDelCostado": "public/assets/Legal/Foto-para-header_2.png"
       },
       "es": {
         "Titulo": "Servicios",
