@@ -1774,18 +1774,57 @@ interface ContentData {
             }
         }
         GridDocumentoLegal: {
-            es: {
-                Nombre: string;
-            },
-            en: {
-                Nombre: string;
-            },
-            Common: {
-                Imagen: string;
-                Pdf: string;
+            Secciones: {
+                en: {
+                    Politicas: string;
+                    Reglamentos: string;
+                    Procedimientos: string;
+                },
+                es: {
+                    Politicas: string;
+                    Reglamentos: string;
+                    Procedimientos: string;
+                }
             }
+            Politicas:{
+                es: {
+                    Nombre: string;
+                },
+                en: {
+                    Nombre: string;
+                },
+                Common: {
+                    Imagen: string;
+                    Pdf: string;
+                }
+            }[]
+            Procedimientos:{
+                es: {
+                    Nombre: string;
+                },
+                en: {
+                    Nombre: string;
+                },
+                Common: {
+                    Imagen: string;
+                    Pdf: string;
+                }
+            }[]
+            Reglamentos:{
+                es: {
+                    Nombre: string;
+                },
+                en: {
+                    Nombre: string;
+                },
+                Common: {
+                    Imagen: string;
+                    Pdf: string;
+                }
+            }[]
 
-        }[]
+
+        }
     }
 
 
