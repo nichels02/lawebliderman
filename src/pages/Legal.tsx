@@ -24,6 +24,7 @@ function Legal() {
                 imagenLateral={content.PaginaLegal.header.Contenido.ImagenDelCostado}
                 titulo={content.PaginaLegal.header[language].Titulo}
                 texto={content.PaginaLegal.header[language].Texto}
+                EsTrue={true}
             />
             <TituloYSubtituloGenerico
                 // className={Style.LineaDeTiempo}

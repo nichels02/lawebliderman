@@ -74,6 +74,11 @@
     margin-top: 20px;
     color: #ffffff;
     width: 90%;
+    height: auto;
+}
+.text p{
+    margin-top: 0;
+    margin-bottom: clamp( 10px, 1.5625vw, 30px);
 }
 
 .right {
@@ -144,6 +149,7 @@
         padding-bottom: 0;
     }
 }
+
 @media (max-width: 390px) {
     .container{
         margin-top: 10%;
@@ -153,5 +159,26 @@
     }
     .header{
         height: 110vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .header.EsTrue{
+        height: 110vw;
+    }
+    .container.EsTrue{
+        margin-top: 50px;
+    }
+}
+@media (max-width: 405px) {
+    .header.EsTrue{
+        height: 120vw;
+    }
+    .container.EsTrue{
+    }
+}
+@media (max-width: 350px) {
+    .header.EsTrue{
+        height: 140vw;
     }
 }

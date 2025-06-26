@@ -8,6 +8,7 @@ interface HeaderServicioProps {
     imagenLateral: string;
     titulo: string;
     texto: string;
+    EsTrue?:boolean;
 }
 
 function HeaderServicio({
@@ -15,10 +16,11 @@ function HeaderServicio({
                             logo,
                             imagenLateral,
                             titulo,
-                            texto
+                            texto,
+                            EsTrue=false
                         }: HeaderServicioProps) {
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} ${EsTrue ? styles.EsTrue : ''}`}>
             <div className={styles.headerImageContainer}>
                 <LazyImage
                     src={fondo}
@@ -27,11 +29,18 @@ function HeaderServicio({
                 />
             </div>
             <LazyImage src={logo} alt="Logo" className="logoHeader" />
-            <div className={styles.container}>
+            <div className={`${styles.container} ${EsTrue ? styles.EsTrue : ''}`}>
                 <div className={styles.left}>
                     <div className={styles.contenedorFondo}></div>
                     <h1 className={styles.title}>{titulo}</h1>
-                    <p className={styles.text}>{texto}</p>
+                    <p className={styles.text}>
+                        {texto.split('\n').map((linea, i) => (
+                            <p key={i}>
+                                {linea}
+                                <br />
+                            </p>
+                        ))}
+                    </p>
                 </div>
                 <div className={styles.right}>
                     <LazyImage src={imagenLateral} alt="Imagen descriptiva" />
