@@ -1,29 +1,58 @@
 .ContenedorPadre{
     width: 100vw;
     height: auto;
+    max-height: 10000px;
     margin-bottom: 150px;
 }
 .contenedorCentrado{
-    max-width: 1396.36px;
-    width: 80%;
+    max-width: 1632px;
+    width: 85%;
+    max-height: 10000px;
     margin: 0 auto;
     height: auto;
+}
+.ContenedorSecciones{
+    display: flex;
+    gap: 10px;
+}
+.Seccion{
+    color: var(--color-texto-negro);
+    font-size: clamp(1rem, 1.1vw , 1.3rem);
+    background: transparent;
+    border-radius: 0;
+    border: 0px;
+}
+.Seccion:hover{
+    background: rgba(255, 0, 0, 0.71);
+
+}
+.Seccion.active{
+    color: var(--color-texto-blanco);
+    background: var(--color-rojo-general);
+}
+.Separador{
+    width: 100%;
+    height: 2px;
+    background: var(--color-rojo-general);
+    margin-bottom: 20px;
 }
 .GridPadre{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     column-gap: 6%;
-    row-gap: 5%;
+    row-gap: 50px;
     height: auto;
+    max-height: 10000px;
 }
 
 .GridObjeto{
+    width: 100%;
     display: grid;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 225px auto;
     background: #191919;
     padding: 10px;
     border-radius: 20px;
-    height: 300px;
+    height: 350px;
     row-gap: 0;
 }
 .EspacioImagen{
@@ -58,7 +87,7 @@
 
 .TextoDelObjeto{
     /*font-size: 1.3rem;*/
-    font-size: calc(0.89rem + (clamp(320px, 100vw, 1920px)* 4.8/1600));
+    font-size: calc(0.89rem + (clamp(320px, 100vw, 1920px)* 4/1600));
     text-align: center;
     margin: auto 0;
     transition: all 0.3s ease;
@@ -77,37 +106,66 @@
         grid-template-columns: repeat(4, 1fr);
     }
 }
+@media (max-width: 1024px) {
+    /*.GridObjeto{*/
+    /*    padding-top: 0;*/
+    /*}*/
+    .EspacioImagen{
+        padding-top: 0;
+    }
+    .GridObjeto:hover .EspacioImagen img{
+        transform: none;
+    }
+    .GridObjeto{
+        height: 350px;
+    }
+}
 @media (max-width: 1000px){
     .GridPadre{
         grid-template-columns: repeat(3, 1fr);
     }
     .GridObjeto{
-        height: 250px;
+        height: 330px;
     }
 }
 @media (max-width: 700px){
     .GridPadre{
         grid-template-columns: repeat(2, 1fr);
+        row-gap: 25px;
     }
     .GridObjeto{
-        height: 200px;
+        grid-template-rows: 150px auto;
+        height: 250px;
     }
 }
 @media (max-width: 450px){
-
+    .contenedorCentrado{
+        width: 90%;
+    }
     .GridObjeto{
-        height: 180px;
-        max-width: 80%;
+        height: 300px;
+        max-width: 90%;
         margin: 0 auto;
+    }
+}
+@media (max-width: 420px) {
+    .ContenedorSecciones{
+        flex-direction: column;
+    }
+    .Seccion{
+        border-radius: 10px;
+    }
+    .Separador{
+        background: transparent;
     }
 }
 @media (max-width: 370px) {
     .GridPadre{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         row-gap: 10px;
     }
     .GridObjeto{
-        height: 160px;
+        height: 250px;
     }
     .contenedorCentrado{
         width: 90%;
