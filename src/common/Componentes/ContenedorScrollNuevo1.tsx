@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 // import LineaDeTiempo from "../../assets/Conocenos/Linea distribucion 2.svg";
 import styles from "../css/ContenedorScrollNuevo1.module.css";
 import { useContent } from "./Sistemas/useContent.tsx";
@@ -9,6 +9,7 @@ function ContenedorScrollNuevo1() {
     const content = useContent();
     const { language } = useLanguage();
     const contenedorRef = useRef<HTMLDivElement>(null);
+
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [scrollLeftStart, setScrollLeftStart] = useState(0);
@@ -16,6 +17,69 @@ function ContenedorScrollNuevo1() {
     const lastClientXRef = useRef(0);
     const lastTimestampRef = useRef(0);
     const animationFrameRef = useRef<number | null>(null);
+
+
+
+    const [scrolling, setScrolling] = useState(false);
+    const scrollSpeed = 10; // Ajustá la velocidad
+    const scrollDirection = useRef<"left" | "right" | null>(null);
+
+
+    const scrollingRef = useRef(scrolling);
+
+    useEffect(() => {
+        scrollingRef.current = scrolling;
+    }, [scrolling]);
+
+
+
+    useEffect(() => {
+        if (!scrolling || !contenedorRef.current || !scrollDirection.current) return;
+
+        const step = () => {
+            if (!contenedorRef.current) return;
+
+            contenedorRef.current.scrollLeft += scrollDirection.current === "right"
+                ? scrollSpeed
+                : -scrollSpeed;
+
+            if (scrollingRef.current) {
+                requestAnimationFrame(step);
+            }
+        };
+
+        requestAnimationFrame(step);
+    }, [scrolling]);
+
+    // useEffect(() => {
+    //     if (!scrolling || !contenedorRef.current || !scrollDirection.current) return;
+    //
+    //     const step = () => {
+    //         if (!contenedorRef.current) return;
+    //
+    //         contenedorRef.current.scrollLeft += scrollDirection.current === "right" ? scrollSpeed : -scrollSpeed;
+    //
+    //         scrollAnimationRef.current = requestAnimationFrame(step);
+    //     };
+    //
+    //     scrollAnimationRef.current = requestAnimationFrame(step);
+    //
+    //     return () => {
+    //         if (scrollAnimationRef.current !== null) {
+    //             cancelAnimationFrame(scrollAnimationRef.current);
+    //         }
+    //     };
+    // }, [scrolling]);
+
+
+
+
+
+
+
+
+
+
 
     const onDragStart = (clientX: number) => {
         if (!contenedorRef.current) return;
@@ -97,249 +161,285 @@ function ContenedorScrollNuevo1() {
     const handleTouchEnd = endDrag;
 
     return (
-        <div id="LineaDeTiempo"
-            ref={contenedorRef}
-            className={styles.contenedorExterno}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseLeave}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-            style={{ cursor: isDragging ? "grabbing" : "grab" }}
-        >
-            <div className={styles.contenedorInterno}>
-                <LazyImage
-                    src={content?.Conocenos.contenedorScroll.common.LineaDeTiempo}
-                    alt="Línea de tiempo"
-                    className={styles.lineaDeTiempoImg}
-                    draggable={false}
-                />
-                <div className={styles.Posicion1}>
+        <div>
+            <div className={styles.ContenedorBotones}>
+                <button
+                    className={`${styles.botones} ${styles.iz}`}
+                    onMouseDown={() => {
+                        scrollDirection.current = "left";
+                        setScrolling(true);
+                    }}
+                    onMouseUp={() => setScrolling(false)}
+                    onMouseLeave={() => setScrolling(false)}
+                >
+                    ←
+                </button>
+
+                <button
+                    className={`${styles.botones} ${styles.de}`}
+                    onMouseDown={() => {
+                        scrollDirection.current = "right";
+                        setScrolling(true);
+                    }}
+                    onMouseUp={() => setScrolling(false)}
+                    onMouseLeave={() => setScrolling(false)}
+                >
+                    →
+                </button>
+            </div>
+            <div id="LineaDeTiempo"
+                 ref={contenedorRef}
+                 className={styles.contenedorExterno}
+                 onMouseDown={handleMouseDown}
+                 onMouseMove={handleMouseMove}
+                 onMouseUp={handleMouseUp}
+                 onMouseLeave={handleMouseLeave}
+                 onTouchStart={handleTouchStart}
+                 onTouchMove={handleTouchMove}
+                 onTouchEnd={handleTouchEnd}
+                 style={{ cursor: isDragging ? "grabbing" : "grab" }}
+            >
+
+
+
+
+
+
+
+
+                <div className={styles.contenedorInterno}>
                     <LazyImage
-                        src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
-                        alt="Punto 1"
-                        className={styles.EstiloGeneralPunto}
+                        src={content?.Conocenos.contenedorScroll.common.LineaDeTiempo}
+                        alt="Línea de tiempo"
+                        className={styles.lineaDeTiempoImg}
                         draggable={false}
                     />
-                    <span className={styles.TextoDePunto}>
+                    <div className={styles.Posicion1}>
+                        <LazyImage
+                            src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
+                            alt="Punto 1"
+                            className={styles.EstiloGeneralPunto}
+                            draggable={false}
+                        />
+                        <span className={styles.TextoDePunto}>
                         {content?.Conocenos.contenedorScroll[language].Puntos.Contenedor1.fecha}
                     </span>
-                    <div className={styles.EstiloGeneralConTextoEImagen}>
-                        <h3 className={styles.Titulo}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor1.Titulo}
-                        </h3>
-                        <p className={styles.texto}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor1.Texto}
-                        </p>
-                        <LazyImage
-                            src={content?.Conocenos.contenedorScroll.common.items.Contenedor1.src}
-                            alt={content?.Conocenos.contenedorScroll.common.items.Contenedor1.alt}
-                            className={styles.Imagen}
-                            draggable={false}
-                        />
-                    </div>
+                        <div className={styles.EstiloGeneralConTextoEImagen}>
+                            <h3 className={styles.Titulo}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor1.Titulo}
+                            </h3>
+                            <p className={styles.texto}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor1.Texto}
+                            </p>
+                            <LazyImage
+                                src={content?.Conocenos.contenedorScroll.common.items.Contenedor1.src}
+                                alt={content?.Conocenos.contenedorScroll.common.items.Contenedor1.alt}
+                                className={styles.Imagen}
+                                draggable={false}
+                            />
+                        </div>
 
-                    <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
-                    <p className={styles.texto}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor1.Texto}
-                        </p>
-                    </div>
+                        <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
+                            <p className={styles.texto}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor1.Texto}
+                            </p>
+                        </div>
 
-                </div>
-                <div className={styles.Posicion2}>
-                    <LazyImage
-                        src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
-                        alt="Punto 2"
-                        className={styles.EstiloGeneralPunto}
-                        draggable={false}
-                    />
-                    <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor2.fecha}</span>
-                    <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
-                        <p className={styles.texto}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor2.Texto}
-                        </p>
                     </div>
-                </div>
-                <div className={styles.Posicion3}>
-                    <LazyImage
-                        src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
-                        alt="Punto 3"
-                        className={styles.EstiloGeneralPunto}
-                        draggable={false}
-                    />
-                    <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor3.fecha}</span>
-                    <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
-                        <p className={styles.texto}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor3.Texto}
-                        </p>
-                    </div>
-                </div>
-                <div className={styles.Posicion4}>
-                    <LazyImage
-                        src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
-                        alt="Punto 4"
-                        className={styles.EstiloGeneralPunto}
-                        draggable={false}
-                    />
-                    <div className={styles.EstiloGeneralConTextoEImagen}>
-                        <h3 className={styles.Titulo}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor2.Titulo}
-                        </h3>
-                        <p className={styles.texto}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor2.Texto}
-                        </p>
+                    <div className={styles.Posicion2}>
                         <LazyImage
-                            src={content?.Conocenos.contenedorScroll.common.items.Contenedor2.src}
-                            alt={content?.Conocenos.contenedorScroll.common.items.Contenedor2.alt}
-                            className={styles.Imagen}
+                            src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
+                            alt="Punto 2"
+                            className={styles.EstiloGeneralPunto}
                             draggable={false}
                         />
+                        <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor2.fecha}</span>
+                        <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
+                            <p className={styles.texto}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor2.Texto}
+                            </p>
+                        </div>
                     </div>
-                    <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor4.fecha}</span>
-                </div>
-                <div className={styles.Posicion5}>
-                    <LazyImage
-                        src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
-                        alt="Punto 5"
-                        className={styles.EstiloGeneralPunto}
-                        draggable={false}
-                    />
-                    <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor5.fecha}</span>
-                    <div className={styles.EstiloGeneralConTextoEImagen}>
-                        <h3 className={styles.Titulo}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor3.Titulo}
-                        </h3>
-                        <p className={styles.texto}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor3.Texto}
-                        </p>
+                    <div className={styles.Posicion3}>
                         <LazyImage
-                            src={content?.Conocenos.contenedorScroll.common.items.Contenedor3.src}
-                            alt={content?.Conocenos.contenedorScroll.common.items.Contenedor3.alt}
-                            className={styles.Imagen}
+                            src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
+                            alt="Punto 3"
+                            className={styles.EstiloGeneralPunto}
                             draggable={false}
                         />
+                        <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor3.fecha}</span>
+                        <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
+                            <p className={styles.texto}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor3.Texto}
+                            </p>
+                        </div>
                     </div>
-                    <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
-                        <p className={styles.texto}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor4.Texto}
-                        </p>
-                    </div>
-                </div>
-                <div className={styles.Posicion6}>
-                    <LazyImage
-                        src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
-                        alt="Punto 6"
-                        className={styles.EstiloGeneralPunto}
-                        draggable={false}
-                    />
-                    <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor6.fecha}</span>
-                    <div className={styles.EstiloGeneralConTextoEImagen}>
-                        <h3 className={styles.Titulo}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor4.Titulo}
-                        </h3>
-                        <p className={styles.texto}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor4.Texto}
-                        </p>
+                    <div className={styles.Posicion4}>
                         <LazyImage
-                            src={content?.Conocenos.contenedorScroll.common.items.Contenedor4.src}
-                            alt={content?.Conocenos.contenedorScroll.common.items.Contenedor4.alt}
-                            className={styles.Imagen}
+                            src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
+                            alt="Punto 4"
+                            className={styles.EstiloGeneralPunto}
                             draggable={false}
                         />
+                        <div className={styles.EstiloGeneralConTextoEImagen}>
+                            <h3 className={styles.Titulo}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor2.Titulo}
+                            </h3>
+                            <p className={styles.texto}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor2.Texto}
+                            </p>
+                            <LazyImage
+                                src={content?.Conocenos.contenedorScroll.common.items.Contenedor2.src}
+                                alt={content?.Conocenos.contenedorScroll.common.items.Contenedor2.alt}
+                                className={styles.Imagen}
+                                draggable={false}
+                            />
+                        </div>
+                        <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor4.fecha}</span>
                     </div>
-                </div>
-                <div className={styles.Posicion7}>
-                    <LazyImage
-                        src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
-                        alt="Punto 7"
-                        className={styles.EstiloGeneralPunto}
-                        draggable={false}
-                    />
-                    <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor7.fecha}</span>
-                    <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
-                        <p className={styles.texto}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor5.Texto}
-                        </p>
-                    </div>
-                </div>
-                <div className={styles.Posicion8}>
-                    <LazyImage
-                        src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
-                        alt="Punto 8"
-                        className={styles.EstiloGeneralPunto}
-                        draggable={false}
-                    />
-                    <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor8.fecha}</span>
-                    <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
-                        <p className={styles.texto}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor6.Texto}
-                        </p>
-                    </div>
-                </div>
-                <div className={styles.Posicion9}>
-                    <LazyImage
-                        src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
-                        alt="Punto 9"
-                        className={styles.EstiloGeneralPunto}
-                        draggable={false}
-                    />
-                    <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor9.fecha}</span>
-                    <div className={styles.EstiloGeneralConTextoEImagen}>
-                        <h3 className={styles.Titulo}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor5.Titulo}
-                        </h3>
-                        <p className={styles.texto}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor5.Texto}
-                        </p>
+                    <div className={styles.Posicion5}>
                         <LazyImage
-                            src={content?.Conocenos.contenedorScroll.common.items.Contenedor5.src}
-                            alt={content?.Conocenos.contenedorScroll.common.items.Contenedor5.alt}
-                            className={styles.Imagen}
+                            src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
+                            alt="Punto 5"
+                            className={styles.EstiloGeneralPunto}
                             draggable={false}
                         />
+                        <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor5.fecha}</span>
+                        <div className={styles.EstiloGeneralConTextoEImagen}>
+                            <h3 className={styles.Titulo}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor3.Titulo}
+                            </h3>
+                            <p className={styles.texto}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor3.Texto}
+                            </p>
+                            <LazyImage
+                                src={content?.Conocenos.contenedorScroll.common.items.Contenedor3.src}
+                                alt={content?.Conocenos.contenedorScroll.common.items.Contenedor3.alt}
+                                className={styles.Imagen}
+                                draggable={false}
+                            />
+                        </div>
+                        <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
+                            <p className={styles.texto}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor4.Texto}
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className={styles.Posicion10}>
-                    <LazyImage
-                        src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
-                        alt="Punto 10"
-                        className={styles.EstiloGeneralPunto}
-                        draggable={false}
-                    />
-                    <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor10.fecha}</span>
-                    <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
-                        <p className={styles.texto}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor7.Texto}
-                        </p>
-                    </div>
-                </div>
-                <div className={styles.Posicion11}>
-                    <LazyImage
-                        src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
-                        alt="Punto 11"
-                        className={styles.EstiloGeneralPunto}
-                        draggable={false}
-                    />
-                    <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor11.fecha}</span>
-                    <div className={styles.EstiloGeneralConTextoEImagen}>
-                        <h3 className={styles.Titulo}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor6.Titulo}
-                        </h3>
-                        <p className={styles.texto}>
-                            {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor6.Texto}
-                        </p>
+                    <div className={styles.Posicion6}>
                         <LazyImage
-                            src={content?.Conocenos.contenedorScroll.common.items.Contenedor6.src}
-                            alt={content?.Conocenos.contenedorScroll.common.items.Contenedor6.alt}
-                            className={styles.Imagen}
+                            src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
+                            alt="Punto 6"
+                            className={styles.EstiloGeneralPunto}
                             draggable={false}
                         />
+                        <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor6.fecha}</span>
+                        <div className={styles.EstiloGeneralConTextoEImagen}>
+                            <h3 className={styles.Titulo}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor4.Titulo}
+                            </h3>
+                            <p className={styles.texto}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor4.Texto}
+                            </p>
+                            <LazyImage
+                                src={content?.Conocenos.contenedorScroll.common.items.Contenedor4.src}
+                                alt={content?.Conocenos.contenedorScroll.common.items.Contenedor4.alt}
+                                className={styles.Imagen}
+                                draggable={false}
+                            />
+                        </div>
+                    </div>
+                    <div className={styles.Posicion7}>
+                        <LazyImage
+                            src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
+                            alt="Punto 7"
+                            className={styles.EstiloGeneralPunto}
+                            draggable={false}
+                        />
+                        <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor7.fecha}</span>
+                        <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
+                            <p className={styles.texto}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor5.Texto}
+                            </p>
+                        </div>
+                    </div>
+                    <div className={styles.Posicion8}>
+                        <LazyImage
+                            src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
+                            alt="Punto 8"
+                            className={styles.EstiloGeneralPunto}
+                            draggable={false}
+                        />
+                        <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor8.fecha}</span>
+                        <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
+                            <p className={styles.texto}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor6.Texto}
+                            </p>
+                        </div>
+                    </div>
+                    <div className={styles.Posicion9}>
+                        <LazyImage
+                            src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
+                            alt="Punto 9"
+                            className={styles.EstiloGeneralPunto}
+                            draggable={false}
+                        />
+                        <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor9.fecha}</span>
+                        <div className={styles.EstiloGeneralConTextoEImagen}>
+                            <h3 className={styles.Titulo}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor5.Titulo}
+                            </h3>
+                            <p className={styles.texto}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor5.Texto}
+                            </p>
+                            <LazyImage
+                                src={content?.Conocenos.contenedorScroll.common.items.Contenedor5.src}
+                                alt={content?.Conocenos.contenedorScroll.common.items.Contenedor5.alt}
+                                className={styles.Imagen}
+                                draggable={false}
+                            />
+                        </div>
+                    </div>
+                    <div className={styles.Posicion10}>
+                        <LazyImage
+                            src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
+                            alt="Punto 10"
+                            className={styles.EstiloGeneralPunto}
+                            draggable={false}
+                        />
+                        <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor10.fecha}</span>
+                        <div className={`${styles.EstiloGeneralConTexto} ${styles.EstiloGeneralConTextoInvertido}`}>
+                            <p className={styles.texto}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorSimple.Contenedor7.Texto}
+                            </p>
+                        </div>
+                    </div>
+                    <div className={styles.Posicion11}>
+                        <LazyImage
+                            src={content?.Conocenos.contenedorScroll.common.imagenDePunto}
+                            alt="Punto 11"
+                            className={styles.EstiloGeneralPunto}
+                            draggable={false}
+                        />
+                        <span className={styles.TextoDePunto}>{content?.Conocenos.contenedorScroll[language].Puntos.Contenedor11.fecha}</span>
+                        <div className={styles.EstiloGeneralConTextoEImagen}>
+                            <h3 className={styles.Titulo}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor6.Titulo}
+                            </h3>
+                            <p className={styles.texto}>
+                                {content?.Conocenos.contenedorScroll[language].ContenedorComplejo.Contenedor6.Texto}
+                            </p>
+                            <LazyImage
+                                src={content?.Conocenos.contenedorScroll.common.items.Contenedor6.src}
+                                alt={content?.Conocenos.contenedorScroll.common.items.Contenedor6.alt}
+                                className={styles.Imagen}
+                                draggable={false}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     );
 }
 
