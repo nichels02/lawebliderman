@@ -11,6 +11,7 @@ function FlechaGiro() {
     const [activeContainer, setActiveContainer] = useState<number | null>(null);
 
     const data = content?.Seguridad?.FlechaGiro?.[language];
+    const isMobile = window.innerWidth <= 768;
 
     if (!data) {
         return <div>Cargando...</div>;
@@ -67,7 +68,7 @@ function FlechaGiro() {
                     containerIndex = 4; // Contenedor 6 (centro abajo) <-- fíjate que aquí va el 6 (índice 5)
                 } else {
                     targetAngle = 135;
-                    containerIndex = 3;// Contenedor 5 (derecha abajo)
+                    containerIndex =3;// Contenedor 5 (derecha abajo)
                 }
             }
         } else {
@@ -82,14 +83,15 @@ function FlechaGiro() {
                 targetAngle = 135;
                 containerIndex = 2; // Contenedor 3
             } else if (xPercent < 50 && yPercent <= 33) {
+
                 targetAngle = -45;
-                containerIndex = 3; // Contenedor 4
+                containerIndex = 3; // Contenedor 6
             } else if (xPercent < 50 && yPercent > 33 && yPercent <= 66) {
                 targetAngle = -90;
                 containerIndex = 4; // Contenedor 5
             } else if (xPercent < 50 && yPercent > 66) {
                 targetAngle = -135;
-                containerIndex = 5; // Contenedor 6
+                containerIndex = 5; // Contenedor 4
             }
         }
 
@@ -112,15 +114,34 @@ function FlechaGiro() {
                 <div className={styles.textoCentro}>{data.TituloCentral}</div>
             </div>
 
-            {contenedores.map((item, i) => (
-                <div
-                    key={i}
-                    className={`${styles[`contenedor${i + 1}`]} ${styles.contenedor} ${activeContainer === i ? styles.activo : ''}`}
-                >
-                    <div className={`${styles.numero} ${activeContainer === i ? styles.numeroActivo : ''}`}>{item.numero}</div>
-                    <div className={styles.texto}>{item.texto}</div>
-                </div>
-            ))}
+            {contenedores.map((item, i) => {
+                let isActive = false;
+
+                if (isMobile) {
+                    // Solo en móviles se invierte la activación entre el 4 y el 6
+                    if (activeContainer === 3) {
+                        isActive = i === 5;
+                    } else if (activeContainer === 5) {
+                        isActive = i === 3;
+                    } else {
+                        isActive = i === activeContainer;
+                    }
+                } else {
+                    // En pantallas grandes se comporta normal
+                    isActive = i === activeContainer;
+                }
+
+                return (
+                    <div
+                        key={i}
+                        className={`${styles[`contenedor${i + 1}`]} ${styles.contenedor} ${isActive ? styles.activo : ''}`}
+                    >
+                        <div className={`${styles.numero} ${isActive ? styles.numeroActivo : ''}`}>{item.numero}</div>
+                        <div className={styles.texto}>{item.texto}</div>
+                    </div>
+                );
+            })}
+
         </div>
     );
 }

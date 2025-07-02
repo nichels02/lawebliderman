@@ -34,6 +34,9 @@
 
 .left {
     position: relative;
+    top: 100px;
+    left: calc((clamp(1300px, 100vw,1920px) - 1300px)*161/620);
+    /*161*/
     width: 60%;
     height: 25vw;
     color: white;
@@ -70,7 +73,6 @@
 .text{
     position: relative;
     z-index: 3;
-    font-size: clamp(10px, 1.6vw, 70px);
     margin-top: 20px;
     color: #ffffff;
     width: 90%;
@@ -78,7 +80,14 @@
 }
 .text p{
     margin-top: 0;
+    font-size: clamp(16px, 1.8vw, 28px);
     margin-bottom: clamp( 10px, 1.5625vw, 30px);
+}
+.left.EsTrue{
+    top: auto;
+    bottom: auto;
+    margin: 0 auto;
+    left: calc(((clamp(1300px, 100vw,1920px) - 1300px)*161/620) - 50px);
 }
 
 .right {
@@ -111,9 +120,18 @@
 /*        bottom: 8%;*/
 /*    }*/
 /*}*/
+
 @media (max-width: 1680px) {
     .right {
         width: 50%;
+    }
+}
+@media (max-width: 1500px) {
+    .text p{
+        font-size: clamp(16px, 1.8vw, 28px);
+    }
+    .left.EsTrue{
+        left: calc(((clamp(1300px, 100vw,1920px) - 1300px)*161/620) );
     }
 }
 @media (max-width: 1300px) {
@@ -135,6 +153,10 @@
     .left{
         height: auto;
         width: 70%;
+        top:0;
+    }
+    .left{
+        top: auto;
     }
     .text{
         width: 100%;
@@ -148,8 +170,34 @@
         color: #ffffff;
         padding-bottom: 0;
     }
+    .header.EsTrue{
+        height: 120vw;
+    }
 }
 
+@media (max-width: 500px) {
+    .header.EsTrue{
+        height: 145vw;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .header.EsTrue{
+        height: 140vw;
+    }
+    .container.EsTrue{
+        margin-top: 50px;
+    }
+}
+@media (max-width: 405px) {
+    .header.EsTrue{
+        height: 160vw;
+    }
+    .container.EsTrue{
+    }
+}
 @media (max-width: 390px) {
     .container{
         margin-top: 10%;
@@ -158,27 +206,19 @@
         width: 50%;
     }
     .header{
-        height: 110vw;
+        height: 130vw;
+    }
+    .header.EsTrue{
+        height: 160vw;
     }
 }
-
-@media (max-width: 480px) {
+@media (max-width: 370px) {
     .header.EsTrue{
-        height: 110vw;
-    }
-    .container.EsTrue{
-        margin-top: 50px;
-    }
-}
-@media (max-width: 405px) {
-    .header.EsTrue{
-        height: 120vw;
-    }
-    .container.EsTrue{
+        height: 180vw;
     }
 }
 @media (max-width: 350px) {
     .header.EsTrue{
-        height: 140vw;
+        height: 200vw;
     }
 }

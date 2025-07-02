@@ -16,7 +16,7 @@
 /* Panel centrado en la pantalla */
 .modal {
     background-color: #fff;
-    width: 80%;
+    width: 90%;
     height: 95%; /* Altura fija para el modal */
     max-height: 1080px;
     max-width: 1920px;
@@ -123,9 +123,9 @@
 .modalFooter {
     padding: 10px;
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    height: 16%; /* Altura fija para el footer */
+    justify-content: center;
+    align-items: center;
+    height: 20%;
     position: relative;
 }
 
@@ -140,9 +140,26 @@
     border: none;
     border-radius: 5px;
     position: absolute;
-    top: 30%;
+    top: 50%;
     transform: translateY(calc(-50% - 10px)); /* mueve hacia arriba sin romper el centrado */
 }
+
+
+
+/*.closeButton {*/
+/*    padding: 10px 20px;*/
+/*    width: 15%;*/
+/*    height: 40%;*/
+/*    font-size: clamp(1.3rem, 1.42vw, 1.7rem);*/
+/*    cursor: pointer;*/
+/*    background-color: var(--color-rojo-general);*/
+/*    color: white;*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    position: absolute;*/
+/*    top: 30%;*/
+/*    transform: translateY(calc(-50% - 10px)); !* mueve hacia arriba sin romper el centrado *!*/
+/*}*/
 
 .closeButton:hover {
     background-color: var(--color-rojo-generalOscuro);
@@ -159,13 +176,30 @@ landscape   es cuando el  alto es menor al ancho
 |         |
 -----------
 */
-@media (max-height: 830px){
+@media (max-width: 1200px) {
     .closeButton {
-        top: 50%;
+        padding: 0 0;
+        width: 30%;
+        min-width: 80px;
+        min-height: 25px;
         transform: translateY(calc(-50%)); /* mueve hacia arriba sin romper el centrado */
-        line-height: 50%;
-        height: 60%;
     }
+    .modalFooter {
+        /*padding: 10px;*/
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+        height:clamp(40px, calc((1vw + 1vh)*20), 100px);
+        /*position: relative;*/
+    }
+}
+@media (max-height: 830px){
+    /*.closeButton {*/
+    /*    top: 50%;*/
+    /*    transform: translateY(calc(-50%)); !* mueve hacia arriba sin romper el centrado *!*/
+    /*    line-height: 50%;*/
+    /*    height: 60%;*/
+    /*}*/
 }
 @media (max-height: 722px){
     .row {
@@ -198,9 +232,9 @@ landscape   es cuando el  alto es menor al ancho
     .modalTitle{
         font-size: clamp(1.4rem,calc((1vh + 1vw)*1.8), 2.5rem)
     }
-    .closeButton{
-        font-size: clamp(1rem, (1vh + 1vw)*1.1, 2rem);
-    }
+    /*.closeButton{*/
+    /*    font-size: clamp(1rem, (1vh + 1vw)*1.1, 2rem);*/
+    /*}*/
 
 }
 
@@ -233,15 +267,15 @@ landscape   es cuando el  alto es menor al ancho
         width: 100%;            /* Hace que los contenedores ocupen todo el ancho disponible */
         margin-bottom: 20px;    /* Espacio debajo para separar los bloques apilados */
     }
-    .closeButton{
-        font-size: clamp(1.3rem, (1vh + 1vw)*1.1, 2rem);
-        top: 50%;
-        transform: translateY(calc(-50%)); /* mueve hacia arriba sin romper el centrado */
-        line-height: 50%;
-        min-width: 100px;
-        height: 50%;
-        width: auto;
-        aspect-ratio: 16 / 9;
-    }
+    /*.closeButton{*/
+    /*    font-size: clamp(1.3rem, (1vh + 1vw)*1.1, 2rem);*/
+    /*    top: 50%;*/
+    /*    transform: translateY(calc(-50%)); !* mueve hacia arriba sin romper el centrado *!*/
+    /*    line-height: 50%;*/
+    /*    min-width: 100px;*/
+    /*    height: 50%;*/
+    /*    width: auto;*/
+    /*    aspect-ratio: 16 / 9;*/
+    /*}*/
 }
 

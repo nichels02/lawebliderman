@@ -8,15 +8,15 @@
         },
         "Titulo2": {
           "Titulo": "Certificaciones",
-          "Subtitulo": "Obtenidas"
+          "Subtitulo": "obtenidas"
         },
         "Titulo3": {
           "Titulo": "Presencia",
           "Subtitulo": "en todos los sectores"
         },
         "Titulo4": {
-          "Titulo": "Supervisión",
-          "Subtitulo": "y control"
+          "Titulo": "Lidermanía",
+          "Subtitulo": "que nos mueve"
         }
       },
       "en": {
@@ -26,15 +26,15 @@
         },
         "Titulo2": {
           "Titulo": "Certifications",
-          "Subtitulo": "Achieved"
+          "Subtitulo": "achieved"
         },
         "Titulo3": {
           "Titulo": "Presence",
           "Subtitulo": "across all sectors"
         },
         "Titulo4": {
-          "Titulo": "Monitoring",
-          "Subtitulo": "and control"
+          "Titulo": "Lidermania",
+          "Subtitulo": "what drives us"
         }
       }
     },
@@ -246,27 +246,27 @@
             "alt": "1"
           },
           {
-            "src": "/assets/Inicio/iso9001_.gif",
+            "src": "/assets/Inicio/iso9001_.jpg",
             "alt": "2"
           },
           {
-            "src": "/assets/Inicio/iso14001.png",
+            "src": "/assets/Inicio/iso14001.jpg",
             "alt": "3"
           },
           {
-            "src": "/assets/Inicio/ISO 18788.jpg",
+            "src": "/assets/Inicio/ISO-18788.jpg",
             "alt": "4"
           },
           {
-            "src": "/assets/Inicio/ISO 37001.jpg",
+            "src": "/assets/Inicio/ISO-37001.jpg",
             "alt": "5"
           },
           {
-            "src": "/assets/Inicio/logo-basc-peru.png",
+            "src": "/assets/Inicio/logo-basc-peru.jpg",
             "alt": "6"
           },
           {
-            "src": "/assets/Inicio/logo_DGAC.png",
+            "src": "/assets/Inicio/logo_DGAC.jpg",
             "alt": "7"
           },
           {
@@ -305,9 +305,9 @@
           }
         ],
         "fixedTexts": [
-          "○ Líder en seguridad: El mercado nos reconoce como la más grande y la mejor empresa de seguridad del Perú.",
-          "○ Innovación constante: Siempre a la vanguardia en tecnología y soluciones de seguridad.",
-          "○ Compromiso con el cliente: Garantizamos la máxima satisfacción y confianza."
+          "· Líder en seguridad: el mercado nos reconoce como la mejor empresa de seguridad en el Perú.",
+          "· Innovación constante: siempre a la vanguardia en tecnología y soluciones de seguridad.",
+          "· Compromiso con el cliente: garantizamos la máxima satisfacción y confianza."
         ],
         "otrosCategories": [
           "· Inmobiliaria",
@@ -372,7 +372,7 @@
         "reconocimiento2": "Contamos con una central de agentes para brindar soporte.",
         "boton1": {
           "titulo": "Descubre",
-          "subtitulo": "Más sobre nuestra cultura"
+          "subtitulo": "Nuestra cultura"
         },
         "boton2": {
           "titulo": "Bolsa de trabajo",
@@ -716,22 +716,14 @@
     "Titulos": {
       "es": {
         "Titulo1": {
-          "Titulo": "Cómo",
-          "Subtitulo": "operamos"
-        },
-        "Titulo2": {
-          "Titulo": "Supervisión",
-          "Subtitulo": "y control"
+          "Titulo": "Nuestra ",
+          "Subtitulo": "trayectoria"
         }
       },
       "en": {
         "Titulo1": {
-          "Titulo": "How",
-          "Subtitulo": "we operate"
-        },
-        "Titulo2": {
-          "Titulo": "Monitoring",
-          "Subtitulo": "and control"
+          "Titulo": "Our",
+          "Subtitulo": "journey"
         }
       }
     },
@@ -782,6 +774,8 @@
             "alt": "usa-expansion"
           }
         },
+        "FlechaDe": "public/assets/ImagenesPrueba/images.jpeg",
+        "FlechaIz": "public/assets/ImagenesPrueba/images.jpeg",
         "imagenDePunto": "/assets/Conocenos/Icono ubicación.svg",
         "LineaDeTiempo": "/assets/Conocenos/Linea distribucion 2.svg"
       },
@@ -879,11 +873,19 @@
       "Common": {
         "ImagenDerecha":[
           {
-            "imagen": "/assets/Seguridad/seguridad-fisica.png",
+            "imagen": "/assets/Seguridad/SEGURIDAD.png",
             "alt": "physical-security"
           },
           {
-            "imagen": "/assets/Seguridad/seguridad-fisica.png",
+            "imagen": "/assets/Seguridad/SEGURIDAD-FÍSICA.png",
+            "alt": "physical-security"
+          },
+          {
+            "imagen": "/assets/Seguridad/Seguridad (1).png",
+            "alt": "physical-security"
+          },
+          {
+            "imagen": "/assets/Seguridad/SUPERVISIÓN-DE-SALA-DE-CONTROL_header.png",
             "alt": "physical-security"
           },
           {
@@ -1036,16 +1038,16 @@
           "Texto": "Inducción agente-puesto."
         },
         "Contenedor4": {
-          "Titulo": "4",
-          "Texto": "Integración de la tecnología."
+          "Titulo": "6",
+          "Texto": "Presentación de KPIs."
         },
         "Contenedor5": {
           "Titulo": "5",
           "Texto": "Comunicación constante con el cliente."
         },
         "Contenedor6": {
-          "Titulo": "6",
-          "Texto": "Presentación de KPIs."
+          "Titulo": "4",
+          "Texto": "Integración de la tecnología."
         }
       },
       "Contenido": {
@@ -1063,7 +1065,7 @@
           "showTitle": true
         },
         "carta2": {
-          "text": "No Title",
+          "text": "Live Patrol Monitoring",
           "description": [
             "We have a round management system with real-time monitoring for security personnel."
           ],
@@ -1106,11 +1108,11 @@
           "showTitle": true
         },
         "carta2": {
-          "text": "Sin Titulo",
+          "text": "Vigilancia en tiempo real",
           "description": [
             "Contamos con un sistema de gestión de rondas con monitoreo en linea para personal de vigilancia."
           ],
-          "showTitle": false
+          "showTitle": true
         },
         "carta3": {
           "text": "Planificación de territorios ",
@@ -1188,7 +1190,7 @@
     },
     "TextoTituloEImagen": {
       "Contenido": {
-        "Imagen1": "/assets/Servicio/parking.png",
+        "Imagen1": "/assets/Servicio/Foto-playa-de-estacionamiento_LIDERMAN.png",
         "Imagen2": "/assets/Servicio/554e92e6ec866bbf03de6d44038fff9b.png"
       },
       "es": {
@@ -1197,7 +1199,8 @@
           "Texto2": "Administración de estacionamientos"
         },
         "Titulo": "Parking",
-        "Texto": "Rapidez y seguridad en el manejo de vehículos, brindando una experiencia premium a los usuarios y facilitando la logística de estacionamiento en eventos y establecimientos."
+        "Texto1": "Rapidez y seguridad en el manejo de vehículos, brindando una experiencia premium a los usuarios y facilitando la logística de estacionamiento en eventos y establecimientos.",
+        "Texto2": "Rapidez y seguridad en el manejo de vehículos, brindando una experiencia premium a los usuarios y facilitando la logística de estacionamiento en eventos y establecimientos."
       },
       "en": {
         "botones": {
@@ -1205,7 +1208,8 @@
           "Texto2": "Parking management"
         },
         "Titulo": "Parking",
-        "Texto": "Speed and safety in vehicle handling, delivering a premium experience for users and streamlining parking logistics at events and venues."
+        "Texto1": "Speed and safety in vehicle handling, delivering a premium experience for users and streamlining parking logistics at events and venues.",
+        "Texto2": "Speed and safety in vehicle handling, delivering a premium experience for users and streamlining parking logistics at events and venues."
       }
     },
     "TextoTituloEImagen2": {
@@ -1223,7 +1227,10 @@
           "Texto4": "Transporte"
         },
         "Titulo": "Facilities",
-        "Texto": "Nuestro equipo garantiza un mantenimiento impecable, enfocado en la higiene, la organización y el bienestar del espacio."
+        "Texto1": "Nuestro equipo garantiza un mantenimiento impecable, enfocado en la higiene, la organización y el bienestar del espacio.",
+        "Texto2": "Nuestro equipo garantiza un mantenimiento impecable, enfocado en la higiene, la organización y el bienestar del espacio.",
+        "Texto3": "Nuestro equipo garantiza un mantenimiento impecable, enfocado en la higiene, la organización y el bienestar del espacio.",
+        "Texto4": "Nuestro equipo garantiza un mantenimiento impecable, enfocado en la higiene, la organización y el bienestar del espacio."
       },
       "en": {
         "botones": {
@@ -1233,7 +1240,10 @@
           "Texto4": "Transport"
         },
         "Titulo": "Facilities",
-        "Texto": "Our team ensures impeccable maintenance, focused on hygiene, organization, and space wellbeing."
+        "Texto1": "Our team ensures impeccable maintenance, focused on hygiene, organization, and space wellbeing.",
+        "Texto2": "Our team ensures impeccable maintenance, focused on hygiene, organization, and space wellbeing.",
+        "Texto3": "Our team ensures impeccable maintenance, focused on hygiene, organization, and space wellbeing.",
+        "Texto4": "Our team ensures impeccable maintenance, focused on hygiene, organization, and space wellbeing."
       }
     }, "_comment": "Tengo que modificarlo para que haya textos en la imagen",
     "GridGenerico": {
@@ -1291,11 +1301,11 @@
           "showTitle": true
         },
         "carta2": {
-          "text": "No Title",
+          "text": "Live Patrol Monitoring",
           "description": [
             "We have a round management system with online monitoring that allows us to supervise in real time the fulfillment of routes and tasks assigned to our security personnel."
           ],
-          "showTitle": false
+          "showTitle": true
         },
         "carta3": {
           "text": "Territory Planning",
@@ -1329,11 +1339,11 @@
           "showTitle": true
         },
         "carta2": {
-          "text": "Sin Titulo",
+          "text": "Vigilancia en tiempo real",
           "description": [
             "Contamos con un sistema de gestión de rondas con monitoreo en línea que nos permite supervisar en tiempo real el cumplimiento de las rutas y tareas asignadas a nuestro personal de vigilancia."
           ],
-          "showTitle": false
+          "showTitle": true
         },
         "carta3": {
           "text": "Planificación de Territorios ",
@@ -1372,7 +1382,7 @@
       "es": {
         "Titulo1": {
           "Titulo": "Soluciones",
-          "Subtitulo": "Tecnológicas"
+          "Subtitulo": "tecnológicas"
         },
         "Titulo2": {
           "Titulo": "Sistemas de alarmas",
@@ -1380,13 +1390,13 @@
         },
         "Titulo3": {
           "Titulo": "Ciberseguridad",
-          "Subtitulo": "Características de nuestra solución"
+          "Subtitulo": "características de nuestra solución"
         }
       },
       "en": {
         "Titulo1": {
           "Titulo": "Solutions",
-          "Subtitulo": "Technological"
+          "Subtitulo": "technological"
         },
         "Titulo2": {
           "Titulo": "Alarm systems",
@@ -1394,7 +1404,7 @@
         },
         "Titulo3": {
           "Titulo": "Cybersecurity",
-          "Subtitulo": "Features of our solution"
+          "Subtitulo": "features of our solution"
         }
       }
     },
@@ -1403,10 +1413,10 @@
         "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
         "Fondo": "/assets/Tecnologia/tecnologia-portada.png",
         "ImagenDerecha": {
-          "boton1": "",
-          "boton2": "/assets/Tecnologia/tecnologia-chica.png",
-          "boton3": "",
-          "boton4": "/assets/Tecnologia/tecnologia-chica.png"
+          "boton1": "/assets/Tecnologia/TECNOLOGIA.png",
+          "boton2": "/assets/Tecnologia/CIBERSEGURIIDAD.png",
+          "boton3": "/assets/Tecnologia/alarma.png",
+          "boton4": "/assets/Tecnologia/GPS.png"
         },
 
         "imagenDerecha1": "/assets/Tecnologia/tecnologia-chica.png"
@@ -1767,7 +1777,7 @@
         },
         "Titulo2": {
           "Titulo": "Trabaja con nosotros",
-          "Subtitulo": "Nuestras vacantes más recientes"
+          "Subtitulo": "nuestras vacantes más recientes"
         }
       },
       "en": {
@@ -1777,7 +1787,7 @@
         },
         "Titulo2": {
           "Titulo": "Work with us",
-          "Subtitulo": "Our latest job openings"
+          "Subtitulo": "our latest job openings"
         }
       }
     },
@@ -1785,7 +1795,7 @@
       "Common": {
         "Fondo": "/assets/Lidermania/lidermania-fondo.png",
         "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
-        "ImagenDelCostado": "/assets/Lidermania/9f91a9d6484d2babecc2143d56e2809d.png"
+        "ImagenDelCostado": "/assets/Lidermania/LIDERMANÍA-HEADER_header.png"
       },
       "es": {
         "Titulo": "Lidermanía",
@@ -1838,10 +1848,10 @@
         }
       },
       "contenido": {
-        "Imagen1": "/assets/Lidermania/92dd066318dd79582d5efc48bd8a1b56.jpg",
-        "Imagen2": "/assets/Lidermania/3110e07e7c3f8b698813459e7a4eeaeb.jpg",
-        "Imagen3": "/assets/Lidermania/dc3873446ce1d893c869ecd622c8207b.jpg",
-        "Imagen4": "/assets/Lidermania/51ee4d48107f8d348f5f4247762ec23c.jpg"
+        "Imagen1": "/assets/Lidermania/AMATRATO.png",
+        "Imagen2": "/assets/Lidermania/AMAPAGO.png",
+        "Imagen3": "/assets/Lidermania/AMAVIDA.png",
+        "Imagen4": "/assets/Lidermania/AMACRECE.png"
       }
     },
     "TituloTextoEImagen2": {
@@ -1849,12 +1859,12 @@
         "ImagenDelCostado": "/assets/Lidermania/LIDERMANIA.jpg"
       },
       "es": {
-        "Titulo": "Contamos con un equipo dedicado exclusivamente a la protección del /bienestar social/",
+        "Titulo": "Protección del bienestar social",
         "Subtitulo": "Somos una empresa formal que cumple todos los beneficios sociales de ley para un correcto funcionamiento.",
         "Subtitulo2": "Con Liderman tienes la seguridad y orientación de cubrir riesgos como un tercero solidario."
       },
       "en": {
-        "Titulo": "We have a team dedicated exclusively to protecting /social well-being/",
+        "Titulo": "Protection of social well-being",
         "Subtitulo": "We are a formal company that complies with all legally mandated social benefits for proper operation.",
         "Subtitulo2": "With Liderman, you have the security and guidance to cover risks as a solidary third party."
       }
@@ -1875,20 +1885,12 @@
         "Titulo1": {
           "Titulo": "Te invitamos a revisar cada uno de ellos para conocer ",
           "Subtitulo": "en detalle nuestras políticas y tus derechos como usuario. "
-        },
-        "Titulo2": {
-          "Titulo": "Supervisión",
-          "Subtitulo": "y control"
         }
       },
       "en": {
         "Titulo1": {
-          "Titulo": "How",
-          "Subtitulo": "we operate"
-        },
-        "Titulo2": {
-          "Titulo": "Monitoring",
-          "Subtitulo": "and control"
+          "Titulo": "We invite you to review each of them to learn ",
+          "Subtitulo": "in detail about our policies and your rights as a user."
         }
       }
     },
@@ -1896,7 +1898,7 @@
       "Contenido": {
         "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
         "Fondo": "/assets/Servicio/fondo-servicios.png",
-        "ImagenDelCostado": "public/assets/Legal/Foto-para-header_2.png"
+        "ImagenDelCostado": "/assets/Legal/Header-Liderman.png"
       },
       "es": {
         "Titulo": "Cumplimiento",
@@ -1923,7 +1925,7 @@
       "Politicas": [
         {
           "es": {
-            "Nombre": "Politica Antisoborno Grupo Liderman"
+            "Nombre": "Política Antisoborno Grupo Liderman"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -1935,7 +1937,7 @@
         },
         {
           "es": {
-            "Nombre": "Politica Conflicto de Interes"
+            "Nombre": "Política de Conflicto de Interés"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -1947,7 +1949,7 @@
         },
         {
           "es": {
-            "Nombre": "Politica de Alcohol y Drogas"
+            "Nombre": "Política de Alcohol y Drogas"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -1959,10 +1961,10 @@
         },
         {
           "es": {
-            "Nombre": "Documento legal"
+            "Nombre": "Política de Derechos Humanos"
           },
           "en": {
-            "Nombre": "Politica de Derechos Humanos"
+            "Nombre": "Documento Legal"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -1971,7 +1973,7 @@
         },
         {
           "es": {
-            "Nombre": "Politica de Equidad Diversidad e Inclusion"
+            "Nombre": "Política de Equidad, Diversidad e Inclusión"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -1983,7 +1985,7 @@
         },
         {
           "es": {
-            "Nombre": "Politica de Jornada Laboral"
+            "Nombre": "Política de Jornada Laboral"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -1995,7 +1997,7 @@
         },
         {
           "es": {
-            "Nombre": "Politica de Negativa al Trabajo Inseguro"
+            "Nombre": "Política de Negativa al Trabajo Inseguro"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2007,7 +2009,7 @@
         },
         {
           "es": {
-            "Nombre": "Politica de Responsabilidad en SST"
+            "Nombre": "Política de Responsabilidad SST"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2019,7 +2021,7 @@
         },
         {
           "es": {
-            "Nombre": "POLITICA DEL DELATOR"
+            "Nombre": "Política del Delator"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2031,7 +2033,7 @@
         },
         {
           "es": {
-            "Nombre": "Politica del Sistema de Gestion Integrado de Alarmas"
+            "Nombre": "Política del Sistema de Gestión Integrado de Alarmas"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2043,7 +2045,7 @@
         },
         {
           "es": {
-            "Nombre": "Politica Igualdad Salarial"
+            "Nombre": "Política de Igualdad Salarial"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2055,7 +2057,7 @@
         },
         {
           "es": {
-            "Nombre": "Politica y Procedimiento de Hostigamiento Sexual"
+            "Nombre": "Política y Procedimiento de Hostigamiento Sexual"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2067,7 +2069,7 @@
         },
         {
           "es": {
-            "Nombre": "Politica de Proteccion de Datos Vigente"
+            "Nombre": "Política de Protección de Datos Vigente"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2079,7 +2081,7 @@
         },
         {
           "es": {
-            "Nombre": "Politica de sostenibilidad"
+            "Nombre": "Política de Sostenibilidad"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2091,7 +2093,7 @@
         },
         {
           "es": {
-            "Nombre": "POLÍTICA DEL SISTEMA DE GESTIÓN INTEGRADO"
+            "Nombre": "Política del Sistema de Gestión Integrado"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2103,7 +2105,7 @@
         },
         {
           "es": {
-            "Nombre": "Política Anticorrupcion Liderman"
+            "Nombre": "Política Anticorrupción Liderman"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2114,108 +2116,10 @@
           }
         }
       ],
-      "Procedimientos": [
-        {
-          "es": {
-            "Nombre": "Manual del Sistema de Gestion Integrado"
-          },
-          "en": {
-            "Nombre": "Document Legal"
-          },
-          "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"public/assets/Legal/Documentos/Procedimientos/AL-SGI-M-001-Manual-del-Sistema-de-Gestion-Integrado-Ver-22-2.pdf"
-          }
-        },
-        {
-          "es": {
-            "Nombre": "Codigo de conducta y Buen Comportamiento"
-          },
-          "en": {
-            "Nombre": "Document Legal"
-          },
-          "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"public/assets/Legal/Documentos/Procedimientos/Codigo_de_conducta_y_Buen_Comportamiento_Ver02.pdf"
-          }
-        },
-        {
-          "es": {
-            "Nombre": "DECLARACION-DE-CONFORMIDAD"
-          },
-          "en": {
-            "Nombre": "Document Legal"
-          },
-          "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"public/assets/Legal/Documentos/Procedimientos/DECLARACION-DE-CONFORMIDAD-Ver-01.pdf"
-          }
-        },
-        {
-          "es": {
-            "Nombre": "Procedimiento de Prevencion de Recepcion Regalos"
-          },
-          "en": {
-            "Nombre": "Document Legal"
-          },
-          "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Procedimientos/JV-GD-P-085-Procedimiento-de-Prevencion-de-Recepcion-Regalos-Ver01.pdf"
-          }
-        },
-        {
-          "es": {
-            "Nombre": "Procedimiento de Atencion a Reclamos Sugerencias y Reportes"
-          },
-          "en": {
-            "Nombre": "Document Legal"
-          },
-          "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"public/assets/Legal/Documentos/Procedimientos/JV-SGI-P-050-Procedimiento-de-Atencion-a-Reclamos-Sugerencias-y-Reportes-Ver-09.pdf"
-          }
-        },
-        {
-          "es": {
-            "Nombre": "Procedimiento de Denuncias por Actos o Sospechas de Soborno"
-          },
-          "en": {
-            "Nombre": "Document Legal"
-          },
-          "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"public/assets/Legal/Documentos/Procedimientos/JV-SGI-P-091-Procedimiento-de-Denuncias-por-Actos-o-Sospechas-de-Soborno-Ver01.pdf"
-          }
-        },
-        {
-          "es": {
-            "Nombre": "Manual del Sistema de Gestion Integrado JV RESGUARDO"
-          },
-          "en": {
-            "Nombre": "Document Legal"
-          },
-          "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Procedimientos/Manual-del-Sistema-de-Gestion-Integrado-JV-RESGUARDO-120824.pdf"
-          }
-        },
-        {
-          "es": {
-            "Nombre": "Objetivos SGI"
-          },
-          "en": {
-            "Nombre": "Document Legal"
-          },
-          "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Procedimientos/Objetivos-SGI-2024.pdf"
-          }
-        }
-      ],
       "Reglamentos": [
         {
           "es": {
-            "Nombre": "Reglamento Interno de Seguridad y Salud en el Trabajo Alarmas"
+            "Nombre": "Reglamento Interno de Seguridad y Salud en el Trabajo – Alarmas"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2227,7 +2131,7 @@
         },
         {
           "es": {
-            "Nombre": "Reglamento Interno de Seguridad y Salud en el Trabajo JV RESGUARDO"
+            "Nombre": "Reglamento Interno de Seguridad y Salud en el Trabajo – Resguardos"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2239,7 +2143,7 @@
         },
         {
           "es": {
-            "Nombre": "Reglamento Interno de Seguridad y Salud en el Trabajo JV SELVA"
+            "Nombre": "Reglamento Interno de Seguridad y Salud en el Trabajo – JV Selva"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2251,7 +2155,7 @@
         },
         {
           "es": {
-            "Nombre": "RIT. ALARMAS 2025"
+            "Nombre": "RIT Alarmas 2025"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2263,7 +2167,7 @@
         },
         {
           "es": {
-            "Nombre": "RIT. JV RESGUARDO 2025"
+            "Nombre": "RIT JV Resguardos 2025"
           },
           "en": {
             "Nombre": "Document Legal"
@@ -2275,7 +2179,7 @@
         },
         {
           "es": {
-            "Nombre": "RIT. LIDERMAN SERVICIOS 2025"
+            "Nombre": "RIT Liderman Servicios 2025"
           },
           "en": {
             "Nombre": "Document Legal"

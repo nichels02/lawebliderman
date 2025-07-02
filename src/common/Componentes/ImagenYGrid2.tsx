@@ -34,10 +34,10 @@ function ImagenYGrid2() {
                     {/* Contenido a la derecha */}
                     <div className={styles.contenedorDerecho}>
                         {/* Títulos superiores */}
-                        <div className={styles.contenedorSuperior}>
-                            <p className={styles.textoSuperior}>{textos.tituloSuperior}</p>
-                            <p className={styles.textoInferior}>{textos.tituloInferior}</p>
-                        </div>
+                        {/*<div className={styles.contenedorSuperior}>*/}
+                        {/*    <p className={styles.textoSuperior}>{textos.tituloSuperior}</p>*/}
+                        {/*    <p className={styles.textoInferior}>{textos.tituloInferior}</p>*/}
+                        {/*</div>*/}
 
                         {/* Sección de reconocimientos */}
                         <div className={styles.contenedorMedio}>

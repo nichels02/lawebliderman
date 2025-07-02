@@ -83,7 +83,7 @@ h1, p {
 .buttonPrimary {
     width: 30%; /* Ancho relativo al contenedor */
     padding: 1vw 2vw; /* Espaciado interno relativo al contenedor */
-    font-size: 1.2vw; /* Tamaño de fuente relativo al contenedor */
+    font-size: clamp(16px, 1.3vw, 25px);
     color: var(--color-texto-blanco); /* Color del texto */
     background-color: var(--color-rojo-general-cambio);
     border: none; /* Elimina el borde */
@@ -94,17 +94,17 @@ h1, p {
     align-items: center; /* Centra el texto verticalmente */
     justify-content: center; /* Centra el texto horizontalmente */
     height: 100%; /* Asegura que el botón ocupe toda la altura del contenedor */
-    font-weight: normal; /* Texto en fuente normal */
+    font-weight: 600;
+
 }
 
 /* Estilo para el botón secundario */
 .buttonSecondary {
     width: 30%; /* Ancho relativo al contenedor */
     padding: 1vw 2vw; /* Espaciado interno relativo al contenedor */
-    font-size: 1.2vw; /* Tamaño de fuente relativo al contenedor */
-    color: var(--color-texto-negro); /* Color del texto */
-    background-color: var(--color-texto-blanco);
-    border: 3px solid var(--color-rojo-general-cambio); /* Borde con color */
+    font-size: clamp(16px, 1.3vw, 25px);
+    background-color: var(--color-rojo-general-cambio);
+    color: var(--color-texto-blanco); /* Color del texto */
     border-radius: 10px; /* Bordes redondeados */
 
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
@@ -114,7 +114,7 @@ h1, p {
     align-items: center; /* Centra el texto verticalmente */
     justify-content: center; /* Centra el texto horizontalmente */
     height: 100%; /* Asegura que el botón ocupe toda la altura del contenedor */
-    font-weight: normal; /* Texto en fuente normal */
+    font-weight: 600;
 }
 
 .centeredBottomContainer {

@@ -15,7 +15,7 @@
 .modal {
     background-color: #fff;
     width: 90%;
-    height: 85%;
+    height: 95%;
     max-height: 1080px;
     max-width: 1920px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -112,6 +112,16 @@
 }
 
 /* Footer del modal */
+/*.modalFooter {*/
+/*    padding: 10px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 20%;*/
+/*    position: relative;*/
+/*}*/
+
+
 .modalFooter {
     padding: 10px;
     display: flex;
@@ -120,6 +130,7 @@
     height: 20%;
     position: relative;
 }
+
 
 .closeButton {
     padding: 10px 20px;
@@ -136,6 +147,22 @@
     transform: translateY(calc(-50% - 10px)); /* mueve hacia arriba sin romper el centrado */
 }
 
+
+/*.closeButton {*/
+/*    padding: 10px 20px;*/
+/*    width: 15%;*/
+/*    height: 40%;*/
+/*    font-size: clamp(1.3rem, 1.42vw, 1.7rem);*/
+/*    cursor: pointer;*/
+/*    background-color: var(--color-rojo-general);*/
+/*    color: white;*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    transform: translateY(calc(-50% - 10px)); !* mueve hacia arriba sin romper el centrado *!*/
+/*}*/
+
 .closeButton:hover {
     background-color: var(--color-rojo-generalOscuro);
 }
@@ -151,14 +178,31 @@ landscape   es cuando el  alto es menor al ancho
 |         |
 -----------
 */
-@media (max-width: 1100px), (max-height: 700px){
-    .modalFooter{
-        height:calc((1vh + 1vw)*10);
-    }
-    .closeButton{
+@media (max-width: 1200px) {
+    .closeButton {
+        padding: 0 0;
+        width: 30%;
+        min-width: 80px;
+        min-height: 25px;
         transform: translateY(calc(-50%)); /* mueve hacia arriba sin romper el centrado */
-        height: 60%;
     }
+    .modalFooter {
+        /*padding: 10px;*/
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+        height:clamp(40px, calc((1vw + 1vh)*20), 100px);
+        /*position: relative;*/
+    }
+}
+@media (max-width: 1100px), (max-height: 700px){
+    /*.modalFooter{*/
+    /*    height:calc((1vh + 1vw)*10);*/
+    /*}*/
+    /*.closeButton{*/
+    /*    transform: translateY(calc(-50%)); !* mueve hacia arriba sin romper el centrado *!*/
+    /*    height: 60%;*/
+    /*}*/
 }
 
 @media (max-width: 1024px) {
@@ -167,9 +211,9 @@ landscape   es cuando el  alto es menor al ancho
     }
 }
 @media (max-width: 740px) {
-    .closeButton{
-        width: 30%;
-    }
+    /*.closeButton{*/
+    /*    width: 30%;*/
+    /*}*/
 }
 @media (max-width: 600px) {
     .container {
@@ -181,13 +225,13 @@ landscape   es cuando el  alto es menor al ancho
 }
 
 @media (max-width: 400px) {
-    .closeButton{
-        width: 50%;
-    }
+    /*.closeButton{*/
+    /*    width: 50%;*/
+    /*}*/
 }
 
 @media (max-height: 930px) {
-    .modalFooter{
-        height: clamp(10px, calc((1vh + 1vw)*20), 200px);
-    }
+    /*.modalFooter{*/
+    /*    height: clamp(10px, calc((1vh + 1vw)*20), 200px);*/
+    /*}*/
 }

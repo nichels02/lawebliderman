@@ -16,7 +16,7 @@
     gap: 10px;
 }
 .Seccion{
-    color: var(--color-texto-negro);
+    color: var(--color-texto-negro-cambio2);
     font-size: clamp(1rem, 1.1vw , 1.3rem);
     background: transparent;
     border-radius: 0;
@@ -38,9 +38,9 @@
 }
 .GridPadre{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    column-gap: 6%;
-    row-gap: 50px;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 3%;
+    row-gap: 30px;
     height: auto;
     max-height: 10000px;
 }
@@ -48,11 +48,11 @@
 .GridObjeto{
     width: 100%;
     display: grid;
-    grid-template-rows: 225px auto;
-    background: #191919;
+    grid-template-rows: 169px auto;
+    background: #cacaca;
     padding: 10px;
     border-radius: 20px;
-    height: 350px;
+    height: 300px;
     row-gap: 0;
 }
 .EspacioImagen{
@@ -89,6 +89,7 @@
     /*font-size: 1.3rem;*/
     font-size: calc(0.89rem + (clamp(320px, 100vw, 1920px)* 4/1600));
     text-align: center;
+    color: black;
     margin: auto 0;
     transition: all 0.3s ease;
 }
@@ -101,9 +102,9 @@
 }
 
 
-@media (max-width: 1500px){
+@media (max-width: 1550px){
     .GridPadre{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 @media (max-width: 1024px) {
@@ -122,7 +123,7 @@
 }
 @media (max-width: 1000px){
     .GridPadre{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
     .GridObjeto{
         height: 330px;
@@ -134,9 +135,10 @@
         row-gap: 25px;
     }
     .GridObjeto{
-        grid-template-rows: 150px auto;
+        grid-template-rows: 112.5px auto;
         height: 250px;
     }
+
 }
 @media (max-width: 450px){
     .contenedorCentrado{
@@ -147,6 +149,7 @@
         max-width: 90%;
         margin: 0 auto;
     }
+
 }
 @media (max-width: 420px) {
     .ContenedorSecciones{

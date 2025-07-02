@@ -136,9 +136,14 @@ function PorcentajeNegocio() {
 
                 {showOtrosText && (
                     <div className={styles.textoOtros}>
-                        {langData.otrosCategories.join("\n")}
+                        {langData.otrosCategories.map((categoria, index) => (
+                            <div key={index} className={styles.itemCategoria}>
+                                {categoria}
+                            </div>
+                        ))}
                     </div>
                 )}
+
             </div>
         </div>
     );

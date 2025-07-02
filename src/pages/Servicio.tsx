@@ -6,6 +6,7 @@ import TextoTituloEImagen from "../common/Componentes/TextoTituloEImagen";
 import GridGenerico from "../common/Componentes/GridGenerico";
 import GridBarajeable from "../common/Componentes/gridBarajeable";
 import TituloYSubtituloGenerico from "../common/Componentes/TituloYSubtituloGenerico.tsx";
+import FlechaGiro from "../common/Componentes/FlechaGiro.tsx";
 // import Style from "../common/css/pages/Servicio.module.css";
 
 function Servicio() {
@@ -49,38 +50,6 @@ function Servicio() {
             />
             {/*<div style={{ marginBottom: '70px' }}></div>*/}
 
-            <TextoTituloEImagen
-                titulo={datos1[language].Titulo}
-                texto={datos1[language].Texto}
-                imagenes={[
-                    datos1.Contenido.Imagen1,
-                    datos1.Contenido.Imagen2,
-                ]}
-                textosBotones={[
-                    datos1[language].botones.Texto1,
-                    datos1[language].botones.Texto2,
-                ]}
-                imagenALaIzquierda={true}
-            />
-
-            <TextoTituloEImagen
-                titulo={datos2[language].Titulo}
-                texto={datos2[language].Texto}
-                imagenes={[
-                    datos2.Contenido.Imagen1,
-                    datos2.Contenido.Imagen2,
-                    datos2.Contenido.Imagen3,
-                    datos2.Contenido.Imagen4,
-                ]}
-                textosBotones={[
-                    datos2[language].botones.Texto1,
-                    datos2[language].botones.Texto2,
-                    datos2[language].botones.Texto3,
-                    datos2[language].botones.Texto4,
-                ]}
-                imagenALaIzquierda={false}
-            />
-
             <TituloYSubtituloGenerico
                 // className={Style.GridGenerico}
                 titulo={datos4[language].Titulo1.Titulo}
@@ -113,6 +82,48 @@ function Servicio() {
                 ]}
             />
 
+
+            <TextoTituloEImagen
+                titulo={datos1[language].Titulo}
+                texto={[datos1[language].Texto1,
+                        datos1[language].Texto2,
+                ]}
+                imagenes={[
+                    datos1.Contenido.Imagen1,
+                    datos1.Contenido.Imagen2,
+                ]}
+                textosBotones={[
+                    datos1[language].botones.Texto1,
+                    datos1[language].botones.Texto2,
+                ]}
+                imagenALaIzquierda={true}
+            />
+
+            <TextoTituloEImagen
+                titulo={datos2[language].Titulo}
+                texto={[
+                    datos2[language].Texto1,
+                    datos2[language].Texto2,
+                    datos2[language].Texto3,
+                    datos2[language].Texto4
+                ]}
+                imagenes={[
+                    datos2.Contenido.Imagen1,
+                    datos2.Contenido.Imagen2,
+                    datos2.Contenido.Imagen3,
+                    datos2.Contenido.Imagen4,
+                ]}
+                textosBotones={[
+                    datos2[language].botones.Texto1,
+                    datos2[language].botones.Texto2,
+                    datos2[language].botones.Texto3,
+                    datos2[language].botones.Texto4,
+                ]}
+                imagenALaIzquierda={false}
+            />
+
+
+            <FlechaGiro />
             <TituloYSubtituloGenerico
                 // className={Style.gridBarajeable}
                 titulo={datos4[language].Titulo2.Titulo}

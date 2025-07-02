@@ -91,7 +91,7 @@
 }
 
 .textoFijo {
-    font-size: clamp(14px, 1.2vw, 16px);
+    font-size: 16px;
     color: white;
     line-height: 1.4;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
@@ -126,14 +126,26 @@
     left: 5%;
     top: 45%;
     transform: translateY(-50%);
-    font-size: clamp(12px, 1vw, 14px);
+    font-size: 16px;
     width: 100px;
     color: white;
-    line-height: 1.4;
+    /*line-height: 1.4;*/
     padding: 10px;
     border-radius: 8px;
     z-index: 3;
     white-space: pre-line;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.itemCategoria{
+
+}
+@media (min-width: 1920px) {
+    .textoOtros {
+        font-size:20px;
+        width: 20%;
+    }
 }
 @media(max-width: 1920px){
     .textoOtros {
@@ -170,7 +182,7 @@
         line-height: 1;
     }
 }
-@media(max-width: 768px) {
+@media(max-width: 930px) {
 
     .contenedorFondo {
         position: absolute;
@@ -234,7 +246,7 @@
         top: 35%;
     }
     .textoFijo {
-        font-size: 14px;
+        font-size: 16px;
         width: 100%;
     }
 }
@@ -254,17 +266,17 @@
     }
 }
 
-@media(max-width: 450px){
+@media(max-width: 586px){
 
     .contenedorPadre{
         padding: 10px;
     }
     .contenedorImagenGrande {
         width: 90vw;
-        height: 125vw;
+        height: 150vw;
     }
     .texto {
-        font-size: clamp(13px, 1vw, 24px);
+        font-size: clamp(16px, 1vw, 24px);
 
     }
     .activo {
@@ -274,30 +286,54 @@
     .textoOtros {
         width: 150px;
         top: 35%;
-        font-size: 12px;
+        font-size: 16px;
     }
     .contenedorTextoFijo{
-        width: 75%;
+        width: 70%;
     }
     .textoFijo {
-        font-size: 12px;
+        font-size: 16px;
         width: 100%;
         line-height: 1;
     }
     .texto-0 { right: -2%; bottom: 12%; }
     .texto-1 { right: 25%; bottom: 35%; }
-    .texto-2 { right: 25%; top: 40%; }
+    .texto-2 { right: 30%; top: 40%; }
     .texto-3 { right: 5%; top: 20%; }
 
 }
-@media (max-width: 390px){
-    .contenedorImagenGrande{
-        height: 150vw;
-    }
+@media (max-width: 450px) {
+    .texto-3 { right: 0; top: 25%; }
+    .texto-2 { right: 27%; top: 40%; }
+    .texto-1 { right: 25%; bottom: 40%; }
+    .texto-0 { right: -5%; bottom: 20%; }
     .contenedorTextoFijo{
-        width: 66%;
+        width: 60%;
+    }
+    .contenedorImagenGrande{
+        height: 170vw;
+        min-height: 730px;
+    }
+}
+@media (max-width: 400px){
+    .texto-3 { right: 0; top: 25%; }
+    .texto-2 { right: 25%; top: 40%; }
+    .texto-1 { right: 25%; bottom: 40%; }
+    .texto-0 { right: -5%; bottom: 20%; }
+    .contenedorImagenGrande{
+        height: 190vw;
     }
 }
 @media(max-width: 350px){
+    .texto-3 { right: 0; top: 25%; }
+    .texto-2 { right: 20%; top: 40%; }
     .texto-1 { right: 25%; bottom: 40%; }
+    .texto-0 { right: -5%; bottom: 30%; }
+
+    .contenedorImagenGrande{
+        height: 900px;
+    }
+    .contenedorTextoFijo{
+        width: 60%;
+    }
 }

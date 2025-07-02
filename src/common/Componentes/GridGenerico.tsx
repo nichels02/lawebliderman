@@ -30,6 +30,7 @@ function GridGenerico({ largeImage, items }: GridGenericoProps) {
                             <p>{item.text}</p>
                         </div>
                     ))}
+
                 </div>
             </div>
         </div>

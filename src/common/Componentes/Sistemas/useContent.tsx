@@ -629,6 +629,8 @@ interface ContentData {
                         alt: string;
                     }
                 },
+                FlechaDe: string;
+                FlechaIz: string;
                 imagenDePunto: string;
                 LineaDeTiempo: string;
 
@@ -1082,16 +1084,17 @@ interface ContentData {
                     Texto2: string;
                 },
                 Titulo: string;
-                Texto: string;
+                Texto1: string;
+                Texto2: string;
             },
             en: {
                 botones: {
                     Texto1: string;
                     Texto2: string;
-                    Texto3: string;
                 },
                 Titulo: string;
-                Texto: string;
+                Texto1: string;
+                Texto2: string;
             }
         },
         TextoTituloEImagen2: {
@@ -1109,7 +1112,10 @@ interface ContentData {
                     Texto4: string;
                 },
                 Titulo: string;
-                Texto: string;
+                Texto1: string;
+                Texto2: string;
+                Texto3: string;
+                Texto4: string;
             },
             en: {
                 botones: {
@@ -1119,7 +1125,10 @@ interface ContentData {
                     Texto4: string;
                 },
                 Titulo: string;
-                Texto: string;
+                Texto1: string;
+                Texto2: string;
+                Texto3: string;
+                Texto4: string;
             }
         }
         GridGenerico: {

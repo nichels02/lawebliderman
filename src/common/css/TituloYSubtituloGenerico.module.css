@@ -16,10 +16,12 @@
 }
 
 .subtitulo {
-    margin: 0;
-    font-weight: normal;
-    font-size: calc(18px + (((clamp(320px, 100vw, 1920px) - 320px) / 1600) * 22));
+    margin: 0 !important;
+    font-weight: normal !important;
+    font-size: calc(18px + (((clamp(320px, 100vw, 1920px) - 320px) / 1600) * 22)) !important;
     color: var(--color-general-gris);
+
+    /*!important;*/
 }
 .textoEspecial{
     font-weight: normal;

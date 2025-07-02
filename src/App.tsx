@@ -9,6 +9,7 @@ const Lidermania = lazy(() => import('./pages/Lidermania.tsx'));
 const Seguridad = lazy(() => import('./pages/Seguridad.tsx'));
 const Servicio = lazy(() => import('./pages/Servicio.tsx'));
 const Tecnologia = lazy(() => import('./pages/Tecnologia.tsx'));
+const Legal = lazy(() => import('./pages/Legal.tsx'));
 
 // Componentes compartidos
 import BarraDeOpciones from './common/Componentes/BarraDeOpciones.tsx';
@@ -109,6 +110,7 @@ function App() {
                                 <Route path="/Seguridad" element={<PageWrapper><Seguridad/></PageWrapper>}/>
                                 <Route path="/Servicio" element={<PageWrapper><Servicio/></PageWrapper>}/>
                                 <Route path="/Tecnologia" element={<PageWrapper><Tecnologia/></PageWrapper>}/>
+                                <Route path="/Legal" element={<PageWrapper><Legal/></PageWrapper>}/>
                             </Routes>
                         </Suspense>
                     </BrowserRouter>

@@ -5,7 +5,7 @@ import LazyImage from './Sistemas/LazyImage.tsx';
 // Definimos una interfaz para las props
 interface TextoTituloEImagenProps {
     titulo: string;
-    texto: string;
+    texto: string[];
     imagenes: string[]; // Lista de imágenes
     textosBotones: string[]; // Textos personalizados para los botones
     imagenALaIzquierda: boolean;
@@ -34,14 +34,14 @@ function TextoTituloEImagen({ titulo, texto, imagenes, textosBotones, imagenALaI
                         </div>
                         <div className={generarClase('textoContainer', variante)}>
                             <h2 className={generarClase('titulo', variante)}>{titulo}</h2>
-                            <p className={generarClase('texto', variante)}>{texto}</p>
+                            <p className={generarClase('texto', variante)}>{texto[imagenActual]}</p>
                         </div>
                     </>
                 ) : (
                     <>
                         <div className={generarClase('textoContainer', variante)}>
                             <h2 className={generarClase('titulo', variante)}>{titulo}</h2>
-                            <p className={generarClase('texto', variante)}>{texto}</p>
+                            <p className={generarClase('texto', variante)}>{texto[imagenActual]}</p>
                         </div>
                         <div className={styles.imagenContainer}>
                             <LazyImage src={imagenes[imagenActual]} alt="Imagen" className={styles.imagen} />

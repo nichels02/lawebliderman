@@ -30,7 +30,7 @@ function HeaderServicio({
             </div>
             <LazyImage src={logo} alt="Logo" className="logoHeader" />
             <div className={`${styles.container} ${EsTrue ? styles.EsTrue : ''}`}>
-                <div className={styles.left}>
+                <div className={`${styles.left} ${EsTrue ? styles.EsTrue : ''}`}>
                     <div className={styles.contenedorFondo}></div>
                     <h1 className={styles.title}>{titulo}</h1>
                     <p className={styles.text}>

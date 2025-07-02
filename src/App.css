@@ -18,7 +18,14 @@ html, body {
 }
 
 :root {
+
+
+
     color: #a5a5a5;
+
+    --color-Boton: #0707077F;
+
+
     --color-fondo: #ffffff;
 
 
@@ -37,7 +44,7 @@ html, body {
 
 
     --color-texto-blanco: #f3f3f3;
-    --color-texto-blanco-cambio: #ddd;
+    --color-texto-blanco-cambio: #ececec;
     --color-texto-blanco-cambio2: #ddd;
 
     --color-texto-blanco-cambio-rojo: #ddd;
@@ -50,6 +57,8 @@ html, body {
 
 
 .dark-mode {
+    --color-Boton: rgba(236, 236, 236, 0.91);
+    --color-general-gris: #e4e4e4;
     --colorUI: rgba(60, 60, 60, 0.73);
     --color-fondo: #202020;
     --color-blancoATransparente: rgba(255, 255, 255, 0);
@@ -58,8 +67,9 @@ html, body {
     --color-texto-blanco-cambio-rojo: #b80b0b;
     --color-texto-blanco-cambio: #000000;
     --color-texto-blanco-cambio2: #272727;
-    --color-rojo-generalOscuro: #a60d0d;
+    --color-rojo-generalOscuro: #9f1313;
     --color-rojo-general-cambio: #b80b0b;
+
 }
 
 .logoHeader {

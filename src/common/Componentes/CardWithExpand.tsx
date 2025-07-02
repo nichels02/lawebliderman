@@ -107,6 +107,11 @@ function CardWithExpand() {
                             alt={tecnologia.title}
                             className={`${styles.img} ${styles.tecnologia}`}
                         />
+                        <div className={expandedIndex === 2 ? styles.ContenedorDeImagen : ""}>
+
+                        </div>
+
+
                         <div className={styles.text}>{tecnologia.title}</div>
                         <div className={`${styles.leftText} ${expandedIndex === 2 ? styles.visible : ""}`}>
                             <h2 className={styles.subtitle}>{tecnologia.subtitle}</h2>

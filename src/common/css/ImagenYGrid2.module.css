@@ -51,8 +51,9 @@
 /* Contenedor derecho */
 .contenedorDerecho {
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    gap: 0;
+    grid-template-rows:  auto auto;
+    align-content: center;     /* centra el conjunto de las filas en el eje Y */
+    gap: 0;                    /* elimina espacio entre hijos */
     /*padding-: 1.5rem;*/
     box-sizing: border-box;
     height: 100%; /* Ocupar toda la altura del grid */

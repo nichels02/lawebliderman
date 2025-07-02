@@ -55,7 +55,7 @@
 }
 
 .texto {
-    font-size: clamp(14px, 1.5vw, 16px);
+    font-size: clamp(16px, 1.5vw, 28px);
     line-height: 1.5;
 }
 
@@ -96,13 +96,13 @@
 
 /* Botones (igualado a .carouselButton) */
 .boton {
-    background: rgba(30, 30, 30, 0.3);
-    color: white;
+    background-color: var(--color-rojo-general);
+    color: var(--color-texto-blanco)!important;
     border: 0;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: clamp(5px, 1vh, 10px) clamp(10px, 2vw, 20px);
-    font-size: clamp(12px, 1.5vw, 16px);
+    font-size: clamp(16px, 1.3vw, 25px);
     cursor: pointer;
     transition: 0.3s;
     width: clamp(100px, 18vw, 250px);
@@ -117,18 +117,23 @@
 }
 
 .boton:hover {
-    background: rgba(168, 168, 168, 0.3);
-    color: black;
+    background-color: var(--color-rojo-generalOscuro);
     transform: none; /* Eliminamos el scale para mantener consistencia */
 }
 .boton.active :hover{
-    background: rgba(255, 0, 0, 0.5);
+    background-color: var(--color-rojo-generalOscuro);
     color: white;
 }
 .boton.active{
-    background: rgba(255, 0, 0, 0.5);
+    background-color: var(--color-rojo-generalOscuro);
 }
 /* 📌 Responsivo (actualizado) */
+
+@media (max-width: 1500px) {
+    .texto{
+        font-size: clamp(16px, 1.8vw, 28px);
+    }
+}
 @media (max-width: 1024px) {
     .contenedorContenido {
         flex-direction: column;
@@ -173,11 +178,16 @@
         font-size: clamp(24px, 8vw, 32px);
     }
 
-    .texto {
-        font-size: clamp(12px, 3vw, 14px);
-    }
+    /*.texto {*/
+    /*    font-size: clamp(12px, 3vw, 14px);*/
+    /*}*/
 
     .contenedorBotones {
         flex-wrap: wrap;
+    }
+}
+@media (max-width: 450px) {
+    .boton{
+        width: clamp(140px, 30vw, 150px);
     }
 }
