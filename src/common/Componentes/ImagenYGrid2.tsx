@@ -22,6 +22,7 @@ function ImagenYGrid2() {
             <TituloYSubtituloGenerico
                 titulo={content.home.Titulos[language].Titulo4.Titulo}
                 subtitulo={content.home.Titulos[language].Titulo4.Subtitulo}
+                FondoEsBlanco={true}
             />
             <div id="ImagenYGrid2" className={styles.contenedorPadre}>
 

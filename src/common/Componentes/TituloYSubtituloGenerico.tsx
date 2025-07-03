@@ -6,6 +6,7 @@ interface TituloYSubtituloGenericoProps {
     subtitulo: string;
     className?: string;
     textoEspecial?: boolean;
+    FondoEsBlanco?: boolean;
 }
 
 const TituloYSubtituloGenerico: React.FC<TituloYSubtituloGenericoProps> = ({
@@ -13,11 +14,15 @@ const TituloYSubtituloGenerico: React.FC<TituloYSubtituloGenericoProps> = ({
                                                                                subtitulo,
                                                                                className,
                                                                                textoEspecial = false,
+                                                                               FondoEsBlanco = false
                                                                            }) => {
     return (
         <div className={`${styles.contenedor} ${className || ''}`}>
             <h1 className={styles.titulo}>{titulo}</h1>
-            <h2 className={`${styles.subtitulo} ${textoEspecial ? styles.textoEspecial : ''}`}>
+            <h2 className={`${styles.subtitulo} 
+                            ${textoEspecial ? styles.textoEspecial : ''}  
+                            ${FondoEsBlanco ? styles.FondoEsBlanco : ''}`}
+            >
                 {subtitulo}
             </h2>
         </div>
