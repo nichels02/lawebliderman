@@ -73,9 +73,9 @@
 }
 
 .label1 { margin: 0 auto; top: 10%;  transform-origin: center; }
-.label2 { margin: auto 0; left: 3%; transform-origin: center; }
+.label2 { margin: auto 0; left: 0%; transform-origin: center; }
 .label3 { margin: 0 auto; bottom: 10%;  transform-origin: center; }
-.label4 { margin: auto 0; right: 3%; transform-origin: center; }
+.label4 { margin: auto 0; right: 0%; transform-origin: center; }
 
 /* Texto central */
 .centerText {
@@ -175,19 +175,26 @@
         left: 50%;
     }
 }
-
+@media (max-width: 850px) {
+    .label1 { top: 8%; }
+    .label2 { left: -10px; }
+    .label3 { bottom: 8%; }
+    .label4 { right: -10px;  }
+}
 
 @media (max-width: 500px) {
     .centerText {
         width: 50%;
         font-size: clamp(13px, 3vw, 24px);
     }
+    .label2 { left: -15px; }
+    .label4 { right: -15px;  }
 }
 @media (max-width: 400px) {
     .label1 { top: 6%; }
-    .label2 { left: -10px; }
+    .label2 { left: -19px; }
     .label3 { bottom: 6%; }
-    .label4 { right: -10px;  }
+    .label4 { right: -19px;  }
 }
 @media (max-width: 350px) {
     .chartWrapper {

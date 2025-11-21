@@ -1640,7 +1640,7 @@
         "BotonCerrar": "Cerrar"
       },
       "en": {
-        "Titulo": "Panel Title",
+        "Titulo": "Video Verification",
         "Texto": "Monitor in real-time with our P2P CCTV system, connected to the internet. Get quick and accurate responses to incidents without risk, ensuring more efficient management. We use a special P2P protocol license, which simplifies installation by avoiding the need to open ports on your router, providing you with greater security and ease.",
         "BotonCerrar": "Close"
       }
@@ -1660,7 +1660,7 @@
         "BotonCerrar": "Cerrar"
       },
       "en": {
-        "Titulo": "Panel Title",
+        "Titulo": "Remote mirror",
         "Texto": "Our platform allows corporate clients to manage their accounts connected to the Liderman alarm monitoring service. Access it from any browser to check the status of your accounts in real-time, receive auditory alerts, contact Liderman, and generate custom reports.",
         "TituloDer": "Right Title",
         "TituloIzq": "Left Title",
@@ -1690,7 +1690,7 @@
         "BotonCerrar": "Cerrar"
       },
       "en": {
-        "Titulo": "Panel Title",
+        "Titulo": "Panic Button",
         "Texto": "Viftual SmartPanics: Account information at your fingertips",
         "TituloDerArriba": "Right Title",
         "TituloIzqArriba": "Left Title",
@@ -1724,7 +1724,7 @@
         "BotonCerrar": "Cerrar"
       },
       "en": {
-        "Titulo": "Panel Title",
+        "Titulo": "Reports and Notifications",
         "Texto": "Our platform allows corporate clients to manage their accounts connected to the Liderman alarm monitoring service. Access from any browser to check the status of your accounts in real-time, receive auditory alerts, contact Liderman, and generate customized reports.",
         "Subtitulo1": "Real-Time Monitoring",
         "Subtitulo2": "Instant Alerts",
@@ -1931,7 +1931,7 @@
             "Nombre": "Anti-Bribery Policy – Liderman Group"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/Politica-Antisoborno-Grupo-Liderman.pdf"
           }
         },
@@ -1943,7 +1943,7 @@
             "Nombre": "Conflict of Interest Policy"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/Politica-Conflicto-de-Interes-Ver-01-120924.pdf"
           }
         },
@@ -1955,7 +1955,7 @@
             "Nombre": "Alcohol and Drug Policy"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/Politica-de-Alcohol-y-Drogas.pdf"
           }
         },
@@ -1967,7 +1967,7 @@
             "Nombre": "Human Rights Policy"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/Politica-de-Derechos-Humanos.pdf"
           }
         },
@@ -1979,7 +1979,7 @@
             "Nombre": "Equity, Diversity and Inclusion Policy"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/Politica-de-Equidad-Diversidad-e-Inclusion.pdf"
           }
         },
@@ -1991,7 +1991,7 @@
             "Nombre": "Working Hours Policy"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/Politica-de-Jornada-Laboral_Final-1.pdf"
           }
         },
@@ -2003,7 +2003,7 @@
             "Nombre": "Right to Refuse Unsafe Work Policy"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/Politica-de-Negativa-al-Trabajo-Inseguro.pdf"
           }
         },
@@ -2015,7 +2015,7 @@
             "Nombre": "OHS Responsibility Policy"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/Politica-de-Responsabilidad-en-SST-1.pdf"
           }
         },
@@ -2027,7 +2027,7 @@
             "Nombre": "Whistleblower Policy"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/POLITICA-DEL-DELATOR-Ver-01.pdf"
           }
         },
@@ -2039,7 +2039,7 @@
             "Nombre": "Integrated Alarm Management System Policy"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/POLITICA-DEL-DELATOR-Ver-01.pdf"
           }
         },
@@ -2051,7 +2051,7 @@
             "Nombre": "Equal Pay Policy"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/Politica-Igualdad-Salarial-Final_V2.pdf"
           }
         },
@@ -2063,7 +2063,7 @@
             "Nombre": "Sexual Harassment Policy and Procedure"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/Politica-y-Procedimiento-de-Hostigamiento-Sexual.pdf"
           }
         },
@@ -2075,7 +2075,7 @@
             "Nombre": "Current Data Protection Policy"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/Politica_de_Proteccio_n_de_Datos_Vigente.pdf"
           }
         },
@@ -2087,7 +2087,7 @@
             "Nombre": "Sustainability Policy"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/politica_de_sostenibilidad-08072024.pdf"
           }
         },
@@ -2099,7 +2099,7 @@
             "Nombre": "Integrated Management System Policy"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/POLITICA_SGI_Ver_11-Rev_20_12_24_14042024-1.pdf"
           }
         },
@@ -2111,7 +2111,7 @@
             "Nombre": "Anti-Corruption Policy – Liderman"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Politicas/Política-Anticorrupcion-Liderman.pdf"
           }
         }
@@ -2125,7 +2125,7 @@
             "Nombre": "Internal Occupational Health and Safety Regulations – Alarms"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Reglamentos/Reglamento-Interno-de-Seguridad-y-Salud-en-el-Trabajo-Alarmas-Ver03-14042025.pdf"
           }
         },
@@ -2137,7 +2137,7 @@
             "Nombre": "Internal Occupational Health and Safety Regulations – Guards"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Reglamentos/Reglamento-Interno-de-Seguridad-y-Salud-en-el-Trabajo-JV-RESGUARDO.pdf"
           }
         },
@@ -2149,7 +2149,7 @@
             "Nombre": "Internal Occupational Health and Safety Regulations – JV Selva"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Reglamentos/Reglamento-Interno-de-Seguridad-y-Salud-en-el-Trabajo-JV-SELVA.pdf"
           }
         },
@@ -2161,7 +2161,7 @@
             "Nombre": "Internal Work Regulations – Alarms 2025"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Reglamentos/RIT.-ALARMAS-2025.pdf"
           }
         },
@@ -2173,7 +2173,7 @@
             "Nombre": "RIT – JV Security Staff 2025"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Reglamentos/RIT.-JV-RESGUARDO-2025.pdf"
           }
         },
@@ -2185,7 +2185,7 @@
             "Nombre": "RIT – Liderman Services 2025"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Reglamentos/RIT.-LIDERMAN-SERVICIOS-2025.pdf"
           }
         }
@@ -2199,7 +2199,7 @@
             "Nombre": "Integrated Management System Manual"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Procedimientos/AL-SGI-M-001-Manual-del-Sistema-de-Gestion-Integrado-Ver-22-2.pdf"
           }
         },
@@ -2211,7 +2211,7 @@
             "Nombre": "Code of Conduct and Good Behavior"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf": "/assets/Legal/Documentos/Procedimientos/Codigo_de_conducta_y_Buen_Comportamiento_Ver02.pdf"
           }
         },
@@ -2223,7 +2223,7 @@
             "Nombre": "Declaration of Conformity"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Procedimientos/DECLARACION-DE-CONFORMIDAD-Ver-01.pdf"
           }
         },
@@ -2235,7 +2235,7 @@
             "Nombre": "Procedure for the Prevention of Gift Acceptance"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Procedimientos/JV-GD-P-085-Procedimiento-de-Prevencion-de-Recepcion-Regalos-Ver01.pdf"
           }
         },
@@ -2247,7 +2247,7 @@
             "Nombre": "Procedure for Handling Complaints, Suggestions, and Reports"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Procedimientos/JV-SGI-P-050-Procedimiento-de-Atencion-a-Reclamos-Sugerencias-y-Reportes-Ver-09.pdf"
           }
         },
@@ -2259,7 +2259,7 @@
             "Nombre": "Procedure for Reporting Acts or Suspicions of Bribery"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Procedimientos/JV-SGI-P-091-Procedimiento-de-Denuncias-por-Actos-o-Sospechas-de-Soborno-Ver01.pdf"
           }
         },
@@ -2271,7 +2271,7 @@
             "Nombre": "Integrated Management System Manual – JV Security"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Procedimientos/Manual-del-Sistema-de-Gestion-Integrado-JV-RESGUARDO-120824.pdf"
           }
         },
@@ -2283,7 +2283,7 @@
             "Nombre": "SGI Objectives"
           },
           "Common": {
-            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Procedimientos/Objetivos-SGI-2024.pdf"
           }
         }

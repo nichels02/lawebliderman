@@ -57,6 +57,7 @@
     background-color: var(--colorModalFondo); /* Fondo gris claro */
     height: 70%;
     color: #333; /* Texto oscuro para legibilidad */
+    display: flex;
     justify-content: space-between; /* Distribuye los elementos de forma proporcional */
     align-items: center;
     overflow: hidden;
@@ -180,7 +181,7 @@ landscape   es cuando el  alto es menor al ancho
         transform: translateY(calc(-50%)); /* mueve hacia arriba sin romper el centrado */
     }
     .modalBody {
-        height: calc(90% - 60px);
+        height: calc(90% - 100px);
         /*height: 90%;*/
         padding-top: 0;
         padding-bottom: 0;
@@ -191,7 +192,7 @@ landscape   es cuando el  alto es menor al ancho
         /*display: flex;*/
         /*justify-content: center;*/
         /*align-items: center;*/
-        height:60px;
+        height:100px;
         /*position: relative;*/
     }
 }
