@@ -8,7 +8,7 @@
     width: 100vw; /* Usamos viewport width para asegurar el ancho completo */
     min-height: auto;
     padding: 20px;
-    margin: 0;
+    margin:  2% 0;
     overflow-x: hidden; /* Esto es clave para prevenir scroll horizontal */
 }
 
@@ -16,7 +16,7 @@
 .container {
     display: flex;
     width: 100%;
-    max-width: min(85vw, 1200px); /* Usamos min() para un límite máximo absoluto */
+    max-width: min(85vw, 1600px); /* Usamos min() para un límite máximo absoluto */
     height: auto;
     gap: 2rem;
     align-items: center;
@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    padding: 0 15px;
+    padding-right:40px;
 }
 
 /* Estilos del título */
@@ -49,6 +49,7 @@
     color: var(--color-texto-negro-cambio);
     margin-bottom: 0.5rem;
     line-height: 1.2;
+    width: 60%;
 }
 
 /* Estilo diferente para una parte del título */
@@ -76,14 +77,25 @@
 
 /* Estilos de la imagen */
 .image {
-    max-width: 100%;
+    max-width: 120%;
     height: auto;
     border-radius: 10px;
     display: block; /* Elimina espacio fantasma debajo de la imagen */
 }
 
+
+
 /* Media Queries */
-@media (max-width: 700px) {
+@media (max-width: 910px) {
+    .title {
+        width: 70%;
+    }
+}
+@media (max-width: 800px) {
+
+    .title {
+        width: 100%;
+    }
     .container {
         max-width: 95vw;
         flex-direction: column;
@@ -107,9 +119,23 @@
         flex: 1 1 100%;
         padding: 0;
     }
+    .textContainer {
+        padding: 0 15px;
+    }
+    .image {
+        max-width: 80%;
+        height: auto;
+        border-radius: 10px;
+        display: block; /* Elimina espacio fantasma debajo de la imagen */
+    }
 }
 
 @media (max-width: 550px) {
+    .title {
+        width: 70%;
+        text-align: center;
+        margin: auto auto;
+    }
     .parentContainer {
         padding: 15px;
     }

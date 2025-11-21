@@ -32,8 +32,8 @@ function Lidermania() {
                 description={currentLang.Texto}
                 button1Text={currentLang.Boton1}
                 button2Text={currentLang.Boton2}
-                onButton2ClickPosicion={"/Lidermania#CarruselDeTrabajos"}
-                onButton2ClickModo={"top"}
+                onButton2ClickPosicion={"/Lidermania#FacebookTrabajos"}
+                onButton2ClickModo={"center"}
                 onButton1ClickPosicion={"/Lidermania#DonaRotativa2"}
                 onButton1ClickModo={"top"}
             />

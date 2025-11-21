@@ -11,7 +11,7 @@ function ContenedorScrollNuevo4() {
 
 
     return (
-        <div className={styles.ContenedorPadre}>
+        <div id="LineaDeTiempo" className={styles.ContenedorPadre}>
 
             <div className={styles.ContenedorDelAncho}>
                 <TituloYSubtituloGenerico

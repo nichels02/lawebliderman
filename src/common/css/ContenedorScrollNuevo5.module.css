@@ -19,7 +19,7 @@
     margin-right: 1%;
     display: grid;
     grid-template-columns: calc(95% - 186px) 36px 10%; /* 3 columnas iguales */
-    grid-template-rows: 300px repeat(13, auto)  0.3fr;
+    grid-template-rows: 150px repeat(13, auto)  0.3fr;
     row-gap: 100px;
 }
 
@@ -89,10 +89,16 @@
 .Titulo,
 .Texto,
 .NumeroPunto{
-    color: var(--color-texto-blanco);
     margin: 0 0;
 }
 
+.NumeroPunto{
+    color: var(--color-texto-negro-cambio2);
+}
+.Titulo,
+.Texto{
+    color: var(--color-texto-blanco);
+}
 .Titulo{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -280,12 +286,17 @@
     .ElContenedor2 {
         top: -50px;
     }
-
+    .GridPadre{
+        /*grid-template-columns: calc(95% - 186px) 36px 10px; !* 3 columnas iguales *!*/
+        margin-left: 5%;
+        grid-template-rows: 120px repeat(13, auto)  0.01fr;
+    }
 }
 @media (max-width: 800px) {
     .GridPadre{
         /*grid-template-columns: calc(95% - 186px) 36px 10px; !* 3 columnas iguales *!*/
         margin-left: 5%;
+        grid-template-rows: 120px repeat(13, auto)  0.3fr;
     }
     .ElContenedor2 {
         top: -100px;
@@ -336,6 +347,7 @@
         /*grid-template-columns: calc(95% - 186px) 36px 10px; !* 3 columnas iguales *!*/
         /*margin-left: 100px;*/
         margin-right: 0;
+        grid-template-rows: 100px repeat(13, auto)  0.3fr;
     }
     .contenedorPunto{
         transform: translateX(30px);
@@ -396,6 +408,7 @@
         /*margin-left: 100px;*/
         margin-left: 4%;
         row-gap: 50px;
+        grid-template-rows: 150px repeat(13, auto)  0.01fr;
     }
     .ContenedorPadre{
         height: 750vw;

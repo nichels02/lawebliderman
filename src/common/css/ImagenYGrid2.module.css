@@ -238,7 +238,7 @@
     color: white !important;
 }
 .TextoContenedorBotonI{
-    color: black !important;
+    color: var(--color-rojo-general) !important;
 }
 
 @media (min-width: 1196px) and (max-width: 1400px){

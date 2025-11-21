@@ -15,6 +15,13 @@
     z-index: 1000;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    max-height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE y Edge antiguos */
+}
+.mi-contenedor::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari y Opera */
 }
 
 /* Mostrar la barra cuando se active */
@@ -119,6 +126,7 @@
     font-weight: bold;
     color: var(--color-rojo-general-cambio);
 }
+
 
 /* ---- Responsive para móviles ---- */
 @media (max-width: 1000px) {

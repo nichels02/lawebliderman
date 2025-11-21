@@ -64,6 +64,17 @@ function VentanaModal1({ onClose }: VentanaModal1Props) {
         }
     };
 
+    function actualizarAlturaViewport() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    actualizarAlturaViewport();
+    window.addEventListener('resize', actualizarAlturaViewport);
+
+
+
+
     return (
         <>
             {isOpen && (

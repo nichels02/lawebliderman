@@ -30,6 +30,7 @@ function Legal() {
                 // className={Style.LineaDeTiempo}
                 titulo={content.PaginaLegal.Titulos[language].Titulo1.Titulo}
                 subtitulo={content.PaginaLegal.Titulos[language].Titulo1.Subtitulo}
+                TituloLegal = {true}
             />
             <GridDocumentosLegales/>
         </>

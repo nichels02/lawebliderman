@@ -3,7 +3,11 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    /* Soporte moderno */
+    height: 100dvh;
+
+    /* Fallback para navegadores antiguos */
+    height: calc(var(--vh, 1vh) * 100);
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -15,9 +19,9 @@
 .modal {
     background-color: #fff;
     width: 90%;
-    height: 95%;
-    max-height: 1080px;
-    max-width: 1920px;
+    height: 90%;
+    max-height: min(1080px, 90vh);
+    max-width: min(1920px, 90vw);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -47,9 +51,10 @@
 .modalBody {
     padding: 25px;
     color: #333;
-    flex-grow: 1;
     overflow: hidden;
     overflow-y: auto;
+    height: 70%;
+    background: var(--colorModalFondo);
 }
 
 .mainTextContainer {
@@ -112,7 +117,7 @@
 }
 
 /* Footer del modal */
-/*.modalFooter {*/
+/*.modal-Footer {*/
 /*    padding: 10px;*/
 /*    display: flex;*/
 /*    justify-content: center;*/
@@ -128,7 +133,13 @@
     justify-content: center;
     align-items: center;
     height: 20%;
-    position: relative;
+    width: 100%;
+    background-color: var(--colorModalFoter);
+
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
 }
 
 
@@ -186,17 +197,22 @@ landscape   es cuando el  alto es menor al ancho
         min-height: 25px;
         transform: translateY(calc(-50%)); /* mueve hacia arriba sin romper el centrado */
     }
+    .modalBody {
+        height: calc(90% - 60px);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
     .modalFooter {
         /*padding: 10px;*/
         /*display: flex;*/
         /*justify-content: center;*/
         /*align-items: center;*/
-        height:clamp(40px, calc((1vw + 1vh)*20), 100px);
+        height:60px;
         /*position: relative;*/
     }
 }
 @media (max-width: 1100px), (max-height: 700px){
-    /*.modalFooter{*/
+    /*.modal-Footer{*/
     /*    height:calc((1vh + 1vw)*10);*/
     /*}*/
     /*.closeButton{*/
@@ -231,7 +247,7 @@ landscape   es cuando el  alto es menor al ancho
 }
 
 @media (max-height: 930px) {
-    /*.modalFooter{*/
+    /*.modal-Footer{*/
     /*    height: clamp(10px, calc((1vh + 1vw)*20), 200px);*/
     /*}*/
 }

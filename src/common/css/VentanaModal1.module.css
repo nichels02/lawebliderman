@@ -4,7 +4,11 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    /* Soporte moderno */
+    height: 100dvh;
+
+    /* Fallback para navegadores antiguos */
+    height: calc(var(--vh, 1vh) * 100);
     background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
     display: flex;
     justify-content: center;
@@ -17,9 +21,9 @@
 .modal {
     background-color: #fff; /* Fondo blanco */
     width: 90%;
-    height: 95%; /* Altura fija para el modal */
-    max-height: 1080px;
-    max-width: 1920px;
+    height: 90%; /* Altura fija para el modal */
+    max-height: min(1080px, 90vh);
+    max-width: min(1920px, 90vw);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;  /* Organiza el modal de arriba hacia abajo */
@@ -50,13 +54,13 @@
 /* Cuerpo del modal */
 .modalBody {
     padding: 20px;
-    background-color: var(--color-texto-blanco); /* Fondo gris claro */
+    background-color: var(--colorModalFondo); /* Fondo gris claro */
+    height: 70%;
     color: #333; /* Texto oscuro para legibilidad */
-    flex-grow: 1; /* El cuerpo se expandirá para llenar el espacio disponible */
-    display: flex; /* Flexbox para alinear los elementos dentro */
     justify-content: space-between; /* Distribuye los elementos de forma proporcional */
     align-items: center;
     overflow: hidden;
+    overflow-y: auto;      /* Habilita scroll vertical solo si el contenido excede la altura */
 }
 
 .modalBodyLeft {
@@ -101,9 +105,15 @@
     justify-content: center;
     align-items: center;
     height: 20%;
-    position: relative;
+    width: 100%;
+    background-color: var(--colorModalFoter);
+
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
 }
-/*.modalFooter {*/
+/*.modal-Footer {*/
 /*    background-color: #0a4d8c;*/
 /*}*/
 
@@ -169,12 +179,19 @@ landscape   es cuando el  alto es menor al ancho
         min-height: 25px;
         transform: translateY(calc(-50%)); /* mueve hacia arriba sin romper el centrado */
     }
+    .modalBody {
+        height: calc(90% - 60px);
+        /*height: 90%;*/
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow: hidden;
+    }
     .modalFooter {
         /*padding: 10px;*/
         /*display: flex;*/
         /*justify-content: center;*/
         /*align-items: center;*/
-        height:clamp(40px, calc((1vw + 1vh)*20), 100px);
+        height:60px;
         /*position: relative;*/
     }
 }
@@ -215,7 +232,7 @@ landscape   es cuando el  alto es menor al ancho
     .modalBodyLeft p {
         font-size: clamp(0.8rem, calc((1vh + 1vw)*0.8), 2rem); /* Tamaño de fuente estándar */
     }
-    /*.modalFooter {*/
+    /*.modal-Footer {*/
     /*    height: clamp(60px, 15%, 100px);*/
     /*    max-height: 100px;*/
     /*}*/
@@ -224,7 +241,7 @@ landscape   es cuando el  alto es menor al ancho
     .modalBodyLeft p {
         font-size: clamp(0.8rem, calc((1vh + 1vw)*0.8), 2rem); /* Tamaño de fuente estándar */
     }
-    /*.modalFooter {*/
+    /*.modal-Footer {*/
     /*    height: clamp(60px, 15%, 100px);*/
     /*    max-height: 100px;*/
     /*}*/
@@ -268,7 +285,7 @@ landscape   es cuando el  alto es menor al ancho
     /*    top: 50%;*/
     /*    transform: translateY(-50%); !* mueve hacia arriba sin romper el centrado *!*/
     /*}*/
-    /*.modalFooter {*/
+    /*.modal-Footer {*/
     /*    height: 10%; !* Altura fija para el footer *!*/
     /*    max-height: 100px;*/
     /*}*/
@@ -279,12 +296,10 @@ landscape   es cuando el  alto es menor al ancho
 @media (max-width: 850px) and (orientation: portrait){
 
     .modalBodyLeft p {
-        .modalBodyLeft p {
-            font-size: clamp(0.8rem, calc((1vh + 1vw)*0.8), 2rem); /* Tamaño de fuente estándar */
-        }
+        font-size: clamp(0.8rem, calc((1vh + 1vw)*0.8), 2rem); /* Tamaño de fuente estándar */
     }
 
-    /*.modalFooter {*/
+    /*.modal-Footer {*/
     /*    height: 13%;*/
     /*}*/
 }

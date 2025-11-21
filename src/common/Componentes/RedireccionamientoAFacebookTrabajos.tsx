@@ -7,7 +7,7 @@ import LazyImage from './Sistemas/LazyImage.tsx';
 function RedireccionamientoAFacebookTrabajos() {
 
     return (
-        <div className={styles.ContenedorPadre}>
+        <div id="FacebookTrabajos" className={styles.ContenedorPadre}>
             <div className={styles.ContenedorCentrado}>
                 <div className={styles.ContenedorImagen}>
                     <LazyImage src={imagen1} className={styles.Laimagen}/>

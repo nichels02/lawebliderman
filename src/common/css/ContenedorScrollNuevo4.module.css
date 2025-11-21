@@ -1,6 +1,6 @@
 .ContenedorPadre{
     width: 100vw;
-    height: 5500px;
+    height: 5000px;
 
 }
 .ContenedorDelAncho{
@@ -22,7 +22,7 @@
     margin-right: 1%;
     display: grid;
     grid-template-columns: 2fr auto 1fr; /* 3 columnas iguales */
-    grid-template-rows: 1.5fr repeat(11, 1fr)  1.5fr;
+    grid-template-rows: 200px repeat(11, 1fr)  0.4fr;
     row-gap: 100px;
 }
 
@@ -95,6 +95,8 @@
     margin: 0 0;
 }
 
+
+
 .Titulo{
     margin-bottom: 20px;
 }
@@ -164,6 +166,7 @@
 }
 .NumeroPunto{
     font-size: 25px;
+    color: var(--color-texto-negro-cambio2);
 }
 
 

@@ -1,7 +1,12 @@
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-dotenv.config({ path: './datosDeBaseDeDatos.env' });
+// Carga el .env con ruta absoluta
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+dotenv.config({ path: path.join(__dirname, '../datosDeBaseDeDatos.env') });
 
 export default function enviarCorreo(cliente) {
     const transporter = nodemailer.createTransport({
@@ -14,18 +19,18 @@ export default function enviarCorreo(cliente) {
 
     let PaisSeleccionado;
 
-    switch (cliente.ubicacion){
+    switch (cliente.ubicacion) {
         case 'Perú':
-            PaisSeleccionado="Peru";
+            PaisSeleccionado = 'Peru';
             break;
         case 'Estados Unidos':
-            PaisSeleccionado="Usa";
+            PaisSeleccionado = 'Usa';
             break;
         case 'Chile':
-            PaisSeleccionado="Chile";
+            PaisSeleccionado = 'Chile';
             break;
         case 'Ecuador':
-            PaisSeleccionado="Ecuador";
+            PaisSeleccionado = 'Ecuador';
             break;
     }
 

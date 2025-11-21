@@ -2,40 +2,8 @@ import { createContext, useContext, useState, useEffect } from "react";
 
 // 📌 Interfaz completa basada en el JSON
 interface ContentData {
+    "Otro":{
 
-    home: {
-        ValidadorFormulario: {
-            es: {
-                NombreVacio: string;
-                ApellidoVacio: string;
-                CorreoVacio: string;
-                FormatoDeCorreo: string;
-                TelefonoVacio: string;
-                TelefonoSoloNumeros: string;
-                TelefonoCantidadDeDigitos: string;
-                MensajeVacio: string;
-                PaisVacio: string;
-                InteresVacio: string;
-                ErrorGuardando: string;
-                ErrorDeConexion: string;
-
-            },
-            en: {
-                NombreVacio: string;
-                ApellidoVacio: string;
-                CorreoVacio: string;
-                FormatoDeCorreo: string;
-                TelefonoVacio: string;
-                TelefonoSoloNumeros: string;
-                TelefonoCantidadDeDigitos: string;
-                MensajeVacio: string;
-                PaisVacio: string;
-                InteresVacio: string;
-                ErrorGuardando: string;
-                ErrorDeConexion: string;
-            }
-
-        }
     }
 
 }

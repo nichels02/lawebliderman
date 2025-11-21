@@ -63,6 +63,18 @@ function VentanaModal3({ onClose }: { onClose: () => void }) {
 
     const closeModal = () => setIsOpen(false);
 
+
+
+    function actualizarAlturaViewport() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    actualizarAlturaViewport();
+    window.addEventListener('resize', actualizarAlturaViewport);
+
+
+
     return (
         <>
             {isOpen && (

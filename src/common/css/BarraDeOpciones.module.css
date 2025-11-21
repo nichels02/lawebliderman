@@ -122,24 +122,29 @@
         font-size: clamp(1rem, 0.9vw, 1.1rem);
     }
 }
-@media (max-width: 1120px) {
+@media (max-width: 1200px) {
     .barra{
         transform: translateX(-60%);
         width: 50vw;
     }
 
 }
+@media (max-width: 1100px) {
+    .barra{
+        transform: translateX(-60%);
+        width: 55vw;
+    }
+}
 @media (max-width: 1024px) {
     .barra {
-        width: 45vw;
         padding: 4px 6px;
     }
 
     .boton {
-        font-size: clamp(0.8rem, 1.3vw, 1.5rem);
+        font-size: 1rem;
     }
     .highlight {
-        font-size: clamp(0.8rem, 0.9vw, 1.1rem);
+        font-size: 0.95rem;
     }
 }
 

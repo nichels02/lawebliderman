@@ -56,7 +56,7 @@
         "titulo": "Valemos tanto",
         "subtitulo": "como lo que cuidamos",
         "descripcion1": "Descubre nuestra expertise en la gestión de las personas, para hacer tu vida más segura y confiable.",
-        "botonPrimario": "Soluciones➔",
+        "botonPrimario": "Soluciones ➔",
         "botonSecundario": "Únete",
         "trabajadores": "Trabajadores a nivel global",
         "years": "Años de liderazgo en el mercado",
@@ -135,7 +135,7 @@
             "Supervisión de sala de control",
             "Guardianía",
             "Patrullas móviles",
-            "Estudios de Seguridad",
+            "Estudios de seguridad",
             "Acompañamiento de mercadería en tránsito",
             "Protección perimetral",
             "Gestión de seguridad de eventos"
@@ -474,7 +474,7 @@
           "Numero": "+25,000"
         },
         "CoberturaDeRiesgo":{
-          "Titulo": "Cobertura De Riesgo",
+          "Titulo": "Cobertura de riesgo",
           "Numero": "$2,000,000"
         }
       },
@@ -660,7 +660,7 @@
           "Subtitulo": "Sé parte de nuestro equipo de expertos"
         },
         "TextosFinales": {
-          "DerechosReservados": "Copyright© 2025 Liderman. Todos los derechos reservados.",
+          "DerechosReservados": "Copyright© 2025 Liderman Todos los derechos reservados",
           "TerminosYCondiciones": "Términos y Condiciones",
           "PoliticaDePrivacidad": "Política de Privacidad"
         }
@@ -798,8 +798,8 @@
           "Contenedor2": { "Texto": "Clave 3 inicia sus operaciones en el sector de alarmas." },
           "Contenedor3": { "Texto": "Se emite comercial \"yungay\" que ironizó al sector de vigilancia." },
           "Contenedor4": { "Texto": "Recibimos el galardón de mejor lugar para trabajar en Perú." },
-          "Contenedor5": { "Texto": "Lanzamiento del programa La hora de Liderman para el mundo en radio Insomnio." },
-          "Contenedor6": { "Texto": "Lanzamiento de la hora del Vigilante por Radio San Borja y el Facebook Liderman Oficial." },
+          "Contenedor5": { "Texto": "Lanzamiento del programa \"La hora de Liderman\" para el mundo en radio Insomnio." },
+          "Contenedor6": { "Texto": "Lanzamiento de \"La hora del Vigilante\" por Radio San Borja y el Facebook Liderman Oficial." },
           "Contenedor7": { "Texto": "Lanzamiento de la marca Alarmas y consolidación como grupo." }
         },
         "ContenedorComplejo": {
@@ -899,7 +899,7 @@
       },
       "es": {
         "Titulo": "Seguridad",
-        "Texto": "Somos la empresa de seguridad más grande del país, con cobertura a nivel nacional, autorizaciones y la capacidad de responder rápidamente a tus necesidades",
+        "Texto": "Somos la empresa de seguridad más grande del país, con cobertura a nivel nacional, autorizaciones y con la capacidad de responder rápidamente a tus necesidades.",
         "TextosBotones": [
           {
             "Texto": "SEGURIDAD ",
@@ -925,7 +925,7 @@
       },
       "en": {
         "Titulo": "Security Solutions",
-        "Texto": "We are the largest security company in the country, with national coverage, certifications, and the capability to rapidly respond to your needs",
+        "Texto": "We are the largest security company in the country, with nationwide coverage, full authorizations, and the ability to respond quickly to your needs.",
         "TextosBotones": [
           {
             "Texto": "SECURITY",
@@ -1102,7 +1102,7 @@
 
           "text": "Carga de datos y administración",
           "description": [
-            "· Actualiza datos(tabulares o gráficos) durante los procesos.",
+            "· Actualización de datos (tabulares o gráficos) durante los procesos.",
             "· Administración de usuarios y permisos del sistema."
           ],
           "showTitle": true
@@ -1110,7 +1110,7 @@
         "carta2": {
           "text": "Vigilancia en tiempo real",
           "description": [
-            "Contamos con un sistema de gestión de rondas con monitoreo en linea para personal de vigilancia."
+            "Contamos con un sistema de gestión de rondas con monitoreo en línea para personal de vigilancia."
           ],
           "showTitle": true
         },
@@ -1118,7 +1118,7 @@
           "text": "Planificación de territorios ",
           "description": [
             "· Optimiza la ruta y secuencia de las visitas de cada gestor.",
-            "· Sigue reglas de negocio y la compara con la variable geográfica."
+            "· Sigue reglas de negocio y las compara con la variable geográfica."
           ],
           "showTitle": true
         },
@@ -1126,13 +1126,13 @@
           "text": "Operación de campo",
           "description": [
             "· Secuencia de visita optimizada.",
-            "· Supervisión por Gps.",
+            "· Supervisión por GPS.",
             "· Registro de inicio y fin de tareas."
           ],
           "showTitle": true
         },
         "carta5": {
-          "text": "Analisis de proactividad",
+          "text": "Análisis de proactividad",
           "description": [
             "· Análisis de indicadores propios de gestión.",
             "· Sistema de reconocimientos e incentivos."
@@ -1800,13 +1800,13 @@
       "es": {
         "Titulo": "Lidermanía",
         "Texto": "Implementamos un conjunto de prácticas y programas diseñados para atender las necesidades de nuestros Lidermans en los aspectos más importantes para ellos y sus familias, promoviendo un ambiente de apoyo, crecimiento y equilibrio personal.",
-        "Boton1": "Nuestra cultura➔",
+        "Boton1": "Nuestra cultura ➔",
         "Boton2": "Únete"
       },
       "en": {
         "Titulo": "Leadermania",
         "Texto": "We have implemented a range of practices and programs aimed at meeting the needs of our Lidermans and their families in the areas that matter most, promoting a supportive environment that encourages growth and personal balance.",
-        "Boton1": "Our culture➔",
+        "Boton1": "Our culture ➔",
         "Boton2": "Join us"
       }
     },
@@ -1818,7 +1818,7 @@
         },
         "Grupo2": {
           "Titulo": "Ama Pago",
-          "Texto": "Hemos implementado un sistema de pagos eficiente y transparente. cumpliendo en realizarlos siempre 03 días antes de cada quincena."
+          "Texto": "Hemos implementado un sistema de pagos eficiente y transparente, cumpliendo en realizarlos siempre 03 días antes de cada quincena."
         },
         "Grupo3": {
           "Titulo": "Ama Vida",
@@ -1884,7 +1884,7 @@
       "es": {
         "Titulo1": {
           "Titulo": "Te invitamos a revisar cada uno de ellos para conocer ",
-          "Subtitulo": "en detalle nuestras políticas y tus derechos como usuario. "
+          "Subtitulo": "a detalle nuestras políticas y tus derechos como usuario. "
         }
       },
       "en": {
@@ -1928,7 +1928,7 @@
             "Nombre": "Política Antisoborno Grupo Liderman"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Anti-Bribery Policy – Liderman Group"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -1940,7 +1940,7 @@
             "Nombre": "Política de Conflicto de Interés"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Conflict of Interest Policy"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -1952,7 +1952,7 @@
             "Nombre": "Política de Alcohol y Drogas"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Alcohol and Drug Policy"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -1964,7 +1964,7 @@
             "Nombre": "Política de Derechos Humanos"
           },
           "en": {
-            "Nombre": "Documento Legal"
+            "Nombre": "Human Rights Policy"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -1976,7 +1976,7 @@
             "Nombre": "Política de Equidad, Diversidad e Inclusión"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Equity, Diversity and Inclusion Policy"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -1988,7 +1988,7 @@
             "Nombre": "Política de Jornada Laboral"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Working Hours Policy"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2000,7 +2000,7 @@
             "Nombre": "Política de Negativa al Trabajo Inseguro"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Right to Refuse Unsafe Work Policy"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2012,7 +2012,7 @@
             "Nombre": "Política de Responsabilidad SST"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "OHS Responsibility Policy"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2024,7 +2024,7 @@
             "Nombre": "Política del Delator"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Whistleblower Policy"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2036,7 +2036,7 @@
             "Nombre": "Política del Sistema de Gestión Integrado de Alarmas"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Integrated Alarm Management System Policy"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2048,7 +2048,7 @@
             "Nombre": "Política de Igualdad Salarial"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Equal Pay Policy"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2060,7 +2060,7 @@
             "Nombre": "Política y Procedimiento de Hostigamiento Sexual"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Sexual Harassment Policy and Procedure"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2072,7 +2072,7 @@
             "Nombre": "Política de Protección de Datos Vigente"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Current Data Protection Policy"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2084,7 +2084,7 @@
             "Nombre": "Política de Sostenibilidad"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Sustainability Policy"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2096,7 +2096,7 @@
             "Nombre": "Política del Sistema de Gestión Integrado"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Integrated Management System Policy"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2108,7 +2108,7 @@
             "Nombre": "Política Anticorrupción Liderman"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Anti-Corruption Policy – Liderman"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2122,7 +2122,7 @@
             "Nombre": "Reglamento Interno de Seguridad y Salud en el Trabajo – Alarmas"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Internal Occupational Health and Safety Regulations – Alarms"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2134,7 +2134,7 @@
             "Nombre": "Reglamento Interno de Seguridad y Salud en el Trabajo – Resguardos"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Internal Occupational Health and Safety Regulations – Guards"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2146,7 +2146,7 @@
             "Nombre": "Reglamento Interno de Seguridad y Salud en el Trabajo – JV Selva"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Internal Occupational Health and Safety Regulations – JV Selva"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2158,7 +2158,7 @@
             "Nombre": "RIT Alarmas 2025"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "Internal Work Regulations – Alarms 2025"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2170,7 +2170,7 @@
             "Nombre": "RIT JV Resguardos 2025"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "RIT – JV Security Staff 2025"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
@@ -2182,11 +2182,109 @@
             "Nombre": "RIT Liderman Servicios 2025"
           },
           "en": {
-            "Nombre": "Document Legal"
+            "Nombre": "RIT – Liderman Services 2025"
           },
           "Common": {
             "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
             "Pdf":"/assets/Legal/Documentos/Reglamentos/RIT.-LIDERMAN-SERVICIOS-2025.pdf"
+          }
+        }
+      ],
+      "Procedimientos": [
+        {
+          "es": {
+            "Nombre": "Manual del Sistema de Gestión Integrado"
+          },
+          "en": {
+            "Nombre": "Integrated Management System Manual"
+          },
+          "Common": {
+            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Pdf":"/assets/Legal/Documentos/Procedimientos/AL-SGI-M-001-Manual-del-Sistema-de-Gestion-Integrado-Ver-22-2.pdf"
+          }
+        },
+        {
+          "es": {
+            "Nombre": "Código de Conducta y Buen Comportamiento"
+          },
+          "en": {
+            "Nombre": "Code of Conduct and Good Behavior"
+          },
+          "Common": {
+            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Pdf": "/assets/Legal/Documentos/Procedimientos/Codigo_de_conducta_y_Buen_Comportamiento_Ver02.pdf"
+          }
+        },
+        {
+          "es": {
+            "Nombre": "Declaración de Conformidad"
+          },
+          "en": {
+            "Nombre": "Declaration of Conformity"
+          },
+          "Common": {
+            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Pdf":"/assets/Legal/Documentos/Procedimientos/DECLARACION-DE-CONFORMIDAD-Ver-01.pdf"
+          }
+        },
+        {
+          "es": {
+            "Nombre": "Procedimiento de Prevención de Recepción de Regalos"
+          },
+          "en": {
+            "Nombre": "Procedure for the Prevention of Gift Acceptance"
+          },
+          "Common": {
+            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Pdf":"/assets/Legal/Documentos/Procedimientos/JV-GD-P-085-Procedimiento-de-Prevencion-de-Recepcion-Regalos-Ver01.pdf"
+          }
+        },
+        {
+          "es": {
+            "Nombre": "Procedimiento de Atención a Reclamos, Sugerencias y Reportes"
+          },
+          "en": {
+            "Nombre": "Procedure for Handling Complaints, Suggestions, and Reports"
+          },
+          "Common": {
+            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Pdf":"/assets/Legal/Documentos/Procedimientos/JV-SGI-P-050-Procedimiento-de-Atencion-a-Reclamos-Sugerencias-y-Reportes-Ver-09.pdf"
+          }
+        },
+        {
+          "es": {
+            "Nombre": "Procedimiento de Denuncias por Actos o Sospechas de Soborno"
+          },
+          "en": {
+            "Nombre": "Procedure for Reporting Acts or Suspicions of Bribery"
+          },
+          "Common": {
+            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Pdf":"/assets/Legal/Documentos/Procedimientos/JV-SGI-P-091-Procedimiento-de-Denuncias-por-Actos-o-Sospechas-de-Soborno-Ver01.pdf"
+          }
+        },
+        {
+          "es": {
+            "Nombre": "Manual del Sistema de Gestión Integrado JV Resguardo"
+          },
+          "en": {
+            "Nombre": "Integrated Management System Manual – JV Security"
+          },
+          "Common": {
+            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Pdf":"/assets/Legal/Documentos/Procedimientos/Manual-del-Sistema-de-Gestion-Integrado-JV-RESGUARDO-120824.pdf"
+          }
+        },
+        {
+          "es": {
+            "Nombre": "Objetivos SGI"
+          },
+          "en": {
+            "Nombre": "SGI Objectives"
+          },
+          "Common": {
+            "Imagen": "/assets/ImagenesPrueba/Google_Docs_2020_Logo.svg.png",
+            "Pdf":"/assets/Legal/Documentos/Procedimientos/Objetivos-SGI-2024.pdf"
           }
         }
       ]

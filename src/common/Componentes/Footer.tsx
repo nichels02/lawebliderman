@@ -78,10 +78,21 @@ function Footer() {
             <footer className={styles.footer}>
                 {/* Primera Sección */}
                 <div className={styles.topSection}>
+                    {/*<div className={styles.logoSection}>*/}
+                    {/*    <LazyImage src={logo} alt="Logo Liderman" className={styles.logo} />*/}
+                    {/*    <p className={styles.logoText}>{localized.Eslogan}</p>*/}
+                    {/*</div>*/}
+
                     <div className={styles.logoSection}>
-                        <LazyImage src={logo} alt="Logo Liderman" className={styles.logo} />
+                        <ScrollLink to="/#Home1" scrollMode="top" >
+                            <LazyImage src={logo} alt="Logo Liderman" className={styles.logo} />
+                        </ScrollLink>
                         <p className={styles.logoText}>{localized.Eslogan}</p>
                     </div>
+
+                    {/*<ScrollLink to="/#Home1" scrollMode="top" >*/}
+                    {/*    <LazyImage src={logo} alt="Logo Liderman" className={styles.logo} />*/}
+                    {/*</ScrollLink>*/}
 
                     <div className={styles.columnsContainer}>
                         <div className={styles.column}>
@@ -106,7 +117,7 @@ function Footer() {
                                 {localized.Conocenos.QuienesSomos}
                             </ScrollLink>
 
-                            <ScrollLink to="/Conocenos#LineaDeTiempo" scrollMode="bottom" className={styles.menuButton} >
+                            <ScrollLink to="/Conocenos#LineaDeTiempo" scrollMode="top" className={styles.menuButton} >
                                 {localized.Conocenos.Historia}
                             </ScrollLink>
 
@@ -159,19 +170,24 @@ function Footer() {
 
 
                             {/*Por Si Acaso No es Link Externo*/}
-                            {/*<ScrollLink to="/Lidermania#DonaRotativa2" scrollMode="top"*/}
-                            {/*            className={`${styles.squareButton} ${styles.primary}`}>*/}
-                            {/*    ➔*/}
+                            <ScrollLink to={`${location.pathname}#FormularioDeContacto`} scrollMode="top"
+                                        className={`${styles.squareButton} ${styles.primary}`}>
+                                ➔
+                            </ScrollLink>
+
+                            {/*<ScrollLink to= {`${location.pathname}#FormularioDeContacto`}*/}
+                            {/*            scrollMode="top" className={styles.boton} >*/}
+                            {/*    {textos.contactanos}*/}
                             {/*</ScrollLink>*/}
 
-                            <a
-                                href="https://youtube.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={`${styles.squareButton} ${styles.primary}`}
-                            >
-                                ➔
-                            </a>
+                            {/*<a*/}
+                            {/*    href="https://youtube.com"*/}
+                            {/*    target="_blank"*/}
+                            {/*    rel="noopener noreferrer"*/}
+                            {/*    className={`${styles.squareButton} ${styles.primary}`}*/}
+                            {/*>*/}
+                            {/*    ➔*/}
+                            {/*</a>*/}
 
 
                         </div>
@@ -183,7 +199,7 @@ function Footer() {
                                 <p className={styles.cardSubtitle}>{localized.Boton2.Subtitulo}</p>
                             </div>
                             {/*<button className={`${styles.squareButton} ${styles.secondary}`}>➔</button>*/}
-                            <ScrollLink to="/Lidermania#CarruselDeTrabajos" scrollMode="bottom"
+                            <ScrollLink to="/Lidermania#FacebookTrabajos" scrollMode="center"
                                         className={`${styles.squareButton} ${styles.secondary}`}>
                                 ➔
                             </ScrollLink>

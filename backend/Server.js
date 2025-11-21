@@ -2,9 +2,15 @@ import express from 'express';
 import mysql from 'mysql2';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import enviarCorreo from './enviarCorreo.js'; // Asegúrate de que la ruta sea correcta
 
-dotenv.config({ path: './datosDeBaseDeDatos.env' });
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Cargar .env desde la raíz aunque lo ejecutes desde cualquier lado
+dotenv.config({ path: path.join(__dirname, '../datosDeBaseDeDatos.env') });
 
 console.log('HOST:', process.env.DB_HOST);
 console.log('USER:', process.env.DB_USER);
@@ -58,6 +64,7 @@ app.post('/clientes', (req, res) => {
     });
 });
 
-app.listen(3001, () => {
-    console.log('Servidor corriendo en http://localhost:3001');
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "../css/BarraDeOpciones3.module.css";
 import { isDarkModeEnabled } from "./Sistemas/toggleDarkMode.ts";
@@ -42,6 +42,40 @@ function BarraDeOpciones3() {
         return () => observer.disconnect();
     }, []);
 
+    const scrollYRef = useRef<number>(0);
+
+    useLayoutEffect(() => {
+        if (showBar) {
+            scrollYRef.current = window.scrollY;
+
+            // "congelar" visualmente la posición actual
+            document.body.style.position = "fixed";
+            document.body.style.top = `-${scrollYRef.current}px`;
+            document.body.style.width = "100%";
+            document.body.style.overflow = "hidden";
+        } else {
+            // restaurar scroll y estilos
+            document.body.style.position = "";
+            document.body.style.top = "";
+            document.body.style.width = "";
+            document.body.style.overflow = "";
+
+            window.scrollTo(0, scrollYRef.current); // ← esto te devuelve al mismo lugar
+        }
+
+        // por si el componente se desmonta con el menú abierto
+        return () => {
+            document.body.style.position = "";
+            document.body.style.top = "";
+            document.body.style.width = "";
+            document.body.style.overflow = "";
+
+            window.scrollTo(0, scrollYRef.current);
+        };
+    }, [showBar]);
+
+
+
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
             const target = event.target as Node;
@@ -83,6 +117,7 @@ function BarraDeOpciones3() {
                 onClick={() => {
                     const now = Date.now();
                     if (!showBar && now - lastCloseTimeRef.current > 500) {
+                        scrollYRef.current = window.scrollY;
                         setShowBar(true);
                     }
                 }}

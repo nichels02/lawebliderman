@@ -19,6 +19,8 @@ html, body {
 
 :root {
 
+    --colorModalFondo: #f3f3f3;
+    --colorModalFoter: #f3f3f3;
 
 
     color: #a5a5a5;
@@ -39,6 +41,7 @@ html, body {
     --color-texto-negro-cambio3: #393939;
 
     --color-general-gris: #686868;
+    --color-general-gris-cambio: #686868;
 
     --colorUI: rgba(241, 241, 241,  0.73);
 
@@ -58,7 +61,7 @@ html, body {
 
 .dark-mode {
     --color-Boton: rgba(236, 236, 236, 0.91);
-    --color-general-gris: #e4e4e4;
+    --color-general-gris-cambio: #e4e4e4;
     --colorUI: rgba(60, 60, 60, 0.73);
     --color-fondo: #202020;
     --color-blancoATransparente: rgba(255, 255, 255, 0);

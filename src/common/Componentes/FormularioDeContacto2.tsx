@@ -398,7 +398,7 @@ const FormularioDeContacto2 = () => {
 
                             <div className={styles.contactoYBoton}>
                                 <div className={styles.contactoAlternativo}>
-                                    <p>También nos puedes contactar por:</p>
+                                    <p>{content?.home.Formulario[language].OtroMetodoDeContacto}</p>
                                     <a href="mailto:${content?.home.Formulario[language].ElContactoExtra}">{content?.home.Formulario[language].ElContactoExtra}</a>
                                 </div>
 
