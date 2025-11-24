@@ -323,7 +323,12 @@
     font-size: 18px;
     border-radius: 5px;
     border: 1px solid #ddd;
+    background: transparent !important;
     color: #ffffff;
+}
+.dropdown option {
+    background: white !important;
+    color: var(--color-texto-negro2) !important;
 }
 
 /* Estilos para el formulario */

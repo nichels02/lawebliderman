@@ -89,7 +89,7 @@ function CardWithExpand() {
                                 </>
                             )}
 
-                            <button className={styles.exploreButton} onClick={() => navigate("/Servicio")}>
+                            <button className={styles.exploreButton} onClick={() => navigate("/Servicios")}>
                                 {servicios.buttonText}
                             </button>
                         </div>

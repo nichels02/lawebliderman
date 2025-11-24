@@ -67,7 +67,7 @@ function BarraDeOpciones() {
                 {showPanel && (
                     <div className={styles.panel}>
                         <Link to="/Seguridad" className={styles.boton}>{textos.seguridad}</Link>
-                        <Link to="/Servicio" className={styles.boton}>{textos.servicio}</Link>
+                        <Link to="/Servicios" className={styles.boton}>{textos.servicio}</Link>
                         <Link to="/Tecnologia" className={styles.boton}>{textos.tecnologia}</Link>
                     </div>
                 )}

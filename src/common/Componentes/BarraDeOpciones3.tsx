@@ -142,7 +142,7 @@ function BarraDeOpciones3() {
                     {showDropdown && (
                         <div className={styles.panel}>
                             <Link to="/Seguridad" className={styles.boton} onClick={() => setShowBar(!showBar)}>{textos1.seguridad}</Link>
-                            <Link to="/Servicio" className={styles.boton} onClick={() => setShowBar(!showBar)}>{textos1.servicio}</Link>
+                            <Link to="/Servicios" className={styles.boton} onClick={() => setShowBar(!showBar)}>{textos1.servicio}</Link>
                             <Link to="/Tecnologia" className={styles.boton} onClick={() => setShowBar(!showBar)}>{textos1.tecnologia}</Link>
                         </div>
                     )}

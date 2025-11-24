@@ -46,7 +46,7 @@ function ContenidoPrincipal() {
         "/Conocenos": <Conocenos />,
         "/Lidermania": <Lidermania />,
         "/Seguridad": <Seguridad />,
-        "/Servicio": <Servicio />,
+        "/Servicios": <Servicio />,
         "/Tecnologia": <Tecnologia />,
     };
 

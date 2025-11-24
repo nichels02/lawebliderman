@@ -132,7 +132,7 @@ function Footer() {
                             <Link to="/Tecnologia" className={styles.menuButton}>
                                 {localized.Soluciones.Tecnologia}
                             </Link>
-                            <Link to="/Servicio" className={styles.menuButton}>
+                            <Link to="/Servicios" className={styles.menuButton}>
                                 {localized.Soluciones.Servicio}
                             </Link>
                         </div>

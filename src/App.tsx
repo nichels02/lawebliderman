@@ -108,7 +108,7 @@ function App() {
                                 <Route path="/Conocenos" element={<PageWrapper><Conocenos/></PageWrapper>}/>
                                 <Route path="/Lidermania" element={<PageWrapper><Lidermania/></PageWrapper>}/>
                                 <Route path="/Seguridad" element={<PageWrapper><Seguridad/></PageWrapper>}/>
-                                <Route path="/Servicio" element={<PageWrapper><Servicio/></PageWrapper>}/>
+                                <Route path="/Servicios" element={<PageWrapper><Servicio/></PageWrapper>}/>
                                 <Route path="/Tecnologia" element={<PageWrapper><Tecnologia/></PageWrapper>}/>
                                 <Route path="/Legal" element={<PageWrapper><Legal/></PageWrapper>}/>
                             </Routes>
