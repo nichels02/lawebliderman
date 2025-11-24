@@ -25,7 +25,7 @@ html, body {
 
     color: #a5a5a5;
 
-    --color-Boton: #0707077F;
+    --color-Boton: #7a7a7a;
 
 
     --color-fondo: #ffffff;
@@ -42,6 +42,7 @@ html, body {
 
     --color-general-gris: #686868;
     --color-general-gris-cambio: #686868;
+    --color-boton-Hover: rgb(51, 51, 51);
 
     --colorUI: rgba(241, 241, 241,  0.73);
 
@@ -60,9 +61,10 @@ html, body {
 
 
 .dark-mode {
-    --color-Boton: rgba(236, 236, 236, 0.91);
+    --color-Boton: rgb(122, 122, 122);
     --color-general-gris-cambio: #e4e4e4;
     --colorUI: rgba(60, 60, 60, 0.73);
+    --color-boton-Hover: rgb(91, 91, 91);
     --color-fondo: #202020;
     --color-blancoATransparente: rgba(255, 255, 255, 0);
     --color-texto-negro-cambio: #ffffff;

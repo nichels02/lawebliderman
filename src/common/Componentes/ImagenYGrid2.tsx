@@ -67,7 +67,7 @@ function ImagenYGrid2() {
                                         <p className={styles.subtituloBotonIzquierdo}>{textos.boton1.subtitulo}</p>
                                     </div>
                                     <div className={styles.iconoContenedorDerecho}>
-                                        <ScrollLink to="/Lidermania#DonaRotativa2" scrollMode="top"
+                                        <ScrollLink to="/Lidermania#HeaderGenerico" scrollMode="top"
                                                     className={styles.TextoContenedorBotonD}>
                                             ➔
                                         </ScrollLink>
