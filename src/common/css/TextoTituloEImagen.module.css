@@ -114,7 +114,7 @@
 
 .boton:hover {
     background-color: var(--color-boton-Hover);
-    color: white;
+    color: var(--color-texto-blanco);
 }
 .boton.active{
     /*background-color: rgba(255, 0, 0, 0.7);*/
