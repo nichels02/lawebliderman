@@ -4,41 +4,30 @@ import styles from "../css/BarraDeOpciones.module.css";
 import { isDarkModeEnabled } from "./Sistemas/toggleDarkMode.ts";
 import { useContent } from "./Sistemas/useContent";
 import { useLanguage } from "./Sistemas/LanguageContext";
+import LazyImage from "./Sistemas/LazyImage.tsx";
 
 // Estado global para el color del SVG
-let setSVGColorGlobal: (color: string) => void;
+let setSVGColorGlobal: (isDark: boolean) => void;
 
 export function updateSVGColor() {
     if (setSVGColorGlobal) {
-        setSVGColorGlobal(isDarkModeEnabled() ? "#FFFFFF" : "#393939");
+        setSVGColorGlobal(isDarkModeEnabled());
     }
 }
 
 function BarraDeOpciones() {
     const { language } = useLanguage();
     const content = useContent();
+    const Imagen = content?.home.BarraDeOpciones2.Common;
 
     const [showPanel, setShowPanel] = useState(false);
-    const [svgColor, setSvgColor] = useState(isDarkModeEnabled() ? "#FFFFFF" : "#393939");
 
-    // Guardar la función para actualizar el color desde fuera
+    const [svgColor, setSvgColor] = useState(isDarkModeEnabled());
+
+    // Guardar función para actualizar color desde fuera
     useEffect(() => {
         setSVGColorGlobal = setSvgColor;
     }, []);
-
-    // Escuchar cambios en la clase `dark-mode` en tiempo real
-    useEffect(() => {
-        const htmlElement = document.documentElement;
-
-        const observer = new MutationObserver(() => {
-            setSvgColor(isDarkModeEnabled() ? "#FFFFFF" : "#393939");
-        });
-
-        observer.observe(htmlElement, { attributes: true, attributeFilter: ["class"] });
-
-        return () => observer.disconnect();
-    }, []);
-
     // ✅ Ahora la validación ocurre después de los hooks
     if (!content || !content.home || !content.home.BarraDeOpciones) {
         return <p>Cargando...</p>;
@@ -59,9 +48,12 @@ function BarraDeOpciones() {
             >
                 <button className={styles.boton}>
                     {textos.soluciones}
-                    <svg className={styles.dropdownSymbol} viewBox="0 0 24 24" width="20" height="20">
-                        <path d="M5 9l7 7 7-7" stroke={svgColor} strokeWidth="3" fill="none" />
-                    </svg>
+                    <div className={styles.dropdownSymbol}>
+                        <LazyImage
+                            src={svgColor? Imagen?.Flecha.claro : Imagen?.Flecha.oscuro}
+                            alt={""} className={styles.Imagen}/>
+                    </div>
+
                 </button>
 
                 {showPanel && (

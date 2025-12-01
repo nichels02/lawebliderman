@@ -21,6 +21,7 @@ import BarraDeOpciones3 from './common/Componentes/BarraDeOpciones3.tsx';
 import BarraDeOpcionesRedes from './common/Componentes/BarraDeOpcionesRedes.tsx';
 import FormularioDeContacto2 from "./common/Componentes/FormularioDeContacto2.tsx";
 import Footer from './common/Componentes/Footer.tsx';
+import BotonWhatsapp from "./common/Componentes/BotonWhatsapp.tsx";
 
 function ContenidoPrincipal() {
     const location = useLocation();
@@ -85,6 +86,7 @@ function ContenidoPrincipal() {
             {/* Mostrar estos componentes solo si la página terminó de cargar */}
             {isPageLoaded && (
                 <>
+                    <BotonWhatsapp/>
                     <FormularioDeContacto2 />
                     <Footer />
                 </>

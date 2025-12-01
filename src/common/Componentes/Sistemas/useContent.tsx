@@ -109,25 +109,31 @@ interface ContentData {
                 espanol: string;
                 ingles: string;
             };
-        };
-        BarraDeRedes: {
-            Item1: {
-                Link: string;
-                imagen: string;
-            },
-            Item2: {
-                Link: string;
-                imagen: string;
-            },
-            Item3: {
-                Link: string;
-                imagen: string;
-            },
-            Item4: {
-                Link: string;
-                imagen: string;
+            Common: {
+                Mundo: {
+                    claro: string;
+                    oscuro: string;
+                },
+                Flecha: {
+                    claro: string;
+                    oscuro: string;
+                }
+                Bandera_Inicial: {
+                    claro: string;
+                    oscuro: string;
+                },
+                Banderas: {
+                        imagen: string;
+                        Link: string;
+                        Nombre: string;
+                    }[]
             }
         };
+        BarraDeRedes: {
+                Link: string;
+                imagen: string;
+                Nombre: string;
+        }[];
         CardWithExpand: {
             Seguridad: {
                 es: {
@@ -556,6 +562,11 @@ interface ContentData {
                     PoliticaDePrivacidad: string;
                 }
             }
+        }
+        BotonWhatsapp: {
+            nombre: string;
+            Imagen: string;
+            link: string;
         }
     }
 

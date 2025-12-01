@@ -24,6 +24,7 @@ import { ContentProvider } from "./common/Componentes/Sistemas/useContent.tsx";
 import { ScrollProvider } from "./common/Componentes/Sistemas/ScrollContext.tsx";
 
 // Lazy loading diferido para Footer y Formulario
+const LazyBotonWhatsapp = lazy(() => import('./common/Componentes/BotonWhatsapp.tsx'));
 const LazyFormulario = lazy(() => import('./common/Componentes/FormularioDeContacto2.tsx'));
 const LazyFooter = lazy(() => import('./common/Componentes/Footer.tsx'));
 
@@ -66,6 +67,7 @@ function PageWrapper({ children }: { children: React.ReactNode }) {
             <div id="page-bottom-marker" style={{ height: '1px' }} />
             {pageLoaded && (
                 <Suspense fallback={null}>
+                    <LazyBotonWhatsapp/>
                     <LazyFormulario />
                     <LazyFooter />
                 </Suspense>
@@ -75,10 +77,10 @@ function PageWrapper({ children }: { children: React.ReactNode }) {
 }
 
 function App() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 958);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
 
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth <= 958);
+        const handleResize = () => setIsMobile(window.innerWidth <= 1000);
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);

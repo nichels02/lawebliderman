@@ -6,24 +6,26 @@ import { useContent } from './Sistemas/useContent';
 import { isDarkModeEnabled } from './Sistemas/toggleDarkMode.ts';
 import { useLocation } from 'react-router-dom';
 import ScrollLink from "./Sistemas/ScrollLink.tsx";
+import LazyImage from "./Sistemas/LazyImage.tsx";
 
 // Estado global para el color
-let setSVGColorGlobal: (color: string) => void;
+let setSVGColorGlobal: (isDark: boolean) => void;
 
 export function updateSVGColor() {
     if (setSVGColorGlobal) {
-        setSVGColorGlobal(isDarkModeEnabled() ? "#FFFFFF" : "#393939");
+        setSVGColorGlobal(isDarkModeEnabled());
     }
 }
 
 function BarraDeOpciones2() {
+    const [showPanelPaises, setShowPanelPaises] = useState(false);
     const [showPanel, setShowPanel] = useState(false);
     const { language, setLanguage } = useLanguage();
     const content = useContent();
     const location = useLocation();
 
     // Estado para el color del SVG (debe declararse antes de cualquier `return`)
-    const [svgColor, setSvgColor] = useState(isDarkModeEnabled() ? "#FFFFFF" : "#393939");
+    const [svgColor, setSvgColor] = useState(isDarkModeEnabled());
 
     // Guardar función para actualizar color desde fuera
     useEffect(() => {
@@ -36,6 +38,7 @@ function BarraDeOpciones2() {
     }
 
     const textos = content.home.BarraDeOpciones2[language];
+    const Imagen = content.home.BarraDeOpciones2.Common;
 
     return (
         <div className={styles.barra}>
@@ -55,26 +58,16 @@ function BarraDeOpciones2() {
                 onMouseLeave={() => setShowPanel(false)}
             >
                 <button className={styles.boton}>
-                    <svg
-                        className={styles.globeIcon}
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                    >
-                        <circle cx="12" cy="12" r="10" stroke={svgColor} strokeWidth="2" fill="none" />
-                        <line x1="2" y1="9" x2="22" y2="9" stroke={svgColor} strokeWidth="2" />
-                        <line x1="2" y1="15" x2="22" y2="15" stroke={svgColor} strokeWidth="2" />
-                        <path d="M12,2 C17,6 17,18 12,22" stroke={svgColor} strokeWidth="2" fill="none" />
-                        <path d="M12,2 C7,6 7,18 12,22" stroke={svgColor} strokeWidth="2" fill="none" />
-                    </svg>
-                    <svg
-                        className={styles.dropdownSymbol}
-                        viewBox="0 0 24 24"
-                        width="20"
-                        height="20"
-                    >
-                        <path d="M5 9l7 7 7-7" stroke={svgColor} strokeWidth="3" fill="none" />
-                    </svg>
+                    <div className={styles.globeIcon}>
+                        <LazyImage
+                            src={svgColor? Imagen.Mundo.claro : Imagen.Mundo.oscuro}
+                            alt={""} className={styles.Imagen}/>
+                    </div>
+                    <div className={styles.dropdownSymbol}>
+                        <LazyImage
+                            src={svgColor? Imagen.Flecha.claro : Imagen.Flecha.oscuro}
+                            alt={""} className={styles.Imagen}/>
+                    </div>
                 </button>
                 {showPanel && (
                     <div className={styles.panel}>
@@ -87,6 +80,57 @@ function BarraDeOpciones2() {
                     </div>
                 )}
             </div>
+
+
+            <div
+                className={styles.dropdownContainer}
+                onMouseEnter={() => setShowPanelPaises(true)}
+                onMouseLeave={() => setShowPanelPaises(false)}
+            >
+                <button className={styles.boton}>
+                    <div className={styles.globeIcon}>
+                        <LazyImage
+                            // src={svgColor? Imagen.Bandera_Inicial.oscuro : Imagen.Bandera_Inicial.claro}
+                            src={Imagen.Bandera_Inicial.claro}
+                            alt={""} className={styles.Imagen}/>
+                    </div>
+                    <div className={styles.dropdownSymbol}>
+                        <LazyImage
+                            src={svgColor? Imagen.Flecha.claro : Imagen.Flecha.oscuro}
+                            alt={""} className={styles.Imagen}/>
+                    </div>
+                </button>
+                {showPanelPaises && (
+                    <div className={styles.panelPaises}>
+                        {/*<button className={styles.boton} onClick={() => setLanguage('es')}>*/}
+                        {/*    {textos.espanol} 🇪🇸*/}
+                        {/*</button>*/}
+                        {/*<button className={styles.boton} onClick={() => setLanguage('en')}>*/}
+                        {/*    {textos.ingles} 🇺🇸*/}
+                        {/*</button>*/}
+
+                        {Imagen.Banderas.map((opcion, i) => (
+                            <a
+                                key={i}
+                                href={opcion.Link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.boton}
+                                aria-label={opcion.Nombre}
+                            >
+                                <LazyImage
+                                    src={opcion.imagen}
+                                    alt=""
+                                    aria-hidden="true"
+                                    className={styles.Imagen}
+                                />
+                            </a>
+                        ))}
+                    </div>
+                )}
+            </div>
+
+
             <Switch />
         </div>
     );

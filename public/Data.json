@@ -104,26 +104,61 @@
         "contactanos": "Contact Us",
         "espanol": "Spanish",
         "ingles": "English"
+      },
+      "Common": {
+        "Mundo": {
+          "claro": "/assets/ImagenesGenerales/Mundo2.svg",
+          "oscuro": "/assets/ImagenesGenerales/Mundo.svg"
+        },
+        "Flecha": {
+          "claro": "/assets/ImagenesGenerales/flechaDropDown2.svg",
+          "oscuro": "/assets/ImagenesGenerales/flechaDropDown.svg"
+        },
+        "Bandera_Inicial": {
+          "claro": "/assets/ImagenesGenerales/bandera.svg",
+          "oscuro": "/assets/ImagenesGenerales/bandera2.svg"
+        },
+        "Banderas": [
+          {
+            "imagen": "/assets/Inicio/Nueva carpeta/cl.svg",
+            "Nombre": "Pagina de Liderman de Chile",
+            "Link": "https://www.liderman.cl/"
+          },
+          {
+            "imagen": "/assets/Inicio/Nueva carpeta/Ecuador.png",
+            "Nombre": "Pagina de Liderman de Ecuador",
+            "Link": "https://liderman.com.ec/"
+          },
+          {
+            "imagen": "/assets/Inicio/Nueva carpeta/us.svg",
+            "Nombre": "Pagina de Liderman de Estados Unidos",
+            "Link": "https://www.lidermanusa.com/es/"
+          }
+        ]
       }
     },
-    "BarraDeRedes": {
-      "Item1": {
+    "BarraDeRedes": [
+      {
         "Link": "https://www.facebook.com/LidermanOficial",
-        "imagen": "/assets/ImagenesGenerales/LogoFacebook.svg"
+        "imagen": "/assets/ImagenesGenerales/LogoFacebook.svg",
+        "Nombre": "Facebook"
       },
-      "Item2": {
+      {
         "Link": "https://www.tiktok.com/@lidermanplay",
-        "imagen": "/assets/ImagenesGenerales/LogoTiktok.svg"
+        "imagen": "/assets/ImagenesGenerales/LogoTiktok.svg",
+        "Nombre": "Tiktok"
       },
-      "Item3": {
+      {
         "Link": "https://www.linkedin.com/company/liderman/?originalSubdomain=pe",
-        "imagen": "/assets/ImagenesGenerales/LogoLinkedin.svg"
+        "imagen": "/assets/ImagenesGenerales/LogoLinkedin.svg",
+        "Nombre": "Linkedin"
       },
-      "Item4": {
+      {
         "Link": "https://www.youtube.com/LidermanOficial",
-        "imagen": "/assets/ImagenesGenerales/LogoYoutube.svg"
+        "imagen": "/assets/ImagenesGenerales/LogoYoutube.svg",
+        "Nombre": "Youtube"
       }
-    },
+    ],
     "CardWithExpand": {
       "Seguridad": {
         "es": {
@@ -424,7 +459,7 @@
         "Mensaje": "Mensaje*",
         "TextoGuiaMensaje": "Escríbenos aquí...",
         "OtroMetodoDeContacto": "También nos puedes contactar por:",
-        "ElContactoExtra": "contacto@empresa.com",
+        "ElContactoExtra": "infocomercial@liderman.com.pe",
         "BotonEnviar": "Enviar mensaje",
         "BotonEnviando": "Enviando...",
         "MensajeAprobatorio": "¡Formulario enviado con éxito!",
@@ -500,7 +535,7 @@
         "Mensaje": "Message*",
         "TextoGuiaMensaje": "Write to us here...",
         "OtroMetodoDeContacto": "You can also contact us at:",
-        "ElContactoExtra": "contact@empresa.com",
+        "ElContactoExtra": "infocomercial@liderman.com.pe",
         "BotonEnviar": "Send Message",
         "BotonEnviando": "Sending...",
         "MensajeAprobatorio": "Form successfully submitted!",
@@ -709,6 +744,11 @@
 
 
 
+    },
+    "BotonWhatsapp": {
+      "nombre": "Acceder a whatsapp",
+      "Imagen": "/assets/Inicio/Nueva carpeta/WSPP.svg",
+      "link": "https://wa.me/51984393768"
     }
   },
 

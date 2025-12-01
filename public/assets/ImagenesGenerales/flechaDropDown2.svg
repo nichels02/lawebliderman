@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+    <defs>
+        <style type="text/css">
+            <![CDATA[
+        svg {
+          --color: #ffffff;
+          --stroke-width: 2;
+        }
+      ]]>
+        </style>
+    </defs>
+    <path d="M5 9l7 7 7-7" stroke="var(--color)" stroke-width="var(--stroke-width)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg width="512" height="512" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+        .flag-pole {
+          stroke: #7d7d7d;
+          stroke-width: 1.5;
+        }
+        .flag-fill {
+          fill: #ffffff;
+          stroke: #7d7d7d;
+          stroke-width: 0.5;
+        }
+      ]]>
+    </style>
+  </defs>
+
+  <!-- Palo de la bandera -->
+  <path d="M4 3V21" class="flag-pole" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Bandera con color - ajustada al punto medio -->
+  <path d="M4.5 4C9.5 2 11.5 7 20.5 4V16C11.5 19 9.5 13 4.5 16" class="flag-fill" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

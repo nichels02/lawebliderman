@@ -413,4 +413,8 @@
     .socialLinks {
         gap: 12px;
     }
+    .copyright {
+        white-space: normal;
+    }
+
 }

@@ -9,19 +9,19 @@ function BarraDeOpcionesRedes() {
 
     return (
         <div className={styles.barra}>
-            <a href={data.home.BarraDeRedes.Item1.Link} target="_blank" rel="noopener noreferrer" className={styles.icono}>
-                <LazyImage src={data.home.BarraDeRedes.Item1.imagen} alt="Facebook" />
-            </a>
-            <a href={data.home.BarraDeRedes.Item2.Link} target="_blank" rel="noopener noreferrer" className={styles.icono}>
-                <LazyImage src={data.home.BarraDeRedes.Item2.imagen} alt="TikTok" />
-            </a>
-            <a href={data.home.BarraDeRedes.Item3.Link} target="_blank" rel="noopener noreferrer" className={styles.icono}>
-                <LazyImage src={data.home.BarraDeRedes.Item3.imagen} alt="LinkedIn" />
-            </a>
-            <a href={data.home.BarraDeRedes.Item4.Link} target="_blank" rel="noopener noreferrer" className={styles.icono}>
-                <LazyImage src={data.home.BarraDeRedes.Item4.imagen} alt="YouTube" />
-            </a>
+            {data.home.BarraDeRedes.map((item, index) => (
+                <a
+                    key={index}
+                    href={item.Link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.icono}
+                >
+                    <LazyImage src={item.imagen} alt={item.Nombre} className={styles.Imagen}/>
+                </a>
+            ))}
         </div>
+
     );
 }
 

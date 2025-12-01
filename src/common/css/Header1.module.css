@@ -9,6 +9,7 @@
     position: relative; /* Asegura que los elementos absolutos dentro de este contenedor se posicionen en relación con él */
     width: 100%;
     height: auto;
+    min-height: calc(100vw * 0.54);
 }
 
 .headerImage {

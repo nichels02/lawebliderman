@@ -10,10 +10,12 @@
     -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
     border-radius: 25px;
     padding: 4px 8px; /* Padding igual al otro componente */
-    width: 20vw; /* Ancho ligeramente mayor para que quepa el Switch */
+    /*width: 20vw; !* Ancho ligeramente mayor para que quepa el Switch *!*/
+    width: auto;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     height: 3vw;
+    max-height: 58px;
 }
 
 
@@ -32,21 +34,24 @@
     font-size: clamp(1rem, 1vw,1.3rem);
     flex-grow: 0;
     text-align: center;
-
+    display: flex;
+    align-items: center;
 }
 
 /* Estilos para el ícono del globo */
 .globeIcon {
     margin-right: 4px; /* Espacio entre el globo y la flecha */
     display: inline-block;
-    fill: var(--color-texto-negro-cambio) !important;
     vertical-align: middle; /* Alinea verticalmente con la flecha */
-    width: 1.8vw; /* Ancho reducido */
+    aspect-ratio: 1/1;
     height: 1.8vw; /* Alto reducido */
+    max-height: 45px;
+
 }
-.iconoSVG{
-    color: var(--color-texto-negro-cambio) !important;
-    fill: var(--color-texto-negro-cambio) !important;
+.Imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /* Estilos para el símbolo de dropdown (flecha) */
 .dropdownSymbol {
@@ -54,8 +59,9 @@
     display: inline-block;
     color: var(--color-texto-negro-cambio) !important;
     transform: translateY(2px); /* Ajuste de posición vertical */
-    width: 12px; /* Ancho reducido */
-    height: 12px; /* Alto reducido */
+    width: 20px; /* Ancho reducido */
+    aspect-ratio: 1/1;
+    /*margin: 50% 0;*/
 }
 
 /* Contenedor del dropdown */
@@ -65,7 +71,7 @@
 }
 
 /* Panel desplegable */
-.panel {
+.panelPaises, .panel {
     position: absolute;
     top: 100%; /* Coloca el panel justo debajo del botón */
     left: 50%;
@@ -73,7 +79,7 @@
     background: var(--colorUI);
     backdrop-filter: blur(10px); /* Efecto de vidrio */
     -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
-    border-radius: 0 0 25px 25px;
+
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -82,8 +88,14 @@
     z-index: 1002;
     pointer-events: auto; /* Permite que el panel sea interactivo */
 }
+.panelPaises{
+    border-radius: 0 0 12px 12px;
+}
+.panel {
+    border-radius: 0 0 25px 25px;
+}
 
-.panel .boton {
+.panelPaises .boton, .panel .boton {
     background-color: transparent;
     color: var(--color-texto-negro-cambio);
     padding: 4px 12px; /* Padding más compacto */
@@ -94,17 +106,40 @@
     font-weight: normal;
     font-size: 0.85rem; /* Tamaño de texto igual al otro componente */
 }
+.panelPaises .boton::after {
+    content: "";
+    position: absolute;
+    inset: 0;                 /* Cubre todo el botón */
+    background: rgba(0, 0, 0, 0);   /* Transparente por defecto */
+    transition: background 0.25s ease;
+    pointer-events: none;     /* No bloquea clics */
+}
+
+.panelPaises .boton:hover::after {
+    background: rgba(0, 0, 0, 0.25);  /* Oscurece al hacer hover */
+}
 
 /* Estilos para el Switch (sin cambios) */
 .switch {
     margin-left: 4px; /* Espacio entre el último botón y el Switch */
 }
 
+@media (max-width: 1700px) {
+    .dropdownSymbol {
+        width: 18px;
+    }
+}
+@media (max-width: 1400px) {
+    .dropdownSymbol {
+        width: 14px;
+    }
+}
+
 /* Ajustes para tablets */
-@media(max-width:  1200px){
+@media(max-width:  1240px){
 
     .barra {
-        width: 22vw;
+        width: auto;
         min-width: 0px;
         max-width: 672px;
         height: 3.5vw;
@@ -113,8 +148,13 @@
         font-size: clamp(1.1rem, 1.5vw,1.4rem);
     }
 }
+@media (max-width: 1150px) {
+    .barra{
+        right: 2%;
+    }
+}
 /* Ajustes para pantallas medianas (tablets) */
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
     .barra {
         padding: 4px 6px; /* Padding más compacto */
     }
@@ -127,7 +167,7 @@
 /* Ajustes para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
     .barra {
-        width: 36%; /* Más ancho en móviles */
+        width: auto; /* Más ancho en móviles */
         padding: 4px 4px; /* Padding más compacto */
     }
 }
