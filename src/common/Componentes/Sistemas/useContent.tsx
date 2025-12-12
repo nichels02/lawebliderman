@@ -568,6 +568,20 @@ interface ContentData {
             Imagen: string;
             link: string;
         }
+        LinkCotizacion: {
+            Comon: {
+                LinkBoton: string;
+            },
+            es: {
+                Titulo: string;
+                TextoBoton: string;
+            },
+            en: {
+                Titulo: string;
+                TextoBoton: string;
+            }
+
+        }
     }
 
     Conocenos: {
@@ -1847,6 +1861,140 @@ interface ContentData {
         }
     }
 
+    Cotizacion: {
+        Form: {
+            es: {
+                nombre: string;
+                apellido: string;
+                correo: string;
+                RazonSocialEmpresa: string;
+                RUCEmpresa: string;
+                Region: string;
+                Distrito: string;
+                Direccion: string;
+
+                intereses:{
+                    TituloIntereses: string;
+                    SeguridadElectronica: string;
+                    SeguridadFisica: string;
+                    FacilityManagement: string;
+                    Outsourcing: string;
+                },
+
+                Requerimiento: string;
+                Codigo:string;
+                Codigos: {
+                        Codigo: string;
+                        Nombre: string;
+                    }[],
+                telefono:string;
+
+                PorDondeContactar:{
+                    Telefonicamente: string;
+                    Whatsapp: string;
+                    Email: string;
+                },
+
+                Permisos:{
+                    condicionesDePrivacidad: string;
+                    AceptoQueMeContacte: string;
+                }
+                boton: string;
+            },
+            en: {
+                nombre: string;
+                apellido: string;
+                correo: string;
+                RazonSocialEmpresa: string;
+                RUCEmpresa: string;
+                Region: string;
+                Distrito: string;
+                Direccion: string;
+
+                intereses:{
+                    TituloIntereses: string;
+                    SeguridadElectronica: string;
+                    SeguridadFisica: string;
+                    FacilityManagement: string;
+                    Outsourcing: string;
+                },
+
+                Requerimiento: string;
+                Codigo:string;
+                Codigos: {
+                    Codigo: string;
+                    Nombre: string;
+                }[],
+                telefono:string;
+
+                PorDondeContactar:{
+                    Telefonicamente: string;
+                    Whatsapp: string;
+                    Email: string;
+                },
+
+                Permisos:{
+                    condicionesDePrivacidad: string;
+                    AceptoQueMeContacte: string;
+                }
+                boton: string;
+            }
+
+
+        },
+        ValidadorFormulario: {
+            es: {
+                nombreVacio:  string;
+                apellidoVacio:  string;
+                correoVacio:  string;
+                FormatoDeCorreo:  string;
+                RazonSocialEmpresaVacio:  string;
+                RUCEmpresaVacio:  string;
+                RegionVacio:  string;
+                DistritoVacio:  string;
+                DireccionVacio:  string;
+
+                interesesVacio:  string;
+
+                RequerimientoVacio:  string;
+                CodigoVacio:  string;
+                telefonoVacio:  string;
+                TelefonoSoloNumeros:  string;
+                TelefonoCantidadDeDigitos:  string;
+
+                PorDondeContactarVacio:  string;
+
+                ErrorGuardando:  string;
+                ErrorDeConexion:  string;
+            },
+            en: {
+                nombreVacio:  string;
+                apellidoVacio:  string;
+                correoVacio:  string;
+                FormatoDeCorreo:  string;
+                RazonSocialEmpresaVacio:  string;
+                RUCEmpresaVacio:  string;
+                RegionVacio:  string;
+                DistritoVacio:  string;
+                DireccionVacio:  string;
+
+                interesesVacio:  string;
+
+                RequerimientoVacio:  string;
+                CodigoVacio:  string;
+                telefonoVacio:  string;
+                TelefonoSoloNumeros:  string;
+                TelefonoCantidadDeDigitos:  string;
+
+                PorDondeContactarVacio:  string;
+
+                ErrorGuardando:  string;
+                ErrorDeConexion:  string;
+            }
+
+
+        }
+    }
 
 
 }

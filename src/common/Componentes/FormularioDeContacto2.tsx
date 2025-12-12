@@ -177,10 +177,10 @@ const FormularioDeContacto2 = () => {
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        setError(null);
-        setSuccess(false);
+        e.preventDefault();      // evitar recargar la página
+        setIsSubmitting(true);   // activar estado "enviando"
+        setError(null);          // borrar errores previos
+        setSuccess(false);       // aún no hay éxito
 
         try {
             console.log('[Form] Iniciando validación...');

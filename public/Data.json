@@ -749,6 +749,20 @@
       "nombre": "Acceder a whatsapp",
       "Imagen": "/assets/Inicio/Nueva carpeta/WSPP.svg",
       "link": "https://wa.me/51984393768"
+    },
+    "LinkCotizacion": {
+      "Comon": {
+        "LinkBoton": ""
+      },
+      "es": {
+        "Titulo": "¿Buscas seguridad, gestión y paz mental?",
+        "TextoBoton": "COTIZA TU TRANQUILIDAD"
+      },
+      "en": {
+        "Titulo": "",
+        "TextoBoton": ""
+      }
+
     }
   },
 
@@ -2333,6 +2347,171 @@
 
 
 
+  },
+
+  "Cotizacion": {
+    "Form": {
+      "es": {
+        "nombre": "Nombres",
+        "apellido": "Apellidos",
+        "correo": "Email",
+        "RazonSocialEmpresa": "Razón Social Empresa",
+        "RUCEmpresa": "RUT Empresa",
+        "Region": "Región",
+        "Distrito": "Distrito",
+        "Direccion": "Direccion",
+
+        "intereses":{
+          "TituloIntereses": "Seleccione el/los Servicio/s que Desea Cotizar",
+          "SeguridadElectronica": "SEGURIDAD ELECTRÓNICA",
+          "SeguridadFisica": "SEGURIDAD FÍSICA",
+          "FacilityManagement": "FACILITY MANAGEMENT",
+          "Outsourcing": "OUTSOURCING"
+        },
+
+        "Requerimiento": "Requerimiento",
+        "Codigo":"Código",
+        "Codigos":[
+          {
+            "Codigo": "+56",
+            "Nombre": "CL +56"
+          },
+          {
+            "Codigo": "+57",
+            "Nombre": "CO +57"
+          },
+          {
+            "Codigo": "+51",
+            "Nombre": "PE +51"
+          },
+          {
+            "Codigo": "+593",
+            "Nombre": "EC +593"
+          }
+        ],
+        "telefono":"Telefono",
+
+        "PorDondeContactar":{
+          "Telefonicamente": "Telefónicamente",
+          "Whatsapp": "Por Whatsapp",
+          "Email": "Vía email"
+        },
+
+        "Permisos":{
+          "condicionesDePrivacidad": "Acepto las condiciones de privacidad del sitio web.",
+          "AceptoQueMeContacte": "Acepto que Liderman Chile me contacte con la información solicitada."
+        },
+
+        "boton": "SOLICITE SU COTIZACIÓN"
+      },
+      "en": {
+        "nombre": "First Name",
+        "apellido": "Last Name",
+        "correo": "Email",
+        "RazonSocialEmpresa": "Company Legal Name",
+        "RUCEmpresa": "Company RUT",
+        "Region": "Region",
+        "Distrito": "District",
+        "Direccion": "Address",
+
+        "intereses": {
+          "TituloIntereses": "Select the Service(s) You Want to Quote",
+          "SeguridadElectronica": "ELECTRONIC SECURITY",
+          "SeguridadFisica": "PHYSICAL SECURITY",
+          "FacilityManagement": "FACILITY MANAGEMENT",
+          "Outsourcing": "OUTSOURCING"
+        },
+
+        "Requerimiento": "Requirement",
+        "Codigo": "Code",
+        "Codigos":[
+          {
+            "Codigo": "+56",
+            "Nombre": "CL +56"
+          },
+          {
+            "Codigo": "+57",
+            "Nombre": "CO +57"
+          },
+          {
+            "Codigo": "+51",
+            "Nombre": "PE +51"
+          },
+          {
+            "Codigo": "+593",
+            "Nombre": "EC +593"
+          }
+        ],
+        "telefono": "Phone",
+
+        "PorDondeContactar": {
+          "Telefonicamente": "By Phone Call",
+          "Whatsapp": "Via WhatsApp",
+          "Email": "By Email"
+        },
+
+        "Permisos": {
+          "condicionesDePrivacidad": "I accept the website’s privacy terms.",
+          "AceptoQueMeContacte": "I agree to be contacted by Liderman Chile with the requested information."
+        },
+        "boton": "REQUEST A QUOTE"
+      }
+
+
+    },
+
+    "ValidadorFormulario": {
+      "es": {
+        "nombreVacio": "El nombre no puede estar vacío",
+        "apellidoVacio": "El apellido no puede estar vacío",
+        "correoVacio": "El correo no puede estar vacío",
+        "FormatoDeCorreo": "El formato del correo no es válido",
+        "RazonSocialEmpresaVacio": "La razon social no puede estar vacía",
+        "RUCEmpresaVacio": "El RUC no puede estar vacío",
+        "RegionVacio": "La region no puede estar vacía",
+        "DistritoVacio": "El distrito no puede estar vacío",
+        "DireccionVacio": "La direccion no puede estar vacío",
+
+        "interesesVacio": "Debe seleccionar al menos un interés",
+
+        "RequerimientoVacio": "El requerimiento no puede estar vacío",
+        "CodigoVacio": "El Codigo no puede estar vacío",
+        "telefonoVacio": "El teléfono no puede estar vacío",
+        "TelefonoSoloNumeros": "El teléfono solo debe contener dígitos numéricos",
+        "TelefonoCantidadDeDigitos": "El teléfono debe tener entre 7 y 15 dígitos",
+
+        "PorDondeContactarVacio": "Debe seleccionar al menos un medio por el que desea ser contactado",
+
+        "ErrorGuardando": "Error al guardar los datos",
+        "ErrorDeConexion": "Error de conexión con el servidor"
+      },
+      "en": {
+        "nombreVacio": "Name cannot be empty",
+        "apellidoVacio": "Last name cannot be empty",
+        "correoVacio": "Email cannot be empty",
+        "FormatoDeCorreo": "The email format is not valid",
+        "RazonSocialEmpresaVacio": "The company name cannot be empty",
+        "RUCEmpresaVacio": "The company RUC cannot be empty",
+        "RegionVacio": "Region cannot be empty",
+        "DistritoVacio": "District cannot be empty",
+        "DireccionVacio": "Address cannot be empty",
+
+        "interesesVacio": "You must select at least one area of interest",
+
+        "RequerimientoVacio": "The requirement cannot be empty",
+        "CodigoVacio": "The code cannot be empty",
+        "telefonoVacio": "The phone number cannot be empty",
+        "TelefonoSoloNumeros": "The phone number must contain only digits",
+        "TelefonoCantidadDeDigitos": "The phone number must have between 7 and 15 digits",
+
+        "PorDondeContactarVacio": "You must select at least one contact method",
+
+        "ErrorGuardando": "Error while saving the data",
+        "ErrorDeConexion": "Connection error with the server"
+      }
+
+
+    }
   }
 
 

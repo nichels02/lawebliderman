@@ -10,6 +10,7 @@ const Seguridad = lazy(() => import('./pages/Seguridad.tsx'));
 const Servicio = lazy(() => import('./pages/Servicio.tsx'));
 const Tecnologia = lazy(() => import('./pages/Tecnologia.tsx'));
 const Legal = lazy(() => import('./pages/Legal.tsx'));
+const Cotizacion = lazy(() => import('./pages/Cotizacion.tsx'));
 
 // Componentes compartidos
 import BarraDeOpciones from './common/Componentes/BarraDeOpciones.tsx';
@@ -22,6 +23,7 @@ import { LanguageProvider } from './common/Componentes/Sistemas/LanguageContext'
 import ScrollToTop from "./common/Componentes/Sistemas/ScrollToTop.tsx";
 import { ContentProvider } from "./common/Componentes/Sistemas/useContent.tsx";
 import { ScrollProvider } from "./common/Componentes/Sistemas/ScrollContext.tsx";
+
 
 // Lazy loading diferido para Footer y Formulario
 const LazyBotonWhatsapp = lazy(() => import('./common/Componentes/BotonWhatsapp.tsx'));
@@ -113,6 +115,7 @@ function App() {
                                 <Route path="/Servicios" element={<PageWrapper><Servicio/></PageWrapper>}/>
                                 <Route path="/Tecnologia" element={<PageWrapper><Tecnologia/></PageWrapper>}/>
                                 <Route path="/Legal" element={<PageWrapper><Legal/></PageWrapper>}/>
+                                <Route path="/Cotizacion" element={<PageWrapper><Cotizacion/></PageWrapper>}/>
                             </Routes>
                         </Suspense>
                     </BrowserRouter>

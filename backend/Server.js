@@ -20,7 +20,7 @@ console.log('DB:', process.env.DB_NAME);
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173' // puerto donde corre tu frontend (Vite)
+    origin: process.env.FRONTEND_URL // puerto donde corre tu frontend (Vite)
 }));
 
 app.use(express.json());
@@ -63,6 +63,10 @@ app.post('/clientes', (req, res) => {
         res.status(201).json({ success: true, id: result.insertId });
     });
 });
+
+
+
+
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {

@@ -8,11 +8,12 @@ import TextoGeneral from '../common/Componentes/TextoGeneral.tsx';
 import { useContent } from '../common/Componentes/Sistemas/useContent.tsx';
 import { useLanguage } from '../common/Componentes/Sistemas/LanguageContext.tsx';
 import LinkACotizacion from "../common/Componentes/LinkACotizacion.tsx";
+import FormCotizacion from "../common/Componentes/FormCotizacion.tsx";
 // import Style from '../common/css/pages/Home.module.css'
 // import GridDocumentosLegales from "../common/Componentes/GridDocumentosLegales.tsx";
 
 
-function Home() {
+function Cotizacion() {
         const content = useContent();
         const {language} = useLanguage();
 
@@ -23,8 +24,7 @@ function Home() {
         return (
             <>
                 <Header1/>
-
-
+                <FormCotizacion/>
                 <TituloYSubtituloGenerico
                     // className={Style.TituloCardWithExpand}
                     titulo={content.home.Titulos[language].Titulo1.Titulo}
@@ -69,4 +69,4 @@ function Home() {
         )
 }
 
-export default Home
+export default Cotizacion

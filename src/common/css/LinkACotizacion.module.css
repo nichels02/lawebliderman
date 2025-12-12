@@ -1,0 +1,101 @@
+.ContenedorPadre{
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    background: #231f20;
+    flex-direction: column;
+    justify-content: space-evenly; /* Centra vertical */
+    align-items: center;     /* Centra horizontal */
+}
+.Titulo{
+    color: #e6c10c;
+    font-size: 40px;
+    text-align: center;
+    max-width: 80%;
+}
+.boton{
+    background: #e6c10c;
+    color: var(--color-texto-negro);
+    border: white 2px solid;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center; /* Centra vertical */
+    align-items: center;     /* Centra horizontal */
+
+    font-size: 20px;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+}
+.boton:hover{
+    background: transparent;
+    color: #e6c10c;
+    border: #e6c10c 2px solid;
+    border-radius: 20px;
+
+}
+
+
+@media (max-width: 1200px) {
+    .ContenedorPadre{
+        height: 300px;
+    }
+    .Titulo{
+        font-size: 30px;
+    }
+    .boton{
+        border: white 2px solid;
+        border-radius: 20px;
+
+        font-size: 16px;
+        width: 300px;
+        height: 40px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .ContenedorPadre{
+        height: 300px;
+    }
+    .Titulo{
+        font-size: 24px;
+    }
+    .boton{
+        border: white 2px solid;
+        border-radius: 20px;
+
+        font-size: 14px;
+        width: 250px;
+        height: 40px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .ContenedorPadre{
+        height: 300px;
+    }
+    .Titulo{
+        font-size: 20px;
+    }
+    .boton{
+        border: white 2px solid;
+        border-radius: 20px;
+
+        font-size: 14px;
+        width: 250px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .boton{
+        border: white 2px solid;
+        border-radius: 20px;
+
+        font-size: 14px;
+        width: 200px;
+        height: 40px;
+    }
+}
