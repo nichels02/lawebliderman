@@ -19,9 +19,9 @@ console.log('DB:', process.env.DB_NAME);
 
 const app = express();
 
-app.use(cors({
+app.use({
     origin: process.env.FRONTEND_URL // puerto donde corre tu frontend (Vite)
-}));
+});
 
 app.use(express.json());
 
