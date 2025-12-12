@@ -1,7 +1,7 @@
 import express from 'express';
 import mysql from 'mysql2';
 import dotenv from 'dotenv';
-// import cors from 'cors';
+import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import enviarCorreo from './enviarCorreo.js'; // Asegúrate de que la ruta sea correcta
@@ -19,9 +19,7 @@ console.log('DB:', process.env.DB_NAME);
 
 const app = express();
 
-app.use({
-    origin: process.env.FRONTEND_URL // puerto donde corre tu frontend (Vite)
-});
+app.use(cors());
 
 app.use(express.json());
 
