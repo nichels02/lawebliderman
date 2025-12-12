@@ -1,7 +1,7 @@
 import express from 'express';
 import mysql from 'mysql2';
 import dotenv from 'dotenv';
-import cors from 'cors';
+// import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import enviarCorreo from './enviarCorreo.js'; // Asegúrate de que la ruta sea correcta

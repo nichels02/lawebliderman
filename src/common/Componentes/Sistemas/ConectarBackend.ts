@@ -14,11 +14,11 @@ class ConectarBackend {
 
     private constructor() {
         // Usamos import.meta.env para Vite o variables de entorno de React
-        this.baseUrl = import.meta.env.VITE_API_URL ||  'http://localhost:3001';
+        this.baseUrl = import.meta.env.VITE_API_URL ||  'https://lawebliderman.onrender.com';
     }
     //https://api.render.com/deploy/srv-d1iq16mr433s73cl70h0?key=hD2Dy61LKks
+    //http://localhost:3001
     //
-    //https://lawebliderman.onrender.com
     public static getInstance(): ConectarBackend {
         if (!ConectarBackend.instance) {
             ConectarBackend.instance = new ConectarBackend();
