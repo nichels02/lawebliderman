@@ -165,15 +165,12 @@
           "title": "Seguridad",
           "subtitle": "Gestión de riesgos",
           "items": [
-            "Seguridad física",
-            "Resguardo de personal",
-            "Supervisión de sala de control",
-            "Guardianía",
-            "Patrullas móviles",
-            "Estudios de seguridad",
-            "Acompañamiento de mercadería en tránsito",
-            "Protección perimetral",
-            "Gestión de seguridad de eventos"
+            "Limpieza",
+            "Facility Managament",
+            "Courier",
+            "Jardinería",
+            "Transporte",
+            "Tercerizacion de puestos según perfil"
           ],
           "buttonText": "Explorar ➔"
         },
@@ -181,15 +178,12 @@
           "title": "Security",
           "subtitle": "Risk Management",
           "items": [
-            "Physical security",
-            "Personnel protection",
-            "Control room supervision",
-            "Guarding",
-            "Mobile patrols",
-            "Security studies",
-            "Merchandise escort",
-            "Perimeter protection",
-            "Event security management"
+            "Cleaning",
+            "Facility Management",
+            "Courier Services",
+            "Gardening",
+            "Transportation",
+            "Staff Outsourcing by Profile"
           ],
           "buttonText": "Explore ➔"
         },
@@ -233,7 +227,7 @@
           ],
           "buttonText": "Explore ➔"
         },
-        "imageUrl": "/assets/Inicio/SERVICIOS.jpg",
+        "imageUrl": "/assets/Inicio/Facilities.jpg",
         "link": "/Servicios"
       },
       "Tecnologia": {
