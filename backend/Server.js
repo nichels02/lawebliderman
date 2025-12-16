@@ -55,7 +55,7 @@ app.post('/clientes', (req, res) => {
 
         // Enviar correo después de insertar exitosamente
         const cliente = { nombre, apellido, correo, telefono, seguridad, servicios, tecnologia, ubicacion, mensaje };
-        enviarCorreo(cliente);
+        //enviarCorreo(cliente);
 
         // Responder solo con success: true y el id insertado
         res.status(201).json({ success: true, id: result.insertId });
