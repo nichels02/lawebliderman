@@ -1,7 +1,7 @@
 .contenedorPadre{
     width: 100vw;
     height: auto;
-    background: #0a4d8c;
+    background: transparent;
     padding: 50px 0;
 }
 .ContenedorGeneral{
@@ -23,12 +23,27 @@
 .campoCheckBox label,
 .Texto, .Titulo,
 .TituloIntereses {
-    color: var(--color-texto-blanco);
+    color: var(--color-texto-negro-cambio);
 }
 .BarraInput{
     height: 40px;
-    padding-left: 5px;
-    border: var(--color-texto-blanco) 2px solid;
+    padding: 0 10px;
+    border: var(--color-rojo-general) 2px solid;
+    background-color: transparent;
+    color: var(--color-texto-negro-cambio);
+    border-radius: 20px;
+}
+
+.campoCheckBox input[type="checkbox"]:checked {
+    accent-color: var(--color-rojo-general)!important;
+}
+textarea.BarraInput{
+    padding: 10px 10px;
+    min-height: 100px;
+}
+
+option.Option{
+    color: var(--color-texto-negro);
 }
 
 .campoCheckBox{
@@ -37,6 +52,10 @@
     align-items: center;
 }
 
+.botonEnviar{
+    background-color: var(--color-texto-negro-cambio);
+    color: var(--color-texto-blanco-cambio);
+}
 .ElTextArea{
     resize: vertical;
 }

@@ -387,9 +387,9 @@ const FormCotizacion = () => {
                                 required
                             >
 
-                                <option value="">Seleccione una opción</option>
+                                <option value="" className={styles.Option}>Seleccione una opción</option>
                                 {content?.Cotizacion.Form[language].Codigos.map((item, index) => (
-                                    <option key={index} value={item.Codigo}>
+                                    <option key={index} value={item.Codigo} className={styles.Option}>
                                         {item.Nombre}
                                     </option>
                                 ))}

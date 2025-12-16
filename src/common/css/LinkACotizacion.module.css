@@ -8,15 +8,15 @@
     align-items: center;     /* Centra horizontal */
 }
 .Titulo{
-    color: #e6c10c;
+    color: var(--color-rojo-general);
     font-size: 40px;
     text-align: center;
     max-width: 80%;
 }
 .boton{
-    background: #e6c10c;
-    color: var(--color-texto-negro);
-    border: white 2px solid;
+    background: var(--color-rojo-general);
+    color: var(--color-texto-blanco);
+    border: var(--color-texto-blanco) 2px solid;
     border-radius: 20px;
     display: flex;
     justify-content: center; /* Centra vertical */
@@ -28,9 +28,9 @@
     text-align: center;
 }
 .boton:hover{
-    background: transparent;
-    color: #e6c10c;
-    border: #e6c10c 2px solid;
+    background: var(--color-texto-blanco);
+    color: var(--color-rojo-general);
+    border: var(--color-rojo-general) 2px solid;
     border-radius: 20px;
 
 }

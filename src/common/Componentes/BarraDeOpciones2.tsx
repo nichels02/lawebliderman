@@ -19,7 +19,6 @@ export function updateSVGColor() {
 
 function BarraDeOpciones2() {
     const [showPanelPaises, setShowPanelPaises] = useState(false);
-    const [showPanel, setShowPanel] = useState(false);
     const { language, setLanguage } = useLanguage();
     const content = useContent();
     const location = useLocation();
@@ -54,31 +53,15 @@ function BarraDeOpciones2() {
             </ScrollLink>
             <div
                 className={styles.dropdownContainer}
-                onMouseEnter={() => setShowPanel(true)}
-                onMouseLeave={() => setShowPanel(false)}
             >
-                <button className={styles.boton}>
-                    <div className={styles.globeIcon}>
-                        <LazyImage
-                            src={svgColor? Imagen.Mundo.claro : Imagen.Mundo.oscuro}
-                            alt={""} className={styles.Imagen}/>
-                    </div>
-                    <div className={styles.dropdownSymbol}>
-                        <LazyImage
-                            src={svgColor? Imagen.Flecha.claro : Imagen.Flecha.oscuro}
-                            alt={""} className={styles.Imagen}/>
-                    </div>
+                <button className={styles.boton}
+                        onClick={() =>
+                            language=='es'?
+                                setLanguage('en'):
+                                setLanguage('es')}
+                >
+                    {language=='es'? 'es':'en'}
                 </button>
-                {showPanel && (
-                    <div className={styles.panel}>
-                        <button className={styles.boton} onClick={() => setLanguage('es')}>
-                            {textos.espanol} 🇪🇸
-                        </button>
-                        <button className={styles.boton} onClick={() => setLanguage('en')}>
-                            {textos.ingles} 🇺🇸
-                        </button>
-                    </div>
-                )}
             </div>
 
 
@@ -91,7 +74,7 @@ function BarraDeOpciones2() {
                     <div className={styles.globeIcon}>
                         <LazyImage
                             // src={svgColor? Imagen.Bandera_Inicial.oscuro : Imagen.Bandera_Inicial.claro}
-                            src={Imagen.Bandera_Inicial.claro}
+                            src={svgColor? Imagen.Mundo.claro : Imagen.Mundo.oscuro}
                             alt={""} className={styles.Imagen}/>
                     </div>
                     <div className={styles.dropdownSymbol}>
