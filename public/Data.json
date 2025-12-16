@@ -134,7 +134,9 @@
             "Nombre": "Pagina de Liderman de Estados Unidos",
             "Link": "https://www.lidermanusa.com/es/"
           }
-        ]
+        ],
+        "BanderaEspanol": "/assets/Inicio/es.svg",
+        "BanderaIngles": "/assets/Inicio/us.svg"
       }
     },
     "BarraDeRedes": [
@@ -201,11 +203,12 @@
           ],
           "secondSubtitle": "Facilities",
           "secondItems": [
-            "Courier",
-            "Mantenimiento general",
             "Limpieza",
+            "Mantenimiento general",
+            "Courier",
             "Jardinería",
-            "Transporte"
+            "Transporte",
+            "Tercerización de puestos según perfil"
           ],
           "buttonText": "Explorar ➔"
         },
@@ -219,15 +222,16 @@
           ],
           "secondSubtitle": "Facilities",
           "secondItems": [
-            "Courier",
-            "General maintenance",
             "Cleaning",
+            "General maintenance",
+            "Courier",
             "Gardening",
-            "Transport"
+            "Transportation",
+            "Outsourcing of positions based on profile"
           ],
           "buttonText": "Explore ➔"
         },
-        "imageUrl": "/assets/Inicio/Facilities.jpg",
+        "imageUrl": "/assets/Inicio/Facilities.png",
         "link": "/Servicios"
       },
       "Tecnologia": {
@@ -1461,7 +1465,7 @@
         "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
         "Fondo": "/assets/Tecnologia/tecnologia-portada.png",
         "ImagenDerecha": {
-          "boton1": "/assets/Tecnologia/TECNOLOGIA.png",
+          "boton1": "/assets/Tecnologia/HeaderTecnologia.png",
           "boton2": "/assets/Tecnologia/CIBERSEGURIIDAD.png",
           "boton3": "/assets/Tecnologia/alarma.png",
           "boton4": "/assets/Tecnologia/GPS.png"

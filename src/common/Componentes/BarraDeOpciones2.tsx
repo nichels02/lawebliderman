@@ -54,13 +54,22 @@ function BarraDeOpciones2() {
             <div
                 className={styles.dropdownContainer}
             >
-                <button className={styles.boton}
+                <button className={`${styles.boton} ${styles.idioma}`}
                         onClick={() =>
                             language=='es'?
                                 setLanguage('en'):
                                 setLanguage('es')}
                 >
-                    {language=='es'? 'es':'en'}
+                    <div className={styles.ContenedorImagenesBanderaIdiomas}>
+                        <LazyImage
+                            //src={svgColor? Imagen.Flecha.claro : Imagen.Flecha.oscuro}
+                            src={language=='es'? Imagen.BanderaEspanol : Imagen.BanderaIngles}
+                            alt={""}
+                            className={styles.ImagenesBanderaIdiomas}
+                        />
+                    </div>
+
+                    {language=='es'? 'ES':'EN'}
                 </button>
             </div>
 

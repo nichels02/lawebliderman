@@ -127,6 +127,8 @@ interface ContentData {
                         Link: string;
                         Nombre: string;
                     }[]
+                BanderaEspanol: string;
+                BanderaIngles: string;
             }
         };
         BarraDeRedes: {

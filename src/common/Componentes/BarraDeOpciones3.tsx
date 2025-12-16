@@ -6,6 +6,7 @@ import { useContent } from "./Sistemas/useContent";
 import { useLanguage } from "./Sistemas/LanguageContext";
 import Switch from "./Switch.tsx";
 import ScrollLink from "./Sistemas/ScrollLink.tsx";
+import LazyImage from "./Sistemas/LazyImage.tsx";
 
 let setSVGColorGlobal: (color: string) => void;
 
@@ -25,7 +26,7 @@ function BarraDeOpciones3() {
     const lastCloseTimeRef = useRef<number>(0);
     const [showBar, setShowBar] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false);
-    const [showLanguagePanel, setShowLanguagePanel] = useState(false);
+    const [showPanelPaises, setShowPanelPaises] = useState(false);
     const [svgColor, setSvgColor] = useState(isDarkModeEnabled() ? "#FFFFFF" : "#393939");
 
     useEffect(() => {
@@ -107,6 +108,8 @@ function BarraDeOpciones3() {
 
     const textos1 = content.home.BarraDeOpciones[language];
     const textos2 = content.home.BarraDeOpciones2[language];
+    const Imagen = content.home.BarraDeOpciones2.Common;
+
 
     return (
         <>
@@ -161,7 +164,78 @@ function BarraDeOpciones3() {
                 </ScrollLink>
 
                 {/* Dropdown idioma con el nuevo SVG */}
-                <div className={styles.dropdown}>
+
+                <div
+                    className={styles.dropdown}
+                >
+                    <button className={`${styles.boton} ${styles.idioma}`}
+                            onClick={() =>
+                                language=='es'?
+                                    setLanguage('en'):
+                                    setLanguage('es')}
+                    >
+                        <div className={styles.ContenedorImagenesBanderaIdiomas}>
+                            <LazyImage
+                                //src={svgColor? Imagen.Flecha.claro : Imagen.Flecha.oscuro}
+                                src={language=='es'? Imagen.BanderaEspanol : Imagen.BanderaIngles}
+                                alt={""}
+                                className={styles.ImagenesBanderaIdiomas}
+                            />
+                        </div>
+
+                        {language=='es'? 'ES':'EN'}
+                    </button>
+                </div>
+
+
+                <div
+                    className={styles.dropdown}
+                    onMouseEnter={() => setShowPanelPaises(true)}
+                    onMouseLeave={() => setShowPanelPaises(false)}
+                >
+                    <button className={styles.boton}>
+                        <div className={styles.globeIcon}>
+                            <LazyImage
+                                // src={svgColor? Imagen.Bandera_Inicial.oscuro : Imagen.Bandera_Inicial.claro}
+                                src={svgColor? Imagen.Mundo.claro : Imagen.Mundo.oscuro}
+                                alt={""} className={styles.Imagen}/>
+                        </div>
+                        <div className={styles.dropdownSymbol}>
+                            <LazyImage
+                                src={svgColor? Imagen.Flecha.claro : Imagen.Flecha.oscuro}
+                                alt={""} className={styles.Imagen}/>
+                        </div>
+                    </button>
+                    {showPanelPaises && (
+                        <div className={styles.panelPaises}>
+                            {/*<button className={styles.boton} onClick={() => setLanguage('es')}>*/}
+                            {/*    {textos.espanol} 🇪🇸*/}
+                            {/*</button>*/}
+                            {/*<button className={styles.boton} onClick={() => setLanguage('en')}>*/}
+                            {/*    {textos.ingles} 🇺🇸*/}
+                            {/*</button>*/}
+
+                            { Imagen.Banderas.map((opcion, i) => (
+                                <a
+                                    key={i}
+                                    href={opcion.Link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.boton}
+                                    aria-label={opcion.Nombre}
+                                >
+                                    <LazyImage
+                                        src={opcion.imagen}
+                                        alt=""
+                                        aria-hidden="true"
+                                        className={styles.Imagen}
+                                    />
+                                </a>
+                            ))}
+                        </div>
+                    )}
+                </div>
+                {/*<div className={styles.dropdown}>
                     <button className={styles.boton} onClick={() => setShowLanguagePanel(!showLanguagePanel)}>
                         <svg
                             className={styles.globeIcon}
@@ -190,7 +264,7 @@ function BarraDeOpciones3() {
                             </button>
                         </div>
                     )}
-                </div>
+                </div>*/}
                 <div style={{ height: "15px" }}></div>
 
                 <Switch />
