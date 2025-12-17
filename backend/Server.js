@@ -37,16 +37,36 @@ const db = mysql.createConnection({
     }
     console.log('Conectado a MySQL ✅');
 });*/}
-{/*
+
 // Ruta para agregar un cliente a la base de datos
 app.post('/clientes', (req, res) => {
     const { nombre, apellido, correo, telefono, seguridad, servicios, tecnologia, ubicacion, mensaje } = req.body;
 
+    const sql = `INSERT INTO clientes (nombre, apellido, correo, telefono, seguridad, servicios, tecnologia, ubicacion, mensaje)
+                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+
+    const values = [nombre, apellido, correo, telefono, seguridad, servicios, tecnologia, ubicacion, mensaje];
+
+
+    {/*
+    db.query(sql, values, (err, result) => {
+        if (err) {
+            console.error('Error insertando datos:', err);
+            return res.status(500).json({ success: false, error: 'Error al guardar los datos' });
+        }
+
+        // Enviar correo después de insertar exitosamente
+        const cliente = { nombre, apellido, correo, telefono, seguridad, servicios, tecnologia, ubicacion, mensaje };
+        //enviarCorreo(cliente);
+
+        // Responder solo con success: true y el id insertado
+        res.status(201).json({ success: true, id: result.insertId });
+    });
+    */}
 
 
     res.status(201).json({ success: true, id: result.insertId });
 });
-*/}
 
 
 
