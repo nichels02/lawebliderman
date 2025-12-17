@@ -46,8 +46,6 @@ app.post('/clientes', (req, res) => {
                  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
 
     const values = [nombre, apellido, correo, telefono, seguridad, servicios, tecnologia, ubicacion, mensaje];
-
-
     {/*
     db.query(sql, values, (err, result) => {
         if (err) {
@@ -63,9 +61,11 @@ app.post('/clientes', (req, res) => {
         res.status(201).json({ success: true, id: result.insertId });
     });
     */}
+    res.status(200).json({
+        success: true,
+        message: 'Ruta funcionando, pero sin guardar en BD'
+    });
 
-
-    res.status(201).json({ success: true, id: result.insertId });
 });
 
 
