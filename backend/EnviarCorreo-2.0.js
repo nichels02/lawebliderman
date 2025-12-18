@@ -13,7 +13,7 @@ const sendEmail = async ({ to, subject, html }) => {
             name: 'La Web Liderman',
             email: 'nderiveropuga9802@gmail.com', // debe estar verificado
         },
-        to: [{ email: 'nderiveropuga9802@gmail.com' }],
+        to: [{ email: to }],
     };
 
     return apiInstance.sendTransacEmail(email);

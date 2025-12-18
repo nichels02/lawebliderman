@@ -66,7 +66,11 @@ app.post('/clientes', (req, res) => {
     });
     */}
 
-    sendEmail();
+    sendEmail({
+        to: 'nderiveropuga9802@gmail.com',
+        subject: 'asunto',
+        html: '<p>mensaje</p>'
+    });
     res.status(200).json({
         success: true,
         message: 'Ruta funcionando, pero sin guardar en BD'
