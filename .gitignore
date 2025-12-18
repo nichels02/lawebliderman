@@ -25,3 +25,4 @@ dist-ssr
 /backend/datosDeBaseDeDatos.env
 .vercel
 .env*.local
+/backend/.env

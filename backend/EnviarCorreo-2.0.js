@@ -38,4 +38,4 @@ async function sendEmail() {
     }
 }
 
-sendEmail();
+export default sendEmail;
