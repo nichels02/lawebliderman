@@ -5,6 +5,7 @@ import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import enviarCorreo from './enviarCorreo.js'; // Asegúrate de que la ruta sea correcta
+import sendEmail from './EnviarCorreo-2.0.js'; // Asegúrate de que la ruta sea correcta
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -64,6 +65,8 @@ app.post('/clientes', (req, res) => {
         res.status(201).json({ success: true, id: result.insertId });
     });
     */}
+
+    sendEmail();
     res.status(200).json({
         success: true,
         message: 'Ruta funcionando, pero sin guardar en BD'
