@@ -40,6 +40,7 @@ const db = mysql.createConnection({
     console.log('Conectado a MySQL ✅');
 });*/}
 
+
 // Ruta para agregar un cliente a la base de datos
 app.post('/clientes', (req, res) => {
     const { nombre, apellido, correo, telefono, seguridad, servicios, tecnologia, ubicacion, mensaje } = req.body;
