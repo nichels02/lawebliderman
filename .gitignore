@@ -26,3 +26,8 @@ dist-ssr
 .vercel
 .env*.local
 /backend/.env
+
+
+# Variables de entorno
+.env
+.env.*
