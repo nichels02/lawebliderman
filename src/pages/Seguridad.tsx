@@ -127,7 +127,9 @@ function Seguridad() {
                     },
                 ]}
             />
+            <div style={{ marginBottom: '-100px' }}/>{/**/}
             <FlechaGiro />
+            <div style={{ marginBottom: '-100px' }}/>{/**/}
             <TituloYSubtituloGenerico
                 // className={Style.CardBarajeable}
                 titulo={data.Seguridad.Titulos[language].Titulo2.Titulo}

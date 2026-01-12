@@ -84,7 +84,8 @@
     grid-column: 3;
     transform: translateX(50px);
     height: 40%;
-    padding-top: 8%;
+    display: flex;
+    align-items: center;
     padding-left: 3%;
     padding-right: 3%;
 }
@@ -101,7 +102,6 @@
     margin-bottom: 20px;
 }
 .Texto{
-    margin-bottom: 50px;
 }
 
 

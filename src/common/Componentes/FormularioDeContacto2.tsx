@@ -14,6 +14,7 @@ import { useContent } from './Sistemas/useContent.tsx'; // o el path correcto
 import { useLanguage } from './Sistemas/LanguageContext.tsx';
 import TituloYSubtituloGenerico from "./TituloYSubtituloGenerico.tsx";
 import LazyImage from './Sistemas/LazyImage.tsx';
+import {enviarAlBackend} from "./Sistemas/apiService.ts";
 
 interface ArrowProps {
     className?: string;
@@ -95,9 +96,21 @@ const FormularioDeContacto2 = () => {
         }
     }
 
+    type FormularioData = {
+        nombre: string;
+        apellido: string;
+        correo: string;
+        telefono: string;
+        intereses: {
+            seguridad: boolean;
+            servicios: boolean;
+            tecnologia: boolean;
+        },
+        mensaje: string;
+        pais: string;
+    };
 
-
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormularioData>({
         nombre: '',
         apellido: '',
         correo: '',
@@ -190,6 +203,7 @@ const FormularioDeContacto2 = () => {
             console.log('[Form] Resultado validación:', validation);
 
             if (!validation.isValid) {
+                {/*
                 const errores = validation.errores as unknown as Record<string, boolean | undefined>;
                 const mensajes = (content?.home.ValidadorFormulario[language] || {}) as Record<string, string | undefined>;
 
@@ -217,7 +231,31 @@ const FormularioDeContacto2 = () => {
                 }
 
                 return;
+           */
+                }
+                setError(validation.errores[0]); // solo muestra el primer error
+                return;
             }
+
+            const respuesta = await enviarAlBackend<FormularioData>('enviar-formulario', formData);
+            console.log('Respuesta del backend:', respuesta);
+            {/*
+            try {
+                const respuesta = await enviarAlBackend<FormularioReserva>('enviar-formulario', form);
+                console.log('Respuesta del backend:', respuesta);
+                setMensajeDeConfirmacion('Formulario enviado correctamente.');
+                setHuboError(false);
+
+            } catch (error: unknown) {
+                console.error('Error al enviar:', error);
+
+                const mensaje = error instanceof Error ? error.message : 'Error al enviar el formulario.';
+                setMensajeDeConfirmacion(mensaje);
+                setHuboError(true);
+            }
+            setHayMensaje(true);
+            */}
+
 
 
             console.log('[Form] Validación exitosa, datos enviados al backend');
@@ -243,6 +281,15 @@ const FormularioDeContacto2 = () => {
             setIsSubmitting(false);
         }
     };
+
+
+
+
+
+
+
+
+
 
     return (
         <div id="FormularioDeContacto" className={styles.contenedorPagina}>

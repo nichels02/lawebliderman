@@ -42,6 +42,7 @@
     top: clamp(30px, 5vh, 70px);
     display: flex;
     justify-content: space-around;
+    transform: translateY(-5%);
     align-items: center;
     width: clamp(300px, 80%, 1200px);
     height: 80%;
@@ -109,7 +110,7 @@
     color: var(--color-texto-blanco)!important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: clamp(5px, 1vh, 10px) clamp(10px, 2vw, 20px);
+    padding: clamp(5px, 0.8vh, 10px) clamp(10px, 2vw, 20px);
     font-size: clamp(16px, 1.3vw, 23px);
     cursor: pointer;
     transition: 0.3s;
@@ -117,7 +118,7 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     width: clamp(100px, 18vw, 250px) !important;
-    height: clamp(70px, 5vw, 110px);
+    height: clamp(70px, 5.5vw, 130px);
     margin: 0 clamp(5px, 1vw, 10px);
     flex-shrink: 0;
     text-align: center;
@@ -155,7 +156,8 @@
 
 /* 📌 Posición flechas */
 .carouselContainer :global(.slick-prev) {
-    left: clamp(-30px, -5vw, -40px);
+    left: clamp(-40px, -5vw, -30px);
+
 }
 
 .carouselContainer :global(.slick-next) {
@@ -198,6 +200,9 @@
 @media (max-width: 1500px) {
     .textContainer p  {
         font-size: clamp(16px, 1.8vw, 28px);
+    }
+    .content{
+        transform: translateY(0);
     }
 }
 

@@ -89,7 +89,7 @@
     display: flex;
     justify-content: center;
     gap: 20px; /* Espacio entre botones */
-    margin-top: 10px; /* Movemos los botones hacia arriba */
+    margin-top: 20px; /* Movemos los botones hacia arriba */
     padding: 10px;
     width: 100%;
     max-width: 1740px;

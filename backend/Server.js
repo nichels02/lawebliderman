@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import enviarCorreo from './enviarCorreo.js'; // Asegúrate de que la ruta sea correcta
+import enviarCorreoAnterior from './enviarCorreoAnterior.js'; // Asegúrate de que la ruta sea correcta
 import sendEmail from './EnviarCorreo-2.0.js'; // Asegúrate de que la ruta sea correcta
 
 const __filename = fileURLToPath(import.meta.url);
@@ -59,7 +59,7 @@ app.post('/clientes', (req, res) => {
 
         // Enviar correo después de insertar exitosamente
         const cliente = { nombre, apellido, correo, telefono, seguridad, servicios, tecnologia, ubicacion, mensaje };
-        //enviarCorreo(cliente);
+        //enviarCorreoAnterior(cliente);
 
         // Responder solo con success: true y el id insertado
         res.status(201).json({ success: true, id: result.insertId });

@@ -5,15 +5,16 @@ import LazyImage from './Sistemas/LazyImage.tsx';
 // Definimos una interfaz para las props
 interface TextoTituloEImagenProps {
     titulo: string;
+    TextoPrincipal: string;
     texto: string[];
     imagenes: string[]; // Lista de imágenes
     textosBotones: string[]; // Textos personalizados para los botones
     imagenALaIzquierda: boolean;
 }
 
-function TextoTituloEImagen({ titulo, texto, imagenes, textosBotones, imagenALaIzquierda }: TextoTituloEImagenProps) {
+function TextoTituloEImagen({ titulo, TextoPrincipal, texto, imagenes, textosBotones, imagenALaIzquierda }: TextoTituloEImagenProps) {
     // Estado para manejar la imagen actual
-    const [imagenActual, setImagenActual] = useState(0);
+    const [imagenActual, setImagenActual] = useState(-1);
 
     // Función para generar clases dinámicas
     const generarClase = (base: string, variante: number) => {
@@ -30,21 +31,21 @@ function TextoTituloEImagen({ titulo, texto, imagenes, textosBotones, imagenALaI
                 {imagenALaIzquierda ? (
                     <>
                         <div className={styles.imagenContainer}>
-                            <LazyImage src={imagenes[imagenActual]} alt="Imagen" className={styles.imagen} />
+                            <LazyImage src={imagenActual==-1?imagenes[0]:imagenes[imagenActual]} alt="Imagen" className={styles.imagen} />
                         </div>
                         <div className={generarClase('textoContainer', variante)}>
                             <h2 className={generarClase('titulo', variante)}>{titulo}</h2>
-                            <p className={generarClase('texto', variante)}>{texto[imagenActual]}</p>
+                            <p className={generarClase('texto', variante)}>{imagenActual==-1?TextoPrincipal:texto[imagenActual]}</p>
                         </div>
                     </>
                 ) : (
                     <>
                         <div className={generarClase('textoContainer', variante)}>
                             <h2 className={generarClase('titulo', variante)}>{titulo}</h2>
-                            <p className={generarClase('texto', variante)}>{texto[imagenActual]}</p>
+                            <p className={generarClase('texto', variante)}>{imagenActual==-1?TextoPrincipal:texto[imagenActual]}</p>
                         </div>
                         <div className={styles.imagenContainer}>
-                            <LazyImage src={imagenes[imagenActual]} alt="Imagen" className={styles.imagen} />
+                            <LazyImage src={imagenActual==-1?imagenes[0]:imagenes[imagenActual]} alt="Imagen" className={styles.imagen} />
                         </div>
                     </>
                 )}

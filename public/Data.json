@@ -42,27 +42,27 @@
       "en": {
         "titulo": "We are as valuable",
         "subtitulo": "as what we care for.",
-        "descripcion1": "Discover our expertise in people management, to make your life safer and more reliable.",
+        "descripcion1": "Discover our solid experience in people management, focused on making your life safer and more reliable.",
         "botonPrimario": "Solutions➔",
         "botonSecundario": "Join",
         "trabajadores": "Workers globally",
         "years": "Years of market leadership",
         "clientes": "Satisfied customers",
         "Numero_trabajadores": "+25,000",
-        "Numero_years": "35",
+        "Numero_years": "+35",
         "Numero_clientes": "2,100"
       },
       "es": {
         "titulo": "Valemos tanto",
         "subtitulo": "como lo que cuidamos",
-        "descripcion1": "Descubre nuestra expertise en la gestión de las personas, para hacer tu vida más segura y confiable.",
+        "descripcion1": "Descubre nuestra sólida experiencia en la gestión de personas, orientada a hacer tu vida más segura y confiable.",
         "botonPrimario": "Soluciones ➔",
         "botonSecundario": "Únete",
         "trabajadores": "Trabajadores a nivel global",
         "years": "Años de liderazgo en el mercado",
         "clientes": "Clientes satisfechos",
         "Numero_trabajadores": "+25,000",
-        "Numero_years": "35",
+        "Numero_years": "+35",
         "Numero_clientes": "2,100"
       },
       "contenido": {
@@ -167,12 +167,13 @@
           "title": "Seguridad",
           "subtitle": "Gestión de riesgos",
           "items": [
-            "Limpieza",
-            "Facility Managament",
-            "Courier",
-            "Jardinería",
-            "Transporte",
-            "Tercerizacion de puestos según perfil"
+            "Seguridad física",
+            "Resguardo de personal",
+            "Gestión de Centro de Control",
+            "Guardianía",
+            "Estudios de seguridad",
+            "Gestión de seguridad para eventos"
+
           ],
           "buttonText": "Explorar ➔"
         },
@@ -180,12 +181,12 @@
           "title": "Security",
           "subtitle": "Risk Management",
           "items": [
-            "Cleaning",
-            "Facility Management",
-            "Courier Services",
-            "Gardening",
-            "Transportation",
-            "Staff Outsourcing by Profile"
+            "Physical Security",
+            "Personnel Protection",
+            "Control Center Management",
+            "Guard Services",
+            "Security Assessments",
+            "Event Security Management"
           ],
           "buttonText": "Explore ➔"
         },
@@ -195,39 +196,36 @@
       "Servicios": {
         "es": {
           "title": "Servicios",
-          "subtitle": "Servicios de Parking",
+          "subtitle": "Parking",
           "items": [
-            "Administración de estacionamientos",
+            "Administración de Playas de estacionamientos",
             "Valet parking",
             "Gestión de eventos"
           ],
           "secondSubtitle": "Facilities",
           "secondItems": [
             "Limpieza",
-            "Mantenimiento general",
+            "Facility Managament",
             "Courier",
-            "Jardinería",
-            "Transporte",
-            "Tercerización de puestos según perfil"
+            "Jardinería"
+
           ],
           "buttonText": "Explorar ➔"
         },
         "en": {
           "title": "Services",
-          "subtitle": "Parking Services",
+          "subtitle": "Parking",
           "items": [
-            "Parking lot management",
-            "Valet parking",
-            "Event management"
+            "Parking Lot Management",
+            "Valet Parking",
+            "Event Management"
           ],
           "secondSubtitle": "Facilities",
           "secondItems": [
-            "Cleaning",
-            "General maintenance",
-            "Courier",
-            "Gardening",
-            "Transportation",
-            "Outsourcing of positions based on profile"
+            "Cleaning Services",
+            "Facility Management",
+            "Courier Services",
+            "Gardening"
           ],
           "buttonText": "Explore ➔"
         },
@@ -925,7 +923,7 @@
       "Common": {
         "ImagenDerecha":[
           {
-            "imagen": "/assets/Seguridad/SEGURIDAD.png",
+            "imagen": "/assets/Seguridad/foto-circulo.png",
             "alt": "physical-security"
           },
           {
@@ -943,6 +941,10 @@
           {
             "imagen": "/assets/Seguridad/seguridad-fisica.png",
             "alt": "physical-security"
+          },
+          {
+            "imagen": "/assets/Seguridad/foto-circulo_2.png",
+            "alt": "physical-security"
           }
         ],
 
@@ -959,19 +961,23 @@
           },
           {
             "Texto": "SEGURIDAD FÍSICA",
-            "TextoDescripcion": "Ofrecemos protección presencial con personal capacitado, cercano y siempre alerta. Cuidamos personas, bienes e instalaciones con una actitud proactiva y con soluciones a la medida de cada cliente."
+            "TextoDescripcion": "Ofrecemos soluciones de seguridad para la protección de personas, activos e instalaciones, integrando personal capacitado, tecnología y procedimientos que nos permiten brindar soluciones a la medida de cada cliente."
           },
           {
             "Texto": "RESGUARDO PERSONAL",
             "TextoDescripcion": "Protegemos tu integridad con profesionalismo, cercanía y absoluta confidencialidad. Nuestro personal está preparado para anticiparse a los riesgos y brindarte protección en todo momento."
           },
           {
-            "Texto": "SUPERVISIÓN DE SALA DE CONTROL",
+            "Texto": "GESTIÓN DE CENTRO DE CONTROL",
             "TextoDescripcion": "Monitoreamos en tiempo real lo que sucede en tus instalaciones, con operadores altamente capacitados y tecnología de punta. Detectamos incidentes, coordinamos respuestas inmediatas y garantizamos una supervisión constante para tu total tranquilidad."
           },
           {
             "Texto": "GUARDIANÍA",
             "TextoDescripcion": "Brindamos guardianía confiable y cercana, con personal capacitado que combina vigilancia, control de accesos y atención al cliente. Estamos presentes con actitud proactiva, cuidando cada espacio como si fuera nuestro."
+          },
+          {
+            "Texto": "GESTIÓN DE SEGURIDAD EN EVENTOS",
+            "TextoDescripcion": "Servicio que abarca un plan integral de planificación, implementación y ejecución de medidas para proteger a personas y bienes, controlando accesos, multitudes y emergencias antes, durante y después del evento, mediante personal capacitado y tecnología especializada."
           }
         ]
       },
@@ -985,14 +991,14 @@
           },
           {
             "Texto": "PHYSICAL SECURITY",
-            "TextoDescripcion": "We provide on-site protection with trained, attentive, and always-alert personnel. We safeguard people, property, and facilities with a proactive attitude and customized solutions for each client."
+            "TextoDescripcion": "We provide security solutions to protect people, assets, and facilities by integrating trained personnel, technology, and procedures, allowing us to deliver tailored solutions for each client."
           },
           {
             "Texto": "PERSONAL PROTECTION",
             "TextoDescripcion": "We protect your personal safety with professionalism, closeness, and complete confidentiality. Our staff is prepared to anticipate risks and provide protection at all times."
           },
           {
-            "Texto": "CONTROL ROOM SUPERVISION",
+            "Texto": "CONTROL CENTER MANAGEMENT",
             "TextoDescripcion": "We monitor your facilities in real time, with highly trained operators and cutting-edge technology. We detect incidents, coordinate immediate responses, and ensure constant supervision for your complete peace of mind."
           },
           {
@@ -1083,7 +1089,7 @@
         },
         "Contenedor2": {
           "Titulo": "2",
-          "Texto": "Visión integral de la seguridad."
+          "Texto": "Visión integral del servicio."
         },
         "Contenedor3": {
           "Titulo": "3",
@@ -1233,56 +1239,59 @@
       },
       "es": {
         "Titulo": "Servicios",
-        "Texto": "Expandimos nuestros servicios para brindar asistencia integral en el mantenimiento y gestión de las soluciones que más necesita tu empresa."
+        "Texto": "Brindamos servicios de Parking y Facilities, lo que nos permite ofrecer las soluciones que tu empresa necesita."
       },
       "en": {
         "Titulo": "Service",
-        "Texto": "We have expanded our services to provide comprehensive support in the maintenance and management of the solutions your company needs most."
+        "Texto": "We provide Parking and Facilities services, allowing us to deliver the solutions your company needs most."
       }
     },
     "TextoTituloEImagen": {
       "Contenido": {
-        "Imagen1": "/assets/Servicio/Foto-playa-de-estacionamiento_LIDERMAN.png",
+        "Imagen1": "/assets/Servicio/foto-nico-tolaca.png",
         "Imagen2": "/assets/Servicio/554e92e6ec866bbf03de6d44038fff9b.png"
       },
       "es": {
         "botones": {
           "Texto1": "Valet parking",
-          "Texto2": "Administración de estacionamientos"
+          "Texto2": "Administración de Playas de Estacionamientos"
         },
         "Titulo": "Parking",
-        "Texto1": "Rapidez y seguridad en el manejo de vehículos, brindando una experiencia premium a los usuarios y facilitando la logística de estacionamiento en eventos y establecimientos.",
-        "Texto2": "Rapidez y seguridad en el manejo de vehículos, brindando una experiencia premium a los usuarios y facilitando la logística de estacionamiento en eventos y establecimientos."
+        "Texto": "Nuestros servicios de Parking cuentan con personal capacitado en los protocolos del negocio y con tecnología para el control de acceso vehicular.",
+        "Texto1": "Personal capacitado en la conducción de vehículos, que cumple con protocolos estrictos para garantizar la seguridad del vehículo del cliente.",
+        "Texto2": "Administración, operación y comercialización de la playa de estacionamiento, mediante el diseño del esquema operativo, el control del flujo vehicular y la definición de políticas tarifarias."
       },
       "en": {
         "botones": {
           "Texto1": "Valet parking",
-          "Texto2": "Parking management"
+          "Texto2": "Parking Lot administration"
         },
         "Titulo": "Parking",
-        "Texto1": "Speed and safety in vehicle handling, delivering a premium experience for users and streamlining parking logistics at events and venues.",
-        "Texto2": "Speed and safety in vehicle handling, delivering a premium experience for users and streamlining parking logistics at events and venues."
+        "Texto": "Our parking services are supported by trained personnel in business protocols and technology for vehicle access control.",
+        "Texto1": "Personnel trained in vehicle handling, complying with strict protocols to ensure the safety of the client’s vehicle.",
+        "Texto2": "Management, operation, and commercialization of parking facilities, designing the operational scheme, vehicle flow control, and pricing policies."
       }
     },
     "TextoTituloEImagen2": {
       "Contenido": {
-        "Imagen1": "/assets/Servicio/Foto_web_liderman_2.png",
+        "Imagen1": "/assets/Servicio/foto-filtro.png",
         "Imagen2": "/assets/Servicio/facilities.png",
         "Imagen3": "/assets/Servicio/jardineria.png",
-        "Imagen4": "/assets/Servicio/Foto_web_liderman_1.png"
+        "Imagen4": "/assets/Servicio/_DSC1510.jpg"
       },
       "es": {
         "botones": {
           "Texto1": "Courier",
           "Texto2": "Limpieza",
           "Texto3": "Jardinería",
-          "Texto4": "Transporte"
+          "Texto4": "Facility Managament"
         },
         "Titulo": "Facilities",
-        "Texto1": "Nuestro equipo garantiza un mantenimiento impecable, enfocado en la higiene, la organización y el bienestar del espacio.",
-        "Texto2": "Nuestro equipo garantiza un mantenimiento impecable, enfocado en la higiene, la organización y el bienestar del espacio.",
-        "Texto3": "Nuestro equipo garantiza un mantenimiento impecable, enfocado en la higiene, la organización y el bienestar del espacio.",
-        "Texto4": "Nuestro equipo garantiza un mantenimiento impecable, enfocado en la higiene, la organización y el bienestar del espacio."
+        "Texto": "Nuestros servicios de Facilities están diseñados para brindar personal que cubra posiciones con funciones específicas.",
+        "Texto1": "Soluciones de envío de documentos y paquetería mediante personal motorizado debidamente capacitado.",
+        "Texto2": "Contamos con personal y equipos especializados para llevar a cabo la limpieza de todo tipo de ambientes, ya sean áreas comerciales, oficinas o áreas verdes.",
+        "Texto3": "Servicio de mantenimiento y cuidado de las áreas verdes.",
+        "Texto4": "Nuestro servicio abarca desde el mantenimiento y la planificación de espacios hasta la gestión estratégica de activos y la sostenibilidad, garantizando que el entorno construido funcione de manera óptima, segura y eficiente."
       },
       "en": {
         "botones": {
@@ -1292,6 +1301,7 @@
           "Texto4": "Transport"
         },
         "Titulo": "Facilities",
+        "Texto": "",
         "Texto1": "Our team ensures impeccable maintenance, focused on hygiene, organization, and space wellbeing.",
         "Texto2": "Our team ensures impeccable maintenance, focused on hygiene, organization, and space wellbeing.",
         "Texto3": "Our team ensures impeccable maintenance, focused on hygiene, organization, and space wellbeing.",
@@ -1302,11 +1312,11 @@
       "en": {
         "Sector1": {
           "Titulo": "People",
-          "Texto": "Our human team, both within and outside your facilities, is committed to reducing risks and fostering a strong culture of safety."
+          "Texto": "Our team is committed and trained to comply with protocols and procedures."
         },
         "Sector2": {
           "Titulo": "Sites",
-          "Texto": "We identify vulnerabilities, optimize security, and efficiently manage access control in all the spaces under our protection."
+          "Texto": "We identify the needs our clients must address within their facilities."
         },
         "Sector3": {
           "Titulo": "Technology at the Core",
@@ -1314,17 +1324,17 @@
         },
         "Sector4": {
           "Titulo": "Processes",
-          "Texto": "We strengthen the security of our clients' operational processes by eliminating risky practices and ensuring business continuity and protection."
+          "Texto": "Our processes are carried out in coordination with our clients, enabling continuous improvement."
         }
       },
       "es": {
         "Sector1": {
           "Titulo": "Personas",
-          "Texto": "Nuestro equipo humano, tanto dentro como fuera de tus instalaciones, está comprometido con reducir riesgos y fomentar una cultura sólida de seguridad."
+          "Texto": "Nuestro equipo humano está comprometido y capacitado para cumplir con los protocolos y procedimientos establecidos."
         },
         "Sector2": {
           "Titulo": "Sites",
-          "Texto": "Identificamos vulnerabilidades, optimizamos la seguridad y gestionamos de manera eficiente el control de accesos en todos los espacios bajo nuestra protección."
+          "Texto": "Identificamos las necesidades que nuestro cliente requiere cubrir dentro de sus instalaciones."
         },
         "Sector3": {
           "Titulo": "Tecnología en el core",
@@ -1332,11 +1342,11 @@
         },
         "Sector4": {
           "Titulo": "Procesos",
-          "Texto": "Fortalecemos la seguridad de los procesos operativos de nuestros clientes, eliminando prácticas riesgosas y asegurando la continuidad y protección del negocio."
+          "Texto": "Nuestros procesos se ejecutan en coordinación con nuestros clientes, lo que nos permite impulsar la mejora continua."
         }
       },
       "Contenido": {
-        "ImagenGrande": "/assets/Servicio/como-operamos-facilities.png",
+        "ImagenGrande": "/assets/Servicio/_DSC1510.jpg",
         "imagenSector1": "/assets/ImagenesGenerales/Recurso 9.svg",
         "imagenSector2": "/assets/ImagenesGenerales/Recurso 10.svg",
         "imagenSector3": "/assets/ImagenesGenerales/Recurso 11.svg",

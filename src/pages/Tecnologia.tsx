@@ -62,7 +62,7 @@ function Tecnologia() {
                             datos1?.Common.ImagenBoton5]} // Lista de imágenes
                 imagenALaIzquierda={datos1?.Common.imagenALaIzquierda}
             />
-
+            <div style={{ marginBottom: '100px' }} />
             <TextoTituloEImagen3
                 Botones ={[datos2[language].boton1,
                     datos2[language].boton2,
@@ -107,6 +107,7 @@ function Tecnologia() {
                 subtitulo={content.Tecnologia.Titulos[language].Titulo3.Subtitulo}
             />
             <CardGrid />
+            <div style={{ marginBottom: '100px' }} />
             <FlechaGiro />
         </>
     );

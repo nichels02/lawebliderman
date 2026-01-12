@@ -1111,6 +1111,7 @@ interface ContentData {
                     Texto2: string;
                 },
                 Titulo: string;
+                Texto:  string;
                 Texto1: string;
                 Texto2: string;
             },
@@ -1120,6 +1121,7 @@ interface ContentData {
                     Texto2: string;
                 },
                 Titulo: string;
+                Texto:  string;
                 Texto1: string;
                 Texto2: string;
             }
@@ -1139,6 +1141,7 @@ interface ContentData {
                     Texto4: string;
                 },
                 Titulo: string;
+                Texto:  string;
                 Texto1: string;
                 Texto2: string;
                 Texto3: string;
@@ -1152,6 +1155,7 @@ interface ContentData {
                     Texto4: string;
                 },
                 Titulo: string;
+                Texto:  string;
                 Texto1: string;
                 Texto2: string;
                 Texto3: string;

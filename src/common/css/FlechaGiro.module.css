@@ -99,6 +99,11 @@
 .contenedor6 { top: 70%; left: 18%; }
 
 /* ----------- RESPONSIVE ----------- */
+@media (min-width: 2000px) {
+    .contenedorImagen{
+        max-width: 800px;
+    }
+}
 
 /* Para tablets */
 @media (max-width: 1024px) {

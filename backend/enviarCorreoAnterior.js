@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.join(__dirname, '../datosDeBaseDeDatos.env') });
 
-export default function enviarCorreo(cliente) {
+export default function enviarCorreoAnterior(cliente) {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -16,6 +16,8 @@ export default function enviarCorreo(cliente) {
             pass: process.env.EMAIL_PASS
         }
     });
+
+
 
     let PaisSeleccionado;
 
@@ -63,7 +65,7 @@ Seguridad: ${cliente.seguridad ? 'Sí' : 'No'}
             };
 
             transporter.sendMail(mailOptions, (error, info) => {
-                if (error) {
+if (error) {
                     console.error(`Error al enviar correo de ${servicio.tipo}:`, error);
                 } else {
                     console.log(`Correo de ${servicio.tipo} enviado:`, info.response);

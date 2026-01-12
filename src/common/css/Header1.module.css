@@ -71,7 +71,7 @@ h1, p {
 
 .buttonContainer {
     position: absolute; /* Posiciona el contenedor de botones de manera absoluta */
-    top: 75%; /* Ajusta la posición vertical según sea necesario */
+    top: 76%; /* Ajusta la posición vertical según sea necesario */
     left: 10%; /* Misma posición horizontal que el textContainer */
     width: 40%; /* Mismo ancho que el textContainer */
     height: 6%; /* Altura relativa al contenedor */

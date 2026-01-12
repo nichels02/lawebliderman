@@ -4,14 +4,14 @@ import { useLanguage } from "../common/Componentes/Sistemas/LanguageContext.tsx"
 import HeaderServicio from "../common/Componentes/HeaderServicio";
 import TextoTituloEImagen from "../common/Componentes/TextoTituloEImagen";
 import GridGenerico from "../common/Componentes/GridGenerico";
-import GridBarajeable from "../common/Componentes/gridBarajeable";
+//import GridBarajeable from "../common/Componentes/gridBarajeable";
 import TituloYSubtituloGenerico from "../common/Componentes/TituloYSubtituloGenerico.tsx";
 import FlechaGiro from "../common/Componentes/FlechaGiro.tsx";
 // import Style from "../common/css/pages/Servicio.module.css";
 
 function Servicio() {
     const content = useContent();
-    const { language } = useLanguage();
+    const {language} = useLanguage();
 
     // 🔒 Si no hay datos aún, no renderiza (o podrías poner un loading spinner)
     if (!content) return null;
@@ -21,10 +21,12 @@ function Servicio() {
     const datos3 = content.Servicio.GridGenerico;
     const datos4 = content.Servicio.Titulos;
 
+    {/*
     // 🧩 Preparar items para GridBarajeable
     const datosBarajeable = content.Servicio.GridBarajeable;
     const rawItems = datosBarajeable[language];
     const contenido = datosBarajeable.contenido;
+
 
     const barajeableItems = Object.keys(rawItems).map((key, index) => {
         const item = rawItems[key as keyof typeof rawItems];
@@ -38,7 +40,7 @@ function Servicio() {
             description: Array.isArray(item.description) ? item.description : [item.description],
         };
     });
-
+*/}
     return (
         <>
             <HeaderServicio
@@ -82,11 +84,12 @@ function Servicio() {
                 ]}
             />
 
-
             <TextoTituloEImagen
                 titulo={datos1[language].Titulo}
-                texto={[datos1[language].Texto1,
-                        datos1[language].Texto2,
+                TextoPrincipal={datos1[language].Texto}
+                texto={[
+                    datos1[language].Texto1,
+                    datos1[language].Texto2,
                 ]}
                 imagenes={[
                     datos1.Contenido.Imagen1,
@@ -98,9 +101,9 @@ function Servicio() {
                 ]}
                 imagenALaIzquierda={true}
             />
-
             <TextoTituloEImagen
                 titulo={datos2[language].Titulo}
+                TextoPrincipal={datos2[language].Texto}
                 texto={[
                     datos2[language].Texto1,
                     datos2[language].Texto2,
@@ -122,15 +125,16 @@ function Servicio() {
                 imagenALaIzquierda={false}
             />
 
-
             <FlechaGiro />
+
+            {/*
             <TituloYSubtituloGenerico
                 // className={Style.gridBarajeable}
                 titulo={datos4[language].Titulo2.Titulo}
                 subtitulo={datos4[language].Titulo2.Subtitulo}
             />
 
-            <GridBarajeable items={barajeableItems} />
+            <GridBarajeable items={barajeableItems} />*/}
         </>
     );
 }

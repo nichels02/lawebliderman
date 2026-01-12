@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     position: relative; /* Necesario para el posicionamiento de los botones */
+    margin-bottom: 100px;
 }
 
 .contenido {
@@ -89,7 +90,7 @@
     display: flex;
     justify-content: center;
     gap: 80px; /* Espacio entre botones */
-    margin-top: 10px; /* Movemos los botones hacia arriba */
+    margin-top: 20px; /* Movemos los botones hacia arriba */
     padding: 10px;
     width: 100%;
     max-width: 1800px;
