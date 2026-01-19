@@ -1,12 +1,19 @@
+import path from 'path';
+import dotenv from 'dotenv';
+dotenv.config({ path: path.resolve('./backend/.env') });
+
+
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
+
 import rateLimit from 'express-rate-limit';
-import { enviarCorreoReserva } from './EnviarCorreo.js';
-import { EnviarLibroDeReclamaciones } from './BackendPrueba/EnviarLibroDeReclamaciones.js';
 
 
-dotenv.config();
+import { enviarCorreo } from './EnviarCorreo.js';
+import { agregarFormularioBD } from './agregarBD.js';
+
+
+
 
 const app = express();
 
@@ -30,7 +37,7 @@ const accionLimiter = rateLimit({
 
 // 🔹 Middlewares
 app.use(cors({
-    origin: process.env.VITE_Frontend_URL,  // Cambia esto por la URL real de Vercel
+    //origin: process.env.VITE_Frontend_URL,  // Cambia esto por la URL real de Vercel
     credentials: true
 }));
 app.use(express.json());
@@ -49,25 +56,27 @@ app.post('/accion-general', accionLimiter, async (req, res) => {
 
         case 'enviar-formulario':
             try {
-                await enviarCorreoReserva(datos);
-                res.json({ mensaje: 'Formulario recibido y correo enviado.' });
+                await enviarCorreo(datos);
+
+                await agregarFormularioBD(datos);
+
+                res.json({ mensaje: 'Formulario recibido' });
             } catch (error) {
                 console.error('Error al enviar el correo:', error);
-                res.status(500).json({ error: 'Error al enviar el correo.' });
+                res.status(500).json({ error: 'Error al enviar formulario' });
             }
             break;
 
 
 
 
-
-        case 'enviar-LibroDeReclamaciones':
+        case 'enviar-cotizacion':
             try {
-                await EnviarLibroDeReclamaciones(datos);
-                res.json({ mensaje: 'Formulario recibido y correo enviado.' });
+                await EnviarCotizacion(datos);
+                res.json({ mensaje: 'Formulario recibido' });
             } catch (error) {
                 console.error('Error al enviar el correo:', error);
-                res.status(500).json({ error: 'Error al enviar el correo.' });
+                res.status(500).json({ error: 'Error al enviar el formulario.' });
             }
             break;
 
@@ -83,7 +92,7 @@ app.post('/accion-general', accionLimiter, async (req, res) => {
             break;
 
         default:
-            res.status(400).json({ error: 'Acción no reconocida.' });
+            res.status(400).json({ error: 'Acción no reconocida.' + accion});
     }
 });
 

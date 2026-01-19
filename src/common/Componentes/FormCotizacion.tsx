@@ -21,6 +21,7 @@ import { useLanguage } from './Sistemas/LanguageContext.tsx';
 // import TituloYSubtituloGenerico from "./TituloYSubtituloGenerico.tsx";
 // import LazyImage from './Sistemas/LazyImage.tsx';
 import { FormValidatorSingleton } from './Sistemas/FormValidatorCotizacion.ts';
+import {enviarAlBackend} from "./Sistemas/apiService.ts";
 
 
 
@@ -36,6 +37,38 @@ const FormCotizacion = () => {
     const content = useContent();
     const { language } = useLanguage();
 
+    type FormularioData = {
+        nombre: string;
+        apellido: string;
+        correo: string;
+        RazonSocialEmpresa: string;
+        RUCEmpresa: string;
+        Region: string;
+        Distrito: string;
+        Direccion: string;
+
+        intereses: {
+            SeguridadElectronica: boolean;
+            SeguridadFisica: boolean;
+            FacilityManagement: boolean;
+            Outsourcing: boolean;
+        };
+
+        Requerimiento: string;
+        Codigo: string;
+        telefono: string;
+
+        PorDondeContactar: {
+            Telefonicamente: boolean;
+            Whatsapp: boolean;
+            Email: boolean;
+        };
+
+        Permisos: {
+            condicionesDePrivacidad: boolean;
+            AceptoQueMeContacte: boolean;
+        };
+    };
 
 
     const [formData, setFormData] = useState({
@@ -64,6 +97,7 @@ const FormCotizacion = () => {
             Whatsapp: false,
             Email: false
         },
+
         Permisos:{
             condicionesDePrivacidad: false,
             AceptoQueMeContacte: false
@@ -136,6 +170,7 @@ const FormCotizacion = () => {
 
             // --- Si hay errores ---
             if (!validation.isValid) {
+                {/*
                 const errores = validation.errores as unknown as Record<string, boolean>;
                 const mensajes = content?.Cotizacion.ValidadorFormulario[language] as Record<string, string>;
 
@@ -172,9 +207,13 @@ const FormCotizacion = () => {
                         return;
                     }
                 }
-
+                */}
+                setError(validation.errores[0]); // solo muestra el primer error
                 return;
             }
+
+            const respuesta = await enviarAlBackend<FormularioData>('enviar-cotizacion', formData);
+            console.log('Respuesta del backend:', respuesta);
 
             // --- Si está válido ---
             console.log("[Form] Validación OK");

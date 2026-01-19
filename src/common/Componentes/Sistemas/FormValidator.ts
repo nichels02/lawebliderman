@@ -1,7 +1,6 @@
 import { FormularioContacto } from './FormularioContacto.interface';
 import { ErroresFormulario } from './ErroresFormulario.interface.ts';
 //import ConectarBackend from './ConectarBackend.ts';
-import {useLanguage} from "./LanguageContext.tsx";
 
 export class FormValidatorSingleton {
     private static instance: FormValidatorSingleton;
@@ -35,7 +34,7 @@ export class FormValidatorSingleton {
     public async validateForm(data: FormularioContacto) {
         const errores = this.getErroresDefault();
 
-        const {language} = useLanguage();
+        const language = "es";
 
         if (!data.nombre || data.nombre.trim() === '') {
             errores.NombreVacio = true;
