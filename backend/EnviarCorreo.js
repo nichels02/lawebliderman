@@ -1,20 +1,20 @@
-import nodemailer from 'nodemailer';
+import Mailjet from 'node-mailjet';
 import dotenv from 'dotenv';
 import validarDatos from './validarDatos.js';
 
 dotenv.config();
 
-const transporter = nodemailer.createTransport({
-    host: process.env.HostCorreo,
-    port: 465,
-    secure: true, // porque es 465
-    auth: {
-        user: process.env.CORREO_REMITENTE,
-        pass: process.env.CLAVE_APP
-    }
-});
+const mailjet = Mailjet.apiConnect(
+    process.env.MAILJET_API_KEY,
+    process.env.MAILJET_SECRET_KEY
+);
+
+
+
 
 export async function enviarCorreo(datos) {
+
+    const subject = `Nuevo contacto #${Date.now()}`;
 
     const errores = validarDatos(datos);
     if (errores.length > 0) {
@@ -22,23 +22,41 @@ export async function enviarCorreo(datos) {
     }
 
     const mensaje = `
-        nombre: ${datos.nombre}
-        apellido: ${datos.apellido}
-        correo: ${datos.correo}
-        telefono: ${datos.telefono}
-        intereses: {
-            seguridad: ${datos.seguridad}
-            servicios: ${datos.servicios}
-            tecnologia: ${datos.tecnologia}
-        },
-        mensaje: ${datos.mensaje}
-        pais: ${datos.pais}
+Nombre: ${datos.nombre}
+Apellido: ${datos.apellido}
+Correo: ${datos.correo}
+Teléfono: ${datos.telefono}
+
+Intereses:
+- Seguridad: ${datos.seguridad}
+- Servicios: ${datos.servicios}
+- Tecnología: ${datos.tecnologia}
+
+Mensaje:
+${datos.mensaje}
+
+País: ${datos.pais}
+Fecha: ${new Date().toLocaleString()}
     `;
 
-    await transporter.sendMail({
-        from: process.env.CORREO_REMITENTE,
-        to: process.env.CORREO_DESTINO,
-        subject: 'Posible cliente interesado',
-        text: mensaje
-    });
+    await mailjet
+        .post('send', { version: 'v3.1' })
+        .request({
+            Messages: [
+                {
+                    From: {
+                        Email: process.env.CORREO_REMITENTE,
+                        Name: 'Formulario Web'
+                    },
+                    To: [
+                        {
+                            Email: process.env.CORREO_DESTINO,
+                            Name: 'Admin'
+                        }
+                    ],
+                    Subject: subject,
+                    TextPart: mensaje
+                }
+            ]
+        });
 }
