@@ -1,5 +1,6 @@
 import path from 'path';
 import dotenv from 'dotenv';
+//dotenv.config({ path: path.resolve('./backend/.env') });
 dotenv.config({ path: path.resolve('./backend/.env') });
 
 

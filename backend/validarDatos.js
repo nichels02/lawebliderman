@@ -16,11 +16,16 @@ function validarDatos(datos) {
     if (!datos.pais || datos.pais.trim() === '') {
         errores.push('El país es obligatorio');
     }
-    // Puedes agregar validaciones para los intereses
-    if (typeof datos.seguridad !== 'boolean' ||
-        typeof datos.servicios !== 'boolean' ||
-        typeof datos.tecnologia !== 'boolean') {
-        errores.push('Los intereses deben ser booleanos');
+    function validarIntereses(valor) {
+        // Acepta true/false o "true"/"false"
+        return typeof valor === 'boolean' || valor === 'true' || valor === 'false';
+    }
+
+// Validación
+    if (!validarIntereses(datos.intereses.seguridad) ||
+        !validarIntereses(datos.intereses.servicios) ||
+        !validarIntereses(datos.intereses.tecnologia)) {
+        errores.push('Los intereses deben ser booleanos o los strings "true"/"false"');
     }
 
     return errores;
