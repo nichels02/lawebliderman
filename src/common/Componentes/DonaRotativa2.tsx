@@ -70,9 +70,23 @@ function DonaRotativa2() {
         const data = {
             datasets: [{
                 data: [25, 25, 25, 25],
-                backgroundColor: ['#f4060d', '#36A2EB', '#ff4040', '#006a0b'],
+                backgroundColor: [
+                    '#006a0b', //ama crece
+                    '#ef7400', //ama vida
+                    '#36A2EB', //ama pago
+                    '#f4060d'  //ama trato
+                ],
+                //AMA PAGO ES CELESTE
+                // AMA TRATO ROJO
+                // AMA CRECE VERDE
+                // AMA VIDA NARANJA
                 borderWidth: 1,
-                borderColor: ['#f4060d', '#36A2EB', '#ff4040', '#006a0b'],
+                borderColor: [
+                    '#006a0b', //ama crece
+                    '#ef7400', //ama vida  '#ff4040'
+                    '#36A2EB', //ama pago
+                    '#f4060d'  //ama trato
+                ],
                 spacing: 0
             }]
         };

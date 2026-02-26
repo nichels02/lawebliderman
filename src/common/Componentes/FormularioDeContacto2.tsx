@@ -195,6 +195,9 @@ const FormularioDeContacto2 = () => {
         setError(null);          // borrar errores previos
         setSuccess(false);       // aún no hay éxito
 
+        const currentContent = content;
+        const currentLanguage = language;
+
         try {
             console.log('[Form] Iniciando validación...');
             const validator = FormValidatorSingleton.getInstance();
@@ -271,11 +274,11 @@ const FormularioDeContacto2 = () => {
                 pais: 'Perú'
             });
 
-            alert(content?.home.Formulario[language].MensajeAprobatorio);
+            alert(currentContent?.home.Formulario[currentLanguage].MensajeAprobatorio);
 
         } catch (err) {
             console.error('[Form] Error en el proceso:', err);
-            const MensajeDesaprobatorio = content?.home.Formulario[language].MensajeDesaprobatorio;
+            const MensajeDesaprobatorio = currentContent?.home.Formulario[currentLanguage].MensajeDesaprobatorio;
             setError(MensajeDesaprobatorio !== undefined ? MensajeDesaprobatorio : null);
         } finally {
             setIsSubmitting(false);
@@ -331,17 +334,7 @@ const FormularioDeContacto2 = () => {
                     <div className={styles.formularioContainer}>
                         <div className={styles.encabezado}>
                             <h2>{content?.home.Formulario[language].Titulo}</h2>
-                            <select
-                                className={styles.dropdown}
-                                name="pais"
-                                value={formData.pais}
-                                onChange={handleInputChange}
-                            >
-                                <option value="Perú">{content?.home.Formulario[language].BotonesYDesplegable.Peru}</option>
-                                <option value="Estados Unidos">{content?.home.Formulario[language].BotonesYDesplegable.Usa}</option>
-                                <option value="Chile">{content?.home.Formulario[language].BotonesYDesplegable.Chile}</option>
-                                <option value="Ecuador">{content?.home.Formulario[language].BotonesYDesplegable.Ecuador}</option>
-                            </select>
+
                         </div>
 
                         <form className={styles.formulario} onSubmit={handleSubmit}>
@@ -463,16 +456,21 @@ const FormularioDeContacto2 = () => {
                     </div>
                     <div className={styles.contenedorExtraInferior}>
                         <LazyImage src={content?.home.Formulario.common.ImagenContenedorInferior} alt="Logo de la empresa" />
-                        <div>
-                            <p className={styles.textoEncabezado}>{ContenedorInferior.oficina.titulo}</p>
+                        <div className={styles.GridInfoTelefono}>
+                            <p
+                                //className={styles.textoEncabezado}
+                                className={styles.textoPrincipal}
+                            >{ContenedorInferior.oficina.titulo}</p>
                             <p className={styles.textoPrincipal}>{ContenedorInferior.oficina.principal}</p>
                             <p className={styles.textoSecundario}>{ContenedorInferior.oficina.secundario}</p>
                         </div>
+                        {/*
                         <div>
                             <p className={styles.textoEncabezado}>{ContenedorInferior.alarmas.titulo}</p>
                             <p className={styles.textoPrincipal}>{ContenedorInferior.alarmas.principal}</p>
                             <p className={styles.textoSecundario}>{ContenedorInferior.alarmas.secundario}</p>
                         </div>
+                        */}
                     </div>
                 </div>
 

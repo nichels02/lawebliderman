@@ -940,6 +940,7 @@ interface ContentData {
         FlechaGiro: {
             en: {
                 TituloCentral: string;
+                TituloCentral2: string;
                 Contenedor1: {
                     Titulo:string;
                     Texto: string;
@@ -967,6 +968,7 @@ interface ContentData {
             },
             es: {
                 TituloCentral: string;
+                TituloCentral2: string;
                 Contenedor1: {
                     Titulo:string;
                     Texto: string;
@@ -1314,6 +1316,7 @@ interface ContentData {
                     boton2: string;
                     boton3: string;
                     boton4: string;
+                    boton5: string;
                 },
                 imagenDerecha1: string;
             },
@@ -1336,6 +1339,10 @@ interface ContentData {
                     Nombre: string;
                     Texto: string;
                 },
+                boton5: {
+                    Nombre: string;
+                    Texto: string;
+                }
             },
             en: {
                 Titulo: string;
@@ -1356,6 +1363,10 @@ interface ContentData {
                     Nombre: string;
                     Texto: string;
                 },
+                boton5: {
+                    Nombre: string;
+                    Texto: string;
+                }
             }
         }
         TextImageSelector: {

@@ -11,6 +11,7 @@ import rateLimit from 'express-rate-limit';
 
 
 import { enviarCorreo } from './EnviarCorreo.js';
+import { EnviarCotizacion } from './EnviarCotizacion.js';
 import { agregarFormularioBD } from './agregarBD.js';
 
 
@@ -38,64 +39,79 @@ const accionLimiter = rateLimit({
 
 // 🔹 Middlewares
 app.use(cors({
-    //origin: process.env.VITE_Frontend_URL,  // Cambia esto por la URL real de Vercel
+    origin: [
+        'https://dev.liderman.com.pe',
+        'https://www.dev.liderman.com.pe'
+    ],
+    methods: ['POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type'],
     credentials: true
 }));
+
+app.options('*', cors());
 app.use(express.json());
 
-app.post('/accion-general', accionLimiter, async (req, res) => {
-    const { accion, datos } = req.body;
 
 
-    console.log('Accion recibida:', accion);
-    //console.log('Datos recibidos:', datos);
-
-    switch (accion) {
-
-
-
-
-        case 'enviar-formulario':
-            try {
-                await enviarCorreo(datos);
-
-                await agregarFormularioBD(datos);
-
-                res.json({ mensaje: 'Formulario recibido' });
-            } catch (error) {
-                console.error('Error al enviar el correo:', error);
-                res.status(500).json({ error: 'Error al enviar formulario' });
-            }
-            break;
-
-
-
-
-        case 'enviar-cotizacion':
-            try {
-                await EnviarCotizacion(datos);
-                res.json({ mensaje: 'Formulario recibido' });
-            } catch (error) {
-                console.error('Error al enviar el correo:', error);
-                res.status(500).json({ error: 'Error al enviar el formulario.' });
-            }
-            break;
-
-
-
-
-
-
-
-        case 'otra-accion':
-            // Otra lógica...
-            res.json({ mensaje: 'Otra acción ejecutada.' });
-            break;
-
-        default:
-            res.status(400).json({ error: 'Acción no reconocida.' + accion});
-    }
+app.get('/', (req, res) => {
+    res.status(200).send('OK');
 });
+
+
+//app.post('/accion-general', accionLimiter, async (req, res) => {
+app.post('/accion-general', async (req, res) => {
+        const { accion, datos } = req.body;
+
+
+        console.log('Accion recibida:', accion);
+        //console.log('Datos recibidos:', datos);
+
+        switch (accion) {
+
+
+
+
+            case 'enviar-formulario':
+                try {
+                    await enviarCorreo(datos);
+
+                    await agregarFormularioBD(datos);
+
+                    res.json({ mensaje: 'Formulario recibido' });
+                } catch (error) {
+                    console.error('Error al enviar el correo:', error);
+                    res.status(500).json({ error: 'Error al enviar formulario' });
+                }
+                break;
+
+
+
+
+            case 'enviar-cotizacion':
+                try {
+                    await EnviarCotizacion(datos);
+                    res.json({ mensaje: 'Formulario recibido' });
+                } catch (error) {
+                    console.error('Error al enviar el correo:', error);
+                    res.status(500).json({ error: 'Error al enviar el formulario.' });
+                }
+                break;
+
+
+
+
+
+
+
+            case 'otra-accion':
+                // Otra lógica...
+                res.json({ mensaje: 'Otra acción ejecutada.' });
+                break;
+
+            default:
+                res.status(400).json({ error: 'Acción no reconocida.' + accion});
+        }
+    })
 
 app.listen(PORT, () => {
     console.log(`Servidor backend escuchando en puerto ${PORT}`);

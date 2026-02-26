@@ -16,6 +16,7 @@ type LanguageContent = {
     boton2: Boton;
     boton3: Boton;
     boton4: Boton;
+    boton5: Boton;
 };
 
 function HeaderCambioDeImagen() {
@@ -29,7 +30,7 @@ function HeaderCambioDeImagen() {
     const [textoActual, setTextoActual] = useState("");
     const [tituloActual, setTituloActual] = useState("");
     const [imagenActual, setImagenActual] = useState("");
-    const [botonActivo, setBotonActivo] = useState<1 | 2 | 3 | 4>(1); // 👈 Estado para el botón activo
+    const [botonActivo, setBotonActivo] = useState<1 | 2 | 3 | 4 | 5>(1); // 👈 Estado para el botón activo
 
     useEffect(() => {
         if (actualContent?.Texto) {
@@ -67,7 +68,7 @@ function HeaderCambioDeImagen() {
             </div>
 
             <div className={styles.contenedorBotones}>
-                {[1, 2, 3, 4].map((index) => {
+                {[1, 2, 3, 4, 5].map((index) => {
                     const key = `boton${index}` as keyof LanguageContent;
                     const boton = actualContent?.[key];
 
@@ -83,7 +84,7 @@ function HeaderCambioDeImagen() {
                             className={`${styles.boton} ${botonActivo === index ? styles.active : ""}`} // 👈 Clase condicional
                             onClick={() => {
                                 if (isValidBoton) {
-                                    const botonId = `boton${index}` as 'boton1' | 'boton2' | 'boton3' | 'boton4';
+                                    const botonId = `boton${index}` as 'boton1' | 'boton2' | 'boton3' | 'boton4' | 'boton5';
                                     const nuevaImagen = content?.Common?.ImagenDerecha?.[botonId] ?? "";
                                     setTituloActual((boton as Boton).Nombre);
                                     setTextoActual((boton as Boton).Texto);

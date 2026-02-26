@@ -28,9 +28,9 @@ Correo: ${datos.correo}
 Teléfono: ${datos.telefono}
 
 Intereses:
-- Seguridad: ${datos.seguridad}
-- Servicios: ${datos.servicios}
-- Tecnología: ${datos.tecnologia}
+- Seguridad: ${datos.intereses.seguridad}
+- Servicios: ${datos.intereses.servicios}
+- Tecnología: ${datos.intereses.tecnologia}
 
 Mensaje:
 ${datos.mensaje}

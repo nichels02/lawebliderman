@@ -10,6 +10,7 @@ const pool = mysql.createPool({
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
+    port: process.env.DB_PORT || 3306,
     waitForConnections: true,
     connectionLimit: 10
 });
@@ -42,9 +43,9 @@ export async function agregarFormularioBD(datos) {
         datos.apellido,
         datos.correo,
         datos.telefono,
-        datos.seguridad ?? false,
-        datos.servicios ?? false,
-        datos.tecnologia ?? false,
+        datos.intereses.seguridad ?? false,
+        datos.intereses.servicios ?? false,
+        datos.intereses.tecnologia ?? false,
         datos.mensaje,
         datos.pais
     ];

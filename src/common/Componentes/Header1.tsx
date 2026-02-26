@@ -18,19 +18,22 @@ function Header1() {
         <header id="Home1" className={styles.header}>
             <div className={styles.headerImageContainer}>
                 <LazyImage src={imagenes.imagen_De_Fondo} alt="Header Image" className={styles.headerImage} />
-                <div className={styles.textContainer}>
-                    <h1 className={styles.text1}>{textos.titulo}</h1>
-                    <p className={styles.text2}>{textos.subtitulo}</p>
-                    <p className={styles.text3}>{textos.descripcion1}</p>
+                <div className={styles.ContenedorInfo}>
+                    <div className={styles.textContainer}>
+                        <h1 className={styles.text1}>{textos.titulo}</h1>
+                        <p className={styles.text2}>{textos.subtitulo}</p>
+                        <p className={styles.text3}>{textos.descripcion1}</p>
+                    </div>
+                    <div className={styles.buttonContainer}>
+                        <ScrollLink to="/#Home1" scrollMode="bottom" className={styles.buttonPrimary} >
+                            {textos.botonPrimario}
+                        </ScrollLink>
+                        <ScrollLink to="/Lidermania#CarruselDeTrabajos" scrollMode="bottom" className={styles.buttonSecondary} >
+                            {textos.botonSecundario}
+                        </ScrollLink>
+                    </div>
                 </div>
-                <div className={styles.buttonContainer}>
-                    <ScrollLink to="/#Home1" scrollMode="bottom" className={styles.buttonPrimary} >
-                        {textos.botonPrimario}
-                    </ScrollLink>
-                    <ScrollLink to="/Lidermania#CarruselDeTrabajos" scrollMode="bottom" className={styles.buttonSecondary} >
-                        {textos.botonSecundario}
-                    </ScrollLink>
-                </div>
+
                 <LazyImage src={imagenes.logo} alt="Logo" className="logoHeader" />
             </div>
             <div className={styles.centeredBottomContainer}>

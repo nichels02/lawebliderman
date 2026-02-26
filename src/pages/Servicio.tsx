@@ -125,7 +125,7 @@ function Servicio() {
                 imagenALaIzquierda={false}
             />
 
-            <FlechaGiro />
+            <FlechaGiro TituloDiferente={true}/>
 
             {/*
             <TituloYSubtituloGenerico

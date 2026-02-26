@@ -77,7 +77,7 @@
         "soluciones": "Soluciones",
         "seguridad": "Seguridad",
         "servicio": "Servicios",
-        "tecnologia": "Tecnología",
+        "tecnologia": "S. Tecnológicas",
         "lidermania": "Lidermania",
         "unete": "Únete",
         "Legal": "Cumplimiento"
@@ -170,7 +170,6 @@
             "Seguridad física",
             "Resguardo de personal",
             "Gestión de Centro de Control",
-            "Guardianía",
             "Estudios de seguridad",
             "Gestión de seguridad para eventos"
 
@@ -184,7 +183,6 @@
             "Physical Security",
             "Personnel Protection",
             "Control Center Management",
-            "Guard Services",
             "Security Assessments",
             "Event Security Management"
           ],
@@ -205,7 +203,7 @@
           "secondSubtitle": "Facilities",
           "secondItems": [
             "Limpieza",
-            "Facility Managament",
+            "Facility Management",
             "Courier",
             "Jardinería"
 
@@ -234,24 +232,22 @@
       },
       "Tecnologia": {
         "es": {
-          "title": "Tecnología",
-          "subtitle": "Tecnología",
+          "title": "Soluciones Tecnológicas",
+          "subtitle": "Soluciones Tecnológicas",
           "items": [
-            "Sistemas de seguridad electrónica",
-            "Seguridad con drones",
-            "Biometría",
-            "Protección contra incendios",
-            "Control de acceso y CCTV-IA",
-            "BMS"
+            "Alarmas",
+            "Seguridad electrónica",
+            "GPS",
+            "Ciberseguridad"
           ],
-          "secondSubtitle": "Ciberseguridad",
-          "thirdSubtitle": "Alarmas",
-          "fourthSubtitle": "GPS",
+          "secondSubtitle": "",
+          "thirdSubtitle": "",
+          "fourthSubtitle": "",
           "buttonText": "Explorar ➔"
         },
         "en": {
           "title": "Technology",
-          "subtitle": "Technology",
+          "subtitle": "Technology Solutions",
           "items": [
             "Electronic security systems",
             "Drone security",
@@ -265,7 +261,7 @@
           "fourthSubtitle": "GPS",
           "buttonText": "Explore ➔"
         },
-        "imageUrl": "/assets/Inicio/TECNOLOGIA.jpg",
+        "imageUrl": "/assets/Inicio/TECNOLOGIA2.png",
         "link": "/Tecnologia"
       }
     },
@@ -464,8 +460,8 @@
         "ContenedorInferior":{
           "Peru": {
             "OficinaCentral": "Oficina central",
-            "NumeroOC": "(01) 204 Perú",
-            "Anexo": "Anexos 5259-5258-52254",
+            "NumeroOC": "(01) 2045200",
+            "Anexo": "Anexo 5254",
 
             "LidermanAlarmas": "Liderman Alarmas",
             "NumeroLA": "(511) 204 5200",
@@ -824,8 +820,8 @@
             "alt": "usa-expansion"
           }
         },
-        "FlechaDe": "public/assets/ImagenesPrueba/images.jpeg",
-        "FlechaIz": "public/assets/ImagenesPrueba/images.jpeg",
+        "FlechaDe": "/assets/ImagenesPrueba/images.jpeg",
+        "FlechaIz": "/assets/ImagenesPrueba/images.jpeg",
         "imagenDePunto": "/assets/Conocenos/Icono ubicación.svg",
         "LineaDeTiempo": "/assets/Conocenos/Linea distribucion 2.svg"
       },
@@ -923,7 +919,7 @@
       "Common": {
         "ImagenDerecha":[
           {
-            "imagen": "/assets/Seguridad/foto-circulo.png",
+            "imagen": "/assets/Seguridad/Foto-banner-liderman-web.png",
             "alt": "physical-security"
           },
           {
@@ -939,7 +935,7 @@
             "alt": "physical-security"
           },
           {
-            "imagen": "/assets/Seguridad/seguridad-fisica.png",
+            "imagen": "/assets/Seguridad/IMG_9600-fotor-20260204151332.png",
             "alt": "physical-security"
           },
           {
@@ -952,8 +948,8 @@
         "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg"
       },
       "es": {
-        "Titulo": "Seguridad",
-        "Texto": "Somos la empresa de seguridad más grande del país, con cobertura a nivel nacional, autorizaciones y con la capacidad de responder rápidamente a tus necesidades.",
+        "Titulo": "SEGURIDAD",
+        "Texto": "En Liderman protegemos lo que más valoras. Combinamos tecnología, personal altamente capacitado y un enfoque humano para ofrecer soluciones de seguridad integrales, confiables y adaptadas a cada necesidad. Estamos donde más nos necesitas, con compromiso y excelencia.",
         "TextosBotones": [
           {
             "Texto": "SEGURIDAD ",
@@ -972,18 +968,14 @@
             "TextoDescripcion": "Monitoreamos en tiempo real lo que sucede en tus instalaciones, con operadores altamente capacitados y tecnología de punta. Detectamos incidentes, coordinamos respuestas inmediatas y garantizamos una supervisión constante para tu total tranquilidad."
           },
           {
-            "Texto": "GUARDIANÍA",
-            "TextoDescripcion": "Brindamos guardianía confiable y cercana, con personal capacitado que combina vigilancia, control de accesos y atención al cliente. Estamos presentes con actitud proactiva, cuidando cada espacio como si fuera nuestro."
-          },
-          {
             "Texto": "GESTIÓN DE SEGURIDAD EN EVENTOS",
             "TextoDescripcion": "Servicio que abarca un plan integral de planificación, implementación y ejecución de medidas para proteger a personas y bienes, controlando accesos, multitudes y emergencias antes, durante y después del evento, mediante personal capacitado y tecnología especializada."
           }
         ]
       },
       "en": {
-        "Titulo": "Security Solutions",
-        "Texto": "We are the largest security company in the country, with nationwide coverage, full authorizations, and the ability to respond quickly to your needs.",
+        "Titulo": "SECURITY",
+        "Texto": "At Liderman, we protect what you value most. We combine technology, highly trained personnel, and a human-centered approach to offer comprehensive, reliable, and tailored security solutions. We are where you need us most, with commitment and excellence.",
         "TextosBotones": [
           {
             "Texto": "SECURITY",
@@ -1056,6 +1048,7 @@
     "FlechaGiro": {
       "en": {
         "TituloCentral": "Business Security Approach",
+        "TituloCentral2": "Business Approach",
         "Contenedor1": {
           "Titulo": "1",
           "Texto": "Knowledge and business needs understanding."
@@ -1083,6 +1076,7 @@
       },
       "es": {
         "TituloCentral": "Enfoque de Seguridad Empresarial",
+        "TituloCentral2": "Enfoque del negocio",
         "Contenedor1": {
           "Titulo": "1",
           "Texto": "Conocimiento y necesidades del giro de negocio."
@@ -1248,13 +1242,13 @@
     },
     "TextoTituloEImagen": {
       "Contenido": {
-        "Imagen1": "/assets/Servicio/foto-nico-tolaca.png",
-        "Imagen2": "/assets/Servicio/554e92e6ec866bbf03de6d44038fff9b.png"
+        "Imagen1": "/assets/Servicio/Foto1.png",
+        "Imagen2": "/assets/Servicio/Foto2.png"
       },
       "es": {
         "botones": {
           "Texto1": "Valet parking",
-          "Texto2": "Administración de Playas de Estacionamientos"
+          "Texto2": "Administración de playas de estacionamientos"
         },
         "Titulo": "Parking",
         "Texto": "Nuestros servicios de Parking cuentan con personal capacitado en los protocolos del negocio y con tecnología para el control de acceso vehicular.",
@@ -1264,7 +1258,7 @@
       "en": {
         "botones": {
           "Texto1": "Valet parking",
-          "Texto2": "Parking Lot administration"
+          "Texto2": "Parking lot administration"
         },
         "Titulo": "Parking",
         "Texto": "Our parking services are supported by trained personnel in business protocols and technology for vehicle access control.",
@@ -1284,7 +1278,7 @@
           "Texto1": "Courier",
           "Texto2": "Limpieza",
           "Texto3": "Jardinería",
-          "Texto4": "Facility Managament"
+          "Texto4": "Facility Management"
         },
         "Titulo": "Facilities",
         "Texto": "Nuestros servicios de Facilities están diseñados para brindar personal que cubra posiciones con funciones específicas.",
@@ -1475,44 +1469,49 @@
         "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
         "Fondo": "/assets/Tecnologia/tecnologia-portada.png",
         "ImagenDerecha": {
-          "boton1": "/assets/Tecnologia/HeaderTecnologia2.png",
-          "boton2": "/assets/Tecnologia/CIBERSEGURIIDAD.png",
-          "boton3": "/assets/Tecnologia/alarma.png",
-          "boton4": "/assets/Tecnologia/GPS.png"
+          "boton1": "/assets/Tecnologia/Gemini_Generated_Image_p2fzjap2fzjap2fz.png",
+          "boton2": "/assets/Tecnologia/Gemini_Generated_Image_k43gwvk43gwvk43g.png",
+          "boton3": "/assets/Tecnologia/Gemini_Generated_Image_fgk3cwfgk3cwfgk3.png",
+          "boton4": "/assets/Tecnologia/Gemini_Generated_Image_t67cxmt67cxmt67c (1).png",
+          "boton5": "/assets/Tecnologia/Gemini_Generated_Image_c3bwi7c3bwi7c3bw.png"
         },
 
         "imagenDerecha1": "/assets/Tecnologia/tecnologia-chica.png"
       },
       "es": {
-        "Titulo": "Tecnología",
+        "Titulo": "SOLUCIONES TECNOLÓGICAS",
         "Texto": "Ofrecemos soluciones tecnológicas avanzadas en seguridad que se adaptan a las exigencias del mundo moderno",
         "boton1": {
-          "Nombre": "TECNOLOGÍA",
-          "Texto": "Integramos soluciones tecnológicas de última generación para anticiparnos a los riesgos y actuar con rapidez. Cámaras inteligentes, analítica de video, control de accesos y monitoreo remoto, todo conectado para brindarte una seguridad más eficiente, precisa y proactiva."
+          "Nombre": "SOLUCIONES TECNOLÓGICAS",
+          "Texto": "Ofrecemos soluciones tecnológicas avanzadas en seguridad, que se adaptan a las exigencias del mundo moderno, protegiendo, optimizando y potenciando las necesidades de tu negocio, impulsando su transformación y evolución tecnológica. "
         },
-        "boton2":{
-          "Nombre": "CIBERSEGURIDAD",
-          "Texto": "Integramos soluciones de ciberseguridad avanzada y tecnología inteligente para proteger tu información. Nuestro portafolio incluye servicios de monitoreo y análisis de riesgos cibernéticos, gestión de accesos, videovigilancia inteligente, control perimetral y sistemas integrados de seguridad electrónica. Combinamos innovación, experiencia y tecnología de punta para brindarte protección 24/7 en el mundo digital y físico."
-        },
-        "boton3": {
+        "boton2": {
           "Nombre": "ALARMAS",
           "Texto": "Brindamos soluciones de alarmas inteligentes diseñadas para proteger tus instalaciones con tecnología de última generación. Nuestros sistemas integran sensores de movimiento, detección perimetral, monitoreo en tiempo real y conexión directa a nuestras centrales de vigilancia. Garantizamos una respuesta rápida y efectiva ante cualquier incidencia, fortaleciendo la seguridad de tu entorno a través de herramientas digitales confiables e innovadoras."
+        },
+        "boton3": {
+          "Nombre": "SEGURIDAD ELECTRÓNICA",
+          "Texto": "La seguridad electrónica es protección inteligente en tiempo real que integra videovigilancia, alarmas, control de accesos y monitoreo continuo para anticipar riesgos, responder de inmediato y reducir pérdidas."
         },
         "boton4": {
           "Nombre": "GPS",
           "Texto": "Combinamos tecnología avanzada con experiencia en seguridad para ofrecer soluciones GPS de alta precisión. Nuestros servicios incluyen detección de intrusos, monitoreo en tiempo real, alertas automáticas y rastreo satelital de vehículos, activos o personal. Todo esto conectado a nuestra central de vigilancia 24/7, garantizando una respuesta inmediata y un control total desde cualquier lugar mediante plataformas digitales y apps móviles."
+        },
+        "boton5":{
+          "Nombre": "CIBERSEGURIDAD",
+          "Texto": "Integramos soluciones de ciberseguridad avanzada y tecnología inteligente para proteger tu información. Nuestro portafolio incluye servicios de monitoreo y análisis de riesgos cibernéticos, gestión de accesos, videovigilancia inteligente, control perimetral y sistemas integrados de seguridad electrónica. Combinamos innovación, experiencia y tecnología de punta para brindarte protección 24/7 en el mundo digital y físico."
         }
       },
       "en": {
         "Titulo": "Technology",
         "Texto": "We offer advanced technological security solutions that meet the demands of the modern world",
         "boton1": {
-          "Nombre": "TECHNOLOGY",
-          "Texto": "We integrate state-of-the-art technological solutions to anticipate risks and respond swiftly. Smart cameras, video analytics, access control, and remote monitoring—everything connected to provide you with more efficient, precise, and proactive security."
+          "Nombre": "TECHNOLOGY SOLUTIONS",
+          "Texto": "We offer advanced technology solutions in security that adapt to the demands of the modern world, protecting, optimizing, and enhancing your business needs while driving its technological transformation and evolution."
         },
         "boton2": {
-          "Nombre": "CYBERSECURITY",
-          "Texto": "We integrate advanced cybersecurity solutions and smart technology to protect your information. Our portfolio includes cyber risk monitoring and analysis services, access management, smart video surveillance, perimeter control, and integrated electronic security systems. We combine innovation, experience, and cutting-edge technology to provide you with 24/7 protection in both the digital and physical world."
+          "Nombre": "ALARMS",
+          "Texto": "We provide smart alarm solutions designed to protect your facilities with state-of-the-art technology. Our systems integrate motion sensors, perimeter detection, real-time monitoring, and direct connection to our surveillance centers. We guarantee a fast and effective response to any incident, strengthening your environment’s security through reliable and innovative digital tools."
         },
         "boton3": {
           "Nombre": "ALARMS",
@@ -1521,6 +1520,10 @@
         "boton4": {
           "Nombre": "GPS",
           "Texto": "We combine advanced technology with security expertise to offer high-precision GPS solutions. Our services include intruder detection, real-time monitoring, automatic alerts, and satellite tracking of vehicles, assets, or personnel. All connected to our 24/7 monitoring center, ensuring immediate response and total control from anywhere via digital platforms and mobile apps."
+        },
+        "boton5": {
+          "Nombre": "CYBERSECURITY",
+          "Texto": "We integrate advanced cybersecurity solutions and smart technology to protect your information. Our portfolio includes cyber risk monitoring and analysis services, access management, smart video surveillance, perimeter control, and integrated electronic security systems. We combine innovation, experience, and cutting-edge technology to provide you with 24/7 protection in both the digital and physical world."
         }
       }
     },
@@ -1857,7 +1860,7 @@
       "Common": {
         "Fondo": "/assets/Lidermania/lidermania-fondo.png",
         "logo": "/assets/ImagenesGenerales/Logo-Liderman2.svg",
-        "ImagenDelCostado": "/assets/Lidermania/LIDERMANÍA-HEADER_header.png"
+        "ImagenDelCostado": "/assets/Lidermania/LIDERMANIA.jpg"
       },
       "es": {
         "Titulo": "Lidermanía",
@@ -1918,7 +1921,7 @@
     },
     "TituloTextoEImagen2": {
       "Common": {
-        "ImagenDelCostado": "/assets/Lidermania/LIDERMANIA.jpg"
+        "ImagenDelCostado": "/assets/Lidermania/Gemini_Generated_Image_r1e3wxr1e3wxr1e3.png"
       },
       "es": {
         "Titulo": "Protección del bienestar social",

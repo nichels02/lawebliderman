@@ -18,7 +18,7 @@ function RedireccionamientoAFacebookTrabajos() {
                             </p>
                             <a
                                 className={styles.Boton}
-                                href="https://www.facebook.com/tupagina"
+                                href="https://www.facebook.com/lidermantrabajo"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

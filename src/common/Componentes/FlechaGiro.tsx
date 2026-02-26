@@ -4,7 +4,13 @@ import { useLanguage } from './Sistemas/LanguageContext.tsx'; // Ajusta la ruta 
 import styles from '../css/FlechaGiro.module.css';
 import LazyImage from './Sistemas/LazyImage.tsx';
 
-function FlechaGiro() {
+
+type FlechaGiroProps = {
+    TituloDiferente?: boolean;
+};
+
+
+function FlechaGiro({ TituloDiferente = false }: FlechaGiroProps) {
     const content = useContent();
     const { language } = useLanguage();
     const [rotationAngle, setRotationAngle] = useState(0);
@@ -111,7 +117,7 @@ function FlechaGiro() {
                     alt="Flecha"
                     style={{ transform: `rotate(${rotationAngle}deg)`, transition: 'transform 0.3s ease' }}
                 />
-                <div className={styles.textoCentro}>{data.TituloCentral}</div>
+                <div className={styles.textoCentro}>{TituloDiferente? data.TituloCentral2:data.TituloCentral}</div>
             </div>
 
             {contenedores.map((item, i) => {

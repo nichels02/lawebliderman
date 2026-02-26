@@ -119,11 +119,19 @@
     background-color: var(--color-rojo-general);
     /*background-color: rgba(255, 0, 0, 0.57);*/
     border-radius: 15px;
-    width: 100%;
+    width: auto;
     display: grid;
-    grid-template-columns: clamp(70px, 5.2vw, 100px) 1fr 1fr;
+    grid-template-columns: clamp(70px, 5.2vw, 100px) 1fr;
     gap: 20px;
     align-items: center;
+}
+.GridInfoTelefono{
+    margin-right: 10px;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(2, 1fr);*/
+    /*align-items: center;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
 }
 
 .contenedorExtraInferior img {
@@ -696,10 +704,6 @@
         /*height: 2000px!important;*/
         padding-bottom: 50px;
     }
-    .contenedorExtraInferior {
-        width: 60%;
-        /*transform: translateY(-30px)*/
-    }
     .dosColumnas {
         grid-template-columns: 1fr;
     }
@@ -714,11 +718,6 @@
         padding: 12px;
     }
 
-    .contenedorExtraInferior {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        text-align: center;
-    }
 
     .contenedorExtraInferior img {
         margin: 0 auto;
@@ -848,12 +847,7 @@
     /*    width: 130%;*/
     /*}*/
 }
-@media (max-width: 464px) {
 
-    .contenedorExtraInferior {
-        width: 90%;
-    }
-}
 
 @media(max-width: 417px){
     .contenedorPagina{
