@@ -41,7 +41,10 @@ const accionLimiter = rateLimit({
 app.use(cors({
     origin: [
         'https://dev.liderman.com.pe',
-        'https://www.dev.liderman.com.pe'
+        'https://www.dev.liderman.com.pe',
+        'https://liderman.com.pe',
+        'https://www.liderman.com.pe'
+
     ],
     methods: ['POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type'],
