@@ -34,7 +34,7 @@ export async function agregarFormularioBD(datos) {
             interes_tecnologia,
             mensaje,
             pais
-        )
+        ) 
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
 

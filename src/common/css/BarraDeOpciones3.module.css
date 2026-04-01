@@ -70,6 +70,7 @@
 /* Icono del dropdown */
 .dropdownSymbol {
     transition: transform 0.3s ease;
+    height: 20px;
 }
 
 .dropdown.open .dropdownSymbol {
@@ -90,6 +91,14 @@
     min-width: 150px;
     z-index: 10;
 }
+.botonBandera{
+    height: 50px;
+}
+.botonBandera img{
+    height: 100%;
+    aspect-ratio: 1/0.75;
+    object-fit: fill;
+}
 
 /* Ocultar panel cuando no está activo */
 .panel.hidden {
@@ -109,6 +118,13 @@
 .globeIcon {
     fill: none;
     stroke-width: 2;
+    height: 40px;
+}
+
+.globeIcon img,
+.dropdownSymbol img
+{
+    height: 100%;
 }
 
 /* Contenedor del idioma */

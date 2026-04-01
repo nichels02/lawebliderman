@@ -1,8 +1,8 @@
 import path from 'path';
 import dotenv from 'dotenv';
 //dotenv.config({ path: path.resolve('./backend/.env') });
-dotenv.config({ path: path.resolve('./backend/.env') });
-
+dotenv.config({ path: path.resolve('.env') });
+import { SubirAPI } from './SubirAPI.js';
 
 import express from 'express';
 import cors from 'cors';
@@ -43,8 +43,6 @@ app.use(cors({
         'https://dev.liderman.com.pe',
         'https://www.dev.liderman.com.pe',
         'https://liderman.com.pe',
-        'https://www.liderman.com.pe'
-
     ],
     methods: ['POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type'],
@@ -63,42 +61,44 @@ app.get('/', (req, res) => {
 
 //app.post('/accion-general', accionLimiter, async (req, res) => {
 app.post('/accion-general', async (req, res) => {
-        const { accion, datos } = req.body;
+    const { accion, datos } = req.body;
 
 
-        console.log('Accion recibida:', accion);
-        //console.log('Datos recibidos:', datos);
+    console.log('Accion recibida:', accion);
+    //console.log('Datos recibidos:', datos);
 
-        switch (accion) {
-
-
-
-
-            case 'enviar-formulario':
-                try {
-                    await enviarCorreo(datos);
-
-                    await agregarFormularioBD(datos);
-
-                    res.json({ mensaje: 'Formulario recibido' });
-                } catch (error) {
-                    console.error('Error al enviar el correo:', error);
-                    res.status(500).json({ error: 'Error al enviar formulario' });
-                }
-                break;
+    switch (accion) {
 
 
 
 
-            case 'enviar-cotizacion':
-                try {
-                    await EnviarCotizacion(datos);
-                    res.json({ mensaje: 'Formulario recibido' });
-                } catch (error) {
-                    console.error('Error al enviar el correo:', error);
-                    res.status(500).json({ error: 'Error al enviar el formulario.' });
-                }
-                break;
+        case 'enviar-formulario':
+            try {
+                await enviarCorreo(datos);
+
+                await agregarFormularioBD(datos);
+
+                await SubirAPI(datos);
+
+                res.json({ mensaje: 'Formulario recibido' });
+            } catch (error) {
+                console.error('Error al enviar el correo:', error);
+                res.status(500).json({ error: 'Error al enviar formulario' });
+            }
+            break;
+
+
+
+
+        case 'enviar-cotizacion':
+            try {
+                await EnviarCotizacion(datos);
+                res.json({ mensaje: 'Formulario recibido' });
+            } catch (error) {
+                console.error('Error al enviar el correo:', error);
+                res.status(500).json({ error: 'Error al enviar el formulario.' });
+            }
+            break;
 
 
 
@@ -106,15 +106,15 @@ app.post('/accion-general', async (req, res) => {
 
 
 
-            case 'otra-accion':
-                // Otra lógica...
-                res.json({ mensaje: 'Otra acción ejecutada.' });
-                break;
+        case 'otra-accion':
+            // Otra lógica...
+            res.json({ mensaje: 'Otra acción ejecutada.' });
+            break;
 
-            default:
-                res.status(400).json({ error: 'Acción no reconocida.' + accion});
-        }
-    })
+        default:
+            res.status(400).json({ error: 'Acción no reconocida.' + accion});
+    }
+})
 
 app.listen(PORT, () => {
     console.log(`Servidor backend escuchando en puerto ${PORT}`);

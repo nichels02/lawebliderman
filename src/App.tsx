@@ -34,6 +34,8 @@ function PageWrapper({ children }: { children: React.ReactNode }) {
     const [pageLoaded, setPageLoaded] = useState(false);
     const observerRef = useRef<IntersectionObserver | null>(null);
 
+
+
     useEffect(() => {
         // Estrategia 1: Esperar a que todos los recursos estén cargados
         const handleLoad = () => setPageLoaded(true);
@@ -63,6 +65,7 @@ function PageWrapper({ children }: { children: React.ReactNode }) {
         };
     }, []);
 
+
     return (
         <>
             {children}
@@ -80,6 +83,25 @@ function PageWrapper({ children }: { children: React.ReactNode }) {
 
 function App() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
+    const NotFound = () => null;
+
+    const Layout = ({ children }: { children: React.ReactNode }) => {
+        return (
+            <>
+                {!isMobile && (
+                    <>
+                        <BarraDeOpciones/>
+                        <BarraDeOpciones2/>
+                    </>
+                )}
+
+                {isMobile && <BarraDeOpciones3/>}
+                {!isMobile && <BarraDeOpcionesRedes/>}
+
+                {children}
+            </>
+        );
+    };
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth <= 1000);
@@ -95,6 +117,7 @@ function App() {
 
                         <ScrollToTop/>
 
+                        {/*
                         {!isMobile && (
                             <>
                                 <BarraDeOpciones/>
@@ -104,18 +127,52 @@ function App() {
 
                         {isMobile && <BarraDeOpciones3/>}
                         {!isMobile && <BarraDeOpcionesRedes/>}
-
+                        */}
 
                         <Suspense fallback={<div>Cargando página...</div>}>
                             <Routes>
-                                <Route path="/" element={<PageWrapper><Home/></PageWrapper>}/>
-                                <Route path="/Conocenos" element={<PageWrapper><Conocenos/></PageWrapper>}/>
-                                <Route path="/Lidermania" element={<PageWrapper><Lidermania/></PageWrapper>}/>
-                                <Route path="/Seguridad" element={<PageWrapper><Seguridad/></PageWrapper>}/>
-                                <Route path="/Servicios" element={<PageWrapper><Servicio/></PageWrapper>}/>
-                                <Route path="/Tecnologia" element={<PageWrapper><Tecnologia/></PageWrapper>}/>
-                                <Route path="/Legal" element={<PageWrapper><Legal/></PageWrapper>}/>
-                                <Route path="/Cotizacion" element={<PageWrapper><Cotizacion/></PageWrapper>}/>
+                                <Route path="/" element={
+                                    <Layout>
+                                        <PageWrapper><Home/></PageWrapper>
+                                    </Layout>
+                                }/>
+                                <Route path="/Conocenos" element={
+                                    <Layout>
+                                        <PageWrapper><Conocenos/></PageWrapper>
+                                    </Layout>
+                                }/>
+                                <Route path="/Lidermania" element={
+                                    <Layout>
+                                        <PageWrapper><Lidermania/></PageWrapper>
+                                    </Layout>
+                                }/>
+                                <Route path="/Seguridad" element={
+                                    <Layout>
+                                        <PageWrapper><Seguridad/></PageWrapper>
+                                    </Layout>
+                                }/>
+                                <Route path="/Servicios" element={
+                                    <Layout>
+                                        <PageWrapper><Servicio/></PageWrapper>
+                                    </Layout>
+                                }/>
+                                <Route path="/Tecnologia" element={
+                                    <Layout>
+                                        <PageWrapper><Tecnologia/></PageWrapper>
+                                    </Layout>
+                                }/>
+                                <Route path="/Legal" element={
+                                    <Layout>
+                                        <PageWrapper><Legal/></PageWrapper>
+                                    </Layout>
+
+                                }/>
+                                <Route path="/Cotizacion" element={
+                                    <Layout>
+                                        <PageWrapper><Cotizacion/></PageWrapper>
+                                    </Layout>
+                                }/>
+                                <Route path="*" element={<NotFound />} />
                             </Routes>
                         </Suspense>
                     </BrowserRouter>

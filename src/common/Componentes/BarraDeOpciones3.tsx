@@ -190,49 +190,55 @@ function BarraDeOpciones3() {
 
                 <div
                     className={styles.dropdown}
-                    onMouseEnter={() => setShowPanelPaises(true)}
-                    onMouseLeave={() => setShowPanelPaises(false)}
                 >
-                    <button className={styles.boton}>
+                    <button
+                        className={styles.boton}
+                        onClick={() =>setShowPanelPaises(!showPanelPaises)}
+                    >
                         <div className={styles.globeIcon}>
                             <LazyImage
                                 // src={svgColor? Imagen.Bandera_Inicial.oscuro : Imagen.Bandera_Inicial.claro}
-                                src={svgColor? Imagen.Mundo.claro : Imagen.Mundo.oscuro}
+                                src={isDarkModeEnabled()? Imagen.Mundo.claro : Imagen.Mundo.oscuro}
                                 alt={""} className={styles.Imagen}/>
                         </div>
                         <div className={styles.dropdownSymbol}>
                             <LazyImage
-                                src={svgColor? Imagen.Flecha.claro : Imagen.Flecha.oscuro}
+                                src={isDarkModeEnabled()? Imagen.Flecha.claro : Imagen.Flecha.oscuro}
                                 alt={""} className={styles.Imagen}/>
                         </div>
                     </button>
                     {showPanelPaises && (
-                        <div className={styles.panelPaises}>
-                            {/*<button className={styles.boton} onClick={() => setLanguage('es')}>*/}
-                            {/*    {textos.espanol} 🇪🇸*/}
-                            {/*</button>*/}
-                            {/*<button className={styles.boton} onClick={() => setLanguage('en')}>*/}
-                            {/*    {textos.ingles} 🇺🇸*/}
-                            {/*</button>*/}
+                        <div className={styles.panel}>
+                            <div className={styles.panelPaises}>
+                                {/*
+                            <button className={styles.boton} onClick={() => setLanguage('es')}>
+                                {textos.espanol} 🇪🇸
+                            </button>
+                            <button className={styles.boton} onClick={() => setLanguage('en')}>
+                                {textos.ingles} 🇺🇸
+                            </button>
+                            */}
 
-                            { Imagen.Banderas.map((opcion, i) => (
-                                <a
-                                    key={i}
-                                    href={opcion.Link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={styles.boton}
-                                    aria-label={opcion.Nombre}
-                                >
-                                    <LazyImage
-                                        src={opcion.imagen}
-                                        alt=""
-                                        aria-hidden="true"
-                                        className={styles.Imagen}
-                                    />
-                                </a>
-                            ))}
+                                { Imagen.Banderas.map((opcion, i) => (
+                                    <a
+                                        key={i}
+                                        href={opcion.Link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={`${styles.boton} ${styles.botonBandera}`}
+                                        aria-label={opcion.Nombre}
+                                    >
+                                        <LazyImage
+                                            src={opcion.imagen}
+                                            alt=""
+                                            aria-hidden="true"
+                                            className={styles.Imagen}
+                                        />
+                                    </a>
+                                ))}
+                            </div>
                         </div>
+
                     )}
                 </div>
                 {/*<div className={styles.dropdown}>
