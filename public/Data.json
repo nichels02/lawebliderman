@@ -439,7 +439,7 @@
         "TituloPrincipal": "Líderes",
         "SubtituloPrincipal": "a nivel regional",
 
-        "Titulo": "Contáctanos",
+        "Titulo": "Solicita tu cotización",
         "Nombre": "Nombre*",
         "Apellido": "Apellido*",
         "Correo": "Correo electrónico*",
@@ -689,7 +689,20 @@
         "TextosFinales": {
           "DerechosReservados": "Copyright© 2025 Liderman Todos los derechos reservados",
           "TerminosYCondiciones": "Términos y Condiciones",
-          "PoliticaDePrivacidad": "Política de Privacidad"
+          "PoliticaDePrivacidad": "Política de Privacidad",
+          "Denuncias": {
+            "Titulo": "Denuncias",
+            "Boton": [
+              {
+                "Link": "Hostigamiento Sexual laboral",
+                "Texto": "noalacoso@liderman.com.pe"
+              },
+              {
+                "Link": "Tolerancia cero contra el soborno o cualquier acto de corrupción",
+                "Texto": "alertaliderman@liderman.com.pe"
+              }
+            ]
+          }
         }
       },
       "en": {
@@ -1997,7 +2010,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/Politica-Antisoborno-Grupo-Liderman.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/Política Antisoborno Grupo Liderman Ver 03 10.02.2026.pdf"
           }
         },
         {
@@ -2009,7 +2022,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/Politica-Conflicto-de-Interes-Ver-01-120924.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/Politica Conflicto de Interes Ver 01 120924 (3).pdf"
           }
         },
         {
@@ -2021,7 +2034,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/Politica-de-Alcohol-y-Drogas.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/Política de Alcohol y Drogas V.2 Rev 07.01.26.pdf"
           }
         },
         {
@@ -2033,7 +2046,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/Politica-de-Derechos-Humanos.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/Politica-de-Derechos-Humanos 05.01.26 (7).pdf"
           }
         },
         {
@@ -2045,7 +2058,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/Politica-de-Equidad-Diversidad-e-Inclusion.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/Política de Equidad, Diversidad e Inclusión Ver 01 Rev. 07.01.26.pdf"
           }
         },
         {
@@ -2057,7 +2070,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/Politica-de-Jornada-Laboral_Final-1.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/Politica-de-Jornada-Laboral.pdf"
           }
         },
         {
@@ -2069,19 +2082,19 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/Politica-de-Negativa-al-Trabajo-Inseguro.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/Política de negativa al trabajo inseguro V.2 07.01.26.pdf"
           }
         },
         {
           "es": {
-            "Nombre": "Política de Responsabilidad SST"
+            "Nombre": "Política de Fatiga y Somnolencia"
           },
           "en": {
-            "Nombre": "OHS Responsibility Policy"
+            "Nombre": "Fatigue and Drowsiness Policy"
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/Politica-de-Responsabilidad-en-SST-1.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/Política de Fatiga y Somnolencia V.2 Rev. 07.01.26.pdf"
           }
         },
         {
@@ -2093,7 +2106,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/POLITICA-DEL-DELATOR-Ver-01.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/POLITICA DEL DELATOR Ver 01 2024 (4).pdf"
           }
         },
         {
@@ -2105,7 +2118,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/POLITICA-DEL-DELATOR-Ver-01.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/SGI POLITICA INTEGRADA Ver 07 09.01.26 (1) (1).pdf"
           }
         },
         {
@@ -2117,7 +2130,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/Politica-Igualdad-Salarial-Final_V2.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/Politica-Igualdad-Salarial.pdf"
           }
         },
         {
@@ -2129,7 +2142,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/Politica-y-Procedimiento-de-Hostigamiento-Sexual.pdf"
+            "Pdf": "/assets/Legal/ArchivosNuevos/Politicas/Politica y Procedimiento de Hostigamiento Sexual Ver 02 17.05.24 (17).pdf"
           }
         },
         {
@@ -2141,7 +2154,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/Politica_de_Proteccio_n_de_Datos_Vigente.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/Politica de Protección de Datos Ver 04 (3).pdf"
           }
         },
         {
@@ -2153,7 +2166,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/politica_de_sostenibilidad-08072024.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/Política de Sostenibilidad V1 08.01.26 (1).pdf"
           }
         },
         {
@@ -2165,7 +2178,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/POLITICA_SGI_Ver_11-Rev_20_12_24_14042024-1.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/POLITICA SGI Ver 11 Rev. 07.01.26 Actual.pdf"
           }
         },
         {
@@ -2177,7 +2190,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Politicas/Política-Anticorrupcion-Liderman.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Politicas/Política Anticorrupcion Grupo Liderman Ver 02 20.01.2026.pdf"
           }
         }
       ],
@@ -2258,26 +2271,38 @@
       "Procedimientos": [
         {
           "es": {
-            "Nombre": "Manual del Sistema de Gestión Integrado"
+            "Nombre": "Reglamento Interno de Trabajo - Liderman Servicios"
           },
           "en": {
-            "Nombre": "Integrated Management System Manual"
+            "Nombre": "Internal Work Regulations - Liderman Services"
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Procedimientos/AL-SGI-M-001-Manual-del-Sistema-de-Gestion-Integrado-Ver-22-2.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Procedimientos/RIT.-LIDERMAN-SERVICIOS-2025.pdf"
           }
         },
         {
           "es": {
-            "Nombre": "Código de Conducta y Buen Comportamiento"
+            "Nombre": "Reglamento Interno de Seguridad - JV Resguardo"
           },
           "en": {
-            "Nombre": "Code of Conduct and Good Behavior"
+            "Nombre": "Internal Security Regulations - JV Resguardo"
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf": "/assets/Legal/Documentos/Procedimientos/Codigo_de_conducta_y_Buen_Comportamiento_Ver02.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Procedimientos/RIT.-JV-RESGUARDO-2025 (4).pdf"
+          }
+        },
+        {
+          "es": {
+            "Nombre": "Reglamento Interno - Alarmas"
+          },
+          "en": {
+            "Nombre": "Internal Regulations - Alarmas"
+          },
+          "Common": {
+            "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Procedimientos/RIT.-ALARMAS-2025 (3).pdf"
           }
         },
         {
@@ -2289,7 +2314,7 @@
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Procedimientos/DECLARACION-DE-CONFORMIDAD-Ver-01.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Procedimientos/DECLARACION-DE-CONFORMIDAD-Ver-01 (1).pdf"
           }
         },
         {
@@ -2297,59 +2322,59 @@
             "Nombre": "Procedimiento de Prevención de Recepción de Regalos"
           },
           "en": {
-            "Nombre": "Procedure for the Prevention of Gift Acceptance"
+            "Nombre": "Gift Acceptance Prevention Procedure"
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Procedimientos/JV-GD-P-085-Procedimiento-de-Prevencion-de-Recepcion-Regalos-Ver01.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Procedimientos/JV-GD-P-085-Procedimiento-de-Prevencion-de-Recepcion-Regalos-Ver01.pdf"
           }
         },
         {
           "es": {
-            "Nombre": "Procedimiento de Atención a Reclamos, Sugerencias y Reportes"
+            "Nombre": "Procedimiento de Atención a Reclamos y Sugerencias"
           },
           "en": {
-            "Nombre": "Procedure for Handling Complaints, Suggestions, and Reports"
+            "Nombre": "Complaints and Suggestions Procedure"
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Procedimientos/JV-SGI-P-050-Procedimiento-de-Atencion-a-Reclamos-Sugerencias-y-Reportes-Ver-09.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Procedimientos/JV-SGI-P-050-Procedimiento-de-Atencion-a-Reclamos-Sugerencias-y-Reportes-Ver-09 (2).pdf"
           }
         },
         {
           "es": {
-            "Nombre": "Procedimiento de Denuncias por Actos o Sospechas de Soborno"
+            "Nombre": "Procedimiento de Denuncias por Soborno"
           },
           "en": {
-            "Nombre": "Procedure for Reporting Acts or Suspicions of Bribery"
+            "Nombre": "Bribery Reporting Procedure"
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Procedimientos/JV-SGI-P-091-Procedimiento-de-Denuncias-por-Actos-o-Sospechas-de-Soborno-Ver01.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Procedimientos/JV-SGI-P-091-Procedimiento-de-Denuncias-por-Actos-o-Sospechas-de-Soborno-Ver01 (2).pdf"
           }
         },
         {
           "es": {
-            "Nombre": "Manual del Sistema de Gestión Integrado JV Resguardo"
+            "Nombre": "Objetivos del Sistema de Gestión Integrado"
           },
           "en": {
-            "Nombre": "Integrated Management System Manual – JV Security"
+            "Nombre": "Integrated Management System Objectives"
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Procedimientos/Manual-del-Sistema-de-Gestion-Integrado-JV-RESGUARDO-120824.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Procedimientos/JV-SGI-F-172 Objetivos del SGI-2026 V5 09.01.26.pdf"
           }
         },
         {
           "es": {
-            "Nombre": "Objetivos SGI"
+            "Nombre": "Reglamento Interno de Seguridad y Salud en el Trabajo"
           },
           "en": {
-            "Nombre": "SGI Objectives"
+            "Nombre": "Occupational Health and Safety Internal Regulations"
           },
           "Common": {
             "Imagen": "/assets/Legal/Google_Docs_2020_Logo.svg.png",
-            "Pdf":"/assets/Legal/Documentos/Procedimientos/Objetivos-SGI-2024.pdf"
+            "Pdf": "/assets/Legal/Documentos/ArchivosNuevos/Procedimientos/JV-SGI-R-001 Reglamento Interno de Seguridad y Salud en el Trabajo Ver12 080126.pdf"
           }
         }
       ]

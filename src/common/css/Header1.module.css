@@ -91,7 +91,7 @@ h1, p {
 
 /* Estilo para el botón primario */
 .buttonPrimary {
-    width: 30%; /* Ancho relativo al contenedor */
+    width: 35%; /* Ancho relativo al contenedor */
     /*padding: 1vw 2vw; !* Espaciado interno relativo al contenedor *!*/
     font-size: clamp(16px, 1.3vw, 25px);
     color: var(--color-texto-blanco); /* Color del texto */
@@ -110,7 +110,7 @@ h1, p {
 
 /* Estilo para el botón secundario */
 .buttonSecondary {
-    width: 30%; /* Ancho relativo al contenedor */
+    width: 35%; /* Ancho relativo al contenedor */
     /*padding: 1vw 2vw; !* Espaciado interno relativo al contenedor *!*/
     font-size: clamp(16px, 1.3vw, 25px);
     background-color: var(--color-rojo-general-cambio);
@@ -194,7 +194,7 @@ h1, p {
 }
 @media (max-width: 900px){
     .buttonPrimary,.buttonSecondary{
-        width: 35%; /* Ancho relativo al contenedor */
+        width: 40%; /* Ancho relativo al contenedor */
 
     }
     .ContenedorInfo{
@@ -273,7 +273,7 @@ h1, p {
 
     .buttonPrimary,.buttonSecondary{
         font-size: clamp(12px, 1.3vw, 24px);
-        width: 40%
+        width: 45%
 
     }
     .buttonContainer{
@@ -303,7 +303,7 @@ h1, p {
         padding-bottom: 15%; /* Espacio vacío debajo del contenedor padre */
     }
     .buttonPrimary,.buttonSecondary{
-        min-width: 75px;
+        min-width: 85px;
     }
 }
 @media (max-width: 337px) {

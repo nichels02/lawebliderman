@@ -112,7 +112,7 @@ function CardWithExpand() {
                         </div>
 
 
-                        <div className={styles.text}>{tecnologia.title}</div>
+                        <div className={`${styles.text} ${styles.TecnologiaMarcado}`}>{tecnologia.title}</div>
                         <div className={`${styles.leftText} ${expandedIndex === 2 ? styles.visible : ""}`}>
                             <h2 className={styles.subtitle}>{tecnologia.subtitle}</h2>
                             <ul className={styles.list}>

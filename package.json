@@ -8,10 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-
     "start": "node backend/estacionGeneral.js"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.10",
     "chart.js": "^4.4.8",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",

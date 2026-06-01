@@ -6,6 +6,9 @@ import { useLanguage } from './Sistemas/LanguageContext';
 import { useContent } from './Sistemas/useContent';
 import LazyImage from './Sistemas/LazyImage.tsx';
 
+
+import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
+
 function Footer() {
     const [darkMode, setDarkMode] = useState(false);
     const [esPantallaChica, setEsPantallaChica] = useState(window.innerWidth <= 600); // Inicializa el estado
@@ -233,6 +236,24 @@ function Footer() {
                             >
                                 {localized.TextosFinales.PoliticaDePrivacidad}
                             </a>
+
+                            <Popover>
+                                <PopoverButton className={styles.legalButton}>{localized.TextosFinales.Denuncias.Titulo}</PopoverButton>
+
+                                <PopoverPanel anchor="top"
+                                              className={styles.ListaDenuncias}
+                                >
+                                    {localized.TextosFinales.Denuncias.Boton.map((item, index) => (
+                                        <a
+                                            key={index}
+                                            href={`mailto:${item.Texto}`}
+                                            className="hover:underline"
+                                        >
+                                            {item.Link}
+                                        </a>
+                                    ))}
+                                </PopoverPanel>
+                            </Popover>
 
                         </div>
 

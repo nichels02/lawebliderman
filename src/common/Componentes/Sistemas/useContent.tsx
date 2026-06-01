@@ -522,6 +522,13 @@ interface ContentData {
                     DerechosReservados: string;
                     TerminosYCondiciones: string;
                     PoliticaDePrivacidad: string;
+                    Denuncias: {
+                        Titulo: string;
+                        Boton: {
+                            Link: string;
+                            Texto: string;
+                        }[]
+                    }
                 }
             },
             en: {
@@ -562,6 +569,13 @@ interface ContentData {
                     DerechosReservados: string;
                     TerminosYCondiciones: string;
                     PoliticaDePrivacidad: string;
+                    Denuncias: {
+                        Titulo: string;
+                        Boton: {
+                            Link: string;
+                            Texto: string;
+                        }[]
+                    }
                 }
             }
         }
