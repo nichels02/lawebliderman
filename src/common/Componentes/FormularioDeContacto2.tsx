@@ -334,7 +334,9 @@ const FormularioDeContacto2 = () => {
                     <div className={styles.formularioContainer}>
                         <div className={styles.encabezado}>
                             <h2>{content?.home.Formulario[language].Titulo}</h2>
-
+                            <p>
+                                {content?.home.Formulario[language].TextoExplicativo}
+                            </p>
                         </div>
 
                         <form className={styles.formulario} onSubmit={handleSubmit}>

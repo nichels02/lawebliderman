@@ -273,6 +273,8 @@ interface ContentData {
                 },
                 TituloPrincipal: string;
                 SubtituloPrincipal: string;
+
+                TextoExplicativo: string;
                 Titulo: string;
                 Nombre: string;
                 Apellido: string;
@@ -348,6 +350,8 @@ interface ContentData {
                 },
                 TituloPrincipal: string;
                 SubtituloPrincipal: string;
+
+                TextoExplicativo: string;
                 Titulo: string;
                 Nombre: string;
                 Apellido: string;

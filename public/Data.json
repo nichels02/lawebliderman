@@ -439,6 +439,7 @@
         "TituloPrincipal": "Líderes",
         "SubtituloPrincipal": "a nivel regional",
 
+        "TextoExplicativo": "Este formulario está destinado exclusivamente para fines comerciales.",
         "Titulo": "Solicita tu cotización",
         "Nombre": "Nombre*",
         "Apellido": "Apellido*",
@@ -515,7 +516,8 @@
         "TituloPrincipal": "",
         "SubtituloPrincipal": "",
 
-        "Titulo": "Contact Us",
+        "TextoExplicativo": "This form is intended exclusively for commercial purposes.",
+        "Titulo": "Request Your Quote",
         "Nombre": "First Name*",
         "Apellido": "Last Name*",
         "Correo": "Email*",
@@ -742,7 +744,20 @@
         "TextosFinales": {
           "DerechosReservados": "© 2025 Liderman. All rights reserved.",
           "TerminosYCondiciones": "Terms and Conditions",
-          "PoliticaDePrivacidad": "Privacy Policy"
+          "PoliticaDePrivacidad": "Privacy Policy",
+          "Denuncias": {
+            "Titulo": "Reports",
+            "Boton": [
+              {
+                "Link": "Workplace Sexual Harassment",
+                "Texto": "noalacoso@liderman.com.pe"
+              },
+              {
+                "Link": "Zero Tolerance for Bribery or Any Act of Corruption",
+                "Texto": "alertaliderman@liderman.com.pe"
+              }
+            ]
+          }
         }
       }
 
